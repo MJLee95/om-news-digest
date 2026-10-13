@@ -74,6 +74,17 @@ def analytics_snippet(cfg: dict | None) -> str:
     if gc:
         return rf"""<script>(function(){{
   if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  try {
+    // same opt-out as GoatCounter's own script: Settings → "disable for this browser" opens #toggle-goatcounter
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      off ? localStorage.removeItem('skipgc') : localStorage.setItem('skipgc', 't');
+      alert(off ? 'GoatCounter: counting this browser again.' : 'GoatCounter: visits from this browser will no longer be counted.');
+      history.replaceState(null, '', location.pathname);
+      return;
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
   var q = new URLSearchParams({{p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()}});
   new Image().src = 'https://{gc}.goatcounter.com/count?' + q;
 }})();</script>"""
@@ -85,7 +96,8 @@ def analytics_snippet(cfg: dict | None) -> str:
 
 
 def _inject(html: str, snippet: str) -> str:
-    return html.replace("</body>", snippet + "</body>", 1) if snippet else html
+    # in <head> so it sees the URL before the page's own scripts rewrite the #hash
+    return html.replace("</head>", snippet + "</head>", 1) if snippet else html
 
 
 def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: dict | None = None, byline: str = "",
