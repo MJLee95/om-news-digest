@@ -474,4 +474,8 @@ update();
   apply();
 })();
 </script>
-</body></html>
+<script>(function(){
+  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
+  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
+})();</script></body></html>
