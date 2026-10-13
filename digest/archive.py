@@ -41,6 +41,7 @@ def build(issues_dir: Path, out_dir: Path, title: str) -> None:
                        "keywords": [k.strip().lower() for k in it["keywords"]]}
                       for n, it in enumerate(iss["items"], 1)],
             "papers": [{"title": p["title"], "journal": p["journal"], "url": p["url"]} for p in iss["papers"]],
+            "also": [{"title": a["title"], "url": a["url"], "source": a["source"]} for a in iss.get("also", [])],
         })
     records.sort(key=lambda r: r["date"], reverse=True)
     data = json.dumps(records, ensure_ascii=False).replace("</", "<\\/")
@@ -179,6 +180,7 @@ function renderMain() {
       <p class="intro">${esc(d.intro)}</p>
       ${d.items.map(it => row({...it, date: d.date}, false)).join('')}
       ${d.papers.map(p => `<div class="paper">📄 <a href="${esc(p.url)}">${esc(p.title)}</a> — ${esc(p.journal)}</div>`).join('')}
+      ${(d.also || []).length ? `<details class="also"><summary>Also worth noting · ${d.also.length}</summary>${d.also.map(a => `<div class="paper"><a href="${esc(a.url)}">${esc(a.title)}</a> — ${esc(a.source)}</div>`).join('')}</details>` : ''}
     </section>`).join('') : '<div class="empty">No issues yet.</div>';
   }
 }

@@ -75,7 +75,8 @@ def main() -> None:
     from digest.llm import Curator
     cur = Curator(cfg["llm"], cfg["research_profile"])
     themes = cfg["themes"]
-    sel = cur.select(news, papers, d["num_news"], d["num_papers"] if want_papers else 0, themes)
+    sel = cur.select(news, papers, d["num_news"], d["num_papers"] if want_papers else 0, themes,
+                     d.get("num_also", 5))
     picks = [(p.id, news[p.id], p) for p in sel.news]
     paper_picks = [(p.id, papers[p.id], p) for p in sel.papers]
     print("Selected:", *[f"  [{p.theme}] {c.title}" for _, c, p in picks], sep="\n")
@@ -115,7 +116,11 @@ def main() -> None:
     issue_papers = [{**p.model_dump(), "title": paper_by_id[p.candidate_id].title,
                      "journal": paper_by_id[p.candidate_id].source, "url": paper_by_id[p.candidate_id].url}
                     for p in dg.papers if p.candidate_id in paper_by_id]
-    issue = {"intro": dg.intro, "items": items, "papers": issue_papers, "thread_to_pull": dg.thread_to_pull}
+    norm_theme = lambda t: next((x for x in themes if x.lower() == t.strip().lower()), t)
+    also = [{"title": news[a.id].title, "url": news[a.id].url, "source": news[a.id].source,
+             "theme": norm_theme(a.theme)} for a in sel.also]
+    issue = {"intro": dg.intro, "items": items, "papers": issue_papers, "thread_to_pull": dg.thread_to_pull,
+             "also": also}
 
     date_str = now_local.strftime("%A, %B %-d, %Y")
     html = render_html(d["title"], date_str, issue, d.get("archive_url", ""))
@@ -144,7 +149,7 @@ def main() -> None:
         [{**i, "date": iso, "kind": "news", "keywords": "; ".join(i["keywords"])} for i in items]
         + [{"date": iso, "kind": "paper", "theme": "", "headline": p["title"], "source": p["journal"],
             "url": p["url"], "summary": p["takeaway"]} for p in issue_papers])
-    sent = [c for _, c, _ in picks] + [c for _, c, _ in paper_picks]
+    sent = [c for _, c, _ in picks] + [c for _, c, _ in paper_picks] + [news[a.id] for a in sel.also]
     state.save_seen(seen, [{"date": iso, "url": c.url, "title_key": sources.norm_title(c.title)} for c in sent], today)
     archive.build(state.DATA / "issues", ROOT / "docs", d["title"])
 

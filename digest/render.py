@@ -70,9 +70,20 @@ def render_html(title: str, date_str: str, issue: dict, archive_link: str = "") 
   <p style="margin:0;font-size:13px;line-height:1.5;color:#3a3935;font-style:italic;">{e(p['connection'])}</p>
 </div>""")
 
-    parts.append("""
+    if issue.get("also"):
+        rows = "".join(
+            f'<div style="padding:7px 0;border-top:1px solid #dcdad3;">'
+            f'<a href="{e(a["url"])}" style="color:#1d1d1b;text-decoration:none;font-size:14px;">{e(a["title"])}</a>'
+            f'<div style="font-size:12px;color:#6b6a65;">{e(a["source"])} · {e(a["theme"])}</div></div>'
+            for a in issue["also"])
+        parts.append(f"""
+<h3 style="font-size:16px;margin:28px 0 8px;font-family:Helvetica,Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#6b6a65;">Also worth noting</h3>
+<div style="font-family:Helvetica,Arial,sans-serif;">{rows}</div>""")
+
+    archive = (f' <a href="{e(archive_link)}" style="color:#8f8d86;">Browse the archive</a>.' if archive_link else "")
+    parts.append(f"""
 <p style="font-family:Helvetica,Arial,sans-serif;font-size:11px;color:#8f8d86;margin-top:28px;line-height:1.5;">
-Curated and summarized automatically with Claude from public news feeds and Crossref. Verify facts in the linked sources before citing.{(' <a href="' + e(archive_link) + '" style="color:#8f8d86;">Browse the archive</a>.') if archive_link else ''}</p>
+Selected and summarized by Claude from news feeds, Crossref and OpenAlex. Check the original sources before citing.{archive}</p>
 </div></body></html>""")
     return "".join(parts)
 
@@ -90,4 +101,6 @@ def render_text(title: str, date_str: str, issue: dict) -> str:
         out += ["THREAD TO PULL", issue["thread_to_pull"], ""]
     for p in issue["papers"]:
         out += [f"* {p['title']} ({p['journal']}) {p['url']}", f"  {p['takeaway']}", f"  {p['connection']}", ""]
+    if issue.get("also"):
+        out += ["ALSO WORTH NOTING"] + [f"- {x['title']} ({x['source']}) {x['url']}" for x in issue["also"]]
     return "\n".join(out)

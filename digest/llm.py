@@ -19,8 +19,14 @@ class Pick(BaseModel):
     lit_queries: list[str] = Field(description="2 short academic search queries (3-6 words each) for finding OM papers related to this story")
 
 
+class AlsoPick(BaseModel):
+    id: int = Field(description="Candidate id from the news list")
+    theme: str = Field(description="Exactly one theme from the allowed theme list")
+
+
 class Selection(BaseModel):
     news: list[Pick]
+    also: list[AlsoPick] = Field(description="Runner-up news worth a headline-only mention")
     papers: list[Pick]
 
 
@@ -106,7 +112,7 @@ class Curator:
 
     # Step 1: choose stories from headlines/snippets
     def select(self, news: list[Candidate], papers: list[Candidate], n_news: int, n_papers: int,
-               themes: list[str]) -> Selection:
+               themes: list[str], n_also: int = 5) -> Selection:
         prompt = f"""Below are today's candidate news items. Choose exactly {n_news} for the newsletter.
 
 Allowed themes (use these exact labels): {"; ".join(themes)}
@@ -116,6 +122,9 @@ Rules:
 - Never pick two items about the same underlying event.
 - Prefer concrete events with a research hook over generic commentary or marketing.
 - Skip law-firm/consultancy client briefings, evergreen explainers, and anything that looks like old news resurfacing.
+
+Also choose up to {n_also} runner-up stories for an "Also worth noting" list (headline + link only).
+They must cover different events from the main picks and from each other; favor themes the main picks don't cover.
 
 NEWS CANDIDATES:
 {_fmt_candidates(news)}
@@ -132,6 +141,8 @@ PAPER CANDIDATES:
             prompt += "\nReturn an empty list for papers.\n"
         sel = self._parse(prompt, Selection)
         sel.news = [p for p in sel.news if 0 <= p.id < len(news)][:n_news]
+        main_ids = {p.id for p in sel.news}
+        sel.also = [a for a in sel.also if 0 <= a.id < len(news) and a.id not in main_ids][:n_also]
         sel.papers = [p for p in sel.papers if 0 <= p.id < len(papers)][:n_papers]
         return sel
 
