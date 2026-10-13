@@ -6,6 +6,7 @@ from __future__ import annotations
 from html import escape
 
 from . import theme_toggle
+from .stars import star_url
 
 LIGHT = {"bg": "#f4f3ef", "card": "#ffffff", "ink": "#1d1d1b", "ink2": "#3a3935", "ink3": "#2f2e2b",
          "muted": "#6b6a65", "faint": "#8f8d86", "line": "#dcdad3", "box": "#1d1d1b", "boxink": "#f4f3ef",
@@ -36,8 +37,18 @@ def _related_html(rel: list[dict], color: str, P: dict) -> str:
             f'<div style="font-size:11px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:{color};">Related research</div>{rows}</div>')
 
 
-def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", web: bool = False) -> str:
-    """web=True: archive copy with CSS-variable colors and the Light/Dark/System toggle."""
+def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", web: bool = False,
+                iso: str = "", repo: str = "", starred: frozenset = frozenset()) -> str:
+    """web=True: archive copy with CSS-variable colors and the Light/Dark/System toggle.
+
+    archive_link: archive home (absolute URL in email, relative in web copies). iso: the issue date,
+    used for item ids ('2026-10-13#2'). repo: GitHub repo for star links.
+    """
+    def item_href(item_id: str) -> str:
+        d, n = item_id.split("#")
+        if web:
+            return f"{d}.html#item-{n}"
+        return f"{archive_link}issues/{d}.html#item-{n}" if archive_link else ""
     themes = list(dict.fromkeys(i["theme"] for i in issue["items"]))
     e = escape
     P = WEB_PALETTE if web else EMAIL_PALETTE
@@ -49,19 +60,32 @@ def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", 
 <body style="margin:0;padding:0;background:{P['bg']};">{theme_toggle.BUTTON if web else ''}
 <div style="max-width:640px;margin:0 auto;padding:24px 16px;font-family:Georgia,'Times New Roman',serif;color:{P['ink']};">
 {f'<a href="{e(archive_link)}" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:{P['accent']};text-decoration:none;">&larr; Archive</a>' if archive_link else ''}
-<div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:{P['muted']};">{e(date_str)}</div>
-<h1 style="margin:4px 0 12px;font-size:28px;line-height:1.2;">{e(title)}</h1>
+<div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:{P['muted']};">{e(title)}</div>
+<h1 style="margin:4px 0 12px;font-size:28px;line-height:1.2;">{e(date_str)}</h1>
 <p style="margin:0 0 24px;font-size:16px;line-height:1.55;color:{P['ink2']};">{e(issue['intro'])}</p>"""]
 
     for n, it in enumerate(issue["items"], 1):
         c = _color(it["theme"], themes, P)
         kw = " · ".join(e(k) for k in it["keywords"])
+        item_id = f"{iso}#{n}"
+        star = ""
+        if repo and iso:
+            on = item_id in starred
+            star = (f' · <a href="{e(star_url(repo, item_id, it["headline"]))}" style="color:{c};text-decoration:none;" '
+                    f'title="{"Starred" if on else "Star this story (opens GitHub)"}">{"★ Starred" if on else "☆ Star"}</a>')
+        follows = ""
+        if it.get("follows"):
+            links = ", ".join(
+                (f'<a href="{e(item_href(f["id"]))}" style="color:{c};">{e(f["label"])}</a>' if item_href(f["id"]) else e(f["label"]))
+                for f in it["follows"])
+            follows = (f'<div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:{P["muted"]};margin:0 0 8px;">'
+                       f'↳ Follow-up to {links}</div>')
         parts.append(f"""
 <div id="item-{n}" style="background:{P['card']};border-radius:10px;padding:20px 20px 16px;margin:0 0 16px;border-left:4px solid {c};scroll-margin-top:16px;">
   <div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:{c};">{n:02d} · {e(it['theme'])}</div>
   <h2 style="margin:6px 0 4px;font-size:19px;line-height:1.3;"><a href="{e(it['url'])}" style="color:{P['ink']};text-decoration:none;">{e(it['headline'])}</a></h2>
-  <div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:{P['muted']};margin-bottom:10px;">{e(it['source'])}{(' · ' + e(it['date'])) if it.get('date') else ''} · <a href="{e(it['url'])}" style="color:{c};">Read</a></div>
-  <p style="margin:0 0 12px;font-size:15px;line-height:1.55;">{e(it['summary'])}</p>
+  <div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:{P['muted']};margin-bottom:10px;">{e(it['source'])}{(' · ' + e(it['date'])) if it.get('date') else ''} · <a href="{e(it['url'])}" style="color:{c};">Read</a>{star}</div>
+  {follows}<p style="margin:0 0 12px;font-size:15px;line-height:1.55;">{e(it['summary'])}</p>
   <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:{P['ink3']};">
     <tr><td style="padding:6px 0;vertical-align:top;width:92px;color:{P['muted']};">OM angle</td><td style="padding:6px 0;">{e(it['om_angle'])}</td></tr>
     <tr><td style="padding:6px 0;vertical-align:top;color:{P['muted']};">Research Q</td><td style="padding:6px 0;font-weight:bold;">{e(it['research_question'])}</td></tr>

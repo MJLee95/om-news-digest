@@ -6,13 +6,9 @@
 try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
 <style>
-:root{--bg:#f4f3ef;--card:#fff;--ink:#1d1d1b;--muted:#6b6a65;--line:#dcdad3;--accent:#1f6f5c;--chip:#ebe9e2;--chip-on:#1d1d1b;--chip-on-ink:#f4f3ef}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#20201e;--ink:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fc2a8;--chip:#2b2a27;--chip-on:#ecebe6;--chip-on-ink:#161615}}
-:root[data-theme="dark"]{--bg:#161615;--card:#20201e;--ink:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fc2a8;--chip:#2b2a27;--chip-on:#ecebe6;--chip-on-ink:#161615}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
-.wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0}
+:root{--bg:#f4f3ef;--card:#fff;--ink:#1d1d1b;--muted:#6b6a65;--line:#dcdad3;--accent:#1f6f5c;--chip:#ebe9e2;--chip-on:#1d1d1b;--chip-on-ink:#f4f3ef;--star:#b7791f}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#20201e;--ink:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fc2a8;--chip:#2b2a27;--chip-on:#ecebe6;--chip-on-ink:#161615;--star:#e6b450}}
+:root[data-theme="dark"]{--bg:#161615;--card:#20201e;--ink:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fc2a8;--chip:#2b2a27;--chip-on:#ecebe6;--chip-on-ink:#161615;--star:#e6b450}
 :root{--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
 
 .theme-toggle{position:fixed;top:12px;right:12px;z-index:50;display:flex;align-items:center;gap:6px;
@@ -22,8 +18,16 @@ h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0}
 .theme-toggle:hover{border-color:var(--toggle-ink)}
 .theme-toggle .ic{font-size:14px}
 
-.sub{color:var(--muted);margin:4px 0 20px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0;padding-right:120px}
+.sub{color:var(--muted);margin:4px 0 16px}
 a{color:inherit}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:20px;overflow-x:auto}
+.tab{background:none;border:0;border-bottom:2px solid transparent;color:var(--muted);font:600 14px/1 inherit;padding:10px 12px;cursor:pointer;white-space:nowrap}
+.tab.on{color:var(--ink);border-bottom-color:var(--ink)}
+.tab small{font-weight:400;margin-left:4px}
 .layout{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
 @media (max-width:760px){.layout{grid-template-columns:1fr}}
 aside{position:sticky;top:16px}
@@ -33,7 +37,7 @@ details{margin-top:18px}
 summary{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);cursor:pointer;list-style:none;display:flex;align-items:center;gap:6px;padding:4px 0;user-select:none}
 summary::-webkit-details-marker{display:none}
 summary::before{content:"▸";font-size:11px;transition:transform .15s}
-details[open] summary::before{transform:rotate(90deg)}
+details[open]>summary::before{transform:rotate(90deg)}
 summary .n{margin-left:auto;letter-spacing:0;text-transform:none}
 details .chips{margin-top:8px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
@@ -46,26 +50,39 @@ details .chips{margin-top:8px}
 .bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;min-height:28px}
 .bar strong{font-size:17px}
 .clear{background:none;border:1px solid var(--line);border-radius:6px;color:var(--muted);cursor:pointer;padding:3px 8px;font:inherit;font-size:13px}
-.day{background:var(--card);border-radius:10px;padding:18px 20px;margin-bottom:14px}
-.day h3{margin:0 0 4px;font-family:Georgia,serif;font-size:19px}
-.day h3 a{text-decoration:none}
-.day .intro{color:var(--muted);font-size:14px;margin:0 0 10px}
-.row{display:block;padding:9px 0;border-top:1px solid var(--line);text-decoration:none}
-.row:hover .hl{text-decoration:underline}
+.card{background:var(--card);border-radius:10px;padding:18px 20px;margin-bottom:14px}
+.card h3{margin:0 0 4px;font-family:Georgia,serif;font-size:19px}
+.card h3 a{text-decoration:none}
+.card .intro{color:var(--muted);font-size:14px;margin:0 0 10px}
+.row{padding:9px 0;border-top:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}
+.row .body{flex:1;min-width:0}
+.row a.go{text-decoration:none;display:block}
+.row a.go:hover .hl{text-decoration:underline}
+.star{flex:none;text-decoration:none;color:var(--muted);font-size:17px;line-height:1.2;padding:2px 2px 0}
+.star.on{color:var(--star)}
+.star:hover{color:var(--star)}
 .meta{font-size:12px;color:var(--muted)}
 .theme{font-weight:600;color:var(--accent)}
 .hl{font-weight:600}
 .kw{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
 .kw .chip{font-size:11px;padding:2px 8px}
+.chip.thread{background:none;border:1px solid var(--line);color:var(--accent)}
 .snip{font-size:13px;color:var(--muted);margin-top:3px}
+.note{font-size:13px;margin-top:4px;padding:6px 10px;border-left:3px solid var(--star);background:var(--chip);border-radius:4px}
 .paper{font-size:13px;color:var(--muted);padding-top:8px;border-top:1px dashed var(--line)}
-.empty{color:var(--muted);padding:24px 0}
+.card details{margin-top:8px}
+details.card{margin:0 0 8px;padding:12px 18px}
+details.card>summary{padding:2px 0}
+details.card[open]>summary{margin-bottom:6px}
+.empty{color:var(--muted);padding:24px 0;line-height:1.6}
+.help{font-size:13px;color:var(--muted);margin:0 0 14px;line-height:1.55}
 mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 </style></head>
 <body><div class="wrap">
 <button class="theme-toggle" id="themeToggle" type="button"></button>
 <h1>Daily Clippings</h1>
 <div class="sub" id="stats"></div>
+<nav class="tabs" id="tabs"></nav>
 <div class="layout">
 <aside>
   <input type="search" id="q" placeholder="Search headlines, summaries, questions" aria-label="Search">
@@ -78,16 +95,41 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
   <div id="list"></div>
 </main>
 </div></div>
-<script id="data" type="application/json">[{"date": "2026-10-13", "intro": "Today's issue leads with two data center power stories. FERC rejected most of PJM's large-load interconnection plan but approved a new data center registry, and utilities are using collateral rules to weed out speculative 'phantom' requests. Also covered: Taylor Farms' seasonal sourcing pullback from central Mexico, a driver-visa shock to cross-border trucking, and an Oregon packaging EPR lawsuit paused pending a Ninth Circuit appeal.", "items": [{"n": 1, "headline": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry", "theme": "Energy & AI Data Centers", "source": "Utility Dive", "summary": "On Oct. 9, 2026, FERC rejected the core of PJM's plan for connecting data centers and other large loads (accession no. 20261009-3055). The rejected Interim Resource Adequacy Service (IRAS) would have let large loads connect without matching new capacity if they accepted curtailment ahead of grid emergencies. FERC found it intruded on state authority over retail rates and appeared to discriminate against large loads, but it approved PJM's large-load definition and a registry of each facility's location, ramp schedule and capacity supply. Jefferies expects PJM capacity prices to stay higher for longer and any revival to be state-led, with Ohio and Pennsylvania the ones to watch; the ruling follows FERC's rejection about five weeks earlier of key parts of PJM's backstop procurement auction.", "rq": "How does excluding interruptible large loads from capacity-market demand curves affect procurement levels, prices and reliability outcomes, compared with requiring matched new capacity?", "related": ["Electricity Time‐of‐Use Tariff with Stochastic Demand"], "keywords": ["capacity markets", "interruptible load", "interconnection policy", "data center electricity demand", "federal-state jurisdiction"]}, {"n": 2, "headline": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests", "theme": "Energy & AI Data Centers", "source": "WSJ", "summary": "According to a Breitbart write-up of a paywalled WSJ report (figures not verified against the WSJ text), Wood Mackenzie rates only 23% of disclosed data center power requests as high confidence. Large-customer requests to Exelon tripled to 18,000 MW. After Exelon required binding commitments and collateral, its high-probability list fell to 11,000 MW, backed by about $1 billion in posted collateral. In Texas, the connection queue exceeds 400,000 MW, large customers now pay a $50,000/MW study deposit, and minimum large-customer contract terms nationally average about 10.8 years versus about 4.6 before 2024 (per Halcyon); Vistra's CEO says demand estimates are overstated by more than 20 times.", "rq": "How much do collateral and deposit requirements reduce queue attrition and forecast error in utility large-load pipelines, and how do they shift which project types (e.g., hyperscaler vs. speculative developer) stay in the queue?", "related": ["Capacity Reservation and Wholesale Price Contracts under Forecast Sharing: A Behavioral Assessment"], "keywords": ["interconnection queues", "demand signaling", "collateral requirements", "capacity investment under uncertainty", "load forecasting"]}, {"n": 3, "headline": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases", "theme": "Supply Chain Resilience", "source": "Supply Chain Dive", "summary": "In an Oct. 8 letter, Taylor Farms CEO Bruce Taylor said the company will indefinitely stop harvesting or processing central Mexico iceberg lettuce for the U.S. and Canada during the CDC's Cyclospora season (May 1–Aug. 31), which coincides with the region's rainy season. Cases linked to Taco Bell or to recalled Taylor Farms lettuce reached nearly 13,000 this summer. The FDA closed its investigation on Oct. 2 without establishing the contamination route, though it said traceback evidence pointed to shredded iceberg lettuce from Taylor Farms de Mexico. The company is also expanding water and crop testing, funding detection research and joining an FDA-led task force.", "rq": "After a major outbreak, do produce buyers reallocate sourcing away from implicated regions only during high-risk seasons, and how does that affect import volumes, prices and subsequent outbreak or recall rates?", "related": ["Learning from Conformance Quality Failures That Triggered Product Recalls: The Role of Direct and Indirect Experience", "Product safety and security in the global supply chain: Issues, challenges and research opportunities"], "keywords": ["food safety recalls", "seasonal sourcing", "produce supply chains", "traceback", "supplier region risk"]}, {"n": 4, "headline": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity", "theme": "Trade & Industrial Policy", "source": "FreightWaves", "summary": "FreightWaves reports that U.S. authorities have revoked B-1 visas for about 25,000 Mexican truck drivers; the revoking agency and the timing were not stated, and the figure is unverified. SONAR data show El Paso tender rejections peaking at about 24–25% in early July and still near 20%, San Diego/Otay Mesa at about 10% versus 3.9% a year ago, and Laredo rising from 6.07% (Oct. 3) to 7.78% (Oct. 10). Year-over-year spot rates are up 57% on San Diego–Phoenix and 43% on Laredo–Dallas. Mexico freight volumes are fairly stable, so FreightWaves attributes the pressure to lost driver supply and expects tight conditions to last well into 2027.", "rq": "How does a sudden loss of cross-border driver capacity pass through to tender rejections, spot-contract rate spreads and shippers' mode or port-of-entry substitution (e.g., rail, transloading)?", "related": ["Estimating the Operational Impact of Container Inspections at International Ports", "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains"], "keywords": ["cross-border trucking", "driver supply shock", "tender rejection", "freight rates", "nearshoring logistics"]}, {"n": 5, "headline": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal", "theme": "Circular Economy", "source": "Packaging Dive", "summary": "On Oct. 9, foodservice ware supplier Lollicup USA and Oregon DEQ director Leah Feldon jointly moved to stay Lollicup's June class action over Oregon's packaging EPR law. The stay would last until the Ninth Circuit decides the National Association of Wholesaler-Distributors' appeal, after Judge Michael Simon upheld the law in August. NAW's opening brief is due Dec. 17, and status reports would begin April 16, 2027. An Arnold & Porter partner noted that companies must still comply in the meantime, and that a Lollicup–DEQ enforcement-limiting agreement appears to have expired Aug. 31, 2026; EPR suits are also pending in California and Colorado.", "rq": "Does legal uncertainty over state EPR programs delay producers' packaging redesign (material substitution, lightweighting) or registration with producer responsibility organizations, compared with states where the law is not under challenge?", "related": ["Extended Producer Responsibility for Durable Products", "Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations"], "keywords": ["extended producer responsibility", "packaging regulation", "regulatory uncertainty", "state environmental policy", "litigation risk"]}], "papers": [{"title": "Designing Surprise Bags for Surplus Foods", "journal": "M&SOM", "url": "https://doi.org/10.1287/msom.2026.0294"}, {"title": "Collective Activism", "journal": "Management Science", "url": "https://doi.org/10.1287/mnsc.2025.02975"}], "also": []}]</script>
+<script id="data" type="application/json">{"issues": [{"date": "2026-10-13", "intro": "Today's issue leads with two data center power stories. FERC rejected most of PJM's large-load interconnection plan but approved a new data center registry, and utilities are using collateral rules to weed out speculative 'phantom' requests. Also covered: Taylor Farms' seasonal sourcing pullback from central Mexico, a driver-visa shock to cross-border trucking, and an Oregon packaging EPR lawsuit paused pending a Ninth Circuit appeal.", "items": [{"n": 1, "id": "2026-10-13#1", "headline": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry", "theme": "Energy & AI Data Centers", "source": "Utility Dive", "summary": "On Oct. 9, 2026, FERC rejected the core of PJM's plan for connecting data centers and other large loads (accession no. 20261009-3055). The rejected Interim Resource Adequacy Service (IRAS) would have let large loads connect without matching new capacity if they accepted curtailment ahead of grid emergencies. FERC found it intruded on state authority over retail rates and appeared to discriminate against large loads, but it approved PJM's large-load definition and a registry of each facility's location, ramp schedule and capacity supply. Jefferies expects PJM capacity prices to stay higher for longer and any revival to be state-led, with Ohio and Pennsylvania the ones to watch; the ruling follows FERC's rejection about five weeks earlier of key parts of PJM's backstop procurement auction.", "rq": "How does excluding interruptible large loads from capacity-market demand curves affect procurement levels, prices and reliability outcomes, compared with requiring matched new capacity?", "related": ["Electricity Time‐of‐Use Tariff with Stochastic Demand"], "keywords": ["capacity markets", "interruptible load", "interconnection policy", "data center electricity demand", "federal-state jurisdiction"], "datasets": ["PJM capacity auction results", "PJM large-load registry", "EIA-860/861", "FERC eLibrary filings"], "thread": null}, {"n": 2, "id": "2026-10-13#2", "headline": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests", "theme": "Energy & AI Data Centers", "source": "WSJ", "summary": "According to a Breitbart write-up of a paywalled WSJ report (figures not verified against the WSJ text), Wood Mackenzie rates only 23% of disclosed data center power requests as high confidence. Large-customer requests to Exelon tripled to 18,000 MW. After Exelon required binding commitments and collateral, its high-probability list fell to 11,000 MW, backed by about $1 billion in posted collateral. In Texas, the connection queue exceeds 400,000 MW, large customers now pay a $50,000/MW study deposit, and minimum large-customer contract terms nationally average about 10.8 years versus about 4.6 before 2024 (per Halcyon); Vistra's CEO says demand estimates are overstated by more than 20 times.", "rq": "How much do collateral and deposit requirements reduce queue attrition and forecast error in utility large-load pipelines, and how do they shift which project types (e.g., hyperscaler vs. speculative developer) stay in the queue?", "related": ["Capacity Reservation and Wholesale Price Contracts under Forecast Sharing: A Behavioral Assessment"], "keywords": ["interconnection queues", "demand signaling", "collateral requirements", "capacity investment under uncertainty", "load forecasting"], "datasets": ["State PUC rate-case dockets", "ERCOT large-load interconnection queue", "Utility 10-K disclosures"], "thread": null}, {"n": 3, "id": "2026-10-13#3", "headline": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases", "theme": "Supply Chain Resilience", "source": "Supply Chain Dive", "summary": "In an Oct. 8 letter, Taylor Farms CEO Bruce Taylor said the company will indefinitely stop harvesting or processing central Mexico iceberg lettuce for the U.S. and Canada during the CDC's Cyclospora season (May 1–Aug. 31), which coincides with the region's rainy season. Cases linked to Taco Bell or to recalled Taylor Farms lettuce reached nearly 13,000 this summer. The FDA closed its investigation on Oct. 2 without establishing the contamination route, though it said traceback evidence pointed to shredded iceberg lettuce from Taylor Farms de Mexico. The company is also expanding water and crop testing, funding detection research and joining an FDA-led task force.", "rq": "After a major outbreak, do produce buyers reallocate sourcing away from implicated regions only during high-risk seasons, and how does that affect import volumes, prices and subsequent outbreak or recall rates?", "related": ["Learning from Conformance Quality Failures That Triggered Product Recalls: The Role of Direct and Indirect Experience", "Product safety and security in the global supply chain: Issues, challenges and research opportunities"], "keywords": ["food safety recalls", "seasonal sourcing", "produce supply chains", "traceback", "supplier region risk"], "datasets": ["Panjiva/ImportGenius bill-of-lading data", "USDA AMS shipment and price reports", "FDA recall records", "CDC cyclosporiasis surveillance"], "thread": null}, {"n": 4, "id": "2026-10-13#4", "headline": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity", "theme": "Trade & Industrial Policy", "source": "FreightWaves", "summary": "FreightWaves reports that U.S. authorities have revoked B-1 visas for about 25,000 Mexican truck drivers; the revoking agency and the timing were not stated, and the figure is unverified. SONAR data show El Paso tender rejections peaking at about 24–25% in early July and still near 20%, San Diego/Otay Mesa at about 10% versus 3.9% a year ago, and Laredo rising from 6.07% (Oct. 3) to 7.78% (Oct. 10). Year-over-year spot rates are up 57% on San Diego–Phoenix and 43% on Laredo–Dallas. Mexico freight volumes are fairly stable, so FreightWaves attributes the pressure to lost driver supply and expects tight conditions to last well into 2027.", "rq": "How does a sudden loss of cross-border driver capacity pass through to tender rejections, spot-contract rate spreads and shippers' mode or port-of-entry substitution (e.g., rail, transloading)?", "related": ["Estimating the Operational Impact of Container Inspections at International Ports", "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains"], "keywords": ["cross-border trucking", "driver supply shock", "tender rejection", "freight rates", "nearshoring logistics"], "datasets": ["SONAR/DAT lane-level freight data", "BTS Border Crossing data", "BTS TransBorder freight data", "CBP crossing volumes"], "thread": null}, {"n": 5, "id": "2026-10-13#5", "headline": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal", "theme": "Circular Economy", "source": "Packaging Dive", "summary": "On Oct. 9, foodservice ware supplier Lollicup USA and Oregon DEQ director Leah Feldon jointly moved to stay Lollicup's June class action over Oregon's packaging EPR law. The stay would last until the Ninth Circuit decides the National Association of Wholesaler-Distributors' appeal, after Judge Michael Simon upheld the law in August. NAW's opening brief is due Dec. 17, and status reports would begin April 16, 2027. An Arnold & Porter partner noted that companies must still comply in the meantime, and that a Lollicup–DEQ enforcement-limiting agreement appears to have expired Aug. 31, 2026; EPR suits are also pending in California and Colorado.", "rq": "Does legal uncertainty over state EPR programs delay producers' packaging redesign (material substitution, lightweighting) or registration with producer responsibility organizations, compared with states where the law is not under challenge?", "related": ["Extended Producer Responsibility for Durable Products", "Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations"], "keywords": ["extended producer responsibility", "packaging regulation", "regulatory uncertainty", "state environmental policy", "litigation risk"], "datasets": ["Oregon DEQ/CAA producer registration data", "State EPR program reports", "SEC 10-K risk factors", "Bill-of-lading import data"], "thread": null}], "papers": [{"title": "Designing Surprise Bags for Surplus Foods", "journal": "M&SOM", "url": "https://doi.org/10.1287/msom.2026.0294"}, {"title": "Collective Activism", "journal": "Management Science", "url": "https://doi.org/10.1287/mnsc.2025.02975"}], "also": []}], "stars": {}, "starUrls": {"2026-10-13#1": "https://github.com/MJLee95/om-news-digest/issues/new?labels=star&title=%E2%98%85+FERC+rejects+PJM%27s+curtailment-based+large-load+interconnection+plan%2C+approves+data+center+registry&body=item%3A+2026-10-13%231%0A%0A%3C%21--+Optional%3A+write+a+note+below+on+why+this+is+interesting+%28it+helps+future+curation%29.+--%3E%0A", "2026-10-13#2": "https://github.com/MJLee95/om-news-digest/issues/new?labels=star&title=%E2%98%85+Utilities+use+collateral%2C+deposits+and+longer+contracts+to+filter+speculative+%27phantom%27+data+center+power+requests&body=item%3A+2026-10-13%232%0A%0A%3C%21--+Optional%3A+write+a+note+below+on+why+this+is+interesting+%28it+helps+future+curation%29.+--%3E%0A", "2026-10-13#3": "https://github.com/MJLee95/om-news-digest/issues/new?labels=star&title=%E2%98%85+Taylor+Farms+halts+May%E2%80%93August+central+Mexico+lettuce+sourcing+after+a+Cyclospora+outbreak+linked+to+nearly+13%2C000+cases&body=item%3A+2026-10-13%233%0A%0A%3C%21--+Optional%3A+write+a+note+below+on+why+this+is+interesting+%28it+helps+future+curation%29.+--%3E%0A", "2026-10-13#4": "https://github.com/MJLee95/om-news-digest/issues/new?labels=star&title=%E2%98%85+FreightWaves%3A+revocation+of+about+25%2C000+Mexican+drivers%27+B-1+visas+tightens+US%E2%80%93Mexico+border+trucking+capacity&body=item%3A+2026-10-13%234%0A%0A%3C%21--+Optional%3A+write+a+note+below+on+why+this+is+interesting+%28it+helps+future+curation%29.+--%3E%0A", "2026-10-13#5": "https://github.com/MJLee95/om-news-digest/issues/new?labels=star&title=%E2%98%85+Lollicup%27s+challenge+to+Oregon%27s+packaging+EPR+law+to+be+paused+pending+NAW%27s+Ninth+Circuit+appeal&body=item%3A+2026-10-13%235%0A%0A%3C%21--+Optional%3A+write+a+note+below+on+why+this+is+interesting+%28it+helps+future+curation%29.+--%3E%0A"}, "weekly": [], "repo": "MJLee95/om-news-digest"}</script>
 <script>
-const DATA = JSON.parse(document.getElementById('data').textContent);
-const ITEMS = DATA.flatMap(d => d.items.map(it => ({...it, date: d.date})));
+const D = JSON.parse(document.getElementById('data').textContent);
+const ISSUES = D.issues;
+const ITEMS = ISSUES.flatMap(d => d.items.map(it => ({...it, date: d.date})));
+const BY_ID = Object.fromEntries(ITEMS.map(it => [it.id, it]));
 const $ = id => document.getElementById(id);
-const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const fmt = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric', year:'numeric'});
+const short = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric'});
 const link = it => `issues/${it.date}.html#item-${it.n}`;
-let state = {kind: null, tag: null, q: ''}, showAllKw = false;
 const NARROW = matchMedia('(max-width:760px)'), KW_TOP = () => NARROW.matches ? 12 : 30;
+
+// stars: GitHub issues (synced at build) + ones clicked since then (kept in this browser until the next build)
+let pending = [];
+try { pending = JSON.parse(localStorage.getItem('pendingStars') || '[]').filter(id => !D.stars[id]); } catch (e) {}
+const isStarred = id => !!D.stars[id] || pending.includes(id);
+function addPending(id) {
+  if (isStarred(id)) return;
+  pending.push(id);
+  try { localStorage.setItem('pendingStars', JSON.stringify(pending)); } catch (e) {}
+}
+
+// threads
+const THREADS = {};
+ITEMS.forEach(it => { if (it.thread) (THREADS[it.thread] ||= []).push(it); });
+Object.values(THREADS).forEach(list => list.sort((a, b) => a.date.localeCompare(b.date) || a.n - b.n));
+const THREAD_LIST = Object.entries(THREADS).sort((a, b) => b[1].at(-1).date.localeCompare(a[1].at(-1).date));
+
+// datasets
+const DATASETS = {};
+ITEMS.forEach(it => (it.datasets || []).forEach(ds => (DATASETS[ds] ||= []).push(it)));
+const DATASET_LIST = Object.entries(DATASETS).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+
+let state = {tab: 'issues', kind: null, tag: null, q: '', open: null}, showAllKw = false;
 
 function counts(key) {
   const m = new Map();
@@ -96,17 +138,17 @@ function counts(key) {
 }
 const THEMES = counts('theme'), KEYWORDS = counts('keywords');
 
+const TABS = [
+  ['issues', 'Issues', ISSUES.length],
+  ['threads', 'Story threads', THREAD_LIST.length],
+  ['datasets', 'Datasets', DATASET_LIST.length],
+  ['starred', '★ Starred', null],
+  ['weekly', 'Weekly reviews', D.weekly.length],
+];
+
 function chip(kind, v, n) {
   const on = state.kind === kind && state.tag === v;
   return `<button class="chip${on ? ' on' : ''}" data-kind="${kind}" data-tag="${esc(v)}">${esc(v)}${n ? `<small>${n}</small>` : ''}</button>`;
-}
-
-function renderSide() {
-  $('themes').innerHTML = THEMES.map(([v, n]) => chip('theme', v, n)).join('');
-  const kws = showAllKw ? KEYWORDS : KEYWORDS.slice(0, KW_TOP());
-  $('keywords').innerHTML = kws.map(([v, n]) => chip('keywords', v, n)).join('');
-  $('moreKw').hidden = KEYWORDS.length <= KW_TOP();
-  $('moreKw').textContent = showAllKw ? 'Show fewer' : `Show all ${KEYWORDS.length}`;
 }
 
 function hi(s) {
@@ -115,60 +157,142 @@ function hi(s) {
   return esc(s).replace(re, '<mark>$1</mark>');
 }
 
-function row(it, withDate) {
+function starLink(it) {
+  const on = isStarred(it.id), url = D.stars[it.id]?.url || D.starUrls[it.id];
+  if (!url) return '';
+  return `<a class="star${on ? ' on' : ''}" data-star="${esc(it.id)}" href="${esc(url)}" target="_blank" rel="noopener"
+    title="${on ? 'Starred' : 'Star this story (opens a prefilled GitHub issue)'}">${on ? '★' : '☆'}</a>`;
+}
+
+function row(it, {withDate = false, showRq = false, note = ''} = {}) {
+  const thread = it.thread && THREADS[it.thread].length > 1
+    ? `<button class="chip thread" data-thread="${esc(it.thread)}">🧵 ${THREADS[it.thread].length} in thread</button>` : '';
   const kw = it.keywords.map(k => chip('keywords', k)).join('');
-  return `<div class="row"><a href="${link(it)}" style="text-decoration:none">
+  return `<div class="row">${starLink(it)}<div class="body"><a class="go" href="${link(it)}">
     <div class="meta">${withDate ? fmt(it.date) + ' · ' : ''}<span class="theme">${esc(it.theme)}</span> · ${esc(it.source)}</div>
     <div class="hl">${hi(it.headline)}</div>
-    ${state.q ? `<div class="snip">${hi(it.summary)}</div>` : ''}</a>
-    <div class="kw">${kw}</div></div>`;
+    ${state.q ? `<div class="snip">${hi(it.summary)}</div>` : ''}
+    ${showRq ? `<div class="snip"><b>Q:</b> ${hi(it.rq)}</div>` : ''}</a>
+    ${note ? `<div class="note">${esc(note)}</div>` : ''}
+    <div class="kw">${thread}${kw}</div></div></div>`;
 }
 
-function renderMain() {
-  const q = state.q.toLowerCase();
-  if (state.tag || q) {
-    const hits = ITEMS.filter(it =>
-      (!state.tag || [].concat(it[state.kind]).includes(state.tag)) &&
-      (!q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + it.keywords.join(' ') + ' ' + (it.related || []).join(' ')).toLowerCase().includes(q)))
-      .sort((a, b) => b.date.localeCompare(a.date) || a.n - b.n);
-    const label = [state.tag && `“${esc(state.tag)}”`, q && `search “${esc(state.q)}”`].filter(Boolean).join(' + ');
-    $('bar').innerHTML = `<strong>${label}</strong><span class="meta">${hits.length} article${hits.length === 1 ? '' : 's'}</span><button class="clear" id="clear">Clear</button>`;
-    $('list').innerHTML = hits.length ? `<div class="day">${hits.map(it => row(it, true)).join('')}</div>` : '<div class="empty">No matching articles.</div>';
-    $('clear').onclick = () => { state = {kind: null, tag: null, q: ''}; $('q').value = ''; update(); };
-  } else {
-    $('bar').innerHTML = `<strong>All issues</strong><span class="meta">newest first</span>`;
-    $('list').innerHTML = DATA.length ? DATA.map(d => `<section class="day">
+const matchQ = it => !state.q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + it.keywords.join(' ') + ' ' +
+  (it.related || []).join(' ') + ' ' + (it.datasets || []).join(' ')).toLowerCase().includes(state.q.toLowerCase());
+
+function renderSide() {
+  $('themes').innerHTML = THEMES.map(([v, n]) => chip('theme', v, n)).join('');
+  const kws = showAllKw ? KEYWORDS : KEYWORDS.slice(0, KW_TOP());
+  $('keywords').innerHTML = kws.map(([v, n]) => chip('keywords', v, n)).join('');
+  $('moreKw').hidden = KEYWORDS.length <= KW_TOP();
+  $('moreKw').textContent = showAllKw ? 'Show fewer' : `Show all ${KEYWORDS.length}`;
+  const nStar = ITEMS.filter(it => isStarred(it.id)).length;
+  $('tabs').innerHTML = TABS.map(([k, label, n]) =>
+    `<button class="tab${state.tab === k ? ' on' : ''}" data-tab="${k}">${label}<small>${k === 'starred' ? nStar : n}</small></button>`).join('');
+}
+
+function bar(title, sub, clear) {
+  $('bar').innerHTML = `<strong>${title}</strong>${sub ? `<span class="meta">${sub}</span>` : ''}${clear ? '<button class="clear" id="clear">Clear</button>' : ''}`;
+  if (clear) $('clear').onclick = () => { state = {...state, kind: null, tag: null, q: '', open: null}; $('q').value = ''; update(); };
+}
+
+const VIEWS = {
+  issues() {
+    if (state.tag || state.q) {
+      const hits = ITEMS.filter(it => (!state.tag || [].concat(it[state.kind]).includes(state.tag)) && matchQ(it))
+        .sort((a, b) => b.date.localeCompare(a.date) || a.n - b.n);
+      const label = [state.tag && `“${esc(state.tag)}”`, state.q && `search “${esc(state.q)}”`].filter(Boolean).join(' + ');
+      bar(label, `${hits.length} article${hits.length === 1 ? '' : 's'}`, true);
+      return hits.length ? `<div class="card">${hits.map(it => row(it, {withDate: true})).join('')}</div>` : '<div class="empty">No matching articles.</div>';
+    }
+    bar('All issues', 'newest first');
+    return ISSUES.length ? ISSUES.map(d => `<section class="card">
       <h3><a href="issues/${d.date}.html">${fmt(d.date)}</a></h3>
       <p class="intro">${esc(d.intro)}</p>
-      ${d.items.map(it => row({...it, date: d.date}, false)).join('')}
+      ${d.items.map(it => row({...it, date: d.date})).join('')}
       ${d.papers.map(p => `<div class="paper">📄 <a href="${esc(p.url)}">${esc(p.title)}</a> — ${esc(p.journal)}</div>`).join('')}
-      ${(d.also || []).length ? `<details class="also"><summary>Also worth noting · ${d.also.length}</summary>${d.also.map(a => `<div class="paper"><a href="${esc(a.url)}">${esc(a.title)}</a> — ${esc(a.source)}</div>`).join('')}</details>` : ''}
+      ${(d.also || []).length ? `<details><summary>Also worth noting · ${d.also.length}</summary>${d.also.map(a => `<div class="paper"><a href="${esc(a.url)}">${esc(a.title)}</a> — ${esc(a.source)}</div>`).join('')}</details>` : ''}
     </section>`).join('') : '<div class="empty">No issues yet.</div>';
-  }
-}
+  },
+  threads() {
+    let list = THREAD_LIST.filter(([, its]) => its.some(matchQ));
+    if (state.open) list = list.filter(([id]) => id === state.open);
+    bar(state.open ? 'Story thread' : 'Story threads', state.open ? '' : 'ongoing stories covered more than once', !!state.open || !!state.q);
+    if (!list.length) return `<div class="empty">${THREAD_LIST.length ? 'No matching threads.' :
+      'No story threads yet. When a new story is a follow-up to something covered earlier, the two are linked here as a timeline.'}</div>`;
+    return list.map(([id, its]) => `<section class="card">
+      <h3>${esc(its.at(-1).headline)}</h3>
+      <p class="intro">${its.length} updates · ${short(its[0].date)} → ${short(its.at(-1).date)}</p>
+      ${its.map(it => row(it, {withDate: true})).join('')}</section>`).join('');
+  },
+  datasets() {
+    const list = DATASET_LIST.map(([ds, its]) => [ds, its.filter(matchQ)])
+      .filter(([ds, its]) => its.length || (state.q && ds.toLowerCase().includes(state.q.toLowerCase())));
+    bar('Datasets', 'data sources suggested so far, with the questions they could answer', !!state.q);
+    if (!list.length) return `<div class="empty">${DATASET_LIST.length ? 'No matching datasets.' : 'No datasets recorded yet. They are collected from each story\'s “Data / ID” suggestions starting with the next issue.'}</div>`;
+    return list.map(([ds, its]) => `<details class="card" ${state.q ? 'open' : ''}>
+      <summary style="font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:600">${hi(ds)}<span class="n">${its.length}</span></summary>
+      ${its.slice().sort((a, b) => b.date.localeCompare(a.date)).map(it => row(it, {withDate: true, showRq: true})).join('')}</details>`).join('');
+  },
+  starred() {
+    const its = ITEMS.filter(it => isStarred(it.id) && matchQ(it)).sort((a, b) => b.date.localeCompare(a.date));
+    bar('★ Starred', `${its.length} stor${its.length === 1 ? 'y' : 'ies'}`, !!state.q);
+    const help = `<p class="help">Click ☆ next to any story. GitHub opens a prefilled issue; add a note if you like and press <b>Create</b>.
+      Starred stories steer future picks and the weekly review. To un-star, close that issue on GitHub.
+      New stars show here right away in this browser and sync for everyone at the next daily run.</p>`;
+    return help + (its.length ? `<div class="card">${its.map(it => row(it, {withDate: true, showRq: true,
+      note: D.stars[it.id]?.note || (pending.includes(it.id) ? 'Pending — syncs at the next daily run.' : '')})).join('')}</div>`
+      : '<div class="empty">Nothing starred yet.</div>');
+  },
+  weekly() {
+    bar('Weekly reviews', 'every Sunday');
+    return D.weekly.length ? D.weekly.map(w => `<section class="card">
+      <h3><a href="weekly/${w.date}.html">Week ending ${fmt(w.date)}</a></h3>
+      <p class="intro">${esc(w.overview)}</p>
+      ${w.ideas.map(t => `<div class="paper">💡 ${esc(t)}</div>`).join('')}</section>`).join('')
+      : '<div class="empty">The first weekly review arrives on Sunday.</div>';
+  },
+};
 
 function update() {
-  const h = state.tag ? `#${state.kind === 'theme' ? 'theme' : 'tag'}=${encodeURIComponent(state.tag)}` : ' ';
-  history.replaceState(null, '', h === ' ' ? location.pathname : h);
-  renderSide(); renderMain();
+  const h = state.tag ? `#${state.kind === 'theme' ? 'theme' : 'tag'}=${encodeURIComponent(state.tag)}`
+    : state.open ? `#thread=${encodeURIComponent(state.open)}` : state.tab !== 'issues' ? `#tab=${state.tab}` : '';
+  history.replaceState(null, '', h || location.pathname);
+  renderSide();
+  $('list').innerHTML = VIEWS[state.tab]();
 }
 
 document.addEventListener('click', e => {
-  const c = e.target.closest('.chip');
+  const tab = e.target.closest('.tab');
+  if (tab) { state = {...state, tab: tab.dataset.tab, kind: null, tag: null, open: null}; return update(); }
+  const th = e.target.closest('[data-thread]');
+  if (th) { e.preventDefault(); state = {...state, tab: 'threads', kind: null, tag: null, open: th.dataset.thread}; update(); return window.scrollTo({top: 0, behavior: 'smooth'}); }
+  const st = e.target.closest('[data-star]');
+  if (st) { addPending(st.dataset.star); setTimeout(update, 50); return; }
+  const c = e.target.closest('.chip[data-kind]');
   if (!c) return;
   e.preventDefault();
   const {kind, tag} = c.dataset;
-  state = state.tag === tag && state.kind === kind ? {...state, kind: null, tag: null} : {...state, kind, tag};
+  state = state.tag === tag && state.kind === kind ? {...state, kind: null, tag: null} : {...state, tab: 'issues', kind, tag, open: null};
   update(); (NARROW.matches ? $('bar') : document.body).scrollIntoView({behavior: 'smooth'});
 });
 $('moreKw').onclick = () => { showAllKw = !showAllKw; renderSide(); };
-$('q').oninput = e => { state.q = e.target.value.trim(); renderMain(); };
+$('q').oninput = e => { state.q = e.target.value.trim(); $('list').innerHTML = VIEWS[state.tab](); };
 
-const m = location.hash.match(/^#(tag|theme)=(.+)$/);
-if (m) state = {kind: m[1] === 'theme' ? 'theme' : 'keywords', tag: decodeURIComponent(m[2]), q: ''};
+function fromHash() {
+  const m = location.hash.match(/^#(tag|theme|thread|tab)=(.+)$/);
+  if (!m) return;
+  const v = decodeURIComponent(m[2]);
+  state = {...state, kind: null, tag: null, open: null};
+  if (m[1] === 'tab' && VIEWS[v]) state.tab = v;
+  else if (m[1] === 'thread') state = {...state, tab: 'threads', open: v};
+  else if (m[1] !== 'tab') state = {...state, tab: 'issues', kind: m[1] === 'theme' ? 'theme' : 'keywords', tag: v};
+}
+fromHash();
+window.addEventListener('hashchange', () => { fromHash(); update(); });
 $('kwBox').open = !NARROW.matches;
 $('nThemes').textContent = THEMES.length; $('nKw').textContent = KEYWORDS.length;
-$('stats').textContent = `${DATA.length} issue${DATA.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${KEYWORDS.length} keywords`;
+$('stats').textContent = `${ISSUES.length} issue${ISSUES.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${KEYWORDS.length} keywords`;
 update();
 </script>
 <script>

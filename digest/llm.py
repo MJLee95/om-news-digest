@@ -17,6 +17,7 @@ class Pick(BaseModel):
     theme: str = Field(description="Exactly one theme from the allowed theme list")
     why: str = Field(description="One sentence on why this matters for OM research")
     lit_queries: list[str] = Field(description="2 short academic search queries (3-6 words each) for finding OM papers related to this story")
+    follows: list[str] = Field(description="Ids (e.g. '2026-10-13#2') of earlier archive items about the same ongoing story that this is a new development of; empty if none")
 
 
 class AlsoPick(BaseModel):
@@ -45,6 +46,7 @@ class NewsItem(BaseModel):
     research_question: str = Field(description="One concrete, researchable question")
     data_identification: str = Field(description="Possible data sources and identification idea (treatment/control, shock timing, unit of analysis)")
     keywords: list[str] = Field(description="3-5 lowercase literature keywords, more specific than the theme")
+    datasets: list[str] = Field(description="1-4 short canonical names of datasets mentioned in data_identification, e.g. 'PJM capacity auction results', 'Panjiva bill-of-lading data', 'CDP climate responses'")
     related: list[RelatedPaper] = Field(description="1-2 genuinely related papers from the candidates for this story; empty if none fit")
 
 
@@ -95,11 +97,11 @@ class Curator:
         usd = t["input"] * 4 / 1e6 + t["output"] * 20 / 1e6 + t["searches"] * 0.01
         return f"Usage: {t['input']:,} in / {t['output']:,} out tokens, {t['searches']} searches ≈ ${usd:.2f} (Opus 5.5 list price)"
 
-    def _parse(self, prompt: str, schema):
+    def _parse(self, prompt: str, schema, effort: str | None = None):
         resp = self.client.beta.messages.parse(
             model=self.model,
             max_tokens=16000,
-            output_config={"effort": self.effort},
+            output_config={"effort": effort or self.effort},
             system=f"You curate a daily research newsletter.\n\n{self.profile}",
             messages=[{"role": "user", "content": prompt}],
             output_format=schema,
@@ -112,7 +114,7 @@ class Curator:
 
     # Step 1: choose stories from headlines/snippets
     def select(self, news: list[Candidate], papers: list[Candidate], n_news: int, n_papers: int,
-               themes: list[str], n_also: int = 5) -> Selection:
+               themes: list[str], n_also: int = 5, recent: list[dict] = (), starred: list[dict] = ()) -> Selection:
         prompt = f"""Below are today's candidate news items. Choose exactly {n_news} for the newsletter.
 
 Allowed themes (use these exact labels): {"; ".join(themes)}
@@ -129,6 +131,15 @@ They must cover different events from the main picks and from each other; favor 
 NEWS CANDIDATES:
 {_fmt_candidates(news)}
 """
+        if recent:
+            prompt += ("\nRECENTLY COVERED (id: headline). Don't pick stories that merely repeat these. A genuinely new "
+                       "development of one of these stories is welcome: pick it and list the earlier ids in 'follows'.\n"
+                       + "\n".join(f"{r['id']}: {r['headline']}" for r in recent) + "\n")
+        if starred:
+            prompt += ("\nSTARRED BY THE READER (stories they found most useful; lean toward similar topics and kinds of "
+                       "research hooks, without narrowing the mix too much):\n"
+                       + "\n".join(f"- [{s['theme']}] {s['headline']}" + (f" (note: {s['note']})" if s.get('note') else "")
+                                    for s in starred) + "\n")
         if n_papers and papers:
             prompt += f"""
 Also choose up to {n_papers} recent journal papers most relevant to the reader's interests
@@ -141,6 +152,9 @@ PAPER CANDIDATES:
             prompt += "\nReturn an empty list for papers.\n"
         sel = self._parse(prompt, Selection)
         sel.news = [p for p in sel.news if 0 <= p.id < len(news)][:n_news]
+        recent_ids = {r["id"] for r in recent}
+        for p in sel.news:
+            p.follows = [f for f in p.follows if f in recent_ids]
         main_ids = {p.id for p in sel.news}
         sel.also = [a for a in sel.also if 0 <= a.id < len(news) and a.id not in main_ids][:n_also]
         sel.papers = [p for p in sel.papers if 0 <= p.id < len(papers)][:n_papers]
@@ -188,7 +202,8 @@ STORIES:
 
     # Step 3: write the structured digest
     def compose(self, picks, paper_picks, notes: str, known_keywords: list[str] = (),
-                related: dict[int, list[tuple[str, dict]]] | None = None, themes: list[str] = ()) -> Digest:
+                related: dict[int, list[tuple[str, dict]]] | None = None, themes: list[str] = (),
+                known_datasets: list[str] = ()) -> Digest:
         stories = "\n".join(f"[{cid}] {c.title} ({c.source}) — selection note: {p.why} — theme: {p.theme}"
                             for cid, c, p in picks)
         papers = "\n".join(f"[{cid}] {c.title} ({c.source})\nAbstract: {c.snippet or '(not available)'}"
@@ -223,4 +238,7 @@ PAPERS (use the same ids in candidate_id):
         if known_keywords:
             prompt += ("\nKeywords are used as archive tags. Reuse these existing tags (exact spelling) whenever "
                        "they fit, and add a new lowercase tag only when none fits:\n" + ", ".join(known_keywords) + "\n")
+        if known_datasets:
+            prompt += ("\nDataset names are used for a data-source index. Reuse these existing names (exact spelling) "
+                       "for the same dataset:\n" + "; ".join(known_datasets) + "\n")
         return self._parse(prompt, Digest)

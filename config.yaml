@@ -12,6 +12,9 @@ digest:
   timezone: "America/New_York"
   archive_url: "https://mjlee95.github.io/om-news-digest/"  # 아카이브 사이트 (메일 하단에 링크)
 
+# GitHub 저장소 (★ 기능이 이 저장소의 issue를 사용합니다)
+github_repo: "MJLee95/om-news-digest"
+
 llm:
   model: "claude-opus-5-5"
   effort: "medium"        # low | medium | high — 높을수록 꼼꼼하지만 비쌈

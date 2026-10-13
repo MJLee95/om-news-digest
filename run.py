@@ -16,7 +16,9 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from digest import archive, sources, state
+import sys
+
+from digest import archive, sources, stars as star_store, state
 from digest.render import render_html, render_text
 
 ROOT = Path(__file__).resolve().parent
@@ -68,15 +70,21 @@ def main() -> None:
             print(f"* ({c.source}) {c.title}")
         return
     if not news:
-        print("No new candidates today; nothing sent.")
-        return
+        # Usually means every feed failed; exit non-zero so the workflow's failure alert fires.
+        sys.exit("No new candidates today (all feeds empty or failing); nothing sent.")
 
     # 2. curate with Claude
     from digest.llm import Curator
     cur = Curator(cfg["llm"], cfg["research_profile"])
     themes = cfg["themes"]
+    repo = cfg.get("github_repo", "")
+    issues_dir = state.DATA / "issues"
+    all_items = archive.all_items(issues_dir)
+    recent = [i for i in all_items if i["date"] >= (today - timedelta(days=21)).isoformat()]
+    stars = star_store.fetch_stars(repo)
+    starred = [{**i, "note": stars[i["id"]]["note"]} for i in all_items if i["id"] in stars][-30:]
     sel = cur.select(news, papers, d["num_news"], d["num_papers"] if want_papers else 0, themes,
-                     d.get("num_also", 5))
+                     d.get("num_also", 5), recent, starred)
     picks = [(p.id, news[p.id], p) for p in sel.news]
     paper_picks = [(p.id, papers[p.id], p) for p in sel.papers]
     print("Selected:", *[f"  [{p.theme}] {c.title}" for _, c, p in picks], sep="\n")
@@ -93,12 +101,14 @@ def main() -> None:
             rel_by_id[f"R{n}"] = (cid, r)
 
     notes = cur.research(picks)
-    dg = cur.compose(picks, paper_picks, notes, archive.known_keywords(state.DATA / "issues"),
-                     related, themes)
+    dg = cur.compose(picks, paper_picks, notes, archive.known_keywords(issues_dir),
+                     related, themes, archive.known_datasets(issues_dir))
     print(cur.cost_report())
 
     # 3. assemble (never trust a URL that didn't appear in the research notes)
     by_id = {cid: c for cid, c, _ in picks}
+    pick_by_id = {cid: p for cid, _, p in picks}
+    item_lookup = {i["id"]: i for i in all_items}
     items = []
     for it in dg.items:
         c = by_id.get(it.candidate_id)
@@ -110,7 +120,9 @@ def main() -> None:
                if r.paper_id in rel_by_id and rel_by_id[r.paper_id][0] == it.candidate_id]
         for r in rel:
             r.pop("abstract", None)
-        items.append({**it.model_dump(exclude={"related"}), "theme": theme, "related": rel, "url": url,
+        follows = [{"id": f, "label": f"{datetime.fromisoformat(f.split('#')[0]):%b %-d} · {item_lookup[f]['headline'][:80]}"}
+                   for f in pick_by_id[it.candidate_id].follows if f in item_lookup]
+        items.append({**it.model_dump(exclude={"related"}), "theme": theme, "related": rel, "url": url, "follows": follows,
                       "source": c.source, "date": c.published.strftime("%b %d") if c.published else ""})
     paper_by_id = {cid: c for cid, c, _ in paper_picks}
     issue_papers = [{**p.model_dump(), "title": paper_by_id[p.candidate_id].title,
@@ -122,10 +134,13 @@ def main() -> None:
     issue = {"intro": dg.intro, "items": items, "papers": issue_papers, "thread_to_pull": dg.thread_to_pull,
              "also": also}
 
+    if not items:
+        sys.exit("Claude returned no usable items; nothing sent.")
+    iso = today.isoformat()
     date_str = now_local.strftime("%A, %B %-d, %Y")
-    html = render_html(d["title"], date_str, issue, d.get("archive_url", ""))
+    html = render_html(d["title"], date_str, issue, d.get("archive_url", ""), iso=iso, repo=repo)
     text = render_text(d["title"], date_str, issue)
-    subject = f"{d['title']} · {now_local.strftime('%b %-d')} — {items[0]['headline'] if items else ''}"[:150]
+    subject = f"{now_local:%a, %b %-d} — {items[0]['headline']}"[:150]
 
     if args.dry_run:
         out = ROOT / "output"
@@ -141,7 +156,6 @@ def main() -> None:
     send(subject, text, html)
     print("Email sent.")
 
-    iso = today.isoformat()
     (state.DATA / "issues").mkdir(parents=True, exist_ok=True)
     (state.DATA / "issues" / f"{iso}.html").write_text(html)
     (state.DATA / "issues" / f"{iso}.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False))
@@ -151,7 +165,7 @@ def main() -> None:
             "url": p["url"], "summary": p["takeaway"]} for p in issue_papers])
     sent = [c for _, c, _ in picks] + [c for _, c, _ in paper_picks] + [news[a.id] for a in sel.also]
     state.save_seen(seen, [{"date": iso, "url": c.url, "title_key": sources.norm_title(c.title)} for c in sent], today)
-    archive.build(state.DATA / "issues", ROOT / "docs", d["title"])
+    archive.build(issues_dir, ROOT / "docs", d["title"], repo, stars)
 
 
 if __name__ == "__main__":
