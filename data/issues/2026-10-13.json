@@ -1,0 +1,198 @@
+{
+ "intro": "Today's issue leads with two data center power stories. FERC rejected most of PJM's large-load interconnection plan but approved a new data center registry, and utilities are using collateral rules to weed out speculative 'phantom' requests. Also covered: Taylor Farms' seasonal sourcing pullback from central Mexico, a driver-visa shock to cross-border trucking, and an Oregon packaging EPR lawsuit paused pending a Ninth Circuit appeal.",
+ "items": [
+  {
+   "candidate_id": 36,
+   "headline": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/",
+   "summary": "On Oct. 9, 2026, FERC rejected the core of PJM's plan for connecting data centers and other large loads (accession no. 20261009-3055). The rejected Interim Resource Adequacy Service (IRAS) would have let large loads connect without matching new capacity if they accepted curtailment ahead of grid emergencies. FERC found it intruded on state authority over retail rates and appeared to discriminate against large loads, but it approved PJM's large-load definition and a registry of each facility's location, ramp schedule and capacity supply. Jefferies expects PJM capacity prices to stay higher for longer and any revival to be state-led, with Ohio and Pennsylvania the ones to watch; the ruling follows FERC's rejection about five weeks earlier of key parts of PJM's backstop procurement auction.",
+   "om_angle": "The order shifts curtailment-priority decisions to the states and creates a facility-level registry of large loads, a potential new dataset. Commissioner Rosner warned that leaving curtailable loads out of the capacity auction demand curve could make the auction signal ample capacity even as the region involuntarily sheds thousands of megawatts.",
+   "research_question": "How does excluding interruptible large loads from capacity-market demand curves affect procurement levels, prices and reliability outcomes, compared with requiring matched new capacity?",
+   "data_identification": "Use PJM capacity auction results and the forthcoming large-load registry, alongside EIA-860/861 and FERC eLibrary filings. Treat the Oct. 9 order as an event shock to IPP equity returns (Constellation, NRG, Talen, Vistra) using CRSP/Compustat. Later, compare states that adopt curtailment rules (e.g., Ohio, Pennsylvania) with PJM states that do not, at the utility-zone level.",
+   "keywords": [
+    "capacity markets",
+    "interruptible load",
+    "interconnection policy",
+    "data center electricity demand",
+    "federal-state jurisdiction"
+   ],
+   "related": [
+    {
+     "title": "Electricity Time‐of‐Use Tariff with Stochastic Demand",
+     "journal": "Production and Operations Management",
+     "year": 2016,
+     "url": "https://doi.org/10.1111/poms.12610",
+     "cites": 56,
+     "why": "Models how a utility designs tariffs for customers with stochastic demand, a starting point for thinking about the large-load payment and curtailment terms FERC flagged as retail rate-setting."
+    }
+   ],
+   "url": "https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/",
+   "source": "Utility Dive",
+   "date": "Oct 12"
+  },
+  {
+   "candidate_id": 158,
+   "headline": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.wsj.com/business/energy-oil/phantom-data-centers-are-demanding-more-from-the-power-grid-than-they-need-77e322bb",
+   "summary": "According to a Breitbart write-up of a paywalled WSJ report (figures not verified against the WSJ text), Wood Mackenzie rates only 23% of disclosed data center power requests as high confidence. Large-customer requests to Exelon tripled to 18,000 MW. After Exelon required binding commitments and collateral, its high-probability list fell to 11,000 MW, backed by about $1 billion in posted collateral. In Texas, the connection queue exceeds 400,000 MW, large customers now pay a $50,000/MW study deposit, and minimum large-customer contract terms nationally average about 10.8 years versus about 4.6 before 2024 (per Halcyon); Vistra's CEO says demand estimates are overstated by more than 20 times.",
+   "om_angle": "This is a clean setting for screening and demand-signaling under capacity investment uncertainty: collateral and contract length act as costly signals that separate serious projects from speculative ones. The figures are second-hand, so treat them as hypotheses to verify.",
+   "research_question": "How much do collateral and deposit requirements reduce queue attrition and forecast error in utility large-load pipelines, and how do they shift which project types (e.g., hyperscaler vs. speculative developer) stay in the queue?",
+   "data_identification": "Assemble utility rate-case and tariff filings (state PUC dockets, the source Halcyon compiled from), ERCOT large-load interconnection queue reports, and utility 10-K/earnings-call disclosures of pipeline MW. Use a staggered difference-in-differences on the timing of collateral/deposit adoption across utilities (e.g., Exelon's requirement, Texas' $50,000/MW deposit). Outcomes are pipeline MW, withdrawal rates and realized connections, measured at the utility-quarter level.",
+   "keywords": [
+    "interconnection queues",
+    "demand signaling",
+    "collateral requirements",
+    "capacity investment under uncertainty",
+    "load forecasting"
+   ],
+   "related": [
+    {
+     "title": "Capacity Reservation and Wholesale Price Contracts under Forecast Sharing: A Behavioral Assessment",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13451",
+     "cites": 14,
+     "why": "Compares capacity reservation contracts with wholesale price contracts when a buyer holds private demand information, which directly parallels utilities using collateral and minimum terms to elicit credible demand from data center developers."
+    }
+   ],
+   "url": "https://www.wsj.com/business/energy-oil/phantom-data-centers-are-demanding-more-from-the-power-grid-than-they-need-77e322bb",
+   "source": "WSJ",
+   "date": "Oct 13"
+  },
+  {
+   "candidate_id": 4,
+   "headline": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.supplychaindive.com/news/taylor-farms-halts-central-mexico-sourcing-after-cyclospora-outbreak/832766/",
+   "summary": "In an Oct. 8 letter, Taylor Farms CEO Bruce Taylor said the company will indefinitely stop harvesting or processing central Mexico iceberg lettuce for the U.S. and Canada during the CDC's Cyclospora season (May 1–Aug. 31), which coincides with the region's rainy season. Cases linked to Taco Bell or to recalled Taylor Farms lettuce reached nearly 13,000 this summer. The FDA closed its investigation on Oct. 2 without establishing the contamination route, though it said traceback evidence pointed to shredded iceberg lettuce from Taylor Farms de Mexico. The company is also expanding water and crop testing, funding detection research and joining an FDA-led task force.",
+   "om_angle": "This is a seasonal, risk-based sourcing exclusion rather than a full exit, a firm-level response to a food safety disruption whose root cause was never established. It raises questions about whether such responses come from learning or from signaling.",
+   "research_question": "After a major outbreak, do produce buyers reallocate sourcing away from implicated regions only during high-risk seasons, and how does that affect import volumes, prices and subsequent outbreak or recall rates?",
+   "data_identification": "Use bill-of-lading data (Panjiva/ImportGenius) for lettuce imports by Mexican origin region and month, USDA AMS shipment and price reports, FDA recall and outbreak records, and CDC cyclosporiasis surveillance. Apply a difference-in-differences comparing May–August with off-season months and Taylor Farms with other importers, before and after 2026.",
+   "keywords": [
+    "food safety recalls",
+    "seasonal sourcing",
+    "produce supply chains",
+    "traceback",
+    "supplier region risk"
+   ],
+   "related": [
+    {
+     "title": "Learning from Conformance Quality Failures That Triggered Product Recalls: The Role of Direct and Indirect Experience",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1111/jscm.12143",
+     "cites": 36,
+     "why": "Econometrically tests whether U.S. food firms learn from their own and others' recalls, a natural framework for asking whether Taylor Farms' response reduces future failures."
+    },
+    {
+     "title": "Product safety and security in the global supply chain: Issues, challenges and research opportunities",
+     "journal": "Journal of Operations Management",
+     "year": 2011,
+     "url": "https://doi.org/10.1016/j.jom.2011.06.007",
+     "cites": 567,
+     "why": "Lays out OM research opportunities on product safety risks created by global supply chains, which frames the cross-border sourcing dimension of this outbreak."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/taylor-farms-halts-central-mexico-sourcing-after-cyclospora-outbreak/832766/",
+   "source": "Supply Chain Dive",
+   "date": "Oct 13"
+  },
+  {
+   "candidate_id": 80,
+   "headline": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.freightwaves.com/news/25000-drivers-lost-us-mexico-border-crisis-explained",
+   "summary": "FreightWaves reports that U.S. authorities have revoked B-1 visas for about 25,000 Mexican truck drivers; the revoking agency and the timing were not stated, and the figure is unverified. SONAR data show El Paso tender rejections peaking at about 24–25% in early July and still near 20%, San Diego/Otay Mesa at about 10% versus 3.9% a year ago, and Laredo rising from 6.07% (Oct. 3) to 7.78% (Oct. 10). Year-over-year spot rates are up 57% on San Diego–Phoenix and 43% on Laredo–Dallas. Mexico freight volumes are fairly stable, so FreightWaves attributes the pressure to lost driver supply and expects tight conditions to last well into 2027.",
+   "om_angle": "A labor-supply shock to a specific mode and geography, while demand stays roughly flat, offers a rare chance to separate capacity effects from demand effects in freight markets. Canada lanes, where the issue is a freight imbalance rather than a driver shortage, offer a contrast.",
+   "research_question": "How does a sudden loss of cross-border driver capacity pass through to tender rejections, spot-contract rate spreads and shippers' mode or port-of-entry substitution (e.g., rail, transloading)?",
+   "data_identification": "Use lane-level tender rejection and rate data (SONAR/DAT), BTS Border Crossing and TransBorder freight data, and CBP crossing volumes. Compare Mexico border lanes with Canada border and interior lanes in an event study around the revocation timing, once the date is pinned down from DHS/State records. Shipper-level responses could be traced with bill-of-lading data.",
+   "keywords": [
+    "cross-border trucking",
+    "driver supply shock",
+    "tender rejection",
+    "freight rates",
+    "nearshoring logistics"
+   ],
+   "related": [
+    {
+     "title": "Estimating the Operational Impact of Container Inspections at International Ports",
+     "journal": "Management Science",
+     "year": 2010,
+     "url": "https://doi.org/10.1287/mnsc.1100.1252",
+     "cites": 64,
+     "why": "Estimates the congestion impact of a U.S. border security policy using container movement data, a methodological template for quantifying how a border policy constrains freight capacity."
+    },
+    {
+     "title": "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12350",
+     "cites": 24,
+     "why": "Provides a framework and data sources for studying 2025 trade-policy shocks to supply chains, many of which also apply to this US–Mexico capacity shock."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/25000-drivers-lost-us-mexico-border-crisis-explained",
+   "source": "FreightWaves",
+   "date": "Oct 13"
+  },
+  {
+   "candidate_id": 27,
+   "headline": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal",
+   "theme": "Circular Economy",
+   "original_url": "https://www.packagingdive.com/news/lollicup-oregon-class-action-stay-pending-naw-appeal/832828/",
+   "summary": "On Oct. 9, foodservice ware supplier Lollicup USA and Oregon DEQ director Leah Feldon jointly moved to stay Lollicup's June class action over Oregon's packaging EPR law. The stay would last until the Ninth Circuit decides the National Association of Wholesaler-Distributors' appeal, after Judge Michael Simon upheld the law in August. NAW's opening brief is due Dec. 17, and status reports would begin April 16, 2027. An Arnold & Porter partner noted that companies must still comply in the meantime, and that a Lollicup–DEQ enforcement-limiting agreement appears to have expired Aug. 31, 2026; EPR suits are also pending in California and Colorado.",
+   "om_angle": "Legal uncertainty over state packaging EPR programs is a live friction for producers' compliance, fee and packaging-design decisions. The appellate timeline creates identifiable windows in which that uncertainty resolves.",
+   "research_question": "Does legal uncertainty over state EPR programs delay producers' packaging redesign (material substitution, lightweighting) or registration with producer responsibility organizations, compared with states where the law is not under challenge?",
+   "data_identification": "Use Oregon DEQ and the PRO (Circular Action Alliance) producer registration and fee data, state EPR program reports for Oregon, California, Colorado and Maine, and court dockets for ruling dates. Supplement with SEC 10-K risk-factor mentions of EPR and packaging-material import data from bills of lading. Run event studies around the August ruling, the Aug. 31 expiry of the enforcement agreement, and the eventual Ninth Circuit decision, at the firm-state level.",
+   "keywords": [
+    "extended producer responsibility",
+    "packaging regulation",
+    "regulatory uncertainty",
+    "state environmental policy",
+    "litigation risk"
+   ],
+   "related": [
+    {
+     "title": "Extended Producer Responsibility for Durable Products",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2019,
+     "url": "https://doi.org/10.1287/msom.2018.0742",
+     "cites": 98,
+     "why": "Analyzes how EPR implementation should be designed and how it affects producers, giving the analytical background on firm responses to EPR mandates."
+    },
+    {
+     "title": "Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13553",
+     "cites": 24,
+     "why": "Studies how competing and coexisting policy regimes across jurisdictions affect supply chains, which is relevant as packaging EPR fragments across Oregon, California and Colorado amid legal challenges."
+    }
+   ],
+   "url": "https://www.packagingdive.com/news/lollicup-oregon-class-action-stay-pending-naw-appeal/832828/",
+   "source": "Packaging Dive",
+   "date": "Oct 13"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 8,
+   "takeaway": "The paper studies how stores on surplus-food platforms like Too Good To Go should jointly set the reservation price and the number of surprise bags before demand and leftovers are known, given that customer ratings shape future demand. It also asks whether spreading surplus evenly across bags is actually optimal.",
+   "connection": "It is a food-waste and circular-economy complement to today's Taylor Farms story about disruption in fresh produce supply chains.",
+   "title": "Designing Surprise Bags for Surplus Foods",
+   "journal": "M&SOM",
+   "url": "https://doi.org/10.1287/msom.2026.0294"
+  },
+  {
+   "candidate_id": 0,
+   "takeaway": "The paper models whether investor collective action organizations can satisfy stewardship codes that call for coordinated activism. It finds these organizations solve free-riding among members but worsen it relative to solo activists, and that the benefit of joining is hump-shaped in the group's size.",
+   "connection": "It bears on the ESG and engagement side of the reader's interests, for example how investors might coordinate pressure on utilities and IPPs over data center load and capacity risk.",
+   "title": "Collective Activism",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2025.02975"
+  }
+ ],
+ "thread_to_pull": "Pair the FERC-approved PJM large-load registry with utility collateral and minimum-term filings, such as Exelon's drop from 18,000 MW to 11,000 MW and Texas' $50,000/MW deposit, to build a panel of data center power requests and their attrition. That panel could test the capacity-reservation and screening logic in R14: do stricter financial commitments improve forecast accuracy and capacity-auction outcomes, or simply push speculative demand to utilities with weaker requirements?"
+}

@@ -1,0 +1,153 @@
+"""Daily OM research news digest.
+
+  python run.py                    # full run: collect -> curate -> email -> save archive
+  python run.py --dry-run          # everything except email and state updates; writes output/preview.html
+  python run.py --candidates-only  # just list today's candidates (no API calls, free)
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import yaml
+
+from digest import archive, sources, state
+from digest.render import render_html, render_text
+
+ROOT = Path(__file__).resolve().parent
+
+
+def load_dotenv() -> None:
+    env = ROOT / ".env"
+    if env.exists():
+        for line in env.read_text().splitlines():
+            if "=" in line and not line.lstrip().startswith("#"):
+                k, v = line.split("=", 1)
+                if v.strip():
+                    os.environ.setdefault(k.strip(), v.strip())
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--candidates-only", action="store_true")
+    ap.add_argument("--papers", action="store_true", help="force the journal section today")
+    args = ap.parse_args()
+
+    load_dotenv()
+    cfg = yaml.safe_load((ROOT / "config.yaml").read_text())
+    d = cfg["digest"]
+    now_local = datetime.now(ZoneInfo(d["timezone"]))
+    today = now_local.date()
+    since = datetime.now(timezone.utc) - timedelta(hours=d["lookback_hours"])
+
+    # 1. collect
+    seen = state.load_seen()
+    seen_titles, seen_urls = state.seen_sets(seen)
+    raw = (sources.fetch_rss(cfg["rss_feeds"], since)
+           + sources.fetch_google_news(cfg["google_news_queries"], since))
+    news = sources.dedupe(raw, seen_titles, seen_urls)
+
+    want_papers = args.papers or today.weekday() in d["academic_weekdays"]
+    papers = []
+    if want_papers:
+        papers = sources.dedupe(
+            sources.fetch_papers(cfg["journals"], d["paper_lookback_days"], cfg.get("crossref_mailto", "")),
+            seen_titles, seen_urls)
+    print(f"Candidates: {len(news)} news (from {len(raw)} raw), {len(papers)} papers")
+
+    if args.candidates_only:
+        for c in news:
+            print(f"- ({c.source}) {c.title}")
+        for c in papers:
+            print(f"* ({c.source}) {c.title}")
+        return
+    if not news:
+        print("No new candidates today; nothing sent.")
+        return
+
+    # 2. curate with Claude
+    from digest.llm import Curator
+    cur = Curator(cfg["llm"], cfg["research_profile"])
+    themes = cfg["themes"]
+    sel = cur.select(news, papers, d["num_news"], d["num_papers"] if want_papers else 0, themes)
+    picks = [(p.id, news[p.id], p) for p in sel.news]
+    paper_picks = [(p.id, papers[p.id], p) for p in sel.papers]
+    print("Selected:", *[f"  [{p.theme}] {c.title}" for _, c, p in picks], sep="\n")
+
+    # related academic papers per story (real search results; Claude only chooses among them)
+    related, rel_by_id, n = {}, {}, 0
+    for cid, _, p in picks:
+        found = sources.search_related(p.lit_queries[:2], cfg["related_journal_issns"],
+                                       mailto=cfg.get("crossref_mailto", ""))
+        related[cid] = []
+        for r in found:
+            n += 1
+            related[cid].append((f"R{n}", r))
+            rel_by_id[f"R{n}"] = (cid, r)
+
+    notes = cur.research(picks)
+    dg = cur.compose(picks, paper_picks, notes, archive.known_keywords(state.DATA / "issues"),
+                     related, themes)
+    print(cur.cost_report())
+
+    # 3. assemble (never trust a URL that didn't appear in the research notes)
+    by_id = {cid: c for cid, c, _ in picks}
+    items = []
+    for it in dg.items:
+        c = by_id.get(it.candidate_id)
+        if c is None:
+            continue
+        url = it.original_url if it.original_url and it.original_url in notes else c.url
+        theme = next((t for t in themes if t.lower() == it.theme.strip().lower()), it.theme)
+        rel = [{**rel_by_id[r.paper_id][1], "why": r.why} for r in it.related[:2]
+               if r.paper_id in rel_by_id and rel_by_id[r.paper_id][0] == it.candidate_id]
+        for r in rel:
+            r.pop("abstract", None)
+        items.append({**it.model_dump(exclude={"related"}), "theme": theme, "related": rel, "url": url,
+                      "source": c.source, "date": c.published.strftime("%b %d") if c.published else ""})
+    paper_by_id = {cid: c for cid, c, _ in paper_picks}
+    issue_papers = [{**p.model_dump(), "title": paper_by_id[p.candidate_id].title,
+                     "journal": paper_by_id[p.candidate_id].source, "url": paper_by_id[p.candidate_id].url}
+                    for p in dg.papers if p.candidate_id in paper_by_id]
+    issue = {"intro": dg.intro, "items": items, "papers": issue_papers, "thread_to_pull": dg.thread_to_pull}
+
+    date_str = now_local.strftime("%A, %B %-d, %Y")
+    html = render_html(d["title"], date_str, issue, d.get("archive_url", ""))
+    text = render_text(d["title"], date_str, issue)
+    subject = f"{d['title']} · {now_local.strftime('%b %-d')} — {items[0]['headline'] if items else ''}"[:150]
+
+    if args.dry_run:
+        out = ROOT / "output"
+        out.mkdir(exist_ok=True)
+        (out / "preview.html").write_text(html)
+        (out / "notes.md").write_text(notes)
+        (out / "issue.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False))
+        print(f"Dry run: wrote {out / 'preview.html'}")
+        return
+
+    # 4. send, then record
+    from digest.mailer import send
+    send(subject, text, html)
+    print("Email sent.")
+
+    iso = today.isoformat()
+    (state.DATA / "issues").mkdir(parents=True, exist_ok=True)
+    (state.DATA / "issues" / f"{iso}.html").write_text(html)
+    (state.DATA / "issues" / f"{iso}.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False))
+    state.append_archive(
+        [{**i, "date": iso, "kind": "news", "keywords": "; ".join(i["keywords"])} for i in items]
+        + [{"date": iso, "kind": "paper", "theme": "", "headline": p["title"], "source": p["journal"],
+            "url": p["url"], "summary": p["takeaway"]} for p in issue_papers])
+    sent = [c for _, c, _ in picks] + [c for _, c, _ in paper_picks]
+    state.save_seen(seen, [{"date": iso, "url": c.url, "title_key": sources.norm_title(c.title)} for c in sent], today)
+    archive.build(state.DATA / "issues", ROOT / "docs", d["title"])
+
+
+if __name__ == "__main__":
+    main()
