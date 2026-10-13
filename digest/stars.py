@@ -1,29 +1,27 @@
 """Stars live as GitHub issues labeled 'star' in the repo (the site is static, so GitHub is the store).
 
-Clicking ☆ on the site or in an email opens a prefilled 'new issue' form; submitting it stars the item,
-closing the issue un-stars it. Only issues opened by the repo owner count.
+The archive's ☆/★ buttons create and close those issues through the GitHub API (see star_client.py);
+email links send you to the archive to do it. Only issues opened by the repo owner count.
 """
 
 from __future__ import annotations
 
 import os
 import re
-from urllib.parse import urlencode
+from urllib.parse import quote
 
 import requests
 
 ID_RE = re.compile(r"item:\s*(\d{4}-\d{2}-\d{2}#\d+)")
 
 
-def star_url(repo: str, item_id: str, headline: str) -> str:
-    body = (f"item: {item_id}\n\n"
-            "<!-- Optional: write a note below on why this is interesting (it helps future curation). -->\n")
-    return f"https://github.com/{repo}/issues/new?" + urlencode(
-        {"labels": "star", "title": f"★ {headline}"[:200], "body": body})
+def star_link(archive_url: str, item_id: str) -> str:
+    """Email link: opens the archive, which stars the item (asking to connect GitHub the first time)."""
+    return f"{archive_url}#star={quote(item_id, safe='')}"
 
 
 def fetch_stars(repo: str) -> dict[str, dict]:
-    """Return {item_id: {"note", "url", "created"}} for open 'star' issues opened by the repo owner."""
+    """Return {item_id: {"number", "note", "url", "created"}} for open 'star' issues opened by the repo owner."""
     if not repo:
         return {}
     owner = repo.split("/")[0].lower()
@@ -48,7 +46,8 @@ def fetch_stars(repo: str) -> dict[str, dict]:
             if not m:
                 continue
             note = re.sub(r"<!--.*?-->", "", ID_RE.sub("", iss["body"]), flags=re.S).strip()
-            stars[m.group(1)] = {"note": note[:500], "url": iss["html_url"], "created": iss["created_at"][:10]}
+            stars[m.group(1)] = {"number": iss["number"], "note": note[:500], "url": iss["html_url"],
+                                 "created": iss["created_at"][:10]}
         if len(batch) < 100:
             return stars
         page += 1

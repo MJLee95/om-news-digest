@@ -3,10 +3,11 @@ so the archive copy follows light/dark mode) and a plain-text fallback."""
 
 from __future__ import annotations
 
+import json
 from html import escape
 
 from . import theme_toggle
-from .stars import star_url
+from .stars import star_link
 
 LIGHT = {"bg": "#f4f3ef", "card": "#ffffff", "ink": "#1d1d1b", "ink2": "#3a3935", "ink3": "#2f2e2b",
          "muted": "#6b6a65", "faint": "#8f8d86", "line": "#dcdad3", "box": "#1d1d1b", "boxink": "#f4f3ef",
@@ -37,8 +38,16 @@ def _related_html(rel: list[dict], color: str, P: dict) -> str:
             f'<div style="font-size:11px;font-weight:bold;letter-spacing:.06em;text-transform:uppercase;color:{color};">Related research</div>{rows}</div>')
 
 
+def _star_scripts(repo: str, iso: str, issue: dict, stars: dict | None) -> str:
+    cfg = {"repo": repo,
+           "initial": {k: {"number": v.get("number"), "note": v.get("note", "")} for k, v in (stars or {}).items()},
+           "headlines": {f"{iso}#{n}": it["headline"] for n, it in enumerate(issue["items"], 1)}}
+    return (f'<script>window.STAR_CFG={json.dumps(cfg, ensure_ascii=False).replace("</", "<\\/")};</script>'
+            '<script src="../stars.js"></script>')
+
+
 def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", web: bool = False,
-                iso: str = "", repo: str = "", starred: frozenset = frozenset()) -> str:
+                iso: str = "", repo: str = "", stars: dict | None = None) -> str:
     """web=True: archive copy with CSS-variable colors and the Light/Dark/System toggle.
 
     archive_link: archive home (absolute URL in email, relative in web copies). iso: the issue date,
@@ -69,10 +78,12 @@ def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", 
         kw = " · ".join(e(k) for k in it["keywords"])
         item_id = f"{iso}#{n}"
         star = ""
-        if repo and iso:
-            on = item_id in starred
-            star = (f' · <a href="{e(star_url(repo, item_id, it["headline"]))}" style="color:{c};text-decoration:none;" '
-                    f'title="{"Starred" if on else "Star this story (opens GitHub)"}">{"★ Starred" if on else "☆ Star"}</a>')
+        if repo and iso and web:
+            on = item_id in (stars or {})
+            star = (f' · <a href="#" data-star="{e(item_id)}" data-style="label" style="color:{c};text-decoration:none;">'
+                    f'{"★ Starred" if on else "☆ Star"}</a>')
+        elif repo and iso and archive_link:
+            star = f' · <a href="{e(star_link(archive_link, item_id))}" style="color:{c};text-decoration:none;">☆ Star</a>'
         follows = ""
         if it.get("follows"):
             links = ", ".join(
@@ -126,7 +137,7 @@ def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", 
     parts.append(f"""
 <p style="font-family:Helvetica,Arial,sans-serif;font-size:11px;color:{P['faint']};margin-top:28px;line-height:1.5;">
 Selected and summarized by Claude from news feeds, Crossref and OpenAlex. Check the original sources before citing.{archive}</p>
-</div>{theme_toggle.BODY_JS if web else ''}</body></html>""")
+</div>{theme_toggle.BODY_JS if web else ''}{_star_scripts(repo, iso, issue, stars) if web and repo and iso else ''}</body></html>""")
     return "".join(parts)
 
 

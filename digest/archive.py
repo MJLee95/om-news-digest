@@ -12,6 +12,7 @@ from datetime import date
 from pathlib import Path
 
 from . import theme_toggle
+from .star_client import STARS_JS
 from .render import render_html
 
 
@@ -65,13 +66,12 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
     issues = _issues(issues_dir)
     (out_dir / "issues").mkdir(parents=True, exist_ok=True)
     thread_of = threads(all_items(issues_dir))
-    starred = frozenset(stars)
 
     records = []
     for iso, iss in issues:
         date_str = date.fromisoformat(iso).strftime("%A, %B %-d, %Y")
         (out_dir / "issues" / f"{iso}.html").write_text(
-            render_html(title, date_str, iss, "../index.html", web=True, iso=iso, repo=repo, starred=starred))
+            render_html(title, date_str, iss, "../index.html", web=True, iso=iso, repo=repo, stars=stars))
         records.append({
             "date": iso,
             "intro": iss["intro"],
@@ -97,14 +97,13 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
             (out_dir / "weekly" / f"{p.stem}.html").write_text(render_weekly(title, p.stem, wk, "../index.html", web=True))
             weekly.append({"date": p.stem, "overview": wk["overview"], "ideas": [i["title"] for i in wk["ideas"]]})
 
-    from .stars import star_url
     payload = {
         "issues": records,
-        "stars": {k: {"note": v["note"], "url": v["url"]} for k, v in stars.items()},
-        "starUrls": {it["id"]: star_url(repo, it["id"], it["headline"]) for r in records for it in r["items"]} if repo else {},
+        "stars": {k: {"number": v.get("number"), "note": v.get("note", "")} for k, v in stars.items()},
         "weekly": weekly,
         "repo": repo,
     }
+    (out_dir / "stars.js").write_text(STARS_JS)
     data = json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
     page = (INDEX.replace("__TOGGLE_HEAD__", theme_toggle.HEAD_JS).replace("__TOGGLE_CSS__", theme_toggle.CSS)
             .replace("__TOGGLE_BUTTON__", theme_toggle.BUTTON).replace("__TOGGLE_JS__", theme_toggle.BODY_JS)
@@ -204,6 +203,11 @@ __TOGGLE_BUTTON__
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const D = JSON.parse(document.getElementById('data').textContent);
+window.STAR_CFG = {repo: D.repo, initial: D.stars,
+  headlines: Object.fromEntries(D.issues.flatMap(d => d.items.map(it => [it.id, it.headline])))};
+</script>
+<script src="stars.js"></script>
+<script>
 const ISSUES = D.issues;
 const ITEMS = ISSUES.flatMap(d => d.items.map(it => ({...it, date: d.date})));
 const BY_ID = Object.fromEntries(ITEMS.map(it => [it.id, it]));
@@ -213,16 +217,6 @@ const fmt = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {week
 const short = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric'});
 const link = it => `issues/${it.date}.html#item-${it.n}`;
 const NARROW = matchMedia('(max-width:760px)'), KW_TOP = () => NARROW.matches ? 12 : 30;
-
-// stars: GitHub issues (synced at build) + ones clicked since then (kept in this browser until the next build)
-let pending = [];
-try { pending = JSON.parse(localStorage.getItem('pendingStars') || '[]').filter(id => !D.stars[id]); } catch (e) {}
-const isStarred = id => !!D.stars[id] || pending.includes(id);
-function addPending(id) {
-  if (isStarred(id)) return;
-  pending.push(id);
-  try { localStorage.setItem('pendingStars', JSON.stringify(pending)); } catch (e) {}
-}
 
 // threads
 const THREADS = {};
@@ -235,14 +229,21 @@ const DATASETS = {};
 ITEMS.forEach(it => (it.datasets || []).forEach(ds => (DATASETS[ds] ||= []).push(it)));
 const DATASET_LIST = Object.entries(DATASETS).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
 
-let state = {tab: 'issues', kind: null, tag: null, q: '', open: null}, showAllKw = false;
+// filters: one theme + any number of keywords (an article must have all of them) + search text
+let state = {tab: 'issues', theme: null, kws: [], q: '', open: null}, showAllKw = false;
+const filtering = () => !!(state.theme || state.kws.length || state.q);
 
-function counts(key) {
+const matchQ = it => !state.q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + it.keywords.join(' ') + ' ' +
+  (it.related || []).join(' ') + ' ' + (it.datasets || []).join(' ')).toLowerCase().includes(state.q.toLowerCase());
+const matches = (it, {ignoreTheme = false} = {}) =>
+  (ignoreTheme || !state.theme || it.theme === state.theme) && state.kws.every(k => it.keywords.includes(k)) && matchQ(it);
+
+function tally(items, key) {
   const m = new Map();
-  ITEMS.forEach(it => [].concat(it[key]).forEach(v => m.set(v, (m.get(v) || 0) + 1)));
+  items.forEach(it => [].concat(it[key]).forEach(v => m.set(v, (m.get(v) || 0) + 1)));
   return [...m].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 }
-const THEMES = counts('theme'), KEYWORDS = counts('keywords');
+const ALL_KW = tally(ITEMS, 'keywords');
 
 const TABS = [
   ['issues', 'Issues', ISSUES.length],
@@ -253,8 +254,8 @@ const TABS = [
 ];
 
 function chip(kind, v, n) {
-  const on = state.kind === kind && state.tag === v;
-  return `<button class="chip${on ? ' on' : ''}" data-kind="${kind}" data-tag="${esc(v)}">${esc(v)}${n ? `<small>${n}</small>` : ''}</button>`;
+  const on = kind === 'theme' ? state.theme === v : state.kws.includes(v);
+  return `<button class="chip${on ? ' on' : ''}" data-kind="${kind}" data-tag="${esc(v)}" aria-pressed="${on}">${esc(v)}${n ? `<small>${n}</small>` : ''}</button>`;
 }
 
 function hi(s) {
@@ -263,53 +264,63 @@ function hi(s) {
   return esc(s).replace(re, '<mark>$1</mark>');
 }
 
-function starLink(it) {
-  const on = isStarred(it.id), url = D.stars[it.id]?.url || D.starUrls[it.id];
-  if (!url) return '';
-  return `<a class="star${on ? ' on' : ''}" data-star="${esc(it.id)}" href="${esc(url)}" target="_blank" rel="noopener"
-    title="${on ? 'Starred' : 'Star this story (opens a prefilled GitHub issue)'}">${on ? '★' : '☆'}</a>`;
-}
+const starBtn = it => D.repo ? `<a class="star${Stars.isStarred(it.id) ? ' on' : ''}" href="#" data-star="${esc(it.id)}">${Stars.isStarred(it.id) ? '★' : '☆'}</a>` : '';
 
-function row(it, {withDate = false, showRq = false, note = ''} = {}) {
+function row(it, {withDate = false, showRq = false, note = null} = {}) {
   const thread = it.thread && THREADS[it.thread].length > 1
     ? `<button class="chip thread" data-thread="${esc(it.thread)}">🧵 ${THREADS[it.thread].length} in thread</button>` : '';
   const kw = it.keywords.map(k => chip('keywords', k)).join('');
-  return `<div class="row">${starLink(it)}<div class="body"><a class="go" href="${link(it)}">
+  const noteHtml = note === null ? '' : `<div class="note">${note ? esc(note) : '<span class="meta">No note yet.</span>'}
+    <button class="clear" data-note="${esc(it.id)}" style="margin-left:6px">${note ? 'Edit note' : 'Add note'}</button></div>`;
+  return `<div class="row">${starBtn(it)}<div class="body"><a class="go" href="${link(it)}">
     <div class="meta">${withDate ? fmt(it.date) + ' · ' : ''}<span class="theme">${esc(it.theme)}</span> · ${esc(it.source)}</div>
     <div class="hl">${hi(it.headline)}</div>
     ${state.q ? `<div class="snip">${hi(it.summary)}</div>` : ''}
     ${showRq ? `<div class="snip"><b>Q:</b> ${hi(it.rq)}</div>` : ''}</a>
-    ${note ? `<div class="note">${esc(note)}</div>` : ''}
+    ${noteHtml}
     <div class="kw">${thread}${kw}</div></div></div>`;
 }
 
-const matchQ = it => !state.q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + it.keywords.join(' ') + ' ' +
-  (it.related || []).join(' ') + ' ' + (it.datasets || []).join(' ')).toLowerCase().includes(state.q.toLowerCase());
-
 function renderSide() {
-  $('themes').innerHTML = THEMES.map(([v, n]) => chip('theme', v, n)).join('');
-  const kws = showAllKw ? KEYWORDS : KEYWORDS.slice(0, KW_TOP());
-  $('keywords').innerHTML = kws.map(([v, n]) => chip('keywords', v, n)).join('');
-  $('moreKw').hidden = KEYWORDS.length <= KW_TOP();
-  $('moreKw').textContent = showAllKw ? 'Show fewer' : `Show all ${KEYWORDS.length}`;
-  const nStar = ITEMS.filter(it => isStarred(it.id)).length;
+  // themes still possible with the chosen keywords/search; keywords present in the current results
+  const themes = tally(ITEMS.filter(it => matches(it, {ignoreTheme: true})), 'theme');
+  if (state.theme && !themes.some(([t]) => t === state.theme)) themes.unshift([state.theme, 0]);
+  $('themes').innerHTML = themes.map(([v, n]) => chip('theme', v, n)).join('') || '<span class="meta">No themes match.</span>';
+  const pool = filtering() ? tally(ITEMS.filter(it => matches(it)), 'keywords') : ALL_KW;
+  const chosen = state.kws.map(k => [k, (pool.find(([v]) => v === k) || [k, 0])[1]]);
+  const rest = pool.filter(([v]) => !state.kws.includes(v));
+  const kws = [...chosen, ...(showAllKw ? rest : rest.slice(0, Math.max(0, KW_TOP() - chosen.length)))];
+  $('keywords').innerHTML = kws.map(([v, n]) => chip('keywords', v, n)).join('') || '<span class="meta">No keywords match.</span>';
+  $('moreKw').hidden = chosen.length + rest.length <= KW_TOP();
+  $('moreKw').textContent = showAllKw ? 'Show fewer' : `Show all ${chosen.length + rest.length}`;
+  $('nThemes').textContent = themes.length; $('nKw').textContent = chosen.length + rest.length;
+  const nStar = ITEMS.filter(it => Stars.isStarred(it.id)).length;
   $('tabs').innerHTML = TABS.map(([k, label, n]) =>
     `<button class="tab${state.tab === k ? ' on' : ''}" data-tab="${k}">${label}<small>${k === 'starred' ? nStar : n}</small></button>`).join('');
 }
 
 function bar(title, sub, clear) {
   $('bar').innerHTML = `<strong>${title}</strong>${sub ? `<span class="meta">${sub}</span>` : ''}${clear ? '<button class="clear" id="clear">Clear</button>' : ''}`;
-  if (clear) $('clear').onclick = () => { state = {...state, kind: null, tag: null, q: '', open: null}; $('q').value = ''; update(); };
+  if (clear) $('clear').onclick = () => { state = {...state, theme: null, kws: [], q: '', open: null}; $('q').value = ''; update(); };
+}
+
+function filterBar(n) {
+  const tags = [
+    ...(state.theme ? [`<button class="chip on" data-kind="theme" data-tag="${esc(state.theme)}">${esc(state.theme)} ✕</button>`] : []),
+    ...state.kws.map(k => `<button class="chip on" data-kind="keywords" data-tag="${esc(k)}">${esc(k)} ✕</button>`),
+    ...(state.q ? [`<span class="meta">search “${esc(state.q)}”</span>`] : []),
+  ].join('');
+  $('bar').innerHTML = `<div class="chips">${tags}</div><span class="meta">${n} article${n === 1 ? '' : 's'}${state.kws.length > 1 ? ' with all selected keywords' : ''}</span>
+    <button class="clear" id="clear">Clear all</button>`;
+  $('clear').onclick = () => { state = {...state, theme: null, kws: [], q: '', open: null}; $('q').value = ''; update(); };
 }
 
 const VIEWS = {
   issues() {
-    if (state.tag || state.q) {
-      const hits = ITEMS.filter(it => (!state.tag || [].concat(it[state.kind]).includes(state.tag)) && matchQ(it))
-        .sort((a, b) => b.date.localeCompare(a.date) || a.n - b.n);
-      const label = [state.tag && `“${esc(state.tag)}”`, state.q && `search “${esc(state.q)}”`].filter(Boolean).join(' + ');
-      bar(label, `${hits.length} article${hits.length === 1 ? '' : 's'}`, true);
-      return hits.length ? `<div class="card">${hits.map(it => row(it, {withDate: true})).join('')}</div>` : '<div class="empty">No matching articles.</div>';
+    if (filtering()) {
+      const hits = ITEMS.filter(it => matches(it)).sort((a, b) => b.date.localeCompare(a.date) || a.n - b.n);
+      filterBar(hits.length);
+      return hits.length ? `<div class="card">${hits.map(it => row(it, {withDate: true})).join('')}</div>` : '<div class="empty">No articles match all of these filters.</div>';
     }
     bar('All issues', 'newest first');
     return ISSUES.length ? ISSUES.map(d => `<section class="card">
@@ -335,19 +346,20 @@ const VIEWS = {
     const list = DATASET_LIST.map(([ds, its]) => [ds, its.filter(matchQ)])
       .filter(([ds, its]) => its.length || (state.q && ds.toLowerCase().includes(state.q.toLowerCase())));
     bar('Datasets', 'data sources suggested so far, with the questions they could answer', !!state.q);
-    if (!list.length) return `<div class="empty">${DATASET_LIST.length ? 'No matching datasets.' : 'No datasets recorded yet. They are collected from each story\'s “Data / ID” suggestions starting with the next issue.'}</div>`;
+    if (!list.length) return `<div class="empty">${DATASET_LIST.length ? 'No matching datasets.' : 'No datasets recorded yet.'}</div>`;
     return list.map(([ds, its]) => `<details class="card" ${state.q ? 'open' : ''}>
       <summary style="font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:600">${hi(ds)}<span class="n">${its.length}</span></summary>
       ${its.slice().sort((a, b) => b.date.localeCompare(a.date)).map(it => row(it, {withDate: true, showRq: true})).join('')}</details>`).join('');
   },
   starred() {
-    const its = ITEMS.filter(it => isStarred(it.id) && matchQ(it)).sort((a, b) => b.date.localeCompare(a.date));
+    const its = ITEMS.filter(it => Stars.isStarred(it.id) && matchQ(it)).sort((a, b) => b.date.localeCompare(a.date));
     bar('★ Starred', `${its.length} stor${its.length === 1 ? 'y' : 'ies'}`, !!state.q);
-    const help = `<p class="help">Click ☆ next to any story. GitHub opens a prefilled issue; add a note if you like and press <b>Create</b>.
-      Starred stories steer future picks and the weekly review. To un-star, close that issue on GitHub.
-      New stars show here right away in this browser and sync for everyone at the next daily run.</p>`;
-    return help + (its.length ? `<div class="card">${its.map(it => row(it, {withDate: true, showRq: true,
-      note: D.stars[it.id]?.note || (pending.includes(it.id) ? 'Pending — syncs at the next daily run.' : '')})).join('')}</div>`
+    const conn = Stars.connected()
+      ? `GitHub connected in this browser · <button class="clear" data-act="disconnect">Disconnect</button>`
+      : `<button class="clear" data-act="connect">Connect GitHub</button> (one-time, needed to star from this browser)`;
+    const help = `<p class="help">Click ☆ to star a story and ★ to un-star it. Starred stories and their notes steer future picks
+      and the weekly review.<br>${conn}</p>`;
+    return help + (its.length ? `<div class="card">${its.map(it => row(it, {withDate: true, showRq: true, note: Stars.note(it.id)})).join('')}</div>`
       : '<div class="empty">Nothing starred yet.</div>');
   },
   weekly() {
@@ -360,45 +372,59 @@ const VIEWS = {
   },
 };
 
+function toHash() {
+  const p = new URLSearchParams();
+  if (state.open) p.set('thread', state.open);
+  else if (state.tab !== 'issues') p.set('tab', state.tab);
+  if (state.theme) p.set('theme', state.theme);
+  state.kws.forEach(k => p.append('kw', k));
+  return p.toString();
+}
+function fromHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  const tab = p.get('tab');
+  state = {...state, tab: VIEWS[tab] ? tab : 'issues', theme: p.get('theme'), kws: [...p.getAll('kw'), ...p.getAll('tag')], open: p.get('thread')};
+  if (state.open) state.tab = 'threads';
+}
+
 function update() {
-  const h = state.tag ? `#${state.kind === 'theme' ? 'theme' : 'tag'}=${encodeURIComponent(state.tag)}`
-    : state.open ? `#thread=${encodeURIComponent(state.open)}` : state.tab !== 'issues' ? `#tab=${state.tab}` : '';
-  history.replaceState(null, '', h || location.pathname);
+  const h = toHash();
+  history.replaceState(null, '', h ? '#' + h : location.pathname);
   renderSide();
   $('list').innerHTML = VIEWS[state.tab]();
 }
 
 document.addEventListener('click', e => {
   const tab = e.target.closest('.tab');
-  if (tab) { state = {...state, tab: tab.dataset.tab, kind: null, tag: null, open: null}; return update(); }
+  if (tab) { state = {...state, tab: tab.dataset.tab, open: null}; return update(); }
   const th = e.target.closest('[data-thread]');
-  if (th) { e.preventDefault(); state = {...state, tab: 'threads', kind: null, tag: null, open: th.dataset.thread}; update(); return window.scrollTo({top: 0, behavior: 'smooth'}); }
-  const st = e.target.closest('[data-star]');
-  if (st) { addPending(st.dataset.star); setTimeout(update, 50); return; }
+  if (th) { e.preventDefault(); state = {...state, tab: 'threads', open: th.dataset.thread}; update(); return window.scrollTo({top: 0, behavior: 'smooth'}); }
+  const nt = e.target.closest('[data-note]');
+  if (nt) {
+    const id = nt.dataset.note, v = prompt('Why is this story interesting? (used to guide future picks)', Stars.note(id));
+    if (v !== null) Stars.setNote(id, v.trim());
+    return;
+  }
+  const act = e.target.closest('[data-act]');
+  if (act && act.dataset.act === 'connect') return Stars.connect(update);
+  if (act && act.dataset.act === 'disconnect') { Stars.disconnect(); return update(); }
   const c = e.target.closest('.chip[data-kind]');
   if (!c) return;
   e.preventDefault();
   const {kind, tag} = c.dataset;
-  state = state.tag === tag && state.kind === kind ? {...state, kind: null, tag: null} : {...state, tab: 'issues', kind, tag, open: null};
+  if (kind === 'theme') state.theme = state.theme === tag ? null : tag;
+  else state.kws = state.kws.includes(tag) ? state.kws.filter(k => k !== tag) : [...state.kws, tag];
+  state = {...state, tab: 'issues', open: null};
   update(); (NARROW.matches ? $('bar') : document.body).scrollIntoView({behavior: 'smooth'});
 });
 $('moreKw').onclick = () => { showAllKw = !showAllKw; renderSide(); };
-$('q').oninput = e => { state.q = e.target.value.trim(); $('list').innerHTML = VIEWS[state.tab](); };
-
-function fromHash() {
-  const m = location.hash.match(/^#(tag|theme|thread|tab)=(.+)$/);
-  if (!m) return;
-  const v = decodeURIComponent(m[2]);
-  state = {...state, kind: null, tag: null, open: null};
-  if (m[1] === 'tab' && VIEWS[v]) state.tab = v;
-  else if (m[1] === 'thread') state = {...state, tab: 'threads', open: v};
-  else if (m[1] !== 'tab') state = {...state, tab: 'issues', kind: m[1] === 'theme' ? 'theme' : 'keywords', tag: v};
-}
-fromHash();
+$('q').oninput = e => { state.q = e.target.value.trim(); renderSide(); $('list').innerHTML = VIEWS[state.tab](); };
 window.addEventListener('hashchange', () => { fromHash(); update(); });
+Stars.onChange(update);
+
+fromHash();
 $('kwBox').open = !NARROW.matches;
-$('nThemes').textContent = THEMES.length; $('nKw').textContent = KEYWORDS.length;
-$('stats').textContent = `${ISSUES.length} issue${ISSUES.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${KEYWORDS.length} keywords`;
+$('stats').textContent = `${ISSUES.length} issue${ISSUES.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${ALL_KW.length} keywords`;
 update();
 </script>
 __TOGGLE_JS__
