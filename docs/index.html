@@ -107,7 +107,22 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 .pager button:disabled{opacity:.4;cursor:default}
 .pager select{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;padding:4px 6px;font:inherit}
 .filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-4px 0 14px}
-</style></head>
+</style><script>(function(){
+  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  try {
+    // same opt-out as GoatCounter's own script: Settings → "disable for this browser" opens #toggle-goatcounter
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      off ? localStorage.removeItem('skipgc') : localStorage.setItem('skipgc', 't');
+      alert(off ? 'GoatCounter: counting this browser again.' : 'GoatCounter: visits from this browser will no longer be counted.');
+      history.replaceState(null, '', location.pathname);
+      return;
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
+  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
+  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
+})();</script></head>
 <body><div class="wrap">
 <button class="theme-toggle" id="themeToggle" type="button"></button>
 <h1>Daily Clippings</h1>
@@ -474,8 +489,4 @@ update();
   apply();
 })();
 </script>
-<script>(function(){
-  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
-  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
-  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
-})();</script></body></html>
+</body></html>

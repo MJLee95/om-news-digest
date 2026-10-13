@@ -11,7 +11,22 @@ try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark'
   box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .theme-toggle:hover{border-color:var(--toggle-ink)}
 .theme-toggle .ic{font-size:14px}
-html{background:var(--bg)}</style></head>
+html{background:var(--bg)}</style><script>(function(){
+  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  try {
+    // same opt-out as GoatCounter's own script: Settings → "disable for this browser" opens #toggle-goatcounter
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      off ? localStorage.removeItem('skipgc') : localStorage.setItem('skipgc', 't');
+      alert(off ? 'GoatCounter: counting this browser again.' : 'GoatCounter: visits from this browser will no longer be counted.');
+      history.replaceState(null, '', location.pathname);
+      return;
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
+  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
+  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
+})();</script></head>
 <body style="margin:0;padding:0;background:var(--bg);"><button class="theme-toggle" id="themeToggle" type="button"></button>
 <div style="max-width:640px;margin:0 auto;padding:24px 16px;font-family:Georgia,'Times New Roman',serif;color:var(--ink);">
 <a href="../index.html" style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:var(--accent);text-decoration:none;">&larr; Archive</a>
@@ -119,8 +134,4 @@ Selected and summarized by Claude from news feeds, Crossref and OpenAlex. Check 
   };
   apply();
 })();
-</script><script>window.STAR_CFG={"repo": "MJLee95/om-news-digest", "initial": {}, "headlines": {"2026-10-13#1": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry", "2026-10-13#2": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests", "2026-10-13#3": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases", "2026-10-13#4": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity", "2026-10-13#5": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal"}};</script><script src="../stars.js"></script><script>(function(){
-  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
-  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
-  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
-})();</script></body></html>
+</script><script>window.STAR_CFG={"repo": "MJLee95/om-news-digest", "initial": {}, "headlines": {"2026-10-13#1": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry", "2026-10-13#2": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests", "2026-10-13#3": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases", "2026-10-13#4": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity", "2026-10-13#5": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal"}};</script><script src="../stars.js"></script></body></html>

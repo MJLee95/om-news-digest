@@ -74,17 +74,17 @@ def analytics_snippet(cfg: dict | None) -> str:
     if gc:
         return rf"""<script>(function(){{
   if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
-  try {
+  try {{
     // same opt-out as GoatCounter's own script: Settings → "disable for this browser" opens #toggle-goatcounter
-    if (location.hash === '#toggle-goatcounter') {
+    if (location.hash === '#toggle-goatcounter') {{
       var off = localStorage.getItem('skipgc') === 't';
       off ? localStorage.removeItem('skipgc') : localStorage.setItem('skipgc', 't');
       alert(off ? 'GoatCounter: counting this browser again.' : 'GoatCounter: visits from this browser will no longer be counted.');
       history.replaceState(null, '', location.pathname);
       return;
-    }
+    }}
     if (localStorage.getItem('skipgc') === 't') return;
-  } catch (e) {}
+  }} catch (e) {{}}
   var q = new URLSearchParams({{p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()}});
   new Image().src = 'https://{gc}.goatcounter.com/count?' + q;
 }})();</script>"""
