@@ -18,7 +18,7 @@ import yaml
 
 import sys
 
-from digest import archive, sources, stars as star_store, state
+from digest import archive, datasets as ds_registry, sources, stars as star_store, state
 from digest.render import render_html, render_text
 
 ROOT = Path(__file__).resolve().parent
@@ -101,8 +101,9 @@ def main() -> None:
             rel_by_id[f"R{n}"] = (cid, r)
 
     notes = cur.research(picks)
+    registry = ds_registry.load_registry()
     dg = cur.compose(picks, paper_picks, notes, archive.known_keywords(issues_dir),
-                     related, themes, archive.known_datasets(issues_dir))
+                     related, themes, ds_registry.registry_prompt(registry))
     print(cur.cost_report())
 
     # 3. assemble (never trust a URL that didn't appear in the research notes)
@@ -122,7 +123,9 @@ def main() -> None:
             r.pop("abstract", None)
         follows = [{"id": f, "label": f"{datetime.fromisoformat(f.split('#')[0]):%b %-d} · {item_lookup[f]['headline'][:80]}"}
                    for f in pick_by_id[it.candidate_id].follows if f in item_lookup]
-        items.append({**it.model_dump(exclude={"related"}), "theme": theme, "related": rel, "url": url, "follows": follows,
+        dsets = [x for x in dict.fromkeys(it.datasets) if x in registry["by_id"]][:2]
+        items.append({**it.model_dump(exclude={"related", "datasets"}), "datasets": dsets,
+                      "theme": theme, "related": rel, "url": url, "follows": follows,
                       "source": c.source, "date": c.published.strftime("%b %d") if c.published else ""})
     paper_by_id = {cid: c for cid, c, _ in paper_picks}
     issue_papers = [{**p.model_dump(), "title": paper_by_id[p.candidate_id].title,
@@ -164,6 +167,8 @@ def main() -> None:
         + [{"date": iso, "kind": "paper", "theme": "", "headline": p["title"], "source": p["journal"],
             "url": p["url"], "summary": p["takeaway"]} for p in issue_papers])
     sent = [c for _, c, _ in picks] + [c for _, c, _ in paper_picks] + [news[a.id] for a in sel.also]
+    ds_registry.add_candidates({f"{iso}#{n}": i.get("dataset_candidates", [])[:2] for n, i in enumerate(items, 1)},
+                               iso, registry)
     state.save_seen(seen, [{"date": iso, "url": c.url, "title_key": sources.norm_title(c.title)} for c in sent], today)
     archive.build(issues_dir, ROOT / "docs", d["title"], repo, stars)
 

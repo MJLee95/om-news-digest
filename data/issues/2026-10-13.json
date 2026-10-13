@@ -31,10 +31,8 @@
    "source": "Utility Dive",
    "date": "Oct 12",
    "datasets": [
-    "PJM capacity auction results",
-    "PJM large-load registry",
-    "EIA-860/861",
-    "FERC eLibrary filings"
+    "pjm_data",
+    "ferc_elibrary"
    ],
    "follows": []
   },
@@ -68,9 +66,8 @@
    "source": "WSJ",
    "date": "Oct 13",
    "datasets": [
-    "State PUC rate-case dockets",
-    "ERCOT large-load interconnection queue",
-    "Utility 10-K disclosures"
+    "state_puc",
+    "ercot_reports"
    ],
    "follows": []
   },
@@ -112,10 +109,8 @@
    "source": "Supply Chain Dive",
    "date": "Oct 13",
    "datasets": [
-    "Panjiva/ImportGenius bill-of-lading data",
-    "USDA AMS shipment and price reports",
-    "FDA recall records",
-    "CDC cyclosporiasis surveillance"
+    "panjiva",
+    "openfda_enforcement"
    ],
    "follows": []
   },
@@ -157,10 +152,8 @@
    "source": "FreightWaves",
    "date": "Oct 13",
    "datasets": [
-    "SONAR/DAT lane-level freight data",
-    "BTS Border Crossing data",
-    "BTS TransBorder freight data",
-    "CBP crossing volumes"
+    "bts_transborder",
+    "bts_border_crossing"
    ],
    "follows": []
   },
@@ -202,10 +195,8 @@
    "source": "Packaging Dive",
    "date": "Oct 13",
    "datasets": [
-    "Oregon DEQ/CAA producer registration data",
-    "State EPR program reports",
-    "SEC 10-K risk factors",
-    "Bill-of-lading import data"
+    "state_epr",
+    "sec_edgar"
    ],
    "follows": []
   }

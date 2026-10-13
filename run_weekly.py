@@ -14,7 +14,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from digest import archive, state, stars as star_store
+from digest import archive, datasets as ds_registry, state, stars as star_store
 from digest.weekly import compose, render_weekly, render_weekly_text
 from run import ROOT, load_dotenv
 
@@ -47,7 +47,8 @@ def main() -> None:
     print(cur.cost_report())
 
     iso = today.isoformat()
-    data = {**wk.model_dump(), "items": {it["id"]: it["headline"] for it in week_items}}
+    data = {**wk.model_dump(), "items": {it["id"]: it["headline"] for it in week_items},
+            "dataset_candidates": [{"name": c["name"], "mentions": c["mentions"]} for c in ds_registry.frequent_candidates(2)]}
     html = render_weekly(d["title"], iso, data, d.get("archive_url", ""))
     subject = f"Weekly review · {today:%b %-d} — {wk.ideas[0].title if wk.ideas else wk.overview[:80]}"[:150]
 

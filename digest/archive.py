@@ -12,6 +12,7 @@ from datetime import date
 from pathlib import Path
 
 from . import theme_toggle
+from .datasets import ACCESS_LABELS, load_candidates, load_registry
 from .star_client import STARS_JS
 from .render import render_html
 
@@ -33,11 +34,6 @@ def all_items(issues_dir: Path) -> list[dict]:
 
 def known_keywords(issues_dir: Path, limit: int = 200) -> list[str]:
     counts = Counter(k.strip().lower() for i in all_items(issues_dir) for k in i["keywords"])
-    return [k for k, _ in counts.most_common(limit)]
-
-
-def known_datasets(issues_dir: Path, limit: int = 150) -> list[str]:
-    counts = Counter(ds.strip() for i in all_items(issues_dir) for ds in i["datasets"])
     return [k for k, _ in counts.most_common(limit)]
 
 
@@ -97,8 +93,13 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
             (out_dir / "weekly" / f"{p.stem}.html").write_text(render_weekly(title, p.stem, wk, "../index.html", web=True))
             weekly.append({"date": p.stem, "overview": wk["overview"], "ideas": [i["title"] for i in wk["ideas"]]})
 
+    reg = load_registry()
     payload = {
         "issues": records,
+        "registry": {"categories": reg["categories"], "access": ACCESS_LABELS,
+                     "datasets": [{k: d.get(k) for k in ("id", "name", "category", "access", "url", "alt")} for d in reg["datasets"]]},
+        "candidates": sorted(({"name": c["name"], "mentions": len(c["items"]), "last": c.get("last_seen", "")}
+                              for c in load_candidates().values()), key=lambda c: -c["mentions"]),
         "stars": {k: {"number": v.get("number"), "note": v.get("note", "")} for k, v in stars.items()},
         "weekly": weekly,
         "repo": repo,
@@ -182,6 +183,16 @@ details.card[open]>summary{margin-bottom:6px}
 .empty{color:var(--muted);padding:24px 0;line-height:1.6}
 .help{font-size:13px;color:var(--muted);margin:0 0 14px;line-height:1.55}
 mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
+.badge{display:inline-block;font-size:11px;font-weight:600;border-radius:4px;padding:1px 6px;margin-left:6px;vertical-align:1px;white-space:nowrap}
+.badge.public{background:#dcefe6;color:#1f5f4c}.badge.university{background:#dfe7f6;color:#28497f}
+.badge.commercial{background:#f6e3d6;color:#8a4a1c}.badge.request{background:#efe3f3;color:#6a3a7a}
+:root[data-theme="dark"] .badge{filter:brightness(.85) saturate(1.2)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge{filter:brightness(.85) saturate(1.2)}}
+.ds{border-top:1px solid var(--line);padding:8px 0}
+.ds>summary{font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:600;padding:2px 0}
+.ds .alt{font-size:12px;color:var(--muted);margin:2px 0 4px 17px}
+.ds.unused>summary{color:var(--muted);font-weight:400}
+.filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-4px 0 14px}
 </style></head>
 <body><div class="wrap">
 __TOGGLE_BUTTON__
@@ -224,10 +235,12 @@ ITEMS.forEach(it => { if (it.thread) (THREADS[it.thread] ||= []).push(it); });
 Object.values(THREADS).forEach(list => list.sort((a, b) => a.date.localeCompare(b.date) || a.n - b.n));
 const THREAD_LIST = Object.entries(THREADS).sort((a, b) => b[1].at(-1).date.localeCompare(a[1].at(-1).date));
 
-// datasets
+// datasets: registry entries (datasets.yaml) with the stories that used them
+const REG = D.registry, DS_BY_ID = Object.fromEntries(REG.datasets.map(d => [d.id, d]));
 const DATASETS = {};
-ITEMS.forEach(it => (it.datasets || []).forEach(ds => (DATASETS[ds] ||= []).push(it)));
-const DATASET_LIST = Object.entries(DATASETS).sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0]));
+ITEMS.forEach(it => (it.datasets || []).forEach(id => { if (DS_BY_ID[id]) (DATASETS[id] ||= []).push(it); }));
+const DATASET_LIST = Object.keys(DATASETS);
+let dsAccess = null, dsShowAll = false;
 
 // filters: one theme + any number of keywords (an article must have all of them) + search text
 let state = {tab: 'issues', theme: null, kws: [], q: '', open: null}, showAllKw = false;
@@ -343,13 +356,32 @@ const VIEWS = {
       ${its.map(it => row(it, {withDate: true})).join('')}</section>`).join('');
   },
   datasets() {
-    const list = DATASET_LIST.map(([ds, its]) => [ds, its.filter(matchQ)])
-      .filter(([ds, its]) => its.length || (state.q && ds.toLowerCase().includes(state.q.toLowerCase())));
-    bar('Datasets', 'data sources suggested so far, with the questions they could answer', !!state.q);
-    if (!list.length) return `<div class="empty">${DATASET_LIST.length ? 'No matching datasets.' : 'No datasets recorded yet.'}</div>`;
-    return list.map(([ds, its]) => `<details class="card" ${state.q ? 'open' : ''}>
-      <summary style="font-size:15px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:600">${hi(ds)}<span class="n">${its.length}</span></summary>
-      ${its.slice().sort((a, b) => b.date.localeCompare(a.date)).map(it => row(it, {withDate: true, showRq: true})).join('')}</details>`).join('');
+    const q = state.q.toLowerCase();
+    const used = id => (DATASETS[id] || []).filter(matchQ);
+    const visible = REG.datasets.filter(d => (!dsAccess || d.access === dsAccess) &&
+      (dsShowAll || used(d.id).length) &&
+      (!q || used(d.id).length || (d.name + ' ' + (d.alt || '')).toLowerCase().includes(q)));
+    bar('Datasets', `${DATASET_LIST.length} of ${REG.datasets.length} in your list used so far`, !!state.q);
+    const accessChip = (k, label) => `<button class="chip${dsAccess === k ? ' on' : ''}" data-dsaccess="${k || ''}">${label}</button>`;
+    const filters = `<div class="filters">${accessChip(null, 'All')}${Object.entries(REG.access).map(([k, l]) => accessChip(k, l)).join('')}
+      <button class="clear" data-dsall>${dsShowAll ? 'Hide unused' : 'Show full list'}</button></div>
+      <p class="help">The list lives in <code>datasets.yaml</code>. Each story links to at most two entries; datasets outside the list are kept as candidates below. Access tiers are general guidance — check what UMD actually licenses.</p>`;
+    const groups = Object.entries(REG.categories).map(([cat, label]) => [label, visible.filter(d => d.category === cat)]).filter(([, ds]) => ds.length);
+    const dsRow = d => {
+      const its = used(d.id).sort((a, b) => b.date.localeCompare(a.date));
+      const name = d.url ? `<a href="${esc(d.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${hi(d.name)}</a>` : hi(d.name);
+      return `<details class="ds${its.length ? '' : ' unused'}" ${q && its.length ? 'open' : ''}>
+        <summary>${name}<span class="badge ${d.access}">${esc(REG.access[d.access])}</span><span class="n">${its.length || ''}</span></summary>
+        ${d.alt ? `<div class="alt">Alternative / note: ${esc(d.alt)}</div>` : ''}
+        ${its.map(it => row(it, {withDate: true, showRq: true})).join('')}</details>`;
+    };
+    const body = groups.length ? groups.map(([label, ds]) => `<section class="card"><h3 style="font-size:16px">${esc(label)}</h3>
+      ${ds.map(dsRow).join('')}</section>`).join('') : '<div class="empty">No datasets match.</div>';
+    const cands = D.candidates.filter(c => !q || c.name.toLowerCase().includes(q));
+    const candHtml = cands.length ? `<details class="card"><summary>Candidates not in your list · ${cands.length}</summary>
+      <p class="help" style="margin-top:8px">Named in stories but not in <code>datasets.yaml</code>. Ones mentioned 2+ times also appear in the weekly review; add the useful ones to the list.</p>
+      ${cands.map(c => `<div class="paper">${esc(c.name)} <span class="meta">· ${c.mentions} mention${c.mentions === 1 ? '' : 's'}</span></div>`).join('')}</details>` : '';
+    return filters + body + candHtml;
   },
   starred() {
     const its = ITEMS.filter(it => Stars.isStarred(it.id) && matchQ(it)).sort((a, b) => b.date.localeCompare(a.date));
@@ -405,6 +437,9 @@ document.addEventListener('click', e => {
     if (v !== null) Stars.setNote(id, v.trim());
     return;
   }
+  const dsa = e.target.closest('[data-dsaccess]');
+  if (dsa) { dsAccess = dsa.dataset.dsaccess || null; return update(); }
+  if (e.target.closest('[data-dsall]')) { dsShowAll = !dsShowAll; return update(); }
   const act = e.target.closest('[data-act]');
   if (act && act.dataset.act === 'connect') return Stars.connect(update);
   if (act && act.dataset.act === 'disconnect') { Stars.disconnect(); return update(); }

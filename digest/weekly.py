@@ -134,6 +134,13 @@ def render_weekly(title: str, iso: str, wk: dict, archive_link: str = "", web: b
         parts.append(f'<h3 style="{h3}">Watch next week</h3><ul style="margin:0;padding-left:20px;font-size:15px;line-height:1.6;">'
                      + "".join(f"<li>{e(w)}</li>" for w in wk["watch"]) + "</ul>")
 
+    if wk.get("dataset_candidates"):
+        parts.append(f'<h3 style="{h3}">Dataset candidates</h3>'
+                     f'<p style="{sans}font-size:13px;color:{P["muted"]};margin:0 0 6px;">Named in several stories but not in your '
+                     f'datasets.yaml list. Add the useful ones to the list.</p><ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.6;">'
+                     + "".join(f"<li>{e(c['name'])} <span style=\"color:{P['muted']};\">· {c['mentions']} mentions</span></li>"
+                               for c in wk["dataset_candidates"]) + "</ul>")
+
     archive = (f' <a href="{e(home)}" style="color:{P["faint"]};">Browse the archive</a>.' if home else "")
     parts.append(f"""<p style="{sans}font-size:11px;color:{P['faint']};margin-top:28px;line-height:1.5;">
 Written by Claude from this week's issues. Check the original sources before citing.{archive}</p>

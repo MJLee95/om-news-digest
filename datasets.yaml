@@ -1,0 +1,94 @@
+# 데이터셋 기준 목록 (Datasets 탭의 기준)
+#
+# - 매일 Claude는 기사마다 이 목록 안에서만 최대 2개를 연결합니다.
+# - 목록에 없는 데이터가 언급되면 '후보'로만 쌓입니다 (아카이브 Datasets 탭 맨 아래, 주간 리뷰 메일).
+#   후보 중 쓸 만한 것은 아래 형식으로 직접 추가하세요. 안 쓰는 항목은 지워도 됩니다.
+#
+# access (접근성):
+#   public      공개·무료 (웹 다운로드/API)
+#   university  학교 구독이 있으면 가능 (WRDS 등). UMD가 실제로 구독하는지는 도서관에서 확인 필요
+#   commercial  유료 상업 데이터. 개인 구매는 어렵고, 학교·연구실 구독이나 업체 학술 라이선스 확인
+#   request     신청·승인 필요 (학술 라이선스, 정보공개 청구 등)
+# 접근성은 일반적인 기준으로 적은 초안입니다. 학교에서 확인한 내용으로 고쳐 주세요.
+
+categories:
+  energy: "Energy & grid"
+  emissions: "Emissions & environment"
+  esg: "ESG ratings & incidents"
+  firms: "Firm financials & disclosures"
+  trade: "Supply chain links & trade"
+  logistics: "Logistics & transportation"
+  food: "Food, agriculture & product safety"
+  circular: "Circular economy & waste"
+  climate: "Climate hazards & disasters"
+  minerals: "Critical minerals"
+  policy: "Regulation & policy records"
+
+datasets:
+  # --- Energy & grid ---
+  - {id: eia860, name: "EIA-860 generator inventory", category: energy, access: public, url: "https://www.eia.gov/electricity/data/eia860/"}
+  - {id: eia861, name: "EIA-861 utility sales & customers", category: energy, access: public, url: "https://www.eia.gov/electricity/data/eia861/"}
+  - {id: eia923, name: "EIA-923 plant generation & fuel", category: energy, access: public, url: "https://www.eia.gov/electricity/data/eia923/"}
+  - {id: eia930, name: "EIA-930 hourly grid monitor", category: energy, access: public, url: "https://www.eia.gov/electricity/gridmonitor/"}
+  - {id: pjm_data, name: "PJM Data Miner & capacity auction results", category: energy, access: public, url: "https://dataminer2.pjm.com/"}
+  - {id: ercot_reports, name: "ERCOT interconnection & large-load reports", category: energy, access: public, url: "https://www.ercot.com/gridinfo/resource"}
+  - {id: lbnl_queues, name: "LBNL 'Queued Up' interconnection queue data", category: energy, access: public, url: "https://emp.lbl.gov/queues"}
+
+  # --- Emissions & environment ---
+  - {id: epa_ghgrp, name: "EPA GHGRP facility emissions", category: emissions, access: public, url: "https://www.epa.gov/ghgreporting"}
+  - {id: epa_tri, name: "EPA Toxics Release Inventory (TRI)", category: emissions, access: public, url: "https://www.epa.gov/toxics-release-inventory-tri-program"}
+  - {id: epa_egrid, name: "EPA eGRID power-sector emissions", category: emissions, access: public, url: "https://www.epa.gov/egrid"}
+  - {id: cdp, name: "CDP climate & supply chain responses", category: emissions, access: request, url: "https://www.cdp.net/en/data", alt: "Firms' own sustainability reports; EPA GHGRP for US facilities"}
+  - {id: sbti, name: "SBTi target dashboard", category: emissions, access: public, url: "https://sciencebasedtargets.org/target-dashboard"}
+
+  # --- ESG ratings & incidents ---
+  - {id: msci_esg, name: "MSCI ESG ratings", category: esg, access: university}
+  - {id: lseg_esg, name: "LSEG (Refinitiv) ESG scores", category: esg, access: university}
+  - {id: reprisk, name: "RepRisk ESG incidents", category: esg, access: university, alt: "News-based measures you build yourself (e.g., GDELT)"}
+  - {id: gdelt, name: "GDELT global news event data", category: esg, access: public, url: "https://www.gdeltproject.org/"}
+
+  # --- Firm financials & disclosures ---
+  - {id: compustat, name: "Compustat fundamentals", category: firms, access: university}
+  - {id: crsp, name: "CRSP stock returns", category: firms, access: university}
+  - {id: sec_edgar, name: "SEC EDGAR filings (10-K, 8-K, N-PX)", category: firms, access: public, url: "https://www.sec.gov/edgar/search/"}
+  - {id: call_transcripts, name: "Earnings call transcripts", category: firms, access: university, alt: "8-K exhibits on EDGAR; some firms post transcripts on IR sites"}
+
+  # --- Supply chain links & trade ---
+  - {id: compustat_segments, name: "Compustat customer segments (major customers)", category: trade, access: university}
+  - {id: factset_revere, name: "FactSet Revere supply chain relationships", category: trade, access: university, alt: "Compustat customer segments"}
+  - {id: panjiva, name: "Panjiva / ImportGenius bill-of-lading data", category: trade, access: commercial, alt: "Census USA Trade Online (aggregate, by product & port)"}
+  - {id: census_trade, name: "Census USA Trade Online", category: trade, access: public, url: "https://usatrade.census.gov/"}
+  - {id: usitc_dataweb, name: "USITC DataWeb (imports by tariff line)", category: trade, access: public, url: "https://dataweb.usitc.gov/"}
+  - {id: un_comtrade, name: "UN Comtrade", category: trade, access: public, url: "https://comtradeplus.un.org/"}
+
+  # --- Logistics & transportation ---
+  - {id: bts_transborder, name: "BTS TransBorder freight data", category: logistics, access: public, url: "https://www.bts.gov/transborder"}
+  - {id: bts_border_crossing, name: "BTS border crossing entry data", category: logistics, access: public, url: "https://www.bts.gov/explore-topics-and-geography/geography/border-crossingentry-data"}
+  - {id: freight_rates, name: "Truckload spot & contract rates (DAT, SONAR)", category: logistics, access: commercial, alt: "BTS Freight Transportation Services Index; Cass Freight Index"}
+  - {id: ocean_schedules, name: "Ocean schedule reliability & rates (Sea-Intelligence, Xeneta)", category: logistics, access: commercial, alt: "Port authority monthly volumes; NOAA AIS (US waters)"}
+  - {id: noaa_ais, name: "NOAA MarineCadastre AIS vessel tracks (US waters)", category: logistics, access: public, url: "https://marinecadastre.gov/ais/"}
+
+  # --- Food, agriculture & product safety ---
+  - {id: openfda_enforcement, name: "FDA recall enforcement reports (openFDA)", category: food, access: public, url: "https://open.fda.gov/apis/food/enforcement/"}
+  - {id: usda_ams, name: "USDA AMS Market News (shipments & prices)", category: food, access: public, url: "https://www.ams.usda.gov/market-news"}
+  - {id: usda_nass, name: "USDA NASS Quick Stats", category: food, access: public, url: "https://quickstats.nass.usda.gov/"}
+  - {id: cdc_nors, name: "CDC foodborne outbreak surveillance (NORS)", category: food, access: request, alt: "CDC outbreak notices and MMWR reports (public)"}
+  - {id: cpsc_recalls, name: "CPSC product recalls", category: food, access: public, url: "https://www.cpsc.gov/Recalls"}
+
+  # --- Circular economy & waste ---
+  - {id: epa_msw, name: "EPA materials, waste & recycling facts and figures", category: circular, access: public, url: "https://www.epa.gov/facts-and-figures-about-materials-waste-and-recycling"}
+  - {id: state_epr, name: "State EPR program & PRO reports", category: circular, access: public, alt: "Scattered across state agency sites (e.g., Oregon DEQ, CalRecycle)"}
+  - {id: mintel_gnpd, name: "Mintel GNPD product & packaging launches", category: circular, access: university}
+
+  # --- Climate hazards & disasters ---
+  - {id: noaa_storm_events, name: "NOAA Storm Events Database", category: climate, access: public, url: "https://www.ncdc.noaa.gov/stormevents/"}
+  - {id: openfema, name: "OpenFEMA disaster declarations", category: climate, access: public, url: "https://www.fema.gov/about/openfema/data-sets"}
+
+  # --- Critical minerals ---
+  - {id: usgs_minerals, name: "USGS Mineral Commodity Summaries", category: minerals, access: public, url: "https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries"}
+  - {id: battery_supply, name: "Battery & mineral supply chain data (Benchmark, BNEF)", category: minerals, access: commercial, alt: "USGS summaries; DOE/IEA public reports"}
+
+  # --- Regulation & policy records ---
+  - {id: ferc_elibrary, name: "FERC eLibrary filings & orders", category: policy, access: public, url: "https://elibrary.ferc.gov/"}
+  - {id: state_puc, name: "State PUC dockets & tariff filings", category: policy, access: public, alt: "Searched state by state on each commission's site"}
+  - {id: federal_register, name: "Federal Register rules & tariff actions", category: policy, access: public, url: "https://www.federalregister.gov/"}

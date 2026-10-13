@@ -46,7 +46,8 @@ class NewsItem(BaseModel):
     research_question: str = Field(description="One concrete, researchable question")
     data_identification: str = Field(description="Possible data sources and identification idea (treatment/control, shock timing, unit of analysis)")
     keywords: list[str] = Field(description="3-5 lowercase literature keywords, more specific than the theme")
-    datasets: list[str] = Field(description="1-4 short canonical names of datasets mentioned in data_identification, e.g. 'PJM capacity auction results', 'Panjiva bill-of-lading data', 'CDP climate responses'")
+    datasets: list[str] = Field(description="0-2 ids from the DATASET REGISTRY for the datasets most central to data_identification; empty if none fit")
+    dataset_candidates: list[str] = Field(description="0-2 specific, named, obtainable datasets central to this item that are NOT in the registry (e.g. 'USDA FSIS recall data'); never generic phrases like 'utility filings'")
     related: list[RelatedPaper] = Field(description="1-2 genuinely related papers from the candidates for this story; empty if none fit")
 
 
@@ -208,7 +209,7 @@ STORIES:
     # Step 3: write the structured digest
     def compose(self, picks, paper_picks, notes: str, known_keywords: list[str] = (),
                 related: dict[int, list[tuple[str, dict]]] | None = None, themes: list[str] = (),
-                known_datasets: list[str] = ()) -> Digest:
+                dataset_registry: str = "") -> Digest:
         stories = "\n".join(f"[{cid}] {c.title} ({c.source}) — selection note: {p.why} — theme: {p.theme}"
                             for cid, c, p in picks)
         papers = "\n".join(f"[{cid}] {c.title} ({c.source})\nAbstract: {c.snippet or '(not available)'}"
@@ -243,7 +244,8 @@ PAPERS (use the same ids in candidate_id):
         if known_keywords:
             prompt += ("\nKeywords are used as archive tags. Reuse these existing tags (exact spelling) whenever "
                        "they fit, and add a new lowercase tag only when none fits:\n" + ", ".join(known_keywords) + "\n")
-        if known_datasets:
-            prompt += ("\nDataset names are used for a data-source index. Reuse these existing names (exact spelling) "
-                       "for the same dataset:\n" + "; ".join(known_datasets) + "\n")
+        if dataset_registry:
+            prompt += ("\nDATASET REGISTRY (id: name [field; access]). In data_identification, prefer datasets the reader can "
+                       "realistically get: public ones first, and when you suggest a commercial dataset, also name a public "
+                       "alternative. In 'datasets', list registry ids only:\n" + dataset_registry + "\n")
         return self._parse(prompt, Digest)
