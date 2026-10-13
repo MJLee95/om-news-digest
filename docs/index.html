@@ -2,6 +2,9 @@
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Daily Clippings Archive</title>
+<script>
+try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
 <style>
 :root{--bg:#f4f3ef;--card:#fff;--ink:#1d1d1b;--muted:#6b6a65;--line:#dcdad3;--accent:#1f6f5c;--chip:#ebe9e2;--chip-on:#1d1d1b;--chip-on-ink:#f4f3ef}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#20201e;--ink:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fc2a8;--chip:#2b2a27;--chip-on:#ecebe6;--chip-on-ink:#161615}}
@@ -10,9 +13,15 @@
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
 h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.mode{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
-.mode:hover{border-color:var(--muted)}
+:root{--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
+
+.theme-toggle{position:fixed;top:12px;right:12px;z-index:50;display:flex;align-items:center;gap:6px;
+  border:1px solid var(--toggle-line);background:var(--toggle-bg);color:var(--toggle-ink);border-radius:999px;
+  padding:7px 13px;font:600 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;cursor:pointer;
+  box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.theme-toggle:hover{border-color:var(--toggle-ink)}
+.theme-toggle .ic{font-size:14px}
+
 .sub{color:var(--muted);margin:4px 0 20px}
 a{color:inherit}
 .layout{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
@@ -54,7 +63,8 @@ details .chips{margin-top:8px}
 mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 </style></head>
 <body><div class="wrap">
-<div class="top"><h1>Daily Clippings</h1><button class="mode" id="mode" type="button"></button></div>
+<button class="theme-toggle" id="themeToggle" type="button"></button>
+<h1>Daily Clippings</h1>
 <div class="sub" id="stats"></div>
 <div class="layout">
 <aside>
@@ -68,10 +78,6 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
   <div id="list"></div>
 </main>
 </div></div>
-<script>
-// apply saved light/dark choice before first paint
-try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
-</script>
 <script id="data" type="application/json">[{"date": "2026-10-13", "intro": "Today's issue leads with two data center power stories. FERC rejected most of PJM's large-load interconnection plan but approved a new data center registry, and utilities are using collateral rules to weed out speculative 'phantom' requests. Also covered: Taylor Farms' seasonal sourcing pullback from central Mexico, a driver-visa shock to cross-border trucking, and an Oregon packaging EPR lawsuit paused pending a Ninth Circuit appeal.", "items": [{"n": 1, "headline": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry", "theme": "Energy & AI Data Centers", "source": "Utility Dive", "summary": "On Oct. 9, 2026, FERC rejected the core of PJM's plan for connecting data centers and other large loads (accession no. 20261009-3055). The rejected Interim Resource Adequacy Service (IRAS) would have let large loads connect without matching new capacity if they accepted curtailment ahead of grid emergencies. FERC found it intruded on state authority over retail rates and appeared to discriminate against large loads, but it approved PJM's large-load definition and a registry of each facility's location, ramp schedule and capacity supply. Jefferies expects PJM capacity prices to stay higher for longer and any revival to be state-led, with Ohio and Pennsylvania the ones to watch; the ruling follows FERC's rejection about five weeks earlier of key parts of PJM's backstop procurement auction.", "rq": "How does excluding interruptible large loads from capacity-market demand curves affect procurement levels, prices and reliability outcomes, compared with requiring matched new capacity?", "related": ["Electricity Time‐of‐Use Tariff with Stochastic Demand"], "keywords": ["capacity markets", "interruptible load", "interconnection policy", "data center electricity demand", "federal-state jurisdiction"]}, {"n": 2, "headline": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests", "theme": "Energy & AI Data Centers", "source": "WSJ", "summary": "According to a Breitbart write-up of a paywalled WSJ report (figures not verified against the WSJ text), Wood Mackenzie rates only 23% of disclosed data center power requests as high confidence. Large-customer requests to Exelon tripled to 18,000 MW. After Exelon required binding commitments and collateral, its high-probability list fell to 11,000 MW, backed by about $1 billion in posted collateral. In Texas, the connection queue exceeds 400,000 MW, large customers now pay a $50,000/MW study deposit, and minimum large-customer contract terms nationally average about 10.8 years versus about 4.6 before 2024 (per Halcyon); Vistra's CEO says demand estimates are overstated by more than 20 times.", "rq": "How much do collateral and deposit requirements reduce queue attrition and forecast error in utility large-load pipelines, and how do they shift which project types (e.g., hyperscaler vs. speculative developer) stay in the queue?", "related": ["Capacity Reservation and Wholesale Price Contracts under Forecast Sharing: A Behavioral Assessment"], "keywords": ["interconnection queues", "demand signaling", "collateral requirements", "capacity investment under uncertainty", "load forecasting"]}, {"n": 3, "headline": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases", "theme": "Supply Chain Resilience", "source": "Supply Chain Dive", "summary": "In an Oct. 8 letter, Taylor Farms CEO Bruce Taylor said the company will indefinitely stop harvesting or processing central Mexico iceberg lettuce for the U.S. and Canada during the CDC's Cyclospora season (May 1–Aug. 31), which coincides with the region's rainy season. Cases linked to Taco Bell or to recalled Taylor Farms lettuce reached nearly 13,000 this summer. The FDA closed its investigation on Oct. 2 without establishing the contamination route, though it said traceback evidence pointed to shredded iceberg lettuce from Taylor Farms de Mexico. The company is also expanding water and crop testing, funding detection research and joining an FDA-led task force.", "rq": "After a major outbreak, do produce buyers reallocate sourcing away from implicated regions only during high-risk seasons, and how does that affect import volumes, prices and subsequent outbreak or recall rates?", "related": ["Learning from Conformance Quality Failures That Triggered Product Recalls: The Role of Direct and Indirect Experience", "Product safety and security in the global supply chain: Issues, challenges and research opportunities"], "keywords": ["food safety recalls", "seasonal sourcing", "produce supply chains", "traceback", "supplier region risk"]}, {"n": 4, "headline": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity", "theme": "Trade & Industrial Policy", "source": "FreightWaves", "summary": "FreightWaves reports that U.S. authorities have revoked B-1 visas for about 25,000 Mexican truck drivers; the revoking agency and the timing were not stated, and the figure is unverified. SONAR data show El Paso tender rejections peaking at about 24–25% in early July and still near 20%, San Diego/Otay Mesa at about 10% versus 3.9% a year ago, and Laredo rising from 6.07% (Oct. 3) to 7.78% (Oct. 10). Year-over-year spot rates are up 57% on San Diego–Phoenix and 43% on Laredo–Dallas. Mexico freight volumes are fairly stable, so FreightWaves attributes the pressure to lost driver supply and expects tight conditions to last well into 2027.", "rq": "How does a sudden loss of cross-border driver capacity pass through to tender rejections, spot-contract rate spreads and shippers' mode or port-of-entry substitution (e.g., rail, transloading)?", "related": ["Estimating the Operational Impact of Container Inspections at International Ports", "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains"], "keywords": ["cross-border trucking", "driver supply shock", "tender rejection", "freight rates", "nearshoring logistics"]}, {"n": 5, "headline": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal", "theme": "Circular Economy", "source": "Packaging Dive", "summary": "On Oct. 9, foodservice ware supplier Lollicup USA and Oregon DEQ director Leah Feldon jointly moved to stay Lollicup's June class action over Oregon's packaging EPR law. The stay would last until the Ninth Circuit decides the National Association of Wholesaler-Distributors' appeal, after Judge Michael Simon upheld the law in August. NAW's opening brief is due Dec. 17, and status reports would begin April 16, 2027. An Arnold & Porter partner noted that companies must still comply in the meantime, and that a Lollicup–DEQ enforcement-limiting agreement appears to have expired Aug. 31, 2026; EPR suits are also pending in California and Colorado.", "rq": "Does legal uncertainty over state EPR programs delay producers' packaging redesign (material substitution, lightweighting) or registration with producer responsibility organizations, compared with states where the law is not under challenge?", "related": ["Extended Producer Responsibility for Durable Products", "Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations"], "keywords": ["extended producer responsibility", "packaging regulation", "regulatory uncertainty", "state environmental policy", "litigation risk"]}], "papers": [{"title": "Designing Surprise Bags for Surplus Foods", "journal": "M&SOM", "url": "https://doi.org/10.1287/msom.2026.0294"}, {"title": "Collective Activism", "journal": "Management Science", "url": "https://doi.org/10.1287/mnsc.2025.02975"}], "also": []}]</script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
@@ -160,20 +166,33 @@ $('q').oninput = e => { state.q = e.target.value.trim(); renderMain(); };
 
 const m = location.hash.match(/^#(tag|theme)=(.+)$/);
 if (m) state = {kind: m[1] === 'theme' ? 'theme' : 'keywords', tag: decodeURIComponent(m[2]), q: ''};
-const DARK = matchMedia('(prefers-color-scheme: dark)');
-const isDark = () => (document.documentElement.dataset.theme || (DARK.matches ? 'dark' : 'light')) === 'dark';
-const paintMode = () => { $('mode').textContent = isDark() ? '☀︎ Light' : '☾ Dark'; $('mode').setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); };
-$('mode').onclick = () => {
-  const next = isDark() ? 'light' : 'dark';
-  document.documentElement.dataset.theme = next;
-  try { localStorage.setItem('theme', next); } catch (e) {}
-  paintMode();
-};
-DARK.addEventListener('change', paintMode);
-paintMode();
 $('kwBox').open = !NARROW.matches;
 $('nThemes').textContent = THEMES.length; $('nKw').textContent = KEYWORDS.length;
 $('stats').textContent = `${DATA.length} issue${DATA.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${KEYWORDS.length} keywords`;
 update();
+</script>
+<script>
+(() => {
+  const btn = document.getElementById('themeToggle');
+  const ORDER = ['system', 'light', 'dark'];
+  const LABEL = {system: ['◐', 'System'], light: ['☀︎', 'Light'], dark: ['☾', 'Dark']};
+  let mode = 'system';
+  try { mode = localStorage.getItem('theme') || 'system'; } catch (e) {}
+  if (!ORDER.includes(mode)) mode = 'system';
+  const apply = () => {
+    if (mode === 'system') delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = mode;
+    const [ic, label] = LABEL[mode];
+    btn.innerHTML = `<span class="ic">${ic}</span>${label}`;
+    btn.title = `Theme: ${label} (click to change)`;
+    btn.setAttribute('aria-label', `Color theme: ${label}. Click to change.`);
+  };
+  btn.onclick = () => {
+    mode = ORDER[(ORDER.indexOf(mode) + 1) % ORDER.length];
+    try { mode === 'system' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+    apply();
+  };
+  apply();
+})();
 </script>
 </body></html>

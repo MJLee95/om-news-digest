@@ -11,6 +11,7 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from . import theme_toggle
 from .render import render_html
 
 
@@ -31,7 +32,7 @@ def build(issues_dir: Path, out_dir: Path, title: str) -> None:
     records = []
     for iso, iss in issues:
         date_str = date.fromisoformat(iso).strftime("%A, %B %-d, %Y")
-        (out_dir / "issues" / f"{iso}.html").write_text(render_html(title, date_str, iss, "../index.html"))
+        (out_dir / "issues" / f"{iso}.html").write_text(render_html(title, date_str, iss, "../index.html", web=True))
         records.append({
             "date": iso,
             "intro": iss["intro"],
@@ -45,7 +46,10 @@ def build(issues_dir: Path, out_dir: Path, title: str) -> None:
         })
     records.sort(key=lambda r: r["date"], reverse=True)
     data = json.dumps(records, ensure_ascii=False).replace("</", "<\\/")
-    (out_dir / "index.html").write_text(INDEX.replace("__TITLE__", title).replace("__DATA__", data))
+    page = (INDEX.replace("__TOGGLE_HEAD__", theme_toggle.HEAD_JS).replace("__TOGGLE_CSS__", theme_toggle.CSS)
+            .replace("__TOGGLE_BUTTON__", theme_toggle.BUTTON).replace("__TOGGLE_JS__", theme_toggle.BODY_JS)
+            .replace("__TITLE__", title).replace("__DATA__", data))
+    (out_dir / "index.html").write_text(page)
     (out_dir / ".nojekyll").touch()
 
 
@@ -53,6 +57,7 @@ INDEX = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>__TITLE__ Archive</title>
+__TOGGLE_HEAD__
 <style>
 :root{--bg:#f4f3ef;--card:#fff;--ink:#1d1d1b;--muted:#6b6a65;--line:#dcdad3;--accent:#1f6f5c;--chip:#ebe9e2;--chip-on:#1d1d1b;--chip-on-ink:#f4f3ef}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#20201e;--ink:#ecebe6;--muted:#9c9a93;--line:#34332f;--accent:#6fc2a8;--chip:#2b2a27;--chip-on:#ecebe6;--chip-on-ink:#161615}}
@@ -61,9 +66,8 @@ INDEX = r"""<!doctype html>
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
 .wrap{max-width:1040px;margin:0 auto;padding:28px 16px 64px}
 h1{font-family:Georgia,"Times New Roman",serif;font-size:30px;margin:0}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.mode{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
-.mode:hover{border-color:var(--muted)}
+:root{--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
+__TOGGLE_CSS__
 .sub{color:var(--muted);margin:4px 0 20px}
 a{color:inherit}
 .layout{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
@@ -105,7 +109,8 @@ details .chips{margin-top:8px}
 mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 </style></head>
 <body><div class="wrap">
-<div class="top"><h1>__TITLE__</h1><button class="mode" id="mode" type="button"></button></div>
+__TOGGLE_BUTTON__
+<h1>__TITLE__</h1>
 <div class="sub" id="stats"></div>
 <div class="layout">
 <aside>
@@ -119,10 +124,6 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
   <div id="list"></div>
 </main>
 </div></div>
-<script>
-// apply saved light/dark choice before first paint
-try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
-</script>
 <script id="data" type="application/json">__DATA__</script>
 <script>
 const DATA = JSON.parse(document.getElementById('data').textContent);
@@ -211,22 +212,12 @@ $('q').oninput = e => { state.q = e.target.value.trim(); renderMain(); };
 
 const m = location.hash.match(/^#(tag|theme)=(.+)$/);
 if (m) state = {kind: m[1] === 'theme' ? 'theme' : 'keywords', tag: decodeURIComponent(m[2]), q: ''};
-const DARK = matchMedia('(prefers-color-scheme: dark)');
-const isDark = () => (document.documentElement.dataset.theme || (DARK.matches ? 'dark' : 'light')) === 'dark';
-const paintMode = () => { $('mode').textContent = isDark() ? '☀︎ Light' : '☾ Dark'; $('mode').setAttribute('aria-label', isDark() ? 'Switch to light mode' : 'Switch to dark mode'); };
-$('mode').onclick = () => {
-  const next = isDark() ? 'light' : 'dark';
-  document.documentElement.dataset.theme = next;
-  try { localStorage.setItem('theme', next); } catch (e) {}
-  paintMode();
-};
-DARK.addEventListener('change', paintMode);
-paintMode();
 $('kwBox').open = !NARROW.matches;
 $('nThemes').textContent = THEMES.length; $('nKw').textContent = KEYWORDS.length;
 $('stats').textContent = `${DATA.length} issue${DATA.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${KEYWORDS.length} keywords`;
 update();
 </script>
+__TOGGLE_JS__
 </body></html>
 """
 
