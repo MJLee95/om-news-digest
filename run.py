@@ -170,7 +170,7 @@ def main() -> None:
     ds_registry.add_candidates({f"{iso}#{n}": i.get("dataset_candidates", [])[:2] for n, i in enumerate(items, 1)},
                                iso, registry)
     state.save_seen(seen, [{"date": iso, "url": c.url, "title_key": sources.norm_title(c.title)} for c in sent], today)
-    archive.build(issues_dir, ROOT / "docs", d["title"], repo, stars, d.get("byline", ""))
+    archive.build(issues_dir, ROOT / "docs", d["title"], repo, stars, d.get("byline", ""), cfg.get("analytics"))
 
 
 if __name__ == "__main__":

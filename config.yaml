@@ -13,6 +13,11 @@ digest:
   timezone: "America/New_York"
   archive_url: "https://mjlee95.github.io/om-news-digest/"  # 아카이브 사이트 (메일 하단에 링크)
 
+# 방문 통계 (아카이브 사이트에만 적용, 메일에는 없음). 둘 중 하나만 채우면 됩니다.
+analytics:
+  goatcounter: ""   # 추천. goatcounter.com 가입 때 정한 코드 (예: "mjlee95-clippings")
+  ga4: ""           # Google Analytics 측정 ID (예: "G-XXXXXXXXXX"). 외부 스크립트가 페이지에서 실행됩니다
+
 # GitHub 저장소 (★ 기능이 이 저장소의 issue를 사용합니다)
 github_repo: "MJLee95/om-news-digest"
 

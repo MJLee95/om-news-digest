@@ -63,7 +63,34 @@ def _byline_html(text: str) -> str:
                   lambda m: f'<a href="{m.group(2)}" target="_blank" rel="noopener">{m.group(1)}</a>', escape(text))
 
 
-def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: dict | None = None, byline: str = "") -> None:
+def analytics_snippet(cfg: dict | None) -> str:
+    """Page-view counting for the web pages (never the email).
+
+    GoatCounter: our own few lines send a 1-pixel request with the path, title and referrer, so no third-party
+    script runs next to the GitHub token used for stars. GA4: Google's gtag script (runs in the page).
+    """
+    cfg = cfg or {}
+    gc = (cfg.get("goatcounter") or "").strip()
+    if gc:
+        return rf"""<script>(function(){{
+  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  var q = new URLSearchParams({{p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()}});
+  new Image().src = 'https://{gc}.goatcounter.com/count?' + q;
+}})();</script>"""
+    ga = (cfg.get("ga4") or "").strip()
+    if ga:
+        return f"""<script async src="https://www.googletagmanager.com/gtag/js?id={ga}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{ga}');</script>"""
+    return ""
+
+
+def _inject(html: str, snippet: str) -> str:
+    return html.replace("</body>", snippet + "</body>", 1) if snippet else html
+
+
+def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: dict | None = None, byline: str = "",
+          analytics: dict | None = None) -> None:
+    track = analytics_snippet(analytics)
     if stars is None:
         from .stars import fetch_stars
         stars = fetch_stars(repo)
@@ -74,8 +101,8 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
     records = []
     for iso, iss in issues:
         date_str = date.fromisoformat(iso).strftime("%A, %B %-d, %Y")
-        (out_dir / "issues" / f"{iso}.html").write_text(
-            render_html(title, date_str, iss, "../index.html", web=True, iso=iso, repo=repo, stars=stars))
+        (out_dir / "issues" / f"{iso}.html").write_text(_inject(
+            render_html(title, date_str, iss, "../index.html", web=True, iso=iso, repo=repo, stars=stars), track))
         records.append({
             "date": iso,
             "intro": iss["intro"],
@@ -98,7 +125,7 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
         (out_dir / "weekly").mkdir(exist_ok=True)
         for p in sorted(weekly_dir.glob("*.json"), reverse=True):
             wk = json.loads(p.read_text())
-            (out_dir / "weekly" / f"{p.stem}.html").write_text(render_weekly(title, p.stem, wk, "../index.html", web=True))
+            (out_dir / "weekly" / f"{p.stem}.html").write_text(_inject(render_weekly(title, p.stem, wk, "../index.html", web=True), track))
             weekly.append({"date": p.stem, "overview": wk["overview"], "ideas": [i["title"] for i in wk["ideas"]]})
 
     reg = load_registry()
@@ -117,7 +144,7 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
     page = (INDEX.replace("__TOGGLE_HEAD__", theme_toggle.HEAD_JS).replace("__TOGGLE_CSS__", theme_toggle.CSS)
             .replace("__TOGGLE_BUTTON__", theme_toggle.BUTTON).replace("__TOGGLE_JS__", theme_toggle.BODY_JS)
             .replace("__TITLE__", title).replace("__BYLINE__", _byline_html(byline)).replace("__DATA__", data))
-    (out_dir / "index.html").write_text(page)
+    (out_dir / "index.html").write_text(_inject(page, track))
     (out_dir / ".nojekyll").touch()
 
 
@@ -575,5 +602,6 @@ if __name__ == "__main__":
     cfg = yaml.safe_load((root / "config.yaml").read_text())
     issues_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else root / "data" / "issues"
     out_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else root / "docs"
-    build(issues_dir, out_dir, cfg["digest"]["title"], cfg.get("github_repo", ""), byline=cfg["digest"].get("byline", ""))
+    build(issues_dir, out_dir, cfg["digest"]["title"], cfg.get("github_repo", ""), byline=cfg["digest"].get("byline", ""),
+          analytics=cfg.get("analytics"))
     print(f"Archive built: {out_dir / 'index.html'}")
