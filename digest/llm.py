@@ -83,19 +83,23 @@ class Curator:
         self.effort = cfg.get("effort", "medium")
         self.cfg = cfg
         self.profile = profile.strip()
-        self.tokens = {"input": 0, "output": 0, "searches": 0}
+        self.tokens = {"input": 0, "cache_read": 0, "cache_write": 0, "output": 0, "searches": 0}
 
     def _track(self, resp):
         u = resp.usage
-        self.tokens["input"] += (u.input_tokens or 0) + (u.cache_read_input_tokens or 0) + (u.cache_creation_input_tokens or 0)
+        self.tokens["input"] += u.input_tokens or 0
+        self.tokens["cache_read"] += u.cache_read_input_tokens or 0
+        self.tokens["cache_write"] += u.cache_creation_input_tokens or 0
         self.tokens["output"] += u.output_tokens or 0
         if u.server_tool_use:
             self.tokens["searches"] += u.server_tool_use.web_search_requests or 0
 
     def cost_report(self) -> str:
         t = self.tokens
-        usd = t["input"] * 4 / 1e6 + t["output"] * 20 / 1e6 + t["searches"] * 0.01
-        return f"Usage: {t['input']:,} in / {t['output']:,} out tokens, {t['searches']} searches ≈ ${usd:.2f} (Opus 5.5 list price)"
+        # Opus 5.5 list prices per MTok: input $4, cache write $5, cache read $0.20, output $20; search $0.01 each
+        usd = (t["input"] * 4 + t["cache_write"] * 5 + t["cache_read"] * 0.2 + t["output"] * 20) / 1e6 + t["searches"] * 0.01
+        return (f"Usage: {t['input']:,} in + {t['cache_write']:,} cache-write + {t['cache_read']:,} cache-read / "
+                f"{t['output']:,} out tokens, {t['searches']} searches ≈ ${usd:.2f} (Opus 5.5 list price)")
 
     def _parse(self, prompt: str, schema, effort: str | None = None):
         resp = self.client.beta.messages.parse(
@@ -190,6 +194,7 @@ STORIES:
                 output_config={"effort": self.effort},
                 tools=tools,
                 messages=messages,
+                cache_control={"type": "ephemeral"},  # lets the web-search loop re-read earlier context from cache
                 **FALLBACK,
             )
             self._track(resp)
