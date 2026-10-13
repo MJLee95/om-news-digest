@@ -6,6 +6,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import Counter
 from datetime import date
@@ -54,6 +55,12 @@ def threads(items: list[dict]) -> dict[str, str]:
                 parent[find(i["id"])] = find(f)
     groups = Counter(find(x) for x in parent)
     return {x: find(x) for x in parent if groups[find(x)] > 1}
+
+
+def _byline_html(text: str) -> str:
+    """Escape the byline and turn [label](https://...) into links."""
+    return re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+)\)",
+                  lambda m: f'<a href="{m.group(2)}" target="_blank" rel="noopener">{m.group(1)}</a>', escape(text))
 
 
 def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: dict | None = None, byline: str = "") -> None:
@@ -109,7 +116,7 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
     data = json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
     page = (INDEX.replace("__TOGGLE_HEAD__", theme_toggle.HEAD_JS).replace("__TOGGLE_CSS__", theme_toggle.CSS)
             .replace("__TOGGLE_BUTTON__", theme_toggle.BUTTON).replace("__TOGGLE_JS__", theme_toggle.BODY_JS)
-            .replace("__TITLE__", title).replace("__BYLINE__", escape(byline)).replace("__DATA__", data))
+            .replace("__TITLE__", title).replace("__BYLINE__", _byline_html(byline)).replace("__DATA__", data))
     (out_dir / "index.html").write_text(page)
     (out_dir / ".nojekyll").touch()
 
