@@ -86,6 +86,26 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 .ds>summary{font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink);font-weight:600;padding:2px 0}
 .ds .alt{font-size:12px;color:var(--muted);margin:2px 0 4px 17px}
 .ds.unused>summary{color:var(--muted);font-weight:400}
+.cal{background:var(--card);border-radius:10px;padding:12px 12px 10px;margin-bottom:14px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.cal-head button{background:none;border:0;color:var(--ink);font:600 14px/1 inherit;cursor:pointer;padding:6px 8px;border-radius:6px}
+.cal-head button:hover{background:var(--chip)}
+.cal-head .mon.on{background:var(--chip-on);color:var(--chip-on-ink)}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;text-align:center}
+.cal-grid .dow{font-size:11px;color:var(--muted);padding:2px 0 4px}
+.cal-grid .d{font:13px/1 inherit;padding:7px 0;border-radius:6px;color:var(--muted);opacity:.45;border:0;background:none}
+.cal-grid button.d{opacity:1;color:var(--ink);font-weight:600;cursor:pointer;position:relative}
+.cal-grid button.d::after{content:"";position:absolute;left:50%;bottom:2px;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--accent)}
+.cal-grid button.d:hover{background:var(--chip)}
+.cal-grid button.d.on{background:var(--chip-on);color:var(--chip-on-ink)}
+.cal-grid button.d.on::after{background:var(--chip-on-ink)}
+.cal-foot{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:12px;color:var(--muted)}
+.cal-foot button{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0}
+.pager{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap;margin:6px 0 20px;font-size:13px;color:var(--muted)}
+.pager button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;padding:5px 10px;font:inherit;cursor:pointer;min-width:34px}
+.pager button.on{background:var(--chip-on);color:var(--chip-on-ink);border-color:transparent}
+.pager button:disabled{opacity:.4;cursor:default}
+.pager select{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;padding:4px 6px;font:inherit}
 .filters{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:-4px 0 14px}
 </style></head>
 <body><div class="wrap">
@@ -95,6 +115,7 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 <nav class="tabs" id="tabs"></nav>
 <div class="layout">
 <aside>
+  <div class="cal" id="cal"></div>
   <input type="search" id="q" placeholder="Search headlines, summaries, questions" aria-label="Search">
   <details id="themeBox" open><summary>Themes<span class="n" id="nThemes"></span></summary><div class="chips" id="themes"></div></details>
   <details id="kwBox"><summary>Keywords<span class="n" id="nKw"></span></summary><div class="chips" id="keywords"></div>
@@ -137,7 +158,53 @@ const DATASET_LIST = Object.keys(DATASETS);
 let dsAccess = null, dsShowAll = false;
 
 // filters: one theme + any number of keywords (an article must have all of them) + search text
-let state = {tab: 'issues', theme: null, kws: [], q: '', open: null}, showAllKw = false;
+let state = {tab: 'issues', theme: null, kws: [], q: '', open: null, day: null, month: null, page: 1}, showAllKw = false;
+
+// calendar + paging
+const ISSUE_DATES = new Set(ISSUES.map(d => d.date));
+const NEWEST = ISSUES[0]?.date || new Date().toISOString().slice(0, 10);
+let calView = NEWEST.slice(0, 7);   // 'YYYY-MM' shown in the calendar
+let perPage = 7;
+try { perPage = +localStorage.getItem('perPage') || 7; } catch (e) {}
+const inRange = date => (!state.day || date === state.day) && (!state.month || date.startsWith(state.month));
+const monthName = ym => new Date(ym + '-15T12:00:00').toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
+const shiftMonth = (ym, k) => { const d = new Date(ym + '-15T12:00:00'); d.setMonth(d.getMonth() + k); return d.toISOString().slice(0, 7); };
+
+function renderCal() {
+  const [y, m] = calView.split('-').map(Number);
+  const first = new Date(y, m - 1, 1).getDay(), days = new Date(y, m, 0).getDate();
+  const cells = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map(d => `<div class="dow">${d}</div>`);
+  for (let i = 0; i < first; i++) cells.push('<div></div>');
+  for (let d = 1; d <= days; d++) {
+    const iso = `${calView}-${String(d).padStart(2, '0')}`;
+    cells.push(ISSUE_DATES.has(iso)
+      ? `<button class="d${state.day === iso ? ' on' : ''}" data-calday="${iso}" title="${fmt(iso)}">${d}</button>`
+      : `<div class="d">${d}</div>`);
+  }
+  const n = ISSUES.filter(x => x.date.startsWith(calView)).length;
+  const sel = state.day ? fmt(state.day) : state.month ? monthName(state.month) : 'All issues';
+  $('cal').innerHTML = `<div class="cal-head"><button data-calnav="-1" aria-label="Previous month">‹</button>
+    <button class="mon${state.month === calView ? ' on' : ''}" data-calmonth="${calView}" title="Show this month">${monthName(calView)}</button>
+    <button data-calnav="1" aria-label="Next month">›</button></div>
+    <div class="cal-grid">${cells.join('')}</div>
+    <div class="cal-foot"><span>${n} issue${n === 1 ? '' : 's'} this month · showing ${esc(sel)}</span>
+    ${state.day || state.month ? '<button data-calall>Show all</button>' : ''}</div>`;
+}
+
+function pager(total, size) {
+  const pages = Math.max(1, Math.ceil(total / size));
+  state.page = Math.min(Math.max(1, state.page), pages);
+  const nums = [];
+  for (let i = 1; i <= pages; i++)
+    if (i === 1 || i === pages || Math.abs(i - state.page) <= 1) nums.push(i);
+    else if (nums.at(-1) !== '…') nums.push('…');
+  const btns = pages > 1 ? `<button data-page="${state.page - 1}" ${state.page === 1 ? 'disabled' : ''}>‹ Newer</button>
+    ${nums.map(i => i === '…' ? '<span>…</span>' : `<button data-page="${i}" class="${i === state.page ? 'on' : ''}">${i}</button>`).join('')}
+    <button data-page="${state.page + 1}" ${state.page === pages ? 'disabled' : ''}>Older ›</button>` : '';
+  return {slice: arr => arr.slice((state.page - 1) * size, state.page * size),
+          html: `<div class="pager">${btns}<span style="margin-left:8px">Per page</span>
+            <select id="perPage">${[5, 7, 10].map(k => `<option ${k === perPage ? 'selected' : ''}>${k}</option>`).join('')}</select></div>`};
+}
 const filtering = () => !!(state.theme || state.kws.length || state.q);
 
 const matchQ = it => !state.q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + it.keywords.join(' ') + ' ' +
@@ -208,7 +275,7 @@ function renderSide() {
 
 function bar(title, sub, clear) {
   $('bar').innerHTML = `<strong>${title}</strong>${sub ? `<span class="meta">${sub}</span>` : ''}${clear ? '<button class="clear" id="clear">Clear</button>' : ''}`;
-  if (clear) $('clear').onclick = () => { state = {...state, theme: null, kws: [], q: '', open: null}; $('q').value = ''; update(); };
+  if (clear) $('clear').onclick = () => { state = {...state, theme: null, kws: [], q: '', open: null, day: null, month: null, page: 1}; $('q').value = ''; update(); };
 }
 
 function filterBar(n) {
@@ -225,18 +292,23 @@ function filterBar(n) {
 const VIEWS = {
   issues() {
     if (filtering()) {
-      const hits = ITEMS.filter(it => matches(it)).sort((a, b) => b.date.localeCompare(a.date) || a.n - b.n);
+      const hits = ITEMS.filter(it => matches(it) && inRange(it.date)).sort((a, b) => b.date.localeCompare(a.date) || a.n - b.n);
       filterBar(hits.length);
-      return hits.length ? `<div class="card">${hits.map(it => row(it, {withDate: true})).join('')}</div>` : '<div class="empty">No articles match all of these filters.</div>';
+      const pg = pager(hits.length, perPage * 5);
+      return hits.length ? `<div class="card">${pg.slice(hits).map(it => row(it, {withDate: true})).join('')}</div>${pg.html}` : '<div class="empty">No articles match all of these filters.</div>';
     }
-    bar('All issues', 'newest first');
-    return ISSUES.length ? ISSUES.map(d => `<section class="card">
+    const issues = ISSUES.filter(d => inRange(d.date));
+    const pg = pager(issues.length, perPage);
+    if (state.day) bar(fmt(state.day), '', true);
+    else if (state.month) bar(monthName(state.month), `${issues.length} issue${issues.length === 1 ? '' : 's'}`, true);
+    else bar('All issues', `newest first · ${issues.length} issue${issues.length === 1 ? '' : 's'}`);
+    return issues.length ? pg.slice(issues).map(d => `<section class="card">
       <h3><a href="issues/${d.date}.html">${fmt(d.date)}</a></h3>
       <p class="intro">${esc(d.intro)}</p>
       ${d.items.map(it => row({...it, date: d.date})).join('')}
       ${d.papers.map(p => `<div class="paper">📄 <a href="${esc(p.url)}">${esc(p.title)}</a> — ${esc(p.journal)}</div>`).join('')}
       ${(d.also || []).length ? `<details><summary>Also worth noting · ${d.also.length}</summary>${d.also.map(a => `<div class="paper"><a href="${esc(a.url)}">${esc(a.title)}</a> — ${esc(a.source)}</div>`).join('')}</details>` : ''}
-    </section>`).join('') : '<div class="empty">No issues yet.</div>';
+    </section>`).join('') + pg.html : `<div class="empty">${ISSUES.length ? 'No issue on this date.' : 'No issues yet.'}</div>`;
   },
   threads() {
     let list = THREAD_LIST.filter(([, its]) => its.some(matchQ));
@@ -304,12 +376,17 @@ function toHash() {
   else if (state.tab !== 'issues') p.set('tab', state.tab);
   if (state.theme) p.set('theme', state.theme);
   state.kws.forEach(k => p.append('kw', k));
+  if (state.day) p.set('day', state.day);
+  else if (state.month) p.set('month', state.month);
+  if (state.page > 1) p.set('page', state.page);
   return p.toString();
 }
 function fromHash() {
   const p = new URLSearchParams(location.hash.slice(1));
   const tab = p.get('tab');
-  state = {...state, tab: VIEWS[tab] ? tab : 'issues', theme: p.get('theme'), kws: [...p.getAll('kw'), ...p.getAll('tag')], open: p.get('thread')};
+  state = {...state, tab: VIEWS[tab] ? tab : 'issues', theme: p.get('theme'), kws: [...p.getAll('kw'), ...p.getAll('tag')], open: p.get('thread'),
+           day: p.get('day'), month: p.get('month'), page: +p.get('page') || 1};
+  if (state.day || state.month) calView = (state.day || state.month).slice(0, 7);
   if (state.open) state.tab = 'threads';
 }
 
@@ -317,6 +394,7 @@ function update() {
   const h = toHash();
   history.replaceState(null, '', h ? '#' + h : location.pathname);
   renderSide();
+  renderCal();
   $('list').innerHTML = VIEWS[state.tab]();
 }
 
@@ -331,6 +409,17 @@ document.addEventListener('click', e => {
     if (v !== null) Stars.setNote(id, v.trim());
     return;
   }
+  const cal = e.target.closest('[data-calnav],[data-calmonth],[data-calday],[data-calall],[data-page]');
+  if (cal) {
+    const ds = cal.dataset;
+    if (ds.calnav) { calView = shiftMonth(calView, +ds.calnav); return renderCal(); }
+    if (ds.page) { state.page = +ds.page; update(); return $('bar').scrollIntoView({behavior: 'smooth'}); }
+    if (ds.calall !== undefined) state = {...state, day: null, month: null};
+    else if (ds.calmonth) state = {...state, day: null, month: state.month === ds.calmonth ? null : ds.calmonth};
+    else state = {...state, month: null, day: state.day === ds.calday ? null : ds.calday};
+    state = {...state, tab: 'issues', open: null, page: 1};
+    update(); return (NARROW.matches ? $('bar') : document.body).scrollIntoView({behavior: 'smooth'});
+  }
   const dsa = e.target.closest('[data-dsaccess]');
   if (dsa) { dsAccess = dsa.dataset.dsaccess || null; return update(); }
   if (e.target.closest('[data-dsall]')) { dsShowAll = !dsShowAll; return update(); }
@@ -343,11 +432,17 @@ document.addEventListener('click', e => {
   const {kind, tag} = c.dataset;
   if (kind === 'theme') state.theme = state.theme === tag ? null : tag;
   else state.kws = state.kws.includes(tag) ? state.kws.filter(k => k !== tag) : [...state.kws, tag];
-  state = {...state, tab: 'issues', open: null};
+  state = {...state, tab: 'issues', open: null, page: 1};
   update(); (NARROW.matches ? $('bar') : document.body).scrollIntoView({behavior: 'smooth'});
 });
 $('moreKw').onclick = () => { showAllKw = !showAllKw; renderSide(); };
-$('q').oninput = e => { state.q = e.target.value.trim(); renderSide(); $('list').innerHTML = VIEWS[state.tab](); };
+$('q').oninput = e => { state.q = e.target.value.trim(); state.page = 1; renderSide(); $('list').innerHTML = VIEWS[state.tab](); };
+document.addEventListener('change', e => {
+  if (e.target.id !== 'perPage') return;
+  perPage = +e.target.value; state.page = 1;
+  try { localStorage.setItem('perPage', perPage); } catch (err) {}
+  update();
+});
 window.addEventListener('hashchange', () => { fromHash(); update(); });
 Stars.onChange(update);
 
