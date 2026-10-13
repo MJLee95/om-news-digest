@@ -111,7 +111,7 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 <body><div class="wrap">
 <button class="theme-toggle" id="themeToggle" type="button"></button>
 <h1>Daily Clippings</h1>
-<div class="sub" id="stats"></div>
+<div class="sub">A personal project by Minjae Lee</div>
 <nav class="tabs" id="tabs"></nav>
 <div class="layout">
 <aside>
@@ -448,7 +448,6 @@ Stars.onChange(update);
 
 fromHash();
 $('kwBox').open = !NARROW.matches;
-$('stats').textContent = `${ISSUES.length} issue${ISSUES.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${ALL_KW.length} keywords`;
 update();
 </script>
 <script>

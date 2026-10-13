@@ -9,6 +9,7 @@ import json
 import sys
 from collections import Counter
 from datetime import date
+from html import escape
 from pathlib import Path
 
 from . import theme_toggle
@@ -55,7 +56,7 @@ def threads(items: list[dict]) -> dict[str, str]:
     return {x: find(x) for x in parent if groups[find(x)] > 1}
 
 
-def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: dict | None = None) -> None:
+def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: dict | None = None, byline: str = "") -> None:
     if stars is None:
         from .stars import fetch_stars
         stars = fetch_stars(repo)
@@ -108,7 +109,7 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
     data = json.dumps(payload, ensure_ascii=False).replace("</", "<\\/")
     page = (INDEX.replace("__TOGGLE_HEAD__", theme_toggle.HEAD_JS).replace("__TOGGLE_CSS__", theme_toggle.CSS)
             .replace("__TOGGLE_BUTTON__", theme_toggle.BUTTON).replace("__TOGGLE_JS__", theme_toggle.BODY_JS)
-            .replace("__TITLE__", title).replace("__DATA__", data))
+            .replace("__TITLE__", title).replace("__BYLINE__", escape(byline)).replace("__DATA__", data))
     (out_dir / "index.html").write_text(page)
     (out_dir / ".nojekyll").touch()
 
@@ -217,7 +218,7 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 <body><div class="wrap">
 __TOGGLE_BUTTON__
 <h1>__TITLE__</h1>
-<div class="sub" id="stats"></div>
+<div class="sub">__BYLINE__</div>
 <nav class="tabs" id="tabs"></nav>
 <div class="layout">
 <aside>
@@ -554,7 +555,6 @@ Stars.onChange(update);
 
 fromHash();
 $('kwBox').open = !NARROW.matches;
-$('stats').textContent = `${ISSUES.length} issue${ISSUES.length === 1 ? '' : 's'} · ${ITEMS.length} articles · ${ALL_KW.length} keywords`;
 update();
 </script>
 __TOGGLE_JS__
@@ -568,5 +568,5 @@ if __name__ == "__main__":
     cfg = yaml.safe_load((root / "config.yaml").read_text())
     issues_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else root / "data" / "issues"
     out_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else root / "docs"
-    build(issues_dir, out_dir, cfg["digest"]["title"], cfg.get("github_repo", ""))
+    build(issues_dir, out_dir, cfg["digest"]["title"], cfg.get("github_repo", ""), byline=cfg["digest"].get("byline", ""))
     print(f"Archive built: {out_dir / 'index.html'}")

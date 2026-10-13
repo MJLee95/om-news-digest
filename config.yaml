@@ -3,6 +3,7 @@
 
 digest:
   title: "Daily Clippings"   # 메일 제목·아카이브 이름
+  byline: "A personal project by Minjae Lee"   # 아카이브 제목 아래 한 줄
   num_news: 5            # 하루에 받을 뉴스 개수
   num_also: 5            # "Also worth noting" (제목+링크만) 개수
   num_papers: 2          # "New in the journals" 섹션 논문 개수 (새 논문이 있을 때만)

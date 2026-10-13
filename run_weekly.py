@@ -63,7 +63,7 @@ def main() -> None:
     print("Weekly review sent.")
     (state.DATA / "weekly").mkdir(parents=True, exist_ok=True)
     (state.DATA / "weekly" / f"{iso}.json").write_text(json.dumps(data, indent=1, ensure_ascii=False))
-    archive.build(state.DATA / "issues", ROOT / "docs", d["title"], cfg.get("github_repo", ""), stars)
+    archive.build(state.DATA / "issues", ROOT / "docs", d["title"], cfg.get("github_repo", ""), stars, d.get("byline", ""))
 
 
 if __name__ == "__main__":
