@@ -156,6 +156,11 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
     page = (INDEX.replace("__TOGGLE_HEAD__", theme_toggle.HEAD_JS).replace("__TOGGLE_CSS__", theme_toggle.CSS)
             .replace("__TOGGLE_BUTTON__", theme_toggle.BUTTON).replace("__TOGGLE_JS__", theme_toggle.BODY_JS)
             .replace("__TITLE__", title).replace("__BYLINE__", _byline_html(byline)).replace("__DATA__", data))
+    about_md = Path(__file__).resolve().parent.parent / "about.md"
+    if about_md.exists():
+        from .about import render_about
+        (out_dir / "about.html").write_text(_inject(render_about(title, about_md.read_text()), track))
+        page = page.replace("<!--ABOUT-->", ' · <a href="about.html">About</a>', 1)
     (out_dir / "index.html").write_text(_inject(page, track))
     (out_dir / ".nojekyll").touch()
 
@@ -264,7 +269,7 @@ mark{background:#f2dc8a;color:#1d1d1b;border-radius:2px}
 <body><div class="wrap">
 __TOGGLE_BUTTON__
 <h1>__TITLE__</h1>
-<div class="sub">__BYLINE__</div>
+<div class="sub">__BYLINE__<!--ABOUT--></div>
 <nav class="tabs" id="tabs"></nav>
 <div class="layout">
 <aside>
