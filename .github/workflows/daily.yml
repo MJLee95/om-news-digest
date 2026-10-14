@@ -3,6 +3,7 @@ name: Daily digest
 on:
   schedule:
     - cron: "17 10 * * *"   # 10:17 UTC = 6:17 AM EDT / 5:17 AM EST (GitHub may start it several minutes late)
+    - cron: "47 11 * * *"   # 예비: 첫 실행이 밀리거나 빠진 날만 보냄 (이미 보냈으면 바로 종료)
   workflow_dispatch: {}      # GitHub Actions 탭에서 수동 실행 버튼
 
 permissions:
