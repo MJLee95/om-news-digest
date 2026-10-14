@@ -1,0 +1,274 @@
+{
+ "intro": "Today's issue covers two hard policy shocks to energy infrastructure, Israel's proposed 200 MW cap on new data centers and a US order restricting Chinese grid equipment. It also covers a proposed rollback of Australia's Scope 3 reporting, a cyberattack that disrupted supermarket refrigeration across France, and a regulation-driven pre-buy surge in Mexican heavy-truck exports.",
+ "items": [
+  {
+   "candidate_id": 121,
+   "headline": "Israel's Electricity Authority moves to cap new data centers at 200 MW as grid requests reach ~27 GW",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "",
+   "summary": "Calcalist/CTech reports that Israel's Electricity Authority plans to limit any new data center to 200 MW, citing anonymous members of its governing board. A draft grid-connection decision was expected to go out for public comment. Grid operator Noga already holds connection requests from 50 facilities above 200 MW, including Mega DC (1,100 MW, Hadera) and SDS (875 MW, Nesher), which could not be approved as planned. This follows a 140-day freeze on applications of 8 MW or more, imposed after requests hit about 27,000 MW, close to three times average national load; data centers could use about 20% of Israel's electricity by 2030.",
+   "om_angle": "A hard per-site size cap is a rare, clean capacity constraint on AI infrastructure. It forces firms to trade economies of scale against grid-risk concentration and may push them to split projects across sites. The case speaks directly to facility sizing, siting and interconnection-queue design.",
+   "research_question": "How do per-site capacity caps change data-center project sizing, geographic dispersion and queue attrition compared with queue-based rationing such as moratoria or deposits, and what is the cost in lost scale economies?",
+   "data_identification": "Build a project-level panel of Israeli connection requests from Electricity Authority decisions and public comments, Noga disclosures and press coverage. Compare requested MW, location and resubmissions before the freeze, during the freeze and after the cap, especially whether 1,100 MW proposals are re-filed as multiple ≤200 MW sites. For an analytical complement, build a stylized siting model with a size cap and a correlated-outage cost, calibrated using US large-load queue data (LBNL Queued Up, ERCOT large-load reports) as a no-cap comparison.",
+   "keywords": [
+    "data center electricity demand",
+    "interconnection policy",
+    "interconnection queues",
+    "capacity caps",
+    "facility siting"
+   ],
+   "dataset_candidates": [
+    "Israel Electricity Authority decisions and public-comment drafts"
+   ],
+   "datasets": [
+    "lbnl_queues",
+    "ercot_reports"
+   ],
+   "related": [
+    {
+     "title": "How Sustainable Is Big Data?",
+     "journal": "Production and Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1111/poms.12837",
+     "cites": 128,
+     "why": "An early POM essay on the environmental footprint of big data, useful framing for why data-center growth now triggers grid rationing policies like Israel's."
+    },
+    {
+     "title": "Meeting Corporate Renewable Power Targets",
+     "journal": "Management Science",
+     "year": 2022,
+     "url": "https://doi.org/10.1287/mnsc.2022.4354",
+     "cites": 26,
+     "why": "Models how large electricity buyers procure power under supply uncertainty, relevant to how capped data centers would contract for energy."
+    }
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE04b1ZyRzVrWEhhRFBXZTBobFVhcU9iMXJaYm95QUNuSFlEZjFWd1Q0aGhIQlNVLUpLOWJOS1Z5UjFHLUFsQXBPZTZEbHViWTB1OWJPRFdZQmRPakVnOGNWSVhvdEVKaWs?oc=5",
+   "follows": [],
+   "source": "CTech",
+   "date": "Oct 14"
+  },
+  {
+   "candidate_id": 108,
+   "headline": "Australian opposition introduces bill to scrap mandatory Scope 3 reporting and drop smaller firms from climate disclosure",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://aapnews.aap.com.au/news/call-to-scrap-enormous-red-tape-emissions-rule",
+   "summary": "On 14 Oct 2026, the opposition Liberal–National Coalition announced the Treasury Laws Amendment (Scrapping Scope 3) Bill 2026. Senator Jane Hume will introduce it in the Senate. The bill would remove mandatory Scope 3 reporting, which is due to start for large firms next financial year, and exempt 'Group 3' entities with $50m–$200m revenue, who join from 1 July 2027. Treasury estimates Scope 3 modelling at about $245,000 per firm in year one and about $160,000 a year after that; the Coalition puts Group 3 first-year costs at up to $70,000.",
+   "om_angle": "Scope 3 mandates push emissions-data requests upstream to suppliers. Whether the mandate survives, and the uncertainty in the meantime, shapes whether firms invest in supplier data collection. As an opposition private bill, its passage is uncertain, which makes it more of a regulatory-uncertainty shock than a confirmed reversal.",
+   "research_question": "Does regulatory uncertainty over a pending Scope 3 mandate cause in-scope Australian firms to delay supplier engagement and Scope 3 data collection compared with firms facing a settled mandate?",
+   "data_identification": "Unit of analysis: the firm-year. Compare Australian Group 1/2 firms with matched EU/UK firms under stable disclosure regimes, using CDP supply chain responses on supplier engagement and the share of Scope 3 categories reported. Exploit the $50m revenue threshold for Group 3 in a regression-discontinuity-style comparison. Use event-study returns around the bill's announcement and any Senate votes, alongside the Clean Energy Regulator's NGER data for Scope 1 and 2.",
+   "keywords": [
+    "scope 3 disclosure",
+    "mandatory climate reporting",
+    "regulatory uncertainty",
+    "supplier emissions"
+   ],
+   "dataset_candidates": [
+    "Clean Energy Regulator NGER published data"
+   ],
+   "datasets": [
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Market Reaction to Mandatory Nonfinancial Disclosure",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2018.3099",
+     "cites": 626,
+     "why": "An event study of market reaction to the EU nonfinancial disclosure mandate, a direct template for studying reactions to Australia's mandate rollback."
+    },
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 181,
+     "why": "Shows that customers' environmental disclosure is linked to lower supplier GHG emissions, the supply-chain mechanism Scope 3 mandates aim to trigger."
+    }
+   ],
+   "url": "https://aapnews.aap.com.au/news/call-to-scrap-enormous-red-tape-emissions-rule",
+   "follows": [],
+   "source": "AFR",
+   "date": "Oct 13"
+  },
+  {
+   "candidate_id": 85,
+   "headline": "Cyberattack on Danfoss refrigeration controllers hits ~700 French supermarkets, forcing food disposal",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.usnews.com/news/business/articles/2026-10-13/cyberattack-targeting-refrigeration-systems-hits-700-supermarkets-french-government-says",
+   "summary": "France's finance minister said on 13 Oct 2026 that cyberattacks disrupted refrigeration systems at about 700 of the country's 10,000 supermarkets, including stores of Coopérative U (80 of 2,000 stores, some of which discarded food), Carrefour and Monoprix. Danish supplier Danfoss said most affected systems were older products no longer receiving security updates. The Paris prosecutor's cybercrime unit is investigating losses from spoiled food and possible fires. Separately, and not linked by AP, Ahold Delhaize is restoring systems it shut down after a 'security issue.'",
+   "om_angle": "This is a cyber-physical disruption in which one vendor's unsupported legacy equipment became a common-mode failure across competing retailers' cold chains. It ties together IT supplier concentration, equipment lifecycle and support policy, and perishable inventory risk.",
+   "research_question": "How do the age of a retailer's installed equipment and vendor end-of-support policies affect its exposure to cyber-physical disruptions and the resulting perishable inventory losses?",
+   "data_identification": "Use store-level variation within affected chains (hit vs. not hit) to estimate shrink and stockout effects, if retailer data can be obtained through partnerships. At the firm level, code cyber incidents affecting operational technology from news (GDELT, RepRisk) and industrial control system vulnerability advisories. Link these to supplier concentration measured with FactSet Revere, and test for stock-price spillovers to other customers of the same vendor using CRSP.",
+   "keywords": [
+    "cyber-physical risk",
+    "cold chain",
+    "vendor end-of-support",
+    "common-mode failure",
+    "perishable inventory"
+   ],
+   "dataset_candidates": [
+    "CISA ICS security advisories"
+   ],
+   "datasets": [
+    "reprisk",
+    "gdelt"
+   ],
+   "related": [
+    {
+     "title": "Strange Dance Partners: Supply Chain Cyberattacks and Chained Vulnerability",
+     "journal": "Journal of Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1002/joom.1374",
+     "cites": 11,
+     "why": "Develops the idea of 'chained vulnerability', where suppliers become entry points for cyberattacks, exactly the vendor-mediated mechanism in the Danfoss case."
+    },
+    {
+     "title": "Impact of cybersecurity on operations and supply chain management: Emerging trends and future research directions",
+     "journal": "Production and Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/poms.13859",
+     "cites": 168,
+     "why": "A review of how cybersecurity affects OM and supply chains, a useful map of open questions on operational-technology attacks."
+    }
+   ],
+   "url": "https://www.usnews.com/news/business/articles/2026-10-13/cyberattack-targeting-refrigeration-systems-hits-700-supermarkets-french-government-says",
+   "follows": [],
+   "source": "Food Manufacturing",
+   "date": "Oct 13"
+  },
+  {
+   "candidate_id": 190,
+   "headline": "Rystad: battery storage is most exposed under US executive order restricting Chinese grid equipment",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.rystadenergy.com/news/us-executive-order-targets-chinese-grid-hardware-but-battery-storage-serving-ai-d",
+   "summary": "Executive Order 14421 (26 Aug 2026) restricts foreign grid equipment that poses a national-security risk, citing AI and data-center growth. It covers transformers, inverters, battery storage, breakers, turbines and UPS batteries at critical infrastructure. Rystad finds China supplied 50% of US lithium-ion battery imports by value in the 12 months to June 2026, against 3% for transformers and under 1% for breakers; the next-largest battery suppliers are South Korea (15%) and Japan (13%). Implementing rules due by 24 Dec 2026 will define 'Covered Foreign Entity', and a broad definition could also catch Korean or Mexican plants that use Chinese components or capital.",
+   "om_angle": "Because the shock varies sharply by equipment category, it is well suited to studying supplier diversification capacity and the pass-through to energy-storage deployment costs and timelines, including for data centers' backup power.",
+   "research_question": "How does a sourcing restriction's impact on project costs and delays depend on prior supplier concentration, comparing batteries (50% from China) with transformers and breakers (diversified)?",
+   "data_identification": "Use difference-in-differences across equipment categories, with batteries as treated and transformers and breakers as less treated. Outcomes are monthly import values and unit values by source country (USITC DataWeb, Census trade). Track storage project delays and cancellations in interconnection queues (LBNL Queued Up) and EIA-860 planned battery capacity. Timing runs from the EO signing (Aug 2026) through the definitional rule (Dec 2026) in the Federal Register. Bill-of-lading data (Panjiva) can trace transshipment through Korea and Mexico.",
+   "keywords": [
+    "supplier concentration",
+    "battery storage",
+    "foreign entity of concern",
+    "sourcing restrictions",
+    "supplier diversification"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "usitc_dataweb",
+    "eia860"
+   ],
+   "related": [
+    {
+     "title": "Product safety and security in the global supply chain: Issues, challenges and research opportunities",
+     "journal": "Journal of Operations Management",
+     "year": 2011,
+     "url": "https://doi.org/10.1016/j.jom.2011.06.007",
+     "cites": 567,
+     "why": "Frames how global supply chains create security vulnerabilities, the rationale behind the EO's national-security sourcing restrictions."
+    }
+   ],
+   "url": "https://www.rystadenergy.com/news/us-executive-order-targets-chinese-grid-hardware-but-battery-storage-serving-ai-d",
+   "follows": [],
+   "source": "Review Energy",
+   "date": "Oct 13"
+  },
+  {
+   "candidate_id": 62,
+   "headline": "Mexican heavy-truck exports up 145% in September as US buyers pre-buy ahead of 2027 EPA standards",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://www.freightwaves.com/news/mexico-truck-exports-soar-145-as-us-demand-accelerates",
+   "summary": "Mexico exported 12,707 heavy-duty vehicles in September 2026, up 144.6% year on year, while production rose to 15,181 from 6,857 (INEGI data presented by ANPACT). Domestic retail sales fell 11.3%, the eighth straight monthly decline, and no electric or natural-gas trucks were produced or exported. ANPACT attributes the surge to US customers ordering ahead of EPA emissions standards scheduled for 2027. A 25% US truck tariff takes effect 1 Nov, and part of the jump reflects a weak September 2025 comparison.",
+   "om_angle": "Pre-buying ahead of a stricter standard pulls forward fleet replacement with older-technology diesel trucks, which can delay the emissions gains the rule targets. The case links regulatory timing to capacity and production planning across a cross-border supply chain.",
+   "research_question": "How large is the regulation-induced pre-buy of heavy trucks ahead of the 2027 EPA standards, and how much does the subsequent demand trough offset the rule's near-term emissions benefits?",
+   "data_identification": "Run a time-series event study of monthly Mexican heavy-truck production and exports (INEGI/ANPACT) and US Class 8 imports by tariff line (USITC DataWeb). Compare these with categories not covered by the rule and with the earlier pre-buy around the 2010 EPA standards. Cross-border freight values come from BTS TransBorder. Separating the pre-buy from tariff effects is the main identification challenge, given the 1 Nov tariff date.",
+   "keywords": [
+    "pre-buy behavior",
+    "fleet turnover",
+    "emissions standards",
+    "cross-border trucking",
+    "nearshoring logistics"
+   ],
+   "dataset_candidates": [
+    "INEGI RAIAVL heavy vehicle production and export statistics"
+   ],
+   "datasets": [
+    "usitc_dataweb",
+    "bts_transborder"
+   ],
+   "related": [
+    {
+     "title": "Accelerating vehicle fleet turnover to achieve sustainable mobility goals",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1173",
+     "cites": 64,
+     "why": "Studies policies to accelerate vehicle fleet turnover for emissions goals, directly relevant to how pre-buys alter the timing of fleet replacement."
+    },
+    {
+     "title": "Compliance Strategies under Permits for Emissions",
+     "journal": "Production and Operations Management",
+     "year": 2007,
+     "url": "https://doi.org/10.1111/j.1937-5956.2007.tb00294.x",
+     "cites": 149,
+     "why": "Models firms' compliance strategies under emissions regulation, a foundation for analyzing how manufacturers and buyers time production around a standard."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/mexico-truck-exports-soar-145-as-us-demand-accelerates",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Oct 13"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 5,
+   "takeaway": "The paper imports a Strategy–Operations–People framework for collective action from organizational behavior into POM. It formalizes the framework mathematically to clarify when coordinated action, such as supply chain coordination or joint sustainability efforts, is feasible and implementable.",
+   "connection": "Collective-action problems run through today's stories, from retailers sharing one vulnerable refrigeration vendor to firms jointly collecting supplier Scope 3 data.",
+   "title": "Modeling collective action in POM: The Strategy–Operations–People framework",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261489977"
+  },
+  {
+   "candidate_id": 0,
+   "takeaway": "Using proprietary data on Chinese corporate bond issuance, the authors find that regulators' comment letters target opaque firms and reduce issuance success. Investors connected to the issuer, however, buy more of these firms' bonds, contributing to overpricing.",
+   "connection": "It shows how regulatory scrutiny of disclosure interacts with informed stakeholders, a lens for asking who benefits if Australia rolls back Scope 3 reporting.",
+   "title": "Comment Letters, Connected Investors, and Corporate Bond Issuance",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.07607"
+  }
+ ],
+ "thread_to_pull": "Israel's 200 MW cap and the US order on Chinese grid equipment both constrain AI data-center buildout, one on grid capacity and one on the hardware supply chain (batteries and UPS). A project combining these shocks could ask how data-center developers adjust site size, backup-power design and battery sourcing when they face simultaneous capacity and sourcing constraints. It could pair queue data (LBNL, ERCOT, Israeli filings) with USITC import data on batteries by source country.",
+ "also": [
+  {
+   "title": "FERC approves Duke large load transmission rules despite cost-shift concerns",
+   "url": "https://www.utilitydive.com/news/ferc-duke-energy-large-load-tariff-nitsa/832847/",
+   "source": "Utility Dive",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Drought-Driven Low Rhine Water Levels Disrupt European Grain and Feed Supply Chains",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNVWo0Ty1iMy1zd1NJTFc4aWx6dlN5MWdOS2V0WkVYUUotOEJWOG1VTXVfUkY0SkZGTzlTU3NqUS1HT3lqOWZUX1B2dFhsMVJsaW1hZDRmcGdsWlItbjRvRUVuYnQzNG9PSDJlWHV0bzJUMzZrTG0tUGdnWVAwOHZfZVJVY3FMLUNIbWEybm9aZkZiSHhGa0hjc2JiTktrUlpaRENsZlBCTjN0TTNTTjIzeg?oc=5",
+   "source": "CMB News",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Nigeria risks $1bn export loss over EU deforestation rules —NEPC",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQNWc1QTBXSlZRaThGeVBmd3pWYmNxSDZlcG16SUktTUlIZHV4Y1hCa1NXMTFVc2EtTld4LXN4cEg5ZlNXaV9DRnIzZjQxYmI5Y2hMX3FsU2RSWFc5Rkw4eFo2eE92cExGaGlBMG5YbmhxNnFMMGR0bWhYWVUxLWFXLWNORG0tUkNXZ2tkUWRTRVA1Sm12N0MxQWxSNA?oc=5",
+   "source": "Tribune Online",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Pro Disposal receives ‘multimillion dollar’ MRF loan from Closed Loop",
+   "url": "https://www.wastedive.com/news/pro-disposal-loan-closed-loop-partners-for-pennsylvania-mrf-equipment/832843/",
+   "source": "Waste Dive",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "TrusTrace launches new report: More than one in five fashion brands selling into the U.S. have had shipments detained",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQVjdLWVB3dXpOdkktWHNfRnhNWERTNWViNFE4WXRXTGpYNkJhTWFXenZkbFhBZlpFVHpwTnB1RVdSOUV1Z2RBbk1vZHozeVhSdVlRQ2JSRUplV05hczFWMWxFMEdtd21menFLc3ZzeEljY3BnWmJScHB1dHpQRDN4ejRDS2JZeGpJZE5iR2JSdXZHMS1XMW9BYml1YzVjQ2tlSlJpN0lOQlIzN2lzbFZET0xEYkZ4d1lSTDBSdWw5U0FmXy04NjZFM055Vlh0ZWV3RjRrVW8xOXk?oc=5",
+   "source": "American Journal of Transportation",
+   "theme": "Supply Chain Resilience"
+  }
+ ]
+}
