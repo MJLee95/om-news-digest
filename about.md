@@ -1,10 +1,10 @@
 # About
 
-**Daily Clippings** is a personal research notebook kept by [Minjae Lee](https://mjlee95.github.io), a PhD student in Operations Management at the University of Maryland's Robert H. Smith School of Business.
+This page is a personal research notebook kept by [Minjae Lee](https://mjlee95.github.io), a PhD student in Operations Management/Management Science at the University of Maryland's Robert H. Smith School of Business.
 
 ## What it is
 
-Each morning, an automated pipeline collects news on sustainable operations, ESG, supply chain resilience, energy and AI data centers, the circular economy and related topics. It picks a handful of stories and adds an operations-research angle to each: why it matters, a possible research question, data that could be used to study it, and related academic papers.
+Each morning, an automated pipeline collects news on topics that I'm currently interested in, including sustainable operations, ESG, supply chain resilience, energy and AI data centers, the circular economy and related topics. It picks a handful of stories and adds an operations-research angle to each: why it matters, a possible research question, data that could be used to study it, and related academic papers.
 
 ## Why it exists
 
