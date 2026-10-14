@@ -2,7 +2,7 @@ name: Weekly review
 
 on:
   schedule:
-    - cron: "0 13 * * 0"     # 일요일 13:00 UTC = 9:00 AM EDT / 8:00 AM EST
+    - cron: "7 13 * * 0"     # 일요일 13:07 UTC = 9:07 AM EDT / 8:07 AM EST
   workflow_dispatch: {}      # GitHub Actions 탭에서 수동 실행 버튼
 
 permissions:

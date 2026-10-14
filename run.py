@@ -39,6 +39,7 @@ def main() -> None:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--candidates-only", action="store_true")
     ap.add_argument("--papers", action="store_true", help="force the journal section today")
+    ap.add_argument("--force", action="store_true", help="send even if today's issue was already sent")
     args = ap.parse_args()
 
     load_dotenv()
@@ -47,6 +48,9 @@ def main() -> None:
     now_local = datetime.now(ZoneInfo(d["timezone"]))
     today = now_local.date()
     since = datetime.now(timezone.utc) - timedelta(hours=d["lookback_hours"])
+    if not (args.dry_run or args.candidates_only or args.force) and (state.DATA / "issues" / f"{today.isoformat()}.json").exists():
+        print(f"Today's issue ({today}) was already sent; skipping. Use --force to send again.")
+        return
 
     # 1. collect
     seen = state.load_seen()
