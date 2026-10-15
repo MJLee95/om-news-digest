@@ -22,6 +22,7 @@ from run import ROOT, load_dotenv
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--force", action="store_true", help="send even if this week's review was already sent")
     args = ap.parse_args()
 
     load_dotenv()
@@ -29,6 +30,10 @@ def main() -> None:
     d = cfg["digest"]
     today = datetime.now(ZoneInfo(d["timezone"])).date()
     start = (today - timedelta(days=6)).isoformat()
+    sent = sorted((state.DATA / "weekly").glob("*.json")) if (state.DATA / "weekly").exists() else []
+    if not (args.dry_run or args.force) and sent and sent[-1].stem > start:
+        print(f"A weekly review was already sent this week ({sent[-1].stem}); skipping. Use --force to send again.")
+        return
 
     week_items, also = [], []
     for p in sorted((state.DATA / "issues").glob("*.json")):
