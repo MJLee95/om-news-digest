@@ -1,0 +1,264 @@
+{
+ "intro": "Today's issue covers a proposed size threshold for regulating AI data center grid connections, a new solar trade shock, a voluntary nature-disclosure sample, a closed-loop EV battery deal, and a traceability problem in the nickel behind EV batteries.",
+ "items": [
+  {
+   "candidate_id": 17,
+   "headline": "NERC stakeholders approve reliability standards for data centers and crypto miners of 50 MW+ at 100 kV+",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.utilitydive.com/news/reliability-standards-ai-data-centers-crypto-miners-pass-final-nerc-ba/833094/",
+   "summary": "NERC stakeholders passed new standards for 'computational loads' (Project 2026-02; CLO-001-1 and CLO-002-1) in a final ballot announced Oct. 15, 2026. The standards next go to the NERC Board of Trustees and then to FERC. They appear to cover loads of 50 MW or more connected at 100 kV or higher and address interconnection modeling, operational data and communications, load protection coordination and disturbance monitoring. They follow a rare Level 3 alert NERC issued in May after data centers suddenly dropped load or swung demand; NERC forecasts 224 GW of summer peak growth over 10 years, 24% above 2025.",
+   "om_angle": "A hard size-and-voltage threshold creates compliance costs that may change how large loads are sized, phased and sited, and that is a natural setting for bunching designs. The standards also turn data center load behavior into a regulated operational variable.",
+   "research_question": "After the standards were proposed, do new computational-load projects bunch just below 50 MW or connect below 100 kV, and does that bunching vary with how stringent the requirements are expected to be?",
+   "data_identification": "Build a project-level panel of large-load interconnection requests from ERCOT large-load reports and utility or state PUC dockets, adding LBNL queue data where co-located generation appears. Compare the distribution of requested MW and voltage level before and after the May alert and the ballot, and test for excess mass just under 50 MW. Use FERC eLibrary filings to date the regulatory milestones. Applicability details were not fully verified, so check the final CLO-001-1 text.",
+   "keywords": [
+    "data center electricity demand",
+    "interconnection policy",
+    "facility siting",
+    "regulatory thresholds",
+    "grid reliability standards"
+   ],
+   "dataset_candidates": [
+    "NERC Project 2026-02 standard drafts and comment records"
+   ],
+   "datasets": [
+    "ercot_reports",
+    "ferc_elibrary"
+   ],
+   "related": [
+    {
+     "title": "Robust Generator Maintenance Schedule for Frequency-Secure Power Systems",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2023.0664",
+     "cites": 2,
+     "why": "Models how power systems stay frequency-secure when supply is suddenly lost, which is the same physical risk created when large data center loads drop off abruptly."
+    }
+   ],
+   "url": "https://www.utilitydive.com/news/reliability-standards-ai-data-centers-crypto-miners-pass-final-nerc-ba/833094/",
+   "follows": [],
+   "source": "Utility Dive",
+   "date": "Oct 15"
+  },
+  {
+   "candidate_id": 15,
+   "headline": "ITC finds solar cell imports from India, Indonesia and Laos injured US makers, clearing way for AD/CVD orders",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.utilitydive.com/news/itc-material-injury-solar-imports-india-indonesia-laos/833127/",
+   "summary": "On Oct. 14, 2026, the ITC voted that crystalline silicon solar cell imports from India, Indonesia and Laos injured US producers. The decision follows Commerce's final determination last month. Petitioners, led by First Solar, Hanwha Qcells USA and Mission Solar, cite India dumping margins of 123% and countervailing duty rates of 126%, and they expect final orders around Nov. 2. They also say Ethiopia has become the third-largest US solar import source, up more than 3,000% in 12 months, and have asked Commerce to investigate possible tariff evasion. A Section 232 polysilicon tariff takes effect Dec. 4.",
+   "om_angle": "This is another round in a sequence of country-specific solar duties, following the 2023 Southeast Asia case. Repeated rounds let researchers trace how sourcing moves from country to country ('whack-a-mole' sourcing) and whether domestic manufacturing capacity responds.",
+   "research_question": "How quickly and how completely do US solar cell imports shift to non-covered countries such as Ethiopia after successive AD/CVD actions, and does each new shift indicate transshipment, judged by the importer and supplier networks involved?",
+   "data_identification": "Pull monthly HTS-level solar cell imports by country from USITC DataWeb or Census trade data. Use an event-study around the petition, the preliminary and final determinations, and the 2023 Southeast Asia case, with non-covered countries as the comparison group. For firm-level transshipment tests, use bill-of-lading data from Panjiva or ImportGenius; the public alternative is Commerce case records on exporters' ownership.",
+   "keywords": [
+    "sourcing restrictions",
+    "supplier diversification",
+    "antidumping duties",
+    "tariff circumvention"
+   ],
+   "dataset_candidates": [
+    "Commerce ITA AD/CVD case records (ACCESS)"
+   ],
+   "datasets": [
+    "usitc_dataweb",
+    "federal_register"
+   ],
+   "related": [
+    {
+     "title": "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12350",
+     "cites": 24,
+     "why": "Lays out a framework and data sources for studying how tariff shocks reshape supply chains, which can be applied directly to this solar case."
+    },
+    {
+     "title": "Return to the United States: Impact of Reshoring Announcements and Reshoring Risks on Market Valuation",
+     "journal": "Management Science",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/mnsc.2022.00599",
+     "cites": 29,
+     "why": "Studies how markets value reshoring announcements, relevant to how investors may reward domestic solar manufacturers protected by the duties."
+    }
+   ],
+   "url": "https://www.utilitydive.com/news/itc-material-injury-solar-imports-india-indonesia-laos/833127/",
+   "follows": [],
+   "source": "Utility Dive",
+   "date": "Oct 15"
+  },
+  {
+   "candidate_id": 19,
+   "headline": "836 organizations in 57 countries now commit to TNFD nature reporting as ISSB and ISO standards approach",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/over-800-companies-commit-to-tnfd-aligned-nature-reporting-ahead-of-new-issb-iso-standards/",
+   "summary": "The TNFD reports that 836 organizations in 57 countries have committed to report under its recommendations, a 14% increase in under a year. They include financial institutions with more than $26 trillion in assets and listed firms worth over $10.5 trillion. More than 1,100 organizations make at least one TNFD-aligned disclosure, averaging 8 of the 14 recommended disclosures. The ISSB is about to issue a non-mandatory practice statement on nature-related disclosure, and ISO has approved turning the TNFD's LEAP approach into an ISO standard.",
+   "om_angle": "The adopter list gives a ready-made sample for studying which firms choose to disclose nature-related risks. Because nature dependencies sit largely upstream, adoption may track supply chain exposure in sectors such as agriculture and mining.",
+   "research_question": "Are firms with more upstream exposure to nature-intensive sectors more likely to adopt TNFD early, and does adoption change their supplier mix or sourcing disclosures afterward?",
+   "data_identification": "Match the TNFD adopter list, with commitment dates, to Compustat and to supplier links from FactSet Revere; the public alternative is Compustat customer segments. Measure upstream nature exposure using the suppliers' industries. Compare early adopters, late adopters and matched non-adopters on CDP forests and water responses and on supplier changes. The ISSB and ISO milestones can serve as timing shocks.",
+   "keywords": [
+    "nature-related disclosure",
+    "voluntary disclosure",
+    "biodiversity risk",
+    "scope 3 disclosure"
+   ],
+   "dataset_candidates": [
+    "TNFD adopters list"
+   ],
+   "datasets": [
+    "cdp",
+    "compustat"
+   ],
+   "related": [
+    {
+     "title": "Supply Chain Carbon Footprinting and Climate Change Disclosures of Global Firms",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13421",
+     "cites": 115,
+     "why": "Shows how measuring supply chain carbon changed firms' climate disclosures, a template for asking whether nature assessment changes nature disclosures."
+    },
+    {
+     "title": "When does it pay to be green? The strategic benefits of adoption speed",
+     "journal": "Journal of Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1002/joom.1337",
+     "cites": 22,
+     "why": "Examines whether adopting environmental practices early pays off, directly relevant to early versus late TNFD adopters."
+    }
+   ],
+   "url": "https://www.esgtoday.com/over-800-companies-commit-to-tnfd-aligned-nature-reporting-ahead-of-new-issb-iso-standards/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Oct 16"
+  },
+  {
+   "candidate_id": 190,
+   "headline": "Rivian widens Redwood deal: manufacturing scrap recycling plus second-life packs powering its Illinois plant",
+   "theme": "Circular Economy",
+   "original_url": "https://electriccarsreport.com/2026/10/rivian-expands-redwood-materials-partnership-to-recycle-ev-batteries-and-power-its-factory/",
+   "summary": "On Oct. 14, 2026, Rivian and Redwood Materials announced that Redwood will also recycle battery scrap from Rivian's manufacturing. Redwood will keep collecting used Rivian packs through Rivian's nationwide service centers; each pack is checked and either reused for stationary storage or recycled. Redwood also provides storage at Rivian's plant in Normal, Illinois, building on an April 2026 deal for a 10 MWh system made from more than 100 second-life packs to cut electricity costs and peak grid strain. Financial terms and volumes were not disclosed.",
+   "om_angle": "This is a concrete case of a manufacturer combining take-back through its service network, a reuse-or-recycle grading decision, and reuse inside its own operations. Each step maps onto standard remanufacturing and closed-loop supply chain models.",
+   "research_question": "For a manufacturer collecting used packs through its service network, what grading threshold and inventory policy should decide between second-life storage at its own sites and recycling, given its plant's peak electricity charges and recycled-material prices?",
+   "data_identification": "Build an analytical model calibrated with public inputs: the plant's utility tariff and peak demand charges from Illinois Commerce Commission filings, storage sizing from the 10 MWh / 100+ pack figures, and recycled nickel and cobalt prices. On the empirical side, track how often firms disclose take-back and reuse in SEC filings and EIA-860 storage entries.",
+   "keywords": [
+    "battery storage",
+    "second-life batteries",
+    "closed-loop supply chain",
+    "battery recycling"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "state_puc"
+   ],
+   "related": [
+    {
+     "title": "LOOKING FORWARD, PUSHING BACK AND PEERING SIDEWAYS: ANALYZING THE SUSTAINABILITY OF INDUSTRIAL SYMBIOSIS",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2009,
+     "url": "https://doi.org/10.1111/j.1745-493x.2009.03174.x",
+     "cites": 156,
+     "why": "Compares industrial symbiosis and supply chain approaches to reusing waste, a useful frame for scrap and end-of-life packs flowing back into the producer's own plant."
+    }
+   ],
+   "url": "https://electriccarsreport.com/2026/10/rivian-expands-redwood-materials-partnership-to-recycle-ev-batteries-and-power-its-factory/",
+   "follows": [],
+   "source": "Electric Cars Report",
+   "date": "Oct 15"
+  },
+  {
+   "candidate_id": 189,
+   "headline": "Guardian analysis links nickel in VW, Ford and Tesla batteries to deforestation on Indigenous land in Sulawesi",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "",
+   "summary": "A Guardian analysis published Oct. 16, 2026, using company filings, two years of trade data and satellite imagery, links mines in the battery supply chains of Volkswagen, Ford and Tesla to tree loss on Tolaki Indigenous land in Sulawesi, Indonesia. Sulawesi holds the world's largest nickel deposits. According to a secondary summary, ore from the Cahaya and Hengjaya mines moves through local smelters to Zhejiang Huayou Cobalt plants in China, and Huayou supplies cathode materials to CATL. The batteries only 'may contain' this nickel, because public documents cannot tie specific shipments to specific cars.",
+   "om_angle": "The investigation shows that public data can reconstruct a supply path several tiers deep but cannot confirm that a specific shipment reached a specific car. That gap between plausible links and proven links is the core problem for supplier due diligence rules.",
+   "research_question": "When investigations publicly link automakers to upstream environmental harm through multi-tier mineral chains, do the automakers or their cathode and cell suppliers change sourcing or traceability disclosures, and are the market effects concentrated on the brand or spread to the intermediate tiers?",
+   "data_identification": "Run an event study around Oct. 16, 2026 for VW, Ford, Tesla, CATL and Huayou using CRSP or exchange data, with RepRisk or GDELT measuring media intensity. Map tiers with trade flows from UN Comtrade (Indonesian nickel intermediates to China) and company filings, and overlay mine-level tree-cover loss. A later CSDDD-type rule could serve as a follow-up shock.",
+   "keywords": [
+    "supplier region risk",
+    "multi-tier traceability",
+    "nickel supply chain",
+    "deforestation"
+   ],
+   "dataset_candidates": [
+    "Global Forest Watch tree cover loss data"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "reprisk"
+   ],
+   "related": [
+    {
+     "title": "Chain liability in multitier supply chains? Responsibility attributions for unsustainable supplier behavior",
+     "journal": "Journal of Operations Management",
+     "year": 2014,
+     "url": "https://doi.org/10.1016/j.jom.2014.01.005",
+     "cites": 433,
+     "why": "Studies when consumers blame brands for unsustainable behavior by upstream suppliers, which is the reputational mechanism at stake for VW, Ford and Tesla."
+    },
+    {
+     "title": "Cascading Sustainability in Multi‐tier Supply Chains: When Do Chinese Suppliers Adopt Sustainable Procurement?",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13516",
+     "cites": 106,
+     "why": "Examines when first-tier suppliers pass sustainability requirements down to lower tiers, relevant to whether automakers can push traceability through CATL and Huayou."
+    }
+   ],
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQRkJGR01XS0hvTzVSUFZ3WmJHUFQtQ3h0ZEZUS1BRbjFzUzhrVHdXcWliY3JqY0pRSGpoZl9VU1o1amptQVN4UHZsYU96dXNuc2FwS2tvWHc5U2ZZYzhZUlc2cUd2Ujl6dXJSTmRMMWF6YUdSdXhFRFRKd2dLM0ttSXI3clAzN19MbjJGWm01eXVOcEF3ZHlRWm1MS05QcGZnRHJLOV9fSTliQQ?oc=5",
+   "follows": [],
+   "source": "The Guardian",
+   "date": "Oct 16"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 12,
+   "takeaway": "Using a text-based measure of firm-level supply chain risk, the paper finds that riskier supply chains lead to higher bank loan spreads. Using natural disasters as shocks, it shows the effect is causal, and stronger when lenders have less private information about the firm.",
+   "connection": "The Sulawesi nickel exposure and the solar trade shocks are exactly the kinds of supply chain fragility this paper suggests lenders price into loans.",
+   "title": "EXPRESS: Mind the Cost of Disturbance: Firm-Level Supply Chain Risk and the Bank Loan Cost",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261499809"
+  },
+  {
+   "candidate_id": 5,
+   "takeaway": "The paper models a fresh-produce firm that uses sensors to monitor each unit's condition and sends units with shorter remaining shelf life to closer markets, and it analyzes when this monitoring actually reduces food waste.",
+   "connection": "Its reuse-or-discard allocation logic parallels Rivian's grading of used packs into second-life storage or recycling.",
+   "title": "Shipment Monitoring, Allocation, and the Impact on Food Waste",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.07382"
+  }
+ ],
+ "thread_to_pull": "Both the solar duties and the nickel-deforestation story turn on the same weakness: trade and filing data can show plausible links across supply chain tiers but rarely prove them, whether the question is transshipment through Ethiopia or ore from Sulawesi reaching a car. A project could compare how much public trade data plus bill-of-lading records can actually reconstruct in each case, and then use the approach of paper [12] to test whether that kind of hard-to-verify upstream exposure raises firms' borrowing costs.",
+ "also": [
+  {
+   "title": "California diesel prices remain above $8 per gallon as truckers call for relief",
+   "url": "https://www.supplychaindive.com/news/california-diesel-prices-remain-above-8-per-gallon-as-truckers-call-for-re/833092/",
+   "source": "Supply Chain Dive",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "Texas county sues to close WM landfill over alleged RCRA violations",
+   "url": "https://www.wastedive.com/news/texas-county-sues-to-close-wm-landfill-over-alleged-rcra-violations/833101/",
+   "source": "Waste Dive",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "AEP in deal to buy up to 1.6 GW of Mainspring linear generators",
+   "url": "https://www.utilitydive.com/news/aep-mainspring-linear-generators-bloom-fuel-cell-google-wyoming/833104/",
+   "source": "Utility Dive",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "LCCI Warns EU Deforestation Rules Could Threaten Over Half Of Nigeria’s Cocoa Exports",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPU0JHR29fc215NTZ3SHduVXJId0wwTkFNVVhPYU1KVG12N01MWU9NVHVjamVfbnppVHo5WEdvaFd6XzlsaXE1QTNqbnBIZEZWcGh0WEdRb3BGdVpaY2JWcmRnSEQ3bVZuRG52NVJ5ZEl4dXFwRGJCNTcwY2pOVzZhVUx5VGdMeHNZY3B1dmFaMnhFZUU0amxGUGRDMjFiVHUtS1A0OG5lUkFDUQ?oc=5",
+   "source": "Arise News",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Best Buy pilots battery-powered vehicles at California distribution sites",
+   "url": "https://www.esgdive.com/news/best-buy-pilots-battery-powered-vehicles-at-california-distribution-sites/833103/",
+   "source": "ESG Dive",
+   "theme": "Logistics Decarbonization"
+  }
+ ]
+}

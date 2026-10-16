@@ -78,5 +78,37 @@
    "2026-10-15#5"
   ],
   "last_seen": "2026-10-15"
+ },
+ "nerc project 2026-02 standard drafts and comment records": {
+  "name": "NERC Project 2026-02 standard drafts and comment records",
+  "first_seen": "2026-10-16",
+  "items": [
+   "2026-10-16#1"
+  ],
+  "last_seen": "2026-10-16"
+ },
+ "commerce ita ad/cvd case records (access)": {
+  "name": "Commerce ITA AD/CVD case records (ACCESS)",
+  "first_seen": "2026-10-16",
+  "items": [
+   "2026-10-16#2"
+  ],
+  "last_seen": "2026-10-16"
+ },
+ "tnfd adopters list": {
+  "name": "TNFD adopters list",
+  "first_seen": "2026-10-16",
+  "items": [
+   "2026-10-16#3"
+  ],
+  "last_seen": "2026-10-16"
+ },
+ "global forest watch tree cover loss data": {
+  "name": "Global Forest Watch tree cover loss data",
+  "first_seen": "2026-10-16",
+  "items": [
+   "2026-10-16#5"
+  ],
+  "last_seen": "2026-10-16"
  }
 }
