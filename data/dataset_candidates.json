@@ -110,5 +110,37 @@
    "2026-10-16#5"
   ],
   "last_seen": "2026-10-16"
+ },
+ "pjm generator outage and emergency procedures postings": {
+  "name": "PJM Generator Outage and Emergency Procedures postings",
+  "first_seen": "2026-10-17",
+  "items": [
+   "2026-10-17#1"
+  ],
+  "last_seen": "2026-10-17"
+ },
+ "fmc docket fmc-2026-0463 public comments": {
+  "name": "FMC docket FMC-2026-0463 public comments",
+  "first_seen": "2026-10-17",
+  "items": [
+   "2026-10-17#2"
+  ],
+  "last_seen": "2026-10-17"
+ },
+ "web-scraped patagonia new and worn wear product listings": {
+  "name": "Web-scraped Patagonia new and Worn Wear product listings",
+  "first_seen": "2026-10-17",
+  "items": [
+   "2026-10-17#4"
+  ],
+  "last_seen": "2026-10-17"
+ },
+ "ukmto maritime security incident reports": {
+  "name": "UKMTO maritime security incident reports",
+  "first_seen": "2026-10-17",
+  "items": [
+   "2026-10-17#5"
+  ],
+  "last_seen": "2026-10-17"
  }
 }
