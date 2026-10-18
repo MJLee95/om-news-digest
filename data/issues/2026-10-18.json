@@ -1,0 +1,252 @@
+{
+ "intro": "Today's issue: Pennsylvania moves to curtail data centers first in grid emergencies, a lobbying record behind the EU deforestation law's dilution, and Infineon's multi-sourcing of silicon carbide wafers. Also: India's draft steel policy with a circular-economy angle, and a Pentagon equity-style investment in US tungsten.",
+ "items": [
+  {
+   "candidate_id": 41,
+   "headline": "Pennsylvania PUC proposes curtailing new data centers before other customers during grid emergencies",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.puc.pa.gov/press-release/2026/puc-advances-consumer-safeguards-as-data-center-growth-adds-new-demands-to-electric-grid-10-1-26",
+   "summary": "On Oct. 1, 2026 the Pennsylvania PUC voted 4-0 for a Tentative Order. Under it, utilities would curtail eligible new large loads, such as data centers that haven't secured enough new capacity, before other customers during PJM 'Interim Resource Adequacy Service' events, and could not classify data centers as exempt 'critical load.' Utilities would also have to keep large-load registries and set notification procedures. A PUC-commissioned study found PJM failing its reliability planning standard from 2027 to 2030, with modeled risk nearly six times the standard by 2030. Comments are due within 30 days plus 15 for replies, and CBS reports a final order is expected at the end of January.",
+   "om_angle": "This turns large-load interruptibility into a regulated priority rule, which changes the expected cost of siting a data center in one PJM state versus its neighbors. It is a clean setting for studying curtailment priority, capacity procurement and facility location together.",
+   "research_question": "Does a state rule placing un-backed large loads first in the curtailment queue shift data-center siting, or the speed of bring-your-own-capacity deals, away from Pennsylvania toward other PJM states?",
+   "data_identification": "Treat Pennsylvania as treated and other PJM states as controls, with the Oct. 2026 Tentative Order and the expected January final order as shock dates. Measure outcomes with large-load interconnection requests and utility large-load filings in state PUC dockets, PJM load forecasts, and new-generation and co-location filings in EIA-860 and LBNL queue data. The unit of analysis is the utility zone by quarter.",
+   "keywords": [
+    "interruptible load",
+    "data center electricity demand",
+    "grid reliability standards",
+    "facility siting",
+    "federal-state jurisdiction"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "state_puc",
+    "pjm_data"
+   ],
+   "related": [
+    {
+     "title": "A Deep Demand Response Program for Local Electricity Systems",
+     "journal": "Production and Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1177/10591478251363654",
+     "cites": 2,
+     "why": "Models how a utility designs demand-response programs to exploit load flexibility, a natural framework for pricing large-load interruptibility."
+    },
+    {
+     "title": "Electricity Time‐of‐Use Tariff with Stochastic Demand",
+     "journal": "Production and Operations Management",
+     "year": 2016,
+     "url": "https://doi.org/10.1111/poms.12610",
+     "cites": 56,
+     "why": "Studies tariff design under stochastic demand, relevant to whether curtailment priority acts as an implicit lower-reliability tariff for large loads."
+    }
+   ],
+   "url": "https://www.puc.pa.gov/press-release/2026/puc-advances-consumer-safeguards-as-data-center-growth-adds-new-demands-to-electric-grid-10-1-26",
+   "follows": [
+    {
+     "id": "2026-10-13#1",
+     "label": "Oct 13 · FERC rejects PJM's curtailment-based large-load interconnection plan, approves d"
+    },
+    {
+     "id": "2026-10-17#1",
+     "label": "Oct 17 · PJM ran on 66% of its generation fleet during October Maximum Generation Alerts;"
+    }
+   ],
+   "source": "NorthcentralPA.com",
+   "date": "Oct 17"
+  },
+  {
+   "candidate_id": 62,
+   "headline": "Mighty Earth report: US firms held 350+ EU meetings to delay and weaken the Deforestation Regulation",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.theguardian.com/environment/2026/oct/17/us-corporate-lobbyists-europe-deforestation",
+   "summary": "The Guardian (Oct. 17, 2026) reported a Mighty Earth investigation finding that 24 US companies and trade groups held more than 350 meetings with EU officials between July 2024 and July 2026 over the EUDR: 173 with MEPs and 178 with senior Commission officials. These figures are relayed second-hand. Named players include Cargill, Bunge, Mondelēz, the US Soybean Export Council and AmCham EU. After a July 2025 Trump–von der Leyen meeting, a joint statement promised the US special treatment, and the Commission called the US 'negligible risk.' The firms deny coordinating and cite implementation problems such as IT systems and unclear obligations.",
+   "om_angle": "Traceability and due-diligence costs in commodity supply chains depend on how the rules end up written. Lobbying intensity and country-risk designations are measurable inputs that shape those rules.",
+   "research_question": "Do commodity firms with greater exposure to EUDR-covered sourcing lobby more intensively, and did 'negligible risk' country designations shift EU sourcing of soy and wood products toward low-risk-rated origins?",
+   "data_identification": "Firm-level meeting counts would come from the EU Transparency Register and Commission meeting logs. EUDR exposure could be built from commodity import shares in UN Comtrade (Panjiva bills of lading where available). A difference-in-differences design would compare EU imports by origin before and after the July 2025 US designation and the later postponement and dilution steps, whose legal status should be verified.",
+   "keywords": [
+    "deforestation",
+    "multi-tier traceability",
+    "regulatory uncertainty",
+    "corporate lobbying"
+   ],
+   "dataset_candidates": [
+    "EU Transparency Register",
+    "LobbyFacts EU Commission meetings database"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "A theoretical model on how firms can leverage political resources to align with supply chain strategy for competitive advantage",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/jscm.12284",
+     "cites": 62,
+     "why": "Theorizes how firms use political resources to make the regulatory environment fit their supply chain strategy, which is exactly the behavior documented here."
+    },
+    {
+     "title": "The NGO's Dilemma: How to Influence Firms to Replace a Potentially Hazardous Substance",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2013,
+     "url": "https://doi.org/10.1287/msom.2013.0440",
+     "cites": 76,
+     "why": "Models whether an NGO should target firms or regulators, relevant to Mighty Earth's role in this regulatory fight."
+    }
+   ],
+   "url": "https://www.theguardian.com/environment/2026/oct/17/us-corporate-lobbyists-europe-deforestation",
+   "follows": [],
+   "source": "The Guardian",
+   "date": "Oct 17"
+  },
+  {
+   "candidate_id": 21,
+   "headline": "Infineon adds Wolfspeed 200mm silicon carbide wafers in multi-year supply deal",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.infineon.com/press-release/2026/infpr202610-008",
+   "summary": "On Oct. 15, 2026 Infineon and Wolfspeed announced a multi-year agreement for Wolfspeed to supply 200mm SiC wafers. Wolfspeed calls it an expansion and extension of their existing 150mm deal, a relationship of more than 20 years, while Infineon frames it as supporting its move from 150mm to 200mm. Infineon cites its multi-supplier strategy and rising SiC demand from EVs, renewables and AI data center power systems. Value, volumes and duration were not disclosed.",
+   "om_angle": "This is a long-term contract signed during a technology transition, with the buyer deliberately multi-sourcing a concentrated input. It is useful for studying how wafer-size transitions interact with supplier diversification and the risk of a supplier failing.",
+   "research_question": "When a critical input undergoes a technology node transition (150mm to 200mm SiC), do buyers lengthen contracts and add suppliers, and how does supplier financial distress affect those choices?",
+   "data_identification": "Collect supply-agreement disclosures from SEC EDGAR 8-Ks and 10-K material-contract exhibits, plus Compustat customer segments, to build buyer–supplier dyads. FactSet Revere is a commercial alternative. The design would compare contract terms and the number of suppliers per buyer before and after 200mm announcements across SiC buyers, conditioning on supplier distress measures from Compustat.",
+   "keywords": [
+    "supplier diversification",
+    "supplier concentration",
+    "long-term supply contracts",
+    "silicon carbide"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "compustat_segments"
+   ],
+   "related": [
+    {
+     "title": "Procurement Strategies with Unreliable Suppliers Under Correlated Random Yields",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1287/msom.2020.0918",
+     "cites": 83,
+     "why": "Analyzes procurement from multiple unreliable suppliers with correlated yields, directly relevant to multi-sourcing a technically demanding wafer input."
+    },
+    {
+     "title": "Wholesale Price Contracts for Reliable Supply",
+     "journal": "Production and Operations Management",
+     "year": 2018,
+     "url": "https://doi.org/10.1111/poms.12848",
+     "cites": 51,
+     "why": "Shows when simple wholesale contracts can induce reliable supply, a benchmark for long-term wafer agreements with undisclosed terms."
+    }
+   ],
+   "url": "https://www.infineon.com/press-release/2026/infpr202610-008",
+   "follows": [],
+   "source": "ELE Times",
+   "date": "Oct 17"
+  },
+  {
+   "candidate_id": 32,
+   "headline": "India's draft National Steel Policy 2047 targets 604 MT and emphasizes circularity and secondary producers",
+   "theme": "Circular Economy",
+   "original_url": "https://www.dailyexcelsior.com/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/amp/",
+   "summary": "PTI reported on Oct. 17 that industry welcomed India's draft National Steel Policy 2047, released for comment. Its 2047 targets are 604 MT of crude steel (sources disagree on whether this is capacity or production), 505 MT of finished-steel demand, 302 kg per capita consumption and 45 MT of exports. The draft stresses value addition, raw-material security, decarbonisation, coated and specialty steel, and support for secondary producers. RHI Magnesita India highlighted the draft's recognition of refractory recovery.",
+   "om_angle": "This is a large policy shift in the world's fastest-growing major steel market, linking circularity (secondary steel, refractory recovery) with raw-material security and decarbonisation. It is relevant to recycling capacity and secondary-material sourcing.",
+   "research_question": "How do policy commitments to secondary steel producers and material recovery change the mix of primary and secondary steelmaking capacity, and India's import dependence for scrap and raw materials?",
+   "data_identification": "Track India's imports of ferrous scrap, coking coal and magnesite by HS code in UN Comtrade before and after the draft and the final policy, with peer steel-producing countries as comparison. Pair this with plant-level capacity and production statistics. Note that the final policy text and timing still need to be verified.",
+   "keywords": [
+    "steel decarbonization",
+    "secondary materials",
+    "raw material security",
+    "industrial policy"
+   ],
+   "dataset_candidates": [
+    "worldsteel Steel Statistical Yearbook",
+    "India Joint Plant Committee steel statistics"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [],
+   "url": "https://www.dailyexcelsior.com/new-steel-policy-to-promote-circular-economy-boost-value-addition-industry/amp/",
+   "follows": [],
+   "source": "ET Manufacturing",
+   "date": "Oct 17"
+  },
+  {
+   "candidate_id": 58,
+   "headline": "Pentagon commits $450M to tungsten producer Elmet in exchange for preferred equity and warrants",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://www.tradingview.com/news/stocktwits:2e5b37cac094b:0-critical-minerals-wrap-elmt-lands-450m-govt-investment-crml-usar-tmq-stocks-in-focus-ahead-of-trump-xi-meet/",
+   "summary": "On Sept. 14, 2026 Elmet Group announced a $450M committed investment from the US Department of War to expand tungsten mining, processing and manufacturing: $200M at closing, with further drawdowns. In return the government gets redeemable preferred equity, warrants for up to 19.9% of common stock, and a board seat plus an observer. The Department also took about a 10% stake through roughly $35.6M of transactions involving Trilogy Metals and South32's Alaska projects. This is a late-September wrap; ELMT rose over 33% that week, and the deal's closing and the subsequent Trump–Xi meeting outcome are unconfirmed here.",
+   "om_angle": "Governments are moving from grants and loans to equity and governance rights in mineral suppliers. That raises questions about how state ownership changes capacity investment and sourcing for concentrated inputs like tungsten.",
+   "research_question": "How do markets and firms respond when the US government takes equity stakes in critical-mineral producers? Specifically, do recipients accelerate capacity investment, and do rivals' valuations move?",
+   "data_identification": "Build an event study on announcement dates of government equity deals (Elmet, Trilogy and others), using 8-K exhibits from SEC EDGAR and CRSP returns for recipients and listed peers. Follow-up outcomes would be capex and capacity from Compustat and 10-Ks, and US import dependence for tungsten from USGS Mineral Commodity Summaries.",
+   "keywords": [
+    "supplier concentration",
+    "capacity investment under uncertainty",
+    "government equity stakes",
+    "tungsten"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "usgs_minerals"
+   ],
+   "related": [
+    {
+     "title": "Return to the United States: Impact of Reshoring Announcements and Reshoring Risks on Market Valuation",
+     "journal": "Management Science",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/mnsc.2022.00599",
+     "cites": 29,
+     "why": "Estimates market reactions to reshoring announcements, a direct template for an event study of state-backed domestic mineral capacity."
+    }
+   ],
+   "url": "https://www.tradingview.com/news/stocktwits:2e5b37cac094b:0-critical-minerals-wrap-elmt-lands-450m-govt-investment-crml-usar-tmq-stocks-in-focus-ahead-of-trump-xi-meet/",
+   "follows": [],
+   "source": "Stocktwits",
+   "date": "Oct 17"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 13,
+   "takeaway": "The paper asks why operational or disclosure improvements often don't raise market value. It models equity value as the minimum across several valuation 'lenses,' so the single weakest firm condition (for example, a governance or financing concern) binds and gets disproportionate weight.",
+   "connection": "This helps interpret reactions like Elmet's jump after government backing resolved a financing constraint, or why ESG improvements may not be priced while another concern dominates.",
+   "title": "EXPRESS: Valuation Bottlenecks: Why Isn’t a Better Business Enough for a Higher Market Capitalization?",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261499473"
+  }
+ ],
+ "thread_to_pull": "Infineon explicitly cites AI data centers as new SiC demand, while Pennsylvania is making those same data centers first in line for curtailment. A project could trace how large-load interruptibility rules feed back into data-center capacity plans and, upstream, into demand signals for power-electronics inputs. One approach is to link state PUC curtailment rules and PJM load forecasts to disclosed data-center expansions and to supplier contracting in SEC filings.",
+ "also": [
+  {
+   "title": "Doppa: 58,000 Sarawak oil palm smallholders risk losing market access under EUDR",
+   "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNcG0ybWhSZGZ3ZTNNQlNicXUyZXQ3ZDQzZElYSi1FVEl6RlBBdEJqaGJWUENtMXBxQUwzc3FnbThqSlg0NGpjLXdCVFdjQVhEOTlBbkkzQ2RyMTFmR0tLb29XbnFJajNOYnBNNkNZQVFpakR2SFRzc092Y1lfVGRSajhkckZDTU5DM0JtcjM5MkZlVTYtSm5vU0s4cWdKQjBlbVMwN3UzdU1nUUdvWnRDS1ROQXNMUlNBaEpydw?oc=5",
+   "source": "Borneo Post",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "More emissions 'deleters' pardoned by Trump",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQbVpXb3hJeHhiU3Y3MWU1TjZOSDd2bEtrS1N4TzAxRUxLNF81MWhIYXVsbm5IcUJCbVJLQ1pjeVc5bk5lSWdMREg1UUNFOGJUdmwxNUhaNDZTWGU3RGFFUXdEakRWa19kNkJKdEtoUlpJaTI5NEkyclZwaXBDVkVkRTA3VE1QalV0cHJ1TXU4TjhWTE16OTNOMFp4QUJjYmxJRFhCZw?oc=5",
+   "source": "Overdrive Magazine",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "No signs of truckload capacity recovering",
+   "url": "https://www.freightwaves.com/news/no-signs-of-truckload-capacity-recovering",
+   "source": "FreightWaves",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "Data center moratorium bills stack up ahead of Virginia legislative session in January",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPU2h2UTFaY0dxNk9rTkY5aGlaWGVMLUpJZi1iZDMycVVUd2hUdmZ0UjJUMnpzczdCeWRaU25GM1ExRjFOWXFrQWtUMWhValMtSzV4WlBjTm55LWRraWw4X29zNnlMZXViWF9NX2hTN0hxNFRCbV9IMlNpMTNPdHc2azRkUEFZTmZmd28zS1owN2ZndWE4THVTRjA0bElKbkN3b0h1a2V5MURzaHBpVWtrMkxnT25taXBCZGxvSWxxdTlrNkhSaVpsN0RDNVhzUzFMX1REdA?oc=5",
+   "source": "Fredericksburg Free Press",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "K-battery Q3 also shows green light for earnings… U.S. ESS quarterly installations continue to hit record highs",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1yYWNlRVZzS3ZQNkxPd3JzQXdYSHNOR1REczdTdDk1Q0JJY2U1bFpkalYwMVIyLUdyTE0yaWRTNjBIOUhlQjJXLVA2Q05QaU42Q2xCbG9OaXp2WmxrVWJBdFZZaWw2bWNoaGxRazZROFc?oc=5",
+   "source": "머니투데이",
+   "theme": "Critical Minerals & Batteries"
+  }
+ ]
+}

@@ -142,5 +142,37 @@
    "2026-10-17#5"
   ],
   "last_seen": "2026-10-17"
+ },
+ "eu transparency register": {
+  "name": "EU Transparency Register",
+  "first_seen": "2026-10-18",
+  "items": [
+   "2026-10-18#2"
+  ],
+  "last_seen": "2026-10-18"
+ },
+ "lobbyfacts eu commission meetings database": {
+  "name": "LobbyFacts EU Commission meetings database",
+  "first_seen": "2026-10-18",
+  "items": [
+   "2026-10-18#2"
+  ],
+  "last_seen": "2026-10-18"
+ },
+ "worldsteel steel statistical yearbook": {
+  "name": "worldsteel Steel Statistical Yearbook",
+  "first_seen": "2026-10-18",
+  "items": [
+   "2026-10-18#4"
+  ],
+  "last_seen": "2026-10-18"
+ },
+ "india joint plant committee steel statistics": {
+  "name": "India Joint Plant Committee steel statistics",
+  "first_seen": "2026-10-18",
+  "items": [
+   "2026-10-18#4"
+  ],
+  "last_seen": "2026-10-18"
  }
 }
