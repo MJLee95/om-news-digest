@@ -1,0 +1,173 @@
+{
+ "overview": "The week's dominant theme was regulators improvising rules for AI-driven large loads. FERC rejected PJM's curtailment-based interconnection plan but approved a large-load registry. Pennsylvania proposed curtailing un-backed data centers first, and Israel, Greece and NERC each introduced size caps, collateral requirements or MW thresholds, while PJM's shoulder-season emergencies showed why. Around that sat a wave of disclosure-rule churn (SB 253's Nov. 10 deadline, Australia's bill to scrap Scope 3, TNFD uptake, EUDR lobbying), category-specific trade and security sourcing shocks, and steady progress, alongside legal friction, in packaging EPR and firm-level circular models.",
+ "patterns": [
+  {
+   "title": "Screening and rationing speculative large loads",
+   "explanation": "Across jurisdictions, regulators and utilities used different tools to separate real data center demand from phantom requests and to allocate scarce capacity. These include Exelon-style collateral, ERCOT's $50k/MW deposit, Greece's proposed €200k/MW guarantee, Israel's 200 MW per-site cap, NERC's 50 MW/100 kV threshold, and Pennsylvania's rule to curtail un-backed loads first. Because the levers differ and were adopted at different times, they suit comparative mechanism-design work and staggered DiD or bunching designs. The new facility-level registries in PJM, Pennsylvania and Greece could become public datasets.",
+   "item_ids": [
+    "2026-10-13#1",
+    "2026-10-13#2",
+    "2026-10-14#1",
+    "2026-10-15#2",
+    "2026-10-15#3",
+    "2026-10-16#1",
+    "2026-10-17#1",
+    "2026-10-18#1"
+   ]
+  },
+  {
+   "title": "Disclosure mandates in flux push data demands upstream",
+   "explanation": "Several items this week turn on how disclosure rules reach suppliers. California made SB 253 final with a one-month filing window, Australia's opposition moved to scrap Scope 3 reporting, TNFD adoption grew, and US firms lobbied to weaken the EUDR. At the firm level, Haleon prices supplier carbon into its bids, and the Guardian's Sulawesi nickel investigation shows how hard it is to trace multi-tier sourcing. For OM, the variation in whether, when and how firmly mandates apply to buyers creates shocks that travel to suppliers' measurement and sourcing decisions.",
+   "item_ids": [
+    "2026-10-14#2",
+    "2026-10-15#1",
+    "2026-10-16#3",
+    "2026-10-16#5",
+    "2026-10-17#3",
+    "2026-10-18#2"
+   ]
+  },
+  {
+   "title": "Narrow, category-specific trade and security shocks",
+   "explanation": "Many policy shocks this week hit specific products or countries rather than whole markets. Examples are EO 14421, which bites on batteries (50% Chinese) but barely on transformers, new solar AD/CVD rounds with re-routing through Ethiopia, FMC's Spain-specific fees, CBP's de minimis filing rule, the Mexican driver-visa revocations, and the Mexican truck pre-buy ahead of EPA 2027 standards. The sharp variation across HS lines, lanes and dates gives clean treated-versus-control contrasts for studying sourcing substitution, pass-through and evasion.",
+   "item_ids": [
+    "2026-10-13#4",
+    "2026-10-14#4",
+    "2026-10-14#5",
+    "2026-10-15#5",
+    "2026-10-16#2",
+    "2026-10-17#2",
+    "2026-10-18#5"
+   ]
+  },
+  {
+   "title": "Circular economy: EPR program economics and in-house closed loops",
+   "explanation": "On the policy side, Circular Action Alliance's revised SB 54 plan gives a rare line-item view of what a producer responsibility organization spends and how it sets fees, while Oregon's EPR litigation keeps the legal footing uncertain. On the firm side, Rivian and Redwood's reuse-or-recycle grading feeding plant storage, and Patagonia merging resale into its main store, are concrete operating cases for closed-loop and remanufacturing models. India's draft steel policy adds a macro push toward secondary production.",
+   "item_ids": [
+    "2026-10-13#5",
+    "2026-10-15#4",
+    "2026-10-16#4",
+    "2026-10-17#4",
+    "2026-10-18#4"
+   ]
+  }
+ ],
+ "developing": [
+  {
+   "title": "PJM large-load governance after FERC's IRAS rejection",
+   "update": "With FERC pushing curtailment priority to the states, Pennsylvania's Tentative Order is the lead state test; comments are due about 30 days after Oct. 1, with a final order expected in late January. Watch for Ohio action, the SoftBank/AEP Ohio state-agreement study, and whether shoulder-season Maximum Generation alerts and Demand Response calls keep recurring.",
+   "item_ids": [
+    "2026-10-13#1",
+    "2026-10-15#2",
+    "2026-10-17#1",
+    "2026-10-18#1"
+   ]
+  },
+  {
+   "title": "Climate disclosure: California goes live, Australia wobbles",
+   "update": "SB 253 Scope 1 and 2 reports are due Nov. 10, without assurance in year one, and CARB's list of more than 4,000 likely in-scope firms is the treatment roster. Australia's bill to scrap Scope 3 now heads to the Senate, so watch for a vote or committee referral that resolves or prolongs the uncertainty.",
+   "item_ids": [
+    "2026-10-14#2",
+    "2026-10-15#1"
+   ]
+  },
+  {
+   "title": "Packaging EPR: litigation and California SB 54 plan approval",
+   "update": "Lollicup's Oregon suit is stayed pending NAW's Ninth Circuit appeal, with the opening brief due Dec. 17, while producers must keep complying. CalRecycle has 75 days from Oct. 13, until about late December, to act on CAA's revised $1.1B plan during a leadership transition at CAA.",
+   "item_ids": [
+    "2026-10-13#5",
+    "2026-10-15#4"
+   ]
+  },
+  {
+   "title": "Clean-energy equipment sourcing restrictions",
+   "update": "Final solar AD/CVD orders on India, Indonesia and Laos are expected around Nov. 2, the Section 232 polysilicon tariff starts Dec. 4, and EO 14421's 'Covered Foreign Entity' definition is due by Dec. 24. A broad definition could also catch Korean and Mexican battery plants.",
+   "item_ids": [
+    "2026-10-14#4",
+    "2026-10-16#2"
+   ]
+  }
+ ],
+ "ideas": [
+  {
+   "title": "Collateral, caps or curtailment priority: comparing screens for speculative data-center load",
+   "question": "How do different large-load screening instruments affect queue attrition, the ratio of realized to requested MW, and project size and location? The instruments are per-MW collateral or deposits (Exelon, ERCOT, Greece), hard per-site caps (Israel at 200 MW), size/voltage compliance thresholds (NERC at 50 MW/100 kV) and curtailment-first priority for un-backed loads (Pennsylvania). Do the instruments differ in which project types stay in the queue, hyperscalers versus speculative developers?",
+   "why_now": "Within about one week, at least six jurisdictions adopted or proposed distinct instruments with datable milestones: FERC's Oct. 9 order, Pennsylvania's Oct. 1 Tentative Order, Greek comments closing Oct. 24, Israel's draft cap, and the NERC ballot on Oct. 15. Registries mandated by FERC/PJM, Pennsylvania and Greece will create facility-level data that did not exist before.",
+   "data": "ERCOT large-load interconnection status reports; utility 10-K and earnings-call pipeline MW (Exelon, AEP, Dominion); state PUC tariff dockets for collateral and contract-term adoption dates (the sources Halcyon compiled); the PJM large-load registry and Pennsylvania utility registries once published; LBNL Queued Up for co-located generation; Israel Electricity Authority and Noga decisions; Greek IPTO quarterly capacity publications and the RAAEY registry; FERC eLibrary for milestone dates.",
+   "identification": "Staggered DiD at the utility-quarter level on collateral and deposit adoption, with outcomes of pipeline MW, withdrawal rates and conversion to signed ESAs. Bunching estimators test for excess mass just below 50 MW (NERC) and 200 MW (Israel), and for re-filing of large proposals as several smaller sites. Pennsylvania versus other PJM states gives a siting DiD around the curtailment-priority rule. Main threat: adoption is endogenous, because utilities facing the most speculative queue growth adopt screens first, and the common AI-capex cycle moves all queues together. Address this with pre-trend tests, utility-specific pre-adoption queue growth as a control, and timing driven by regulatory calendars (rate-case schedules) rather than queue shocks. Note that the second-hand WSJ figures need verification.",
+   "literature": "Capacity Reservation and Wholesale Price Contracts under Forecast Sharing: A Behavioral Assessment provides the forecast-inflation and capacity-reservation logic that collateral is meant to discipline. Electricity Time-of-Use Tariff with Stochastic Demand and A Deep Demand Response Program for Local Electricity Systems frame curtailment priority as a tariff and interruptibility design. Meeting Corporate Renewable Power Targets relates to Greece's 60% renewable sourcing condition.",
+   "item_ids": [
+    "2026-10-13#1",
+    "2026-10-13#2",
+    "2026-10-14#1",
+    "2026-10-15#3",
+    "2026-10-16#1",
+    "2026-10-18#1"
+   ]
+  },
+  {
+   "title": "Do buyer disclosure mandates cascade into supplier measurement? SB 253 as a supply-chain shock",
+   "question": "When large customers become subject to mandatory GHG reporting (SB 253 Scope 1 and 2 now, Scope 3 from 2027), do their suppliers receive more emissions-data requests, adopt primary measurement, and set or validate reduction targets faster than suppliers of uncovered customers? Does regulatory uncertainty, as with Australia's pending bill to scrap Scope 3, weaken this pass-through?",
+   "why_now": "OAL approval on Oct. 12 with a Nov. 10 deadline is a sharp, dated shock, and CARB published a preliminary in-scope list. Australia's bill adds a contrasting case of a mandate made uncertain, and Haleon's shadow carbon price shows the procurement channel through which buyer pressure reaches suppliers, with Haleon suppliers measuring directly rising from 0% to about 25%.",
+   "data": "CARB's preliminary list of in-scope firms; customer-supplier links from FactSet Revere, with Compustat customer segments as the public fallback; the CDP supply chain module (requests received, supplier responses, primary versus estimated data); SBTi target dashboard dates; EPA GHGRP facility emissions as a check on real emissions; Australia's NGER data and the bill's Senate record; event dates from SEC EDGAR.",
+   "identification": "Supplier-level DiD where treatment intensity is the share of a supplier's disclosed sales going to SB 253-covered customers. Compare before and after the Feb. 26, June 24 and Oct. 12 milestones, adding a sharper Scope 3 test in 2027. Among customers, the $1B revenue threshold gives a near-threshold comparison. In Australia, the $50M Group 3 cutoff and the bill's progress provide variation in how uncertain the mandate is. Main threat: covered customers are large and often already disclose under CSRD or CDP pressure, so treatment overlaps with existing supply-chain engagement and with selection into answering CDP. Mitigate by restricting to customers with no prior CDP supply chain participation and controlling for exposure to EU CSRD customers.",
+   "literature": "Engaging Supply Chains in Climate Change and Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective provide the customer-to-supplier channel. Are Firms Voluntarily Disclosing Emissions Greener? and Market Reaction to Mandatory Nonfinancial Disclosure bear on voluntary versus mandated disclosure and its valuation. Helping hampered bidders—Do subsidy auctions work as intended? informs an analytical extension modeling Haleon-style carbon-adjusted scoring auctions.",
+   "item_ids": [
+    "2026-10-14#2",
+    "2026-10-15#1",
+    "2026-10-17#3"
+   ]
+  },
+  {
+   "title": "Supplier concentration and the pass-through of security-based sourcing bans: batteries versus transformers",
+   "question": "How does an equipment category's prior dependence on the targeted country determine the cost, delay and re-routing effects of a sourcing restriction? EO 14421 covers batteries (50% Chinese), transformers (3%) and breakers (under 1%). Does high-concentration exposure produce transshipment and 'whack-a-mole' origin shifts like those seen in successive solar AD/CVD rounds?",
+   "why_now": "EO 14421's implementing rule, due Dec. 24, will define 'Covered Foreign Entity', giving a second dated shock after the Aug. 26 signing. Solar AD/CVD orders around Nov. 2, Ethiopia's 3,000% import surge and the Dec. 4 polysilicon tariff provide a parallel product line with a known history of evasion. Record US storage installations and data center UPS demand mean the affected volumes are large.",
+   "data": "USITC DataWeb and Census monthly imports and unit values by HS line (lithium-ion batteries 8507.60, transformers 8504, breakers 8536) and origin; Panjiva or ImportGenius bills of lading to trace Korean and Mexican plants using Chinese components; LBNL Queued Up and EIA-860 planned battery capacity for delays and cancellations; Commerce solar case records on exporter ownership; Federal Register dates.",
+   "identification": "DiD across equipment categories, with treatment intensity equal to the pre-EO China import share, and event windows at the EO signing, the definitional rule and enforcement. Run a parallel event study on solar cell origin shifts across the 2023 Southeast Asia and 2026 India/Indonesia/Laos cases, comparing covered and non-covered countries. Main threat: confounding demand shocks hit the categories differently. Transformer demand is surging from AI and grid buildout independently of the EO, and overlapping tariffs (Section 232, broader China duties) land in the same window. Use unit-value decompositions and narrow HS lines, control for project-pipeline demand, and treat effects that load on Korean and Mexican origins after the definitional rule as the cleanest test.",
+   "literature": "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains offers the framework and data inventory. Product safety and security in the global supply chain: Issues, challenges and research opportunities motivates security-based sourcing rules. Return to the United States: Impact of Reshoring Announcements and Reshoring Risks on Market Valuation links to whether domestic producers (First Solar, Qcells) gain value and capacity.",
+   "item_ids": [
+    "2026-10-14#4",
+    "2026-10-16#2"
+   ]
+  }
+ ],
+ "watch": [
+  "Nov. 1: 25% US truck tariff takes effect, testing whether the Mexican heavy-truck pre-buy reverses. Around Nov. 2: final solar AD/CVD orders on India, Indonesia and Laos.",
+  "Nov. 10: first SB 253 Scope 1 and 2 filing deadline in California. Check how many CARB-listed firms file and whether any use the no-assurance allowance.",
+  "Comment deadlines on large-load rules: Greek data center draft law closes Oct. 24; Pennsylvania PUC Tentative Order comments around Oct. 31, then 15 days for replies. Also watch for the Israel 200 MW draft cap to be published for comment.",
+  "NERC Board of Trustees vote on computational-load standards CLO-001-1 and CLO-002-1 before filing at FERC, plus any Ohio PUC response to FERC's IRAS rejection."
+ ],
+ "items": {
+  "2026-10-13#1": "FERC rejects PJM's curtailment-based large-load interconnection plan, approves data center registry",
+  "2026-10-13#2": "Utilities use collateral, deposits and longer contracts to filter speculative 'phantom' data center power requests",
+  "2026-10-13#3": "Taylor Farms halts May–August central Mexico lettuce sourcing after a Cyclospora outbreak linked to nearly 13,000 cases",
+  "2026-10-13#4": "FreightWaves: revocation of about 25,000 Mexican drivers' B-1 visas tightens US–Mexico border trucking capacity",
+  "2026-10-13#5": "Lollicup's challenge to Oregon's packaging EPR law to be paused pending NAW's Ninth Circuit appeal",
+  "2026-10-14#1": "Israel's Electricity Authority moves to cap new data centers at 200 MW as grid requests reach ~27 GW",
+  "2026-10-14#2": "Australian opposition introduces bill to scrap mandatory Scope 3 reporting and drop smaller firms from climate disclosure",
+  "2026-10-14#3": "Cyberattack on Danfoss refrigeration controllers hits ~700 French supermarkets, forcing food disposal",
+  "2026-10-14#4": "Rystad: battery storage is most exposed under US executive order restricting Chinese grid equipment",
+  "2026-10-14#5": "Mexican heavy-truck exports up 145% in September as US buyers pre-buy ahead of 2027 EPA standards",
+  "2026-10-15#1": "California finalizes SB 253 rules, setting November 10, 2026 as the first deadline for corporate GHG reports",
+  "2026-10-15#2": "PJM to study SoftBank's ~10-GW Ohio AI campus and its gas generation and 765-kV lines under the state agreement approach",
+  "2026-10-15#3": "Greek draft law would require 60% renewable power for data centers, a €200k/MW grid-queue guarantee and a public registry",
+  "2026-10-15#4": "Circular Action Alliance cuts first-year California SB 54 EPR budget to about $1.1B in revised plan; CEO to depart",
+  "2026-10-15#5": "CBP proposes requiring filing by arrival for imports of $2,500 or less, plus a new postal entry type with 15-day abandonment",
+  "2026-10-16#1": "NERC stakeholders approve reliability standards for data centers and crypto miners of 50 MW+ at 100 kV+",
+  "2026-10-16#2": "ITC finds solar cell imports from India, Indonesia and Laos injured US makers, clearing way for AD/CVD orders",
+  "2026-10-16#3": "836 organizations in 57 countries now commit to TNFD nature reporting as ISSB and ISO standards approach",
+  "2026-10-16#4": "Rivian widens Redwood deal: manufacturing scrap recycling plus second-life packs powering its Illinois plant",
+  "2026-10-16#5": "Guardian analysis links nickel in VW, Ford and Tesla batteries to deforestation on Indigenous land in Sulawesi",
+  "2026-10-17#1": "PJM ran on 66% of its generation fleet during October Maximum Generation Alerts; about a quarter of outages were unplanned",
+  "2026-10-17#2": "FMC proposes $200,000 per-voyage fee on Spanish-flagged vessels and possible limits on Spanish imports",
+  "2026-10-17#3": "Haleon adds an EU ETS carbon price to supplier bids, shifting 1–2 of every 10 deals",
+  "2026-10-17#4": "Patagonia folds Worn Wear resale into its main store after selling ~160,000 used items ($13M) in fiscal 2026",
+  "2026-10-17#5": "Hormuz attacks hit a record six ships in one day; Singapore-flagged feeder GFS Pride sinks with containers aboard",
+  "2026-10-18#1": "Pennsylvania PUC proposes curtailing new data centers before other customers during grid emergencies",
+  "2026-10-18#2": "Mighty Earth report: US firms held 350+ EU meetings to delay and weaken the Deforestation Regulation",
+  "2026-10-18#3": "Infineon adds Wolfspeed 200mm silicon carbide wafers in multi-year supply deal",
+  "2026-10-18#4": "India's draft National Steel Policy 2047 targets 604 MT and emphasizes circularity and secondary producers",
+  "2026-10-18#5": "Pentagon commits $450M to tungsten producer Elmet in exchange for preferred equity and warrants"
+ },
+ "dataset_candidates": []
+}
