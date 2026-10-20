@@ -36,17 +36,28 @@ class RelatedPaper(BaseModel):
     why: str = Field(description="One sentence: what the paper does and how it relates to this story")
 
 
+class Stakeholder(BaseModel):
+    name: str = Field(description="Party involved (organization, agency, firm type, group)")
+    stake: str = Field(description="What it wants, or stands to gain or lose")
+
+
 class NewsItem(BaseModel):
     candidate_id: int
     headline: str = Field(description="Clear, factual headline (rewrite clickbait)")
     theme: str
     original_url: str = Field(description="Publisher URL found during research, copied exactly from the notes; empty string if none")
     summary: str = Field(description="2-3 sentences: what happened, with key numbers, dates, firms")
-    om_angle: str = Field(description="1-2 sentences: why an operations researcher should care")
-    research_question: str = Field(description="One concrete, researchable question")
-    data_identification: str = Field(description="Possible data sources and identification idea (treatment/control, shock timing, unit of analysis)")
+    background: str = Field(description="The context needed to understand the problem (not a repeat of the summary)")
+    problem: str = Field(description="What is going wrong or is contested: the decision, conflict or trade-off at stake")
+    where_why: str = Field(description="Where in the system the problem arises (which stage, market, link or decision) and why: "
+                                       "the underlying friction, e.g. capacity shortfall, information asymmetry, misaligned incentives, "
+                                       "uncertainty, coordination failure, regulatory constraint")
+    stakeholders: list[Stakeholder] = Field(description="2-5 parties involved and what each wants or stands to lose")
+    hints: list[str] = Field(description="1-3 short research hints to spark the reader's own ideas: a lens, model family, comparison, "
+                                         "natural experiment or puzzle worth noticing. Hints, not finished research questions")
+    data_leads: str = Field(description="One line naming data that could be used to study this")
     keywords: list[str] = Field(description="3-5 lowercase literature keywords, more specific than the theme")
-    datasets: list[str] = Field(description="0-2 ids from the DATASET REGISTRY for the datasets most central to data_identification; empty if none fit")
+    datasets: list[str] = Field(description="0-2 ids from the DATASET REGISTRY for the datasets most central to data_leads; empty if none fit")
     dataset_candidates: list[str] = Field(description="0-2 specific, named, obtainable datasets central to this item that are NOT in the registry (e.g. 'USDA FSIS recall data'); never generic phrases like 'utility filings'")
     related: list[RelatedPaper] = Field(description="1-2 genuinely related papers from the candidates for this story; empty if none fit")
 
@@ -61,7 +72,7 @@ class Digest(BaseModel):
     intro: str = Field(description="1-2 sentence overview of today's issue")
     items: list[NewsItem]
     papers: list[PaperItem]
-    thread_to_pull: str = Field(description="2-3 sentences proposing one research idea that connects two or more of today's items (or items with the papers)")
+    thread_to_pull: str = Field(description="2-3 sentences pointing out a connection between two or more of today's items (or items and papers) that is worth exploring; a hint, not a full research design")
 
 
 # ---------- helpers ----------
@@ -221,10 +232,13 @@ STORIES:
         papers = "\n".join(f"[{cid}] {c.title} ({c.source})\nAbstract: {c.snippet or '(not available)'}"
                            for cid, c, _ in paper_picks) or "(none today)"
         prompt = f"""Write today's newsletter in English for the reader described in the system prompt.
-Write one item per story, in the order given, using only facts in the research notes. Be specific
-and concise; research questions should be ones a PhD student could actually pursue
-(name plausible datasets such as SEC filings, CDP, EIA, EPA GHGRP/TRI, bill-of-lading data,
-FactSet Revere supply chain links, RepRisk, Compustat, where relevant).
+Write one item per story, in the order given, using only facts in the research notes. Be specific.
+Beyond the summary, lay out the problem so the reader can generate research ideas themselves: the
+background, what the problem is, where in the system and why it arises, and who the stakeholders are
+with their stakes. Then give 1-3 research hints. Hints point at a lens, a model family, a comparison,
+a natural experiment or a puzzle; do not hand over finished research questions or full designs.
+For data_leads, name concrete datasets (e.g. SEC filings, CDP, EIA, EPA GHGRP/TRI, bill-of-lading
+data, FactSet Revere, RepRisk, Compustat) where relevant.
 
 STORIES:
 {stories}
@@ -251,7 +265,7 @@ PAPERS (use the same ids in candidate_id):
             prompt += ("\nKeywords are used as archive tags. Reuse these existing tags (exact spelling) whenever "
                        "they fit, and add a new lowercase tag only when none fits:\n" + ", ".join(known_keywords) + "\n")
         if dataset_registry:
-            prompt += ("\nDATASET REGISTRY (id: name [field; access]). In data_identification, prefer datasets the reader can "
+            prompt += ("\nDATASET REGISTRY (id: name [field; access]). In data_leads, prefer datasets the reader can "
                        "realistically get: public ones first, and when you suggest a commercial dataset, also name a public "
                        "alternative. In 'datasets', list registry ids only:\n" + dataset_registry + "\n")
         return self._parse(prompt, Digest)

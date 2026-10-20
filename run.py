@@ -167,7 +167,9 @@ def main() -> None:
     (state.DATA / "issues" / f"{iso}.html").write_text(html)
     (state.DATA / "issues" / f"{iso}.json").write_text(json.dumps(issue, indent=1, ensure_ascii=False))
     state.append_archive(
-        [{**i, "date": iso, "kind": "news", "keywords": "; ".join(i["keywords"])} for i in items]
+        [{**i, "date": iso, "kind": "news", "keywords": "; ".join(i["keywords"]),
+          "om_angle": f"{i['problem']} | {i['where_why']}", "research_question": " | ".join(i["hints"]),
+          "data_identification": i["data_leads"]} for i in items]
         + [{"date": iso, "kind": "paper", "theme": "", "headline": p["title"], "source": p["journal"],
             "url": p["url"], "summary": p["takeaway"]} for p in issue_papers])
     sent = [c for _, c, _ in picks] + [c for _, c, _ in paper_picks] + [news[a.id] for a in sel.also]

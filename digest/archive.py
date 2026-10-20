@@ -129,7 +129,8 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
             "date": iso,
             "intro": iss["intro"],
             "items": [{"n": n, "id": f"{iso}#{n}", "headline": it["headline"], "theme": it["theme"],
-                       "source": it["source"], "summary": it["summary"], "rq": it["research_question"],
+                       "source": it["source"], "summary": it["summary"], "rq": it.get("research_question") or " · ".join(it.get("hints", [])),
+                       "problem": it.get("problem", it.get("om_angle", "")),
                        "related": [r["title"] for r in it.get("related", [])],
                        "keywords": [k.strip().lower() for k in it["keywords"]],
                        "datasets": [d.strip() for d in it.get("datasets", [])],
@@ -387,7 +388,7 @@ function pager(total, size) {
 }
 const filtering = () => !!(state.theme || state.kws.length || state.q);
 
-const matchQ = it => !state.q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + it.keywords.join(' ') + ' ' +
+const matchQ = it => !state.q || (it.headline + ' ' + it.summary + ' ' + it.rq + ' ' + (it.problem || '') + ' ' + it.keywords.join(' ') + ' ' +
   (it.related || []).join(' ') + ' ' + (it.datasets || []).join(' ')).toLowerCase().includes(state.q.toLowerCase());
 const matches = (it, {ignoreTheme = false} = {}) =>
   (ignoreTheme || !state.theme || it.theme === state.theme) && state.kws.every(k => it.keywords.includes(k)) && matchQ(it);
@@ -430,7 +431,7 @@ function row(it, {withDate = false, showRq = false, note = null} = {}) {
     <div class="meta">${withDate ? fmt(it.date) + ' · ' : ''}<span class="theme">${esc(it.theme)}</span> · ${esc(it.source)}</div>
     <div class="hl">${hi(it.headline)}</div>
     ${state.q ? `<div class="snip">${hi(it.summary)}</div>` : ''}
-    ${showRq ? `<div class="snip"><b>Q:</b> ${hi(it.rq)}</div>` : ''}</a>
+    ${showRq ? `<div class="snip"><b>▸</b> ${hi(it.rq)}</div>` : ''}</a>
     ${noteHtml}
     <div class="kw">${thread}${kw}</div></div></div>`;
 }

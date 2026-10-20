@@ -47,8 +47,13 @@ def compose(curator, week_items: list[dict], also: list[dict], starred_ids: set[
         rel = "; ".join(r["title"] for r in it.get("related", [])) or "none"
         blocks.append(
             f"[{it['id']}]{' ★ STARRED' if it['id'] in starred_ids else ''} ({it['theme']}) {it['headline']}\n"
-            f"Summary: {it['summary']}\nOM angle: {it['om_angle']}\nResearch Q: {it['research_question']}\n"
-            f"Data/ID: {it['data_identification']}\nRelated papers: {rel}")
+            f"Summary: {it['summary']}\n" + (
+                f"Problem: {it['problem']}\nWhere & why: {it['where_why']}\n"
+                f"Stakeholders: {'; '.join(x['name'] + ' (' + x['stake'] + ')' for x in it['stakeholders'])}\n"
+                f"Hints: {' | '.join(it['hints'])}\nData leads: {it['data_leads']}\n"
+                if "problem" in it else
+                f"OM angle: {it['om_angle']}\nResearch Q: {it['research_question']}\nData/ID: {it['data_identification']}\n")
+            + f"Related papers: {rel}")
     prompt = f"""Here is everything from this week's daily newsletter. Write the weekly review.
 
 Look across days rather than summarizing each item: what recurred, which stories are developing, and which

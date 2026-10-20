@@ -46,6 +46,20 @@ def _star_scripts(repo: str, iso: str, issue: dict, stars: dict | None) -> str:
             '<script src="../stars.js"></script>')
 
 
+def _detail_rows(it: dict, P: dict) -> str:
+    """Table rows under the summary. New items frame the problem; items sent before Oct 20, 2026 keep the old layout."""
+    lab = f'padding:6px 0;vertical-align:top;width:92px;color:{P["muted"]};'
+    row = lambda label, html, extra="": f'<tr><td style="{lab}">{label}</td><td style="padding:6px 0;{extra}">{html}</td></tr>'
+    if "problem" not in it:
+        return (row("OM angle", escape(it["om_angle"])) + row("Research Q", escape(it["research_question"]), "font-weight:bold;")
+                + row("Data / ID", escape(it["data_identification"])))
+    people = "".join(f'<div style="margin:0 0 3px;"><b>{escape(s["name"])}</b> — {escape(s["stake"])}</div>' for s in it["stakeholders"])
+    hints = "".join(f'<div style="margin:0 0 4px;">💡 {escape(h)}</div>' for h in it["hints"])
+    return (row("Background", escape(it["background"])) + row("Problem", escape(it["problem"]))
+            + row("Where &amp; why", escape(it["where_why"])) + row("Stakeholders", people)
+            + row("Research hints", hints) + row("Data leads", escape(it["data_leads"])))
+
+
 def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", web: bool = False,
                 iso: str = "", repo: str = "", stars: dict | None = None) -> str:
     """web=True: archive copy with CSS-variable colors and the Light/Dark/System toggle.
@@ -98,9 +112,7 @@ def render_html(title: str, date_str: str, issue: dict, archive_link: str = "", 
   <div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:{P['muted']};margin-bottom:10px;">{e(it['source'])}{(' · ' + e(it['date'])) if it.get('date') else ''} · <a href="{e(it['url'])}" style="color:{c};">Read</a>{star}</div>
   {follows}<p style="margin:0 0 12px;font-size:15px;line-height:1.55;">{e(it['summary'])}</p>
   <table role="presentation" cellpadding="0" cellspacing="0" style="width:100%;font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:{P['ink3']};">
-    <tr><td style="padding:6px 0;vertical-align:top;width:92px;color:{P['muted']};">OM angle</td><td style="padding:6px 0;">{e(it['om_angle'])}</td></tr>
-    <tr><td style="padding:6px 0;vertical-align:top;color:{P['muted']};">Research Q</td><td style="padding:6px 0;font-weight:bold;">{e(it['research_question'])}</td></tr>
-    <tr><td style="padding:6px 0;vertical-align:top;color:{P['muted']};">Data / ID</td><td style="padding:6px 0;">{e(it['data_identification'])}</td></tr>
+{_detail_rows(it, P)}
     <tr><td style="padding:6px 0;vertical-align:top;color:{P['muted']};">Keywords</td><td style="padding:6px 0;color:{P['muted']};">{kw}</td></tr>
   </table>{_related_html(it.get('related', []), c, P)}
 </div>""")
@@ -145,9 +157,15 @@ def render_text(title: str, date_str: str, issue: dict) -> str:
     out = [f"{title} — {date_str}", "", issue["intro"], ""]
     for n, it in enumerate(issue["items"], 1):
         out += [f"{n}. [{it['theme']}] {it['headline']}", f"   {it['source']} — {it['url']}",
-                f"   {it['summary']}", f"   OM angle: {it['om_angle']}",
-                f"   Research Q: {it['research_question']}", f"   Data/ID: {it['data_identification']}",
-                f"   Keywords: {', '.join(it['keywords'])}"]
+                f"   {it['summary']}"]
+        if "problem" in it:
+            out += [f"   Background: {it['background']}", f"   Problem: {it['problem']}", f"   Where & why: {it['where_why']}",
+                    "   Stakeholders: " + "; ".join(f"{x['name']} ({x['stake']})" for x in it["stakeholders"])]
+            out += [f"   Hint: {h}" for h in it["hints"]] + [f"   Data leads: {it['data_leads']}"]
+        else:
+            out += [f"   OM angle: {it['om_angle']}", f"   Research Q: {it['research_question']}",
+                    f"   Data/ID: {it['data_identification']}"]
+        out += [f"   Keywords: {', '.join(it['keywords'])}"]
         out += [f"   Related: {r['title']} ({r['journal']}, {r['year']}) {r['url']}" for r in it.get("related", [])]
         out.append("")
     if issue.get("thread_to_pull"):
