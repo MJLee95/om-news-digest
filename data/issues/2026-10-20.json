@@ -1,0 +1,367 @@
+{
+ "intro": "Today's issue spans two live supply shocks (China's yttrium squeeze on Japan and a UK AI data center lost to grid delays), a capacity glut in non-Chinese battery recycling, and two EU rules that turn disclosure and traceability into operating constraints: ESMA's first CSRD-era enforcement priorities and the EUDR's projected impact on Ethiopian coffee smallholders.",
+ "items": [
+  {
+   "candidate_id": 171,
+   "headline": "Japan could run short of yttrium by end-2026 as China's export curbs persist",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://europeanbusinessmagazine.com/japan-yttrium-shortage/",
+   "summary": "Secondary outlets reporting a Financial Times story (around 19–20 Oct 2026; the FT original was not seen) say Japanese officials and trading-house executives warn that yttrium shortages could begin as early as end-2026 unless Beijing eases controls or substitutes or extra stockpiles are found. Yttrium oxide outside China has reportedly risen 179-fold in two years, to about $1,150/kg versus about $9/kg inside China. According to unnamed sources, Tokyo has asked the US government and large US firms to lobby Beijing.",
+   "background": "Yttrium is a heat-resistant rare earth used in vehicles, jet engines and chipmaking, including coatings for engines and for chip-etching chambers. China restricted shipments to Japan after PM Sanae Takaichi said in late 2025 that a Taiwan conflict could pose an existential threat to Japan. Reuters/Japan Times (May 2026) reported that Chinese customs data showed exports of dysprosium, terbium, yttrium oxide and gallium to Japan had stopped since December, apart from tiny yttrium shipments. An unsourced aggregator figure puts Jan–Sep 2026 yttrium oxide exports to Japan at 18 tonnes, down 98% from 888 tonnes; this needs checking against Chinese customs data. US defence supply chains rely on Japanese-made parts containing yttrium.",
+   "problem": "Japanese manufacturers face running down finite stocks of an input with few short-run substitutes, while a single dominant supplier rations volumes for political reasons. A US official reportedly said China lets Japan buy only 'the bare minimum it needs'. Firms must decide how to allocate scarce stock across product lines, whether to pay extreme ex-China prices, and whether to invest in substitution or non-Chinese supply that may not pay off if controls are lifted. Stockpile size and the exact run-out date are unknown.",
+   "where_why": "The problem sits at the upstream processing stage, where supply is highly concentrated in China. Export controls turn a market input into a geopolitical lever. Rationing to the 'bare minimum' keeps Japanese buyers dependent while denying them buffers, and the huge China vs ex-China price gap signals a segmented market rather than a global one. Downstream, yttrium is a small-cost, critical-function input in coatings for engines and etch chambers, so shortages can halt high-value production. The disruption also propagates across borders into US defence supply chains.",
+   "stakeholders": [
+    {
+     "name": "Japanese manufacturers and trading houses",
+     "stake": "Need to keep engine, vehicle and chip-equipment lines running and to manage stockpiles and price exposure"
+    },
+    {
+     "name": "Japanese government",
+     "stake": "Seeks relief through diplomacy and help from the US, and must weigh national stockpiling and economic security policy"
+    },
+    {
+     "name": "Chinese government",
+     "stake": "Uses export controls as leverage after Takaichi's Taiwan remarks while preserving its market dominance"
+    },
+    {
+     "name": "US government and defence contractors",
+     "stake": "Depend on Japanese yttrium-containing parts and have been drawn in as intermediaries"
+    },
+    {
+     "name": "Non-Chinese rare-earth producers",
+     "stake": "Ex-China prices create an opening, but capacity investment is risky if controls ease"
+    }
+   ],
+   "hints": [
+    "Stockpile pooling and allocation under a known-finite horizon: the case resembles a rationing game more than a classic random-yield disruption.",
+    "Compare the 2010 China–Japan rare-earth episode with this one to see whether a decade of 'diversification' rhetoric actually changed exposure.",
+    "Treat the China/ex-China price wedge as a measure of market segmentation under export controls."
+   ],
+   "data_leads": "Chinese customs export data and UN Comtrade (HS 2846 rare-earth compounds) for China→Japan flows; USGS Mineral Commodity Summaries for supply concentration; Japanese firms' securities reports and call transcripts for disclosed inventory and sourcing responses.",
+   "keywords": [
+    "raw material security",
+    "supplier concentration",
+    "sourcing restrictions",
+    "supplier diversification",
+    "export controls"
+   ],
+   "dataset_candidates": [
+    "China General Administration of Customs export statistics"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "usgs_minerals"
+   ],
+   "related": [
+    {
+     "title": "Building Supply Chain Resilience through Virtual Stockpile Pooling",
+     "journal": "Production and Operations Management",
+     "year": 2016,
+     "url": "https://doi.org/10.1111/poms.12573",
+     "cites": 72,
+     "why": "Models shared or virtual stockpiles to cut holding costs while preserving resilience, a direct lens on how Japanese firms and government might pool yttrium buffers."
+    },
+    {
+     "title": "The Implications of Firm‐Specific Policy Risk, Policy Uncertainty, and Industry Factors for Inventory: A Resource Dependence Perspective",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/jscm.12229",
+     "cites": 106,
+     "why": "Shows how firm-specific policy risk shapes inventory decisions through a resource-dependence lens, fitting a politically driven input shock."
+    }
+   ],
+   "url": "https://europeanbusinessmagazine.com/japan-yttrium-shortage/",
+   "follows": [],
+   "source": "Financial Times",
+   "date": "Oct 20"
+  },
+  {
+   "candidate_id": 195,
+   "headline": "Battery recyclers outside China face idle capacity as EV adoption slows and scrap flows to China",
+   "theme": "Circular Economy",
+   "original_url": "https://asia.nikkei.com/spotlight/supply-chain/as-ev-adoption-slows-battery-recyclers-beyond-china-struggle-to-stay-in-the-game2",
+   "summary": "Nikkei Asia (19 Oct 2026, Tokyo) reports that global EV battery recycling capacity far exceeds the volume of discarded material. The causes it gives are a slower-than-expected EV transition and a supply chain concentrating in China. Japan's JX Advanced Metals, whose plants can recover lithium, nickel and cobalt from used EV batteries, is named. Only the article's opening was verified; it should also be checked for sponsored-content status.",
+   "background": "Recyclers built capacity expecting a fast-growing stream of end-of-life EV batteries and production scrap. According to a secondary rewrite not checked against Nikkei, recyclers in Japan, South Korea and the West struggle to secure enough scrap to run profitably. The same rewrite says China's control of refining and recycling capacity pulls regional scrap toward Chinese processors.",
+   "problem": "Recycling plants are capital-intensive and need high utilisation, but their feedstock depends on past EV sales and on who wins the scrap competition. With slower adoption and Chinese processors outbidding them, non-Chinese recyclers face stranded capacity. That undermines the case for regional closed-loop supply as a mineral-security strategy.",
+   "where_why": "The friction sits at the reverse-logistics collection stage and the black-mass/scrap market. Feedstock supply is uncertain because end-of-life volumes lag EV sales by years. Capacity was sized for optimistic forecasts, so investment and feedstock are mismatched in timing. Scrap is tradable, so it flows to whoever has the deepest refining integration and the highest willingness to pay, which is China. Regional circularity goals clash with those market incentives.",
+   "stakeholders": [
+    {
+     "name": "Non-Chinese recyclers (e.g., JX Advanced Metals)",
+     "stake": "Need enough feedstock to make plants profitable; risk write-downs"
+    },
+    {
+     "name": "Chinese refiners and recyclers",
+     "stake": "Gain scale and further consolidate control over recovered materials"
+    },
+    {
+     "name": "Automakers and battery makers",
+     "stake": "Want secure, local recycled supply to meet sourcing rules and cut mineral risk"
+    },
+    {
+     "name": "Governments in Japan, Korea, the EU and US",
+     "stake": "Seek domestic closed-loop capacity for economic security, which may require feedstock policies"
+    }
+   ],
+   "hints": [
+    "Capacity investment under lagged, uncertain returns flows: what EV sales scenarios were these plants sized for?",
+    "Ask whether scrap export restrictions or recycled-content mandates could anchor feedstock locally, and compare with how waste-export bans have worked in other materials.",
+    "Collection and competition models from the remanufacturing literature, where the recycler competes with a third party for cores, map well onto this scrap market."
+   ],
+   "data_leads": "UN Comtrade trade in battery waste and black mass as a public proxy for scrap flows to China; Benchmark/BNEF recycling capacity trackers (commercial); company disclosures by JX Advanced Metals and peers for utilisation.",
+   "keywords": [
+    "battery recycling",
+    "closed-loop supply chain",
+    "capacity investment under uncertainty",
+    "secondary materials"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "battery_supply",
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Accelerating vehicle fleet turnover to achieve sustainable mobility goals",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1173",
+     "cites": 64,
+     "why": "Models the slow pace of vehicle fleet turnover, which governs how many EV batteries reach end of life and therefore recyclers' feedstock."
+    }
+   ],
+   "url": "https://asia.nikkei.com/spotlight/supply-chain/as-ev-adoption-slows-battery-recyclers-beyond-china-struggle-to-stay-in-the-game2",
+   "follows": [],
+   "source": "Nikkei Asia",
+   "date": "Oct 19"
+  },
+  {
+   "candidate_id": 146,
+   "headline": "Microsoft exits Nscale's Loughton AI data center after grid connection pushed to the 2030s",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://blockspace.media/insight/microsoft-drops-nscale-loughton-deal/",
+   "summary": "Microsoft has ended its anchor-tenant agreement for Nscale's planned AI data centre in Loughton, Essex, reported around 18–19 Oct 2026 and confirmed by Nscale. UK Power Networks reportedly told Nscale the site would not get enough power until the early-to-mid 2030s, against a planned ready date of late 2026 or early 2027. The site was planned at 50 MW, expandable to 90 MW, with 23,040 Nvidia GB300 GPUs for Azure; investment was reported as about $3bn or £2bn depending on the source.",
+   "background": "The deal was announced during Trump's September 2025 UK visit as part of Microsoft's UK AI investment pledge. Microsoft was the project's only announced customer. Nscale is preparing an IPO, with reported valuations ranging from $16–19bn up to $35bn. It has about $103bn of contracted revenue, roughly 40% from Microsoft, so Loughton is a small part. In April 2026, OpenAI paused Stargate UK with Nscale, citing regulation and energy costs.",
+   "problem": "The binding constraint was the grid connection date, not land, chips or capital. A tenant with time-sensitive compute demand will not wait several years for power. Nscale now holds a site without a tenant or adequate power and is exploring alternative power sources and other UK sites. Termination penalties have not been disclosed.",
+   "where_why": "The failure arose at the distribution-network interconnection stage. Grid reinforcement timelines run to years, while AI capacity decisions run to months, and that mismatch exposes developers who secure tenants before securing firm power dates. Information asymmetry about realistic connection dates also matters, along with the concentration risk of a single anchor tenant. Microsoft's statement that 'this decision relates to a single site' suggests it treats sites as substitutable options in a portfolio.",
+   "stakeholders": [
+    {
+     "name": "Microsoft",
+     "stake": "Needs timely AI capacity and can reallocate demand to sites with power"
+    },
+    {
+     "name": "Nscale",
+     "stake": "Faces a stranded project and reputational risk ahead of its IPO, and must find power or a new tenant"
+    },
+    {
+     "name": "UK Power Networks",
+     "stake": "Must manage connection queues and reinforcement investment amid surging large-load requests"
+    },
+    {
+     "name": "UK government",
+     "stake": "Its AI investment pledges depend on grid delivery"
+    }
+   ],
+   "hints": [
+    "Real options view of hyperscaler leasing: anchor contracts as options exercised or abandoned based on power-date signals.",
+    "Compare UK distribution-level connection timelines with US large-load queues (e.g., ERCOT, PJM) to see where power constraints bind on siting.",
+    "Puzzle: why sign a flagship tenant before a firm connection date? Look at contract structure and risk allocation between developer and tenant."
+   ],
+   "data_leads": "UK NESO and DNO connection registers for UK queue timelines; LBNL Queued Up and ERCOT large-load reports as US comparators; Nscale IPO filings when public.",
+   "keywords": [
+    "data center electricity demand",
+    "interconnection queues",
+    "facility siting",
+    "capacity investment under uncertainty"
+   ],
+   "dataset_candidates": [
+    "UK Power Networks Embedded Capacity Register",
+    "NESO Transmission Entry Capacity (TEC) Register"
+   ],
+   "datasets": [
+    "lbnl_queues",
+    "ercot_reports"
+   ],
+   "related": [],
+   "url": "https://blockspace.media/insight/microsoft-drops-nscale-loughton-deal/",
+   "follows": [],
+   "source": "Blockspace Media",
+   "date": "Oct 19"
+  },
+  {
+   "candidate_id": 30,
+   "headline": "ESMA's 2026 enforcement priorities target CSRD materiality and links between impacts, risks and targets",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/esma-to-focus-on-materiality-impacts-risks-opportunities-and-targets-as-sustainability-reporting-enforcement-priorities/",
+   "summary": "On 13 Oct 2026, ESMA published its 2026 European Common Enforcement Priorities for listed issuers' 2026 annual reports. For ESRS sustainability statements, it prioritises how firms apply the materiality assessment and how they link impacts, risks and opportunities (IROs) to policies, actions and targets (PATs) and metrics. Enforcers will focus on ESRS E1 (Climate Change) and S1 (Own Workforce).",
+   "background": "National enforcers coordinate through ESMA, and the ECEP sets common focus areas for reviewing CSRD-era reports. Financial-statement priorities cover geopolitical risk and restructuring provisions. ESMA also stresses simplification and reducing reporting burden, and released its 31st enforcement database extract covering seven decisions.",
+   "problem": "Early ESRS reports show selective disclosure. Some issuers detail positive impacts more than negative ones, call targets 'science-based' or '1.5 degrees' without explanation, and report emission intensity without absolute values. ESMA wants IROs to cover upstream and downstream value chains, wants firms to say when no PATs exist for a material IRO, and wants targets to be measurable, time-bound and outcome-oriented, with status reported as met, missed or dropped. The tension is between pushing enforcement rigour and the EU's simplification agenda.",
+   "where_why": "The gap lies between disclosure and verification. Materiality assessments are firm-determined and hard to audit, which gives issuers discretion and an incentive to frame favourably. Value-chain IROs depend on supplier data that firms do not control. Enforcement priorities shift the expected cost of vague claims and could change how firms collect value-chain data and set targets.",
+   "stakeholders": [
+    {
+     "name": "Listed EU issuers",
+     "stake": "Face scrutiny of materiality and target claims, and the cost of value-chain data collection"
+    },
+    {
+     "name": "ESMA and national enforcers",
+     "stake": "Seek credible, comparable ESRS reporting while respecting burden-reduction goals"
+    },
+    {
+     "name": "Investors and ESG raters",
+     "stake": "Need comparable absolute emissions and verifiable target progress"
+    },
+    {
+     "name": "Suppliers in issuers' value chains",
+     "stake": "May face more data requests as IRO coverage extends upstream"
+    }
+   ],
+   "hints": [
+    "Enforcement priorities as a staggered treatment: compare E1/S1 disclosure quality with other ESRS topics before and after.",
+    "Text-analysis angle: do 'science-based' or '1.5°C' labels without methodology predict weaker actual target progress?",
+    "Ask whether demands for upstream IRO coverage change buyer–supplier data flows, for example through CDP supply chain requests."
+   ],
+   "data_leads": "ESRS sustainability statements in ESEF filings; ESMA enforcement database extracts; CDP and the SBTi dashboard to cross-check claimed targets; LSEG ESG for disclosure scores.",
+   "keywords": [
+    "mandatory climate reporting",
+    "scope 3 disclosure",
+    "materiality assessment",
+    "regulatory enforcement"
+   ],
+   "dataset_candidates": [
+    "ESMA enforcement decisions database extracts"
+   ],
+   "datasets": [
+    "sbti",
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Toward “Omniscient” supply chains: Enabling and incentivizing sustainable operations",
+     "journal": "Production and Operations Management",
+     "year": 2026,
+     "url": "https://doi.org/10.1177/10591478261493185",
+     "cites": 0,
+     "why": "Discusses the mismatch between value-chain due-diligence expectations and what firms and regulators can verify, which is exactly ESMA's upstream/downstream IRO push."
+    },
+    {
+     "title": "Administrative environmental innovations, supply network structure, and environmental disclosure",
+     "journal": "Journal of Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1002/joom.1114",
+     "cites": 160,
+     "why": "Links internal environmental tracking systems and supply network structure to disclosure quality, informing why ESRS disclosure may vary across firms."
+    }
+   ],
+   "url": "https://www.esgtoday.com/esma-to-focus-on-materiality-impacts-risks-opportunities-and-targets-as-sustainability-reporting-enforcement-priorities/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Oct 19"
+  },
+  {
+   "candidate_id": 179,
+   "headline": "ODI study: EUDR traceability rules could exclude up to 60% of Ethiopian coffee smallholders from the EU",
+   "theme": "Food & Agriculture",
+   "original_url": "https://birrmetrics.com/eu-rules-could-shut-60-of-ethiopian-coffee-small/",
+   "summary": "An ODI Global study published 16 Oct 2026 estimates that up to 60% of Ethiopian coffee smallholders could be shut out of the EU market under the EU Deforestation Regulation (EUDR). It also finds that traceability gaps affect up to 57% of coffee supply chains. In adverse scenarios GDP could fall by up to 0.5%; both figures are modelled estimates, not observed outcomes, and were reported via Birr Metrics rather than the report itself.",
+   "background": "The EUDR applies to large and medium operators from 30 Dec 2026, after repeated delays. Coffee must not come from land deforested after 31 Dec 2020, and each shipment must be linked to geolocated plots. The EU takes about 30% of Ethiopia's coffee exports, which earned more than $2bn in FY2024/25 (the article also cites $3bn, an inconsistency). About 4 million smallholders produce more than 95% of output, often on plots under one hectare, and the sector supports close to 20 million livelihoods. ODI says coffee is not a primary driver of deforestation in Ethiopia.",
+   "problem": "A traceability mandate aimed at deforestation may exclude the smallest, least-documented farmers even where deforestation risk is low. EU buyers may respond by sourcing from traceable large farms or other origins rather than investing in smallholder mapping.",
+   "where_why": "The friction sits at aggregation points. Coffee from many farms is mixed, including through the Ethiopia Commodity Exchange, which breaks plot-level traceability. Geolocation data are missing, and fixed compliance costs per farm weigh heavily on tiny plots. Liability falls on EU operators, so they have an incentive to de-risk by narrowing their supplier base. The result is a coordination failure over who pays to build traceability infrastructure.",
+   "stakeholders": [
+    {
+     "name": "Ethiopian smallholders",
+     "stake": "Risk losing access to a buyer of about 30% of exports"
+    },
+    {
+     "name": "EU importers and roasters",
+     "stake": "Bear compliance liability; must choose between investing in traceability and switching sources"
+    },
+    {
+     "name": "Ethiopia Commodity Exchange and exporters",
+     "stake": "Pooled trading model conflicts with plot-level traceability"
+    },
+    {
+     "name": "Ethiopian government",
+     "stake": "Foreign-exchange earnings and up to 0.5% of GDP in bad scenarios"
+    },
+    {
+     "name": "EU policymakers",
+     "stake": "Want deforestation goals met without harming development or trade"
+    }
+   ],
+   "hints": [
+    "Fixed compliance cost vs plot size: a supplier-selection model in which traceability costs create a minimum efficient supplier scale.",
+    "Natural experiment: compare EU vs non-EU coffee import shifts by origin before and after 30 Dec 2026.",
+    "Contrast commodity-exchange pooling with direct-trade or cooperative channels as traceability architectures."
+   ],
+   "data_leads": "UN Comtrade and Eurostat Comext coffee imports by origin; Ethiopia Commodity Exchange volumes; Global Forest Watch tree cover loss data for deforestation risk by region.",
+   "keywords": [
+    "deforestation",
+    "multi-tier traceability",
+    "sourcing restrictions",
+    "smallholder inclusion"
+   ],
+   "dataset_candidates": [
+    "Eurostat Comext trade database",
+    "Global Forest Watch tree cover loss data"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "“I Am Because We Are”: The Role of Sub‐Saharan Africa's Collectivist Culture in Achieving Traceability and Global Supply Chain Resilience",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1111/jscm.12330",
+     "cites": 39,
+     "why": "Studies how traceability is achieved upstream in Ghanaian agri-food chains with scarce digital technology, which closely parallels Ethiopian smallholder conditions."
+    },
+    {
+     "title": "Sustainability in multi‐tier supply chains: Understanding the double agency role of the first‐tier supplier",
+     "journal": "Journal of Operations Management",
+     "year": 2015,
+     "url": "https://doi.org/10.1016/j.jom.2015.11.001",
+     "cites": 572,
+     "why": "Examines when first-tier suppliers act as agents enforcing sustainability compliance deeper in the chain, which is relevant to exporters' role under the EUDR."
+    }
+   ],
+   "url": "https://birrmetrics.com/eu-rules-could-shut-60-of-ethiopian-coffee-small/",
+   "follows": [],
+   "source": "Birr Metrics",
+   "date": "Oct 19"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "Three items describe the same pattern: a dominant hub decides who gets access to a scarce input. China rations yttrium and pulls in battery scrap, UK Power Networks rations grid connections, and EUDR traceability rations EU market access to farmers who can document plots. Comparing how firms respond when the bottleneck is a geopolitical supplier, a regulated utility or a compliance rule could show whether the usual resilience levers (buffers, diversification, capacity options) work differently depending on who controls the chokepoint.",
+ "also": [
+  {
+   "title": "AEP signs 960-MW Indiana nuclear pact with Amazon, X-energy",
+   "url": "https://www.utilitydive.com/news/aep-signs-advanced-960-mw-nuclear-amazon-x-energy/833341/",
+   "source": "Utility Dive",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Port of Savannah to build 3.5M TEU container terminal",
+   "url": "https://www.supplychaindive.com/news/port-of-savannah-to-build-35m-teu-container-terminal/833246/",
+   "source": "Supply Chain Dive",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "New emissions rules force Aarhus to rethink port discounts",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxORktzaUI3NXJfblpwM1pyRE5JMTFiNkFQQWVCMEdWeUlxb3YtTzlFSEpTaUtBX1J0UXFySXFoR3NfTWdtRXFEcEVvYURLTkFvZHRYcmgzOEY0R0dtcjc4dU5yYkw3VGRrUUpDSzA4MzFCWmhySFhFXzR6bEhjQXFWX2dKY0dpcW9P?oc=5",
+   "source": "Splash247",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "Rising Global Temperatures Increase Data Center Water Vulnerability to One-Third",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5PZ05ERjA5RzlHZnk2YTYyX3FlVlAzLXJ4YTdSYUxuVmVwTGhROC1hTlA4OG14ZUNJeVFKd0xPd0pMV1hqeU9TazBVUG5xWVFTZTVNZnctemF2U2FTRzlpWg?oc=5",
+   "source": "AZoCleantech",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Few major apparel brands pay garment workers a living wage: report",
+   "url": "https://www.supplychaindive.com/news/few-major-apparel-brands-pay-garment-workers-a-living-wage-report/833275/",
+   "source": "Supply Chain Dive",
+   "theme": "ESG & Disclosure"
+  }
+ ]
+}

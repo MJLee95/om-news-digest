@@ -107,9 +107,10 @@
   "name": "Global Forest Watch tree cover loss data",
   "first_seen": "2026-10-16",
   "items": [
-   "2026-10-16#5"
+   "2026-10-16#5",
+   "2026-10-20#5"
   ],
-  "last_seen": "2026-10-16"
+  "last_seen": "2026-10-20"
  },
  "pjm generator outage and emergency procedures postings": {
   "name": "PJM Generator Outage and Emergency Procedures postings",
@@ -198,5 +199,45 @@
    "2026-10-19#3"
   ],
   "last_seen": "2026-10-19"
+ },
+ "china general administration of customs export statistics": {
+  "name": "China General Administration of Customs export statistics",
+  "first_seen": "2026-10-20",
+  "items": [
+   "2026-10-20#1"
+  ],
+  "last_seen": "2026-10-20"
+ },
+ "uk power networks embedded capacity register": {
+  "name": "UK Power Networks Embedded Capacity Register",
+  "first_seen": "2026-10-20",
+  "items": [
+   "2026-10-20#3"
+  ],
+  "last_seen": "2026-10-20"
+ },
+ "neso transmission entry capacity (tec) register": {
+  "name": "NESO Transmission Entry Capacity (TEC) Register",
+  "first_seen": "2026-10-20",
+  "items": [
+   "2026-10-20#3"
+  ],
+  "last_seen": "2026-10-20"
+ },
+ "esma enforcement decisions database extracts": {
+  "name": "ESMA enforcement decisions database extracts",
+  "first_seen": "2026-10-20",
+  "items": [
+   "2026-10-20#4"
+  ],
+  "last_seen": "2026-10-20"
+ },
+ "eurostat comext trade database": {
+  "name": "Eurostat Comext trade database",
+  "first_seen": "2026-10-20",
+  "items": [
+   "2026-10-20#5"
+  ],
+  "last_seen": "2026-10-20"
  }
 }
