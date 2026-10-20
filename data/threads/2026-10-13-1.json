@@ -1,0 +1,103 @@
+{
+ "id": "2026-10-13#1",
+ "created": "2026-10-19",
+ "updates": [
+  {
+   "date": "2026-10-19",
+   "items": [
+    "2026-10-13#1",
+    "2026-10-17#1",
+    "2026-10-18#1"
+   ],
+   "note": "This new thread opens with FERC's Oct. 9 rejection of IRAS. It adds Pennsylvania's Oct. 1 curtailment-first Tentative Order and the October Maximum Generation alerts, which showed the grid stress driving both. Note that the backstop-auction order came 10 days before the IRAS ruling (Sept. 29), not five weeks as one report says."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "PJM data center load, curtailment rules and resource adequacy",
+  "summary": "Data center demand is growing faster than new generation and transmission in PJM. On Oct. 9, 2026 FERC rejected most of PJM's large-load plan, including the 'connect now, curtail first' service (IRAS). That leaves curtailment decisions to states such as Pennsylvania, while October Maximum Generation alerts showed how tight the grid already is.",
+  "origin": "PJM's Dec. 2025 capacity auction for 2027/28 cleared at the $333.44/MW-day cap and came in 6,623 MW short of the reliability requirement. Nearly 5,100 MW of the 5,250 MW load growth behind that shortfall came from data centers.\n\nThe responses that followed:\n- **Jan. 2026:** the White House National Energy Dominance Council and all 13 PJM governors issued a Statement of Principles. It called for a backstop auction with 15-year price certainty, with costs charged to data centers that neither bring new capacity nor accept curtailment.\n- **Jan. 16, 2026:** PJM's Board set a 50 MW large-load definition. It offered new loads two paths: bring your own new generation, or 'connect and manage' with earlier curtailment.\n- **March 2026:** the White House 'Ratepayer Protection Pledge' asked large loads to 'build, bring, or buy' the generation they need.\n- **July 14, 2026:** the 2028/29 auction cleared at its $325/MW-day cap, 6,831 MW short.\n- **July 31, 2026:** PJM filed the backstop auction at FERC (ER26-3380).\n- **Aug. 13, 2026:** PJM filed the large-load package (ER26-3515): definition, registry, IRAS, a bring-your-own-capacity option and a demand-curve change.\n- **Sept. 10, 2026:** the Pennsylvania PUC voted 5-0 to rewrite its emergency load-control rules.\n- **Sept. 29, 2026:** FERC accepted the backstop auction but suspended it until Feb. 28, 2027, citing cost allocation, the rules for a utility leaving PJM, and collateral.",
+  "causes": "- **Demand outpacing supply:** year-round data center load is growing faster than new supply and transmission. Capacity auctions now clear at price caps and still fall short of the reliability requirement.\n- **Seasonal squeeze:** weather extremes now last longer and push into the spring and fall maintenance seasons.\n- **Split jurisdiction:** FERC regulates wholesale markets, while states control retail customers and rates. That division blocks a single PJM-wide rule on who gets curtailed and who pays.\n- **Pressure to protect existing ratepayers:** policymakers want new large loads to pay for the capacity they require rather than spreading the cost to other customers.",
+  "actors": [
+   {
+    "name": "PJM Interconnection",
+    "role": "Grid operator; designed IRAS and the backstop auction; called demand response and issued Maximum Generation alerts in October 2026",
+    "stake": "Keeping the grid reliable while making new large loads bring their own capacity or be curtailed first; now reviewing how to meet FERC's requirements"
+   },
+   {
+    "name": "FERC",
+    "role": "On Oct. 9 rejected IRAS, the bring-your-own-capacity option and the demand-curve change, approving only the 50 MW definition and registry; suspended the backstop auction on Sept. 29",
+    "stake": "Staying within its wholesale-market authority and ensuring the customers who cause costs pay them"
+   },
+   {
+    "name": "Pennsylvania PUC",
+    "role": "Oct. 1 Tentative Order (4-0) would curtail new large loads without enough new capacity first, bar classing data centers as 'critical load', and require utility large-load registries",
+    "stake": "Protecting existing customers' reliability and bills; positioned to lead state action"
+   },
+   {
+    "name": "White House Energy Dominance Council and PJM governors",
+    "role": "Pushed for the backstop auction, data-center cost allocation and the 'build, bring, or buy' pledge",
+    "stake": "Fast new capacity without raising residential bills"
+   },
+   {
+    "name": "Data Center Coalition and data center developers",
+    "role": "Favored a voluntary subscription and bilateral-contract design; face curtailment-first rules at the state level",
+    "stake": "Speed of interconnection, cost exposure and curtailment risk"
+   },
+   {
+    "name": "Independent generators (Constellation, NRG, Talen, Vistra)",
+    "role": "Sell into the capacity market",
+    "stake": "Jefferies expects them to benefit from capacity prices staying higher for longer"
+   },
+   {
+    "name": "Consumer and environmental groups (e.g., NRDC)",
+    "role": "Criticized FERC's rejection",
+    "stake": "Avoiding blackouts and bill increases"
+   }
+  ],
+  "status": "- **IRAS:** dead as filed. Only the large-load definition and the registry (location, ramp schedule and capacity supply of each facility) survive.\n- **December 2026 auction for 2029/30:** the demand-curve change for IRAS loads will not apply.\n- **Backstop auction:** suspended until Feb. 28, 2027 unless PJM refiles and FERC acts sooner. PJM's bilateral matchmaking process continues.\n- **Pennsylvania:** taking comments on its Tentative Order (30 days plus 15 for replies); a final order is expected Jan. 28, 2027.\n- **Other states:** Jefferies expects any revival of curtailment rules to be state-led, with Ohio and Pennsylvania the ones to watch.\n- **October operations:** during the week of Oct. 12, 2026, just over 61,000 MW of generation was out (66% of fleet capacity available), about 15,000 MW of it unplanned (preliminary).\n- **Demand response:** PJM called it on Oct. 13–14. It has now been used on 15 days in 2025–2026, versus 8 in all of 2015–2024.\n- **Open questions:** whether and how PJM refiles either proposal.",
+  "watch": [
+   "PJM's December 2026 capacity auction for 2029/30",
+   "Pennsylvania PUC final order on curtailing large loads, expected at the Jan. 28, 2027 public meeting",
+   "FERC backstop auction suspension ends Feb. 28, 2027, or earlier if PJM refiles",
+   "Whether Ohio or other PJM states adopt curtailment-first rules for large loads, and whether PJM refiles IRAS"
+  ],
+  "research": [
+   {
+    "question": "How do state-level curtailment-first rules for large loads change data center siting and timing decisions across PJM states?",
+    "shock": "FERC's Oct. 9, 2026 rejection of IRAS; Pennsylvania PUC Tentative Order (Oct. 1, 2026) and final order expected Jan. 28, 2027",
+    "data": "Utility and PJM large-load registries (location, ramp schedule, capacity supply), interconnection queues, state PUC dockets"
+   },
+   {
+    "question": "How does sustained data center load interact with maintenance scheduling and forced outages to shift reliability risk into shoulder seasons?",
+    "shock": "October 2026 Maximum Generation alerts and demand response calls (Oct. 13–14)",
+    "data": "PJM outage data (planned vs. unplanned), demand response event history (15 days in 2025–2026 vs. 8 in 2015–2024), load forecasts"
+   },
+   {
+    "question": "How do capacity price caps, shortfalls and long-term backstop contracts affect generation investment and the allocation of costs to large loads?",
+    "shock": "2027/28 and 2028/29 auctions clearing at their caps with shortfalls of 6,623 MW and 6,831 MW; backstop auction suspension",
+    "data": "PJM auction results, the FERC ER26-3380 and ER26-3515 records"
+   }
+  ]
+ },
+ "updated": "2026-10-19",
+ "items": [
+  "2026-10-13#1",
+  "2026-10-17#1",
+  "2026-10-18#1"
+ ],
+ "sources": [
+  "https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf",
+  "https://www.energy.gov/documents/statement-principles-regarding-pjm",
+  "https://www.pjm.com/-/media/DotCom/about-pjm/who-we-are/public-disclosures/2026/20260116-pjm-board-letter-re-results-of-the-cifp-process-large-load-additions.pdf",
+  "https://www.publicpower.org/periodical/article/ferc-accepts-elements-pjm-proposal-tied-large-loads-rejects-others",
+  "https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/",
+  "https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/",
+  "http://paenvironmentdaily.blogspot.com/2026/10/puc-invites-comments-on-regulations-to.html",
+  "https://southphillyreview.com/2026/10/02/pennsylvania-regulators-advance-order-putting-new-data-centers-first-in-line/",
+  "https://insidelines.pjm.com/providing-reliable-electricity-in-a-new-reality/",
+  "https://energynewsbeat.co/ai/ferc-rejects-most-of-pjms-data-center-plan-and-the-29-4-billion-question-of-who-pays-is-still-open/",
+  "https://www.nrdc.org/press-releases/ferc-rejects-pjms-plan-protect-electricity-reliability-and-consumer-bills-data",
+  "https://mgrid.org/2026/09/10/mg4fa35027d299/"
+ ]
+}

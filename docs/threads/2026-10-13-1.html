@@ -1,0 +1,101 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>PJM data center load, curtailment rules and resource adequacy · Daily Clippings</title>
+<script>
+try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script><style>:root{--bg:#f4f3ef;--card:#ffffff;--ink:#1d1d1b;--ink2:#3a3935;--ink3:#2f2e2b;--muted:#6b6a65;--faint:#8f8d86;--line:#dcdad3;--box:#1d1d1b;--boxink:#f4f3ef;--gold:#d9c48f;--accent:#1f6f5c;--t0:#1f6f5c;--t1:#8a5a00;--t2:#2b5ea7;--t3:#7a3e8f;--t4:#a8402f;--t5:#4b6b1f;--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#20201e;--ink:#ecebe6;--ink2:#c9c7c0;--ink3:#d6d4cd;--muted:#9c9a93;--faint:#7d7b75;--line:#34332f;--box:#2b2a27;--boxink:#ecebe6;--gold:#d9c48f;--accent:#6fc2a8;--t0:#6fc2a8;--t1:#e0a845;--t2:#86aee8;--t3:#c493d6;--t4:#e8907c;--t5:#a3c873;--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}}
+:root[data-theme="dark"]{--bg:#161615;--card:#20201e;--ink:#ecebe6;--ink2:#c9c7c0;--ink3:#d6d4cd;--muted:#9c9a93;--faint:#7d7b75;--line:#34332f;--box:#2b2a27;--boxink:#ecebe6;--gold:#d9c48f;--accent:#6fc2a8;--t0:#6fc2a8;--t1:#e0a845;--t2:#86aee8;--t3:#c493d6;--t4:#e8907c;--t5:#a3c873;--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
+
+.theme-toggle{position:fixed;top:12px;right:12px;z-index:50;display:flex;align-items:center;gap:6px;
+  border:1px solid var(--toggle-line);background:var(--toggle-bg);color:var(--toggle-ink);border-radius:999px;
+  padding:7px 13px;font:600 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;cursor:pointer;
+  box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.theme-toggle:hover{border-color:var(--toggle-ink)}
+.theme-toggle .ic{font-size:14px}
+
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+.back{font:13px Helvetica,Arial,sans-serif;color:var(--accent);text-decoration:none}
+.kicker{font:600 12px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+h1{font-size:30px;line-height:1.2;margin:4px 0 10px}
+.meta{font:13px Helvetica,Arial,sans-serif;color:var(--muted);margin-bottom:18px}
+.lede{font-size:18px;color:var(--ink2);margin:0 0 8px}
+h2{font:600 13px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:32px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+p{margin:0 0 10px;color:var(--ink2)}
+a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font:14px/1.5 Helvetica,Arial,sans-serif;color:var(--ink3)}
+td{padding:9px 8px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{width:34%}
+.role{color:var(--muted);font-size:13px}
+ul{padding-left:20px;margin:0} li{margin:8px 0;color:var(--ink2)}
+.log,.tl{list-style:none;padding:0;font:14px/1.55 Helvetica,Arial,sans-serif}
+.log li,.tl li{padding:6px 0 6px 12px;border-left:3px solid var(--line)}
+.d{display:block;font-size:12px;font-weight:600;color:var(--muted)}
+.src{color:var(--muted);font-size:12px}
+.angle{background:var(--card);border-radius:10px;padding:14px 16px;margin:10px 0;font:14px/1.5 Helvetica,Arial,sans-serif;border-left:4px solid var(--gold)}
+.angle .q{font-weight:600;color:var(--ink);margin-bottom:6px}
+.kv{color:var(--ink3);margin:3px 0} .kv span{display:inline-block;min-width:110px;color:var(--muted)}
+.sources{font:12px/1.5 Helvetica,Arial,sans-serif;word-break:break-all}
+details{font:14px/1.5 Helvetica,Arial,sans-serif;margin:6px 0} summary{cursor:pointer;color:var(--ink2)}
+.note{font:12px/1.5 Helvetica,Arial,sans-serif;color:var(--faint);margin-top:28px}
+</style><script>(function(){
+  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  try {
+    // same opt-out as GoatCounter's own script: Settings → "disable for this browser" opens #toggle-goatcounter
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      off ? localStorage.removeItem('skipgc') : localStorage.setItem('skipgc', 't');
+      alert(off ? 'GoatCounter: counting this browser again.' : 'GoatCounter: visits from this browser will no longer be counted.');
+      history.replaceState(null, '', location.pathname);
+      return;
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
+  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
+  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
+})();</script></head>
+<body><button class="theme-toggle" id="themeToggle" type="button"></button><div class="wrap">
+<a class="back" href="../index.html#tab=threads">&larr; Story threads</a>
+<div class="kicker">Story brief · 3 articles · Oct 13, 2026 → Oct 18, 2026</div>
+<h1>PJM data center load, curtailment rules and resource adequacy</h1>
+<div class="meta">Last updated Oct 19, 2026 · first opened Oct 19, 2026</div>
+<p class="lede">Data center demand is growing faster than new generation and transmission in PJM. On Oct. 9, 2026 FERC rejected most of PJM&#x27;s large-load plan, including the &#x27;connect now, curtail first&#x27; service (IRAS). That leaves curtailment decisions to states such as Pennsylvania, while October Maximum Generation alerts showed how tight the grid already is.</p>
+
+<h2>Background</h2><p>PJM&#x27;s Dec. 2025 capacity auction for 2027/28 cleared at the $333.44/MW-day cap and came in 6,623 MW short of the reliability requirement. Nearly 5,100 MW of the 5,250 MW load growth behind that shortfall came from data centers.</p>
+<p>The responses that followed:</p>
+<ul><li><strong>Jan. 2026:</strong> the White House National Energy Dominance Council and all 13 PJM governors issued a Statement of Principles. It called for a backstop auction with 15-year price certainty, with costs charged to data centers that neither bring new capacity nor accept curtailment.</li><li><strong>Jan. 16, 2026:</strong> PJM&#x27;s Board set a 50 MW large-load definition. It offered new loads two paths: bring your own new generation, or &#x27;connect and manage&#x27; with earlier curtailment.</li><li><strong>March 2026:</strong> the White House &#x27;Ratepayer Protection Pledge&#x27; asked large loads to &#x27;build, bring, or buy&#x27; the generation they need.</li><li><strong>July 14, 2026:</strong> the 2028/29 auction cleared at its $325/MW-day cap, 6,831 MW short.</li><li><strong>July 31, 2026:</strong> PJM filed the backstop auction at FERC (ER26-3380).</li><li><strong>Aug. 13, 2026:</strong> PJM filed the large-load package (ER26-3515): definition, registry, IRAS, a bring-your-own-capacity option and a demand-curve change.</li><li><strong>Sept. 10, 2026:</strong> the Pennsylvania PUC voted 5-0 to rewrite its emergency load-control rules.</li><li><strong>Sept. 29, 2026:</strong> FERC accepted the backstop auction but suspended it until Feb. 28, 2027, citing cost allocation, the rules for a utility leaving PJM, and collateral.</li></ul>
+<h2>Why it is happening</h2><ul><li><strong>Demand outpacing supply:</strong> year-round data center load is growing faster than new supply and transmission. Capacity auctions now clear at price caps and still fall short of the reliability requirement.</li><li><strong>Seasonal squeeze:</strong> weather extremes now last longer and push into the spring and fall maintenance seasons.</li><li><strong>Split jurisdiction:</strong> FERC regulates wholesale markets, while states control retail customers and rates. That division blocks a single PJM-wide rule on who gets curtailed and who pays.</li><li><strong>Pressure to protect existing ratepayers:</strong> policymakers want new large loads to pay for the capacity they require rather than spreading the cost to other customers.</li></ul>
+<h2>Who is involved</h2><table><tr><td><b>PJM Interconnection</b><div class='role'>Grid operator; designed IRAS and the backstop auction; called demand response and issued Maximum Generation alerts in October 2026</div></td><td>Keeping the grid reliable while making new large loads bring their own capacity or be curtailed first; now reviewing how to meet FERC&#x27;s requirements</td></tr><tr><td><b>FERC</b><div class='role'>On Oct. 9 rejected IRAS, the bring-your-own-capacity option and the demand-curve change, approving only the 50 MW definition and registry; suspended the backstop auction on Sept. 29</div></td><td>Staying within its wholesale-market authority and ensuring the customers who cause costs pay them</td></tr><tr><td><b>Pennsylvania PUC</b><div class='role'>Oct. 1 Tentative Order (4-0) would curtail new large loads without enough new capacity first, bar classing data centers as &#x27;critical load&#x27;, and require utility large-load registries</div></td><td>Protecting existing customers&#x27; reliability and bills; positioned to lead state action</td></tr><tr><td><b>White House Energy Dominance Council and PJM governors</b><div class='role'>Pushed for the backstop auction, data-center cost allocation and the &#x27;build, bring, or buy&#x27; pledge</div></td><td>Fast new capacity without raising residential bills</td></tr><tr><td><b>Data Center Coalition and data center developers</b><div class='role'>Favored a voluntary subscription and bilateral-contract design; face curtailment-first rules at the state level</div></td><td>Speed of interconnection, cost exposure and curtailment risk</td></tr><tr><td><b>Independent generators (Constellation, NRG, Talen, Vistra)</b><div class='role'>Sell into the capacity market</div></td><td>Jefferies expects them to benefit from capacity prices staying higher for longer</td></tr><tr><td><b>Consumer and environmental groups (e.g., NRDC)</b><div class='role'>Criticized FERC&#x27;s rejection</div></td><td>Avoiding blackouts and bill increases</td></tr></table>
+<h2>Where things stand</h2><ul><li><strong>IRAS:</strong> dead as filed. Only the large-load definition and the registry (location, ramp schedule and capacity supply of each facility) survive.</li><li><strong>December 2026 auction for 2029/30:</strong> the demand-curve change for IRAS loads will not apply.</li><li><strong>Backstop auction:</strong> suspended until Feb. 28, 2027 unless PJM refiles and FERC acts sooner. PJM&#x27;s bilateral matchmaking process continues.</li><li><strong>Pennsylvania:</strong> taking comments on its Tentative Order (30 days plus 15 for replies); a final order is expected Jan. 28, 2027.</li><li><strong>Other states:</strong> Jefferies expects any revival of curtailment rules to be state-led, with Ohio and Pennsylvania the ones to watch.</li><li><strong>October operations:</strong> during the week of Oct. 12, 2026, just over 61,000 MW of generation was out (66% of fleet capacity available), about 15,000 MW of it unplanned (preliminary).</li><li><strong>Demand response:</strong> PJM called it on Oct. 13–14. It has now been used on 15 days in 2025–2026, versus 8 in all of 2015–2024.</li><li><strong>Open questions:</strong> whether and how PJM refiles either proposal.</li></ul>
+<h2>What to watch</h2><ul><li>PJM&#x27;s December 2026 capacity auction for 2029/30</li><li>Pennsylvania PUC final order on curtailing large loads, expected at the Jan. 28, 2027 public meeting</li><li>FERC backstop auction suspension ends Feb. 28, 2027, or earlier if PJM refiles</li><li>Whether Ohio or other PJM states adopt curtailment-first rules for large loads, and whether PJM refiles IRAS</li></ul>
+<h2>Research angles</h2><div class='angle'><div class='q'>How do state-level curtailment-first rules for large loads change data center siting and timing decisions across PJM states?</div><div class='kv'><span>Shock / timing</span>FERC&#x27;s Oct. 9, 2026 rejection of IRAS; Pennsylvania PUC Tentative Order (Oct. 1, 2026) and final order expected Jan. 28, 2027</div><div class='kv'><span>Data</span>Utility and PJM large-load registries (location, ramp schedule, capacity supply), interconnection queues, state PUC dockets</div></div><div class='angle'><div class='q'>How does sustained data center load interact with maintenance scheduling and forced outages to shift reliability risk into shoulder seasons?</div><div class='kv'><span>Shock / timing</span>October 2026 Maximum Generation alerts and demand response calls (Oct. 13–14)</div><div class='kv'><span>Data</span>PJM outage data (planned vs. unplanned), demand response event history (15 days in 2025–2026 vs. 8 in 2015–2024), load forecasts</div></div><div class='angle'><div class='q'>How do capacity price caps, shortfalls and long-term backstop contracts affect generation investment and the allocation of costs to large loads?</div><div class='kv'><span>Shock / timing</span>2027/28 and 2028/29 auctions clearing at their caps with shortfalls of 6,623 MW and 6,831 MW; backstop auction suspension</div><div class='kv'><span>Data</span>PJM auction results, the FERC ER26-3380 and ER26-3515 records</div></div>
+<h2>Update log</h2><ul class="log"><li><span class='d'>Oct 19, 2026</span>This new thread opens with FERC&#x27;s Oct. 9 rejection of IRAS. It adds Pennsylvania&#x27;s Oct. 1 curtailment-first Tentative Order and the October Maximum Generation alerts, which showed the grid stress driving both. Note that the backstop-auction order came 10 days before the IRAS ruling (Sept. 29), not five weeks as one report says.<br><a href='../issues/2026-10-13.html#item-1'>FERC rejects PJM&#x27;s curtailment-based large-load interconnection plan, approves data center registry</a><br><a href='../issues/2026-10-17.html#item-1'>PJM ran on 66% of its generation fleet during October Maximum Generation Alerts; about a quarter of outages were unplanned</a><br><a href='../issues/2026-10-18.html#item-1'>Pennsylvania PUC proposes curtailing new data centers before other customers during grid emergencies</a></li></ul>
+<h2>Articles in this thread</h2><ul class="tl"><li><span class='d'>Oct 13, 2026</span><a href='../issues/2026-10-13.html#item-1'>FERC rejects PJM&#x27;s curtailment-based large-load interconnection plan, approves data center registry</a> <span class='src'>· Utility Dive</span></li><li><span class='d'>Oct 17, 2026</span><a href='../issues/2026-10-17.html#item-1'>PJM ran on 66% of its generation fleet during October Maximum Generation Alerts; about a quarter of outages were unplanned</a> <span class='src'>· PA Environment Digest Blog</span></li><li><span class='d'>Oct 18, 2026</span><a href='../issues/2026-10-18.html#item-1'>Pennsylvania PUC proposes curtailing new data centers before other customers during grid emergencies</a> <span class='src'>· NorthcentralPA.com</span></li></ul>
+<h2>Sources</h2><ul class="sources"><li><a href='https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf' target='_blank' rel='noopener'>https://www.pjm.com/pjmfiles/directory/etariff/FercOrders/9154/20260929-er26-3380-000.pdf</a></li><li><a href='https://www.energy.gov/documents/statement-principles-regarding-pjm' target='_blank' rel='noopener'>https://www.energy.gov/documents/statement-principles-regarding-pjm</a></li><li><a href='https://www.pjm.com/-/media/DotCom/about-pjm/who-we-are/public-disclosures/2026/20260116-pjm-board-letter-re-results-of-the-cifp-process-large-load-additions.pdf' target='_blank' rel='noopener'>https://www.pjm.com/-/media/DotCom/about-pjm/who-we-are/public-disclosures/2026/20260116-pjm-board-letter-re-results-of-the-cifp-process-large-load-additions.pdf</a></li><li><a href='https://www.publicpower.org/periodical/article/ferc-accepts-elements-pjm-proposal-tied-large-loads-rejects-others' target='_blank' rel='noopener'>https://www.publicpower.org/periodical/article/ferc-accepts-elements-pjm-proposal-tied-large-loads-rejects-others</a></li><li><a href='https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/' target='_blank' rel='noopener'>https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/</a></li><li><a href='https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/' target='_blank' rel='noopener'>https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/</a></li><li><a href='http://paenvironmentdaily.blogspot.com/2026/10/puc-invites-comments-on-regulations-to.html' target='_blank' rel='noopener'>http://paenvironmentdaily.blogspot.com/2026/10/puc-invites-comments-on-regulations-to.html</a></li><li><a href='https://southphillyreview.com/2026/10/02/pennsylvania-regulators-advance-order-putting-new-data-centers-first-in-line/' target='_blank' rel='noopener'>https://southphillyreview.com/2026/10/02/pennsylvania-regulators-advance-order-putting-new-data-centers-first-in-line/</a></li><li><a href='https://insidelines.pjm.com/providing-reliable-electricity-in-a-new-reality/' target='_blank' rel='noopener'>https://insidelines.pjm.com/providing-reliable-electricity-in-a-new-reality/</a></li><li><a href='https://energynewsbeat.co/ai/ferc-rejects-most-of-pjms-data-center-plan-and-the-29-4-billion-question-of-who-pays-is-still-open/' target='_blank' rel='noopener'>https://energynewsbeat.co/ai/ferc-rejects-most-of-pjms-data-center-plan-and-the-29-4-billion-question-of-who-pays-is-still-open/</a></li><li><a href='https://www.nrdc.org/press-releases/ferc-rejects-pjms-plan-protect-electricity-reliability-and-consumer-bills-data' target='_blank' rel='noopener'>https://www.nrdc.org/press-releases/ferc-rejects-pjms-plan-protect-electricity-reliability-and-consumer-bills-data</a></li><li><a href='https://mgrid.org/2026/09/10/mg4fa35027d299/' target='_blank' rel='noopener'>https://mgrid.org/2026/09/10/mg4fa35027d299/</a></li></ul>
+
+<p class="note">Written by Claude from the linked articles and web sources, and rewritten when new articles join the thread. Check the sources before citing.</p>
+</div><script>
+(() => {
+  const btn = document.getElementById('themeToggle');
+  const ORDER = ['system', 'light', 'dark'];
+  const LABEL = {system: ['◐', 'System'], light: ['☀︎', 'Light'], dark: ['☾', 'Dark']};
+  let mode = 'system';
+  try { mode = localStorage.getItem('theme') || 'system'; } catch (e) {}
+  if (!ORDER.includes(mode)) mode = 'system';
+  const apply = () => {
+    if (mode === 'system') delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = mode;
+    const [ic, label] = LABEL[mode];
+    btn.innerHTML = `<span class="ic">${ic}</span>${label}`;
+    btn.title = `Theme: ${label} (click to change)`;
+    btn.setAttribute('aria-label', `Color theme: ${label}. Click to change.`);
+  };
+  btn.onclick = () => {
+    mode = ORDER[(ORDER.indexOf(mode) + 1) % ORDER.length];
+    try { mode === 'system' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+    apply();
+  };
+  apply();
+})();
+</script></body></html>

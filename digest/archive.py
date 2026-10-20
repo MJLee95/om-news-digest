@@ -39,8 +39,12 @@ def known_keywords(issues_dir: Path, limit: int = 200) -> list[str]:
     return [k for k, _ in counts.most_common(limit)]
 
 
-def threads(items: list[dict]) -> dict[str, str]:
-    """Group items linked by 'follows' into story threads. Returns {item_id: thread_id} for threads of 2+."""
+def threads(items: list[dict], detached: set[str] = frozenset()) -> dict[str, str]:
+    """Group items linked by 'follows' into story threads. Returns {item_id: thread_id} for threads of 2+.
+
+    The thread id is the earliest item's id, so it stays stable as the thread grows. Items in `detached`
+    (judged off-topic by a thread brief) are left out of linking.
+    """
     parent = {i["id"]: i["id"] for i in items}
 
     def find(x):
@@ -50,11 +54,15 @@ def threads(items: list[dict]) -> dict[str, str]:
         return x
 
     for i in items:
+        if i["id"] in detached:
+            continue
         for f in i["follows"]:
-            if f in parent:
+            if f in parent and f not in detached:
                 parent[find(i["id"])] = find(f)
-    groups = Counter(find(x) for x in parent)
-    return {x: find(x) for x in parent if groups[find(x)] > 1}
+    members: dict[str, list[str]] = {}
+    for x in parent:
+        members.setdefault(find(x), []).append(x)
+    return {x: min(group) for group in members.values() if len(group) > 1 for x in group}
 
 
 def _byline_html(text: str) -> str:
@@ -108,7 +116,9 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
         stars = fetch_stars(repo)
     issues = _issues(issues_dir)
     (out_dir / "issues").mkdir(parents=True, exist_ok=True)
-    thread_of = threads(all_items(issues_dir))
+    from .threads import load_detached, load_threads, render_thread, slug as thread_slug
+    threads_dir = issues_dir.parent / "threads"
+    thread_of = threads(all_items(issues_dir), load_detached(threads_dir))
 
     records = []
     for iso, iss in issues:
@@ -140,6 +150,17 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
             (out_dir / "weekly" / f"{p.stem}.html").write_text(_inject(render_weekly(title, p.stem, wk, "../index.html", web=True), track))
             weekly.append({"date": p.stem, "overview": wk["overview"], "ideas": [i["title"] for i in wk["ideas"]]})
 
+    # story-thread brief pages
+    thread_briefs = {}
+    briefs = load_threads(threads_dir)
+    if briefs:
+        (out_dir / "threads").mkdir(exist_ok=True)
+        lookup = {it["id"]: {"headline": it["headline"], "source": it["source"]} for r in records for it in r["items"]}
+        for tid, t in briefs.items():
+            (out_dir / "threads" / f"{thread_slug(tid)}.html").write_text(_inject(render_thread(title, t, lookup), track))
+            thread_briefs[tid] = {"slug": thread_slug(tid), "title": t["brief"]["title"], "summary": t["brief"]["summary"],
+                                  "updated": t["updated"], "note": t["updates"][-1]["note"] if t["updates"] else ""}
+
     reg = load_registry()
     payload = {
         "issues": records,
@@ -149,6 +170,7 @@ def build(issues_dir: Path, out_dir: Path, title: str, repo: str = "", stars: di
                               for c in load_candidates().values()), key=lambda c: -c["mentions"]),
         "stars": {k: {"number": v.get("number"), "note": v.get("note", "")} for k, v in stars.items()},
         "weekly": weekly,
+        "threadBriefs": thread_briefs,
         "repo": repo,
     }
     (out_dir / "stars.js").write_text(STARS_JS)
@@ -474,10 +496,16 @@ const VIEWS = {
     bar(state.open ? 'Story thread' : 'Story threads', state.open ? '' : 'ongoing stories covered more than once', !!state.open || !!state.q);
     if (!list.length) return `<div class="empty">${THREAD_LIST.length ? 'No matching threads.' :
       'No story threads yet. When a new story is a follow-up to something covered earlier, the two are linked here as a timeline.'}</div>`;
-    return list.map(([id, its]) => `<section class="card">
-      <h3>${esc(its.at(-1).headline)}</h3>
-      <p class="intro">${its.length} updates · ${short(its[0].date)} → ${short(its.at(-1).date)}</p>
-      ${its.map(it => row(it, {withDate: true})).join('')}</section>`).join('');
+    return list.map(([id, its]) => {
+      const b = D.threadBriefs[id];
+      return `<section class="card">
+      <h3>${b ? `<a href="threads/${b.slug}.html">${esc(b.title)}</a>` : esc(its.at(-1).headline)}</h3>
+      <p class="intro">${its.length} articles · ${short(its[0].date)} → ${short(its.at(-1).date)}${b ? ` · brief updated ${short(b.updated)}` : ''}</p>
+      ${b ? `<p style="margin:0 0 6px">${esc(b.summary)}</p>
+        ${b.note ? `<p class="meta" style="margin:0 0 8px"><b>Latest:</b> ${esc(b.note)}</p>` : ''}
+        <p style="margin:0 0 10px"><a href="threads/${b.slug}.html" style="color:var(--accent);font-weight:600;text-decoration:none">Read the story brief →</a></p>` : ''}
+      ${its.map(it => row(it, {withDate: true})).join('')}</section>`;
+    }).join('');
   },
   datasets() {
     const q = state.q.toLowerCase();

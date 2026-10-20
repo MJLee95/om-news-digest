@@ -174,6 +174,12 @@ def main() -> None:
     ds_registry.add_candidates({f"{iso}#{n}": i.get("dataset_candidates", [])[:2] for n, i in enumerate(items, 1)},
                                iso, registry)
     state.save_seen(seen, [{"date": iso, "url": c.url, "title_key": sources.norm_title(c.title)} for c in sent], today)
+    try:  # story-thread briefs; a failure here must not lose today's archive
+        from digest.threads import update_threads
+        update_threads(issues_dir, state.DATA / "threads", cur, iso, cfg["llm"])
+        print(cur.cost_report())
+    except Exception as ex:
+        print(f"[warn] thread briefs not updated: {ex}")
     archive.build(issues_dir, ROOT / "docs", d["title"], repo, stars, d.get("byline", ""), cfg.get("analytics"))
 
 

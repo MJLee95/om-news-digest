@@ -138,7 +138,9 @@ NEWS CANDIDATES:
 """
         if recent:
             prompt += ("\nRECENTLY COVERED (id: headline). Don't pick stories that merely repeat these. A genuinely new "
-                       "development of one of these stories is welcome: pick it and list the earlier ids in 'follows'.\n"
+                       "development of one of these stories is welcome: pick it and list the earlier ids in 'follows'. "
+                       "Use 'follows' only for the same specific story (the same proceeding, case, rule, project or "
+                       "dispute), never just the same broad topic.\n"
                        + "\n".join(f"{r['id']}: {r['headline']}" for r in recent) + "\n")
         if starred:
             prompt += ("\nSTARRED BY THE READER (stories they found most useful; lean toward similar topics and kinds of "
@@ -182,9 +184,13 @@ and only facts supported by sources. If something can't be verified, say so.
 
 STORIES:
 {stories}"""
+        return self.web_notes(user, self.cfg.get("web_search_max_uses", 8), self.cfg.get("web_fetch_max_uses", 6))
+
+    def web_notes(self, user: str, searches: int, fetches: int) -> str:
+        """One research turn with web search/fetch; returns Claude's text notes."""
         tools = [
-            {"type": "web_search_20260209", "name": "web_search", "max_uses": self.cfg.get("web_search_max_uses", 8)},
-            {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": self.cfg.get("web_fetch_max_uses", 6),
+            {"type": "web_search_20260209", "name": "web_search", "max_uses": searches},
+            {"type": "web_fetch_20260209", "name": "web_fetch", "max_uses": fetches,
              "max_content_tokens": self.cfg.get("web_fetch_max_content_tokens", 5000)},
         ]
         messages = [{"role": "user", "content": user}]
