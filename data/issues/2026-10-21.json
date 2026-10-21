@@ -1,0 +1,381 @@
+{
+ "intro": "Today's issue covers a hyperscaler-backed small modular reactor plan in Indiana and a double-fee dispute under Colorado's packaging EPR law. It also covers Chinese battery makers building plants abroad to get around trade barriers, a tariff-driven delay to blast furnace maintenance at Cleveland-Cliffs, and Canada shelving an oil and gas 'Abatement' category in its green taxonomy.",
+ "items": [
+  {
+   "candidate_id": 9,
+   "headline": "Amazon, AEP and X-energy explore 960-MW small modular reactor project in Indiana, with Amazon covering full costs",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.utilitydive.com/news/aep-signs-advanced-960-mw-nuclear-amazon-x-energy/833341/",
+   "summary": "On Oct. 19, 2026, AEP, Amazon and X-energy announced a joint development plan for twelve 80-MW Xe-100 small modular reactors (960 MW in total). The site is the former Breed coal plant in Sullivan County, Indiana. If the project is built and starts commercial operation, Amazon would buy the output under a long-term contract covering the facility's capital and operating costs for its whole life. No timeline, cost estimate or final investment decision was disclosed.",
+   "background": "Indiana Michigan Power, an AEP utility, expects its Indiana peak load to rise from 2,800 MW to more than 7,000 MW by 2030, driven by large new loads. Sullivan County is part of Indiana's Advanced Nuclear Ready Communities Program. This was Amazon's second nuclear deal in about two weeks: on Sept. 30 it signed a 20-year, 690-MW power purchase agreement with Constellation for the Calvert Cliffs plant in Maryland. Amazon targets net-zero carbon across its operations by 2040.",
+   "problem": "First-of-a-kind SMR projects carry large cost-overrun and schedule risk that regulated utilities and their ratepayers are reluctant to bear. AEP's CEO said the deal provides the 'capital protections and financial safeguards' AEP requires. Amazon frames it as paying 'our full costs without passing them to others.' Still open: how risk is actually split if costs balloon, the project is delayed, or Amazon's demand changes over a multi-decade plant life.",
+   "where_why": "The friction sits at the contracting stage between a large load, a regulated utility and a technology developer. Two forces drive it: deep cost uncertainty for an unproven reactor fleet, and the incentive to keep other ratepayers from subsidizing data-center-driven capacity. Long asset lives also leave a horizon mismatch between the plant and the buyer's demand.",
+   "stakeholders": [
+    {
+     "name": "Amazon",
+     "stake": "Secures firm carbon-free power for load growth and its 2040 net-zero goal, but takes on cost and completion risk."
+    },
+    {
+     "name": "AEP / Indiana Michigan Power",
+     "stake": "Wants to meet surging peak load without balance-sheet or ratepayer exposure to nuclear cost overruns."
+    },
+    {
+     "name": "X-energy",
+     "stake": "Needs a first commercial fleet order to prove the Xe-100 and move down the learning curve."
+    },
+    {
+     "name": "Indiana ratepayers and state government",
+     "stake": "Want economic development and new jobs without higher bills; the governor backed the project."
+    }
+   ],
+   "hints": [
+    "Compare the risk allocation in a cost-plus, whole-life contract with a fixed-strike PPA such as Amazon's Calvert Cliffs deal, through the lens of capacity investment under uncertainty.",
+    "Hyperscalers are now acting as anchor buyers for unproven technology; think about learning-curve spillovers when one buyer orders a 12-unit fleet.",
+    "Notice the siting pattern of new generation on retired coal sites, which can reuse existing interconnection and community infrastructure."
+   ],
+   "data_leads": "EIA-860 for retired and planned generators at coal sites; Indiana PUC dockets for any contract filings; EIA-861 for utility load growth.",
+   "keywords": [
+    "data center electricity demand",
+    "long-term supply contracts",
+    "capacity investment under uncertainty",
+    "large-load tariffs",
+    "facility siting"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "eia860",
+    "state_puc"
+   ],
+   "related": [
+    {
+     "title": "Meeting Corporate Renewable Power Targets",
+     "journal": "Management Science",
+     "year": 2022,
+     "url": "https://doi.org/10.1287/mnsc.2022.4354",
+     "cites": 27,
+     "why": "Models corporate procurement of clean power through long-term fixed-strike contracts, a useful baseline against Amazon's cost-covering nuclear deal."
+    },
+    {
+     "title": "Simple Relational Contracts to Motivate Capacity Investment: Price Only vs. Price and Quantity",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2007,
+     "url": "https://doi.org/10.1287/msom.1060.0126",
+     "cites": 105,
+     "why": "Studies how buyers can motivate a supplier's long-lead capacity investment when complete contracts are hard to write, which matches the hyperscaler–utility–developer setting."
+    }
+   ],
+   "url": "https://www.utilitydive.com/news/aep-signs-advanced-960-mw-nuclear-amazon-x-energy/833341/",
+   "follows": [],
+   "source": "ESG Dive",
+   "date": "Oct 20"
+  },
+  {
+   "candidate_id": 13,
+   "headline": "Auto parts retailers seek to join Colorado EPR lawsuit, citing double fees from two producer responsibility organizations",
+   "theme": "Circular Economy",
+   "original_url": "https://www.packagingdive.com/news/auto-care-association-intervene-colorado-packaging-epr-lawsuit/833300/",
+   "summary": "The Auto Care Association, whose members include AutoZone and O'Reilly, has moved to intervene in the National Association of Wholesaler-Distributors' July suit to block Colorado's packaging EPR law, which is already in effect. ACA says members are being charged by both Circular Action Alliance (CAA), the state's main producer responsibility organization, and the Lubricants Packaging Management Association's Interchange 360 program. O'Reilly has been invoiced more than $350,000 by CAA and expects more than $500,000 in LPMA fees; AutoZone says it paid a combined $575,000 to the two groups in Colorado.",
+   "background": "Under packaging EPR, producers pay fees to producer responsibility organizations that fund recycling. Colorado's law is in effect, with CAA as the main producer organization. LPMA runs a separate program for containers of lubricants, grease, antifreeze, additives and other fluids. ACA's members operate about 150,000 locations nationwide, about 10,000 of them in Colorado. The Independent Lubricant Manufacturers Association sued over the law separately in March and sought a preliminary injunction in August; it reports no updates since.",
+   "problem": "When two producer organizations cover adjacent material streams, one product can trigger two sets of registration, reporting, fees and deadlines. In the example cited in the motion, a diesel exhaust fluid jug is reported to LPMA while its cardboard box is reported to CAA. ACA says complying outside these groups would be 'prohibitively expensive,' so producers are effectively locked into paying both. The court has not ruled on intervention, and neither lawsuit has been decided.",
+   "where_why": "The problem arises at the design and administration stage of the EPR scheme, where coverage is split by material or product category. It is a coordination failure: the motion says the two organizations don't appear to coordinate. Multi-component packaging falls across their boundaries, raising transaction costs and possibly double-charging.",
+   "stakeholders": [
+    {
+     "name": "Auto aftermarket retailers (AutoZone, O'Reilly, ACA)",
+     "stake": "Want to avoid paying duplicate fees and bearing duplicate compliance burden across thousands of locations."
+    },
+    {
+     "name": "Circular Action Alliance",
+     "stake": "Its fee base and its role as the main producer organization depend on broad producer coverage."
+    },
+    {
+     "name": "LPMA / Interchange 360",
+     "stake": "Wants to keep a specialized program for fluid containers."
+    },
+    {
+     "name": "State of Colorado",
+     "stake": "Wants to defend an operating EPR program and its recycling funding."
+    },
+    {
+     "name": "Lubricant manufacturers (ILMA)",
+     "stake": "Are challenging the law in a separate suit seeking an injunction."
+    }
+   ],
+   "hints": [
+    "Use the lens of overlapping or competing regulatory regimes: what happens to producers when program boundaries are set by material rather than by product?",
+    "Compare producer-organization market structures across EPR states, including single versus multiple organizations and other countries' experience with competing compliance schemes.",
+    "Think about how fee schedules interact with packaging design choices, such as integrated versus separate secondary packaging."
+   ],
+   "data_leads": "State EPR program and producer organization reports and fee schedules (Colorado CAA program plan); court dockets for the NAW and ILMA cases; EPA materials and waste figures for baseline recycling.",
+   "keywords": [
+    "extended producer responsibility",
+    "packaging regulation",
+    "litigation risk",
+    "state environmental policy"
+   ],
+   "dataset_candidates": [
+    "Colorado CAA producer responsibility program plan and fee schedule"
+   ],
+   "datasets": [
+    "state_epr",
+    "epa_msw"
+   ],
+   "related": [
+    {
+     "title": "Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13553",
+     "cites": 24,
+     "why": "Analyzes how competing and coexisting policy regimes interact within supply chains, which mirrors producers facing two producer organizations at once."
+    },
+    {
+     "title": "Do E‐Waste Laws Create Behavioral Spillovers? Quasi‐Experimental Evidence from California",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13182",
+     "cites": 43,
+     "why": "Gives quasi-experimental evidence on the effects of a state e-waste law, a template for empirically evaluating state EPR programs."
+    }
+   ],
+   "url": "https://www.packagingdive.com/news/auto-care-association-intervene-colorado-packaging-epr-lawsuit/833300/",
+   "follows": [],
+   "source": "Packaging Dive",
+   "date": "Oct 20"
+  },
+  {
+   "candidate_id": 177,
+   "headline": "Chinese battery makers reportedly expand overseas plants to get around Western trade barriers (unconfirmed FT figures)",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://tradersunion.com/news/companies/show/3901063-chinese-battery-overseas-expansion-trade-barriers/",
+   "summary": "According to a secondary summary of a Financial Times report (not verified against the FT), Chinese battery firms including CATL, BYD, Gotion, CALB and Sungrow have announced about $12bn in overseas deals this year. That reportedly brings their foreign investment since 2023 to nearly $90bn, of which $52bn is in cell manufacturing. Gotion has reportedly committed more than €1bn to a Volkswagen joint venture producing in Spain, Slovakia and Morocco, and CATL is said to be scouting more European sites.",
+   "background": "Western governments, especially in Europe, are protecting local industry from Chinese battery materials, parts and cells. Separate Rhodium Group data, reported by Rest of World in 2025, put Chinese EV and battery firms' overseas investment at $143bn between 2014 and 2025; in 2024 they spent more on the EV supply chain abroad than at home for the first time. Caixin reported that overseas orders for Chinese energy-storage batteries reached 298 GWh in the first half of 2026, up 83%, with Europe accounting for nearly 120 GWh and North America only about 5 GWh.",
+   "problem": "Trade barriers meant to build domestic supply chains may instead move Chinese-owned capacity into or next to protected markets. That raises the question of whether the policies achieve supply security or mostly reshuffle where plants are located. Firms must weigh tariff avoidance against higher costs abroad, political risk and partner dependence. The exact FT figures and their data source remain unverified.",
+   "where_why": "The tension is in global capacity location, at the cell and materials manufacturing stage. Its drivers are regulatory constraints (tariffs and local-content rules) and policy uncertainty, which favor plants inside or near protected markets such as Morocco or Eastern Europe for Europe. The contrast between European and North American order volumes points to how different the policy regimes are.",
+   "stakeholders": [
+    {
+     "name": "Chinese battery makers (CATL, BYD, Gotion, CALB, Sungrow)",
+     "stake": "Want to keep access to Western markets while managing the higher cost and risk of building abroad."
+    },
+    {
+     "name": "European automakers (e.g., Volkswagen)",
+     "stake": "Need affordable cells and technology through joint ventures without breaching local-content rules."
+    },
+    {
+     "name": "European and US policymakers",
+     "stake": "Want domestic supply security and jobs, and face the question of whether Chinese-owned local plants meet those goals."
+    },
+    {
+     "name": "Host countries (Spain, Slovakia, Morocco)",
+     "stake": "Gain investment and jobs but face geopolitical exposure."
+    }
+   ],
+   "hints": [
+    "Use tariff-jumping FDI theory as a lens and compare where plants are sited relative to EU versus US barriers, including foreign-entity-of-concern rules.",
+    "The gap between Europe's roughly 120 GWh and North America's roughly 5 GWh in storage orders is a puzzle worth unpacking against the two policy regimes.",
+    "Joint ventures (e.g., Gotion–VW) versus wholly owned plants offer a governance comparison under regulatory uncertainty."
+   ],
+   "data_leads": "UN Comtrade for battery cell trade flows (HS 8507); announced-plant trackers from Benchmark or BNEF (commercial), with Rhodium Group's public China FDI reports as an alternative.",
+   "keywords": [
+    "tariff circumvention",
+    "facility siting",
+    "foreign entity of concern",
+    "industrial policy",
+    "battery storage"
+   ],
+   "dataset_candidates": [
+    "Rhodium Group China cross-border investment monitor"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "battery_supply"
+   ],
+   "related": [],
+   "url": "https://tradersunion.com/news/companies/show/3901063-chinese-battery-overseas-expansion-trade-barriers/",
+   "follows": [],
+   "source": "Financial Times",
+   "date": "Oct 21"
+  },
+  {
+   "candidate_id": 8,
+   "headline": "Cleveland-Cliffs pushes Burns Harbor blast furnace reline to 2028 on tariff-supported demand after strongest quarter in three years",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/",
+   "summary": "Cleveland-Cliffs reported Q3 2026 revenue of $5.6B (up 18.5% year over year), net income of $165M versus a $234M loss a year earlier, and adjusted EBITDA of $612M, on 4.2M net tons shipped at an average $1,177 per ton. It moved the relining of the C blast furnace at Burns Harbor, Indiana, from mid-2027 to April 2028, which frees about 500,000 extra net tons of 2027 shipments. It guided to roughly $715M adjusted EBITDA in Q4, possibly more than $4B in 2027 'under prevailing market conditions,' and 2027 capital spending above $1B.",
+   "background": "Management says Section 232 tariffs have cut steel imports by 35% to 40% from pre-tariff levels, per a call summary. Shipments to North American automotive customers were the highest since Q3 2023. More than 55% of new contracts include take-or-pay minimum tonnage, per the Motley Fool transcript. Five operational projects are underway, two of them expansions backed by $575M in DOE grants. Liquidity stood at $3.2B as of Sept. 30.",
+   "problem": "Deferring a reline lets the firm capture high tariff-protected margins now, but it stretches an aging furnace and pushes maintenance into a future whose price and tariff environment is uncertain. The 2027 outlook depends on prices and tariffs holding. The trade-off is near-term throughput versus reliability and capital timing risk if protection is reversed.",
+   "where_why": "The decision sits at the capacity maintenance and investment-timing stage of integrated steelmaking. Trade protection raises the opportunity cost of downtime, while policy uncertainty about how long tariffs last makes the timing a real option. Take-or-pay contracts shift part of the demand risk onto buyers.",
+   "stakeholders": [
+    {
+     "name": "Cleveland-Cliffs",
+     "stake": "Wants to maximize shipments while prices are high without raising failure risk or capital cost overruns later."
+    },
+    {
+     "name": "Automotive and other steel buyers",
+     "stake": "Face higher prices and take-or-pay minimum-tonnage commitments."
+    },
+    {
+     "name": "US trade policymakers",
+     "stake": "Section 232 protection is producing the intended domestic output, at a cost to steel users."
+    },
+    {
+     "name": "DOE and taxpayers",
+     "stake": "$575M in grants backs two expansions whose returns depend on market conditions."
+    }
+   ],
+   "hints": [
+    "Treat maintenance deferral as a real option under tariff uncertainty, and compare it with maintenance scheduling models that hold prices fixed.",
+    "Look across producers for whether tariff shocks shift maintenance outages and capital spending timing, as a natural experiment in policy-driven capacity utilization.",
+    "The spread of take-or-pay clauses is a contract-design shift worth tracking alongside protection."
+   ],
+   "data_leads": "Earnings call transcripts and SEC 10-Q/10-K filings for outage and capital spending disclosures; USITC DataWeb for steel imports by tariff line before and after Section 232.",
+   "keywords": [
+    "maintenance scheduling",
+    "capital expenditure",
+    "antidumping duties",
+    "long-term supply contracts",
+    "industrial policy"
+   ],
+   "dataset_candidates": [
+    "AISI weekly raw steel production and capacity utilization"
+   ],
+   "datasets": [
+    "call_transcripts",
+    "usitc_dataweb"
+   ],
+   "related": [
+    {
+     "title": "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12350",
+     "cites": 24,
+     "why": "Sets out a framework and data sources for studying how 2025 tariffs and tariff uncertainty affect supply chains, directly relevant to Cliffs' tariff-dependent decisions."
+    },
+    {
+     "title": "Impact of the U.S.–China trade war on the operating performance of U.S. firms: The role of outsourcing and supply base complexity",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1225",
+     "cites": 165,
+     "why": "Estimates how trade-war tariffs changed US firms' operating performance, a template for measuring the gains to protected domestic producers."
+    }
+   ],
+   "url": "https://www.manufacturingdive.com/news/cleveland-cliffs-posts-strongest-quarter-three-years-cfo-says-q3-2026/833456/",
+   "follows": [],
+   "source": "Manufacturing Dive",
+   "date": "Oct 20"
+  },
+  {
+   "candidate_id": 20,
+   "headline": "Canada puts oil and gas 'Abatement' category on hold in final sustainable finance taxonomy methodology",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/canada-reconsiders-oil-gas-abatement-category-in-sustainable-finance-taxonomy/",
+   "summary": "The Canadian Taxonomy and Transition Planning Council's final Methodology Report confirms 'Green' and 'Transition' categories. It puts on hold the 'Abatement' category proposed in the July 2026 draft, which would have covered near-term emissions cuts in declining high-emitting sectors such as upstream oil and gas. New research on Abatement starts in 2027. The report also tightens the definition of 'green enabling' activities, adopts 'disclose or explain' for the environmental and social safeguards, and rules out partial alignment.",
+   "background": "The taxonomy is meant to tell investors which investments count as sustainable. Most stakeholders strongly opposed Abatement, citing longer life for fossil assets, carbon lock-in, stranded-asset risk, and poor compatibility with other countries' taxonomies. Screening criteria are being drafted first for electricity, buildings and transportation, with mining, manufacturing and forestry/agriculture to follow by the end of 2027. The government had earlier planned to launch the taxonomy by the end of 2026.",
+   "problem": "Whether to label emissions cuts at fossil assets as 'sustainable' is a trade-off between financing real near-term abatement in hard-to-abate sectors and risking greenwashing and lock-in. The deferral leaves oil and gas issuers and investors unsure how such projects will be classified. The sector timeline also casts doubt on the end-2026 launch.",
+   "where_why": "The problem sits in the classification rules that sit between capital markets and high-emitting firms. Information asymmetry about whether an abatement project extends asset life, combined with the need for interoperability with other countries' taxonomies, makes the boundary contested.",
+   "stakeholders": [
+    {
+     "name": "Canadian oil and gas producers",
+     "stake": "Want access to sustainable-labelled capital for abatement projects."
+    },
+    {
+     "name": "Investors and banks",
+     "stake": "Need credible labels that won't expose them to greenwashing or stranded-asset risk."
+    },
+    {
+     "name": "Taxonomy Council and federal government",
+     "stake": "Must balance credibility and international compatibility against domestic industry needs."
+    },
+    {
+     "name": "Climate advocates and other stakeholders",
+     "stake": "Want to avoid carbon lock-in and longer fossil asset life."
+    }
+   ],
+   "hints": [
+    "Treat taxonomy category decisions as classification shocks, comparing them with how the EU taxonomy handled gas and nuclear.",
+    "Think about binary alignment (no partial alignment) versus graded labels from a disclosure-design and signaling lens.",
+    "Watch whether Canadian energy firms' transition-plan disclosures or green bond issuance change around the 2026–2027 decision points."
+   ],
+   "data_leads": "SEDAR+ filings and green bond issuance records for Canadian energy issuers; CDP responses for transition plans; the Council's methodology report for category definitions.",
+   "keywords": [
+    "voluntary disclosure",
+    "regulatory uncertainty",
+    "materiality assessment",
+    "sustainable finance taxonomy"
+   ],
+   "dataset_candidates": [
+    "SEDAR+ Canadian securities filings",
+    "Climate Bonds Initiative green bond database"
+   ],
+   "datasets": [
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 53,
+     "why": "Shows that banks' green disclosures can diverge from their lending to brown industries, the greenwashing risk the taxonomy's guardrails target."
+    },
+    {
+     "title": "Climate Impact Investing",
+     "journal": "Management Science",
+     "year": 2022,
+     "url": "https://doi.org/10.1287/mnsc.2022.4472",
+     "cites": 137,
+     "why": "Models how green investors raise carbon-intensive firms' cost of capital, which is what a taxonomy label helps channel."
+    }
+   ],
+   "url": "https://www.esgtoday.com/canada-reconsiders-oil-gas-abatement-category-in-sustainable-finance-taxonomy/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Oct 21"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 10,
+   "takeaway": "The paper models humanitarian aid delivery when both the agents distributing aid and the inspectors monitoring them can be corrupted. Spending more on inspectors or rewards cuts misappropriation but draws on the same finite budget that funds aid, so oversight has a direct cost in aid delivered.",
+   "connection": "The same budget-constrained monitoring trade-off arises in verifying ESG and EPR compliance, such as how producer organizations audit producers' reported packaging volumes.",
+   "title": "Humanitarian Aid Management under Corruptible Distribution and Oversight Agents",
+   "journal": "M&SOM",
+   "url": "https://doi.org/10.1287/msom.2026.0298"
+  }
+ ],
+ "thread_to_pull": "Three items are about who absorbs risk through contract structure. Amazon's whole-life cost-covering nuclear contract, Cleveland-Cliffs' take-or-pay steel contracts, and producers paying two producer organizations all shift risk or cost onto one party by design. Comparing how policy uncertainty (tariffs, EPR scheme design, taxonomy labels) changes buyers' willingness to accept such commitments could link the energy, trade and circular-economy threads.",
+ "also": [
+  {
+   "title": "US semiconductor supply chain relies on vulnerable, hidden inputs",
+   "url": "https://www.supplychaindive.com/news/us-semiconductor-supply-chain-relies-on-vulnerable-hidden-inputs/833485/",
+   "source": "Supply Chain Dive",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "Illinois bill requires data centers to report electricity use",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQk9kQTJPaDhEbmZBRjlhc2tBS043VkNqd0dqUXhIcWR1RnZhbGJORE1wUlpVU3Fvbi1nLW5SRE9JWkFBc1hSWXp1OFFuZm9HaU9KTXBRQ2xkTU5oQ04tQ1JudlotZ3piZVlrVEo0Y3J2MGI4Y2RVdXBNU29SOW43YzhIcEVJT1g1OU5GeW9kTFVZWUNiZnpJQmpFbHhidFA2NTBLNTM2dUV0dEpJ0gGyAUFVX3lxTE40VkQ2LXNHM1RIdWJpZW5aYnBOTDFXZlNpbHVRdWJUeENEeGlod01vWG9iSTFZVWVXNVl4VmYwMmFLeWRTSW5nRzVzdHFkZTgwNERpUFo1S0h5LXBhS2t2UXFBNGgwcmpSVk9pM3hVckxjWkR4U0kyZWthMmV0ZjkwanhZME5ORXlBRi05c2R5dE15SllVU0RtTjNnSlpmdUYzdzZLemo1bVFuSTZobUFzUUE?oc=5",
+   "source": "OurQuadCities",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Indonesia Palm Oil Disruption: El Niño Drought Strands Barges and Hits West Kalimantan Farmers",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNjBFU3RENllMajlaTFo0TFpvajFVN2VVMXktQmg1d1ltODEwMXZROUJJdEFXbm9KSnhIeWREU25XWDgxaUNodVJyVWIwZy13eFZaVW5uckhTTWdPOFhsM1FCQWFPb2k5UTFyM1pXcXZ1Y3ZDR0o1V0JGTW9ydElubmtJZzYxT3BLRy1mMnF2a01lTDJFTjl0Z2tjSzhTTG1UaGZueUVTLUNFTlZ6RFNYYVQ4dXBOckdGVHRoYmcxUGFMQVozaFBJRFJQZw?oc=5",
+   "source": "Batam News Asia",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "World’s first ammonia-powered dry bulk ship completes sea trials",
+   "url": "https://www.freightwaves.com/news/worlds-first-ammonia-powered-dry-bulk-ship-completes-sea-trials",
+   "source": "FreightWaves",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "EU Circular Economy Act postponed once again",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPOUdKYkpQY2tvcU5ycWY2Z0dmRGduYnNIYlo5eUZOd1h6VjkxaHdxWVB5SV84NGlETENtU0liWFZJNzNMbkE5bjR6b0pBV093TDkwcUw4LXFDYUhjZ3lXOGs3NU93MkxsNEpHYm9pTUFWVkRSNC1KdG53TWhDNE5qQTV6TnBTWERwenhQaFc0MkhFWDQ?oc=5",
+   "source": "EUWID Recycling and Waste Management",
+   "theme": "Circular Economy"
+  }
+ ]
+}
