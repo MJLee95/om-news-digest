@@ -279,5 +279,53 @@
    "2026-10-21#5"
   ],
   "last_seen": "2026-10-21"
+ },
+ "dominion energy post-contingency local load relief warning records (pjm/dominion)": {
+  "name": "Dominion Energy Post-Contingency Local Load Relief Warning records (PJM/Dominion)",
+  "first_seen": "2026-10-22",
+  "items": [
+   "2026-10-22#1"
+  ],
+  "last_seen": "2026-10-22"
+ },
+ "memphis city council ordinance and meeting records": {
+  "name": "Memphis City Council ordinance and meeting records",
+  "first_seen": "2026-10-22",
+  "items": [
+   "2026-10-22#2"
+  ],
+  "last_seen": "2026-10-22"
+ },
+ "shelby county / memphis zoning and building permit applications": {
+  "name": "Shelby County / Memphis zoning and building permit applications",
+  "first_seen": "2026-10-22",
+  "items": [
+   "2026-10-22#2"
+  ],
+  "last_seen": "2026-10-22"
+ },
+ "levelten energy north american ppa price index": {
+  "name": "LevelTen Energy North American PPA Price Index",
+  "first_seen": "2026-10-22",
+  "items": [
+   "2026-10-22#3"
+  ],
+  "last_seen": "2026-10-22"
+ },
+ "apple supplier list (annual)": {
+  "name": "Apple Supplier List (annual)",
+  "first_seen": "2026-10-22",
+  "items": [
+   "2026-10-22#4"
+  ],
+  "last_seen": "2026-10-22"
+ },
+ "usgbc true certified projects directory": {
+  "name": "USGBC TRUE certified projects directory",
+  "first_seen": "2026-10-22",
+  "items": [
+   "2026-10-22#5"
+  ],
+  "last_seen": "2026-10-22"
  }
 }
