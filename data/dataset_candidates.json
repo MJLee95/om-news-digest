@@ -327,5 +327,37 @@
    "2026-10-22#5"
   ],
   "last_seen": "2026-10-22"
+ },
+ "ifrs foundation consultation comment letters": {
+  "name": "IFRS Foundation consultation comment letters",
+  "first_seen": "2026-10-23",
+  "items": [
+   "2026-10-23#2"
+  ],
+  "last_seen": "2026-10-23"
+ },
+ "eurostat packaging waste statistics (env_waspac)": {
+  "name": "Eurostat packaging waste statistics (env_waspac)",
+  "first_seen": "2026-10-23",
+  "items": [
+   "2026-10-23#3"
+  ],
+  "last_seen": "2026-10-23"
+ },
+ "eia weekly retail on-highway diesel prices": {
+  "name": "EIA weekly retail on-highway diesel prices",
+  "first_seen": "2026-10-23",
+  "items": [
+   "2026-10-23#5"
+  ],
+  "last_seen": "2026-10-23"
+ },
+ "fastmarkets risi pulp and paper price indices": {
+  "name": "Fastmarkets RISI pulp and paper price indices",
+  "first_seen": "2026-10-23",
+  "items": [
+   "2026-10-23#5"
+  ],
+  "last_seen": "2026-10-23"
  }
 }

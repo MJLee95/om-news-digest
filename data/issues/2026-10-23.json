@@ -1,0 +1,394 @@
+{
+ "intro": "Today's issue covers a hyperscaler buying demand flexibility instead of new generation in PJM, the ISSB's first draft on nature-related disclosure, an EU settlement over plastic-bottle recycling claims, a consumer-goods firm spending court-ordered tariff refunds on inventory and packaging, and paper and packaging mills passing diesel costs on to customers. Two new POM papers round it out: one on spillovers from renewable portfolio standards, one on selling unpackaged perishables.",
+ "items": [
+  {
+   "candidate_id": 46,
+   "headline": "Google expands Voltus deal to roughly 1GW virtual power plant in PJM",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/google-signs-1gw-virtual-power-plant-deal-with-voltus/",
+   "summary": "On Oct. 22, 2026, Google and Voltus announced a Google-funded virtual power plant (VPP) in the PJM Interconnection region. Utility Dive reports it adds 1,070MW to a 100MW deal signed in June 2026, for roughly 1.17GW in total, which Google calls a \"tenfold\" expansion. Google describes it as \"one of the largest known distributed capacity portfolios deployed by a hyperscaler to date.\" Financial terms were not disclosed. On duration, DCD reports about three years, but a Voltus spokesperson told Utility Dive the VPP ramps up over three to four years and then runs under contract with Google through 2040.",
+   "background": "PJM serves 67 million customers across 13 states and Washington, D.C. It has recently fallen short of its reliability margins, largely because of data center load growth. Voltus pools flexible demand from homes and businesses (smart thermostats, batteries, commercial cooling, industrial equipment) and has these resources cut consumption at peaks in exchange for payments or lower bills. The June deal used Voltus's \"Bring Your Own Capacity\" product, launched in October 2025. Voltus says it runs more than 7.5GW of distributed resources across all nine North American wholesale markets and raised a $225M Series D on Oct. 8. PJM demand response revenue rose 240% to $523.6M in 2025.",
+   "problem": "Hyperscalers need firm capacity faster than new generation and transmission can be built. The open question is whether contracted, aggregated demand flexibility from third parties can credibly stand in for physical capacity backing a large new load. Doing so shifts reliability risk onto thousands of small participants whose availability and response are uncertain.",
+   "where_why": "The friction sits at the interconnection and resource-adequacy stage. PJM's capacity shortfall and long queues slow how quickly large loads can connect. A VPP's reliability value depends on participant behavior, fatigue and the accuracy of baseline measurement, which creates information asymmetry between the aggregator, the grid operator and the buyer. Who captures the value of flexibility (Google, Voltus, participants or ratepayers) depends on market rules for demand response in capacity markets.",
+   "stakeholders": [
+    {
+     "name": "Google",
+     "stake": "Faster, credible capacity to support data center growth in PJM without building generation itself"
+    },
+    {
+     "name": "Voltus",
+     "stake": "Scales its aggregation business on a long-term anchor customer; must actually deliver the promised load reductions"
+    },
+    {
+     "name": "PJM Interconnection",
+     "stake": "Needs reliable resources to restore reliability margins; must judge how much VPP capacity to count on"
+    },
+    {
+     "name": "Participating homes and businesses",
+     "stake": "Earn payments or bill savings in exchange for curtailing use at peak times"
+    },
+    {
+     "name": "Other PJM ratepayers",
+     "stake": "Exposed to capacity costs and reliability risk driven by data center load growth"
+    }
+   ],
+   "hints": [
+    "Think of the VPP as a portfolio of unreliable small suppliers: models of random yield and supplier diversification may carry over to aggregated demand response.",
+    "Compare the economics of contracted flexibility with long-term power purchase agreements: who bears volume risk, and over what horizon (note the conflicting reports on whether the term is about three years or through 2040)?",
+    "The 240% jump in PJM demand response revenue alongside data center growth invites a look at how capacity prices drive demand response supply."
+   ],
+   "data_leads": "PJM Data Miner and capacity auction results for demand response cleared and prices; EIA-861 demand response and customer data by utility; FERC eLibrary for PJM demand response rule filings.",
+   "keywords": [
+    "demand response",
+    "capacity markets",
+    "data center electricity demand",
+    "interconnection queues",
+    "grid reliability standards"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "pjm_data",
+    "eia861"
+   ],
+   "related": [
+    {
+     "title": "Redesign of Virtual Power Plant-led Electricity Demand Response Program",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241305859",
+     "cites": 4,
+     "why": "Models how a VPP-led demand response program should design consumer rebates, directly relevant to how Voltus compensates participants."
+    },
+    {
+     "title": "A Deep Demand Response Program for Local Electricity Systems",
+     "journal": "Production and Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1177/10591478251363654",
+     "cites": 2,
+     "why": "Studies welfare-optimal demand response design for utilities buying power in wholesale markets, a lens on how much value flexibility creates and who keeps it."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/google-signs-1gw-virtual-power-plant-deal-with-voltus/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Oct 22"
+  },
+  {
+   "candidate_id": 21,
+   "headline": "ISSB publishes first exposure draft on nature-related disclosures, open for comment until Feb. 19, 2027",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/issb-releases-proposed-nature-related-reporting-requirements/",
+   "summary": "On Oct. 22, 2026, the ISSB released its first exposure draft of nature-related disclosure requirements, framed as a non-mandatory IFRS Practice Statement rather than a standard. It would cover how nature-related risks feed into strategy, how resilient the business model is to them, the amount and percentage of assets or activities exposed, and nature targets including location-specific aspects. Comments are open until Feb. 19, 2027.",
+   "background": "The ISSB's climate standards (IFRS S1 and S2) are still being put into practice. In April, the ISSB chose the practice-statement format to avoid disrupting that rollout. Companies need not follow the statement to claim ISSB compliance, but individual jurisdictions can make it mandatory. The draft draws heavily on the TNFD, which wound down its own technical work after the ISSB took up the project. The ISSB says it is designed to work efficiently alongside the GRI Standards and the EU's ESRS.",
+   "problem": "Biodiversity and ecosystem dependencies are location-specific and usually sit deep in supply chains, so meaningful disclosure requires traceability many firms lack. The consultation itself asks whether nature content should be a voluntary practice statement or a standalone mandatory standard. That leaves firms and investors unsure how much to invest in data systems now.",
+   "where_why": "The friction is in upstream sourcing visibility and the regulatory design of disclosure. Exposure metrics need site-level data on suppliers' locations and practices, which creates multi-tier information asymmetry. A voluntary format adds regulatory uncertainty, and adoption will vary by jurisdiction.",
+   "stakeholders": [
+    {
+     "name": "ISSB / IFRS Foundation",
+     "stake": "Extend its global baseline to nature without overloading firms still adopting S1 and S2"
+    },
+    {
+     "name": "Reporting companies",
+     "stake": "Face costs of mapping location-specific nature exposures across supply chains"
+    },
+    {
+     "name": "Investors",
+     "stake": "Want comparable data on nature-related risk exposure"
+    },
+    {
+     "name": "National regulators",
+     "stake": "Decide whether to make the statement mandatory in their jurisdictions"
+    },
+    {
+     "name": "TNFD",
+     "stake": "Its framework lives on through ISSB adoption after ending its own technical work"
+    }
+   ],
+   "hints": [
+    "Jurisdiction-by-jurisdiction adoption of a voluntary statement could create staggered treatment useful for difference-in-differences designs.",
+    "Compare with climate disclosure: did scope 3 reporting push firms to map and change suppliers, and would nature metrics do the same?",
+    "Event studies around ISSB milestones (draft release, comment deadline, final decision on mandatory status) for firms in nature-dependent sectors."
+   ],
+   "data_leads": "CDP forests and water questionnaires for current nature-related disclosure; SEC EDGAR 10-K text for biodiversity mentions; comment letters posted on the IFRS consultation page.",
+   "keywords": [
+    "nature-related disclosure",
+    "biodiversity risk",
+    "multi-tier traceability",
+    "voluntary disclosure",
+    "regulatory uncertainty"
+   ],
+   "dataset_candidates": [
+    "IFRS Foundation consultation comment letters"
+   ],
+   "datasets": [
+    "cdp",
+    "sec_edgar"
+   ],
+   "related": [
+    {
+     "title": "Supply Chain Carbon Footprinting and Climate Change Disclosures of Global Firms",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13421",
+     "cites": 115,
+     "why": "Shows how measuring supply chain carbon footprints changed the content of firms' climate disclosures, an analog for how nature metrics could reshape reporting."
+    },
+    {
+     "title": "Shareholder Wealth Effects of Modern Slavery Regulation",
+     "journal": "Management Science",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/mnsc.2019.3456",
+     "cites": 96,
+     "why": "An event study of the market reaction to a supply chain disclosure mandate (UK Modern Slavery Act), a template for studying ISSB nature milestones."
+    }
+   ],
+   "url": "https://www.esgtoday.com/issb-releases-proposed-nature-related-reporting-requirements/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Oct 22"
+  },
+  {
+   "candidate_id": 19,
+   "headline": "Coca-Cola, Nestlé and Danone agree to change EU plastic-bottle recycling claims after consumer-group complaint",
+   "theme": "Circular Economy",
+   "original_url": "https://www.esgtoday.com/coca-cola-nestle-and-danone-agree-to-improve-recycling-claims-following-eu-greenwashing-complaint/",
+   "summary": "On Oct. 22, 2026, the European Commission announced that Coca-Cola, Nestlé and Danone have agreed to change recycling claims on plastic bottles sold in the EU. The agreement followed talks with the Commission and the CPC network of national consumer authorities, reportedly led by Sweden and Hungary. \"100% recycled\" and \"100% recyclable\" claims must now say they exclude the cap and label. The firms also agreed not to imply a closed recycling loop or use misleading green imagery.",
+   "background": "BEUC (the European consumer organisation) and member groups from 13 countries filed the complaint in November 2023, supported by ClientEarth and ECOS. Coca-Cola concluded talks in June 2025, Nestlé in February 2026, and Danone committed this month. The challenge rested on how recycling works in practice. Whether a bottle is actually recycled depends on local collection, sorting and processing. Caps and most labels are not made from recycled material, and virgin plastic is often added.",
+   "problem": "Brand claims about recycled content and recyclability rest on a system the brand does not control. The gap between product-level claims and actual system-level recovery is what regulators challenged. No deadline for the label changes and no penalties were reported, so the commitments' real effect is uncertain. BEUC says it will monitor compliance.",
+   "where_why": "The problem arises at the interface between packaging design and marketing on one side and municipal collection and sorting on the other. Recyclability is a property of the whole reverse supply chain, not the bottle alone. Consumers cannot verify claims, which creates information asymmetry. Enforcement through negotiated commitments rather than fines leaves incentives to comply weak.",
+   "stakeholders": [
+    {
+     "name": "Coca-Cola, Nestlé, Danone",
+     "stake": "Protect brand reputation and keep green marketing while avoiding further enforcement"
+    },
+    {
+     "name": "BEUC and national consumer groups",
+     "stake": "Accurate claims; will monitor compliance"
+    },
+    {
+     "name": "European Commission and CPC network",
+     "stake": "Establish a credible approach to greenwashing enforcement"
+    },
+    {
+     "name": "Recyclers and collection systems",
+     "stake": "The actual recycling outcomes behind the claims depend on their capacity"
+    }
+   ],
+   "hints": [
+    "Information economics of credence attributes: when do claim restrictions change packaging design, not just wording?",
+    "Staggered timing of the three firms' commitments (June 2025, February 2026, October 2026) might allow before/after comparisons of labels or marketing.",
+    "Contrast enforcement through negotiated commitments with deposit return systems or EPR fees as levers on actual recycled content."
+   ],
+   "data_leads": "Mintel GNPD for on-pack claim changes across EU bottle launches; Eurostat packaging waste statistics for national recycling rates; RepRisk or GDELT for greenwashing incident coverage.",
+   "keywords": [
+    "packaging regulation",
+    "regulatory enforcement",
+    "deposit return systems",
+    "secondary materials",
+    "greenwashing"
+   ],
+   "dataset_candidates": [
+    "Eurostat packaging waste statistics (env_waspac)"
+   ],
+   "datasets": [
+    "mintel_gnpd",
+    "reprisk"
+   ],
+   "related": [
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 53,
+     "why": "Documents a disconnect between firms' environmental disclosures and their actual activities, the same gap targeted by the bottle-claim complaint."
+    },
+    {
+     "title": "Consumer reactions to environmentally irresponsible sourcing practices: An intentionality and motive perspective",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1111/jscm.12320",
+     "cites": 14,
+     "why": "Examines how consumers interpret signals about firms' environmental sourcing practices, relevant to how revised recyclability claims may shift perceptions."
+    }
+   ],
+   "url": "https://www.esgtoday.com/coca-cola-nestle-and-danone-agree-to-improve-recycling-claims-following-eu-greenwashing-complaint/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Oct 22"
+  },
+  {
+   "candidate_id": 3,
+   "headline": "Helen of Troy plans to spend part of an expected $80.5M IEEPA tariff refund on clearing inventory and redesigning packaging",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.supplychaindive.com/news/hydro-flask-maker-aims-tariff-refunds-at-inventory-packaging/833631/",
+   "summary": "Helen of Troy (Hydro Flask, Osprey, Drybar) said on its Oct. 8 earnings call that it expects $80.5M in fiscal 2027 refunds of IEEPA tariffs, which the Supreme Court struck down in February. Its fiscal year ends Feb. 28, 2027. In Q2 it recognized $26.9M in gross pretax refunds, of which about $4M remained as net pretax benefit after offsetting commodity, fuel and freight costs. For the full year it plans to reinvest $66.5M–$70.5M, including clearing slow-moving inventory and redesigning packaging to meet U.S. and foreign environmental laws.",
+   "background": "Firms that paid IEEPA tariffs are now receiving refunds; PepsiCo, e.l.f. Beauty and Kimberly-Clark are also among them. Helen of Troy guides to a net pretax benefit of $10M–$14M and adjusted EPS of $3.60–$4.15, including $0.30–$0.45 from tariffs. CFO Brian Grass said the company has \"not been made whole,\" since some tariffs it paid have not been refunded, and that \"we want our inventory to be clean.\" Inventory stood at about $480M, and the share of active inventory rose 7 points in the first half. Reports differ on the remaining timing: by fiscal year-end per Supply Chain Dive, or $51.8M in Q3 per the earnings-call summary. The figures do not reconcile cleanly, and a $9.2M Q1 refund's relation to the total is unclear.",
+   "problem": "A reversed trade policy produces a cash windfall. The firm must decide whether to bank it or redeploy it into operations: writing down or liquidating excess inventory built during the tariff period, and funding packaging redesign driven by environmental regulations. The split between these uses has not been disclosed.",
+   "where_why": "The problem originates in policy uncertainty upstream. Tariffs imposed and then invalidated distorted sourcing and inventory decisions, leaving slow-moving stock. A refund creates slack to fix those distortions. Packaging-related environmental laws (for example, EPR-type rules) add a parallel compliance cost competing for the same funds.",
+   "stakeholders": [
+    {
+     "name": "Helen of Troy",
+     "stake": "Clean up inventory and fund compliance-driven packaging redesign while showing earnings benefit"
+    },
+    {
+     "name": "Shareholders",
+     "stake": "Want refunds to flow to earnings; only $10M–$14M net is guided"
+    },
+    {
+     "name": "U.S. government / CBP",
+     "stake": "Processes refunds of invalidated IEEPA tariffs"
+    },
+    {
+     "name": "Retail partners",
+     "stake": "Affected by inventory clearance pricing and packaging changes"
+    }
+   ],
+   "hints": [
+    "The refund is a plausibly exogenous cash shock: compare inventory and capex behavior of refund recipients with that of firms that were less exposed to IEEPA tariffs.",
+    "A newsvendor or excess-inventory disposal lens: does a windfall change the timing of liquidating stale stock?",
+    "Consider how packaging regulations compete with other uses of operating cash across firms."
+   ],
+   "data_leads": "Earnings call transcripts and SEC EDGAR 10-Q filings for refund amounts and stated uses; Compustat inventory and capex; USITC DataWeb for import exposure by tariff line.",
+   "keywords": [
+    "regulatory uncertainty",
+    "packaging regulation",
+    "extended producer responsibility",
+    "tariff refunds",
+    "inventory management"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "call_transcripts",
+    "usitc_dataweb"
+   ],
+   "related": [
+    {
+     "title": "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12350",
+     "cites": 24,
+     "why": "Provides a framework and data sources for studying the 2025 tariff shock and its legal reversals, the origin of these refunds."
+    },
+    {
+     "title": "Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12336",
+     "cites": 50,
+     "why": "Examines how firms adjust sourcing under policy uncertainty, context for the inventory distortions the refund now helps unwind."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/hydro-flask-maker-aims-tariff-refunds-at-inventory-packaging/833631/",
+   "follows": [],
+   "source": "Supply Chain Dive",
+   "date": "Oct 22"
+  },
+  {
+   "candidate_id": 11,
+   "headline": "Paper and packaging makers pass record diesel costs to customers via surcharges and price increases",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.packagingdive.com/news/pain-diesel-pump-paper-packaging-pricing-freight-transportation-war/833582/",
+   "summary": "After U.S. diesel hit a record high in September, paper and packaging makers have begun adding fuel costs to their prices. Sylvamo added a $1 per hundredweight surcharge from Oct. 1, Sustana $20/ton from Oct. 12, and Billerud $25/ton from Nov. 1. Smurfit Westrock is instead building freight costs into its third containerboard price increase of the year, reported at $100/ton effective Sept. 1. Sonoco says its surcharge \"will come and go as diesel varies.\"",
+   "background": "Packaging Dive largely attributes the diesel spike to global conflicts; other 2026 reporting points to the Middle East and the Strait of Hormuz. A pump in Bayonne, New Jersey, showed $6.25 a gallon on Oct. 16. Smurfit Westrock's CFO called freight \"the most significant headwind we face in 2026.\" S&P Global Energy's William O'Neil says U.S. shippers have no scalable alternative to diesel trucks, and the article warns of prolonged pain for at least a year. Fastmarkets RISI reports, citing unnamed sources, that mills may source recycled fiber from closer by. Executives at Ball, Cascades, Graphic Packaging and International Paper have also flagged fuel costs.",
+   "problem": "Firms must choose how to pass an energy cost shock downstream. A transparent, reversible surcharge tracks diesel prices. A built-in list-price increase may stick after costs fall. The choice affects customer relationships, margin risk and competitive signaling, and it may also push mills to shorten the logistics behind recycled fiber.",
+   "where_why": "The friction is in outbound and inbound freight for heavy, low-value-density goods with no scalable modal alternative. Contract design determines who bears fuel-price volatility. In a concentrated industry, one firm's surcharge announcement (Sylvamo said it expected others to follow) raises questions about coordination and price signaling.",
+   "stakeholders": [
+    {
+     "name": "Mills (Sylvamo, Billerud, Sustana, Sonoco, Smurfit Westrock)",
+     "stake": "Protect margins against freight costs without losing customers"
+    },
+    {
+     "name": "Packaging buyers (brands, converters)",
+     "stake": "Face higher, less predictable input costs; prefer reversible surcharges"
+    },
+    {
+     "name": "Trucking carriers",
+     "stake": "Fuel costs and rate pass-through to shippers"
+    },
+    {
+     "name": "Recycled fiber suppliers",
+     "stake": "Mills may shift sourcing toward nearer suppliers"
+    }
+   ],
+   "hints": [
+    "Compare surcharge versus built-in price increase as contract forms: asymmetric pass-through (\"rockets and feathers\") is a natural test once diesel falls.",
+    "Look at the staggered timing of surcharge announcements across mills through the lens of price leadership or signaling.",
+    "Fuel shocks as a driver of localizing recycled-fiber sourcing: a spatial or network model of reverse logistics."
+   ],
+   "data_leads": "EIA weekly retail on-highway diesel prices against mill surcharge announcements; earnings call transcripts for pass-through language; DAT/SONAR truckload rates (public alternative: BTS freight indicators).",
+   "keywords": [
+    "freight rates",
+    "chokepoint disruption",
+    "cost pass-through",
+    "fuel surcharges",
+    "secondary materials"
+   ],
+   "dataset_candidates": [
+    "EIA weekly retail on-highway diesel prices",
+    "Fastmarkets RISI pulp and paper price indices"
+   ],
+   "datasets": [
+    "call_transcripts",
+    "freight_rates"
+   ],
+   "related": [],
+   "url": "https://www.packagingdive.com/news/pain-diesel-pump-paper-packaging-pricing-freight-transportation-war/833582/",
+   "follows": [],
+   "source": "Packaging Dive",
+   "date": "Oct 22"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 24,
+   "takeaway": "This empirical study asks whether state renewable portfolio standards spill over beyond directly regulated firms, to their supply chain partners and peer firms, and so affect their energy use and GHG emissions. It treats this policy spillover as an understudied channel linking public energy rules to firm environmental performance.",
+   "connection": "Relevant to the Google–Voltus deal and the ISSB draft: energy and disclosure rules aimed at one set of actors can propagate along supply chains.",
+   "title": "EXPRESS: Harnessing Renewable Portfolio Standards for Sustainable Futures: An Empirical Examination of Spillover Effects",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261504130"
+  },
+  {
+   "candidate_id": 22,
+   "takeaway": "The paper models a retailer of a highly perishable product choosing between fixed-size packages and loose sales (or both), setting prices and package size to maximize profit. Consumers see loose products as fresher but face an inconvenience cost. It asks whether loose sales, often promoted as waste-reducing, actually reduce waste and how they affect profit.",
+   "connection": "Speaks to the packaging thread running through the bottle-claims settlement and Helen of Troy's packaging redesign: less packaging is not automatically less waste.",
+   "title": "EXPRESS: Do You Lose When You Sell Loose? Impact of Unpackaged Sales on Profit and Waste",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261503661"
+  }
+ ],
+ "thread_to_pull": "Packaging appears three ways today: a regulator constraining recyclability claims (Coca-Cola, Nestlé, Danone), a firm using a policy windfall to fund environmental packaging redesign (Helen of Troy), and mills passing diesel costs into packaging prices while possibly localizing recycled-fiber sourcing. Together they suggest asking how regulatory, cash and energy-cost shocks each change packaging design and material sourcing, and whether loose-sales models like paper [22] help say when less packaging actually lowers waste.",
+ "also": [
+  {
+   "title": "TSMC explores rare-earth-free equipment to counter China controls: Report",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNelZWNGNXZXpGWmp1R3JBWnotLTlPMS1hS0NzWnhhNzUzUEl4VHlUR1pQODRzS1BMa004YURjUUJRdlpBbnRud0hhcDRXUzRjQlVVcG4yODA5aWpMN01iMW1pUm1lVWR6TDdvQnZBSDNjX1dvWkJncV90Ty1lQVRQcDU1X1RLYW82b01jZ0NUWExnNmNrWklZQk9yOVFhZy1hZ3QtalZZekxtRExfQjhqVG5tTERmQzhpdHpYYUF4aXRUbHNmRVY4NVpYVUE5U2RzbW4wbVlJbElLOHJWUkJBUFVR0gHmAUFVX3lxTFBJSElDVmVEM2hsUVlsLW1JT051SVhmM0VqMVV0c1lsVlljbVdqZldiYUtseUxwM2FFdFNZWWUwVHgyMklQaWFUSkhmSzJ6SUozYU91SzI0czdzWFJiT1R3YXpBSkp6dlhvQTBUSU1acVR1MnhtcDFWOGloc1dWSWVRWDFRdWZfY3I0X3N2UENzTmNVLTlyQURsUTFUbC0tUE96QmZYcWlTZ2g0ZXc1d3ZiSGsyMmVaSFVWSGNRa3h4OXNIdVF0ZURFNkpOUjRPRkQ5ZWtBcEd3TEtrdExKSHhKemJOdU53?oc=5",
+   "source": "electronics.economictimes.indiatimes.com",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Road freight green transition hits cost wall: new industry survey",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOMVE4UWJaSDRyLV9sWW5BZUZlbFZGTEYyVUdSTV9LVEw1UmFUTEVVcC1NVEpEdjRiQnczTE5HTnk3X1ZvaElvQThyNk02a3RFVW9Ua3gwS1JQd29tYS1VVTBTbFRuREEtWnp1RUJJcTFNb3N0Ny0zakIwYWYyUFJjZWdrRWk2WlhKckVYbVdxVmtuWVVTc09qeUZqRi1vZmtFYlFtN3NqRnFHemlo?oc=5",
+   "source": "IRU | World Road Transport Organisation",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "GAO Report Outlines Policy Choices for Improving Textile Circularity",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNX2U0RVpRRXNTdTJSNTQ3Z2lENjVzQUNCR21IMFNGZEhTbG1EUnhHRENZMENMdzc4Y3p1VXRFRnVqNjF4My1qMF9uSFFLYjZDRjAyYlhscWUtN29ybjVFYlhUVmlQMTFYRXlvZkZkZS03M1BqWFNxUTJJeHUtMlJoNFJwQy1JQWdXSzZBU3YtMUd4MXFVRlpBMWxmdzItbHNtLV9vTUpwRUl4TE5vMmRCNzlMSkc?oc=5",
+   "source": "WWD",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "Nestlé to close Ohio factory by end of 2027",
+   "url": "https://www.supplychaindive.com/news/nestle-to-close-ohio-factory-by-end-of-2027/833587/",
+   "source": "Supply Chain Dive",
+   "theme": "Sustainable Operations"
+  },
+  {
+   "title": "EU Lawmakers Push to Delay Methane Emissions Rules by 3 Years",
+   "url": "https://www.esgtoday.com/eu-lawmakers-push-to-delay-methane-emissions-rules-by-3-years/?utm_source=rss&utm_medium=rss&utm_campaign=eu-lawmakers-push-to-delay-methane-emissions-rules-by-3-years",
+   "source": "ESG Today",
+   "theme": "ESG & Disclosure"
+  }
+ ]
+}
