@@ -359,5 +359,45 @@
    "2026-10-23#5"
   ],
   "last_seen": "2026-10-23"
+ },
+ "oregon deq air and water permit database": {
+  "name": "Oregon DEQ air and water permit database",
+  "first_seen": "2026-10-24",
+  "items": [
+   "2026-10-24#1"
+  ],
+  "last_seen": "2026-10-24"
+ },
+ "epa national response center incident reports": {
+  "name": "EPA National Response Center incident reports",
+  "first_seen": "2026-10-24",
+  "items": [
+   "2026-10-24#4"
+  ],
+  "last_seen": "2026-10-24"
+ },
+ "e-i-e-i-o no! community science cafo map": {
+  "name": "E-I-E-I-O No! community science CAFO map",
+  "first_seen": "2026-10-24",
+  "items": [
+   "2026-10-24#4"
+  ],
+  "last_seen": "2026-10-24"
+ },
+ "port of los angeles inventory of air emissions": {
+  "name": "Port of Los Angeles Inventory of Air Emissions",
+  "first_seen": "2026-10-24",
+  "items": [
+   "2026-10-24#5"
+  ],
+  "last_seen": "2026-10-24"
+ },
+ "port of long beach emissions inventory": {
+  "name": "Port of Long Beach Emissions Inventory",
+  "first_seen": "2026-10-24",
+  "items": [
+   "2026-10-24#5"
+  ],
+  "last_seen": "2026-10-24"
  }
 }
