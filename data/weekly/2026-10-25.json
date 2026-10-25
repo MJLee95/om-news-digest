@@ -1,0 +1,181 @@
+{
+ "overview": "The week was dominated by the AI data center power problem, seen from several angles: who pays for new capacity (NiSource, the AEP/X-energy SMRs, Google's VPP, FERC orders), where the grid binds (Loughton, Virginia congestion), and a wave of local and state permitting pauses (Memphis, Oregon). A second thread was trade and critical-materials policy whose timing creates clean shocks: Section 232 solar and wind, IEEPA refunds, the yttrium and helium chokepoints, and Guinea's bauxite cap. Circular-economy items mostly exposed governance frictions, including overlapping EPR organizations, recycling-claim enforcement, idle battery recyclers and aluminum scrap leakage.",
+ "patterns": [
+  {
+   "title": "Hyperscalers buy their way past the grid with new risk-allocation contracts",
+   "explanation": "Several deals and orders this week shift the cost and risk of new capacity onto the large load. Examples are Microsoft paying for all NiSource GenCo generation and transmission, Amazon covering the whole-life costs of 12 SMRs, Google funding a 1.17 GW VPP, and FERC requiring data centers to pay their own way and be flexible. The binding constraint keeps proving to be grid timing rather than capital: Nscale lost Microsoft over a 2030s connection date, and Dominion's severe congestion warnings went from 8 to more than 172. For OM this is a live laboratory for capacity contracting, interruptible-load design and cost allocation, with a growing record of filings and new public utilization metrics.",
+   "item_ids": [
+    "2026-10-19#4",
+    "2026-10-21#1",
+    "2026-10-23#1",
+    "2026-10-25#1",
+    "2026-10-20#3",
+    "2026-10-22#1"
+   ]
+  },
+  {
+   "title": "Dated permitting shocks to data center siting",
+   "explanation": "Memphis passed a 135-day pause and Oregon froze DEQ air and water permits for data centers until July 2027, prompting Umatilla's fiscal emergency. SpaceXAI's stormwater penalties show the opposite behavior: building ahead of permits to gain speed-to-capacity. Short, explicitly dated regulatory interruptions with known end dates are unusually clean natural experiments for siting under regulatory uncertainty and for spillover into neighboring jurisdictions.",
+   "item_ids": [
+    "2026-10-22#2",
+    "2026-10-24#1",
+    "2026-10-25#2"
+   ]
+  },
+  {
+   "title": "Policy timing drives procurement, maintenance and inventory decisions",
+   "explanation": "Firms visibly re-timed operations around trade policy. Solar PPA buyers rushed ahead of December Section 232 tariffs, and wind developers face a 180-day negotiation clock. Cleveland-Cliffs deferred a blast-furnace reline to capture tariff-protected margins, while Helen of Troy is using IEEPA refunds to clear tariff-era inventory and redesign packaging. Gaps between announcement and effective date, and policy reversals, give identification for pre-buying, pass-through and real-options timing; supplier-side analogues include the critical-minerals price-floor back-and-forth and pre-buying ahead of Guinea's bauxite cap.",
+   "item_ids": [
+    "2026-10-22#3",
+    "2026-10-24#2",
+    "2026-10-21#4",
+    "2026-10-23#4",
+    "2026-10-19#3",
+    "2026-10-25#4"
+   ]
+  },
+  {
+   "title": "Closed loops leak: feedstock and governance failures in circular systems",
+   "explanation": "Recovered material keeps escaping intended loops. US aluminum scrap is landfilled while primary metal is imported, and battery black mass flows to China, leaving non-Chinese recyclers idle. Governance is also fraying: Colorado producers pay two EPR organizations for one product, EU brands had to retract closed-loop recycling claims, and Korea's food-waste feed reuse ran into disease risk. Meanwhile, demand-side pulls such as Apple's 80%-recycled titanium raise the question of where the scrap will come from, which is squarely the advisor's remanufacturing and collection-competition territory.",
+   "item_ids": [
+    "2026-10-19#2",
+    "2026-10-20#2",
+    "2026-10-21#2",
+    "2026-10-23#3",
+    "2026-10-25#3",
+    "2026-10-22#4"
+   ]
+  }
+ ],
+ "developing": [
+  {
+   "title": "Large-load interconnection and pricing rules for data centers",
+   "update": "FERC's orders require grid operators to report on adequacy and to justify or revise large-load pricing; Virginia's first utilization metrics are being contested at the SCC; and Indiana is accumulating 'pay your own way' deals with NiSource and AEP. Watch the compliance filings for how 'flexible' load and cost causation get defined, and whether other utilities copy the GenCo structure.",
+   "item_ids": [
+    "2026-10-25#1",
+    "2026-10-22#1",
+    "2026-10-19#4",
+    "2026-10-21#1"
+   ]
+  },
+  {
+   "title": "Data center moratoria and permitting pauses",
+   "update": "Memphis' 135-day pause is tied to a 90-day mayoral impact study, and Oregon's DEQ pause runs to July 2027, with Umatilla authorizing coordination on possible litigation. Watch for legal challenges and for project announcements moving to Washington, Idaho or neighboring Mississippi and Arkansas.",
+   "item_ids": [
+    "2026-10-22#2",
+    "2026-10-24#1",
+    "2026-10-25#2"
+   ]
+  },
+  {
+   "title": "Section 232 actions on clean-energy equipment",
+   "update": "Solar tariffs take effect in December after a pre-buy surge in PPA signings, and the wind turbine probe closed with a 180-day negotiation window instead of tariffs. Watch monthly module and turbine import data and Q4 PPA prices for post-effective-date pass-through.",
+   "item_ids": [
+    "2026-10-22#3",
+    "2026-10-24#2"
+   ]
+  },
+  {
+   "title": "Chokepoint materials under export controls",
+   "update": "Japan warns of a yttrium shortage by end-2026 as ex-China prices sit about 179x above domestic Chinese prices; the US named helium a critical material amid a Hormuz-driven shortage; and Guinea's bauxite cap remains unverified. Watch for Chinese easing or tightening of controls, Japanese stockpile releases, and DOE financing details.",
+   "item_ids": [
+    "2026-10-20#1",
+    "2026-10-24#3",
+    "2026-10-25#4",
+    "2026-10-19#3"
+   ]
+  }
+ ],
+ "ideas": [
+  {
+   "title": "Regulatory arbitrage in AI data center siting: evidence from dated permitting pauses",
+   "question": "Do temporary, dated state and local permitting pauses on data centers cause planned projects to relocate to neighboring jurisdictions, be delayed, or be cancelled? Does the response differ between pauses with a known end date and open-ended moratoria?",
+   "why_now": "Oregon's DEQ pause (October 2026 to July 2027) and Memphis' 135-day pause are sharply dated, policy-driven shocks with explicit end dates. Memphis also produced a near-miss, a 6–6 vote on an 18-month moratorium. A known horizon lets the relocation option be separated from the waiting option, which a real-options model predicts should depend on pause length relative to developers' speed-to-power needs.",
+   "data": "Project-level announcements and status from public data center trackers and news, coded via GDELT; Oregon DEQ permit records and Memphis permit and zoning applications; utility large-load requests in state PUC dockets; LBNL Queued Up and RTO large-load queues; EIA-861 utility sales and EIA-860 planned generation for adjacent states such as Washington, Idaho, Mississippi and Arkansas.",
+   "identification": "Event-study difference-in-differences: announced or advanced projects and large-load interconnection requests in paused jurisdictions versus synthetic-control comparison regions, with a spatial-spillover term for adjacent jurisdictions. Close-vote cities can serve as a regression-discontinuity-style comparison in a broader moratorium panel. Main threat: pauses are endogenous to local pipeline pressure and grid scarcity, the same forces that would independently slow projects. Concurrent FERC large-load rules also shift siting economics nationwide. Address this with pre-trends, using interconnection-request timestamps that predate the pause, and placebo jurisdictions with similar queue congestion.",
+   "literature": "Adapts the jurisdictional-arbitrage logic of 'Household Credit and Regulatory Arbitrage: Evidence from Online Marketplace Lending' to physical capacity siting. It extends 'Exploring retailers' sensitivity to local sustainability policies' from retail to infrastructure, and links to 'Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty' by treating hyperscalers' multi-site portfolios as diversification against local policy risk.",
+   "item_ids": [
+    "2026-10-24#1",
+    "2026-10-22#2",
+    "2026-10-25#2",
+    "2026-10-20#3"
+   ]
+  },
+  {
+   "title": "Who bears data center capacity risk? Large-load tariffs, contract form and ratepayer outcomes",
+   "question": "Do dedicated large-load tariffs and customer-funded structures shield residential rates from data center load growth, and change how much capacity is actually built per contracted MW, compared with serving data centers under standard tariffs? The structures in question are generation subsidiaries (NiSource GenCo), whole-life cost-plus offtake (AEP/X-energy) and contracted flexibility (Google–Voltus).",
+   "why_now": "FERC is requiring grid operators to justify or revise large-load pricing on 30- and 60-day clocks, which will generate a cross-section of coded tariff designs. Indiana now hosts two contrasting customer-pays deals, and Virginia has just published the first utility grid-utilization metrics. Variation in contract form and adoption timing is becoming observable at once.",
+   "data": "FERC eLibrary compliance filings, coded for flexibility requirements, minimum-take provisions and cost allocation; state PUC large-load tariff dockets (Indiana IURC NIPSCO and I&M filings, Virginia SCC); EIA-861 residential rates, sales and demand response; EIA-860 generator and storage additions; PJM capacity auction and demand response data; Virginia SCC utilization metrics.",
+   "identification": "Staggered difference-in-differences across utilities by tariff adoption date, with outcomes in residential rate trajectories and new MW built per contracted large-load MW. A complementary analytical model would compare cost-plus whole-life, fixed-strike PPA and VPP flexibility contracts under demand and construction-cost uncertainty, asking who bears overrun and volume risk. Main threat: tariff adoption is endogenous to the scale of expected data center load, and rate effects show up with long lags through rate cases. Mitigate by conditioning on pre-adoption queue volumes and using utilities that filed but had not yet received approval as a not-yet-treated comparison group.",
+   "literature": "Builds on 'Meeting Corporate Renewable Power Targets' (buyer-side procurement) by shifting focus to utility-side risk allocation. 'Simple Relational Contracts to Motivate Capacity Investment: Price Only vs. Price and Quantity' frames the cost-plus versus PPA choice. 'Electricity Time‐of‐Use Tariff with Stochastic Demand' and 'Redesign of Virtual Power Plant-led Electricity Demand Response Program' inform how flexibility obligations should be priced.",
+   "item_ids": [
+    "2026-10-19#4",
+    "2026-10-21#1",
+    "2026-10-23#1",
+    "2026-10-25#1",
+    "2026-10-22#1"
+   ]
+  },
+  {
+   "title": "Deposit laws, tariffs and domestic secondary aluminum supply",
+   "question": "Do bottle-deposit laws and higher deposit values raise aluminum recovery and keep scrap in domestic remelting rather than landfill or export? Does that domestic share respond more strongly when import tariffs raise the primary-metal price?",
+   "why_now": "The US imports 84% of its primary aluminum, runs only five smelters, and new smelters must compete with data centers for power. Tariffs have widened the primary-secondary price gap, and policymakers are debating bottle-bill updates; Massachusetts' 5-cent deposit is 43 years old. Combining tariff-driven price shocks with cross-state deposit variation lets the effect of collection policy be separated from scrap prices. Demand pulls such as Apple's recycled-content requirement make the question of where scrap comes from timely.",
+   "data": "State deposit laws and changes over time (state statutes and program reports); EPA Facts and Figures on materials and waste, plus state waste disposal reports; Census USA Trade Online exports and imports of aluminum waste and scrap (HS 7602) by state of origin and month; tariff timing from the Federal Register; Sortera and secondary-smelter capacity announcements; USGS aluminum statistics.",
+   "identification": "State-by-year panel comparing the 10 deposit states with non-deposit states, using within-state changes in deposit values where available. Interact deposit status with tariff-induced price shocks to test whether collection policy amplifies the domestic-supply response. Main threat: deposit states differ systematically in recycling infrastructure, density and attitudes. Census state-of-origin export data are also imperfect, since origin can reflect consolidation points rather than where scrap was collected. Use pre-trends, border-county comparisons of recovery where municipal data exist, and robustness to port-state exclusions.",
+   "literature": "'Managerial Efficiency and Reverse‐Flow Complexity in a Circular Economy' motivates sorting quality and reverse-flow complexity as the mechanism by which collected scrap becomes high-value alloy rather than being downcycled.",
+   "item_ids": [
+    "2026-10-19#2",
+    "2026-10-22#4",
+    "2026-10-20#2"
+   ]
+  }
+ ],
+ "watch": [
+  "Grid operators' FERC compliance filings on resource adequacy and large-load pricing: code how 'flexible' load and cost causation are defined.",
+  "Section 232 solar tariffs take effect in December: watch monthly USITC module and cell import data and the next LevelTen index for post-effective-date pass-through.",
+  "Memphis' 90-day data center impact study and any Umatilla or Oregon legal challenge to the DEQ permit pause.",
+  "EUDR application on 30 Dec 2026 (coffee and palm import shifts by origin), and a ruling on the Auto Care Association's motion to intervene in the Colorado EPR lawsuit."
+ ],
+ "items": {
+  "2026-10-19#1": "Startup forecasts 57% jump in 2026 emissions for five hyperscalers, using capex to predict emissions before disclosure",
+  "2026-10-19#2": "Experts argue better sorting and updated bottle bills could ease US aluminum shortage more cheaply than new smelters",
+  "2026-10-19#3": "US reportedly weighing critical-minerals price floor with allies; reports conflict on whether it will proceed",
+  "2026-10-19#4": "Microsoft signs 20-year, 1.1 GW deal with NiSource for Indiana data center, paying for all new infrastructure",
+  "2026-10-20#1": "Japan could run short of yttrium by end-2026 as China's export curbs persist",
+  "2026-10-20#2": "Battery recyclers outside China face idle capacity as EV adoption slows and scrap flows to China",
+  "2026-10-20#3": "Microsoft exits Nscale's Loughton AI data center after grid connection pushed to the 2030s",
+  "2026-10-20#4": "ESMA's 2026 enforcement priorities target CSRD materiality and links between impacts, risks and targets",
+  "2026-10-20#5": "ODI study: EUDR traceability rules could exclude up to 60% of Ethiopian coffee smallholders from the EU",
+  "2026-10-21#1": "Amazon, AEP and X-energy explore 960-MW small modular reactor project in Indiana, with Amazon covering full costs",
+  "2026-10-21#2": "Auto parts retailers seek to join Colorado EPR lawsuit, citing double fees from two producer responsibility organizations",
+  "2026-10-21#3": "Chinese battery makers reportedly expand overseas plants to get around Western trade barriers (unconfirmed FT figures)",
+  "2026-10-21#4": "Cleveland-Cliffs pushes Burns Harbor blast furnace reline to 2028 on tariff-supported demand after strongest quarter in three years",
+  "2026-10-21#5": "Canada puts oil and gas 'Abatement' category on hold in final sustainable finance taxonomy methodology",
+  "2026-10-22#1": "Virginia utilities file first public grid-utilization metrics: Dominion's distribution grid averages 41% use as data center congestion warnings surge",
+  "2026-10-22#2": "Memphis council rejects 18-month data center moratorium but passes 135-day pause",
+  "2026-10-22#3": "LevelTen: solar PPA benchmark rises 4.9% in Q3 2026 as buyers rush ahead of Section 232 tariffs",
+  "2026-10-22#4": "Apple commits up to $100M to Pennsylvania titanium supplier and expands film deal with Qnity under its US manufacturing program",
+  "2026-10-22#5": "USGBC launches TRUE v2 zero-waste certification with reweighted scoring and a 100-point scale",
+  "2026-10-23#1": "Google expands Voltus deal to roughly 1GW virtual power plant in PJM",
+  "2026-10-23#2": "ISSB publishes first exposure draft on nature-related disclosures, open for comment until Feb. 19, 2027",
+  "2026-10-23#3": "Coca-Cola, Nestlé and Danone agree to change EU plastic-bottle recycling claims after consumer-group complaint",
+  "2026-10-23#4": "Helen of Troy plans to spend part of an expected $80.5M IEEPA tariff refund on clearing inventory and redesigning packaging",
+  "2026-10-23#5": "Paper and packaging makers pass record diesel costs to customers via surcharges and price increases",
+  "2026-10-24#1": "Umatilla, Oregon declares fiscal emergency over Gov. Kotek's pause on data center permits",
+  "2026-10-24#2": "Trump opts for 180 days of trade talks instead of tariffs after wind turbine Section 232 probe",
+  "2026-10-24#3": "DOE designates helium a critical material amid Hormuz-driven shortage",
+  "2026-10-24#4": "Citizen scientists map North Carolina's confidential industrial poultry farm locations",
+  "2026-10-24#5": "Port of Los Angeles reports record-low emissions per container as volumes near 10.2M TEUs",
+  "2026-10-25#1": "FERC orders grids to connect data centers within 90 days, make them pay their own way, and justify large-load pricing",
+  "2026-10-25#2": "SpaceXAI unit faces up to about $6.1M in Mississippi stormwater penalties as NAACP turbine suit survives DOJ dismissal bid",
+  "2026-10-25#3": "Korean pig farms' use of food-waste feed rises 2.7x in 20 months, prompting calls for a ban over ASF risk",
+  "2026-10-25#4": "Unverified: Guinea's proposed 150Mt bauxite export cap looms over aluminium outlook",
+  "2026-10-25#5": "New SONAR index shows truckload contract renewals running about 13% above prior rates"
+ },
+ "dataset_candidates": [
+  {
+   "name": "Global Forest Watch tree cover loss data",
+   "mentions": 2
+  }
+ ]
+}
