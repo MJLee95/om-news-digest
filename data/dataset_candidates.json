@@ -399,5 +399,53 @@
    "2026-10-24#5"
   ],
   "last_seen": "2026-10-24"
+ },
+ "epa echo enforcement and compliance database": {
+  "name": "EPA ECHO enforcement and compliance database",
+  "first_seen": "2026-10-25",
+  "items": [
+   "2026-10-25#2"
+  ],
+  "last_seen": "2026-10-25"
+ },
+ "mdeq stormwater general permit coverage records": {
+  "name": "MDEQ stormwater general permit coverage records",
+  "first_seen": "2026-10-25",
+  "items": [
+   "2026-10-25#2"
+  ],
+  "last_seen": "2026-10-25"
+ },
+ "korea mafra african swine fever outbreak records": {
+  "name": "Korea MAFRA African swine fever outbreak records",
+  "first_seen": "2026-10-25",
+  "items": [
+   "2026-10-25#3"
+  ],
+  "last_seen": "2026-10-25"
+ },
+ "korea ministry of environment food waste generation and treatment statistics": {
+  "name": "Korea Ministry of Environment food waste generation and treatment statistics",
+  "first_seen": "2026-10-25",
+  "items": [
+   "2026-10-25#3"
+  ],
+  "last_seen": "2026-10-25"
+ },
+ "fmcsa carrier registration census": {
+  "name": "FMCSA carrier registration census",
+  "first_seen": "2026-10-25",
+  "items": [
+   "2026-10-25#5"
+  ],
+  "last_seen": "2026-10-25"
+ },
+ "cass freight index": {
+  "name": "Cass Freight Index",
+  "first_seen": "2026-10-25",
+  "items": [
+   "2026-10-25#5"
+  ],
+  "last_seen": "2026-10-25"
  }
 }

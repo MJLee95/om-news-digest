@@ -1,0 +1,351 @@
+{
+ "intro": "Today's issue features a regulator rewriting the rules for connecting AI data centers to the grid and an AI firm facing permit penalties for building faster than its approvals. It also covers a Korean circular-feed pathway colliding with disease risk, a still-unconfirmed supply shock in bauxite, and new data showing truckload contract rates resetting more than 10% higher.",
+ "items": [
+  {
+   "candidate_id": 40,
+   "headline": "FERC orders grids to connect data centers within 90 days, make them pay their own way, and justify large-load pricing",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://energynow.com/2026/06/us-regulator-makes-interventionist-pivot-to-speed-data-centers/",
+   "summary": "On a Thursday in June 2026 (likely around June 18; date unconfirmed), the Federal Energy Regulatory Commission approved a set of orders meant to speed grid connections for AI data centers. Grids are being pushed to handle hyperscaler connection requests within 90 days, a process that today can take years. Data centers must pay for their own power and be flexible in their consumption, and utilities must disclose the cost of adding major new customers. Grids serving almost two-thirds of the US population must report within 30 days on whether there is enough power for data center demand, and within 60 days must justify or revise their pricing structures for new facilities.",
+   "background": "FERC was created in the late 1970s and was long seen as a 'sleepy' regulator. Chairman Laura Swett said the grid as it stands 'is not going to work' and called for 'interventionist and unprecedented action', while also promising to 'vigorously protect Americans'. The move fits the Trump administration's AI priorities at a time when utility bills have become a political issue. FERC is separately pressing PJM, the largest US grid, to reform or risk being broken up, with a reform conference scheduled for the following month. Later coverage, not yet verified, mentions 'show cause' orders sent to six regional grid operators.",
+   "problem": "The orders try to do two things that pull against each other: connect very large loads quickly, and stop existing ratepayers from carrying the cost of the new generation and transmission those loads require. A 90-day connection target squeezes the time available for studying capacity adequacy and reliability. Requiring data centers to be 'flexible' moves part of the reliability burden onto the customer, but what flexibility means in practice, and how it will be priced, is still unclear.",
+   "where_why": "The friction sits at the interconnection and tariff-design stage between grid operators/utilities and large-load customers. Long, sequential connection studies create a capacity bottleneck. Load forecasts are uncertain because utilities cannot easily tell which data center requests are speculative. Cost allocation creates misaligned incentives, since socialized grid upgrades let data centers avoid the costs they cause. Federal-state jurisdictional overlap adds regulatory uncertainty about who actually sets retail large-load rates.",
+   "stakeholders": [
+    {
+     "name": "Hyperscalers and data center developers",
+     "stake": "Faster speed-to-power in exchange for paying their own power costs and accepting flexibility obligations"
+    },
+    {
+     "name": "Grid operators (RTOs/ISOs such as PJM)",
+     "stake": "Must show resource adequacy and defend or redesign pricing on tight deadlines, under the threat of structural reform"
+    },
+    {
+     "name": "Utilities",
+     "stake": "New disclosure of what it costs to serve large customers; possible changes to how they recover grid investment"
+    },
+    {
+     "name": "Residential and small commercial ratepayers",
+     "stake": "Exposure to higher bills if grid upgrades for data centers are socialized"
+    },
+    {
+     "name": "FERC",
+     "stake": "Credibility of a new 'accountability framework' and whether the orders survive implementation and challenge"
+    }
+   ],
+   "hints": [
+    "The 30- and 60-day compliance filings will reveal how different grid operators interpret 'flexible' large load and cost causation. That cross-sectional variation could be coded and compared.",
+    "Model a queue with priority or fast-track service for large loads. Who bears the delay externality, and how does the effect change when customers can submit speculative requests?",
+    "Interruptible-load contracts and time-of-use pricing offer a ready model family for designing what 'flexibility' should mean for a data center."
+   ],
+   "data_leads": "FERC eLibrary compliance filings and show-cause responses; LBNL 'Queued Up' and RTO large-load queue data; state PUC large-load tariff dockets; EIA-861 for retail rate effects.",
+   "keywords": [
+    "interconnection policy",
+    "large-load tariffs",
+    "data center electricity demand",
+    "interruptible load",
+    "federal-state jurisdiction"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "ferc_elibrary",
+    "lbnl_queues"
+   ],
+   "related": [
+    {
+     "title": "Electricity Time‐of‐Use Tariff with Stochastic Demand",
+     "journal": "Production and Operations Management",
+     "year": 2016,
+     "url": "https://doi.org/10.1111/poms.12610",
+     "cites": 56,
+     "why": "Models how a utility chooses between flat-rate and time-of-use tariffs under stochastic demand, a natural starting point for analyzing the large-load pricing structures FERC is asking grids to justify."
+    }
+   ],
+   "url": "https://energynow.com/2026/06/us-regulator-makes-interventionist-pivot-to-speed-data-centers/",
+   "follows": [],
+   "source": "EnergyNow.com",
+   "date": "Oct 23"
+  },
+  {
+   "candidate_id": 2,
+   "headline": "SpaceXAI unit faces up to about $6.1M in Mississippi stormwater penalties as NAACP turbine suit survives DOJ dismissal bid",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/spacexai-data-center-mississippi-memphis-elon-musk/",
+   "summary": "In a quarterly SEC filing (dated October 23, 2026, per DCD), SpaceX disclosed that the Mississippi Department of Environmental Quality is seeking penalties of 'up to $25,000 per day' from subsidiary MZX Tech LLC. MDEQ alleges construction began before the sites were covered by the state's Large Construction Stormwater General Permit; estimated exposure is about $6.1 million across three sites. The company says it is cooperating and negotiating a single agreed order. Separately, US District Judge Debra Brown rejected the Justice Department's motion to dismiss an NAACP lawsuit over a gas-fired plant in Southaven, Mississippi, which the NAACP says was built and run without the required permits.",
+   "background": "The sites are part of SpaceXAI's data center cluster near Memphis but sit across the state line in Mississippi. DCD identifies them as Macrohard and Macroharder, which are operating, and Minihard, which is under construction. WREG reports that the filing did not name the sites, so this identification may be DCD's inference. Local outlets report the notices of violation were issued in August. In the turbine case, the EPA argued that its role as primary Clean Air Act enforcer allowed it to have the suit dismissed; the judge disagreed. The government had also argued that the NAACP's requested penalties and order to stop the turbines threatened national security and economic interests.",
+   "problem": "Developers racing for AI compute appear to be weighing speed-to-capacity against compliance: building before permits are in place and generating power on site with gas turbines. The roughly $6.1M is a maximum preliminary figure, not a final fine, which raises the question of whether such penalties are large enough to deter. The litigation tests whether national-security and economic arguments can shield fast-built AI infrastructure from citizen enforcement.",
+   "where_why": "The problem arises at the siting and construction stage and in the on-site power decision. Grid power is slow to arrive, which pushes firms toward behind-the-meter gas generation. Permitting timelines lag construction schedules. Per-day penalties capped by statute may be small next to the value of earlier compute capacity, which creates a misaligned incentive. Locating near a state border also splits regulatory oversight across jurisdictions (Tennessee and Mississippi).",
+   "stakeholders": [
+    {
+     "name": "SpaceXAI / MZX Tech LLC",
+     "stake": "Faster capacity deployment versus penalties, litigation risk and a possible order to halt its turbines"
+    },
+    {
+     "name": "Mississippi DEQ",
+     "stake": "Enforcing permit rules while the state courts large investment"
+    },
+    {
+     "name": "NAACP and local residents",
+     "stake": "Air and water quality near the turbines and sites; a precedent for citizen enforcement"
+    },
+    {
+     "name": "US DOJ/EPA",
+     "stake": "Its claim to primary Clean Air Act enforcement authority and national-security framing of AI infrastructure"
+    },
+    {
+     "name": "Investors",
+     "stake": "Learn of environmental liabilities through SEC filing disclosures"
+    }
+   ],
+   "hints": [
+    "Treat this as a real-options problem: when does the value of starting construction early exceed the expected penalty, given a per-day penalty cap and a probability of detection?",
+    "Compare permit-to-construction lags and violation rates for data center projects across neighboring states or on either side of a state border.",
+    "SEC filings as an enforcement disclosure channel: do firms disclose environmental notices of violation at different times than local media report them?"
+   ],
+   "data_leads": "SEC EDGAR 10-Q environmental contingency disclosures; MDEQ enforcement and stormwater permit records; EPA ECHO enforcement data; EIA-860 for on-site generator entries.",
+   "keywords": [
+    "regulatory enforcement",
+    "facility siting",
+    "litigation risk",
+    "state environmental policy",
+    "data center electricity demand"
+   ],
+   "dataset_candidates": [
+    "EPA ECHO enforcement and compliance database",
+    "MDEQ stormwater general permit coverage records"
+   ],
+   "datasets": [
+    "sec_edgar",
+    "eia860"
+   ],
+   "related": [
+    {
+     "title": "Efficient Detection of Environmental Violators: A Big Data Approach",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13272",
+     "cites": 52,
+     "why": "Uses emissions-monitoring and violation data to detect environmental violators efficiently, relevant to how regulators could spot data center projects that start building or generating before they are permitted."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/spacexai-data-center-mississippi-memphis-elon-musk/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Oct 24"
+  },
+  {
+   "candidate_id": 79,
+   "headline": "Korean pig farms' use of food-waste feed rises 2.7x in 20 months, prompting calls for a ban over ASF risk",
+   "theme": "Circular Economy",
+   "original_url": "https://biz.heraldcorp.com/article/10913522",
+   "summary": "Agriculture Ministry data provided to lawmaker Song Ok-joo for the parliamentary audit, reported October 24, show food-waste feed supplied to pig farms rose from 66.5 tonnes in December 2024 to 176.4 tonnes at the end of August 2026. That is a 165.3% increase, about 2.7 times. The number of farms using it went from 5 to 18, and the number of pigs fed it from 9,279 to 22,204. Song notes that all 18 farms have been inside African swine fever movement-restriction zones in 2025 or 2026, and is pushing for tighter inspection of feed makers; the headline says a ban law is being pursued.",
+   "background": "Korea banned food-waste feed on pig farms by administrative order after African swine fever broke out in September 2019. It allowed the feed again in October 2024 under conditions set in a government manual. At end-2025 the count was 14 farms and 19,004 pigs. Korea's dog-meat ban takes effect in February 2027, and food waste currently fed to dogs on dog-meat farms may look for a new outlet.",
+   "problem": "Turning food waste into feed is a textbook circular reuse pathway, but it creates a pathway for disease transmission. A coming policy shock, the dog-meat ban, may redirect a waste stream toward pig farms at the same time that the farms using the feed are concentrated in ASF-risk zones. Regulators must choose between conditional use with inspection and an outright ban.",
+   "where_why": "The risk sits at the processing and feed-manufacturing link between waste collection and livestock farms. Farms and inspectors cannot easily verify whether feed was properly heat-treated, an information asymmetry. Cheap feed creates misaligned incentives. When one outlet for a waste stream closes, the stream shifts to another (here, from dog farms to pig farms), which is a coordination failure across policies.",
+   "stakeholders": [
+    {
+     "name": "Pig farmers using food-waste feed",
+     "stake": "Lower feed costs versus herd loss and movement restrictions in an ASF outbreak"
+    },
+    {
+     "name": "Food-waste feed manufacturers",
+     "stake": "Market access; would face tighter inspection or a ban"
+    },
+    {
+     "name": "Ministry of Agriculture and lawmakers",
+     "stake": "Weighing waste diversion against national biosecurity"
+    },
+    {
+     "name": "Dog-meat farms and waste haulers",
+     "stake": "Need new outlets for food waste after the February 2027 ban"
+    },
+    {
+     "name": "Wider pork industry",
+     "stake": "Exposure to ASF spread and outbreak-related market disruption"
+    }
+   ],
+   "hints": [
+    "The 2019 ban, the 2024 re-permission and the 2027 dog-meat ban form a sequence of policy switches. Look for how waste flows and feed volumes reallocate across outlets after each one.",
+    "A waste-hierarchy tradeoff with tail risk: compare expected disposal-cost savings against the outbreak externality, which is low-probability but high-loss.",
+    "Compare with jurisdictions that ban swill feeding outright, such as the EU, versus those with conditional heat-treatment regimes."
+   ],
+   "data_leads": "Korean Ministry of Agriculture food-waste feed supply statistics (via parliamentary audit releases); ASF outbreak and movement-restriction zone records; national food-waste generation and treatment statistics.",
+   "keywords": [
+    "secondary materials",
+    "food safety recalls",
+    "regulatory enforcement",
+    "biosecurity risk"
+   ],
+   "dataset_candidates": [
+    "Korea MAFRA African swine fever outbreak records",
+    "Korea Ministry of Environment food waste generation and treatment statistics"
+   ],
+   "datasets": [],
+   "related": [],
+   "url": "https://biz.heraldcorp.com/article/10913522",
+   "follows": [],
+   "source": "헤럴드경제",
+   "date": "Oct 24"
+  },
+  {
+   "candidate_id": 18,
+   "headline": "Unverified: Guinea's proposed 150Mt bauxite export cap looms over aluminium outlook",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "",
+   "summary": "The original AL Circle Q4'26 outlook could not be retrieved, so its arguments, including anything about US tariffs, are unverified. Related AL Circle coverage seen only in search results says Guinea's proposed 150Mt bauxite export cap could leave the market about 33Mt short. Guinea exported a record 114.8Mt in the first half of 2026, and China's bauxite imports rose 17.5% in that half even though China caps aluminium capacity at 45Mt.",
+   "background": "According to ChemAnalyst, 75.3% of China's 158Mt of bauxite imports in 2025 came from Guinea. MINING.COM reported in about May 2026 that Guinea planned to announce export controls in June. It is not confirmed whether the 150Mt cap is in force or still proposed.",
+   "problem": "A single supplier country dominates a key input for the world's largest aluminium producer and is considering a quantity cap. Downstream refiners face a choice between stockpiling before the cap and diversifying to other bauxite sources, under uncertainty about whether and when the cap applies.",
+   "where_why": "The friction is at the raw-material export stage. Supplier concentration in Guinea, plus policy uncertainty about a resource-nationalist export cap, creates incentives to pre-buy and makes import volumes swing. China's capacity cap limits how much higher input supply can turn into metal.",
+   "stakeholders": [
+    {
+     "name": "Guinean government",
+     "stake": "More control and revenue from bauxite through export limits"
+    },
+    {
+     "name": "Chinese alumina refiners",
+     "stake": "Security of supply for roughly three-quarters of their imported bauxite"
+    },
+    {
+     "name": "Miners operating in Guinea",
+     "stake": "Export volumes under a cap"
+    },
+    {
+     "name": "Aluminium buyers, including US importers facing tariffs",
+     "stake": "Price and availability of metal"
+    }
+   ],
+   "hints": [
+    "The record first-half 2026 exports alongside the reported cap plans look like possible pre-buy behavior ahead of a quantity restriction. That pattern is worth checking in monthly trade data.",
+    "Compare with earlier mineral export bans, such as Indonesia's nickel ore ban, to see how importers diversified their sources or stockpiled."
+   ],
+   "data_leads": "UN Comtrade and China customs monthly bauxite imports by origin; USGS Mineral Commodity Summaries for bauxite and aluminium; USITC DataWeb for US aluminium imports under tariffs.",
+   "keywords": [
+    "raw material security",
+    "supplier concentration",
+    "pre-buy behavior",
+    "export controls"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "un_comtrade",
+    "usgs_minerals"
+   ],
+   "related": [
+    {
+     "title": "Global operations and supply‐chain management under the political economy",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1232",
+     "cites": 40,
+     "why": "Frames how political-economy forces such as resource nationalism and trade policy reshape global sourcing, the setting of a producer-country export cap."
+    },
+    {
+     "title": "Impact of the U.S.–China trade war on the operating performance of U.S. firms: The role of outsourcing and supply base complexity",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1225",
+     "cites": 168,
+     "why": "Shows empirically how tariff-driven trade friction affected US firms depending on their sourcing and supply base complexity, relevant to the tariff side of the aluminium outlook."
+    }
+   ],
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPdUdnSzhick1yT3Q3cS02NG9kS0NhWlBLbjBrYVJQMDlTS1ZRb3JhbE9mQzN2MWNKd21Za05hd05QU3FXd0hQR2NKa2NhTXV4bDJiYkx2d3ZBOHZFdXhuTWVMQ1VnNks4T2t5ZklPOWhqaEluUFlhOVFEUFpSTjJCU1lfWXJBN3NwUENEM1dTa0JIVTR5Yi02eWk1UTBsZkNMbktwbF9wcjhsdk9EcGNPMXdSOUgwenhqYTQwdEZvOGphWExqeXhkRVVyZGNwZw?oc=5",
+   "follows": [],
+   "source": "AL Circle",
+   "date": "Oct 24"
+  },
+  {
+   "candidate_id": 7,
+   "headline": "New SONAR index shows truckload contract renewals running about 13% above prior rates",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/truckload-contract-rate-increases-riding-steady-above-10",
+   "summary": "FreightWaves' new Contract Rate Change Direction index (CRCD.USA) stood at 13.11% on October 22, 2026, up from 3.53% a year earlier. In other words, shippers renewing truckload contracts are paying about 13% more than under the contracts they replaced. Tender rejection rates have averaged close to 13% in recent months after rising above 9% almost a year ago. The separate index of average contract rates actually paid (VCRPM1) suggests the increases are sticking this time.",
+   "background": "CRCD measures the average percentage difference between a new contract base rate and the rate it replaced within an existing shipper-carrier relationship. It counts only rates that had held for more than 90 days and is a seven-day rolling average. It is not annualized, not weighted by volume, and can get thin when few contracts change. In 2025, contract resets ran about 3-4%, yet the rates actually paid stayed flat to slightly lower, so those increases did not stick. FMCSA and tender data show little capacity growth over 12 months.",
+   "problem": "Shippers must decide how to reprice and allocate freight between contract and spot markets as capacity tightens. The 2025 episode shows that agreed contract rates and rates actually paid can diverge. Shippers can move freight to other carriers in their routing guide, and carriers can reject tendered loads, so a headline rate increase may not hold. Carriers' migration to more profitable contracts should ease increases, but slow capacity growth may delay that.",
+   "where_why": "The problem lies in the shipper-carrier procurement relationship. Contracts are incomplete: carriers can reject tenders and shippers can route loads elsewhere. Capacity grows slowly in response to rates, and contract repricing reacts to spot-market tightness with a lag.",
+   "stakeholders": [
+    {
+     "name": "Shippers",
+     "stake": "Higher logistics costs and choices about passing them on, routing-guide strategy and spot exposure"
+    },
+    {
+     "name": "Truckload carriers",
+     "stake": "Recovering margins by moving to more profitable contracts"
+    },
+    {
+     "name": "Freight brokers",
+     "stake": "Spot-market opportunities when tender rejections are high"
+    },
+    {
+     "name": "Downstream customers",
+     "stake": "Possible pass-through of freight costs into prices"
+    }
+   ],
+   "hints": [
+    "Relational contracting lens: high tender rejections are a form of reneging on a relational contract. When does a rate reset restore compliance?",
+    "Exploit the contrast between 2025 and 2026: same kind of contract resets, different follow-through. What market conditions separate increases that stick from those that don't?",
+    "Lead-lag dynamics between tender rejections, contract resets and rates actually paid can be modeled with vector autoregressions (VARs) or as a contract-versus-spot portfolio problem."
+   ],
+   "data_leads": "FreightWaves SONAR (CRCD, VCRPM1, tender rejections) or DAT contract and spot rates (commercial); public alternatives are the Cass Freight Index, BLS PPI for truckload, and FMCSA carrier registration data for capacity.",
+   "keywords": [
+    "freight rates",
+    "tender rejection",
+    "cost pass-through",
+    "long-term supply contracts"
+   ],
+   "dataset_candidates": [
+    "FMCSA carrier registration census",
+    "Cass Freight Index"
+   ],
+   "datasets": [
+    "freight_rates"
+   ],
+   "related": [
+    {
+     "title": "Great Expectations: The Moderating Effects of Supplier Service Model and Market Dynamics on Relational Contract Performance",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241277463",
+     "cites": 1,
+     "why": "Examines how supplier service models and market dynamics moderate relational contract performance, directly relevant to whether truckload contract increases stick when spot conditions shift."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/truckload-contract-rate-increases-riding-steady-above-10",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Oct 25"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "FERC's push to make data centers 'flexible' and pay their own way, and SpaceXAI's on-site turbines built ahead of permits, are two responses to the same scarcity: grid power that cannot keep up with AI load. Watch whether faster interconnection reduces the incentive to build behind-the-meter gas and to start construction before permits. The truckload story shows a parallel caution in another capacity-constrained market: a price or rule change on paper (a contract rate, a 90-day target) may not stick until underlying capacity catches up.",
+ "also": [
+  {
+   "title": "Amid Iowa’s Water Crisis, Factory Farms Get a Pass on Environmental Permitting",
+   "url": "https://insideclimatenews.org/news/25102026/iowa-factory-farms-manure-water-pollution/",
+   "source": "Inside Climate News",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "UAE plans up to five alternative food supply sources to safeguard against disruptions",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUFGVDdsbHNmdVU1Zi1nSDdnUi1xUEFoOTRLeGRBMk5vdmdzNkowRGlrNFBwRnpiMVRIc3EyblhCaXBMUDlTcC1IRjRaYXRDM2tMUXN0OE9DMTdqYWF0dVZ5ZUdNUjRyRXNUSllSVjAwdkNwa3hrSS0zemRZTDNtbHZNRnhMNTY5czl1YjFtLVBzZUlKRGxmZUtaeGswWTBDT09GT1BSX1A0Vmg4WUYtaG1Sek9pYTdsN2VHRlpPdzFUYi1SNnZ2Vmx4NGpRajTSAeIBQVVfeXFMTWNPNktuVWljemFCcTkzcUR6VW4zWTh2cU9yblhqYjF4OUg4RjlsMzkzc3RRcWhmRUNrNVdabzM2Y2hYc3FvMGl4dk9DSVlWbU9GYnhjOW5pc2U5RlRiREgtZTJwX2l6cGFPV2JYcVF4TFQ2bVZScjJRR2ZGVjdNWnl5VDJrWUpNU3F4X20zVE84dUVlbzE4TmFXN1NLOUswNS1GVV9FMjVRTkMtR2hqd0ZJOWZmVWRhTzBSbGFaeEpLUW8xWXRKdTdNZ21nUWp5ZmVMZTNOMkFkSzNyQWd0QjZQdw?oc=5",
+   "source": "Gulf News",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "US to Tap Petroleum Reserve for 400,000 Barrels in Exchange to Shore Up Louisiana Refinery",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUHpOVm5GV19uVHlmX3dQSVZCS2VnajEzSXhmbGgyVG9hM0VPbXZDWE9vdGhmeGQ4OXF3WVU4WThsRUw1dVFPZk5Zd2VOVHluNlRLSXJtWjVQNTBaMzF0S2JIXzNGRkQtX3lVczhJTm4zVEZUeXAtRVFWWER6d0NsSU9UU3g5ZGo3RmoyTjU0ck9TOGkzNFBJUEVadElwcUF5LVB1NUsxVFo0cFl6TDdGTnlXMEE0cEljSHNOZ09lWQ?oc=5",
+   "source": "NTD News",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "ECTA refutes EUDR exclusion concerns, says over 99% of coffee farms deforestation-free",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQYnVrMGtwNGZma2tLQWRYVHFTQ1hWeUlMLXRCdE9DTWpjWWFmSHlHbTF3S2hyZ3paSXNlckp3RnhadklkR0QzTnpRNkwtMFpleGtLcFpSQ01fZ3k5UFN5UDZKRl9vSm92djJveFgwX0xtT2hPX3dKN0JwVTRidk9UeDg1NlZLa1NhUGMteEQ4NmhLX2Q0SEt5MkQ3eVhSdnVGRUVzRE5HZkpldndCdlk0NllYV3FPM1pTc01yaWp2OXM1dw?oc=5",
+   "source": "Capital Newspaper",
+   "theme": "ESG & Disclosure"
+  },
+  {
+   "title": "Truck Makers Prep 0.035-Gram NOx Engines for 2027 EPA Standards",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQcTN4U0YyLWJIMmxGYjk2LTNlN01DNzdfakJfTFRqNWVFOWJjNGRvZmFkbmxWZEdPdERwNjFkQkVXNWMtQ0ViTU1DWDF2Xzcta1RSWm9DVllVWEMtMC1NNWlfWTF4T1dNQXVkdEZvOTg4UjJJN3I5bUFSR2xBcVBrT3B2Qk1GdHc4cFJTUkRPVVRqc0hKcURnWl9yOWFWMlF1LVhWWDVQZTJ2UU1Sb1JmSjUtRTJ2c0JZYVh3Yi1faw?oc=5",
+   "source": "Commercial Carrier Journal",
+   "theme": "Logistics Decarbonization"
+  }
+ ]
+}
