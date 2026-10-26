@@ -447,5 +447,45 @@
    "2026-10-25#5"
   ],
   "last_seen": "2026-10-25"
+ },
+ "jodi oil world database": {
+  "name": "JODI Oil World Database",
+  "first_seen": "2026-10-26",
+  "items": [
+   "2026-10-26#2"
+  ],
+  "last_seen": "2026-10-26"
+ },
+ "eu critical raw materials act strategic projects list": {
+  "name": "EU Critical Raw Materials Act strategic projects list",
+  "first_seen": "2026-10-26",
+  "items": [
+   "2026-10-26#3"
+  ],
+  "last_seen": "2026-10-26"
+ },
+ "turkstat municipal waste statistics": {
+  "name": "TurkStat municipal waste statistics",
+  "first_seen": "2026-10-26",
+  "items": [
+   "2026-10-26#4"
+  ],
+  "last_seen": "2026-10-26"
+ },
+ "inpe prodes deforestation data": {
+  "name": "INPE PRODES deforestation data",
+  "first_seen": "2026-10-26",
+  "items": [
+   "2026-10-26#5"
+  ],
+  "last_seen": "2026-10-26"
+ },
+ "trase supply chain data": {
+  "name": "Trase supply chain data",
+  "first_seen": "2026-10-26",
+  "items": [
+   "2026-10-26#5"
+  ],
+  "last_seen": "2026-10-26"
  }
 }
