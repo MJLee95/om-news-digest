@@ -487,5 +487,61 @@
    "2026-10-26#5"
   ],
   "last_seen": "2026-10-26"
+ },
+ "ghg protocol scope 2 public consultation responses": {
+  "name": "GHG Protocol Scope 2 public consultation responses",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#1"
+  ],
+  "last_seen": "2026-10-27"
+ },
+ "re100 member annual disclosure reports": {
+  "name": "RE100 member annual disclosure reports",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#1"
+  ],
+  "last_seen": "2026-10-27"
+ },
+ "entso-e transparency platform (spain hourly load and generation)": {
+  "name": "ENTSO-E Transparency Platform (Spain hourly load and generation)",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#3"
+  ],
+  "last_seen": "2026-10-27"
+ },
+ "red eléctrica de españa redata api": {
+  "name": "Red Eléctrica de España REData API",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#3"
+  ],
+  "last_seen": "2026-10-27"
+ },
+ "cbp border wait times historical data": {
+  "name": "CBP Border Wait Times historical data",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#4"
+  ],
+  "last_seen": "2026-10-27"
+ },
+ "calrecycle carpet stewardship (care) annual reports": {
+  "name": "CalRecycle Carpet Stewardship (CARE) annual reports",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#5"
+  ],
+  "last_seen": "2026-10-27"
+ },
+ "environmental research & education foundation (eref) landfill tipping fee survey": {
+  "name": "Environmental Research & Education Foundation (EREF) landfill tipping fee survey",
+  "first_seen": "2026-10-27",
+  "items": [
+   "2026-10-27#5"
+  ],
+  "last_seen": "2026-10-27"
  }
 }
