@@ -1,0 +1,93 @@
+{
+ "id": "2026-10-27#4",
+ "created": "2026-10-28",
+ "updates": [
+  {
+   "date": "2026-10-28",
+   "items": [
+    "2026-10-27#4",
+    "2026-10-28#4"
+   ],
+   "note": "New thread, opened by FreightWaves coverage of CANACAR's indefinite strike launched Oct 26, 2026. The Oct 28 article adds the Oct 27 agreement with Segob for four rounds of talks and the disputed turnout figures."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "Mexico 2026 national trucking strike over cargo theft and toll credits",
+  "summary": "CANACAR and other Mexican trucking groups began an indefinite nationwide strike on Oct 26, 2026 over cargo theft, extortion, road conditions, operating costs and a narrower toll-related tax incentive in the 2027 revenue law. On Oct 27 the Interior Ministry (Segob) and CANACAR, HAMOTAC and FEMATRAC agreed to four rounds of high-level talks, and blockades were reported lifted. The tax and security outcomes are still open.",
+  "origin": "Around Oct 22, 2026, the trucking group AMOTAC blocked several Puebla highways for more than eight hours after one of its regional delegates was murdered. On Oct 23, CANACAR president Augusto Ramos Melo announced an indefinite national strike starting Oct 26, using the slogan \"We don't want to stop Mexico. We want Mexico to hear us.\" On Oct 25 CANACAR confirmed plans for 19 states. Segob said most trucking groups had agreed to talk and that it was surprised by CANACAR's call. The same day, La Jornada reported that Hacienda (the Finance Ministry) proposed lowering the eligibility cap for the truckers' tax deduction from 300 million to 250 million pesos. The strike began about 6:30 a.m. on Oct 26. Actions included blockades on the México–Puebla, Puebla–Orizaba and Cuacnopalan–Oaxaca highways and an indefinite engine stop in Manzanillo, with trucks parked in company yards.",
+  "causes": "Three sets of grievances drive the strike. (1) Security: cargo theft, violent highway robbery and extortion by criminal groups. (2) Costs: poor road conditions, excessive tow-truck charges and toll prices. (3) Tax: a cut to the incentive truckers receive under the 2027 federal revenue law (Ley de Ingresos), reported as the narrower 300M→250M peso eligibility cap. FreightWaves frames this as changes to a toll tax credit. Infobae also cites recent large-scale US visa losses by Mexican cargo drivers as background, but no link to the strike was confirmed.",
+  "actors": [
+   {
+    "name": "CANACAR (National Freight Transport Chamber), led by Augusto Ramos Melo",
+    "role": "Called the indefinite strike, rejected Segob's pre-strike talks and urged members to keep protesting as talks began",
+    "stake": "Concrete highway-security commitments, keeping the tax incentive and lower operating costs"
+   },
+   {
+    "name": "Segob (Interior Ministry)",
+    "role": "Brokered the talks, ran the government's count of protest sites and agreed to four negotiating sessions",
+    "stake": "Ending blockades and limiting disruption to daily life and commerce"
+   },
+   {
+    "name": "Hacienda (Finance Ministry)",
+    "role": "Proposed narrowing the deduction's eligibility cap from 300M to 250M pesos",
+    "stake": "Design and fiscal cost of the trucking tax incentive"
+   },
+   {
+    "name": "HAMOTAC and FEMATRAC",
+    "role": "Other trucking groups party to the four-round negotiation",
+    "stake": "Security, tax and regulatory concessions for their members"
+   },
+   {
+    "name": "AMOTAC",
+    "role": "Separate truckers' group that held its own Puebla blockade after a delegate's murder",
+    "stake": "Protection against violence targeting truckers"
+   },
+   {
+    "name": "Cross-border shippers and manufacturers",
+    "role": "Depend on trucking through Nuevo Laredo, Reynosa, Tijuana and Manzanillo",
+    "stake": "Delivery reliability and inventory disruption from blockades and theft"
+   }
+  ],
+  "status": "Blockades, some lasting up to 34 hours, were reported lifted after the Oct 27 deal. Four high-level sessions were agreed, covering highway security, infrastructure, tax incentives, regulation and operating costs. The strike's size is disputed: Segob counted 38 protest sites in 19 states with 691 vehicles and 858 participants, while CANACAR claims protests reached all 32 states. Still open: the dates and outcomes of the sessions, the final treatment of the incentive in the 2027 revenue law, whether CANACAR has formally ended the strike or only the blockades, and the effect at the US–Mexico border.",
+  "watch": [
+   "Scheduling and outcomes of the four Segob–trucker negotiating sessions",
+   "Final congressional passage of the 2027 Ley de Ingresos and whether the 300M→250M peso cap survives",
+   "Any renewed CANACAR or AMOTAC blockades if talks stall",
+   "Reported data on border crossing delays or cargo-theft incidence after the strike"
+  ],
+  "research": [
+   {
+    "question": "How do short, localized highway blockades propagate into cross-border lead times and border crossing volumes on US–Mexico freight lanes?",
+    "shock": "Oct 26–27, 2026 national trucking strike (up to 34-hour blockades)",
+    "data": "US CBP and BTS border crossing and wait-time data by port (Laredo, Pharr, Otay Mesa); Mexican port data for Manzanillo; carrier spot-rate data"
+   },
+   {
+    "question": "Does a narrower eligibility cap for a toll tax credit shift small and mid-size carriers' route choices (toll vs. free roads) and exposure to cargo theft?",
+    "shock": "Change to the trucking tax incentive in the 2027 revenue law (proposed 300M→250M peso cap)",
+    "data": "Toll-road traffic counts, SESNSP cargo-theft statistics by highway segment, firm-size data for carriers"
+   },
+   {
+    "question": "How do nearshoring manufacturers adjust safety stocks, security spending or modal mix in response to rising cargo-theft and blockade risk in Mexico?",
+    "shock": "Repeated trucker protests over highway insecurity, culminating in the Oct 2026 strike",
+    "data": "Firm disclosures (10-K risk factors, earnings calls), insurer and security-firm cargo-theft reports, rail versus truck share of cross-border freight"
+   }
+  ]
+ },
+ "updated": "2026-10-28",
+ "items": [
+  "2026-10-27#4",
+  "2026-10-28#4"
+ ],
+ "sources": [
+  "https://www.infobae.com/mexico/2026/10/23/paro-nacional-el-26-de-octubre-transportistas-frenan-labores-en-protesta-por-robos-y-extorsiones-en-carreteras/",
+  "https://amp.milenio.com/politica/canacar-alista-paro-nacional-transportistas-26-octubre",
+  "https://www.jornada.com.mx/noticia/2026/10/25/economia/canacar-va-a-paro-nacional-este-lunes-se-esperan-bloqueos",
+  "https://www.adn40.mx/mexico/2026-10-23/atencion-transportistas-anuncian-paro-nacional-cuando-inicia-demandas-y-posibles-afectaciones/",
+  "https://www.reforma.com/anuncia-canacar-un-paro-indefinido/ar3301160",
+  "https://www.elfinanciero.com.mx/nacional/2026/10/26/paro-nacional-de-transportistas-que-carreteras-seran-cerradas-este-lunes-26-de-octubre-y-que-exigen-los-operadores/",
+  "https://unotv.com/nacional/paro-nacional-de-transportistas-que-carreteras-tendran-bloqueos-hoy-sigue-el-minuto-a-minuto-en-vivo",
+  "https://www.sdpnoticias.com/mexico/canacar-llama-a-mantener-el-paro-nacional-de-transportistas-este-27-de-octubre/",
+  "https://www.nmas.com.mx/seguridad/canacar-anuncia-paro-nacional-transportistas-octubre-2026-habra-bloqueos-carreteras-mexico/"
+ ]
+}

@@ -1,0 +1,401 @@
+{
+ "intro": "Today's issue covers a battery-recycling acquisition whose headline doesn't match the verified facts, BNEF's first US storage forecast to count on-site data center batteries, the EU's proposed Climate Resilience Law, a Mexican trucker strike over cargo theft, and RepRisk's count of greenwashing shifting toward energy-transition sectors.",
+ "items": [
+  {
+   "candidate_id": 200,
+   "headline": "Clarios completes purchase of Ecobat's German and Austrian lead-acid recycling sites; reported US deal and $6B figure unverified",
+   "theme": "Circular Economy",
+   "original_url": "https://www.aftermarketnews.com/clarios-ecobat-acquisition/",
+   "summary": "The source headline claimed Clarios bought Ecobat's US recycling arm in a $6B deal, but no source confirms a US deal or a $6B figure. What is confirmed: in August 2025, Dallas-based Ecobat agreed to sell its lead-acid battery recycling and specialty lead operations in Freiberg and Braubach (Germany) and Arnoldstein (Austria) to Glendale, Wisconsin-based battery maker Clarios, at an undisclosed price. The EU cleared the deal in April 2026, Clarios completed the purchase in early May 2026, and the formal EU decision was published Oct. 14, 2026.",
+   "background": "Lead-acid batteries are one of the most heavily recycled products, and secondary lead from smelters feeds straight back into new batteries. Freiberg alone recycles up to 75,000 tonnes of battery scrap a year and produces about 55,000 tonnes of lead and lead alloys. Ecobat said the sale lets it focus on core recycling and its global lithium-ion business. It still runs lithium-ion recycling sites in Darlaston, UK, and Casa Grande, Arizona.",
+   "problem": "A battery maker is buying the recyclers that supply its secondary lead. This raises questions about who controls scarce scrap feedstock, whether independent battery makers lose access to recycled lead, and whether recyclers are splitting into legacy lead-acid and growth lithium-ion businesses. The garbled headline is also a reminder to check deal coverage before using it as an event.",
+   "where_why": "The friction sits in the reverse-logistics and smelting stage. Scrap battery collection and secondary smelting capacity are lumpy and regionally concentrated. That gives OEMs an incentive to integrate backward and secure feedstock and price stability, and it is why antitrust review was needed. On the seller side, the lead-acid and lithium-ion businesses have different growth and capital needs, which pushes recyclers to divest one or the other.",
+   "stakeholders": [
+    {
+     "name": "Clarios",
+     "stake": "Secure captive secondary lead supply and margin control for its battery production"
+    },
+    {
+     "name": "Ecobat",
+     "stake": "Cash and focus to grow lithium-ion recycling, at the cost of exiting European lead-acid smelting"
+    },
+    {
+     "name": "Rival battery makers and scrap collectors",
+     "stake": "Risk of reduced access to independent smelting capacity or worse scrap prices"
+    },
+    {
+     "name": "European Commission (competition)",
+     "stake": "Keep competition in secondary lead markets while allowing the consolidation"
+    }
+   ],
+   "hints": [
+    "Vertical integration into recycling as a feedstock-security move: compare transaction-cost and foreclosure models with closed-loop supply chain models in which the OEM controls returns",
+    "Puzzle: why would a recycler sell its mature, cash-generating lead business to fund lithium-ion recycling, whose volumes are still uncertain?",
+    "The gap between deal announcement, EU clearance and completion gives event dates to use for studying scrap pricing or competitor responses"
+   ],
+   "data_leads": "EU merger decision texts; E-PRTR facility emissions and capacity for European secondary lead smelters; USGS Mineral Commodity Summaries (lead) for secondary-production shares; SEC EDGAR filings of US battery peers.",
+   "keywords": [
+    "battery recycling",
+    "secondary materials",
+    "closed-loop supply chain",
+    "vertical integration",
+    "raw material security"
+   ],
+   "dataset_candidates": [
+    "European Commission competition case search (merger decisions)",
+    "European Pollutant Release and Transfer Register (E-PRTR)"
+   ],
+   "datasets": [
+    "usgs_minerals",
+    "sec_edgar"
+   ],
+   "related": [
+    {
+     "title": "Closed‐loop supply chains in process industries: An empirical study of producer re‐use issues",
+     "journal": "Journal of Operations Management",
+     "year": 2005,
+     "url": "https://doi.org/10.1016/j.jom.2004.07.012",
+     "cites": 139,
+     "why": "An empirical study of producer reuse and closed-loop issues in process industries, the setting closest to lead smelting and secondary-metal recovery."
+    },
+    {
+     "title": "Closed‐loop supply chains with product remanufacturing: Challenges and opportunities",
+     "journal": "Journal of Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1002/joom.1298",
+     "cites": 12,
+     "why": "Reviews pressure points in closed-loop supply chains and sets out a research agenda that fits OEM backward integration into recovery."
+    }
+   ],
+   "url": "https://www.aftermarketnews.com/clarios-ecobat-acquisition/",
+   "follows": [],
+   "source": "Dealroom",
+   "date": "Oct 27"
+  },
+  {
+   "candidate_id": 14,
+   "headline": "BNEF raises 10-year US storage forecast 30%, counting on-site data center batteries for the first time",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.utilitydive.com/news/bnef-ups-us-energy-storage-deployment-forecast-by-30/872870/",
+   "summary": "BloombergNEF's Oct. 22, 2026 outlook raises expected US storage installations over the next decade by 30% versus six months earlier. It projects 213.9 GW cumulative by 2030 and 434.4 GW by 2036, despite a 40.9% combined duty on Chinese stationary batteries and rising project costs. On-site data center storage is forecast to jump from 500 MW / 1.4 GWh in 2025 to 4.9 GW / 7.4 GWh in 2026 and 6.3 GW / 8.4 GWh in 2027.",
+   "background": "This is reportedly the first time BNEF has counted on-site data center storage in its US forecast. One example is NextEra's planned 2.6-GW battery next to a 2-GW gas plant at a proposed $100B Brookfield computing campus in Kentucky. Storage paired with solar is also growing. The US had 20.7 GW / 66.4 GWh paired with 41.3 GW of solar at end-2025, and One Big Beautiful Bill Act tax credits support a pipeline of 83.7 GW / 166.1 GWh paired with 149.2 GW of solar. Globally, the cumulative solar-to-storage ratio fell from 94:1 in 2016 to 7:1 in 2026 and is expected to reach 4:1 by 2030. On the same day, Google announced plans to grow its Voltus virtual power plant in PJM tenfold to more than 1 GW.",
+   "problem": "Hyperscalers are deciding whether to put storage behind the meter, alongside on-site gas, or to rely on grid-side storage and demand flexibility. These choices shift who pays for capacity and reliability. They are being made under tariff barriers, cost inflation and forecasts that change by 30% in six months.",
+   "where_why": "The problem sits at the capacity-planning link between large loads and the grid. Long interconnection queues and reliability concerns push data centers to build on-site storage and generation. Tariffs on Chinese cells raise costs and add sourcing uncertainty. Tax-credit eligibility shapes whether storage is paired with solar. Because forecasts move this much, utilities, developers and battery suppliers face real demand uncertainty when committing capacity.",
+   "stakeholders": [
+    {
+     "name": "Hyperscalers and data center developers",
+     "stake": "Fast, reliable power for AI load; avoiding queue delays through on-site batteries and gas"
+    },
+    {
+     "name": "Utilities and grid operators (e.g., PJM)",
+     "stake": "Planning for large loads; deciding whether behind-the-meter assets help or bypass the grid"
+    },
+    {
+     "name": "Storage integrators and cell suppliers (Fluence, Peak Energy)",
+     "stake": "Order growth, weighed against tariff-driven cost and sourcing risk"
+    },
+    {
+     "name": "Ratepayers",
+     "stake": "Who bears the grid upgrade and capacity costs that data centers create"
+    }
+   ],
+   "hints": [
+    "Compare forecast vintages: how much do revisions track announced hyperscaler orders versus policy changes, and what does that mean for capacity investment under uncertainty?",
+    "Treat behind-the-meter versus grid-side storage as a make-or-buy decision for flexibility, set against interconnection delay",
+    "A virtual power plant (Google/Voltus) and on-site batteries are substitute flexibility strategies; the fact that both are expanding at once is a puzzle worth examining"
+   ],
+   "data_leads": "EIA-860 (existing and planned battery units, including co-located), LBNL Queued Up interconnection queues, PJM capacity auction data; BNEF outlooks if accessible through a university.",
+   "keywords": [
+    "battery storage",
+    "data center electricity demand",
+    "capacity investment under uncertainty",
+    "interconnection queues",
+    "antidumping duties"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "eia860",
+    "lbnl_queues"
+   ],
+   "related": [
+    {
+     "title": "The Unintended Carbon Impacts of Large-Scale Electricity Storage",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2024.1411",
+     "cites": 0,
+     "why": "Shows how arbitrage by grid-scale storage can indirectly raise or lower market emissions, which matters as storage scales with data center load."
+    },
+    {
+     "title": "The Value of Coordination in Multimarket Bidding of Grid Energy Storage",
+     "journal": "Operations Research",
+     "year": 2022,
+     "url": "https://doi.org/10.1287/opre.2021.2247",
+     "cites": 54,
+     "why": "Models how storage owners coordinate bids across electricity markets, the revenue logic behind grid-side storage."
+    }
+   ],
+   "url": "https://www.utilitydive.com/news/bnef-ups-us-energy-storage-deployment-forecast-by-30/872870/",
+   "follows": [],
+   "source": "Utility Dive",
+   "date": "Oct 27"
+  },
+  {
+   "candidate_id": 22,
+   "headline": "European Commission proposes Climate Resilience Law with single reference warming trajectory and mandatory, more frequent risk assessments",
+   "theme": "Climate Risk & Adaptation",
+   "original_url": "https://www.esgtoday.com/eu-commission-launches-climate-resilience-framework/",
+   "summary": "On Oct. 27, 2026, the European Commission presented a Climate Resilience Framework built around a proposed European Climate Resilience Law. The law would set one reference global warming trajectory for risk assessments, replace multiple national plans with a single strategic resilience plan, and require better, more frequent climate risk assessments. The Commission estimates about €70B a year is needed for adaptation and says adaptation could return more than 10 times its cost in avoided damage.",
+   "background": "Member states could support resilience investment through tax or state aid, with public money meant to attract private capital. The European Investment Bank has separately committed at least €30B in climate resilience financing by 2030. The framework also launches three digital tools: European Climate Viewer, Navigator of Climate Resilience Tools and Mission Solutions Explorer. The Commission projects the global market for adaptation solutions will grow fourfold to €3.5 trillion by 2050. An implementation plan is due within six months, followed by an EU strategic plan in 2028 and every five years after. The law still needs approval from the European Parliament and Council.",
+   "problem": "Physical climate risk is assessed against inconsistent scenarios and plans, so firms, insurers and governments struggle to price and fund adaptation. Requiring a single reference trajectory could change how firms site facilities, choose suppliers and insure assets. But the content and timing are uncertain, and it is unclear whether private capital will actually follow public incentives.",
+   "where_why": "The friction is a coordination and information problem in planning for physical risk. Fragmented national scenarios produce risk estimates that cannot be compared. Adaptation benefits are partly public goods, so private actors underinvest in them. Assessment frequency and the choice of reference trajectory determine which assets look risky. That flows into site selection, inventory buffers and supplier selection in European supply chains.",
+   "stakeholders": [
+    {
+     "name": "European Commission",
+     "stake": "Harmonize adaptation planning and close a roughly €70B/year investment gap"
+    },
+    {
+     "name": "Member states",
+     "stake": "Lose some planning autonomy; can use tax and state aid to steer resilience spending"
+    },
+    {
+     "name": "Firms with EU facilities and suppliers",
+     "stake": "Possible new expectations for risk assessment; hazard maps may change siting and insurance costs"
+    },
+    {
+     "name": "Insurers, the EIB and private investors",
+     "stake": "Common risk baselines for pricing, and a growing market for adaptation finance"
+    }
+   ],
+   "hints": [
+    "A shift from many scenarios to one reference trajectory is a standardization shock; look at the disclosure-comparability literature for analogues",
+    "Facility siting and supplier selection under a common hazard map: robust or stochastic facility-location models with climate-dependent disruption probabilities",
+    "Compare with how heat exposure hits firm revenues (see R25) to think about which sectors gain most from harmonized assessments"
+   ],
+   "data_leads": "CDP climate responses (physical risk and adaptation sections), European Climate Viewer layers, EEA climate-related economic loss data; NOAA Storm Events as a US comparison.",
+   "keywords": [
+    "supplier region risk",
+    "facility siting",
+    "regulatory uncertainty",
+    "climate adaptation",
+    "mandatory climate reporting"
+   ],
+   "dataset_candidates": [
+    "EEA economic losses from weather- and climate-related extremes",
+    "Copernicus Climate Change Service (C3S) climate projections"
+   ],
+   "datasets": [
+    "cdp",
+    "noaa_storm_events"
+   ],
+   "related": [
+    {
+     "title": "IMPACT OF DISASTERS ON FIRMS IN DIFFERENT SECTORS: IMPLICATIONS FOR SUPPLY CHAINS",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2010,
+     "url": "https://doi.org/10.1111/j.1745-493x.2010.03206.x",
+     "cites": 190,
+     "why": "Uses secondary data to show how disasters affect firms across sectors, with direct implications for supply chain exposure to physical climate risk."
+    },
+    {
+     "title": "Climate Change, Firm Performance, and Investor Surprises",
+     "journal": "Management Science",
+     "year": 2023,
+     "url": "https://doi.org/10.1287/mnsc.2023.4685",
+     "cites": 625,
+     "why": "Links firm-level heat exposure in 93 countries to lower revenues and to investor surprises, quantifying the operational costs that adaptation aims to avoid."
+    }
+   ],
+   "url": "https://www.esgtoday.com/eu-commission-launches-climate-resilience-framework/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Oct 27"
+  },
+  {
+   "candidate_id": 72,
+   "headline": "Mexican trucking groups agree to four rounds of talks with government after strike over cargo theft and extortion",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/mexico-truckers-reach-deal-for-talks-after-strike-disrupts-19-states",
+   "summary": "A trucker strike over cargo theft, violent highway robbery, extortion and rising costs began Monday, Oct. 26, 2026. On Tuesday, Oct. 27, Mexico's Interior Ministry (Segob) and the CANACAR, HAMOTAC and FEMATRAC trucking groups agreed to four high-level negotiating sessions on highway security, infrastructure, tax incentives, regulation and operating costs. The size of the strike is disputed: Segob counted 38 protest sites in 19 states with 691 vehicles and 858 participants, while CANACAR said protests reached all 32 states.",
+   "background": "Latin Times, a secondary source, reports 30–40 cargo robberies a day on Mexico's federal highways. Trucking carries much of Mexico's domestic and cross-border freight, a growing link as manufacturing nearshores to Mexico. FreightWaves said the groups had not confirmed that all protests had stopped. Earlier Tuesday they had urged members to keep protesting peacefully. No measure of freight or cross-border delays was reported.",
+   "problem": "Insecurity on the roads raises carriers' costs and insurance, and causes losses, delays and now labor action. Shippers and carriers have to choose between absorbing theft risk, rerouting, using escorts or shifting modes. Government responses (security, tax incentives) are under negotiation. Whether this was a one-day shock or the start of a longer pattern remains unclear.",
+   "where_why": "The disruption sits in the over-the-road link of Mexico–US supply chains. Its root cause is a public-goods failure: highway security is under-provided, so the risk falls on fragmented, cost-squeezed carriers. Carriers have little bargaining power with shippers, so collective action aimed at the state is their main lever. Disputed counts of the strike's size also make it hard for shippers to judge how severe the disruption is.",
+   "stakeholders": [
+    {
+     "name": "Mexican trucking groups (CANACAR, HAMOTAC, FEMATRAC)",
+     "stake": "Security, lower operating costs, tax relief; members risk lost revenue while striking"
+    },
+    {
+     "name": "Segob and the federal government",
+     "stake": "End the disruption and avoid costly security and fiscal commitments"
+    },
+    {
+     "name": "Shippers and nearshored manufacturers",
+     "stake": "On-time inbound and outbound flows; exposure to theft losses and buffer-inventory costs"
+    },
+    {
+     "name": "US importers and cross-border carriers",
+     "stake": "Border crossing delays and higher rates on Mexico lanes"
+    }
+   ],
+   "hints": [
+    "A short, dated strike gives an event window: look for effects on border crossings and cross-border truck volumes and how long recovery takes",
+    "Cargo theft as a chronic disruption versus strikes as acute ones: robustness versus resilience framing (see R32)",
+    "Puzzle: how do shippers price and allocate theft risk between carriers, insurers and buffer inventory when security is a public good?"
+   ],
+   "data_leads": "BTS border crossing entry data and BTS TransBorder freight data for Mexico-US truck flows; truckload spot rates on Mexico lanes (DAT/SONAR, with BTS as the public alternative); SESNSP crime incidence data on robbery of transport.",
+   "keywords": [
+    "cross-border trucking",
+    "nearshoring logistics",
+    "driver supply shock",
+    "freight rates",
+    "labor disruption"
+   ],
+   "dataset_candidates": [
+    "SESNSP (Mexico) crime incidence statistics – robbery of cargo transport"
+   ],
+   "datasets": [
+    "bts_border_crossing",
+    "bts_transborder"
+   ],
+   "related": [
+    {
+     "title": "A Contingent Resource‐Based Perspective of Supply Chain Resilience and Robustness",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2014,
+     "url": "https://doi.org/10.1111/jscm.12050",
+     "cites": 1372,
+     "why": "Empirically separates supply chain resilience from robustness and their resource antecedents, a useful frame for firms facing chronic theft versus acute strikes."
+    },
+    {
+     "title": "Perspectives on risk management in supply chains",
+     "journal": "Journal of Operations Management",
+     "year": 2009,
+     "url": "https://doi.org/10.1016/j.jom.2009.02.001",
+     "cites": 349,
+     "why": "A foundational overview of supply chain risk management that helps classify security-driven transport disruptions and mitigation options."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/mexico-truckers-reach-deal-for-talks-after-strike-disrupts-19-states",
+   "follows": [
+    {
+     "id": "2026-10-27#4",
+     "label": "Oct 27 · CANACAR launches indefinite nationwide Mexican trucking strike over cargo theft,"
+    }
+   ],
+   "source": "FreightWaves",
+   "date": "Oct 27"
+  },
+  {
+   "candidate_id": 6,
+   "headline": "RepRisk: companies linked to greenwashing up 28% to 1,594, with energy-transition sectors' share rising to 29%",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgdive.com/news/energy-transition-linked-industries-face-surge-in-greenwashing-reprisk/872899/",
+   "summary": "RepRisk's fifth annual Greenwashing Report, released Oct. 6, 2026 for its July–June report year, links 1,594 companies to greenwashing incidents, up 28% from 1,243. Alternative energy, mining, industrial metals, utilities, and software and computer services made up 29% of incidents, up from 18% in 2022, while oil and gas fell 4.9 points. For the first time, biodiversity links (300, up more than 41% from 216) outnumbered climate, emissions and pollution links (275).",
+   "background": "Incidents are up 112% since 2022. They dipped in 2024 and rose in each of the last two years. Financial services is the most-linked sector, with 305 companies (15.6% of links); banks rank eighth. Together the two account for about 1 in 5 links. RepRisk's incidents are counts of reported risk drawn from media and stakeholder sources, not proven violations.",
+   "problem": "Scrutiny is moving from fossil-fuel firms to companies selling transition products and services, including software and computer services, and to nature claims. These firms' environmental claims may be overstated or simply harder to verify. It is unclear whether the rise reflects more misconduct, more scrutiny or measurement artifacts.",
+   "where_why": "The friction is information asymmetry between firms making sustainability claims (product footprints, biodiversity impacts, green finance) and stakeholders who cannot verify them. Operational claims about supply chains and minerals are hard to audit, while media and NGO attention is shifting toward transition sectors. Because incident datasets depend on what gets reported, detection intensity and actual behavior are tangled together.",
+   "stakeholders": [
+    {
+     "name": "Energy-transition firms (renewables, miners, utilities, software)",
+     "stake": "Reputation and financing costs as their green claims face more scrutiny"
+    },
+    {
+     "name": "Banks and financial services firms",
+     "stake": "Exposure through green-labelled products and lending that may not match their disclosures"
+    },
+    {
+     "name": "Regulators and NGOs",
+     "stake": "Enforcing substantiation of claims; deciding where to focus scrutiny"
+    },
+    {
+     "name": "Investors and data providers (RepRisk)",
+     "stake": "Reliable signals to separate real performance from cheap talk"
+    }
+   ],
+   "hints": [
+    "Separate detection from behavior: does incident growth track media attention (e.g., GDELT volume) more than operational change?",
+    "The rise of biodiversity claims points to nature-related disclosure as the next greenwashing frontier",
+    "Gap between disclosure and action: compare the 'glossy green' banks evidence (R46) with RepRisk links for financial firms"
+   ],
+   "data_leads": "RepRisk incident data (university access) merged with Compustat/CRSP; GDELT as a public news-volume proxy; CDP responses or SEC EDGAR 10-K text for the claims side.",
+   "keywords": [
+    "greenwashing",
+    "biodiversity risk",
+    "nature-related disclosure",
+    "voluntary disclosure",
+    "litigation risk"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "reprisk",
+    "gdelt"
+   ],
+   "related": [
+    {
+     "title": "Do Corporate Social Responsibility Engagements Lead to Real Environmental, Social, and Governance Impact?",
+     "journal": "Management Science",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/mnsc.2019.3324",
+     "cites": 298,
+     "why": "Builds firm-level ESG impact measures from RepRisk and finds that public and private firms differ in whether CSR commitments match real impact, a direct methodological template."
+    },
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 53,
+     "why": "Shows that European banks with more environmental disclosure lend more to brown industries, quantifying the kind of disclosure–action gap behind finance's high greenwashing count."
+    }
+   ],
+   "url": "https://www.esgdive.com/news/energy-transition-linked-industries-face-surge-in-greenwashing-reprisk/872899/",
+   "follows": [],
+   "source": "ESG Dive",
+   "date": "Oct 27"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 16,
+   "takeaway": "The paper studies how an online seller should set its return policy when consumers can do costly research before buying to resolve product-fit uncertainty, and the value of that research differs across consumers. Counterintuitively, full refunds beat no refunds when search is cheap, because the return policy shapes who researches and who buys, not just who returns.",
+   "connection": "Generous return policies drive reverse-logistics volumes and the reuse and resale flows central to circular-economy research, so this model can link consumer behavior before purchase to downstream returns and waste.",
+   "title": "EXPRESS: Optimal Return Policies with Heterogeneous Search Rewards",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261504549"
+  }
+ ],
+ "thread_to_pull": "Two items show firms internalizing a public-goods or infrastructure gap: Clarios integrating backward into recycling to secure feedstock, and hyperscalers building on-site batteries instead of waiting on the grid. The EU resilience law and the Mexican strike both turn on underprovided shared infrastructure, physical climate adaptation and highway security. One question worth exploring is when firms build private substitutes for weak shared systems, and what that does to everyone else still relying on those systems.",
+ "also": [
+  {
+   "title": "Gov. Healey executive order restricts data center construction",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcFpzMVdabHVidzVQRGdfMHR0X3g2V2NvSXRmZWZtUTNyUnJyZEZQRXNWYWQ2TXpnLXExY3N0WXFNNWt0cDJlZTdJbDBuQXV6WUcyejJwQUlBMVE1MjdCVjc3VUZLSHdxVVJuaWp3TFR6X2dsN1hJUU1oSEoxTTAzNWR2NXVvd2VZSDBMckRNcktwOU1CT05fUHpHS3lYTGFzTnFvZ1JCQQ?oc=5",
+   "source": "The Tufts Daily",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Chinese mainland spokesperson slams reports of TSMC asking suppliers to assess alternatives that do not use mainland rare earths",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9UTEc2d3BYUE9wdkpINVNSX2docEtHaEg0UTVUTk90Y1k1N2FVelI4QUVaOHZhTjlpejZlU2FHbG01bU5QV2I3Rk9QZU9pX09PeUVDU3BtSWd2NVFCSkswMjN3?oc=5",
+   "source": "Global Times",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "| Cambodia overtakes India in 9 US apparel categories: $770 mn swing",
+   "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPT3RZbFRBWDFiTnZzUkhBS3kzZDM3Z2trYjJYYUNHOXFWbnBoOHFhZElfXzJRUExLYWRCeXVzWGs3ZlpabENpZFVFQkcxYjJzZUtQMXpGQ0VZUXpOb0NMZVJBSVAway1FcHRRbzJ5dXlCa29yWkhfYnVldDk4WEllX0ZDNFM4VHNlTFlySjQ1dkdvNlY2clQtdnVfWnhYNlRDOGx3aUR4c2hyclZjSGhheUVyaHEzVDNDeHhaY2ZibFROd1RNMExSb004a1VWbXQwc0VKZjdIWGZuNFd6R2JlbTliVjl0NGZwdWFCaVFNRVg3Zk9kU0xqbU5oWTc2UUtyVkRnOHRBamlXVDg?oc=5",
+   "source": "Fibre2Fashion",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "Seven Japanese Companies Jointly Announce to Build and Operate Four Ammonia-Fueled Car Carriers and Commercialize the Ammonia Bunkering Business",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE85dU5sVkY4YWNNOEJhZW9jSGpTUmpaS0o5cTFhWkl1eS04UU8yRGhneUFtUmQyY3JLZDdKcWNKTFZsdnd4U1BjbVNTby1zVTZSSFFnMXpkZUN1dG4zS19LREwwbzk?oc=5",
+   "source": "日本郵船株式会社",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "ILWU Watchmen May Strike at LA/Long Beach, With Effects on Half the Port",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObHBhd2F5LURXNTJhSkhwRVNPb2pVazIyTjlyZXpoUkxuME5QdHc5MFNMWTBIMUI2dW5RR2phN1RIdG5HaGJHblNwMlQyQnNYVTNGNnJwRGxlNEl2d3I4T0hVWFJpOWFfTTFrZjFrakl6dWhZNjRDRVNQaUtUMXJndUM5UnpucFEwaVRBYjlaVDlMR1AxUFpFbC1ncGc5NVVGaHlRVGRyV2FPaGFaOHZB?oc=5",
+   "source": "The Maritime Executive",
+   "theme": "Supply Chain Resilience"
+  }
+ ]
+}

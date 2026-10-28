@@ -543,5 +543,45 @@
    "2026-10-27#5"
   ],
   "last_seen": "2026-10-27"
+ },
+ "european commission competition case search (merger decisions)": {
+  "name": "European Commission competition case search (merger decisions)",
+  "first_seen": "2026-10-28",
+  "items": [
+   "2026-10-28#1"
+  ],
+  "last_seen": "2026-10-28"
+ },
+ "european pollutant release and transfer register (e-prtr)": {
+  "name": "European Pollutant Release and Transfer Register (E-PRTR)",
+  "first_seen": "2026-10-28",
+  "items": [
+   "2026-10-28#1"
+  ],
+  "last_seen": "2026-10-28"
+ },
+ "eea economic losses from weather- and climate-related extremes": {
+  "name": "EEA economic losses from weather- and climate-related extremes",
+  "first_seen": "2026-10-28",
+  "items": [
+   "2026-10-28#3"
+  ],
+  "last_seen": "2026-10-28"
+ },
+ "copernicus climate change service (c3s) climate projections": {
+  "name": "Copernicus Climate Change Service (C3S) climate projections",
+  "first_seen": "2026-10-28",
+  "items": [
+   "2026-10-28#3"
+  ],
+  "last_seen": "2026-10-28"
+ },
+ "sesnsp (mexico) crime incidence statistics – robbery of cargo transport": {
+  "name": "SESNSP (Mexico) crime incidence statistics – robbery of cargo transport",
+  "first_seen": "2026-10-28",
+  "items": [
+   "2026-10-28#4"
+  ],
+  "last_seen": "2026-10-28"
  }
 }
