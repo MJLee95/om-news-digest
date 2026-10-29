@@ -583,5 +583,69 @@
    "2026-10-28#4"
   ],
   "last_seen": "2026-10-28"
+ },
+ "pmsa port complex dwell-time reports": {
+  "name": "PMSA port complex dwell-time reports",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#1"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "stb rail service data (ep 724) weekly railroad performance metrics": {
+  "name": "STB Rail Service Data (EP 724) weekly railroad performance metrics",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#1"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "ge vernova quarterly gas power backlog and slot-reservation disclosures": {
+  "name": "GE Vernova quarterly gas power backlog and slot-reservation disclosures",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#2"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "suruhanjaya tenaga (energy commission malaysia) data center electricity supply statistics": {
+  "name": "Suruhanjaya Tenaga (Energy Commission Malaysia) data center electricity supply statistics",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#3"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "malaysia cress participant and capacity records": {
+  "name": "Malaysia CRESS participant and capacity records",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#3"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "eurostat end-of-life vehicles statistics (env_waselvt)": {
+  "name": "Eurostat end-of-life vehicles statistics (env_waselvt)",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#4"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "kba (kraftfahrt-bundesamt) vehicle deregistration statistics": {
+  "name": "KBA (Kraftfahrt-Bundesamt) vehicle deregistration statistics",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#4"
+  ],
+  "last_seen": "2026-10-29"
+ },
+ "coty fy2026 sustainability report": {
+  "name": "Coty FY2026 sustainability report",
+  "first_seen": "2026-10-29",
+  "items": [
+   "2026-10-29#5"
+  ],
+  "last_seen": "2026-10-29"
  }
 }
