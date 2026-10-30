@@ -647,5 +647,37 @@
    "2026-10-29#5"
   ],
   "last_seen": "2026-10-29"
+ },
+ "ember data centre flexibility calculator": {
+  "name": "Ember data centre flexibility calculator",
+  "first_seen": "2026-10-30",
+  "items": [
+   "2026-10-30#1"
+  ],
+  "last_seen": "2026-10-30"
+ },
+ "eurostat comext monthly trade by cn8 product code": {
+  "name": "Eurostat Comext monthly trade by CN8 product code",
+  "first_seen": "2026-10-30",
+  "items": [
+   "2026-10-30#2"
+  ],
+  "last_seen": "2026-10-30"
+ },
+ "eurostat end-of-life vehicles statistics": {
+  "name": "Eurostat end-of-life vehicles statistics",
+  "first_seen": "2026-10-30",
+  "items": [
+   "2026-10-30#4"
+  ],
+  "last_seen": "2026-10-30"
+ },
+ "clean cargo carrier emissions factors": {
+  "name": "Clean Cargo carrier emissions factors",
+  "first_seen": "2026-10-30",
+  "items": [
+   "2026-10-30#5"
+  ],
+  "last_seen": "2026-10-30"
  }
 }
