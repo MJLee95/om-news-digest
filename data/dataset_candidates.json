@@ -679,5 +679,45 @@
    "2026-10-30#5"
   ],
   "last_seen": "2026-10-30"
+ },
+ "caiso oasis market and load data": {
+  "name": "CAISO OASIS market and load data",
+  "first_seen": "2026-10-31",
+  "items": [
+   "2026-10-31#1"
+  ],
+  "last_seen": "2026-10-31"
+ },
+ "ffiec call reports (bank charter and size)": {
+  "name": "FFIEC Call Reports (bank charter and size)",
+  "first_seen": "2026-10-31",
+  "items": [
+   "2026-10-31#2"
+  ],
+  "last_seen": "2026-10-31"
+ },
+ "usgs cement statistics and information": {
+  "name": "USGS Cement Statistics and Information",
+  "first_seen": "2026-10-31",
+  "items": [
+   "2026-10-31#4"
+  ],
+  "last_seen": "2026-10-31"
+ },
+ "aar weekly rail traffic reports": {
+  "name": "AAR Weekly Rail Traffic reports",
+  "first_seen": "2026-10-31",
+  "items": [
+   "2026-10-31#5"
+  ],
+  "last_seen": "2026-10-31"
+ },
+ "stb rail service data (ep 724)": {
+  "name": "STB Rail Service Data (EP 724)",
+  "first_seen": "2026-10-31",
+  "items": [
+   "2026-10-31#5"
+  ],
+  "last_seen": "2026-10-31"
  }
 }

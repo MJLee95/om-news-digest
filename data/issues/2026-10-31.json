@@ -1,0 +1,385 @@
+{
+ "intro": "Today's issue spans grid access rules for data centers, a federal challenge to California's climate-disclosure laws, a deadly fab explosion that cost Intel an estimated $600M, a hyperscaler's certificate deal for low-carbon cement, and a large intermodal carrier switching railroads. Each one involves a policy shock or an operational decision that could support empirical or analytical OM work.",
+ "items": [
+  {
+   "candidate_id": 41,
+   "headline": "CAISO board approves 'flexible interim' interconnection rules for data centers and other large loads, ahead of FERC filing",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/caiso-proposes-new-rules-for-large-loads-seeking-california-grid-connection/",
+   "summary": "On Oct 28, 2026, CAISO said its Board of Governors had approved a proposal to connect large loads such as data centers and manufacturing plants to the transmission grid faster. The core mechanism is a 'flexible interim load interconnection': a large load can connect early, but must accept enforceable flexibility based on grid conditions until the needed network upgrades are finished. CAISO will file the proposal with FERC by its November 16 deadline, and DatacenterDynamics reports CAISO is the first US grid operator to win board approval for its response.",
+   "background": "FERC's June 18, 2026 show-cause order (docket EL26-71) required the six regional grid operators to defend or change their large-load tariffs, which FERC said may be unjust and unreasonable. About 8 GW of data centers already sit on CAISO's transmission network, including in Silicon Valley. CEO Elliot Mainzer said the proposal aims to improve planning and operational awareness of large loads, prevent cost-shifting, encourage flexibility and speed up energization.",
+   "problem": "Large loads want power quickly, but the network upgrades needed to serve them take years. Connecting them early by making their service conditional on grid conditions trades speed against reliability and against the value of firm service to the customer. It also leaves open who pays for upgrades. RTO Insider reports that 'ratepayer protection questions linger,' and FERC has not yet approved the proposal.",
+   "where_why": "The friction sits at the interconnection stage, where large-load requests run ahead of transmission capacity. It comes from long lead times for network upgrades, uncertainty about whether requested load will actually materialize, and cost-allocation incentives that can shift costs onto existing ratepayers. The size threshold that defines a 'large load' was cut off in the source and remains unconfirmed.",
+   "stakeholders": [
+    {
+     "name": "Data center developers and hyperscalers",
+     "stake": "Want speed to power. They must weigh early but curtailable service against waiting for firm capacity."
+    },
+    {
+     "name": "CAISO",
+     "stake": "Must protect reliability and maintain planning visibility while handling surging load requests and satisfying FERC."
+    },
+    {
+     "name": "Existing ratepayers and utilities",
+     "stake": "Risk paying for upgrades driven by new large loads if cost-shifting protections are weak."
+    },
+    {
+     "name": "FERC",
+     "stake": "Must decide whether CAISO's design satisfies its show-cause order, which will set a benchmark for the other grid operators."
+    }
+   ],
+   "hints": [
+    "Model interim flexible connection as an interruptible-service or priority-queue contract. Ask what curtailment level makes early connection worth more to a data center than waiting for firm service.",
+    "Compare the six grid operators' responses to the same FERC order. This is cross-sectional variation in rule design created by a single regulatory shock.",
+    "Check whether flexibility terms change where data centers request connection, inside versus outside CAISO."
+   ],
+   "data_leads": "FERC eLibrary filings in EL26-71 and each operator's compliance filing; LBNL Queued Up and utility large-load queue reports; EIA-930 hourly load to estimate curtailment exposure.",
+   "keywords": [
+    "large-load tariffs",
+    "interconnection policy",
+    "interruptible load",
+    "data center electricity demand",
+    "interconnection queues"
+   ],
+   "dataset_candidates": [
+    "CAISO OASIS market and load data"
+   ],
+   "datasets": [
+    "ferc_elibrary",
+    "eia930"
+   ],
+   "related": [
+    {
+     "title": "The Value of Coordination in Multimarket Bidding of Grid Energy Storage",
+     "journal": "Operations Research",
+     "year": 2022,
+     "url": "https://doi.org/10.1287/opre.2021.2247",
+     "cites": 54,
+     "why": "Builds a multistage stochastic model of grid-asset bidding across electricity markets, a toolkit that carries over to valuing a large load's curtailable interim service."
+    },
+    {
+     "title": "Recent Developments in Security-Constrained AC Optimal Power Flow: Overview of Challenge 1 in the ARPA-E Grid Optimization Competition",
+     "journal": "Operations Research",
+     "year": 2023,
+     "url": "https://doi.org/10.1287/opre.2022.0315",
+     "cites": 34,
+     "why": "Reviews security-constrained optimal power flow, the grid-operations problem that determines when flexible large loads would actually be curtailed."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/caiso-proposes-new-rules-for-large-loads-seeking-california-grid-connection/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Oct 30"
+  },
+  {
+   "candidate_id": 93,
+   "headline": "OCC asks California regulators to exempt national banks from SB 253 and SB 261 climate-disclosure laws",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.americanbanker.com/news/occ-floats-preemption-of-california-climate-disclosure-laws",
+   "summary": "Comptroller of the Currency Jonathan Gould sent a letter, reported by American Banker on Oct 30, 2026, to California Air Resources Board (CARB) Chair Lauren Sanchez. The letter asks CARB to exempt national banks and federal savings associations from California's climate-disclosure laws, or to clarify that they don't have to comply. The OCC cites conflicts with federal regulation and with safety and soundness, an undue burden on smaller banks, and concerns under the Supremacy Clause, but it has not formally preempted the laws.",
+   "background": "Both laws were enacted in 2023. SB 253 requires companies doing business in California with over $1B in annual revenue to disclose greenhouse gas emissions. SB 261 requires companies with over $500M in revenue to disclose climate-related financial risks, but a federal appeals court has temporarily blocked its enforcement. Gould argued the laws will 'decrease competition, drive up prices, and reduce Californians' access to financial services.'",
+   "problem": "The question is whether federally chartered banks fall inside a state climate-disclosure regime. Experts quoted by American Banker expect the OCC's broad view of preemption to end up at the Supreme Court. The result is layered uncertainty for banks: one law is enjoined, the other may be preempted, and CARB's response is still unknown.",
+   "where_why": "The conflict arises at the boundary between federal and state jurisdiction over bank regulation and supervisory access. Its sources are regulatory overlap, doubts about the legal durability of the mandates, and compliance costs that weigh more heavily on smaller banks.",
+   "stakeholders": [
+    {
+     "name": "OCC",
+     "stake": "Wants to keep exclusive federal supervisory authority over national banks."
+    },
+    {
+     "name": "CARB / State of California",
+     "stake": "Wants SB 253 and SB 261 to cover all large firms doing business in the state."
+    },
+    {
+     "name": "National banks, especially smaller ones",
+     "stake": "Face compliance costs and must decide whether to prepare disclosures under legal uncertainty."
+    },
+    {
+     "name": "Investors and climate-risk users",
+     "stake": "Could lose comparable emissions and risk data on the banking sector."
+    }
+   ],
+   "hints": [
+    "Treat the letter as an event: compare national banks with state-chartered banks of similar size, which the OCC request would not cover.",
+    "Look at whether firms that might be exempt still prepare or publish emissions data voluntarily. Regulatory uncertainty can change the line between voluntary and mandatory disclosure.",
+    "If banks drop out of the mandate, their financed-emissions requests to borrowers may weaken. Ask how that would spread down supply chains through Scope 3 data requests."
+   ],
+   "data_leads": "SEC EDGAR 10-K climate-risk text and FFIEC call reports to separate national from state charters; CDP responses for banks; CRSP returns around Oct 29–30, 2026.",
+   "keywords": [
+    "federal-state jurisdiction",
+    "mandatory climate reporting",
+    "regulatory uncertainty",
+    "voluntary disclosure",
+    "scope 3 disclosure"
+   ],
+   "dataset_candidates": [
+    "FFIEC Call Reports (bank charter and size)"
+   ],
+   "datasets": [
+    "sec_edgar",
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Market Reaction to Mandatory Nonfinancial Disclosure",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2018.3099",
+     "cites": 635,
+     "why": "An event study of market reactions to the EU's mandatory nonfinancial disclosure directive, an approach that could be applied to the steps of California's mandate and the OCC's challenge."
+    },
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 53,
+     "why": "Shows that banks' environmental disclosures can diverge from their actual lending, which bears on what is lost if banks are exempted from mandatory climate reporting."
+    }
+   ],
+   "url": "https://www.americanbanker.com/news/occ-floats-preemption-of-california-climate-disclosure-laws",
+   "follows": [
+    {
+     "id": "2026-10-15#1",
+     "label": "Oct 15 · California finalizes SB 253 rules, setting November 10, 2026 as the first deadli"
+    }
+   ],
+   "source": "American Banker",
+   "date": "Oct 30"
+  },
+  {
+   "candidate_id": 39,
+   "headline": "Intel expects ~$600M revenue loss from deadly explosion at Israel's Fab 28, hitting 10nm-class Xeon supply",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.datacenterdynamics.com/en/news/intel-says-israel-fab-explosion-will-cost-company-600m-in-losses-as-q3-26-revenue-hits-165bn/",
+   "summary": "An explosion in October 2026 at Intel's Kiryat Gat fab (Fab 28) killed two workers and seriously injured another. Intel expects to lose about $600M in revenue across Q4 2026 and Q1 2027, which works out to roughly $300M per quarter, almost all of it from 10nm-class Xeon server chips. CFO David Zinsner said production would start resuming after a two-week shutdown. Intel reported Q3 revenue of $16.5B (up 21% year over year) and guided Q4 to $15–16B, and its shares fell about 20% after hours.",
+   "background": "Police suspect a gas cylinder malfunctioned while being unloaded from a truck, and Israel's Fire and Rescue Services said nitrogen trifluoride (NF3) leaked after the blast. The outage hit while server demand is strong: data center and AI revenue reached $7.3B, up 78% from a year earlier. In foundry, Intel posted $6.7B in revenue, $411M of it external, and a $1.9B operating loss.",
+   "problem": "A single incident at one fab during routine materials handling removes supply of a specific product line during a demand surge, and the effect lasts two quarters even though the plant was down for only two weeks. The open question is why a short shutdown turns into such a long revenue loss, and how much of that demand is lost for good or shifts to rivals rather than being made up later.",
+   "where_why": "The disruption originates in inbound handling of hazardous process gases at a single production node. Two features amplify it: concentration, since 10nm-class Xeon production depends heavily on this fab, and semiconductor ramp-up dynamics, including long cycle times, requalification and restarting work-in-process, which stretch a two-week stop into months of lost output.",
+   "stakeholders": [
+    {
+     "name": "Intel",
+     "stake": "Loses about $600M in revenue and faces credibility and market-share risk at a time when it is courting foundry customers."
+    },
+    {
+     "name": "Server OEMs and cloud customers",
+     "stake": "Face tighter Xeon supply and may switch to other suppliers."
+    },
+    {
+     "name": "Fab workers and Israeli safety authorities",
+     "stake": "Two workers died; worker safety and hazardous-gas handling rules are now under scrutiny."
+    },
+    {
+     "name": "Industrial gas suppliers and logistics providers",
+     "stake": "May face liability claims and stricter handling protocols."
+    }
+   ],
+   "hints": [
+    "Compare the two-week shutdown with the two-quarter revenue loss, and model it as a recovery curve shaped by cycle time and work-in-process.",
+    "Treat a safety incident in the materials-handling stage as an upstream disruption rather than a typical supplier failure. Explore the link between operational safety and resilience.",
+    "Use server-chip market share over the following quarters to check whether lost sales were deferred or captured by competitors."
+   ],
+   "data_leads": "Earnings call transcripts and SEC 8-K/10-Q filings for Intel and competitors; FactSet Revere links to Intel's customers, with Compustat customer segments as a public-adjacent alternative, to trace downstream exposure.",
+   "keywords": [
+    "supplier concentration",
+    "cyber-physical risk",
+    "capacity utilization",
+    "common-mode failure",
+    "semiconductor fab disruption"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "call_transcripts",
+    "factset_revere"
+   ],
+   "related": [
+    {
+     "title": "Balancing Resilience and Efficiency: A Literature Review on Overcoming Supply Chain Disruptions",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241302735",
+     "cites": 69,
+     "why": "Reviews the literature on the trade-off between supply chain resilience and efficiency, a frame for asking why leading-edge chip capacity stays so concentrated."
+    },
+    {
+     "title": "Contracting for Infrequent Restoration and Recovery of Mission-Critical Systems",
+     "journal": "Management Science",
+     "year": 2010,
+     "url": "https://doi.org/10.1287/mnsc.1100.1193",
+     "cites": 157,
+     "why": "Models contracts for restoring and recovering mission-critical systems after rare disruptions, which applies to fab recovery and the related supplier incentives."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/intel-says-israel-fab-explosion-will-cost-company-600m-in-losses-as-q3-26-revenue-hits-165bn/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Oct 30"
+  },
+  {
+   "candidate_id": 18,
+   "headline": "Meta buys environmental attribute certificates for 200,000 tons of Fortera low-carbon cement to anchor a Missouri plant",
+   "theme": "Sustainable Operations",
+   "original_url": "https://www.canarymedia.com/articles/clean-industry/meta-fortera-deal-cement-plant-missouri",
+   "summary": "Meta signed a multi-year agreement, announced around Oct 29, 2026, to buy environmental attribute certificates covering about 200,000 tons of cement from Fortera's first commercial low-carbon cement plant, planned for Ste. Genevieve, Missouri. The physical cement will be sold near the plant at market rates, while Meta claims the low-carbon benefit for data centers it builds elsewhere. Financial terms were not disclosed.",
+   "background": "Fortera, a San Jose startup, captures CO2 from other companies' industrial processes and puts it into cement, where it stays trapped. Very little clean cement or green steel is produced in the US today. Microsoft, which invested in Fortera last year, also plans to buy its certificates, and Google and Microsoft have similar certificate deals with Swedish green-steel maker Stegra.",
+   "problem": "Low-carbon materials plants struggle to raise financing without assured demand. Buyers face a mismatch: cement doesn't usually travel far, so Meta cannot physically use output from Missouri at its data center sites. Separating the environmental attribute from the physical product solves the logistics problem but raises questions about whether the claimed reductions are additional and credible. The plant's construction timeline and financing status are not reported.",
+   "where_why": "The friction sits at the financing stage of a first-of-a-kind production plant. It reflects demand uncertainty for a green product that commands a price premium, the high transport cost of cement relative to its value, which keeps markets local, and information asymmetry about embodied-carbon claims. The certificate works as a demand signal that can be traded independently of the physical cement.",
+   "stakeholders": [
+    {
+     "name": "Meta",
+     "stake": "Wants to cut the embodied carbon of its data center buildout and make credible claims about it."
+    },
+    {
+     "name": "Fortera",
+     "stake": "Needs offtake commitments to finance its first commercial plant and move from pilots to full-scale production."
+    },
+    {
+     "name": "Local cement buyers near Ste. Genevieve",
+     "stake": "Get the physical cement at market prices but without the environmental attribute."
+    },
+    {
+     "name": "Other hyperscalers (Microsoft, Google)",
+     "stake": "Compete for limited green-material supply through similar certificate deals."
+    }
+   ],
+   "hints": [
+    "Compare certificate offtake for materials with virtual power purchase agreements. The book-and-claim approach is borrowed from electricity markets.",
+    "Model the offtake as a demand-signaling contract under capacity investment uncertainty: how much committed volume gets a plant financed?",
+    "A puzzle worth noticing: if several buyers hold certificates from the same plant, how do they keep claims from overlapping?"
+   ],
+   "data_leads": "EPA GHGRP cement plant emissions as a baseline; USGS cement statistics; corporate sustainability reports and CDP responses for embodied-carbon claims.",
+   "keywords": [
+    "demand signaling",
+    "long-term supply contracts",
+    "market-based emissions accounting",
+    "embodied carbon",
+    "capacity investment under uncertainty"
+   ],
+   "dataset_candidates": [
+    "USGS Cement Statistics and Information"
+   ],
+   "datasets": [
+    "epa_ghgrp",
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "A model for wind farm management with option interactions",
+     "journal": "Production and Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/poms.13721",
+     "cites": 8,
+     "why": "A real-options model of capacity expansion and exit for an energy asset, relevant to how offtake commitments change the value of investing in a first-of-a-kind plant."
+    }
+   ],
+   "url": "https://www.canarymedia.com/articles/clean-industry/meta-fortera-deal-cement-plant-missouri",
+   "follows": [],
+   "source": "Canary Media",
+   "date": "Oct 30"
+  },
+  {
+   "candidate_id": 67,
+   "headline": "Schneider moves its eastern intermodal business from CSX to Norfolk Southern as NS pursues Union Pacific merger",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://www.freightwaves.com/news/schneider-to-shift-eastern-rail-business-to-norfolk-southern-from-csx",
+   "summary": "Under an agreement announced Oct 29, 2026, Schneider National will make Norfolk Southern (NS) its main eastern rail provider in place of CSX, starting in November. Schneider's company-owned equipment, drivers and logistics operations, including about 23,900 chassis, 26,800 containers and 60+ rail hubs, move onto NS's 22-state intermodal network. Financial terms, the volume moving and a specific cutover date were not disclosed.",
+   "background": "Schneider's own drivers handle over 90% of its domestic dray moves. NS is investing in new Cincinnati–Atlanta service, double-stack clearance on its 'East Edge' route between the Midwest and New England, and terminal expansions and upgrades in states including Ohio, Michigan, North Carolina and Illinois. NS intermodal volume rose 3% in Q3 2026, and NS is pursuing a merger with Union Pacific.",
+   "problem": "A large intermodal provider is consolidating its eastern business with one railroad just as that railroad seeks a transcontinental merger. This bears on competition between the two eastern railroads, on whether NS's network and terminals can absorb the added volume, and on whether the move actually shifts freight from trucks to rail or mostly reallocates existing rail volume. CSX's response has not been reported.",
+   "where_why": "The decision happens at the stage where shippers and carriers choose rail partners in a duopoly. It is shaped by switching costs tied to terminals and equipment, uncertainty about railroad service levels, and strategic positioning ahead of a merger that could change single-line reach. Terminal capacity and drayage coordination determine whether the move improves service.",
+   "stakeholders": [
+    {
+     "name": "Schneider National",
+     "stake": "Wants more reliable intermodal capacity and network reach to win freight from trucks."
+    },
+    {
+     "name": "Norfolk Southern",
+     "stake": "Gains volume and supports its growth and merger case; must deliver service on upgraded routes."
+    },
+    {
+     "name": "CSX",
+     "stake": "Loses a major intermodal customer's eastern volume in a two-railroad market."
+    },
+    {
+     "name": "Shippers and regulators reviewing the NS–UP merger",
+     "stake": "Care about rail competition, rates and service quality."
+    }
+   ],
+   "hints": [
+    "Look at how NS and CSX intermodal carloads diverge after November, a single customer switch observable in weekly rail data.",
+    "Model the choice as a supplier-switching decision with relationship-specific assets such as hubs, chassis and drayage networks.",
+    "Consider whether the gain in mode shift is real or a zero-sum transfer between railroads, using emissions intensity per ton-mile across modes."
+   ],
+   "data_leads": "AAR weekly rail traffic (intermodal units by carrier); STB carrier filings and NS/CSX 10-Qs on SEC EDGAR; DAT/SONAR truckload rates, or FHWA Freight Analysis Framework as a public alternative, for truck-to-rail competition.",
+   "keywords": [
+    "intermodal rail",
+    "mode shift",
+    "supplier switching",
+    "rail merger",
+    "capacity utilization"
+   ],
+   "dataset_candidates": [
+    "AAR Weekly Rail Traffic reports",
+    "STB Rail Service Data (EP 724)"
+   ],
+   "datasets": [
+    "sec_edgar",
+    "freight_rates"
+   ],
+   "related": [
+    {
+     "title": "Scheduled Service Network Design for Freight Rail Transportation",
+     "journal": "Operations Research",
+     "year": 2014,
+     "url": "https://doi.org/10.1287/opre.2013.1254",
+     "cites": 150,
+     "why": "Develops a scheduled service network design model for freight rail, the kind of planning NS faces in absorbing new intermodal volume on new routes."
+    },
+    {
+     "title": "Introducing synchromodality: One missing link between transportation and supply chain management",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/jscm.12269",
+     "cites": 51,
+     "why": "Develops and tests the synchromodality construct for flexible multimodal transport, relevant to how Schneider coordinates drayage and rail."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/schneider-to-shift-eastern-rail-business-to-norfolk-southern-from-csx",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Oct 30"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "Several items involve committing early under uncertainty about future capacity. CAISO offers data centers early but curtailable grid service before network upgrades are built, Meta finances a cement plant that does not yet exist by committing to buy its certificates, and Schneider commits its eastern volume to a railroad that is still expanding terminals. Comparing these three contracts, especially who bears the risk if capacity arrives late, could support a common model of conditional access to scarce infrastructure.",
+ "also": [
+  {
+   "title": "Massachusetts Will Require New Data Centers to Use Clean Energy",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPdHN0Y2Q2OUJ2TFNNVWNQZ05vZEMxOVdKaXQ5RjFteXVONGFLcFROSmZuQ1JrRTNRT0FIS19GTm9BaFphRnZRb0VTREpsbG9sUXJvZ29ZamFYVU1iX25PZ2lDSzltY3hWcHdNWW1Gb1lwdzMxMFJRdWRWdGVPT2lwbDFlZF9Db2ZyMi1Mc2llTlplcVVBYy0tQ21B?oc=5",
+   "source": "EnergyNow.com",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "GM–eVAC split highlights demand-side risk in US magnet buildout",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPanR4bXVmM29qZ19DSTBMY3A4Y3BrQXIzamdzVGMzM2hLUVRxQ2ktek4yU29KY1pvZEVPeVNlakJrSUlqUXB1ZjQ0Wl9jc2JqT1BKVS1rQVpuaDQ4UTR5dFA4cVBCUzZXWWFXU2Jta1FDRFUyNEJNNENkcG5ldi1tNnQ5MkxvUDBScUQ2T3lNdlpKanY0cTdBN2hxV3NiTGhZUFp0dVBIWlI5TFdG?oc=5",
+   "source": "Benchmark Mineral Intelligence",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Major brands at risk of breaching EU deforestation law, investigation reveals",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNN25RVHVJa001SkpQWmljbXV5RjF0REMzdnlUY1o0SjZRZmxoSEJKWHU2Z2pVTnFZdlBzNzV4NEpKbVJ5X3hVQkRjSmNoV05EWkd4bnVGQnBaRHBXX2ZCWlI5Q3ctcko2ekJYeFFPaHNjWkJvSnlNNTUtYTJ6UzgyNmZvT1dQVDZVOVZlWFVDNHNOcHd3SzFEc3JGal9MVHJheUdKS3JwZHlxMG5jTHBfLXBXUQ?oc=5",
+   "source": "ENDS Europe",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "US Adds Three Chinese Genomics Companies to Forced Labor Import Restrictions",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQcl9MWjRVQzg4R3p6RTUzWExUYWx4cm9qaEcyLXAtQ3NOUVlvbWNLUHRaQzlVRm1oTGljQjZrMFYyRXJRNU9yVXFVeGpNcERtZ1lzNzUtYzAzUnJXOVAxYzZxWXg3NXpaTGxReVNhcnRFdUFsYkQ5cFJ5czJ3ZXVwM3NzZVVLb3VjWWxpbGprZHJXTVV1dHRoNm5RMzQ1dmtBVWpYbDd3?oc=5",
+   "source": "Clinical Lab Products",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "European inland ports push for drought safeguards in EU climate law",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQcGpLWGNkUkJQQThIUW51VjJJaDdIWTA1MkhFdWZySzlhb2k5djYwQ2I1ZnFjMXJkVUl6RS1aUERVb01oTEZ2WVJtYWZCeGhzWUJjbUViTE9QdU40b19EcFI2S3RrUFVyc3lCS2xXc1NLZlptQ2pQd1RIVzFKWWxFTVJVQ01NS1EwdUZQUkdrRWtmSm5C?oc=5",
+   "source": "Splash247",
+   "theme": "Climate Risk & Adaptation"
+  }
+ ]
+}
