@@ -33,8 +33,8 @@ research_profile: |
   Reader: first-year PhD student in Operations Management at a US business school.
   Core interests: sustainable operations, ESG (disclosure, ratings, regulation), supply chain
   resilience and disruption, energy systems and the energy/power demand of AI data centers.
-  Advisor works on circular economy (remanufacturing, recycling, reuse, product take-back, EPR,
-  packaging, waste) — give these a modest bonus, but keep the mix broad.
+  Also follows the circular economy (remanufacturing, recycling, reuse, EPR, packaging, waste),
+  but treat it like any other theme: no extra weight.
   Prefer stories that could seed empirical or analytical OM research: new regulations or policy
   shocks (natural experiments), supply disruptions and firm responses, notable operational
   decisions by firms (sourcing, reshoring, inventory, capacity, siting), new public datasets or
@@ -59,6 +59,12 @@ google_news_queries:
   - '(shipping OR trucking OR freight) (decarbonization OR emissions OR "electric truck" OR "green fuel")'
   - '"food waste" OR "food loss" OR "food supply chain"'
   - '(crop OR harvest OR livestock) (shortage OR prices) supply'
+
+# 후보에서 제외할 출처 (Google News에 섞여 들어오는 시세·SEO성 사이트 등). 매체 이름 그대로 적으면 됩니다.
+blocked_sources:
+  - "Stocktwits"
+  - "TradingView"
+  - "IndexBox"
 
 # 전문 매체 RSS
 rss_feeds:

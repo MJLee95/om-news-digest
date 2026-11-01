@@ -57,7 +57,7 @@ def main() -> None:
     seen_titles, seen_urls = state.seen_sets(seen)
     raw = (sources.fetch_rss(cfg["rss_feeds"], since)
            + sources.fetch_google_news(cfg["google_news_queries"], since))
-    news = sources.dedupe(raw, seen_titles, seen_urls)
+    news = sources.dedupe(raw, seen_titles, seen_urls, cfg.get("blocked_sources", []))
 
     want_papers = args.papers or today.weekday() in d["academic_weekdays"]
     papers = []

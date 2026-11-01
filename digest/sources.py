@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html
 import re
+import time
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from urllib.parse import quote_plus
@@ -138,7 +139,10 @@ def fetch_papers(journals: list[dict], days: int, mailto: str = "") -> list[Cand
     return out
 
 
-def dedupe(cands: list[Candidate], seen_titles: set[str], seen_urls: set[str]) -> list[Candidate]:
+def dedupe(cands: list[Candidate], seen_titles: set[str], seen_urls: set[str],
+           blocked_sources: list[str] = ()) -> list[Candidate]:
+    blocked = {b.strip().lower() for b in blocked_sources}
+    cands = [c for c in cands if c.source.strip().lower() not in blocked]
     out, titles = [], set()
     # Prefer specialist RSS entries (direct links + snippets) over Google News duplicates.
     for c in sorted(cands, key=lambda c: "query" in c.extra):
@@ -157,6 +161,28 @@ def _abstract(inv: dict | None, limit: int = 450) -> str:
     return clean_text(" ".join(w for _, w in words), limit)
 
 
+def _openalex_get(params: dict, label: str, attempts: int = 4) -> list | None:
+    """GET /works with retries: OpenAlex answers 429 when called too fast, and occasionally 5xx."""
+    for k in range(attempts):
+        time.sleep(1.0 if k == 0 else 0)  # pace consecutive queries
+        try:
+            r = requests.get("https://api.openalex.org/works", params=params, headers=UA, timeout=30)
+            if r.status_code == 429 or r.status_code >= 500:
+                wait = float(r.headers.get("Retry-After") or 2 ** (k + 1))
+                print(f"[info] OpenAlex {r.status_code} for '{label}', retrying in {wait:.0f}s")
+                time.sleep(min(wait, 30))
+                continue
+            r.raise_for_status()
+            return r.json()["results"]
+        except Exception as ex:
+            if k == attempts - 1:
+                print(f"[warn] OpenAlex failed: {label}: {ex}")
+                return None
+            time.sleep(2 ** (k + 1))
+    print(f"[warn] OpenAlex failed after {attempts} tries: {label}")
+    return None
+
+
 def search_related(queries: list[str], issns: list[str], per_query: int = 6, mailto: str = "") -> list[dict]:
     """Search OpenAlex for papers in the given journals matching each query (deduped by DOI)."""
     out, dois = [], set()
@@ -169,12 +195,8 @@ def search_related(queries: list[str], issns: list[str], per_query: int = 6, mai
         }
         if mailto:
             params["mailto"] = mailto
-        try:
-            r = requests.get("https://api.openalex.org/works", params=params, headers=UA, timeout=30)
-            r.raise_for_status()
-            results = r.json()["results"]
-        except Exception as ex:
-            print(f"[warn] OpenAlex failed: {q}: {ex}")
+        results = _openalex_get(params, q)
+        if results is None:
             continue
         for w in results:
             doi = w.get("doi")

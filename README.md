@@ -60,7 +60,7 @@ Gmail 발송 → 스토리 브리핑 갱신 → 아카이브 사이트(docs/) �
 
 | 바꾸고 싶은 것 | 파일 |
 |---|---|
-| 관심사, 기사 개수, 테마, 뉴스 소스, 학술지, 바이라인 | `config.yaml` |
+| 관심사, 기사 개수, 테마, 뉴스 소스, 제외할 출처(`blocked_sources`), 학술지, 바이라인 | `config.yaml` |
 | 데이터셋 목록과 접근성 | `datasets.yaml` |
 | About 페이지 | `about.md` |
 | 실행 시각 | cron-job.org (예비: `.github/workflows/*.yml`의 cron) |
@@ -69,7 +69,7 @@ Gmail 발송 → 스토리 브리핑 갱신 → 아카이브 사이트(docs/) �
 
 ## 설정 (처음 한 번)
 
-1. **Anthropic API 키**: https://console.anthropic.com → API Keys. Claude 구독과 별개인 종량제입니다. 매일 실행은 회당 $0.7~0.9, 주간 리뷰는 약 $0.1, 스토리 브리핑은 갱신될 때마다 $0.3~0.7입니다.
+1. **Anthropic API 키**: https://console.anthropic.com → API Keys. Claude 구독과 별개인 종량제입니다. 실제 비용(10/16~10/28 기준): 매일 실행은 회당 $0.65~0.93(평균 약 $0.80), 주간 리뷰는 회당 $0.24~0.28, 스토리 브리핑은 갱신될 때마다 약 $0.3~0.7입니다. 한 달 약 $26~28.
 2. **Gmail 앱 비밀번호**: 2단계 인증을 켠 뒤 https://myaccount.google.com/apppasswords 에서 만듭니다.
 3. **GitHub Secrets** (Settings → Secrets and variables → Actions): `ANTHROPIC_API_KEY`, `GMAIL_ADDRESS`, `GMAIL_APP_PASSWORD`, `DIGEST_RECIPIENT`. 로컬 `.env`가 있으면 `gh secret set -f .env`로 한 번에 등록됩니다.
 4. **cron-job.org**: `POST https://api.github.com/repos/MJLee95/om-news-digest/actions/workflows/daily.yml/dispatches`, 헤더 `Authorization: Bearer <Actions 쓰기 권한 토큰>` · `Accept: application/vnd.github+json` · `X-GitHub-Api-Version: 2022-11-28`, 본문 `{"ref":"main"}`. 주간 리뷰는 `weekly.yml`로 하나 더 만듭니다. 토큰 만료일: 2027-10-14.
@@ -94,6 +94,14 @@ iCloud "Mac 저장 공간 최적화"가 켜진 데스크탑·문서 폴더에 �
 - `data/dataset_candidates.json`: 목록에 없는 데이터셋 후보
 
 ## 변경 기록
+
+### 2026-11-01
+- 2주 운영 점검 후 정비:
+  - 순환경제 가점을 없앴습니다. 다른 테마와 같은 기준으로 고릅니다.
+  - 관련 논문 검색(OpenAlex)이 일시 거절(429)되면 재시도합니다. 10/22, 10/25에 일부 기사의 관련 논문이 빠졌던 원인입니다.
+  - 시세·SEO성 출처(Stocktwits, TradingView, IndexBox)를 후보에서 제외합니다(`config.yaml`의 `blocked_sources`).
+  - GitHub Actions를 v7(Node 24)로 올렸습니다(Node 20 지원 종료 대응).
+  - README의 비용을 실제 운영 기록 기준으로 고쳤습니다.
 
 ### 2026-10-19
 - **기사 형식 변경:** "OM angle / Research Q / Data / ID" 대신 **Background · Problem · Where & why · Stakeholders · Research hints(1~3개) · Data leads**. 완성된 연구 질문 대신 문제 구조와 힌트를 주는 방식입니다. Thread to pull도 "탐색해볼 연결" 수준으로 바꿨습니다. 이전 기사는 예전 형식 그대로 둡니다.
