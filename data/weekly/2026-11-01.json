@@ -1,0 +1,178 @@
+{
+ "overview": "AI data-center power dominated the week from two directions. Jurisdictions issued sharply different rules for large new loads (Spain, Malaysia, CAISO, Texas, Virginia transmission), while the supply side showed multi-year lock-in: Anthropic's S-1 commitments, gas turbine deliveries pushed to about 2031, and BNEF's 30% storage revision. Alongside it, fights over how granular sustainability claims must be (Scope 2 hourly matching, carrier-level shipping emissions, cement certificates) and the EUDR's Dec 30 enforcement date set up clean policy shocks. Transport chokepoints (the Mexican trucking strike, LA–Long Beach rail backlog, Hormuz) and circular-economy collection bottlenecks recurred across days.",
+ "patterns": [
+  {
+   "title": "One shock, many large-load rulebooks",
+   "explanation": "Within one week, regulators answered the same problem (lumpy, uncertain data-center load arriving faster than grid capacity) with very different tools. Spain set an 80% hourly renewable floor with a 10 MW threshold. Malaysia approved a 30% renewable mandate. CAISO approved curtailable interim interconnection. Texas imposed an open-ended hookup freeze. In Virginia, transmission siting overrides host communities. This cross-sectional variation in rule design, much of it triggered by a single FERC order, is unusually well suited to siting, queue and investment-timing studies, and Ember's finding that only about 3% of capacity is shiftable bounds how much flexibility-based rules can deliver.",
+   "item_ids": [
+    "2026-10-26#1",
+    "2026-10-27#3",
+    "2026-10-29#3",
+    "2026-10-31#1",
+    "2026-11-01#1",
+    "2026-10-30#1"
+   ]
+  },
+  {
+   "title": "Irreversible capacity commitments under volatile forecasts",
+   "explanation": "Firms across the AI-energy chain are locking in long-lived capacity well before demand is known. Anthropic disclosed $265bn in fixed commitments, gas turbine slots are booked out to about 2031, and BNEF revised its 10-year storage forecast up 30% in six months. POSCO converted a high-nickel cathode line to LFP on the strength of MOUs, and Valley Link commits 765-kV lines on the basis of operators' load forecasts. Taken together these are textbook capacity-investment-under-uncertainty settings with observable contract terms (take-or-pay, leases, MOUs) and a live risk of phantom orders, so who bears capacity risk can be measured from filings.",
+   "item_ids": [
+    "2026-10-27#2",
+    "2026-10-29#2",
+    "2026-10-28#2",
+    "2026-11-01#4",
+    "2026-10-26#1"
+   ]
+  },
+  {
+   "title": "Fights over measurement granularity in sustainability claims",
+   "explanation": "Several items turn on whether claims are measured at a fine or coarse grain. The GHG Protocol backed off mandatory hourly matching after only 12% of companies supported it, while Spain kept an hourly floor. VesselBot shows that lane-average shipping factors hide a 20–35% gap between carriers. Meta's cement certificates separate the environmental attribute from the physical product, and RepRisk shows greenwashing scrutiny moving toward transition sectors. On the policy side, the OCC's push to exempt national banks from California's SB 253/261 shows coverage itself is contested. The common OM question is how measurement rules change procurement decisions: PPA portfolios, carrier selection and offtake contracts.",
+   "item_ids": [
+    "2026-10-27#1",
+    "2026-10-27#3",
+    "2026-10-30#5",
+    "2026-10-31#4",
+    "2026-10-28#5",
+    "2026-10-31#2",
+    "2026-10-29#5"
+   ]
+  },
+  {
+   "title": "Circular economy: collection and feedstock control are the binding constraints",
+   "explanation": "In each circular-economy item, processing technology mattered less than getting material back. Türkiye's food-waste plants run at 48% utilization. Shaw depends on landfill tipping fees and demolition contractors to get carpet tile back, BMW's recycled-content target depends on young-fleet return lags, and VW's Zwickau hub dismantles only 4,100 vehicles a year. Clarios' purchase of Ecobat's lead smelters shows OEMs integrating backward to secure feedstock. For the advisor's agenda this points to reverse-logistics network design and vertical integration, rather than recycling technology itself, as the active research margin.",
+   "item_ids": [
+    "2026-10-26#4",
+    "2026-10-27#5",
+    "2026-10-30#4",
+    "2026-10-29#4",
+    "2026-10-28#1"
+   ]
+  }
+ ],
+ "developing": [
+  {
+   "title": "Mexican trucking strike over cargo theft and extortion",
+   "update": "The strike began Oct 26. By Oct 27 the Interior Ministry (Segob) and the CANACAR, HAMOTAC and FEMATRAC groups had agreed to four negotiating rounds, though they disagree on the strike's size (38 sites vs. all 32 states). Watch whether talks yield security or tax concessions and whether BTS October/November truck crossings at Laredo show a measurable dip and recovery.",
+   "item_ids": [
+    "2026-10-27#4",
+    "2026-10-28#4"
+   ]
+  },
+  {
+   "title": "US large-load interconnection rules after FERC's show-cause order",
+   "update": "CAISO is the first grid operator to win board approval for flexible interim connection, with filings due at FERC by Nov 16. Texas's open-ended data-center hookup freeze is already showing up in falling Q3 M&A. The other grid operators' filings will reveal how much rule designs diverge and how cost allocation to ratepayers is handled.",
+   "item_ids": [
+    "2026-10-31#1",
+    "2026-11-01#1",
+    "2026-10-26#1"
+   ]
+  },
+  {
+   "title": "EUDR enforcement countdown (Brazil timber and soy)",
+   "update": "Enforcement starts Dec 30. FEFAC estimates up to 4M tons of Brazilian soymeal could be shut out, and Argentina says it can fill the gap. Lula's narrow re-election, which Bolsonaro has not conceded, adds political uncertainty to domestic enforcement. Watch for last-minute delays, scope changes (soluble coffee has been added) and front-loaded shipments in monthly trade data.",
+   "item_ids": [
+    "2026-10-26#5",
+    "2026-11-01#3"
+   ]
+  },
+  {
+   "title": "LA–Long Beach inland rail bottleneck",
+   "update": "About 35,700 import containers were waiting for on-dock rail, 10,562 of them for nine days or more, with a large gap between LA (41.4%) and Long Beach (15.1%). A possible ILWU Local 26 watchmen strike from Nov 1 would add a labor shock. Watch dwell data and whether shippers shift to trucking, transloading or other ports.",
+   "item_ids": [
+    "2026-10-29#1"
+   ]
+  }
+ ],
+ "ideas": [
+  {
+   "title": "Does conditional interconnection change where and how data centers build?",
+   "question": "When a grid operator offers large loads early but curtailable interconnection (as CAISO does), rather than freezing hookups (Texas) or offering only firm service, how do data-center developers change (a) where they file large-load queue requests, (b) how fast they withdraw speculative requests, and (c) whether they co-locate batteries or gas behind the meter?",
+   "why_now": "A single FERC show-cause order (EL26-71) forces six grid operators to file different rule designs on a common deadline (Nov 16). Texas's freeze has known start dates (Aug 3, Sept 21) and no end date. This creates staggered, policy-driven variation in interconnection terms across neighboring markets while national demand drivers stay roughly common. Ember's estimate that only about 3% of capacity is shiftable and BNEF's jump in on-site data-center storage suggest firms may respond to curtailment terms by buying flexibility on-site rather than shifting load.",
+   "data": "FERC eLibrary compliance filings in EL26-71, coded for curtailment terms, size thresholds and cost allocation; LBNL Queued Up and utility/ERCOT large-load interconnection reports (entries, withdrawals, MW, county); EIA-860 and 860M for planned co-located battery and gas units; EIA-930 hourly load to compute curtailment exposure under each rule.",
+   "identification": "Difference-in-differences or event study at the region-quarter level, using the timing and type of each grid operator's adopted rule, with a border-county design for siting leakage (e.g., counties near ERCOT versus SPP). An analytical complement: a developer chooses between firm service later and interruptible service now, then decides on behind-the-meter capacity. Main threat: rule design is endogenous to queue pressure, since operators with the most speculative load may adopt the strictest rules. Gas turbine lead times (around 2031) and battery tariffs are concurrent shocks that also move behind-the-meter choices. Use pre-period queue composition as a control and test for pre-trends.",
+   "literature": "Lumpy Capacity Investment and Disinvestment Dynamics and Capacity Investment with Demand Learning provide the real-options lens on an open-ended freeze versus conditional access. A Review of Flexible Processes and Operations frames curtailable service as a flexibility contract. The Value of Coordination in Multimarket Bidding of Grid Energy Storage informs the value of behind-the-meter storage once the load is curtailable.",
+   "item_ids": [
+    "2026-10-31#1",
+    "2026-11-01#1",
+    "2026-10-30#1",
+    "2026-10-28#2",
+    "2026-10-29#2",
+    "2026-10-26#1"
+   ]
+  },
+  {
+   "title": "Segregation or leakage: EUDR traceability and Brazilian commodity flows",
+   "question": "Does the EUDR's plot-level traceability mandate cause supply chains to segregate, so that compliant, low-deforestation municipalities keep serving the EU while high-risk origins are redirected to non-EU buyers, rather than reducing deforestation? Does Argentine soymeal displace Brazil's EU share by diverting volumes away from Southeast Asia?",
+   "why_now": "Enforcement begins Dec 30 on a known date, with country risk tiers creating sharp thresholds. FEFAC and Argentine crushers have publicly quantified expected displacement (4–6M t of soymeal). Brazil's political continuity after Lula's re-election holds domestic enforcement roughly constant, so the EU rule is the main shift. Timber checks start the same month, giving a second commodity.",
+   "data": "UN Comtrade and Eurostat Comext monthly flows (HS 2304 soymeal, HS 44 wood) by origin and destination; Trase municipality-to-exporter-to-destination mappings; INPE PRODES deforestation by municipality; FEFAC soy risk assessments and the EUDR country benchmarking list.",
+   "identification": "Municipality-level difference-in-differences: pre-period EU export share multiplied by deforestation risk, interacted with the post-December-2026 period, with outcomes being the EU share of exports and total exports (to separate redirection from contraction). For Argentina, a triple difference on destination (EU versus Southeast Asia). Main threat: anticipatory front-loading before Dec 30 and the possibility of yet another enforcement delay, which would blur the timing. Harvest, price and exchange-rate shocks also move flows. Use non-EUDR commodities from the same municipalities as a placebo.",
+   "literature": "Navigating traceability: How pricing and responsibility sharing impact quality and welfare models how traceability costs are shared, which here rise with distance from ports. Sustainability in multi-tier supply chains: Understanding the double agency role of the first-tier supplier fits traders acting as intermediaries for EU importers. Toward 'Omniscient' supply chains: Enabling and incentivizing sustainable operations frames whether visibility improves practices or simply sorts suppliers.",
+   "item_ids": [
+    "2026-11-01#3",
+    "2026-10-26#5"
+   ]
+  },
+  {
+   "title": "Hourly matching mandates and the optimal clean-power procurement portfolio",
+   "question": "How does moving from annual to hourly renewable matching (Spain's 80% hourly floor, the GHG Protocol's optional Method 1) change a large buyer's least-cost mix of solar, wind, storage, long-term PPAs and spot purchases? Which firms adopt the stricter standard voluntarily when it is optional?",
+   "why_now": "The same week brought a binding hourly mandate (Spain, with a solar exemption from the build window and a five-year transition) and a weakened voluntary standard (the GHG Protocol leaves the mandatory date open but requires firms to disclose their method). Firms told the consultation that hourly rules would push them from long-term contracts toward spot purchases (72%), a testable claim. The method disclosure creates an observable self-selection signal from 2027.",
+   "data": "REE and ENTSO-E hourly Spanish generation and demand; EIA-930 hourly US grid data to build counterfactual hourly-matched emissions; CDP climate responses (location- versus market-based Scope 2, instruments used); SEC EDGAR PPA disclosures; GHG Protocol consultation respondent lists; Spanish data-center pipeline trackers to check for bunching of project sizes below 10 MW.",
+   "identification": "Analytical core: a stochastic portfolio model with an hourly coverage constraint, calibrated to Spanish hourly profiles, comparing the 80% floor, Malaysia-style capacity- versus consumption-based mandates, and annual matching. Empirical complement: a selection model of early Method 1 adoption on the pre-existing gap between location- and market-based Scope 2 and on grid mix; for Spain, a test for bunching of project sizes at the 10 MW threshold. Main threat: voluntary adopters are those with already-clean regional grids or existing 24/7 contracts, so adoption reflects low cost rather than commitment. Results should be read as a selection pattern, not a causal effect.",
+   "literature": "Meeting Corporate Renewable Power Targets supplies the contract-portfolio baseline, which hourly constraints extend. The Unintended Carbon Impacts of Large-Scale Electricity Storage cautions that storage built to meet the floor may not cut emissions. Market Reaction to Mandatory Nonfinancial Disclosure informs how markets might price disclosure of which method a firm uses.",
+   "item_ids": [
+    "2026-10-27#1",
+    "2026-10-27#3",
+    "2026-10-29#3"
+   ]
+  }
+ ],
+ "watch": [
+  "Nov 16: grid operators' compliance filings due at FERC on large-load interconnection (EL26-71); compare CAISO's approved design with the others.",
+  "Mexico Segob–trucker negotiating rounds; whether the strike resumes; next BTS border crossing release for Laredo truck volumes.",
+  "LA/LB: possible ILWU Local 26 watchmen strike from Nov 1 and on-dock rail dwell updates; AAR weekly intermodal data as Schneider moves eastern volume from CSX to Norfolk Southern in November.",
+  "EUDR Dec 30 countdown: any EU delay or scope changes, Brazilian election challenges, and front-loaded soymeal and wood shipments in monthly Comext data."
+ ],
+ "items": {
+  "2026-10-26#1": "Northern Virginia's data center load drives 765-kV transmission lines across three states, prompting siting fights far from the demand",
+  "2026-10-26#2": "Saudi Arabia plans to store crude in Singapore's Jurong Rock Caverns from H2 2027 as the Hormuz disruption hits Asian supply",
+  "2026-10-26#3": "European Parliament backs JOGMEC-style agency that could take equity stakes and stockpile critical minerals",
+  "2026-10-26#4": "Türkiye's food-waste-to-animal-feed program covers 74 of 81 provinces but runs at under half its capacity",
+  "2026-10-26#5": "Lula wins fourth term as Brazil's timber exports face EU deforestation-rule checks",
+  "2026-10-27#1": "GHG Protocol proposes delaying mandatory hourly matching and deliverability in Scope 2 accounting after weak corporate support",
+  "2026-10-27#2": "Anthropic's S-1 discloses roughly $265bn in fixed compute commitments and $417bn in new lease and capacity agreements",
+  "2026-10-27#3": "Spain softens draft data center decree: 10 MW threshold, 36-month matching window, but 80% hourly renewable coverage stays",
+  "2026-10-27#4": "CANACAR launches indefinite nationwide Mexican trucking strike over cargo theft, violence and toll tax credit changes",
+  "2026-10-27#5": "Shaw Industries runs carpet tile take-back through its outbound distribution network using empty backhauls",
+  "2026-10-28#1": "Clarios completes purchase of Ecobat's German and Austrian lead-acid recycling sites; reported US deal and $6B figure unverified",
+  "2026-10-28#2": "BNEF raises 10-year US storage forecast 30%, counting on-site data center batteries for the first time",
+  "2026-10-28#3": "European Commission proposes Climate Resilience Law with single reference warming trajectory and mandatory, more frequent risk assessments",
+  "2026-10-28#4": "Mexican trucking groups agree to four rounds of talks with government after strike over cargo theft and extortion",
+  "2026-10-28#5": "RepRisk: companies linked to greenwashing up 28% to 1,594, with energy-transition sectors' share rising to 29%",
+  "2026-10-29#1": "About 35,700 import containers wait for on-dock rail at LA–Long Beach amid record volumes and reported railcar shortages",
+  "2026-10-29#2": "Mitsubishi Power says new gas turbine orders now face delivery around 2031",
+  "2026-10-29#3": "Malaysia approves a 30% renewable energy requirement for data centers",
+  "2026-10-29#4": "VW opens its first circular economy hub at the Zwickau EV plant, which faces possible closure after 2031",
+  "2026-10-29#5": "Coty reports a 48% cut in air freight since 2019 but a 33% jump in air freight emissions in FY2026",
+  "2026-10-30#1": "Ember: only about 3% of global data-centre capacity can shift power demand by 2030; onsite generation is a much bigger lever",
+  "2026-10-30#2": "Hungary's post-Orban government halts or restricts battery plants, unsettling Europe's EV battery hub",
+  "2026-10-30#3": "Kroger targets more than 10% direct sourcing, up from under 1%, with owned import hubs in South America and Asia",
+  "2026-10-30#4": "BMW reports one-third recycled content and targets at least 50% by 2030, betting on direct battery-cell recycling",
+  "2026-10-30#5": "VesselBot: carrier choice changes well-to-wake emissions intensity by up to 35% on the same container trade",
+  "2026-10-31#1": "CAISO board approves 'flexible interim' interconnection rules for data centers and other large loads, ahead of FERC filing",
+  "2026-10-31#2": "OCC asks California regulators to exempt national banks from SB 253 and SB 261 climate-disclosure laws",
+  "2026-10-31#3": "Intel expects ~$600M revenue loss from deadly explosion at Israel's Fab 28, hitting 10nm-class Xeon supply",
+  "2026-10-31#4": "Meta buys environmental attribute certificates for 200,000 tons of Fortera low-carbon cement to anchor a Missouri plant",
+  "2026-10-31#5": "Schneider moves its eastern intermodal business from CSX to Norfolk Southern as NS pursues Union Pacific merger",
+  "2026-11-01#1": "Texas M&A deal count and value both fell in Q3 2026 as Abbott's data center hookup and permit freeze weighs on dealmaking",
+  "2026-11-01#2": "China vows countermeasures after FCC bars Chinese labs from certifying US-bound electronics starting December 2028",
+  "2026-11-01#3": "EU deforestation rules could shut out up to 4M tons of Brazilian soymeal, and Argentina says it can fill the gap",
+  "2026-11-01#4": "POSCO Future M signs LFP cathode supply deals with LG Energy Solution, SK On and Samsung SDI",
+  "2026-11-01#5": "Amazon and Tata Motors begin deploying 3,000 electric trucks in Amazon's India middle-mile network, owned by carrier partners"
+ },
+ "dataset_candidates": [
+  {
+   "name": "Global Forest Watch tree cover loss data",
+   "mentions": 2
+  }
+ ]
+}
