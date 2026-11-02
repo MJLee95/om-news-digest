@@ -220,9 +220,10 @@
   "name": "NESO Transmission Entry Capacity (TEC) Register",
   "first_seen": "2026-10-20",
   "items": [
-   "2026-10-20#3"
+   "2026-10-20#3",
+   "2026-11-02#1"
   ],
-  "last_seen": "2026-10-20"
+  "last_seen": "2026-11-02"
  },
  "esma enforcement decisions database extracts": {
   "name": "ESMA enforcement decisions database extracts",
@@ -775,5 +776,45 @@
    "2026-11-01#5"
   ],
   "last_seen": "2026-11-01"
+ },
+ "nrel north american lithium-ion battery supply chain database": {
+  "name": "NREL North American Lithium-ion Battery Supply Chain Database",
+  "first_seen": "2026-11-02",
+  "items": [
+   "2026-11-02#2"
+  ],
+  "last_seen": "2026-11-02"
+ },
+ "eurostat waste statistics (env_wastrt / env_wasgen)": {
+  "name": "Eurostat waste statistics (env_wastrt / env_wasgen)",
+  "first_seen": "2026-11-02",
+  "items": [
+   "2026-11-02#3"
+  ],
+  "last_seen": "2026-11-02"
+ },
+ "google/wri/iiasa forest typology (forty) 2020 map": {
+  "name": "Google/WRI/IIASA Forest Typology (ForTy) 2020 map",
+  "first_seen": "2026-11-02",
+  "items": [
+   "2026-11-02#4"
+  ],
+  "last_seen": "2026-11-02"
+ },
+ "jrc global forest cover 2020 (eudr reference map)": {
+  "name": "JRC Global Forest Cover 2020 (EUDR reference map)",
+  "first_seen": "2026-11-02",
+  "items": [
+   "2026-11-02#4"
+  ],
+  "last_seen": "2026-11-02"
+ },
+ "fmcsa motor carrier management information system (mcmis) carrier census": {
+  "name": "FMCSA Motor Carrier Management Information System (MCMIS) carrier census",
+  "first_seen": "2026-11-02",
+  "items": [
+   "2026-11-02#5"
+  ],
+  "last_seen": "2026-11-02"
  }
 }
