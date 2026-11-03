@@ -1,0 +1,355 @@
+{
+ "intro": "Today's issue covers a cyberattack spreading through Europe's supermarket cold chains, a Senate bill that could shift grid-expansion costs onto data centers, and Brazil reopening its sustainability-reporting rules months after making them voluntary. It also covers a state lawsuit against a climate-risk score provider and an ammonia price spike tied to falling Trinidad supply.",
+ "items": [
+  {
+   "candidate_id": 229,
+   "headline": "Second wave of cyberattacks on supermarket refrigeration controls hits stores in Belgium, Luxembourg and Sweden after October attack in France",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.cbsnews.com/news/europe-grocery-store-refrigerator-freezer-cyberattack-hack-food-wasted/",
+   "summary": "Overnight into Nov. 2, 2026, Ahold Delhaize and Colruyt reported an IT incident that sent fridge and freezer temperatures soaring in dozens of stores in Belgium and Luxembourg. In Sweden, ICA and Coop reported similar spikes; one ICA store said its units had been set to 50°C, and Coop said 6 of its roughly 800 Swedish stores had to discard food. This followed an Oct. 12 attack in which E.Leclerc, Intermarché and Coopérative U said hundreds of French stores were hit; that incident targeted Danfoss refrigeration controls.",
+   "background": "Supermarket refrigeration is increasingly run through networked controllers, often managed by third-party service firms. Delhaize's systems, for example, are operated by Belgian refrigeration company Sabcobel. Security firm Claroty warned in August that the Danfoss controllers could be hacked remotely. Ahold reported suspicious activity in its infrastructure to Dutch police in October. Sabcobel's CEO said the attackers switched evaporators into defrost mode and that technicians worked from 1 a.m. to disconnect units. Many units need physical modifications, which he said 'requires investment.'",
+   "problem": "A cyber intrusion turns into physical losses: perishable inventory is destroyed and stores must scramble to respond. The total store count, the value of lost food and the attacker are all unknown. Retailers and their refrigeration contractors now face costly retrofits. Sources disagree on basic facts. Reports differ on which countries were hit, on whether Danfoss still provided security updates, and on whether default passwords were in use. It is also unconfirmed whether the November wave used the same equipment as the October one.",
+   "where_why": "The problem sits in the retail cold chain's operational technology layer, which spans the controller vendor, the service integrator and the store. Several frictions combine. Many chains rely on the same controller platforms, creating common-mode exposure. Vendors stop supporting older devices, and passwords are left at defaults. Incentives are split: the vendor, the integrator and the retailer each bear only part of the security cost. Physical retrofits require capital and technicians, which slows remediation across hundreds of sites.",
+   "stakeholders": [
+    {
+     "name": "Grocery retailers (Ahold Delhaize, Colruyt, ICA, Coop, E.Leclerc, Intermarché, Coopérative U)",
+     "stake": "They lose spoiled inventory and sales and face retrofit costs and food-safety exposure."
+    },
+    {
+     "name": "Refrigeration control vendors (Danfoss)",
+     "stake": "They face reputational and possible liability exposure over device security and how long they support legacy products."
+    },
+    {
+     "name": "Refrigeration service integrators (Sabcobel)",
+     "stake": "They must mobilise technicians and carry out physical modifications, and they need to settle who pays for those investments."
+    },
+    {
+     "name": "Consumers and food-safety regulators",
+     "stake": "Their concern is product safety after temperature excursions and the availability of perishables."
+    }
+   ],
+   "hints": [
+    "The attack moved from French chains to retailers in several other countries, possibly through shared controller platforms. That makes it a natural setting for thinking about common-mode failure and supplier concentration in operational technology.",
+    "Consider who should fund security retrofits for legacy devices. Incentive misalignment among vendor, integrator and retailer could be framed as a contracting or end-of-support problem.",
+    "The October-to-November gap allows a comparison of firms that responded after the first wave with those that did not."
+   ],
+   "data_leads": "GDELT and news archives to build store- and country-level incident timelines; CISA ICS advisories and vendor security bulletins for controller vulnerability disclosure dates; retailer annual reports for disclosed losses.",
+   "keywords": [
+    "cyber-physical risk",
+    "cold chain",
+    "common-mode failure",
+    "vendor end-of-support",
+    "perishable inventory"
+   ],
+   "dataset_candidates": [
+    "CISA ICS security advisories"
+   ],
+   "datasets": [
+    "gdelt"
+   ],
+   "related": [
+    {
+     "title": "Strange Dance Partners: Supply Chain Cyberattacks and Chained Vulnerability",
+     "journal": "Journal of Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1002/joom.1374",
+     "cites": 14,
+     "why": "Develops the idea of 'chained vulnerability,' in which suppliers and other connected actors become entry points for cyberattacks, which fits attacks that may have run through refrigeration vendors and integrators."
+    },
+    {
+     "title": "The impact of chief risk officer appointments on firm risk and operational efficiency",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1175",
+     "cites": 48,
+     "why": "Studies how appointing a chief risk officer affects firm risk and operational efficiency, relevant to how retailers organise cyber-physical risk governance after such incidents."
+    }
+   ],
+   "url": "https://www.cbsnews.com/news/europe-grocery-store-refrigerator-freezer-cyberattack-hack-food-wasted/",
+   "follows": [
+    {
+     "id": "2026-10-14#3",
+     "label": "Oct 14 · Cyberattack on Danfoss refrigeration controllers hits ~700 French supermarkets, "
+    }
+   ],
+   "source": "Chosunbiz",
+   "date": "Nov 03"
+  },
+  {
+   "candidate_id": 140,
+   "headline": "Senate bill could charge data center operators about $55 billion in transmission costs over 10 years",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "",
+   "summary": "According to a TechTarget teaser, a Senate bill could generate $55 billion in data center transmission charges over 10 years, changing how large computing loads pay for grid expansion. The bill's name, number, sponsors and status, and the source of the $55 billion estimate, could not be verified.",
+   "background": "Large AI data center loads are driving demand for new transmission. Who pays for that expansion, whether the large loads that trigger it or all ratepayers, is a live policy question. Other federal data center bills are in play but should not be confused with this one. S.5054, the Data Center Tax Accountability and Disclosure Act of 2026, would remove bonus depreciation for AI data centers and require disclosure of electricity and water use. A separate data center power-cost bill was rejected by the Senate around Sept. 30, 2026. Neither has been confirmed as the source of the $55 billion figure.",
+   "problem": "Assigning transmission costs to data centers would raise their operating costs, which could change their siting and capacity choices. Not assigning those costs spreads them across other ratepayers. The trade-off is between protecting households from cost shifts and keeping the economics of large-load growth attractive. Details of the bill are not yet confirmed.",
+   "where_why": "The friction arises at the interconnection and transmission-planning stage. Large loads trigger lumpy, long-lived grid investments. Cost allocation rules decide whether those costs fall on the loads that cause them or are socialised across all customers. Data centers can move between jurisdictions, but households cannot, so cost-allocation rules can shape where data centers locate. Federal rules would also interact with state utility tariffs, adding uncertainty.",
+   "stakeholders": [
+    {
+     "name": "Data center operators and hyperscalers",
+     "stake": "They face up to $55 billion in charges, which could change the costs of siting and expansion."
+    },
+    {
+     "name": "Residential and small commercial ratepayers",
+     "stake": "They want to avoid paying for transmission built to serve large loads."
+    },
+    {
+     "name": "Utilities and grid operators",
+     "stake": "They need cost recovery for transmission buildout and predictable large-load demand."
+    },
+    {
+     "name": "Congress and state regulators",
+     "stake": "They balance affordability, economic development and jurisdiction over grid costs."
+    }
+   ],
+   "hints": [
+    "Use the frameworks of cost causation and socialised versus directly assigned cost. Compare federal proposals with existing state large-load tariffs.",
+    "Model the siting decision of a mobile large load facing different cost-allocation regimes across jurisdictions.",
+    "Before building any design around the bill, verify which bill this is."
+   ],
+   "data_leads": "FERC eLibrary and state PUC large-load tariff dockets; LBNL interconnection queue data; EIA-861 for utility sales; congress.gov for the bill's text and status once identified.",
+   "keywords": [
+    "large-load tariffs",
+    "data center electricity demand",
+    "facility siting",
+    "federal-state jurisdiction",
+    "regulatory uncertainty"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "state_puc",
+    "ferc_elibrary"
+   ],
+   "related": [],
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaG9LVHc0M3F4SFlyUXp2dFV1NnNJcHlWVVpPeTVjUFBZXzhkaVVNMGx5cnFWMUh0NThobDM4MXdpN2plRWkyYTkyRjdPZVVvUUVickRJSVJZc1BRRGtzcGxpcnVKVGlsczhKTlc5VTVVb240ZkhZdEVrejNuQXZmekEtSlJtZTNnaXE2RXhheFZXQXNUd0pzeng3M3hIQjc1WXc?oc=5",
+   "follows": [],
+   "source": "TechTarget",
+   "date": "Nov 03"
+  },
+  {
+   "candidate_id": 25,
+   "headline": "Brazil's securities regulator consults on reinstating mandatory sustainability reporting months after making it voluntary",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/brazil-reconsiders-mandatory-sustainability-reporting-just-months-after-scrapping-requirement/",
+   "summary": "Brazil's securities regulator, the CVM, opened a public consultation that weighs mandatory against voluntary sustainability and climate reporting, with comments open until Feb. 28, 2027. This comes after the CVM replaced its 2023 mandate for ISSB-aligned reporting with a comply-or-explain regime in May 2026. The original mandate would have applied from fiscal years starting Jan. 1, 2026.",
+   "background": "In 2023 the CVM set mandatory reporting for public companies under the CBPS standards, which are based on IFRS S1 and S2. In May 2026 it switched to comply-or-explain. Companies that don't report must explain why in a market announcement. Companies that report must follow CBPS/ISSB for at least three consecutive years and must give a year's notice before stopping. Investor, accounting and governance groups criticised the switch as harmful to comparability and transparency.",
+   "problem": "The regulator must choose among six options: keep the current regime, change the conditions for voluntary reporting, phase in a mandate by company size, set a future mandate date, mandate only climate reporting (with Scope 3 on comply-or-explain), or extend the mandate beyond public companies. The CVM says it will test several ideas against evidence. First, voluntary reporting may not produce enough comparable, credible information. Second, the cost-of-capital benefits of a mandate may outweigh compliance costs. Third, smaller firms may bear proportionally higher costs. Fourth, the current conditions may discourage voluntary reporting. Fifth, repeated rule changes may have stranded investments and made the rules less predictable.",
+   "where_why": "The friction sits in the design of disclosure regulation. Information asymmetry and comparability argue for a mandate. Fixed compliance costs and costs that fall harder on small firms argue for flexibility. Conditions on voluntary reporting, such as the three-year lock-in and the notice requirement for stopping, may themselves deter firms from opting in. Frequent policy reversals create regulatory uncertainty that discourages firms from investing in reporting systems.",
+   "stakeholders": [
+    {
+     "name": "CVM",
+     "stake": "It needs to settle on a credible, predictable regime that is backed by evidence."
+    },
+    {
+     "name": "Brazilian listed companies, especially smaller ones",
+     "stake": "They face compliance costs and investments that may be stranded by repeated rule changes."
+    },
+    {
+     "name": "Investors and governance groups",
+     "stake": "They want comparable, credible ESG data and a lower information risk."
+    },
+    {
+     "name": "Accounting and assurance profession",
+     "stake": "Demand for ISSB reporting and assurance services depends on the outcome."
+    }
+   ],
+   "hints": [
+    "The sequence of mandate, then comply-or-explain, then possible re-mandate creates repeated policy shocks. Look at which firms opted in under the voluntary regime and why.",
+    "The lock-in and exit-notice conditions are an unusual feature worth modelling as a deterrent to opting in under voluntary disclosure.",
+    "A size-based phase-in, if adopted, would create a regulatory threshold that could support a regression-discontinuity design."
+   ],
+   "data_leads": "CVM company filings (Formulário de Referência) and the market announcements firms make under comply-or-explain; consultation comment letters; LSEG or MSCI ESG coverage for Brazilian issuers; CDP responses for Brazilian firms.",
+   "keywords": [
+    "mandatory climate reporting",
+    "voluntary disclosure",
+    "regulatory uncertainty",
+    "scope 3 disclosure",
+    "regulatory thresholds"
+   ],
+   "dataset_candidates": [
+    "CVM Formulário de Referência filings",
+    "CVM public consultation comment letters"
+   ],
+   "datasets": [
+    "cdp",
+    "lseg_esg"
+   ],
+   "related": [
+    {
+     "title": "Market Reaction to Mandatory Nonfinancial Disclosure",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2018.3099",
+     "cites": 635,
+     "why": "An event study of equity reactions to the EU mandate for nonfinancial disclosure, a template for measuring how markets value Brazil's mandate reversals."
+    },
+    {
+     "title": "Shareholder Wealth Effects of Modern Slavery Regulation",
+     "journal": "Management Science",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/mnsc.2019.3456",
+     "cites": 96,
+     "why": "Estimates shareholder wealth effects of the UK Modern Slavery Act's supply chain reporting mandate, another reporting mandate whose design varies by firm."
+    }
+   ],
+   "url": "https://www.esgtoday.com/brazil-reconsiders-mandatory-sustainability-reporting-just-months-after-scrapping-requirement/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 02"
+  },
+  {
+   "candidate_id": 10,
+   "headline": "Florida attorney general sues First Street over climate risk scores shown on Zillow, Redfin and Realtor.com",
+   "theme": "Climate Risk & Adaptation",
+   "original_url": "https://www.esgdive.com/news/florida-ag-sues-climate-analytics-provider-first-street-over-home-risk-scor/873473/",
+   "summary": "On Oct. 23, 2026, Florida Attorney General James Uthmeier sued First Street Technology under the Florida Deceptive and Unfair Trade Practices Act. The suit targets the company's 'Risk Factor' scores for flood, fire, air quality and heat. The state alleges the scores mislead buyers, make homes take longer to sell and sell for less, and diverge from FEMA maps. It seeks $10,000 per violation, or $15,000 per violation involving a senior citizen.",
+   "background": "First Street's scores appeared on major listing sites. Zillow stopped showing them directly in late 2025 and switched to external links. MSCI bought First Street for $120 million, in a deal that closed in August 2026. First Street says its scores differ from FEMA's because FEMA assesses flood risk at the community level. First Street works at the property level and includes changing climate and heavy-rainfall flooding. Nebraska's attorney general reportedly filed a similar suit about two months earlier.",
+   "problem": "The state alleges that First Street's 'peer-reviewed' claims are deceptive and that it uses free scores to sell paid reports. It seeks a jury trial and a ban on calling the scores 'peer reviewed,' 'transparent' or 'accurate.' These are allegations, not findings. The contested issue is whether property-level, forward-looking risk information helps buyers or unfairly lowers home values. Litigation could also chill how widely climate risk information is distributed.",
+   "where_why": "The friction arises in home sales, where buyers know little about property-level hazard exposure. Private scores fill a gap left by community-level FEMA maps. They cut against sellers' and states' interest in keeping home values up, and they rely on proprietary models that outsiders cannot easily check. Whether a listing site displays the scores determines how much they actually affect prices.",
+   "stakeholders": [
+    {
+     "name": "Florida and Nebraska attorneys general",
+     "stake": "They want to protect home values and challenge claims they consider deceptive."
+    },
+    {
+     "name": "First Street / MSCI",
+     "stake": "They face penalties and constraints on marketing, and a threat to the value of a $120 million acquisition."
+    },
+    {
+     "name": "Listing platforms (Zillow, Redfin, Realtor.com)",
+     "stake": "They must weigh legal exposure against giving buyers useful information."
+    },
+    {
+     "name": "Home buyers and sellers",
+     "stake": "Buyers want accurate risk information; sellers want to avoid lower prices and longer times on market."
+    }
+   ],
+   "hints": [
+    "Zillow's late-2025 switch from on-listing display to external links is a change in how salient the scores are. Compare listing outcomes before and after.",
+    "Think about how third-party ratings differ from official maps, and what happens to market information when providers face litigation risk.",
+    "Ask why litigation emerges in particular states. Compare states with and without such suits."
+   ],
+   "data_leads": "FEMA National Flood Hazard Layer versus property-level scores; OpenFEMA NFIP claims; county deed and listing records for days-on-market and price; state court dockets for the Florida and Nebraska suits.",
+   "keywords": [
+    "litigation risk",
+    "climate adaptation",
+    "regulatory enforcement",
+    "climate risk disclosure"
+   ],
+   "dataset_candidates": [
+    "FEMA National Flood Hazard Layer"
+   ],
+   "datasets": [
+    "openfema",
+    "noaa_storm_events"
+   ],
+   "related": [],
+   "url": "https://www.esgdive.com/news/florida-ag-sues-climate-analytics-provider-first-street-over-home-risk-scor/873473/",
+   "follows": [],
+   "source": "ESG Dive",
+   "date": "Nov 02"
+  },
+  {
+   "candidate_id": 241,
+   "headline": "Midwest ammonia prices rise about 45% since June as falling Trinidad gas output cuts US imports",
+   "theme": "Food & Agriculture",
+   "original_url": "https://www.agrolatam.com/usa/news/ammonia-prices-trinidad-fertilizer-costs-farmers-2026/",
+   "summary": "Midwest ammonia rose from about $600 per short ton in late June to about $800 by early October, according to analyst Justin Ratcliff via Reuters, and has been about $875 since. AgroLatam puts the total rise at about 45%. Imports from Trinidad and Tobago, the second-largest foreign source of US ammonia after Canada, reportedly fell about 34% this year as declining natural gas output starved ammonia plants of feedstock and fuel.",
+   "background": "Ammonia production depends on natural gas as both feedstock and fuel, so a gas shortfall in a major exporting country cuts supply directly. US farmers also face high diesel costs, low prices at harvest and weak Chinese demand, and Reuters frames the story around the upcoming midterms. AgroLatam estimates an extra $30.19 per acre at 180 lb of nitrogen per acre, or about $60,380 on a 2,000-acre farm. AgroLatam reports that Nutrien indefinitely suspended its Trinidad nitrogen operations in October over gas supply. That claim is unverified, and earlier reports cited a port-fee dispute.",
+   "problem": "A concentrated foreign source of a critical input shrinks, and the price shock passes through to farmers at a time when their margins are already thin. Several facts remain unclear: the 34% decline figure has a single source, the timing of the $875 price is uncertain, and so is Nutrien's role. Farmers must decide how much nitrogen to buy and when ahead of spring 2027 without knowing future prices.",
+   "where_why": "The shock originates upstream in Trinidad's gas supply, which feeds ammonia production and then exports to the US. Import sourcing is concentrated in Canada and Trinidad, and ammonia needs specialised logistics, so there is little room to switch suppliers quickly. Farmers, as price-takers with little bargaining power, absorb most of the cost.",
+   "stakeholders": [
+    {
+     "name": "US corn and grain farmers",
+     "stake": "They face about $30 per acre in added nitrogen costs on top of low crop prices."
+    },
+    {
+     "name": "Trinidad ammonia producers (e.g., Nutrien)",
+     "stake": "Gas shortages cut their output and exports."
+    },
+    {
+     "name": "Fertilizer distributors and alternative suppliers (e.g., Canada, domestic plants)",
+     "stake": "They could gain market share and margins from the shortage."
+    },
+    {
+     "name": "US policymakers",
+     "stake": "Farm economic pain is a political issue ahead of the midterms."
+    }
+   ],
+   "hints": [
+    "Use a cost pass-through lens. Compare the size of the Trinidad import drop with the Midwest price response, and check whether other sources made up the gap.",
+    "Supplier concentration upstream combined with weak buyer power downstream invites thinking about where a supply shock's costs end up.",
+    "Watch farmers' timing of fertilizer purchases and how much they apply ahead of spring 2027 as a response to uncertain input prices."
+   ],
+   "data_leads": "USITC DataWeb and Census USA Trade Online for ammonia imports by country (HS 2814); USDA AMS fertilizer price reports; USDA NASS for planted acreage and fertilizer use.",
+   "keywords": [
+    "supplier concentration",
+    "cost pass-through",
+    "supplier switching",
+    "pre-buy behavior",
+    "raw material security"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "usitc_dataweb",
+    "usda_ams"
+   ],
+   "related": [
+    {
+     "title": "The effect of customer and supplier concentrations on firm resilience during the COVID ‐19 pandemic: Resource dependence and power balancing",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1236",
+     "cites": 270,
+     "why": "Examines how customer and supplier concentration shaped firm resilience during COVID through a resource-dependence lens, relevant to US dependence on two dominant ammonia sources."
+    },
+    {
+     "title": "Cascading disruptions: Impact of modularity and nexus supplier predictions",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1111/jscm.12326",
+     "cites": 28,
+     "why": "Analyzes how disruptions cascade through supply networks depending on network modularity, useful for tracing the path from a gas shortfall to ammonia supply to farm costs."
+    }
+   ],
+   "url": "https://www.agrolatam.com/usa/news/ammonia-prices-trinidad-fertilizer-costs-farmers-2026/",
+   "follows": [],
+   "source": "AgroLatam",
+   "date": "Nov 02"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "The refrigeration cyberattack and the Trinidad ammonia crunch both show how a single upstream node can transmit shocks to many downstream firms: a controller platform used across retail chains in one case, a dominant foreign supplier in the other. Comparing who absorbs the cost in each case, retailers versus vendors and farmers versus distributors, could sharpen thinking about where supply chain disruption losses end up. Separately, Brazil's disclosure reversal and Florida's suit against First Street both concern whether private or voluntary risk information can be trusted, and who decides when it is too costly or too damaging to markets.",
+ "also": [
+  {
+   "title": "Reshoring and foreign direct investment added 247K manufacturing jobs in 2025",
+   "url": "https://www.supplychaindive.com/news/reshoring-foreign-direct-investment-247k-jobs-2025-report-reshoring-initiative/873433/",
+   "source": "Supply Chain Dive",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "Electric Trucking: Why 2,500 Tesla Semis Will Transform Freight",
+   "url": "https://www.freightwaves.com/news/electric-trucking-why-2500-tesla-semis-will-transform-freight",
+   "source": "FreightWaves",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "China’s vast battery industry runs on nickel. Now, supplies are being disrupted",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQdXZfSFpJOFBIamd0RWp0cnZjVGNfQ1l3TTk5NEdVRWFGdlEtdEV4Q2E3TTYtYkVncmhVNGVXRGxwa2JlTnk5d2JrbHAzTU1WQ3QzLV9RNXRDZmI4RWMydkNIU3FUMFRlaVlndkZvb0doN25kTkl4cWtldGNvZXRNLUo4OWZwVDdiSzRTY25aWjdXd25KcnBpOUF2ZVZlWmkwWUF6QzFabjR3cHZrR3Q3NGxHMjg5WXdTMWdWYW5WcmRoZTdldWd6cGlyMA?oc=5",
+   "source": "South China Morning Post",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUnh2WUdacE1Palp0eFdoSFEzV1lrZXRsWWxKT1JWbm1ndWN5NS1Da1NuUXdYRnBnaHFMcWVRMWJfM2k3OWFVaDd0czVMWEJvT1pndzRYdmoxcE5nTm9sdGd3dE5pcjhFZTQtSGk3NFgwV2hOanpyRUwyZkxKalNmY3RPemhVcS1OdDJpUWthdnpCd2lzcWpZcHQ0OVJvdjJ3SDV3LWZjV2drWjd1WTB5U3QwVTI3WmpTUkg4?oc=5",
+   "source": "EIN News",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Walmart commits $6B to up distribution center automation with Symbotic",
+   "url": "https://www.supplychaindive.com/news/walmart-commits-6b-to-up-distribution-center-automation-with-symbotic/873356/",
+   "source": "Supply Chain Dive",
+   "theme": "Supply Chain Resilience"
+  }
+ ]
+}

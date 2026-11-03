@@ -27,9 +27,10 @@
   "name": "CISA ICS security advisories",
   "first_seen": "2026-10-14",
   "items": [
-   "2026-10-14#3"
+   "2026-10-14#3",
+   "2026-11-03#1"
   ],
-  "last_seen": "2026-10-14"
+  "last_seen": "2026-11-03"
  },
  "inegi raiavl heavy vehicle production and export statistics": {
   "name": "INEGI RAIAVL heavy vehicle production and export statistics",
@@ -816,5 +817,29 @@
    "2026-11-02#5"
   ],
   "last_seen": "2026-11-02"
+ },
+ "cvm formulário de referência filings": {
+  "name": "CVM Formulário de Referência filings",
+  "first_seen": "2026-11-03",
+  "items": [
+   "2026-11-03#3"
+  ],
+  "last_seen": "2026-11-03"
+ },
+ "cvm public consultation comment letters": {
+  "name": "CVM public consultation comment letters",
+  "first_seen": "2026-11-03",
+  "items": [
+   "2026-11-03#3"
+  ],
+  "last_seen": "2026-11-03"
+ },
+ "fema national flood hazard layer": {
+  "name": "FEMA National Flood Hazard Layer",
+  "first_seen": "2026-11-03",
+  "items": [
+   "2026-11-03#4"
+  ],
+  "last_seen": "2026-11-03"
  }
 }

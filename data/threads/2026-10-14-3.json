@@ -1,0 +1,87 @@
+{
+ "id": "2026-10-14#3",
+ "created": "2026-11-03",
+ "updates": [
+  {
+   "date": "2026-11-03",
+   "items": [
+    "2026-10-14#3",
+    "2026-11-03#1"
+   ],
+   "note": "New thread. It opened with the 13 Oct report of about 700 French supermarkets hit through Danfoss controllers. The 3 Nov article adds a second wave on 1–2 Nov in Belgium, Luxembourg and Sweden, turning a national incident into an apparent multi-country campaign, though a link is not yet confirmed."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "Cyberattacks on European supermarket refrigeration controls",
+  "summary": "Overnight cyberattacks on internet-connected store refrigeration controllers forced food disposal at about 700 French supermarkets on 12 Oct 2026 (Danfoss systems, mostly out-of-support models). A second wave on 1–2 Nov 2026 hit stores in Belgium, Luxembourg and Sweden. Attribution, method and whether the two waves are linked remain unconfirmed.",
+  "origin": "In August 2026 a Claroty researcher reportedly found several flaws in Danfoss refrigeration controllers. This is unverified, and it is unknown whether those flaws were used. On the night of 11–12 Oct 2026, attackers reportedly made defrost cycles run non-stop and set some units to 50°C for hours in French supermarkets. Early counts were about 300 Intermarché/Netto stores and nearly 100 Coopérative U stores. On 13 Oct France's finance minister put the total at about 700 of roughly 10,000 supermarkets, including Coopérative U (80 of 2,000 stores), Carrefour and Monoprix. The Paris prosecutor's cybercrime unit opened an investigation into food losses and possible fires. ANSSI, France's national cybersecurity agency, reportedly identified the software and began coordinating with other European agencies. On 12 Oct Ahold Delhaize's Albert Heijn took its online systems offline after a 'security issue,' but AP did not link this to the fridge attacks.",
+  "causes": "The targets were internet-connected refrigeration controllers. Danfoss said most affected units were older products no longer receiving security updates. That points to legacy, unpatched operational-technology (OT) equipment left exposed to the internet, but no official technical analysis confirms this. Who did it and why is unknown: there is no claim of responsibility, no attribution and no ransom demand. Underneath, retailers depend on long-lived cold-chain equipment whose service life outlasts vendor security support.",
+  "actors": [
+   {
+    "name": "Danfoss",
+    "role": "Danish maker of the targeted refrigeration controllers",
+    "stake": "Liability and reputation; it stresses that the affected products were old and out of support"
+   },
+   {
+    "name": "French grocers (Les Mousquetaires/Intermarché-Netto, Coopérative U, E.Leclerc, Carrefour, Monoprix)",
+    "role": "Hit in the first wave; discarded food and restored cooling with refrigeration specialists",
+    "stake": "Food losses (BFMTV estimates possibly several million euros in total, €270k at two Alsace stores), food safety and customer trust"
+   },
+   {
+    "name": "Benelux and Nordic grocers (Ahold Delhaize, Colruyt, ICA, Coop Sweden)",
+    "role": "Hit in the 1–2 Nov wave; temperature spikes in dozens of stores, and 6 of roughly 800 Coop Sweden stores discarded food",
+    "stake": "Inventory losses, store operations and cyber-resilience of store equipment"
+   },
+   {
+    "name": "French state (finance ministry, Paris prosecutor, ANSSI)",
+    "role": "Impact reporting, criminal investigation, technical response and EU coordination",
+    "stake": "Food-system security and setting a response precedent"
+   },
+   {
+    "name": "Unidentified attackers",
+    "role": "Manipulated refrigeration setpoints and defrost cycles",
+    "stake": "Unknown motive"
+   },
+   {
+    "name": "Claroty",
+    "role": "Security firm whose researcher reportedly found Danfoss controller flaws in Aug 2026",
+    "stake": "OT security research credibility"
+   }
+  ],
+  "status": "The French criminal investigation is open. The second wave in Belgium, Luxembourg and Sweden has no official statements yet from those countries' authorities. Still unconfirmed: attribution, arrests, a full Danfoss advisory, the causes of the reported fires, and whether the second wave used the same equipment and method.",
+  "watch": [
+   "Danfoss security advisories and any CISA or CERT-FR industrial-control advisories on its refrigeration controllers",
+   "Paris prosecutor and ANSSI updates on attribution and method",
+   "Statements from Belgium's CCB, Sweden's national cyber agency and the affected retailers on whether the Nov wave involved the same controllers",
+   "Retailer loss disclosures and insurance claims in upcoming quarterly reports (e.g., Ahold Delhaize, Carrefour)"
+  ],
+  "research": [
+   {
+    "question": "How does lifecycle management of legacy, out-of-support store equipment affect operational risk? Which store or chain traits (equipment age, vendor, remote connectivity) predict exposure and the size of losses?",
+    "shock": "Danfoss controller attacks of 12 Oct 2026 (France) and 1–2 Nov 2026 (Belgium, Luxembourg, Sweden)",
+    "data": "Store-level impact counts (e.g., 80 of 2,000 Coopérative U stores, 6 of roughly 800 Coop Sweden stores), retailer disclosures, and Shodan-style scans for exposed controllers"
+   },
+   {
+    "question": "Do OT cyber incidents in cold chains cause spillovers: equipment replacement, vendor switching or a shift to offline control, at affected and unaffected retailers?",
+    "shock": "First-wave attack in France, with ANSSI's warning to other European agencies as a possible diffusion signal before the second wave",
+    "data": "Refrigeration equipment orders and vendor revenues, retailer capex disclosures, procurement tenders"
+   },
+   {
+    "question": "What are the food-waste and inventory costs of cyber-induced cold-chain failures, and how should retailers set monitoring and manual-override policies?",
+    "shock": "Overnight setpoint manipulation (units set to 50°C)",
+    "data": "Reported food-disposal volumes, loss estimates (e.g., €270k at two Alsace stores), insurance claims"
+   }
+  ]
+ },
+ "updated": "2026-11-03",
+ "items": [
+  "2026-10-14#3",
+  "2026-11-03#1"
+ ],
+ "sources": [
+  "https://cybernews.com/security/danfoss-refrigeration-hack-france-supermarkets/",
+  "https://www.cbsnews.com/news/europe-grocery-store-refrigerator-freezer-cyberattack-hack-food-wasted/",
+  "https://www.usnews.com/news/business/articles/2026-10-13/cyberattack-targeting-refrigeration-systems-hits-700-supermarkets-french-government-says"
+ ]
+}
