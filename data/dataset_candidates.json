@@ -841,5 +841,45 @@
    "2026-11-03#4"
   ],
   "last_seen": "2026-11-03"
+ },
+ "fca financial services register": {
+  "name": "FCA Financial Services Register",
+  "first_seen": "2026-11-04",
+  "items": [
+   "2026-11-04#1"
+  ],
+  "last_seen": "2026-11-04"
+ },
+ "pjm annual load forecast report": {
+  "name": "PJM annual Load Forecast Report",
+  "first_seen": "2026-11-04",
+  "items": [
+   "2026-11-04#2"
+  ],
+  "last_seen": "2026-11-04"
+ },
+ "india ministry of mines critical minerals scheme notifications": {
+  "name": "India Ministry of Mines critical minerals scheme notifications",
+  "first_seen": "2026-11-04",
+  "items": [
+   "2026-11-04#3"
+  ],
+  "last_seen": "2026-11-04"
+ },
+ "state warn act layoff notices": {
+  "name": "State WARN Act layoff notices",
+  "first_seen": "2026-11-04",
+  "items": [
+   "2026-11-04#4"
+  ],
+  "last_seen": "2026-11-04"
+ },
+ "epa national air emissions monitoring study data": {
+  "name": "EPA National Air Emissions Monitoring Study data",
+  "first_seen": "2026-11-04",
+  "items": [
+   "2026-11-04#5"
+  ],
+  "last_seen": "2026-11-04"
  }
 }
