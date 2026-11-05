@@ -881,5 +881,29 @@
    "2026-11-04#5"
   ],
   "last_seen": "2026-11-04"
+ },
+ "ballotpedia local data center ballot measures tracker": {
+  "name": "Ballotpedia local data center ballot measures tracker",
+  "first_seen": "2026-11-05",
+  "items": [
+   "2026-11-05#1"
+  ],
+  "last_seen": "2026-11-05"
+ },
+ "doe request-for-information comment docket on the bulk power system executive order": {
+  "name": "DOE request-for-information comment docket on the bulk power system executive order",
+  "first_seen": "2026-11-05",
+  "items": [
+   "2026-11-05#3"
+  ],
+  "last_seen": "2026-11-05"
+ },
+ "act research / ftr class 8 net orders series": {
+  "name": "ACT Research / FTR Class 8 net orders series",
+  "first_seen": "2026-11-05",
+  "items": [
+   "2026-11-05#4"
+  ],
+  "last_seen": "2026-11-05"
  }
 }

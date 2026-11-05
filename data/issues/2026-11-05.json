@@ -1,0 +1,337 @@
+{
+ "intro": "Today's issue covers a wave of local ballot measures restricting US data centers, the EU Commission's withdrawal of its anti-greenwashing Green Claims Directive, and a US order targeting foreign grid equipment. It also covers a collapse in Class 8 truck orders tied to uncertainty over EPA's 2027 rules, and a reported Nvidia directive pushing cloud partners away from Chinese customers. Several items share one thread: regulatory or geopolitical ambiguity delaying or rerouting capacity investment.",
+ "items": [
+  {
+   "candidate_id": 53,
+   "headline": "US voters back data center bans and limits in nearly all of 41 local ballot measures on Nov. 3, 2026",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/local-data-center-moratoria-limits-and-restrictions-voted-in-across-the-us/",
+   "summary": "On November 3, 2026, voters in 10 states decided 41 local ballot measures on data centers: a 'yes' vote limited development on 28 and helped it on 13. Provisional tallies show restriction winning almost everywhere. State Capital Lobbyist counted 37 of 38 called measures going against development, and CNBC named Harwood, North Dakota as the exception. Ohio held 21 measures, more than any other state, and passed at least 14 bans or restrictions. Several of these use capacity thresholds, such as bans on facilities above 25MW in Conneaut, Defiance, Oregon and Sunbury.",
+   "background": "Ballotpedia tracked 50 local data center ballot measures in 13 states this year. Fortune reports 125 local data center moratoriums were already in place in Ohio. An ICAPP/SurveyUSA poll found 55% of Ohio adults opposed data center construction in the state, against 22% in support. Ohio's measures took several forms. Granville, Hubbard, Piqua, Upper Sandusky and Urbana passed outright village or city bans. Grove City now requires a public vote for projects over 50 acres, 20MW+, or 500,000+ gallons of water per day. Ashville rejected a term sheet for two EdgeConneX data centers, and Wilmington voted down a light-industrial rezoning for data centers. Alhambra, California and Edgewater, Florida also voted on outright bans.",
+   "problem": "AI-driven demand for large loads is colliding with local veto power over land use, water and power. Developers and utilities plan capacity regionally, but siting rights are now being set town by town. Restrictions often take the form of hard thresholds (MW, acres, gallons per day). The real bite is unclear: Reason notes that many bans passed in towns where no centers exist or are planned. All results are unofficial, and some had not reported as of Nov. 4.",
+   "where_why": "The friction sits at the siting and permitting stage, where local externalities (land use, water draw, grid strain) are concentrated while the benefits (tax base, national AI capacity) are diffuse. That mismatch gives local voters strong incentives to block projects. Threshold rules (25MW, 20MW, 50 acres) create discontinuities that can steer project size and location. Patchwork local rules also add uncertainty to load forecasts used in utility and RTO planning.",
+   "stakeholders": [
+    {
+     "name": "Data center developers (e.g., EdgeConneX)",
+     "stake": "Want buildable, grid-connected sites. They lose projects, term sheets and rezonings, and face higher search costs."
+    },
+    {
+     "name": "Local residents and voters",
+     "stake": "Want to avoid water, land, noise and power-price impacts. In return they may forgo tax revenue."
+    },
+    {
+     "name": "Utilities and grid planners",
+     "stake": "Need reliable large-load forecasts. Uncertain siting complicates transmission and generation planning."
+    },
+    {
+     "name": "Municipal and county governments",
+     "stake": "Must balance the tax base against local opposition. They are now bound by voter-imposed thresholds or public-vote requirements."
+    }
+   ],
+   "hints": [
+    "Treat staggered local bans as a natural experiment. Is development displaced to neighboring jurisdictions (spatial spillover), and does it differ between towns with planned projects and towns with none?",
+    "Bunching around regulatory thresholds: do proposed project sizes cluster just under 25MW or 20MW after caps pass?",
+    "A facility-location model with stochastic local veto risk. How should a developer value siting optionality across jurisdictions?"
+   ],
+   "data_leads": "Ballotpedia local ballot measure results; LBNL interconnection queues and EIA-860 for nearby generation and large-load additions; state PUC dockets for large-load tariff and interconnection filings.",
+   "keywords": [
+    "siting moratorium",
+    "facility siting",
+    "regulatory thresholds",
+    "data center electricity demand",
+    "load forecasting"
+   ],
+   "dataset_candidates": [
+    "Ballotpedia local data center ballot measures tracker"
+   ],
+   "datasets": [
+    "lbnl_queues",
+    "state_puc"
+   ],
+   "related": [],
+   "url": "https://www.datacenterdynamics.com/en/news/local-data-center-moratoria-limits-and-restrictions-voted-in-across-the-us/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 04"
+  },
+  {
+   "candidate_id": 18,
+   "headline": "European Commission formally drops Green Claims Directive in new work programme",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/eu-commission-scraps-green-claims-directive/",
+   "summary": "ESG Today reported on November 4, 2026 that the European Commission has officially withdrawn the Green Claims Directive, as revealed in its new work programme. The directive was proposed in March 2023 under the European Green Deal. It would have required firms to substantiate voluntary environmental claims with scientific evidence and have them independently verified.",
+   "background": "On June 20, 2025, the Commission announced its intention to withdraw the proposal unless microenterprises were exempted. A spokesperson clarified at the time that it had not actually been withdrawn, and the third trilogue set for June 23, 2025 was cancelled. Sources as late as October 30, 2026 still described the proposal as not formally withdrawn. A separate law, the Empowering Consumers for the Green Transition Directive (2024/825), remains in force. One compliance site says its anti-greenwashing rules have applied since September 27, 2026.",
+   "problem": "The EU is left with general prohibitions on misleading green claims (Directive 2024/825) but without the ex-ante substantiation and third-party verification regime. Firms, verifiers and enforcers face a choice: does the absence of verification rules mean more unsubstantiated claims, or do firms self-censor ('greenhushing') under general liability? One detail remains unconfirmed: whether the withdrawal is legally complete or only listed in the work programme.",
+   "where_why": "The friction is information asymmetry at the point of sale. Consumers cannot verify environmental attributes. The directive would have shifted verification costs onto firms and accredited verifiers. Its removal leaves enforcement to after-the-fact consumer-protection action, which changes firms' incentives on how much to claim and how to back it up. The 2025 dispute over exempting microenterprises shows the compliance-cost trade-off at the center of the decision.",
+   "stakeholders": [
+    {
+     "name": "European Commission",
+     "stake": "Is pursuing a simplification agenda and reducing compliance burden, especially for small firms."
+    },
+    {
+     "name": "Consumer-goods firms selling in the EU",
+     "stake": "Avoid verification costs but keep litigation and enforcement exposure under Directive 2024/825."
+    },
+    {
+     "name": "Third-party verifiers and certification bodies",
+     "stake": "Lose an anticipated mandatory market for claim verification."
+    },
+    {
+     "name": "Consumers and NGOs",
+     "stake": "Lose a stronger safeguard against greenwashing."
+    }
+   ],
+   "hints": [
+    "Compare the volume and specificity of on-pack environmental claims before and after the withdrawal, for example EU versus non-EU launches of the same brands.",
+    "Cheap-talk and deceptive-advertising models: what happens to claim informativeness when verification is voluntary rather than mandated?",
+    "Puzzle: the regulation was signalled dead in June 2025 but formally withdrawn only now. Which date did firms actually react to?"
+   ],
+   "data_leads": "Mintel GNPD for environmental claims on product launches; RepRisk or public GDELT news data for greenwashing incidents; EU Commission work programme documents.",
+   "keywords": [
+    "greenwashing",
+    "voluntary disclosure",
+    "regulatory uncertainty",
+    "sustainability standards"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "mintel_gnpd",
+    "gdelt"
+   ],
+   "related": [
+    {
+     "title": "Deceptive Advertising with Rational Buyers",
+     "journal": "Management Science",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/mnsc.2016.2665",
+     "cites": 65,
+     "why": "Models how sellers of unverifiable quality use costly deceptive advertising in equilibrium, a direct lens on claim behavior once mandatory substantiation is removed."
+    },
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 56,
+     "why": "Shows European banks with more extensive environmental disclosures lend more to brown industries, evidence that green talk and green action can diverge without verification."
+    }
+   ],
+   "url": "https://www.esgtoday.com/eu-commission-scraps-green-claims-directive/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 04"
+  },
+  {
+   "candidate_id": 14,
+   "headline": "Industry backs intent but questions cost and practicality of Trump order restricting foreign grid equipment",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.utilitydive.com/news/trump-ban-on-foreign-grid-components-sparks-industry-concern-over-practical/873752/",
+   "summary": "An August 2026 executive order declared an emergency and moves to block some foreign-made equipment from the bulk power system. It directs DOE to focus on transmission-related equipment of 69 kV or higher, and also scrutinizes distribution components linked to the bulk system that run questionably sourced software. Responses to DOE's September request for comment show broad support for the goal. They also raise concern about implementation costs and the risk of stalling grid buildout. An RMI/BloombergNEF analysis puts 2025 US grid imports at more than $30 billion.",
+   "background": "According to the IEA, China produces 80% or more of the world's supply of certain grid equipment, including lithium-ion battery cells and some solar components. BloombergNEF says battery energy storage faces more near-term risk from the order than other sectors. DOE's implementing rules and lists of covered equipment are still pending.",
+   "problem": "The order restricts sourcing by geography, not by function or security standard. Commenters argue that ripping out and replacing existing equipment is infeasible, and that DOE cannot inspect everything. A source quoted by the article puts the critique this way: 'A ban governs geography; a standard governs the risk, on every device.' The trade-off is lower cyber and supply risk on one side, and higher ratepayer costs and slower interconnection of new transmission and storage on the other.",
+   "where_why": "The friction sits at procurement of long-lead, high-voltage equipment and of battery storage, where domestic and allied capacity is thin and Chinese supply is concentrated. Uncertainty about which items are covered delays purchase decisions. Commenters such as Russo argue DOE should publish lists of secure equipment to resolve this. Utilities pass costs to ratepayers through regulated rates, so state regulators are drawn in.",
+   "stakeholders": [
+    {
+     "name": "US Department of Energy",
+     "stake": "Must define covered equipment and verify compliance with limited inspection capacity."
+    },
+    {
+     "name": "Utilities and transmission developers",
+     "stake": "Want clarity and continued access to equipment. They face rip-and-replace costs and project delays."
+    },
+    {
+     "name": "Battery storage developers",
+     "stake": "Most exposed in the near term, given dependence on Chinese cells."
+    },
+    {
+     "name": "Domestic and allied equipment manufacturers",
+     "stake": "Could gain market share if foreign suppliers are excluded."
+    },
+    {
+     "name": "Ratepayers and state regulators",
+     "stake": "Bear the higher equipment costs passed through rates."
+    }
+   ],
+   "hints": [
+    "Geography-based bans versus function-based standards as alternative regulatory instruments, which links to the supply-risk and supplier-certification literature.",
+    "Watch for pre-buy and stockpiling behavior in tariff-line import data between the August order and DOE's final lists.",
+    "A sourcing model with a capacity-constrained domestic supplier: how do long lead times change the cost of a sudden exclusion?"
+   ],
+   "data_leads": "USITC DataWeb or Census trade data for transformer, switchgear and battery cell imports by origin; Federal Register for the order and DOE notices; LBNL queues to track storage project delays.",
+   "keywords": [
+    "sourcing restrictions",
+    "foreign entity of concern",
+    "cyber-physical risk",
+    "battery storage",
+    "supplier region risk"
+   ],
+   "dataset_candidates": [
+    "DOE request-for-information comment docket on the bulk power system executive order"
+   ],
+   "datasets": [
+    "usitc_dataweb",
+    "federal_register"
+   ],
+   "related": [],
+   "url": "https://www.utilitydive.com/news/trump-ban-on-foreign-grid-components-sparks-industry-concern-over-practical/873752/",
+   "follows": [],
+   "source": "Utility Dive",
+   "date": "Nov 04"
+  },
+  {
+   "candidate_id": 70,
+   "headline": "North American Class 8 truck orders fall 36% year over year in October amid uncertainty over EPA's 2027 NOx rules",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://www.freightwaves.com/news/class-8-truck-orders-plunge-36-as-epa-uncertainty-rattles-fleets",
+   "summary": "FTR reports preliminary October net Class 8 orders of 15,600 units. That is down 36% year over year, down 24% from September, and nearly 50% below the 10-year October average of 31,089. ACT Research's preliminary estimate is lower still: 13,500 units, down 45%. Year-to-date orders total 278,201 units, up 74% from 2025.",
+   "background": "October usually opens the order season for the next model year. OEMs have begun opening their MY2027 order boards, but some are not yet fully releasing build slots or finalizing pricing while EPA's 2027 NOx standards remain unsettled. Combined September and October orders were 36,002 units, down 20%. Freight rates are strong, but fuel, insurance and labor costs are squeezing carrier margins.",
+   "problem": "Fleets cannot price or schedule MY2027 purchases while the final rule and its cost impact are unknown, so they wait. FTR cautions that the drop may be delayed rather than lost demand. Regulatory ambiguity is thus shifting both the timing of fleet turnover and the timing of adoption of cleaner engines.",
+   "where_why": "The friction is regulatory uncertainty at the link between OEM production planning and fleet capital budgeting. OEMs withhold build slots and pricing, and buyers hold the option to wait. Margin pressure from operating costs raises the value of delay. The 74% year-to-date rise points to earlier pull-forward, which leaves less pent-up demand now.",
+   "stakeholders": [
+    {
+     "name": "Truck fleets and carriers",
+     "stake": "Want predictable equipment costs. They risk aging fleets or overpaying for MY2027 trucks."
+    },
+    {
+     "name": "Truck OEMs",
+     "stake": "Need firm orders to set production schedules. Delayed orders create backlog volatility."
+    },
+    {
+     "name": "US EPA",
+     "stake": "Its 2027 NOx standards determine emissions outcomes and compliance costs."
+    },
+    {
+     "name": "Suppliers and dealers",
+     "stake": "Exposed to bunched or depressed order flows."
+    }
+   ],
+   "hints": [
+    "Real options under regulatory uncertainty: what is the value of waiting when rule stringency and timing are both unknown?",
+    "Pre-buy dynamics around emissions-standard changes, compared with earlier EPA rule transitions (for example 2007 and 2010).",
+    "Puzzle: FTR and ACT disagree on the size of the drop (36% vs 45%). How do preliminary order statistics get revised?"
+   ],
+   "data_leads": "FTR and ACT Research monthly Class 8 net order series (commercial); Federal Register EPA heavy-duty NOx rulemaking dates; DAT/SONAR freight rates, or public BTS freight indicators as an alternative.",
+   "keywords": [
+    "regulatory uncertainty",
+    "pre-buy behavior",
+    "fleet turnover",
+    "emissions standards",
+    "capacity investment under uncertainty"
+   ],
+   "dataset_candidates": [
+    "ACT Research / FTR Class 8 net orders series"
+   ],
+   "datasets": [
+    "federal_register",
+    "freight_rates"
+   ],
+   "related": [],
+   "url": "https://www.freightwaves.com/news/class-8-truck-orders-plunge-36-as-epa-uncertainty-rattles-fleets",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 04"
+  },
+  {
+   "candidate_id": 54,
+   "headline": "Nvidia reportedly requires cloud partners to sell at least 51% of services to non-Chinese customers",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.datacenterdynamics.com/en/news/nvidia-tells-data-center-partners-to-cut-china-exposure-limits-rtx-chip-sales-to-mainland/",
+   "summary": "Citing five people with knowledge of the matter, the Financial Times reports that Nvidia has verbally instructed data center and cloud partners worldwide to sell at least 51% of their services to non-Chinese companies. No such rule existed before. Reuters could not immediately verify the report. Separately, Chinese firms including Alibaba, Tencent and ByteDance have ordered about 6 million export-permitted RTX Pro 5500 chips but will receive only a few tens of thousands over the next four months.",
+   "background": "B300s are banned from export to China, while the less powerful RTX Pro 5500 is cleared. Many Chinese firms have leased compute in Malaysia and Indonesia. Nvidia has already more than halved the number of Asian customers authorized to buy its AI chips. IDC says Nvidia's share of China's data-center AI chip market fell to 34% in the first half of 2026. Earlier this year, Super Micro employees were charged with smuggling about $2.5 billion of Nvidia AI servers to China. Nvidia blames 'outdated US export controls' and China's own import limits.",
+   "problem": "A dominant supplier is imposing customer-mix rules on its downstream buyers to limit indirect access by Chinese firms, for example via leased compute in third countries. Cloud partners must restructure their customer portfolios on the basis of unwritten instructions. At the same time, Chinese demand far exceeds deliverable supply, which strengthens incentives for diversion and for domestic substitution.",
+   "where_why": "The friction arises at the reseller and cloud-provider link, where the end customer is hard to observe. That information asymmetry enables circumvention through compute leasing and smuggling. Giving the instructions verbally creates ambiguity about enforcement. Export controls cap direct supply and push Chinese buyers toward local chips, as the falling market share shows.",
+   "stakeholders": [
+    {
+     "name": "Nvidia",
+     "stake": "Wants to stay compliant and keep supply access under US policy while protecting revenue."
+    },
+    {
+     "name": "Cloud and data center partners (incl. in Malaysia and Indonesia)",
+     "stake": "Risk losing allocation or Chinese revenue if they breach the 51% threshold."
+    },
+    {
+     "name": "Chinese AI and cloud firms (Alibaba, Tencent, ByteDance)",
+     "stake": "Face constrained compute access and are pushed toward leasing, local alternatives or waiting."
+    },
+    {
+     "name": "US export-control authorities",
+     "stake": "Seek to prevent diversion of advanced compute to China."
+    }
+   ],
+   "hints": [
+    "Upstream-imposed customer-mix restrictions as a form of private export-control enforcement. Who bears the monitoring cost?",
+    "Trace exposure through supplier-customer networks (e.g., server assemblers and Southeast Asian cloud providers) before and after the report.",
+    "Allocation under extreme shortage (about 6 million ordered versus tens of thousands delivered): rationing rules and incentives to divert."
+   ],
+   "data_leads": "SEC EDGAR 10-K customer and geographic revenue disclosures; FactSet Revere or Compustat customer segments for Nvidia's supplier-customer links; Federal Register export-control rules.",
+   "keywords": [
+    "export controls",
+    "tariff circumvention",
+    "supplier concentration",
+    "trade diversion",
+    "customs compliance"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "factset_revere"
+   ],
+   "related": [
+    {
+     "title": "Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12336",
+     "cites": 54,
+     "why": "Examines whether firms diversify or concentrate sourcing in response to domestic and upstream policy uncertainty, which mirrors partners' choices under Nvidia's China rules."
+    },
+    {
+     "title": "The effect of customer and supplier concentrations on firm resilience during the COVID ‐19 pandemic: Resource dependence and power balancing",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1236",
+     "cites": 274,
+     "why": "Uses resource-dependence theory to link customer and supplier concentration to resilience, relevant to cloud partners highly dependent on Nvidia supply."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/nvidia-tells-data-center-partners-to-cut-china-exposure-limits-rtx-chip-sales-to-mainland/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 04"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "The Class 8 truck slump, the grid-equipment order and the Nvidia directive all show capacity investment stalling or being redirected because a rule is unclear: EPA's final NOx standard, DOE's pending equipment lists, and Nvidia's unwritten 51% instruction. The local data center bans add a fourth, place-based form of uncertainty. Together they suggest comparing how the form of ambiguity (timing, scope, enforcement or location) shapes whether firms delay, pre-buy or relocate.",
+ "also": [
+  {
+   "title": "APS expects sales to double by 2041, plans extending coal use to 2038",
+   "url": "https://www.utilitydive.com/news/aps-sales-double-by-2041-proposes-extending-coal-use-to-2038/873648/",
+   "source": "Utility Dive",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "CalRecycle lowers plastic tonnage baseline for SB 54 source reduction",
+   "url": "https://www.packagingdive.com/news/california-updated-source-reduction-plastic-baseline/873631/",
+   "source": "Packaging Dive",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "8 Inches of Rain Shut Down Busiest US Rail Line for 60 Hours",
+   "url": "https://www.freightwaves.com/news/8-inches-of-rain-shut-down-busiest-us-rail-line-for-60-hours",
+   "source": "FreightWaves",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Drought Causes Removal of Rice Grains from Rice Krispies",
+   "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQMWxMX2I0MmlhSUc1MWNIcU5lTVVlU29VOTE2NTJFQzFlb1RtajRpUmFWNWNLbjliQjloellCX05Pd0J5U19ZQzJrMHR6aUxQMGRXYUYxRWtSTV9zV2RWMnpjX1FVRWpVWmdqOUd5OVZLWmhwZHZKaEktS3lYbU4wU0FIZzN2SzBMWThGMWZQRnA2THgzTEF4Q0k5NC1kdzJwTE8wT2N0V0c2dTFJcloxSmx4cWdHTlBuSUxtdVZ4OF8wS3oyRGpwcmlwM3U2TXU0UVNoWjYwc1gwWVhLckZKWVRhMA?oc=5",
+   "source": "SupplyChainBrain",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "DOJ subpoenas Smurfit Westrock over containerboard pricing",
+   "url": "https://www.packagingdive.com/news/doj-subpoenas-smurfit-westrock-over-containerboard-pricing/873727/",
+   "source": "Packaging Dive",
+   "theme": "Sustainable Operations"
+  }
+ ]
+}
