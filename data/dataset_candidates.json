@@ -905,5 +905,45 @@
    "2026-11-05#4"
   ],
   "last_seen": "2026-11-05"
+ },
+ "uk modern slavery statement registry": {
+  "name": "UK Modern Slavery Statement Registry",
+  "first_seen": "2026-11-06",
+  "items": [
+   "2026-11-06#1"
+  ],
+  "last_seen": "2026-11-06"
+ },
+ "us cbp withhold release orders and findings list": {
+  "name": "US CBP Withhold Release Orders and Findings list",
+  "first_seen": "2026-11-06",
+  "items": [
+   "2026-11-06#1"
+  ],
+  "last_seen": "2026-11-06"
+ },
+ "eea co2 emissions from new passenger cars monitoring data": {
+  "name": "EEA CO2 emissions from new passenger cars monitoring data",
+  "first_seen": "2026-11-06",
+  "items": [
+   "2026-11-06#2"
+  ],
+  "last_seen": "2026-11-06"
+ },
+ "acea new car registrations by power source": {
+  "name": "ACEA new car registrations by power source",
+  "first_seen": "2026-11-06",
+  "items": [
+   "2026-11-06#2"
+  ],
+  "last_seen": "2026-11-06"
+ },
+ "eurostat comext trade data (hs 3915 plastic waste and scrap)": {
+  "name": "Eurostat Comext trade data (HS 3915 plastic waste and scrap)",
+  "first_seen": "2026-11-06",
+  "items": [
+   "2026-11-06#4"
+  ],
+  "last_seen": "2026-11-06"
  }
 }

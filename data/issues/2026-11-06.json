@@ -1,0 +1,379 @@
+{
+ "intro": "Today's issue spans two regulatory moves in opposite directions (a UK commitment to mandatory supply chain human rights due diligence and an EU committee vote to loosen car CO2 targets), a supplier capacity response to AI data center power demand at Caterpillar, EU-wide end-of-waste criteria for recycled plastics, and Logitech's pooled renewable-electricity buying for its suppliers.",
+ "items": [
+  {
+   "candidate_id": 26,
+   "headline": "UK commits to mandatory human rights and forced labour due diligence for firms with over £350m revenue",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/uk-to-introduce-mandatory-supply-chain-human-rights-due-diligence-law/",
+   "summary": "Business Secretary Jonathan Reynolds announced a new mandatory regime on November 5, 2026. It would require UK companies with more than £350 million (about US$470 million) in revenue, and non-UK firms with more than £350 million in UK revenue, to identify, assess and address human rights and forced labour risks in their own operations and supply chains. A regulator would be able to investigate firms suspected of selling goods made with forced labour and order such goods withdrawn from the market where due diligence duties were not met.",
+   "background": "The UK has relied mainly on disclosure since the Modern Slavery Act 2015, whose transparency clause requires annual statements. A government review of Responsible Business Conduct found the framework 'fragmented and overly reliant on voluntary action and reporting,' leaving the UK 'out-of-step' with other major economies. Earlier in 2026 the US imposed tariffs on UK imports after the USTR listed the UK as failing to enforce a ban on forced-labour imports. ESG Today notes the review began before those tariffs, but the government says it needs to align with major trading partners. The regime is expected to follow the OECD Guidelines and the UN Guiding Principles.",
+   "problem": "The UK is moving from 'report what you do' to 'do due diligence or lose market access.' Covered firms must decide how much to invest in supplier mapping, auditing and remediation, and whether to exit high-risk suppliers instead. Key design details remain open: no bill text, timetable, penalty levels or named regulator have been published, and this is a commitment rather than passed law.",
+   "where_why": "The problem sits at the buyer-supplier interface in multi-tier supply chains. Forced labour often occurs at lower tiers that buyers cannot easily see, so information asymmetry and costly, imperfect auditing let disclosure-only regimes produce boilerplate statements. A market-withdrawal remedy changes incentives by tying a firm's goods directly to supplier conduct. The revenue threshold creates a sharp cutoff in who bears these duties, and the US tariff episode shows a trade-enforcement channel at work alongside the domestic rule.",
+   "stakeholders": [
+    {
+     "name": "Large UK and UK-selling firms (>£350m revenue)",
+     "stake": "Face new due diligence costs and the risk of goods being withdrawn from the market; responsible firms may gain relative to laggards."
+    },
+    {
+     "name": "Overseas suppliers in high-risk regions",
+     "stake": "May face more audits and remediation demands, or lose orders if buyers de-risk by exiting."
+    },
+    {
+     "name": "UK government and the future regulator",
+     "stake": "Wants credible enforcement and alignment with trading partners, including the US after the forced-labour tariffs."
+    },
+    {
+     "name": "Workers in global supply chains",
+     "stake": "Could gain if due diligence leads to real remediation rather than supplier exits."
+    },
+    {
+     "name": "Firms below the threshold",
+     "stake": "Avoid direct duties but may face requirements passed down from covered customers."
+    }
+   ],
+   "hints": [
+    "Revenue thresholds invite regression-discontinuity or bunching designs; watch whether firms near £350m behave differently once details are set.",
+    "The audit-evasion and backfiring-condition models from the supplier compliance literature give predictions on when stricter buyer duties worsen hidden supplier behavior.",
+    "Compare the UK's announcement window with EU CSDDD milestones and the 2015 Modern Slavery Act event study as a template."
+   ],
+   "data_leads": "UK Modern Slavery Statement Registry (public) for pre-period disclosures; FactSet Revere or bill-of-lading data (Panjiva) for supplier links, with UN Comtrade as a public alternative; RepRisk or GDELT for forced-labour incidents; CRSP for event-study returns.",
+   "keywords": [
+    "mandatory due diligence",
+    "forced labour",
+    "multi-tier traceability",
+    "regulatory thresholds",
+    "regulatory enforcement"
+   ],
+   "dataset_candidates": [
+    "UK Modern Slavery Statement Registry",
+    "US CBP Withhold Release Orders and Findings list"
+   ],
+   "datasets": [
+    "factset_revere",
+    "reprisk"
+   ],
+   "related": [
+    {
+     "title": "Shareholder Wealth Effects of Modern Slavery Regulation",
+     "journal": "Management Science",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/mnsc.2019.3456",
+     "cites": 94,
+     "why": "An event study of the UK Modern Slavery Act's adoption; it offers a direct template for measuring market reactions to this tougher successor regime."
+    },
+    {
+     "title": "Supplier Evasion of a Buyer’s Audit: Implications for Motivating Supplier Social and Environmental Responsibility",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2015,
+     "url": "https://doi.org/10.1287/msom.2015.0550",
+     "cites": 326,
+     "why": "Models how stricter buyer auditing can push suppliers to evade audits, which matters for how due diligence duties play out in practice."
+    }
+   ],
+   "url": "https://www.esgtoday.com/uk-to-introduce-mandatory-supply-chain-human-rights-due-diligence-law/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 05"
+  },
+  {
+   "candidate_id": 23,
+   "headline": "European Parliament environment committee votes 48-30 to cut 2035 car CO2 target to 87.5%",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.esgtoday.com/eu-lawmakers-vote-to-water-down-co2-emissions-reduction-requirements-for-cars/",
+   "summary": "The European Parliament's Environment Committee (ENVI) voted 48-30 to back, and go beyond, the Commission's December 2025 proposal to relax car and van CO2 rules. ENVI's position sets a 2035 cut of 87.5% for new cars, against 100% under current rules and 90% in the Commission plan. For vans it sets 35% for 2030 and 80% for 2035, against 50% and 100% today. Low-carbon steel credits would be capped at 7.5% of remaining emissions, and vehicles running only on eligible renewable and low-carbon fuels (VEEFs) would count as zero-emission.",
+   "background": "The 2023 Fit for 55 rules required a 100% cut for new cars by 2035, which in effect ended sales of new combustion-engine cars. The Commission's December 2025 'Automotive Package' proposed 90%, with remaining emissions offset by EU-made low-carbon steel, e-fuels and biofuels. Carmakers argue the targets became unrealistic because EV sales are slower than expected and US policy under the Trump administration has moved away from EVs.",
+   "problem": "Automakers must plan EV versus combustion capacity, pricing and compliance pooling while the target is moving. ENVI's position still needs a full Parliament vote, expected in December, and then negotiations with EU governments. The vote also adds new compliance channels (steel credits, fuel-based 'zero emission' status) that link car compliance to steel and fuel supply chains.",
+   "where_why": "The friction lies in long-lived capacity and product-platform decisions made under regulatory uncertainty. Automakers lobbied for relaxation after slow EV adoption, a demand-side shortfall. Offset credits tied to EU-made steel create cross-industry coupling, and a credit cap limits that channel. Redefining zero-emission vehicles to include VEEFs changes which powertrains count as compliant.",
+   "stakeholders": [
+    {
+     "name": "European automakers",
+     "stake": "Gain flexibility to keep registering combustion cars, but face stranded EV investment risk if the rules keep shifting."
+    },
+    {
+     "name": "EU low-carbon steel producers and e-fuel/biofuel suppliers",
+     "stake": "Gain a new source of demand through the credits, limited by the 7.5% cap."
+    },
+    {
+     "name": "EV and battery supply chain firms",
+     "stake": "Risk weaker demand signals for EU EV and battery capacity."
+    },
+    {
+     "name": "EU institutions (Parliament, Council, Commission)",
+     "stake": "Must balance climate targets against industrial competitiveness in the trilogue."
+    }
+   ],
+   "hints": [
+    "The sequence of Commission proposal, committee vote, plenary and trilogue gives several dated policy signals; event studies or investment announcements around each could separate anticipation effects.",
+    "Real options and capacity investment under regulatory uncertainty fit the question of how much EV capacity to commit when the target can drop.",
+    "Compliance pooling and credit caps resemble emissions trading design; look at who pools with whom and how a cap reshapes the marginal compliance option."
+   ],
+   "data_leads": "EEA CO2 monitoring data for new cars and vans (public, by manufacturer and pool); ACEA registration statistics; automaker filings and earnings call transcripts for capex and EV mix guidance.",
+   "keywords": [
+    "emissions standards",
+    "regulatory uncertainty",
+    "corporate lobbying",
+    "fleet turnover",
+    "steel decarbonization"
+   ],
+   "dataset_candidates": [
+    "EEA CO2 emissions from new passenger cars monitoring data",
+    "ACEA new car registrations by power source"
+   ],
+   "datasets": [
+    "call_transcripts"
+   ],
+   "related": [
+    {
+     "title": "Accelerating vehicle fleet turnover to achieve sustainable mobility goals",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1173",
+     "cites": 64,
+     "why": "Studies policy levers to speed fleet turnover when EV adoption lags, the same demand shortfall driving this relaxation."
+    }
+   ],
+   "url": "https://www.esgtoday.com/eu-lawmakers-vote-to-water-down-co2-emissions-reduction-requirements-for-cars/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 05"
+  },
+  {
+   "candidate_id": 54,
+   "headline": "Caterpillar plans to expand engine and turbine output as data center demand lifts Power Generation sales 30%",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/caterpillar-seeking-to-expand-production-of-large-reciprocating-engines-and-turbines-to-meet-huge-data-center-demand/",
+   "summary": "On its Q3 2026 earnings call, Caterpillar said it plans to increase production of large reciprocating engines and Solar turbines because of data center demand. Per its SEC filings, Power Generation sales rose 30% to $3.421 billion, mainly from turbines, turbine services and large reciprocating engines for data centers. Power & Energy segment sales rose 18% to $8.784 billion and segment profit rose 31% to $2.143 billion.",
+   "background": "AI and cloud data center build-outs are driving demand for both backup and prime onsite power. CEO Joseph Creed said the company is 'continuing to do long-term planning with our big data center customers and prime power customers.' Earlier in 2026, Caterpillar converted its Wamego facility to package Solar turbines and restarted production of a 10-megawatt medium-speed engine. Secondary sources report a backlog of about $78 billion, nearly double a year earlier; this has not been checked against the filings.",
+   "problem": "Caterpillar must decide how much capacity to add, and when, for a demand surge whose persistence is uncertain. Data center developers, meanwhile, are turning to onsite generation, which shifts emissions and fuel demand off the grid. No investment amount, sites or timeline have been disclosed.",
+   "where_why": "The problem arises in the upstream equipment supply chain for power generation. Grid power arrives slowly and turbines have long lead times, so data centers seek onsite engines and turbines, putting pressure on supplier capacity. The underlying frictions are capacity shortfall plus demand uncertainty: overbuilding risks idle plants if AI demand cools, while underbuilding cedes share and lengthens lead times. Long-term planning with large customers is one way to share that risk.",
+   "stakeholders": [
+    {
+     "name": "Caterpillar",
+     "stake": "Captures margin growth but bears the risk of overcapacity if the data center boom slows."
+    },
+    {
+     "name": "Data center developers and hyperscalers",
+     "stake": "Need fast, reliable power; equipment lead times limit how fast they can bring sites online."
+    },
+    {
+     "name": "Utilities and grid operators",
+     "stake": "May lose load to onsite generation or need to coordinate with it."
+    },
+    {
+     "name": "Communities and regulators",
+     "stake": "Bear the local air emissions and gas demand from onsite generation."
+    }
+   ],
+   "hints": [
+    "Capacity investment under demand uncertainty with forecast evolution and demand learning; consider how long-term customer commitments change the optimal expansion path.",
+    "Compare the reciprocating engine and gas turbine supply chains as alternative ways to meet the same load, with different lead times and modularity.",
+    "Track whether onsite generation shows up in EIA-860 as behind-the-meter or new gas units near data center clusters."
+   ],
+   "data_leads": "Caterpillar 8-K and 10-Q filings on SEC EDGAR and earnings call transcripts for segment trends; EIA-860 for new gas reciprocating and turbine units; ERCOT large-load reports for data center demand.",
+   "keywords": [
+    "gas turbines",
+    "capacity investment under uncertainty",
+    "data center electricity demand",
+    "long-term supply contracts"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "eia860"
+   ],
+   "related": [
+    {
+     "title": "Capacity Investment with Demand Learning",
+     "journal": "Operations Research",
+     "year": 2016,
+     "url": "https://doi.org/10.1287/opre.2016.1561",
+     "cites": 34,
+     "why": "Analyzes capacity investment when the firm learns about demand over time, which fits Caterpillar's expansion under uncertain AI demand."
+    },
+    {
+     "title": "Valuing supply‐chain responsiveness under demand jumps",
+     "journal": "Journal of Operations Management",
+     "year": 2018,
+     "url": "https://doi.org/10.1016/j.jom.2018.06.002",
+     "cites": 39,
+     "why": "Values supply-chain responsiveness when demand moves in jumps rather than gradually, which describes the data center power surge."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/caterpillar-seeking-to-expand-production-of-large-reciprocating-engines-and-turbines-to-meet-huge-data-center-demand/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 05"
+  },
+  {
+   "candidate_id": 119,
+   "headline": "EU member states approve EU-wide end-of-waste criteria for mechanically recycled plastics",
+   "theme": "Circular Economy",
+   "original_url": "https://www.plasticsnews.com/public-policy/sp-eu-member-stats-end-of-waste-criteria-recycled-plastics-circular-economy-act/",
+   "summary": "EU member states voted on November 3, 2026 in favour of harmonized end-of-waste criteria for plastics. Plastics News says this paves the way for a single market for recycled plastics across all 27 countries. The same report says the Circular Economy Act faces further delays.",
+   "background": "The Commission proposed the criteria on December 23, 2025, as an implementing act under the Waste Framework Directive. They cover mechanically recycled plastics and define when recycled plastic stops being legally 'waste,' so it can move more easily across borders. The Commission cites divergent national rules, along with high energy costs for EU recyclers, cheap virgin plastic and imports, as pressures on the sector.",
+   "problem": "Until now, whether recyclate counted as waste varied by member state, which raised compliance costs and fragmented trade in secondary plastics. Harmonization could expand recycled-content supply and cross-border flows, but EU recyclers still face cost disadvantages against virgin resin and imports. The vote count, remaining formal steps and start date are not confirmed.",
+   "where_why": "The friction sits at the legal boundary between waste processing and secondary raw material markets. Waste status triggers shipment and permitting rules, so national differences acted as a regulatory trade barrier. That is a coordination failure across jurisdictions. Demand for recyclate still depends on price competition with virgin plastic and on mandates elsewhere in EU law.",
+   "stakeholders": [
+    {
+     "name": "EU plastics recyclers",
+     "stake": "Gain a larger market and lower compliance costs, but remain squeezed by energy costs and imports."
+    },
+    {
+     "name": "Brand owners and converters",
+     "stake": "Could find it easier to source recycled content across borders."
+    },
+    {
+     "name": "Virgin resin producers and recyclate importers",
+     "stake": "Compete with a potentially more liquid EU recyclate market."
+    },
+    {
+     "name": "Member state regulators",
+     "stake": "Give up national discretion over waste status in exchange for harmonized rules."
+    }
+   ],
+   "hints": [
+    "Treat harmonization as removing a non-tariff barrier; look for changes in intra-EU recyclate trade flows and price convergence after the rules apply.",
+    "Models of waste chains with imperfect monitoring help in asking whether 'non-waste' status opens loopholes for low-quality material.",
+    "The puzzle: harmonized supply-side rules are advancing while the broader Circular Economy Act is delayed."
+   ],
+   "data_leads": "Eurostat waste and international trade statistics (Comext) on plastic waste and scrap codes; UN Comtrade HS 3915 flows; industry recyclate price indices.",
+   "keywords": [
+    "end-of-waste criteria",
+    "secondary materials",
+    "recycled content",
+    "trade diversion"
+   ],
+   "dataset_candidates": [
+    "Eurostat Comext trade data (HS 3915 plastic waste and scrap)"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Treat, Dump, or Export? How Domestic and International Waste Management Policies Shape Waste Chain Outcomes",
+     "journal": "Management Science",
+     "year": 2023,
+     "url": "https://doi.org/10.1287/mnsc.2021.02061",
+     "cites": 14,
+     "why": "Models how domestic and international waste rules shape whether waste is treated, dumped or exported, which bears on what changes when recyclate leaves 'waste' status."
+    }
+   ],
+   "url": "https://www.plasticsnews.com/public-policy/sp-eu-member-stats-end-of-waste-criteria-recycled-plastics-circular-economy-act/",
+   "follows": [],
+   "source": "Plastics News",
+   "date": "Nov 05"
+  },
+  {
+   "candidate_id": 4,
+   "headline": "Logitech pools 17 suppliers to buy renewable electricity jointly under new Scope 3 program",
+   "theme": "Sustainable Operations",
+   "original_url": "https://www.supplychaindive.com/news/logitech-launches-supply-chain-decarbonization-program/873778/",
+   "summary": "Logitech launched 'Chain Reaction,' a supplier decarbonization program announced on October 23, 2026. To start, 17 suppliers will pool their purchasing power to buy renewable electricity together. Logitech will also run factory energy assessments, hold workshops, share carbon-reporting tools, and add suppliers' emissions progress to their regular business reviews.",
+   "background": "Logitech targets a 50% cut in Scope 3 emissions by 2030. In the fiscal year ending March 31, 2026, those emissions were down 33% from the 2021 baseline. Chief supply chain operations officer Sree Chenincherry said integrating carbon progress into 'commercial metrics' creates value for suppliers, and that suppliers could get lasting cost savings from efficiency gains.",
+   "problem": "Most brand emissions sit in supplier factories the brand does not control. Small suppliers often cannot buy renewables efficiently on their own. Logitech's response combines aggregation, technical assistance and commercial incentives, but suppliers are unnamed and volumes, costs and expansion plans are undisclosed.",
+   "where_why": "The friction arises at the buyer-supplier link in electricity procurement and efficiency investment. Individual suppliers face scale disadvantages and transaction costs in renewable procurement, along with an energy efficiency gap driven by information and capability limits. Their incentives may also be misaligned if the brand captures the Scope 3 credit. Pooling addresses scale, and putting emissions into business reviews ties future orders to performance.",
+   "stakeholders": [
+    {
+     "name": "Logitech",
+     "stake": "Needs supplier reductions to reach its 2030 Scope 3 target."
+    },
+    {
+     "name": "Participating suppliers",
+     "stake": "Could gain cheaper renewables and efficiency savings, but face added reporting and the risk that weak performance affects orders."
+    },
+    {
+     "name": "Renewable electricity sellers",
+     "stake": "Gain access to aggregated demand from manufacturing suppliers."
+    },
+    {
+     "name": "Other brands sharing these suppliers",
+     "stake": "Could free-ride on or coordinate with Logitech's investments."
+    }
+   ],
+   "hints": [
+    "The supplier energy-efficiency-gap literature (assessment assistance plus procurement commitment) offers a model to compare with Logitech's design.",
+    "Collective procurement among competing or unrelated suppliers recalls the problems of facilitated horizontal collaboration; ask what makes such coalitions last.",
+    "When several buyers share a supplier, who claims the reduction? Market-based emissions accounting raises an attribution puzzle."
+   ],
+   "data_leads": "CDP supply chain responses (request access) for supplier emissions and buyer engagement; SBTi dashboard for supplier targets; Logitech impact reports and SEC filings.",
+   "keywords": [
+    "supplier emissions",
+    "scope 3 disclosure",
+    "power purchase agreements",
+    "market-based emissions accounting"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "cdp",
+    "sbti"
+   ],
+   "related": [
+    {
+     "title": "Closing a Supplier's Energy Efficiency Gap: The Role of Assessment Assistance and Procurement Commitment",
+     "journal": "Management Science",
+     "year": 2016,
+     "url": "https://doi.org/10.1287/mnsc.2017.2941",
+     "cites": 33,
+     "why": "Studies how buyer-provided assessments and procurement commitments close suppliers' energy efficiency gaps, closely matching Logitech's program design."
+    },
+    {
+     "title": "Organizing Buyer‐Side Scope 3 Governance: Sensemaking in Supply Network Decarbonization",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2026,
+     "url": "https://doi.org/10.1111/jscm.70032",
+     "cites": 1,
+     "why": "Examines how buying firms organize governance of Scope 3 decarbonization across supplier networks they do not control."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/logitech-launches-supply-chain-decarbonization-program/873778/",
+   "follows": [],
+   "source": "Supply Chain Dive",
+   "date": "Nov 05"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 4,
+   "takeaway": "The paper builds a game-theoretic model to compare how governments can get firms to invest in supply chain security when firms privately know their baseline security, choose effort the government cannot observe, and can be verified only at a cost and imperfectly. It compares ex-ante audit-based subsidies, insurance and hybrid incentives.",
+   "connection": "The same verification problem appears in the UK's due diligence plan, where a regulator must judge hidden supplier risk and firm effort before ordering goods withdrawn from the market.",
+   "title": "EXPRESS: Securing Supply Chains: Subsidies, Insurance, and Hybrid Incentives under Costly Verification",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261507793"
+  }
+ ],
+ "thread_to_pull": "The UK due diligence plan, Logitech's supplier program and the POM paper on costly verification share one problem: a principal (regulator or buyer) wants hidden effort from firms it can only imperfectly audit. Comparing a legal mandate with market-withdrawal penalties against a buyer's commercial carrots (pooled procurement, business-review metrics) could show when sticks or carrots work better for unobservable supplier behavior.",
+ "also": [
+  {
+   "title": "Two dead and five injured following fire at Panasonic chip packaging facility in Taiwan",
+   "url": "https://www.datacenterdynamics.com/en/news/two-dead-and-five-injured-following-fire-at-panasonic-chip-packaging-facility-in-taiwan/",
+   "source": "DatacenterDynamics",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "'Britain cannot afford to drift': MPs demand action on dangerous dependence on Chinese critical minerals",
+   "url": "https://news.google.com/rss/articles/CBMiswJBVV95cUxOSXgtRHdvbU1RYk5ONkpHeXlxY1FHQ3ZLZWhPZkVjelhVbm90cDdaSkVjMG9tU3FkZjFqM0g0RFNoYjBGOE9EWmlmX2RnLUstZlVlSnp4TTFzM3MyWi1vZGxYbzZzT2pCWnlud09xM0txVnlHckJFUUZQMXJsOFJIM3o3WkxadkE3eHREUzI3ZlVVdTBRZDVBZkxycTYxT25ZNzV6dlhqSEQ0TUZWOUJQdEFFeG5idDl0RDJsNTFxUjdxSGhfdFNTRjc5cjRPd1ZOWmFPVVFIWnRFSGp6VEdwQlBQTGl5M2VHZ0FNanQ3ZG9sQTRJeEtFMld1SmU1akxNVkpCMzM1ZnpIYi1yUEJpVm1EX0VzNDMxT3dxMnRaV2RDVVZadE9SMXNFVlZISE42cDRR?oc=5",
+   "source": "UK Parliament",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Shipping Emissions Cost The Global Economy $963 Billion Between 1990 To 2020, New Study Finds",
+   "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPOHNUeW1WR2ZLZW5YeWZzVFZ4aVBtV09sZGcyMGJwM0lqSWNyUDcyM2g5NGJOYlhVc25iY0NhRC1VY2J5bjNxNHROV0lKOEQzdkhNRHVyT1Vpc0plMG0wMHVVWUhwWkJVeVMtSmtqSV8wRmxrbmk4d2pZLS0tRXdyTl9rbHNneTNBbDBObUtXQ3N3RGdSOVhIRFlkMGxhUmF5SGNBVlFXRnR1dVNCRFVGQnJIN1pRcEZQb3VrNWg3OA?oc=5",
+   "source": "Marine Insight",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "‘Simply staggering’: Rapidly developing ‘super El Niño’ on track to peak in December",
+   "url": "https://www.carbonbrief.org/simply-staggering-rapidly-developing-super-el-nino-on-track-to-peak-in-december",
+   "source": "Carbon Brief",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "OpenAI promises to drop NDAs and increase community transparency, following anti-data center wave",
+   "url": "https://www.datacenterdynamics.com/en/news/openai-promises-to-drop-ndas-and-increase-community-transparency-following-anti-data-center-wave/",
+   "source": "DatacenterDynamics",
+   "theme": "Energy & AI Data Centers"
+  }
+ ]
+}
