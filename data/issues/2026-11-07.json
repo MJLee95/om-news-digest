@@ -1,0 +1,236 @@
+{
+ "intro": "Today's issue covers three verified stories: the 75 MW threshold at the center of Texas's data-center interconnection audit, Apple's $33B jump in purchase obligations during a memory price surge, and new evidence that the largest companies are quietly weakening net-zero targets. Two other candidates, on Indonesia/Congo battery-mineral quotas and roughly 600,000 Nvidia H200s held in Hong Kong, are left out because they could not be verified.",
+ "items": [
+  {
+   "candidate_id": 126,
+   "headline": "Texas audit of data-center grid queue creates a 75 MW cutoff; reported ERCOT probe asks whether developers are shrinking projects to stay under it",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/08/27/560536/gov-abbott-has-ordered-a-pause-on-data-center-approvals-heres-what-that-means/",
+   "summary": "The San Antonio Express-News reported that ERCOT is probing whether Texas data-center developers are downsizing projects to avoid review. We could not locate or verify that article, so the probe's scope, the projects involved and its timing are unconfirmed. What is documented: on Aug. 3, 2026, Gov. Greg Abbott ordered the PUC of Texas and ERCOT to verify and audit every data center in ERCOT's connection queue. That order paused large loads of 75 MW or more, while 25–75 MW projects face only a survey.",
+   "background": "ERCOT was tracking more than 1,800 large-load projects totaling over 474 GW, more than five times its record peak demand. The governor's order put ERCOT's 'Batch Zero' study on hold; Batch Zero is the first round in which ERCOT reviews a large group of big power users together. More than 400 projects (247 large, 214 medium) had to answer a survey of about 130 questions by mid-October. The audit covers roughly 250–300 large projects totaling about 200 GW and is expected to run into late 2026. Data centers with their own on-site power fall outside the order.",
+   "problem": "The grid operator needs credible load requests to plan transmission and generation, but the review regime treats projects very differently on either side of 75 MW. If developers break up or understate projects to stay under the cutoff, the queue's information gets worse. Real demand could then reach the grid through many smaller requests that avoid scrutiny. The policy trade-off is between screening speculative or inflated requests and pushing developers to game size or move behind the meter.",
+   "where_why": "The problem sits at the interconnection-request stage, where developers declare load size. The friction is information asymmetry: only the developer knows the true eventual load. A sharp regulatory threshold rewards misreporting or splitting projects. The exemption for on-site power adds a second margin for avoiding review. That a developer would have a reason to come in under 75 MW is an inference from the rules, not something a source stated.",
+   "stakeholders": [
+    {
+     "name": "ERCOT and PUC of Texas",
+     "stake": "Want accurate load forecasts and a manageable queue; strategic downsizing undermines both planning and the audit."
+    },
+    {
+     "name": "Data-center developers",
+     "stake": "Want speed to power; staying under 75 MW or self-generating avoids months of delay but may limit scale."
+    },
+    {
+     "name": "Texas ratepayers and other large loads",
+     "stake": "Bear reliability and cost risks if real demand is hidden in small requests or if speculative requests crowd the queue."
+    },
+    {
+     "name": "State political leadership",
+     "stake": "Must balance economic development from data centers against grid reliability."
+    }
+   ],
+   "hints": [
+    "Bunching estimators: look for excess mass of requested MW just below 75 MW (and just above 25 MW), before versus after Aug. 3, 2026.",
+    "Compare with Italian procurement-threshold work: a discontinuity in regulatory treatment both changes outcomes and invites manipulation of the running variable.",
+    "Treat on-site generation as an outside option: does the audit shift projects toward behind-the-meter power?"
+   ],
+   "data_leads": "ERCOT large-load interconnection status reports (project-level MW and dates), PUCT dockets on the audit, and LBNL queue data for comparison with other ISOs.",
+   "keywords": [
+    "regulatory thresholds",
+    "interconnection queues",
+    "data center electricity demand",
+    "load forecasting",
+    "large-load tariffs"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "ercot_reports",
+    "state_puc"
+   ],
+   "related": [
+    {
+     "title": "The Effect of Discretion on Procurement Performance",
+     "journal": "Management Science",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/mnsc.2016.2628",
+     "cites": 188,
+     "why": "Uses a regression discontinuity around a procurement-value threshold that changes buyer discretion, a close methodological template for studying behavior around ERCOT's 75 MW cutoff."
+    }
+   ],
+   "url": "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/08/27/560536/gov-abbott-has-ordered-a-pause-on-data-center-approvals-heres-what-that-means/",
+   "follows": [],
+   "source": "San Antonio Express-News",
+   "date": "Nov 06"
+  },
+  {
+   "candidate_id": 3,
+   "headline": "Apple raises manufacturing purchase obligations by $33B as memory prices surge",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.supplychaindive.com/news/apple-boosts-purchase-commitments-by-33b-amid-memory-crunch/873936/",
+   "summary": "On its Nov. 2, 2026 call for fiscal Q4, Apple said rising memory prices and limited supply hit iPhone, iPad and Mac manufacturing. It raised manufacturing purchase obligations by $33B from Q3 to Q4. Gross margin fell from 50.1% to 47.9%, about 1 point of that due to memory, and guidance for the current quarter is 45–46%. Apple cushioned the cost with inventory carried over from the prior quarter, savings on non-memory parts and higher product prices.",
+   "background": "Spending on AI has pushed memory prices up by as much as 400% over two years. CEO John Ternus called current memory pricing 'unprecedented' and expects prices to keep rising after the December quarter, with the carried-over inventory helping less over time. On processors, COO Sabih Khan expects supply limits to ease with the move to 2nm. IDC's Phil Solis said AI servers are absorbing 3nm capacity, so 2nm offers relief 'at least until server chips move to 2nm.'",
+   "problem": "A downstream device maker competing with AI servers for scarce components must decide how much to lock in through forward commitments. Committing more secures supply but locks in high prices and risk; committing less exposes it to shortages. It must also choose how to split the cost among inventory buffers, cost-cutting elsewhere and price increases to consumers. Apple did not say what the higher obligations cover or whether supplier terms changed. The view that Apple is signing long-term memory contracts comes from an analyst, not from Apple.",
+   "where_why": "The friction is at the upstream component market for memory and leading-edge foundry capacity. Demand from AI data centers creates a capacity shortfall shared across industries. Supply is concentrated, so buyers compete through advance commitments. Uncertainty about how long the shortage lasts makes the right mix of contract and spot buying unclear.",
+   "stakeholders": [
+    {
+     "name": "Apple",
+     "stake": "Secure memory supply while protecting gross margin, which is guided down to 45–46%."
+    },
+    {
+     "name": "Memory suppliers",
+     "stake": "Gain pricing power and committed volume; must allocate capacity between AI servers and device makers."
+    },
+    {
+     "name": "Consumers",
+     "stake": "Face higher device prices as costs are passed through."
+    },
+    {
+     "name": "Smaller device makers",
+     "stake": "May be crowded out of capacity that larger buyers lock up with advance commitments."
+    }
+   ],
+   "hints": [
+    "Capacity reservation and option-contract models: when should a buyer shift from spot purchases to committed volume as input prices spike?",
+    "Cross-firm comparison: track changes in purchase-obligation disclosures across hardware firms as a proxy for hedging during the memory shortage.",
+    "Puzzle: how does a firm choose between inventory buffers, substitution savings and price pass-through as ways to absorb an input shock?"
+   ],
+   "data_leads": "Purchase-obligation notes in 10-K/10-Q filings on SEC EDGAR, earnings call transcripts, and Compustat gross margins across PC, phone and server makers.",
+   "keywords": [
+    "long-term supply contracts",
+    "cost pass-through",
+    "inventory management",
+    "supplier concentration",
+    "data center electricity demand"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "call_transcripts"
+   ],
+   "related": [
+    {
+     "title": "To Share or Not to Share? Capacity Reservation in a Shared Supplier",
+     "journal": "Production and Operations Management",
+     "year": 2019,
+     "url": "https://doi.org/10.1111/poms.13081",
+     "cites": 24,
+     "why": "Models exclusive versus first-priority capacity reservation with a supplier shared by multiple buyers, which mirrors Apple competing with AI-server buyers for memory capacity."
+    },
+    {
+     "title": "Competitive Options, Supply Contracting, and Electronic Markets",
+     "journal": "Management Science",
+     "year": 2005,
+     "url": "https://doi.org/10.1287/mnsc.1040.0341",
+     "cites": 222,
+     "why": "A framework that combines contract procurement through capacity options and forwards with spot markets, the core trade-off behind Apple's larger purchase commitments."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/apple-boosts-purchase-commitments-by-33b-amid-memory-crunch/873936/",
+   "follows": [],
+   "source": "Supply Chain Dive",
+   "date": "Nov 06"
+  },
+  {
+   "candidate_id": 21,
+   "headline": "Net Zero Tracker: 64% of large listed firms hold net-zero targets, but 20 of the top 50 show signs of backtracking",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://trellis.net/article/net-zero-stocktake-backtracking/",
+   "summary": "Net Zero Tracker's 2026 stocktake of close to 2,000 of the largest listed companies finds 64% with net-zero targets, roughly unchanged from last year. The share is 51% in the U.S. (down 1 point), 85% in the EU (up 1 point) and 28% in China (up from 24% in 2025 and 18% the year before). Of the 50 largest companies, 43 have targets and 20 of those appear to be backtracking. Financial firms account for 11 of the 20.",
+   "background": "Most top-50 targets were set in 2020–21. The 9 non-financial backtrackers, who were not named, are four oil and gas companies, two tech firms, a semiconductor maker, a retailer and a drugmaker. PepsiCo cut back its goals in 2025, citing a lack of policy support. The Net Zero Banking Alliance shut down about a year ago. Microsoft and Google are keeping their 2030 targets even though their annual emissions rose 25% and 18%, respectively.",
+   "problem": "Backtracking means 'mostly negative' changes, such as covering fewer emissions or turning a commitment into an aspiration. Weakening and withdrawing targets together make up nearly 9 in 10 of the negative changes. Revising a target is ambiguous: NewClimate Institute's Louise Bammel argues it can show a firm is taking the target seriously. Keeping a target while emissions rise may be the less credible signal. Outsiders cannot easily tell realistic recalibration apart from retreat.",
+   "where_why": "The problem arises at the target-setting and disclosure stage. Firms make voluntary, long-horizon commitments under policy uncertainty, and operational realities shift underneath them, such as AI-driven emissions growth at tech firms. The friction is information asymmetry about why a target changed. Coalition collapse, such as the end of the Net Zero Banking Alliance, also removes coordination pressure.",
+   "stakeholders": [
+    {
+     "name": "Large listed companies",
+     "stake": "Want flexibility to revise targets without reputational or legal costs."
+    },
+    {
+     "name": "Investors and financial institutions",
+     "stake": "Need credible targets for portfolio climate commitments; financial firms themselves lead the backtracking."
+    },
+    {
+     "name": "Net Zero Tracker and NewClimate Institute",
+     "stake": "Want target quality that is transparent and comparable."
+    },
+    {
+     "name": "Suppliers",
+     "stake": "Face changing decarbonization demands from customers that revise Scope 3 commitments."
+    }
+   ],
+   "hints": [
+    "Separate revisions into 'recalibration' and 'retreat' using firms' actual emissions trajectories and operational changes, such as data-center buildout.",
+    "Compare regions: the U.S. is flat or falling, the EU is high and China is rising quickly. What do policy environment and disclosure mandates explain?",
+    "Lens from capex-guidance revision: do firms learn and adjust targets after stakeholder feedback, much as managers revise guidance after analyst feedback?"
+   ],
+   "data_leads": "Net Zero Tracker company dataset, SBTi target dashboard (status changes), CDP climate responses and EPA GHGRP for U.S. facility emissions.",
+   "keywords": [
+    "voluntary disclosure",
+    "greenwashing",
+    "regulatory uncertainty",
+    "scope 3 disclosure"
+   ],
+   "dataset_candidates": [
+    "Net Zero Tracker company target database"
+   ],
+   "datasets": [
+    "sbti",
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Managerial Learning from Analyst Feedback to Voluntary Capex Guidance, Investment Efficiency, and Firm Performance",
+     "journal": "Management Science",
+     "year": 2021,
+     "url": "https://doi.org/10.1287/mnsc.2020.3896",
+     "cites": 80,
+     "why": "Studies how managers revise voluntary forward-looking guidance in response to outside feedback, an analog for understanding why firms revise net-zero targets."
+    },
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 187,
+     "why": "Shows how customers' environmental disclosure relates to suppliers' GHG reductions, relevant to what happens downstream when large firms weaken their targets."
+    }
+   ],
+   "url": "https://trellis.net/article/net-zero-stocktake-backtracking/",
+   "follows": [],
+   "source": "Trellis",
+   "date": "Nov 06"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "AI demand runs through all three stories: it drives the memory shortage squeezing Apple, the flood of data-center load requests behind Texas's audit, and the emissions increases at Microsoft and Google, which nonetheless keep their 2030 targets. One question to explore is how AI capacity competition at one stage of the system (chips, grid connection) spills over into commitments made at another (supply contracts, climate targets). The Texas threshold and the target revisions both raise the same measurement problem: what firms declare may differ strategically from what they will actually do.",
+ "also": [
+  {
+   "title": "EU Circular Economy Act pushed back to December",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNdE4wQ0ptaW4xNDZPZTBUeWtoZnZCX2hLaHhZWUdFZ1VvMDRBUDlOZElOY0ZJanRiMmlYeHhPOTA1X2Q0SGZXeDRic1R2V2RndjY2T0l5bWJsR1N5Z1RrSTA1RnEyRktfNl9Yc3NOVVg1N1JQZk9PaGVWNzBaMXYtRWd6czVHMjFuVWpqd09YU19PR1EyMEJv?oc=5",
+   "source": "EUWID Recycling and Waste Management",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "US food waste biogas sector has 404 operating facilities across 48 states: Report",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQeGpXeXRPcWFnNnl2emJvdHRxN0xsODhSM1dWNnlDZ05kTElseVJTNTZPdWc4YllYSExrei1DbXY1ekhwWFp4TFRteHowdllyeU91SC1JZlc3cWRQTlpkS0ZVeGU3eGd6ME0zTFFualBFN1ZCbllaZWw1MEV5VmhYeU9GTHk4cmxnVlJsQXFNMlJXem1CSUZzX0hDTkJORG5DQ1RwblVjcDE5T3Nn?oc=5",
+   "source": "BioEnergy Times",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Maersk Flags Rotterdam Rail Constraints and European Supply Chain Disruptions Into 2027",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbHA5VnE0VjdKWlR5MGU3S3A3WE10XzZhTG5yY2xiRmh6eTJOcGl1bkZIUDRST2pqOHVaekJMY0NFQ1hFbnplbHF5UXE0X1AtcHE0amdETHFMTWQ3dGtoV1Z1d2h3blVpRWk2Y1BvZkpWbTRyT1d5ZGl4SmpCWXZhX0R2M3lrYzdxLWtjdzNIM2RmR3ZJakdGdHUzdFpidHZLRUVLRjdSNXVFZTROVzRCTg?oc=5",
+   "source": "Breakbulk.News",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "Analysis: China’s quarterly CO2 falls 3% in largest drop since Covid",
+   "url": "https://www.carbonbrief.org/analysis-chinas-quarterly-co2-falls-3-in-largest-drop-since-covid",
+   "source": "Carbon Brief",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Duke Energy to stay course on data center-fueled growth plan after ‘historic’ election",
+   "url": "https://www.utilitydive.com/news/historic-election-night-wont-change-growth-focus-at-duke-energy-executi/873965/",
+   "source": "Utility Dive",
+   "theme": "Energy & AI Data Centers"
+  }
+ ]
+}
