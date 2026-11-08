@@ -1,0 +1,369 @@
+{
+ "intro": "Today's issue covers a state refiner buying its own tankers after Hormuz disruption, the Senate permitting deal that sets transmission backstop rules and data-center cost allocation, new numbers on freight fraud, sodium-ion's cell-level cost gains on LFP, and a collapse in Iranian pistachio supply to China. Three stories rest on substitute or snippet-only sources, and each one says so.",
+ "items": [
+  {
+   "candidate_id": 20,
+   "headline": "Indian Oil Corp to buy its own crude and LPG tankers as Hormuz disruption pushes spot freight to 4x charter rates",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.business-standard.com/companies/news/ioc-to-buy-crude-lpg-ships-as-west-asia-crisis-exposes-shipping-risks-126110800164_1.html",
+   "summary": "On its Q2 FY27 earnings call (dated Oct 31, 2026 by Kotak Neo), state-owned Indian Oil Corporation said its board has approved buying 'a few vessels' for crude and LPG, with tenders issued several months ago. Time-chartered crude ships cost IOC about $2–2.50/bbl, compared with $8–10/bbl on the spot market. Spot LPG freight is $160–180/tonne, against a normal level of about $40. The source is a PTI wire story run by Business Standard on Nov 8; the Economic Times original could not be accessed.",
+   "background": "IOC operates 3 crude carriers and 9 LPG carriers, all on time charter. US–Iran hostilities escalated in late February 2026. The Indian crude basket went from $65–70/bbl in February to above $100 for much of Q1, and averaged about $120 in October. In H1 FY27, IOC bought about 87% of its crude on the spot market, up from about 50% a year earlier. Its sourcing was 55% Russia, 24% Middle East and about 10% Africa. It now holds about 39 days of crude stock, against a usual 33–35.",
+   "problem": "IOC must choose between three options: making better use of existing charters, owning ships, or backing shipbuilding in India under Make in India. Owning ships locks in capital and exposes the firm to vessel utilization risk. It is meant to protect against freight spikes and lost capacity during a crisis that may or may not last. The number of ships, their cost, type, delivery timing and build location have not been disclosed. IOC's finance director himself named geopolitics as a major source of uncertainty.",
+   "where_why": "The friction sits in the ocean-freight link between crude and LPG sources and Indian refineries. A chokepoint shock caused spot freight to decouple from charter rates at the same time that IOC's procurement moved toward spot cargoes. That mix exposes the firm to the volatile segment of the freight market. Freight is a thin, cyclical market, so make-vs-charter is a capacity-investment decision under uncertainty. It also involves a policy dimension: the government is pushing domestic shipbuilding.",
+   "stakeholders": [
+    {
+     "name": "Indian Oil Corporation",
+     "stake": "Lower and more stable delivered crude and LPG costs, and secure supply. The risk is stranded vessel capital if freight normalizes."
+    },
+    {
+     "name": "Government of India / Make in India",
+     "stake": "Energy security and demand for domestic shipyards. Holds influence over a state-owned refiner."
+    },
+    {
+     "name": "Tanker owners and charterers",
+     "stake": "May lose a large time-charter customer and spot volumes if IOC brings capacity in-house."
+    },
+    {
+     "name": "Indian fuel consumers",
+     "stake": "Exposed to pass-through of freight and crude price spikes. Q2 net profit was Rs 21,630 crore after a Q1 loss."
+    }
+   ],
+   "hints": [
+    "Vertical integration and make-vs-buy under input-price volatility. Compare IOC's choice with how other state refiners or national oil companies responded to earlier tanker-rate spikes.",
+    "Spot vs. term mix: IOC moved to about 87% spot crude while freight spiked. Real-options or newsvendor-style capacity models could show when owned tonnage pays off.",
+    "Watch whether peers such as BPCL and HPCL follow. Staggered adoption could serve as a comparison set."
+   ],
+   "data_leads": "Earnings call transcripts for Indian refiners. UN Comtrade and India PPAC crude import data by origin. Tanker charter and spot rates from Clarksons. Global AIS vessel tracks to observe IOC chartered and owned fleet movements.",
+   "keywords": [
+    "vertical integration",
+    "freight rates",
+    "chokepoint disruption",
+    "strategic stockpiling",
+    "capacity investment under uncertainty"
+   ],
+   "dataset_candidates": [
+    "Clarksons Shipping Intelligence Network tanker rates",
+    "India PPAC (Petroleum Planning & Analysis Cell) import statistics"
+   ],
+   "datasets": [
+    "call_transcripts",
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "The signaling effect of supplier's customer network instability on service price: Insights from the container shipping charter market",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1254",
+     "cites": 27,
+     "why": "Studies pricing and information asymmetry in the shipping charter market. That is the market IOC is choosing to partly exit by owning tonnage."
+    },
+    {
+     "title": "Balancing Resilience and Efficiency: A Literature Review on Overcoming Supply Chain Disruptions",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241302735",
+     "cites": 91,
+     "why": "Reviews the trade-off between resilience and efficiency, which is the tension in paying capital costs for owned ships to hedge against disruption."
+    }
+   ],
+   "url": "https://www.business-standard.com/companies/news/ioc-to-buy-crude-lpg-ships-as-west-asia-crisis-exposes-shipping-risks-126110800164_1.html",
+   "follows": [],
+   "source": "The Economic Times",
+   "date": "Nov 08"
+  },
+  {
+   "candidate_id": 46,
+   "headline": "Senate's final permitting bill requires a one-year state review before FERC transmission backstop and keeps 'large loads pay' rule for 20 MW+ data centers",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://mlq.ai/news/senates-final-permitting-text-makes-transmission-developers-wait-a-year-for-states-keeps-data-center-cost-rule-ahead-of-monday-vote/",
+   "summary": "Senators released a manager's amendment for the bipartisan permitting bill on a Saturday in November; the date was probably Nov 7, 2026, but this is unverified. The bill is identified by BPC as the Bipartisan American Affordability and Jobs Act. A cloture vote that needs 60 votes is set for Monday. Under the final text, developers of lines of 345 kV or more must seek state approval for a year before applying to FERC. The rule that new loads of 20 MW or more pay the full cost of serving them is kept, and a DOE Data Center Community Assistance Program is added. These facts come from MLQ.ai search snippets only.",
+   "background": "The September version let transmission developers apply to FERC and the state at the same time, with FERC able to step in if the state had not approved within a year. The final text also gives courts more room to undo permits, drops two provisions tribal groups had opposed, and adds a utility exemption; the details of these are unknown. After the midterms, many Democrats reportedly prefer to wait for a majority, while advocates say there are 'only the next few weeks' to act.",
+   "problem": "Making the state process come first adds at least a year to the timeline for contested interstate lines. Meanwhile, data-center load growth is raising the stakes of how grid costs are split between large new loads and existing ratepayers. Whether the bill passes at all is uncertain, because it needs Democratic votes.",
+   "where_why": "The friction lies in siting and cost allocation. Siting is split between states, which hold siting authority, and FERC, which has backstop authority, so the problem is a federal-state jurisdiction and coordination failure for lines crossing several states. Cost allocation is where large loads meet the utility tariff. A 20 MW threshold creates a regulatory cutoff that may shape how data centers size and phase their projects.",
+   "stakeholders": [
+    {
+     "name": "Transmission developers",
+     "stake": "Speed and certainty of approval. The one-year state-first wait delays any federal backstop."
+    },
+    {
+     "name": "State regulators",
+     "stake": "Keep primacy over siting decisions within their borders."
+    },
+    {
+     "name": "Data-center developers and hyperscalers",
+     "stake": "Bear the full cost of serving 20 MW+ loads. Could receive community-assistance funding."
+    },
+    {
+     "name": "Existing ratepayers",
+     "stake": "Protection from grid costs driven by large new loads."
+    },
+    {
+     "name": "Tribal groups",
+     "stake": "Two provisions they opposed were dropped from the final text."
+    }
+   ],
+   "hints": [
+    "A 20 MW cost-responsibility threshold invites bunching analysis. Check whether project sizes cluster just below it in states with similar large-load tariffs.",
+    "If the bill passes, the change from concurrent to sequential review is a natural experiment in approval lead times. Model it as a sequential game between developer, state and FERC.",
+    "Compare with existing state large-load tariffs, such as those in ERCOT and PJM utilities, to see how cost allocation already affects data-center siting."
+   ],
+   "data_leads": "FERC eLibrary transmission and backstop filings, state PUC large-load tariff dockets, LBNL interconnection queue data, and Congress.gov bill text and Senate roll-call records.",
+   "keywords": [
+    "federal-state jurisdiction",
+    "large-load tariffs",
+    "regulatory thresholds",
+    "data center electricity demand",
+    "regulatory uncertainty"
+   ],
+   "dataset_candidates": [
+    "Congress.gov bill text and Senate roll-call votes"
+   ],
+   "datasets": [
+    "ferc_elibrary",
+    "state_puc"
+   ],
+   "related": [
+    {
+     "title": "Economic and Emissions Implications of Load-Based, Source-Based, and First-Seller Emissions Trading Programs Under California AB32",
+     "journal": "Operations Research",
+     "year": 2011,
+     "url": "https://doi.org/10.1287/opre.1110.0917",
+     "cites": 76,
+     "why": "Shows how the point of regulation in power markets changes costs and cross-border flows. This parallels the question of where to assign grid costs for large loads and interstate lines."
+    }
+   ],
+   "url": "https://mlq.ai/news/senates-final-permitting-text-makes-transmission-developers-wait-a-year-for-states-keeps-data-center-cost-rule-ahead-of-monday-vote/",
+   "follows": [
+    {
+     "id": "2026-11-03#2",
+     "label": "Nov 3 · Senate bill could charge data center operators about $55 billion in transmission"
+    }
+   ],
+   "source": "MLQ.ai",
+   "date": "Nov 07"
+  },
+  {
+   "candidate_id": 11,
+   "headline": "Highway Q3 2026 Freight Fraud Index: compromised communications involved in 40.2% of stolen loads; blocked spoofed calls up 90%",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/compromised-communications-linked-to-40-of-stolen-loads-in-highway-fraud-report",
+   "summary": "Highway, a carrier identity-verification firm, reported 184 stolen-load reports in July–September 2026. That is down 28.1% from Q2 but up 8.2% from a year earlier. Compromised communications, such as hacked carrier email used to request shipment details, appeared in 40.2% of these reports. Carrier ownership-change reports rose 111.4% from Q2 to 518, and blocked fraudulent or spoofed calls rose 90.3% from a year earlier.",
+   "background": "Brokers choose carriers based on credentials such as operating authority and safety records. Fraudsters increasingly hijack legitimate carrier identities or take over carriers outright. The share of stolen loads from direct theft, where a real carrier takes legitimate loads and steals them, rose from 31.3% to 36.4%, even though the number of such incidents fell 16%. FreightWaves cites a federal cargo-theft case of more than $12M involving hijacked carrier identities.",
+   "problem": "Credential-based carrier vetting is losing its value as a signal. A carrier 'can look great on paper' but may be run by different people after an ownership change. Highway attributes part of the Q3 decline to authenticated rate confirmations and identity checks, but warns against crediting any single measure. That leaves open which controls actually work and what they cost in speed and friction.",
+   "where_why": "The problem sits at the broker–carrier matching and tendering stage of the truckload market. It is an information asymmetry and identity-verification problem. Carrier authority and email are transferable or hackable, and spot-market matching rewards speed over verification.",
+   "stakeholders": [
+    {
+     "name": "Freight brokers (e.g., PEI)",
+     "stake": "Avoid liability for stolen loads while keeping carrier sourcing fast and cheap."
+    },
+    {
+     "name": "Shippers",
+     "stake": "Loss of cargo and disruption to service."
+    },
+    {
+     "name": "Legitimate carriers",
+     "stake": "Identities and email accounts hijacked, with reputational and financial harm."
+    },
+    {
+     "name": "Verification vendors (Highway)",
+     "stake": "Sell identity checks. Their data cover only their own network."
+    },
+    {
+     "name": "Federal regulators and law enforcement",
+     "stake": "Integrity of the carrier authority registry and prosecution of theft rings."
+    }
+   ],
+   "hints": [
+    "Adverse selection and screening: model the broker's choice between vetting intensity and speed to tender when credential signals degrade.",
+    "The 111% jump in ownership changes points to a measurable marker. Carrier authority-change records could be linked to theft incidence.",
+    "Puzzle: incidents fell while the share of direct theft rose. Disentangling composition from level is a classic measurement problem."
+   ],
+   "data_leads": "FMCSA carrier authority, licensing and insurance records for ownership changes; Highway's quarterly Freight Fraud Index; truckload spot rates from DAT or SONAR, with public BTS freight statistics as an alternative.",
+   "keywords": [
+    "cyber-physical risk",
+    "freight fraud",
+    "carrier vetting",
+    "supplier switching"
+   ],
+   "dataset_candidates": [
+    "FMCSA Licensing & Insurance / SAFER carrier records",
+    "Highway Freight Fraud Index (quarterly)"
+   ],
+   "datasets": [
+    "freight_rates"
+   ],
+   "related": [
+    {
+     "title": "Great Expectations: The Moderating Effects of Supplier Service Model and Market Dynamics on Relational Contract Performance",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241277463",
+     "cites": 2,
+     "why": "Studies when relational contracts hold given supplier service models and market dynamics. This is relevant to whether brokers move from spot matching to vetted, repeat carriers as fraud rises."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/compromised-communications-linked-to-40-of-stolen-loads-in-highway-fraud-report",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 07"
+  },
+  {
+   "candidate_id": 71,
+   "headline": "Wood Mackenzie: sodium-ion cells to reach LFP cost parity by late 2026, but systems not until after 2030; 70+ GWh under supply agreements",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://www.ess-news.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-says-woodmac/",
+   "summary": "A Wood Mackenzie study, reported Nov 6, 2026, finds more than 70 GWh of sodium-ion supply agreements across China, the US and Europe. Leading makers are expected to match LFP cost at the cell level by late 2026, but at the module and system level only after 2030. Despite higher upfront cost, sodium-ion could have a 21% lower total cost of ownership over a 20-year stationary-storage project.",
+   "background": "Sodium-ion avoids lithium, so it could reduce exposure to the lithium supply chain. BYD is targeting 30 GWh of sodium-ion capacity, and CATL aims to ship more than 1 GWh by end-2026. Wood Mackenzie expects Chinese costs to fall 18–20% with each doubling of production over 2026–2035. In July 2026, China reinstated a consumption tax on lithium-ion batteries but exempted sodium-ion until end-2028.",
+   "problem": "Storage buyers must decide when to adopt a chemistry that is cheaper at the cell level but not yet at the system level. Its TCO advantage of about 21% is a modelled estimate, not an observed one. Planned manufacturing capacity exceeds demand, so producers face overcapacity and price-war risk. The cost path depends on learning-by-doing, which in turn depends on adoption.",
+   "where_why": "The friction is at cell-to-system integration and in procurement for stationary storage. It is driven by uncertainty about learning curves, a chicken-and-egg problem between scale and demand, and policy that favors sodium-ion: China's temporary tax exemption creates an adoption window that expires.",
+   "stakeholders": [
+    {
+     "name": "Sodium-ion manufacturers (BYD, CATL)",
+     "stake": "Scale up to move down the learning curve. Exposed to overcapacity."
+    },
+    {
+     "name": "Storage developers and utilities",
+     "stake": "Lower TCO and less lithium exposure, against risk from an immature system-level technology."
+    },
+    {
+     "name": "LFP producers and lithium suppliers",
+     "stake": "Possible loss of stationary-storage share."
+    },
+    {
+     "name": "Chinese government",
+     "stake": "Uses tax policy to shape the battery chemistry mix."
+    }
+   ],
+   "hints": [
+    "Learning-curve and technology-adoption models: when should a buyer switch, given 18–20% cost declines per doubling and a parity gap between cell and system level?",
+    "China's sodium-ion tax exemption until end-2028 is a time-limited policy shock. Watch for pre-buy or bunching behavior.",
+    "Capacity investment under demand uncertainty with announced capacity exceeding demand. Compare with earlier LFP and polysilicon overbuild cycles."
+   ],
+   "data_leads": "Wood Mackenzie and BNEF battery supply data (commercial); public alternatives are EIA-860 battery storage additions by chemistry and firm capacity announcements.",
+   "keywords": [
+    "battery chemistry shift",
+    "battery storage",
+    "raw material security",
+    "capacity investment under uncertainty",
+    "learning curves"
+   ],
+   "dataset_candidates": [
+    "Wood Mackenzie sodium-ion cost study (2026)"
+   ],
+   "datasets": [
+    "battery_supply",
+    "eia860"
+   ],
+   "related": [],
+   "url": "https://www.ess-news.com/2026/11/06/sodium-ion-batteries-approach-cost-parity-with-lfp-says-woodmac/",
+   "follows": [],
+   "source": "news.lavx.hu",
+   "date": "Nov 07"
+  },
+  {
+   "candidate_id": 85,
+   "headline": "Iranian pistachio output falls ~48% in two years; 2025/26 exports to China down 83%",
+   "theme": "Food & Agriculture",
+   "original_url": "https://www.producereport.com/article/iranian-pistachios-plummeting-production-export-pressures-stronger-prices",
+   "summary": "At the 2026 CFNA China International Tree Nuts Conference, an Iran Pistachio Association board member presented figures showing Iranian output falling from 225,000 t to 118,000 t over two years. By June 2026, Iran's 2025/26 shipments to China totaled 4,777 t in-shell equivalent, down 83% year on year. The original 巴士的報 article was not found. These figures come from Produce Report search snippets, and the 'climate shocks' cause in the original headline is not confirmed.",
+   "background": "Iran is the world's second-largest pistachio producer and exporter. Produce Report attributes the decline to lower output, export problems, regional conflict and US–Iran tensions. It ties the export collapse to China specifically to geopolitics, not weather. Commodity Board separately reports near-50% crop cuts in both Iran and Turkey, which points to a tight 2026/27 market. Which season the 118,000 t figure refers to is unclear.",
+   "problem": "Chinese importers are losing a major origin because of two overlapping shocks: a smaller harvest from causes that are unconfirmed, and trade and logistics barriers. A major alternative origin, Turkey, has a smaller crop too, so diversification options are limited and prices are likely to rise.",
+   "where_why": "The friction is upstream, in yield at the origin, and at the cross-border trade link between Iran and China. These are correlated supply shocks across nearby origins, combined with geopolitical frictions in payment and shipping. That correlation weakens the usual diversification hedge.",
+   "stakeholders": [
+    {
+     "name": "Iranian growers and exporters",
+     "stake": "Lower volumes and lost access to the Chinese market."
+    },
+    {
+     "name": "Chinese nut importers and processors",
+     "stake": "Must source from other origins at higher prices."
+    },
+    {
+     "name": "Alternative-origin suppliers (e.g., US)",
+     "stake": "Possible share gains and higher prices in China."
+    },
+    {
+     "name": "Turkish producers",
+     "stake": "Also facing a near-50% crop cut, so cannot fill the gap."
+    }
+   ],
+   "hints": [
+    "Separate the yield shock from the trade-friction shock. Compare Iran's exports to China with its exports to other destinations to isolate the geopolitical channel.",
+    "Random-yield sourcing models with correlated supplier yields: what does diversification buy when neighboring origins fail together?",
+    "Trade diversion: track whether Chinese import shares move to the US or other origins, and how prices respond."
+   ],
+   "data_leads": "UN Comtrade and China Customs pistachio imports by origin (HS 0802.51/52), and USDA FAS Tree Nuts: World Markets and Trade for production by country.",
+   "keywords": [
+    "supplier region risk",
+    "supplier diversification",
+    "trade diversion",
+    "random yield",
+    "climate adaptation"
+   ],
+   "dataset_candidates": [
+    "USDA FAS Tree Nuts: World Markets and Trade",
+    "China General Administration of Customs import statistics"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Role of Risk Aversion in Price Postponement Under Supply Random Yield",
+     "journal": "Management Science",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/mnsc.2020.3755",
+     "cites": 77,
+     "why": "Models production and pricing under random supply yield. This applies to importers and processors facing a halved, uncertain pistachio supply."
+    },
+    {
+     "title": "Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12336",
+     "cites": 56,
+     "why": "Examines whether firms diversify or concentrate sourcing under policy uncertainty, which is relevant because the export collapse to China is tied to US–Iran tensions."
+    }
+   ],
+   "url": "https://www.producereport.com/article/iranian-pistachios-plummeting-production-export-pressures-stronger-prices",
+   "follows": [],
+   "source": "巴士的報",
+   "date": "Nov 08"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "The IOC tanker story and the pistachio story share one shock, US–Iran tensions, but they show two opposite responses. A large state buyer brings its logistics capacity in-house, while fragmented importers mostly switch to other origins. Comparing who integrates and who diversifies after the same geopolitical shock, given firm scale and how correlated the alternative sources are, could be a useful lens. The Turkey crop cut shows how diversification fails when supply shocks are correlated.",
+ "also": [
+  {
+   "title": "India Crop Price Supports Fail to Drive Agricultural Acreage Allocation Shifts",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONUVraElSakVTZHFhaTl6a2dFRFZ0SHgwU3I5bTV2UlZTMHp1R2daeWg4LUptdnFZcmx0OE1WR3JHUkRESDd4LWJzZVZWRVN1Wl9aX2VVMjNfSkVGVjBfTGJ4WXROODYzaTBzelpqRDlmRlI4ZzhtS2kwU0hxaHkzQlRzM3VNdFR4WF82X1UxaE43Q0otQUVDWlBBZGMzUXc5aTlKcTFn?oc=5",
+   "source": "Bioengineer.org",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Tesla Megapacks Nearly Sold Out for 2027: 110 GWh [2026]",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQdlpSZkQ5d092QVBUM1NyTlpCaUFCTmVUQjAzdWZxWTNFTm9ubG5EaWJZcXRyNXZlSVZiZTBCV0JMTTJqRndrZDZBSUZwTnZNMHR3RlM0VlhpcFo3R1FGN1BsZnAzN0ZpM0dOQ1llNGU4RHg3TTNuRW9jUzhMUVVHbzVMcGI3Zw?oc=5",
+   "source": "shattered.io",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Flair targets 12% FY27 growth after Rs 25 crore flood loss",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOc2lfMmlGX0tySFdzZ0RaNmVjb2dDOTFDeW90VmJIU2s1RVltdTRIQXI5WVV3SG8wNnFPTEk3T295Y1VFbjhOdUtwbGxWRDFtYkdZZTB1cDVyOW5oZF9TUVNIN3Bjd29Sd0pZT2FiNkpva3h0Y1lQcXFkRVdUWFcweEVDWWpWSGVja05pcHN5MXQtZHQ0aExBX29wdDhpME9Wb29zV1ZhSXFSY2RyLVVYSEVvOA?oc=5",
+   "source": "Multibagg AI",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Questions mount over Europe’s food supply chain security as supermarket cyberattacks remain unsolved",
+   "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOYXdldldJWkg3dUhZX3M5d0JZX3lpSGNsUEQ2ODgtMEhpeUs5QlJqQ3phQjlEWFpnWWRYWV9NQTBxMjJJUmxldUhxVVprb1B3ZWRMX0lycjdCemMtS1E1eFJFUGRBYmZJc3NnRjJPUzR6Rzl6YmIyUklNa1c0WVVxNTFKd0V6NkJxSkM4VlNoeHVHaFdrOVotNE8yXzR1MHMtLWpVaFQwSDM2NnB0bGJPLU5yS3Z0cm1KZ3lpQU1mS2VmdEM2LTdoWm83UEtXZHBIZl9KaEJWSVotdw?oc=5",
+   "source": "CNA",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Intermodal rates coming in hot this fall; mostly fuel driven",
+   "url": "https://www.freightwaves.com/news/intermodal-rates-coming-in-hot-this-fall-mostly-fuel-driven",
+   "source": "FreightWaves",
+   "theme": "Logistics Decarbonization"
+  }
+ ]
+}

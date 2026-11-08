@@ -1,0 +1,88 @@
+{
+ "id": "2026-11-03#2",
+ "created": "2026-11-08",
+ "updates": [
+  {
+   "date": "2026-11-08",
+   "items": [
+    "2026-11-03#2",
+    "2026-11-08#2"
+   ],
+   "note": "New thread. It was opened by TechTarget's report of a $55B, 10-year data-center transmission cost estimate (Grid Strategies), followed by MLQ.ai's report of the final manager's amendment ahead of a Monday cloture vote. The amendment details are unverified."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "Senate permitting bill S. 5653 and data center grid costs",
+  "summary": "S. 5653, the bipartisan permitting package introduced Sept. 30, 2026, would make large computing loads pay more of the cost of transmission. A Grid Strategies estimate puts that at about $55 billion over 10 years. A reported final manager's amendment keeps a 'large loads pay' rule for 20 MW+ loads ahead of a 60-vote cloture vote. That vote's outcome is unknown.",
+  "origin": "Sen. Shelley Moore Capito introduced S. 5653, the Bipartisan American Affordability and Jobs Act of 2026, on Sept. 30, 2026, with Sens. Lee, Whitehouse and Heinrich. It was referred to Senate Energy and Natural Resources.\n\nThe bill has two divisions:\n- Division A: NEPA, Clean Water Act and ESA changes, plus 'project certainty' limits on revoking issued permits.\n- Division B: transmission sections covering permitting (§2101), planning (§2103), an end to utilities' right of first refusal (§2105), 'ratepayer protection' (§2107), interconnection queue reform (§2110) and data collection on 'computational load entities' (§2114).\n\nOn Nov. 2, 2026, TechTarget reported a Grid Strategies estimate that the bill would shift about $55 billion in transmission costs to data centers over 10 years. Around Saturday, Nov. 7, senators reportedly released a final manager's amendment, with a cloture vote set for the following Monday (likely Nov. 9). That report is unconfirmed.",
+  "causes": "Data-center demand growth is concentrated in PJM and MISO. It is raising grid investment needs and consumer power bills, which has made 'make data centers pay' a bipartisan affordability message.\n\nThe package appears to be a cross-committee deal. Republicans mostly want faster NEPA reviews and fewer lawsuits. Democrats mostly want more transmission and protection for ratepayers. This characterization is the researcher's inference.\n\nStates want to keep control over line siting and retail rates. That explains the reported one-year state-first window before FERC's backstop authority applies, and the §2107(b) 'Ratepayer Protection Floor' requiring states to address the generation costs large computing loads create.",
+  "actors": [
+   {
+    "name": "Sens. Capito, Lee, Whitehouse, Heinrich (sponsors)",
+    "role": "Wrote and sponsor the two-division permitting deal",
+    "stake": "Passing a bipartisan permitting and transmission package that clears 60 votes"
+   },
+   {
+    "name": "FERC",
+    "role": "Would be directed to revise transmission pricing for large loads; would gain backstop siting authority after the state-review year",
+    "stake": "Its regulatory scope and workload; the bill also includes FERC staffing provisions"
+   },
+   {
+    "name": "States and state utility commissions",
+    "role": "Get first review of 345 kV+ lines for one year and must address large-load generation costs under §2107(b)",
+    "stake": "Control over siting and retail rates"
+   },
+   {
+    "name": "Data-center developers and hyperscalers",
+    "role": "Would pay embedded and incremental transmission costs: about $5.5B a year versus about $2B today, per the estimate",
+    "stake": "Higher grid costs; stronger reasons to accept interruptible service or build on-site generation"
+   },
+   {
+    "name": "Utilities",
+    "role": "Build transmission to serve forecast large loads",
+    "stake": "Recovering costs if the forecast demand does not show up"
+   },
+   {
+    "name": "Grid Strategies (transmission advocates)",
+    "role": "Produced the $55B estimate",
+    "stake": "New revenue to fund large lines, roughly 10,000 miles of 765 kV"
+   }
+  ],
+  "status": "The bill was introduced and referred to committee. A manager's amendment was reportedly released around Nov. 7, 2026. Reported provisions include:\n- a one-year state-review requirement for 345 kV+ lines before FERC's backstop applies\n- retention of the rule that new loads of 20 MW or more pay the full cost of serving them\n- a new DOE Data Center Community Assistance Program\n\nNone of these details are verified. The result of the cloture vote (needs 60) is unknown. The $55B figure comes from an advocacy consultancy, not CBO or FERC. About 82% of the cost falls in PJM and MISO, and ERCOT is excluded. The estimate assumes new data centers buy firm transmission service.",
+  "watch": [
+   "Cloture vote result on S. 5653, around Nov. 9, 2026 (60 votes needed), and any final passage vote",
+   "Text of the manager's amendment on congress.gov, especially §2107 cost allocation and §2114 computational-load data collection",
+   "Reconciliation with the House NEPA-focused permitting bill (SPEED Act), if the Senate passes S. 5653",
+   "FERC rulemaking to implement large-load transmission pricing, if enacted"
+  ],
+  "research": [
+   {
+    "question": "Does making large loads pay embedded plus incremental transmission costs change where data centers locate, and whether they choose firm service, interruptible service or on-site generation?",
+    "shock": "Enactment of S. 5653's large-load cost rule (20 MW+ threshold), if it passes; the Sept. 30, 2026 introduction and Nov. 2026 votes as announcement events",
+    "data": "Interconnection and large-load queues in PJM and MISO (MISO: 163 approved projects, about $11.4B, 43.5 GW of large loads); data-center siting announcements; ERCOT as a comparison region because it is excluded from the estimate"
+   },
+   {
+    "question": "How should a utility size transmission capacity under uncertain large-load demand when cost-recovery rules shift risk to the loads themselves (capacity planning with demand uncertainty and cost allocation)?",
+    "shock": "The 20 MW+ 'large loads pay' rule versus prior socialized cost allocation",
+    "data": "The Grid Strategies BAAJA white paper; MISO project cost data; utility load forecasts versus realized connections"
+   },
+   {
+    "question": "Does a one-year state-first review before FERC's backstop change how long high-voltage transmission takes to get permitted?",
+    "shock": "The reported 345 kV+ state-review requirement in the manager's amendment",
+    "data": "Permitting timelines for 345 kV+ lines by state; FERC dockets"
+   }
+  ]
+ },
+ "updated": "2026-11-08",
+ "items": [
+  "2026-11-03#2",
+  "2026-11-08#2"
+ ],
+ "sources": [
+  "https://www.govinfo.gov/content/pkg/BILLS-119s5653is/html/BILLS-119s5653is.htm",
+  "https://www.techtarget.com/news/data-center-operators-might-pay-55-billion-under-senate-bill/873521/",
+  "https://gridstrategiesllc.com/wp-content/uploads/Grid-Funding-from-Data-Centers-in-BAAJA.pdf",
+  "https://mlq.ai/news/senates-final-permitting-text-makes-transmission-developers-wait-a-year-for-states-keeps-data-center-cost-rule-ahead-of-monday-vote/"
+ ]
+}
