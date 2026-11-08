@@ -1,0 +1,189 @@
+{
+ "overview": "The week was dominated by how the US and UK grid systems absorb uncertain AI data center load. Stories covered anticipatory substations, PJM's shrinking backstop procurement, ERCOT's 75 MW audit cutoff, a Senate 'large loads pay' rule at 20 MW, and 37 of 38 called local ballot measures going against development. A second thread was policy reversal and loosening, including Brazil's disclosure U-turn, the dropped EU Green Claims Directive, the weaker EU car CO2 target and EPA abandoning livestock emissions methods. Several firm-level responses to concentrated supply shocks also stood out: Apple's $33B in added memory commitments, Indian Oil buying its own tankers, a 45% ammonia price spike and repeated cyberattacks on supermarket refrigeration.",
+ "patterns": [
+  {
+   "title": "Hard regulatory size thresholds for large loads (and firms)",
+   "explanation": "Four separate regimes this week sort data centers by a megawatt cutoff: local bans at 25 MW, ERCOT's audit at 75 MW, the Senate bill's cost-responsibility rule at 20 MW, and the UK's £350m revenue line for due diligence. Sharp cutoffs reward splitting, downsizing or moving power behind the meter, and that degrades the information planners receive. For OM researchers these thresholds are ready-made running variables for bunching and discontinuity designs, and they also pose a mechanism-design question: how should screening rules be set when the party being screened chooses its own reported size?",
+   "item_ids": [
+    "2026-11-07#1",
+    "2026-11-05#1",
+    "2026-11-08#2",
+    "2026-11-03#2",
+    "2026-11-06#1"
+   ]
+  },
+  {
+   "title": "Who bears AI demand uncertainty along the power and component chain",
+   "explanation": "The same uncertain AI load shows up at every stage of the chain. National Grid is building 3.2 GW for a tenant not yet named. PJM's 6.8 GW shortfall may shrink to about 0.6 GW after utilities cut their forecasts by 6.5 GW. Caterpillar is expanding engine and turbine output, and Apple is locking in memory supply through purchase obligations. In each case the open question is how forecast risk is allocated (socialized rates, collateral, option-like commitments, onsite generation), which is a classic capacity-investment and contracting problem with unusually observable data this cycle.",
+   "item_ids": [
+    "2026-11-02#1",
+    "2026-11-04#2",
+    "2026-11-06#3",
+    "2026-11-07#2",
+    "2026-11-03#2",
+    "2026-11-08#2"
+   ]
+  },
+  {
+   "title": "Sustainability rules reversing or softening, with some tightening at the margins",
+   "explanation": "Several policies moved backward this week. Brazil's CVM is reconsidering a mandate it shelved months ago, the EU dropped verified green claims, and the EU Parliament's environment committee cut the 2035 car target to 87.5%. EPA abandoned its livestock emissions methods, and 20 of the 50 largest firms show signs of backtracking on net-zero targets. Fleets are delaying truck orders amid uncertainty over EPA's 2027 NOx rules, and DOE launched a battery strategy just after the EV credit lapsed. The UK moved the other way, regulating ESG raters and mandating forced-labour due diligence. Repeated reversals create dated policy shocks, and they make policy durability itself a variable that can be measured in firms' capex, disclosure and order timing.",
+   "item_ids": [
+    "2026-11-03#3",
+    "2026-11-05#2",
+    "2026-11-06#2",
+    "2026-11-04#5",
+    "2026-11-07#3",
+    "2026-11-05#4",
+    "2026-11-02#2",
+    "2026-11-04#1",
+    "2026-11-06#1"
+   ]
+  },
+  {
+   "title": "Concentrated and common-mode supply exposure",
+   "explanation": "Several shocks this week spread through a single shared node: one controller platform across grocery chains in several countries, Trinidad gas for US ammonia, memory capacity shared between AI servers and phones, and the Hormuz chokepoint for Indian crude freight. Two others show the same weakness. Iranian and Turkish pistachio crops failed together, and US rules on grid equipment now exclude suppliers by country rather than by technical standard. Firm responses varied widely, from vertical integration (IOC buying tankers) to forward commitments (Apple) to absorbing the cost (farmers), which gives a cross-section on how firms respond to concentration.",
+   "item_ids": [
+    "2026-11-03#1",
+    "2026-11-03#5",
+    "2026-11-07#2",
+    "2026-11-08#1",
+    "2026-11-08#5",
+    "2026-11-05#3",
+    "2026-11-05#5"
+   ]
+  }
+ ],
+ "developing": [
+  {
+   "title": "US data center grid cost allocation and siting rules",
+   "update": "The Senate permitting bill, with its 20 MW 'large loads pay' rule and a one-year state-first review for transmission, faces a 60-vote cloture test Monday. Separately, PJM's revised backstop procurement awaits a FERC ruling and could shrink sharply. The open question is whether federal cost rules, ERCOT's audit and new local caps together push projects toward smaller sizes or onsite power.",
+   "item_ids": [
+    "2026-11-08#2",
+    "2026-11-03#2",
+    "2026-11-04#2",
+    "2026-11-07#1",
+    "2026-11-05#1"
+   ]
+  },
+  {
+   "title": "Cyberattacks on supermarket refrigeration controls",
+   "update": "A second wave hit Belgium, Luxembourg and Sweden after October's attack on French chains. The attacker, total losses, and whether both waves used the same equipment remain unconfirmed. Watch for vendor advisories, any third wave, and how retrofit costs are split among vendor, integrator and retailer.",
+   "item_ids": [
+    "2026-11-03#1"
+   ]
+  },
+  {
+   "title": "EU harmonized end-of-waste criteria versus a delayed Circular Economy Act",
+   "update": "Member states approved EU-wide end-of-waste criteria for recycled plastics, and the JRC proposed the first criteria for textile reuse. The broader Circular Economy Act has slipped to December. Watch for the textile implementing act's timeline and the plastics rule's application date, which set when natural-experiment windows open.",
+   "item_ids": [
+    "2026-11-06#4",
+    "2026-11-02#3"
+   ]
+  },
+  {
+   "title": "EU car CO2 rollback",
+   "update": "The Parliament's environment committee voted 48-30 for an 87.5% 2035 cut, with steel credits and a fuel-based zero-emission category. A plenary vote in December and then negotiations with member governments will set the final number that automakers plan capacity against.",
+   "item_ids": [
+    "2026-11-06#2"
+   ]
+  }
+ ],
+ "ideas": [
+  {
+   "title": "Gaming the megawatt line: bunching of data center load requests at regulatory thresholds",
+   "question": "Did ERCOT's August 3, 2026 audit, which pauses loads of 75 MW or more and only surveys 25–75 MW loads, cause developers to cluster just below 75 MW, split projects, or shift to behind-the-meter generation? Do similar responses appear at the 25 MW local caps and the proposed 20 MW federal cost rule?",
+   "why_now": "The ERCOT audit created a sharp, dated cutoff, and there are reports (unverified) that ERCOT is probing downsizing. The Nov 3 ballot measures added municipal caps at 25 MW, and the Senate bill would add a 20 MW cost rule. Multiple thresholds with different dates let a researcher separate threshold effects from standard module sizes.",
+   "data": "ERCOT large-load interconnection status reports (project-level MW and dates); PUCT audit dockets; LBNL interconnection queue data for PJM, MISO and SPP as control distributions; EIA-860 for new onsite gas units near ERCOT data center clusters; Ballotpedia local measure results for the 25 MW caps.",
+   "identification": "Compare the bunching estimate of excess mass just below 75 MW before versus after Aug 3, 2026. Difference against the same MW bins in other ISOs' queues, which faced no 75 MW rule, to net out common module sizes. As a second margin, test for a rise in co-located onsite generation filings among projects just under the cutoff. The main threat is that 50–75 MW is already a standard hyperscale building block, and that queue entries are revised or withdrawn for reasons unrelated to the audit. The pre-period and cross-ISO counterfactual distributions are essential, as is handling phased projects that the same developer files several times.",
+   "literature": "The Effect of Discretion on Procurement Performance offers a template for how regulatory discontinuities both change outcomes and invite manipulation of the running variable; this setting adds an information-quality cost, since manipulation degrades the grid operator's forecast.",
+   "item_ids": [
+    "2026-11-07#1",
+    "2026-11-05#1",
+    "2026-11-08#2",
+    "2026-11-03#2",
+    "2026-11-04#2"
+   ]
+  },
+  {
+   "title": "Forward commitments versus inventory versus pass-through when AI demand crowds out component supply",
+   "question": "When AI server demand drives a memory price shock, how do downstream hardware firms split their response among higher purchase obligations, inventory buffers and price increases? Do larger buyers' advance commitments crowd smaller firms out of supply, showing up as worse margins or stockouts?",
+   "why_now": "Apple disclosed a $33B quarter-on-quarter rise in purchase obligations, about 1 point of margin lost to memory, and price increases. This happened as upstream equipment makers such as Caterpillar report AI-driven demand surges, and as Nvidia rations scarce supply by customer mix. The timing of the memory shock is sharp and common across firms, while exposure (memory share of the bill of materials) varies across firms.",
+   "data": "Purchase-obligation footnotes in 10-K/10-Q filings on SEC EDGAR for PC, phone, server and networking firms; Compustat inventory days, gross margins and sales; earnings call transcripts coded for memory, price increases and supply mentions; Census USA Trade Online imports of memory ICs as an aggregate price and quantity check.",
+   "identification": "Use a firm-level difference-in-differences, comparing changes in purchase obligations, inventory and gross margin across firms with high versus low memory intensity before versus after the onset of the price surge. Add firm size or buyer share at shared suppliers as a moderator to test for crowd-out. The main threat is that AI demand also boosts sales at server-exposed firms, confounding the supply-side story. Separate server makers from consumer-device makers and control for segment demand growth. A secondary issue is that purchase-obligation disclosures vary in scope across firms.",
+   "literature": "To Share or Not to Share? Capacity Reservation in a Shared Supplier models how buyers competing for a common supplier reserve capacity; Competitive Options, Supply Contracting, and Electronic Markets frames the spot-versus-contract choice that Apple's disclosure makes observable.",
+   "item_ids": [
+    "2026-11-07#2",
+    "2026-11-06#3",
+    "2026-11-05#5"
+   ]
+  },
+  {
+   "title": "Does regulatory whiplash deter voluntary sustainability reporting? Evidence from Brazil",
+   "question": "After Brazil replaced its ISSB-aligned mandate with comply-or-explain in May 2026, which listed firms kept reporting voluntarily? Did the three-year lock-in and the notice required to stop reporting deter opt-in among firms that had already invested in reporting systems?",
+   "why_now": "The CVM's sequence of mandate, then comply-or-explain, then a consultation (open to Feb 28, 2027) on re-mandating gives repeated, dated policy shocks within one market. The regulator explicitly lists stranded investment and deterrence by opt-in conditions as hypotheses it will test. Elsewhere, the EU dropping Green Claims and net-zero backtracking show the same durability problem.",
+   "data": "CVM filings (Formulário de Referência) and comply-or-explain market announcements; consultation comment letters; CDP responses and LSEG/MSCI ESG coverage for Brazilian issuers as measures of prior reporting investment; B3 price data for event studies.",
+   "identification": "Build a cross-section of opt-in decisions under the voluntary regime. The key regressor is pre-period readiness (prior CDP or GRI reporting, assurance relationships), interacted with firm size and foreign investor ownership. Event studies at the May 2026 reversal and the consultation opening would capture valuation effects of the mandate's credibility. If a size-based phase-in is adopted, a later regression-discontinuity design becomes possible. The main threat is self-selection: firms that opt in may simply have better ESG performance or more international investors, so lock-in deterrence is hard to separate from low expected benefit. Comment letters can help, because they reveal firms' stated reasons.",
+   "literature": "Market Reaction to Mandatory Nonfinancial Disclosure and Shareholder Wealth Effects of Modern Slavery Regulation provide event-study templates for disclosure mandates; Brazil's reversal lets one test whether those valuation effects reverse symmetrically when a mandate is withdrawn.",
+   "item_ids": [
+    "2026-11-03#3",
+    "2026-11-05#2",
+    "2026-11-07#3"
+   ]
+  }
+ ],
+ "watch": [
+  "Senate cloture vote (needs 60) on the bipartisan permitting bill with the 20 MW 'large loads pay' rule, expected Monday Nov 9.",
+  "FERC action on PJM's refiled reliability backstop procurement and any PJM recalculation of the 6.8 GW shortfall (process slated to start March 1).",
+  "Revised October Class 8 order figures from FTR (preliminary -36%) and ACT (preliminary -45%), plus any EPA signal on the final 2027 NOx rule.",
+  "Official certification of Nov 3 data center ballot results (Ohio's 21 measures in particular) and ERCOT/PUCT audit updates, including whether the reported downsizing probe is confirmed."
+ ],
+ "items": {
+  "2026-11-02#1": "National Grid buys 73 acres in Teesside for a substation of up to 3.2GW to serve a planned AI data center",
+  "2026-11-02#2": "DOE unveils national battery strategy targeting an integrated US supply chain by 2030 and launches PNNL-led Battery Manufacturing Accelerator",
+  "2026-11-02#3": "EU Joint Research Centre proposes first EU-wide end-of-waste criteria for textile reuse and remanufacturing",
+  "2026-11-02#4": "Google DeepMind, WRI and IIASA release ForTy 2020 global forest-type map; claimed accuracy beats the EU's EUDR baseline, but plantation detection is weak",
+  "2026-11-02#5": "Stepped-up US cabotage enforcement removes Mexican drivers and tightens cross-border trucking capacity, Knight-Swift CEO says",
+  "2026-11-03#1": "Second wave of cyberattacks on supermarket refrigeration controls hits stores in Belgium, Luxembourg and Sweden after October attack in France",
+  "2026-11-03#2": "Senate bill could charge data center operators about $55 billion in transmission costs over 10 years",
+  "2026-11-03#3": "Brazil's securities regulator consults on reinstating mandatory sustainability reporting months after making it voluntary",
+  "2026-11-03#4": "Florida attorney general sues First Street over climate risk scores shown on Zillow, Redfin and Realtor.com",
+  "2026-11-03#5": "Midwest ammonia prices rise about 45% since June as falling Trinidad gas output cuts US imports",
+  "2026-11-04#1": "UK FCA finalizes rules bringing ESG ratings providers under supervision from June 2028",
+  "2026-11-04#2": "PJM refiles data center backstop procurement as utilities cut large-load forecasts by 6.5 GW",
+  "2026-11-04#3": "India approves Rs 2,814 crore, 30% capex subsidy auction for four lithium and nickel processing plants",
+  "2026-11-04#4": "3M has closed 16 sites in 2026 and will act on 10 more to reach $1B in productivity gains",
+  "2026-11-04#5": "EPA abandons 20-year effort to set air-emission estimating methods for large livestock operations",
+  "2026-11-05#1": "US voters back data center bans and limits in nearly all of 41 local ballot measures on Nov. 3, 2026",
+  "2026-11-05#2": "European Commission formally drops Green Claims Directive in new work programme",
+  "2026-11-05#3": "Industry backs intent but questions cost and practicality of Trump order restricting foreign grid equipment",
+  "2026-11-05#4": "North American Class 8 truck orders fall 36% year over year in October amid uncertainty over EPA's 2027 NOx rules",
+  "2026-11-05#5": "Nvidia reportedly requires cloud partners to sell at least 51% of services to non-Chinese customers",
+  "2026-11-06#1": "UK commits to mandatory human rights and forced labour due diligence for firms with over £350m revenue",
+  "2026-11-06#2": "European Parliament environment committee votes 48-30 to cut 2035 car CO2 target to 87.5%",
+  "2026-11-06#3": "Caterpillar plans to expand engine and turbine output as data center demand lifts Power Generation sales 30%",
+  "2026-11-06#4": "EU member states approve EU-wide end-of-waste criteria for mechanically recycled plastics",
+  "2026-11-06#5": "Logitech pools 17 suppliers to buy renewable electricity jointly under new Scope 3 program",
+  "2026-11-07#1": "Texas audit of data-center grid queue creates a 75 MW cutoff; reported ERCOT probe asks whether developers are shrinking projects to stay under it",
+  "2026-11-07#2": "Apple raises manufacturing purchase obligations by $33B as memory prices surge",
+  "2026-11-07#3": "Net Zero Tracker: 64% of large listed firms hold net-zero targets, but 20 of the top 50 show signs of backtracking",
+  "2026-11-08#1": "Indian Oil Corp to buy its own crude and LPG tankers as Hormuz disruption pushes spot freight to 4x charter rates",
+  "2026-11-08#2": "Senate's final permitting bill requires a one-year state review before FERC transmission backstop and keeps 'large loads pay' rule for 20 MW+ data centers",
+  "2026-11-08#3": "Highway Q3 2026 Freight Fraud Index: compromised communications involved in 40.2% of stolen loads; blocked spoofed calls up 90%",
+  "2026-11-08#4": "Wood Mackenzie: sodium-ion cells to reach LFP cost parity by late 2026, but systems not until after 2030; 70+ GWh under supply agreements",
+  "2026-11-08#5": "Iranian pistachio output falls ~48% in two years; 2025/26 exports to China down 83%"
+ },
+ "dataset_candidates": [
+  {
+   "name": "CISA ICS security advisories",
+   "mentions": 2
+  },
+  {
+   "name": "Global Forest Watch tree cover loss data",
+   "mentions": 2
+  },
+  {
+   "name": "NESO Transmission Entry Capacity (TEC) Register",
+   "mentions": 2
+  }
+ ]
+}
