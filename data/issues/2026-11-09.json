@@ -1,0 +1,373 @@
+{
+ "intro": "Today's issue covers grid scarcity forcing Norway to pause data center connections, SBTi's last-minute consultation on Scope 2 electricity rules, and Brazil's new critical-minerals priority list. It also includes a sponsored Kearney piece on the gap between US manufacturing investment and capacity, and Lenovo's use of product carbon footprints to sell refurbished laptops.",
+ "items": [
+  {
+   "candidate_id": 63,
+   "headline": "Norway's Statnett pauses new grid capacity reservations for data centers until a licensing scheme is in place",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.devdiscourse.com/article/international/4003806-norways-statnett-pausesnew-grid-capacity-for-data-centres-to-protect-power-system",
+   "summary": "On Monday, 9 November 2026, Norwegian grid operator Statnett temporarily suspended new network capacity reservations for data centers, citing the need to ensure proper operation of the power system. The pause also halts applications already received for facilities that would connect directly to the 420 kV grid. Data centers already connected are unaffected, and approved facilities can still connect. The end date is reported two ways: 'by 1 August 2027 at the latest' (secondary sites citing E24) and 'until a government licensing scheme is in place' (wire copy). This is based on a Reuters copy and secondary sources; the EnergyWatch original was not read.",
+   "background": "Norway produces more power than it consumes and is a net exporter. Recent projections, however, show that new data center demand could push it into an energy deficit and raise electricity prices. Statnett figures reported by E24 show 800 MW of data centers connected, 4,200 MW holding reservations, 9,100 MW queued and a further 18,000 MW requested. The country's record peak load is just over 25,000 MW. Separately, Energy Minister Terje Aasland said Statnett received connection applications for 26,000 MW of new capacity this year across all customer types, with data centers accounting for 75% of requests. The 18,000 MW and 26,000 MW figures measure different things.",
+   "problem": "Requested data center load is a large multiple of what is connected and comparable to national peak demand. The grid operator therefore has to ration scarce connection capacity without a clear rule for which projects deserve it. Digitalisation Minister Torgeir Micaelsen framed the goal as gaining 'more control over the growth of data centres' and ensuring 'we get the data centres we actually need.' That implies a shift from first-come-first-served queuing to government screening of projects.",
+   "where_why": "The friction sits at the transmission interconnection stage. Reservations are cheap to request and may be speculative, so queues inflate well beyond the load that will actually be built. This is an information asymmetry between developers and the grid operator. Meanwhile, the system-level costs (possible deficit, higher prices, loss of export surplus) fall on other consumers, not on the data center applicants. A regulatory gap adds to the problem: technical requirements and a licensing scheme are still being written.",
+   "stakeholders": [
+    {
+     "name": "Statnett (TSO)",
+     "stake": "Keep the system operating reliably and set technical requirements before committing more 420 kV capacity."
+    },
+    {
+     "name": "Norwegian government (Digitalisation and Energy ministries)",
+     "stake": "Steer which data centers get built and avoid an energy deficit and rising prices."
+    },
+    {
+     "name": "Data center developers with pending applications",
+     "stake": "Lose queue position and timeline certainty; may redirect projects to other Nordic markets."
+    },
+    {
+     "name": "Norwegian electricity consumers and industry",
+     "stake": "Exposed to higher prices and lost export surplus if data center load grows unchecked."
+    }
+   ],
+   "hints": [
+    "Treat the freeze as a siting shock and look at whether data center announcements move toward Sweden, Finland or Denmark afterward.",
+    "Queue models with costless reservations predict speculative over-application. Compare the reserved, queued and requested figures with actual connections (800 MW).",
+    "Compare with US large-load tariffs and interconnection reforms, where utilities use collateral or deposits instead of moratoria to screen projects."
+   ],
+   "data_leads": "Statnett connection/reservation statistics, ENTSO-E Transparency Platform load and cross-border flows, and Nord Pool bidding-zone prices; LBNL queue data offers a US comparison.",
+   "keywords": [
+    "data center electricity demand",
+    "siting moratorium",
+    "interconnection queues",
+    "facility siting",
+    "capacity caps"
+   ],
+   "dataset_candidates": [
+    "ENTSO-E Transparency Platform",
+    "Nord Pool day-ahead prices by bidding zone"
+   ],
+   "datasets": [
+    "lbnl_queues"
+   ],
+   "related": [
+    {
+     "title": "How Sustainable Is Big Data?",
+     "journal": "Production and Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1111/poms.12837",
+     "cites": 142,
+     "why": "An early POM essay on the environmental costs of large-scale data use, useful framing for why data center energy demand is now becoming a grid-policy problem."
+    }
+   ],
+   "url": "https://www.devdiscourse.com/article/international/4003806-norways-statnett-pausesnew-grid-capacity-for-data-centres-to-protect-power-system",
+   "follows": [],
+   "source": "EnergyWatch",
+   "date": "Nov 09"
+  },
+  {
+   "candidate_id": 7,
+   "headline": "SBTi opens 30-day consultation on deliverability regions and grandfathering of clean-power contracts before Net-Zero Standard 2.0 takes effect",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://trellis.net/article/sbti-seeks-more-input-on-net-zero-electricity-rules/",
+   "summary": "The Science Based Targets initiative is taking comments until 5 December on possible changes to the electricity criteria in its revised Corporate Net-Zero Standard. The comment period opened 5 November and runs 30 days. A 20-page proposal covers three topics: an interim list of 'deliverability regions', loosening the interconnected-grid requirement for aggregated low-carbon projects, and grandfathering low-carbon power contracts signed before February 2027 even if delivery hasn't started. SBTi will analyze comments in December and publish changes in January; Standard 2.0 takes effect 1 February 2027.",
+   "background": "Scope 2 questions drew the second-highest number of comments in SBTi's formal consultation on the standard. In mid-October the GHG Protocol said it would consider an adjusted approach to Scope 2, with more guidance expected. SBTi wants an interim definition of deliverability regions so companies don't take divergent approaches before the GHG Protocol finishes. This shortened comment process comes from SBTi procedures updated in late October. SBTi's technical council has final say, so the proposed changes aren't guaranteed.",
+   "problem": "Tighter geographic matching makes clean-electricity claims more credible but limits which contracts count. Firms with long-term PPAs from distant or non-interconnected grids could see those contracts stop counting toward targets. Grandfathering protects past procurement decisions but may lock in weaker claims. Firms also face two standard-setters moving on different timelines.",
+   "where_why": "The issue arises at market-based Scope 2 accounting, where a contractual instrument is credited against physical consumption. The friction is regulatory uncertainty and a coordination problem between SBTi and the GHG Protocol. Long-term PPAs are signed years before delivery, so retroactive rule changes create stranded-contract risk and may encourage a rush to sign before the cutoff.",
+   "stakeholders": [
+    {
+     "name": "Corporate buyers with SBTi targets",
+     "stake": "Want existing and pipeline PPAs to count and rules that are stable before signing 10–20 year contracts."
+    },
+    {
+     "name": "SBTi",
+     "stake": "Wants credible standards that stay consistent with the forthcoming GHG Protocol Scope 2 revision."
+    },
+    {
+     "name": "Renewable developers",
+     "stake": "Contract demand and location value depend on how deliverability regions are drawn."
+    },
+    {
+     "name": "GHG Protocol",
+     "stake": "Its Scope 2 revision could override or conflict with SBTi's interim choices."
+    }
+   ],
+   "hints": [
+    "A February 2027 grandfathering cutoff invites a pre-buy test: look for bunching of PPA signings just before the cutoff.",
+    "Define deliverability regions with grid data and estimate how much existing contracted volume would fall outside them.",
+    "Look at long-term contracting under regulatory uncertainty, real-options style, from the buyer's side."
+   ],
+   "data_leads": "SBTi target dashboard for firms with validated targets, CDP climate responses for Scope 2 market vs. location figures, and EIA-930 for grid-region boundaries and interchange.",
+   "keywords": [
+    "market-based emissions accounting",
+    "power purchase agreements",
+    "sustainability standards",
+    "regulatory uncertainty",
+    "pre-buy behavior"
+   ],
+   "dataset_candidates": [
+    "RE100 annual member disclosure data"
+   ],
+   "datasets": [
+    "sbti",
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Meeting Corporate Renewable Power Targets",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2022.4354",
+     "cites": 34,
+     "why": "Models how firms should procure renewable power to meet corporate targets, the decision that deliverability and grandfathering rules directly change."
+    },
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 195,
+     "why": "Shows that customer environmental disclosure can shape supplier emissions, relevant if stricter Scope 2 rules ripple through supply chains."
+    }
+   ],
+   "url": "https://trellis.net/article/sbti-seeks-more-input-on-net-zero-electricity-rules/",
+   "follows": [],
+   "source": "Trellis",
+   "date": "Nov 09"
+  },
+  {
+   "candidate_id": 80,
+   "headline": "Brazil approves a list of 27 critical and strategic minerals that determines eligibility for state financing and tax incentives",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://www.igneabr.com.br/en/noticias/technical-procedures/list-critical-strategic-minerals-cimce/",
+   "summary": "On 5 November 2026, Brazil's National Council for the Industrialization of Critical and Strategic Minerals (CIMCE) approved 27 minerals prioritized under the National Policy on Critical and Strategic Minerals (PNMCE). The day before, Decree No. 13,146 set the economic, socio-environmental and climate criteria for defining and updating the list. The minerals are split into three classes:\n- Class 1 (9 minerals), including rare earths, graphite, lithium, nickel, cobalt, copper, manganese, silicon and uranium.\n- Class 2 (8 minerals), including tungsten, vanadium, phosphate, potassium and sulfur.\n- Class 3 (10 minerals), including niobium, iron and aluminum.\nThe Mining.com original was not read; facts come from a law firm and trade press.",
+   "background": "The policy was enacted in September, and the council was established under Law No. 15,506/2026. Only projects in listed minerals can receive state financing, guarantees and tax incentives under the policy. The stated goals are to expand domestic processing, add value to exports and reduce dependence on imported raw materials. Phosphate, potassium and sulfur are included because Brazil relies heavily on imported fertilizer.",
+   "problem": "The list is a gate for subsidies, so where each mineral lands determines which projects get cheaper capital. The policy also mixes two aims: moving downstream into processing for export minerals, and import security for fertilizer inputs. The value of the incentives and their start date are not yet known.",
+   "where_why": "The intervention targets the processing stage of the minerals chain, where value capture and concentration (often in China) are highest. The friction is a capital-cost and scale disadvantage for new processors outside incumbent hubs. Policy makers are trying to offset it with targeted finance, with criteria that will be updated over time.",
+   "stakeholders": [
+    {
+     "name": "Brazilian federal government / CIMCE",
+     "stake": "Build a domestic processing industry and reduce import dependence, especially for fertilizers."
+    },
+    {
+     "name": "Mining and processing firms in Brazil",
+     "stake": "Access to state financing, guarantees and tax incentives depends on a project's mineral being listed and its priority class."
+    },
+    {
+     "name": "Downstream buyers (battery, EV, agriculture)",
+     "stake": "Potential new non-Chinese sourcing options and domestic fertilizer inputs."
+    },
+    {
+     "name": "Excluded-mineral producers",
+     "stake": "Disadvantaged in competing for capital until the list is updated."
+    }
+   ],
+   "hints": [
+    "The three-class tiering resembles a regression-discontinuity setup: compare project announcements or financing in Class 1 vs. Class 3 minerals.",
+    "Compare Brazil with the US, EU and other critical-mineral lists: which minerals overlap, and is Brazil positioning itself as an alternative supplier?",
+    "Think about upstream processing capacity investment under policy-induced cost-of-capital shifts."
+   ],
+   "data_leads": "UN Comtrade and USGS Mineral Commodity Summaries for Brazil's mineral trade and output, plus Brazilian National Mining Agency (ANM) production and permit data.",
+   "keywords": [
+    "industrial policy",
+    "raw material security",
+    "supplier diversification",
+    "supplier concentration"
+   ],
+   "dataset_candidates": [
+    "Agência Nacional de Mineração (ANM) Anuário Mineral Brasileiro"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "usgs_minerals"
+   ],
+   "related": [
+    {
+     "title": "Global operations and supply‐chain management under the political economy",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1232",
+     "cites": 46,
+     "why": "Frames how political economy and state policy shape global operations and sourcing, the lens for resource-nationalist mineral policies."
+    }
+   ],
+   "url": "https://www.igneabr.com.br/en/noticias/technical-procedures/list-critical-strategic-minerals-cimce/",
+   "follows": [],
+   "source": "Mining.com",
+   "date": "Nov 08"
+  },
+  {
+   "candidate_id": 0,
+   "headline": "Sponsored Kearney piece: US manufacturing investment surged but capacity rose only 1.5% since 2020",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.manufacturingdive.com/spons/expectations-vs-reality-the-disconnect-between-manufacturing-investment-a/873275/",
+   "summary": "This is sponsored content by Kearney promoting its 2026 Reshoring Index, published 9 November 2026; all figures come from Kearney or its chosen sources. It claims US manufacturing capital investment has tripled since COVID while capacity rose only 1.5% and gross output was flat (-0.4%). It also claims US manufactured imports rose $133B from 2024 to 2025 and the Reshoring Index improved from -115 to -86. Imports from 14 Asian low-cost countries and regions rose $60B in 2025, as China fell from Q2 to Q4 while Thailand, Cambodia and Vietnam rose.",
+   "background": "Kearney partner Patrick Van den Bossche says only about 50% of the investment added capacity; the rest modernized or replaced existing plants. A European Investment Bank figure puts the replacement share at 48%. US industrial equipment averages nearly 25 years old. Other causes cited are slow ramp-up, labor shortages and permitting delays. Two numbers need checking before use: a 'cumulative $11 trillion since 2020' investment figure looks very high and is unsourced, and '$224 million per month in 2025' is probably a typo for billion.",
+   "problem": "Reshoring rhetoric and capex headlines don't translate into capacity or output. Much spending maintains an aging base rather than expanding it, and imports are shifting among Asian suppliers rather than being displaced. That raises the question of how to measure whether industrial policy is actually working.",
+   "where_why": "The gap sits between capex commitment and usable capacity. Contributing frictions are long ramp-up and permitting lead times, constrained skilled labor, and a large replacement need from old equipment. Measurement is also a problem: capex totals mix replacement with expansion. Trade diversion within Asia suggests sourcing responds to tariffs faster than domestic capacity can be built.",
+   "stakeholders": [
+    {
+     "name": "US manufacturers",
+     "stake": "Must split capex between replacing aged assets and expanding, while facing labor and permitting delays."
+    },
+    {
+     "name": "US policymakers",
+     "stake": "Need evidence that industrial and tariff policy is adding domestic capacity, not just shifting imports."
+    },
+    {
+     "name": "Southeast Asian suppliers (Vietnam, Thailand, Cambodia)",
+     "stake": "Gaining share as imports from China fall."
+    },
+    {
+     "name": "Kearney",
+     "stake": "Promotes its Reshoring Index and advisory services; its framing is not independent."
+    }
+   ],
+   "hints": [
+    "Separate replacement from expansion capex. Capacity-utilization and capital-stock data may let you estimate how far time-to-build delays capacity additions.",
+    "Look at trade diversion from China to Southeast Asia at the tariff-line level as an alternative to reshoring.",
+    "Compare reshoring announcements with realized plant openings; announcement-vs-delivery gaps are an under-measured outcome."
+   ],
+   "data_leads": "Census USA Trade Online and USITC DataWeb for import shifts by country, Federal Reserve G.17 capacity utilization and the Census Quarterly Survey of Plant Capacity Utilization, and Compustat capex for firm-level spending.",
+   "keywords": [
+    "reshoring",
+    "capital expenditure",
+    "capacity utilization",
+    "trade diversion",
+    "industrial policy"
+   ],
+   "dataset_candidates": [
+    "Federal Reserve G.17 Industrial Production and Capacity Utilization",
+    "Census Quarterly Survey of Plant Capacity Utilization"
+   ],
+   "datasets": [
+    "census_trade",
+    "compustat"
+   ],
+   "related": [
+    {
+     "title": "Return to the United States: Impact of Reshoring Announcements and Reshoring Risks on Market Valuation",
+     "journal": "Management Science",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/mnsc.2022.00599",
+     "cites": 33,
+     "why": "Studies market reactions to reshoring announcements and reshoring risks, a natural complement to evidence that announced investment hasn't become capacity."
+    },
+    {
+     "title": "Adaptive Two-Stage Stochastic Programming with an Analysis on Capacity Expansion Planning Problem",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/msom.2023.0157",
+     "cites": 25,
+     "why": "Develops stochastic programming for capacity expansion with commitment constraints, relevant to modeling lumpy, delayed capacity additions."
+    }
+   ],
+   "url": "https://www.manufacturingdive.com/spons/expectations-vs-reality-the-disconnect-between-manufacturing-investment-a/873275/",
+   "follows": [],
+   "source": "Manufacturing Dive",
+   "date": "Nov 09"
+  },
+  {
+   "candidate_id": 8,
+   "headline": "Lenovo publishes assured carbon footprints for 100 refurbished ThinkPads to win emissions-focused corporate IT deals",
+   "theme": "Circular Economy",
+   "original_url": "https://trellis.net/article/how-lenovo-uses-product-carbon-footprints-to-sell-refurbished-tech/",
+   "summary": "In July, Lenovo began adding greenhouse gas assessments for certified refurbished notebooks, starting with 100 ThinkPad models. Refurbished models often have about half the product carbon footprint of new ones. Anthesis Group assured the footprints under ISO 14067, using a method based on the Global Circularity Protocol from WBCSD and the One Planet Network. New footprints will be added each quarter, with method and data reviewed annually.",
+   "background": "Lenovo started its certified refurbished program in March 2024. Trellis gives estimated market shares of 27% for new and 18% for refurbished notebooks and PCs, without a source. The footprint counts:\n- shipping to the refurbishing site;\n- inspection, parts replacement, data wiping and quality checks;\n- the footprint of spare parts;\n- typical use, based on the regional grid where the device runs.\nJames Pennington, director of global sustainability services, says corporate IT buyers increasingly request emissions data when bidding on large deals.",
+   "problem": "Refurbished products need a credible way to signal their environmental advantage to buyers who report Scope 3 emissions. That signal depends on allocation choices, such as how much of the original manufacturing emissions the second life carries. It also risks cannibalizing new-device sales. Evidence is thin: a Lenovo simulation found that replacing 30% of a consulting firm's notebooks with refurbished units cut IT costs 8% and IT emissions 15%. These figures are not independently checked, and there is no data on how many deals the footprints helped win.",
+   "where_why": "The friction is at B2B procurement, where buyers face information asymmetry about refurbished quality and emissions. Assured product-level data reduces that gap and lets buyers count purchases toward Scope 3 goals. For the manufacturer, the challenge is balancing refurbished supply, which depends on uncertain returns, against new-product margins.",
+   "stakeholders": [
+    {
+     "name": "Lenovo",
+     "stake": "Grow refurbished sales and win large tenders while managing cannibalization of new devices."
+    },
+    {
+     "name": "Corporate IT procurement teams",
+     "stake": "Want lower cost and reportable Scope 3 reductions backed by assured data."
+    },
+    {
+     "name": "Standard-setters (WBCSD, One Planet Network, ISO 14067 assurers)",
+     "stake": "Credibility of circularity accounting methods depends on how emissions are allocated across product lives."
+    },
+    {
+     "name": "Competing OEMs and independent refurbishers",
+     "stake": "May face pressure to produce comparable footprints or lose emissions-screened deals."
+    }
+   ],
+   "hints": [
+    "Use a closed-loop supply chain model in which carbon information shifts buyer willingness to pay for remanufactured goods, and look at the cannibalization trade-off.",
+    "Emissions allocation between first and second life is a contested accounting choice; see how alternative rules change the 'about half' claim.",
+    "Look for whether competing OEMs follow with refurbished-product footprints, a disclosure-diffusion question."
+   ],
+   "data_leads": "Lenovo's public product carbon footprint datasheets, the EPEAT registry for comparable device footprints, and CDP supply chain responses showing buyer Scope 3 requests.",
+   "keywords": [
+    "recommerce",
+    "embodied carbon",
+    "closed-loop supply chain",
+    "product carbon footprint",
+    "cannibalization"
+   ],
+   "dataset_candidates": [
+    "Lenovo Product Carbon Footprint (PCF) datasheets",
+    "EPEAT registry"
+   ],
+   "datasets": [
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Managerial Efficiency and Reverse‐Flow Complexity in a Circular Economy",
+     "journal": "Journal of Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1002/joom.70010",
+     "cites": 11,
+     "why": "Examines inventory decisions under delayed returns in circular systems, the supply-side constraint on scaling refurbished sales."
+    },
+    {
+     "title": "Allocating Emissions Among Co-Products: Implications for Procurement and Climate Policy",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2016,
+     "url": "https://doi.org/10.1287/msom.2015.0572",
+     "cites": 134,
+     "why": "Analyzes how emissions-allocation rules affect procurement, analogous to allocating footprints between a device's first and refurbished lives."
+    }
+   ],
+   "url": "https://trellis.net/article/how-lenovo-uses-product-carbon-footprints-to-sell-refurbished-tech/",
+   "follows": [],
+   "source": "Trellis",
+   "date": "Nov 09"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "Norway's data center freeze and SBTi's deliverability-region consultation both turn on the same question: how far apart can consumption and clean supply be before a claim stops being credible? Data center operators chasing Nordic hydro for low-carbon claims now face both physical connection limits and tighter accounting boundaries. Meanwhile, Kearney's capex-vs-capacity gap and Brazil's subsidy-gated mineral list show policy-driven investment running into lead-time and execution limits.",
+ "also": [
+  {
+   "title": "Anthropic AI Data Center: Firm Secures $3.4B Gas Generator Deal",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQc21QallOVXVyRXFkTFhiT29VZGxzRHptWFZsTEpxVkthOHVyZ0VpLXMxeElaUDBDd0NhbWZicVpvV1V3MkJLYXBGMlY2cV9QaHF0YzQyMUc5cnRqQzIzcm5ZWmpwU2ZqbGdtM2RZU3dYNEVMR2k4c0ZvOHNza1piT2xhMlJ2dk5VQnJFRHlkb2ZsZ3NUVkRBZDBDTzFBalcx?oc=5",
+   "source": "Construction Review",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "EU Soybean Crop Down 20%: Drought, Tight Non-GM Supply and Price Outlook",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNWHY3enhjelZra2pOV01iSDJqaTRmR3FhdG1xOHM3dWdweUNmLWl3TkZkRnFwRzBUMWVKQnBhMTlnX0plT0o0MFRvZjZ4NXF2SHFuUWZSa0tCbjZRUEdYVDJ6ekpvLW9BZ2pkeXd6RnhEU0RpMnRJLUxaZVNramlhNXBGa0FId1JEb29ZeTlBREdMekJXLXFfZGhPdjdfQ1ZodVpj?oc=5",
+   "source": "CMB News",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "New industry frameworks set out to cut duplicated shipping emissions reporting",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNeUd3VzBxN3B2Z0UtMkVHQXhTeWY1U1MzLWtoOFVpNW1RY3NWazZvUkhwNzZodzZYdHI1NmdIUF9LMmhwLWtIdC1tZFA3TV9FRnA2cG1UY09naXNOeVlLRHJISjBNZFZWNDhoQ3RuOUFvVHY3WS1YWXNUMThCMzd4aXR4RWVMMnRmdWhNeEh6S1FGLXk3ak5ZdmgzZ0xfYXVVNU5GLWotT0oyQzNmd1M1ZQ?oc=5",
+   "source": "Oils & Fats International",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "Only 10% fully prepared for water-related supply chain risks in Africa, ACCA research finds",
+   "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMVhjc1lQeGl3SlFqMFVITDZ1LXp0VVA1Q1VKX3lmck9CTERDN1QwS0tKUEJKRUVlZkNVNUhTM2dGNldxTzdXNFdjMHNTODFJTDA1clFoZkw3aEtPSTBhcmNKRnFBWUphMnUyUTRheERkLWYyT212d2U5M2o4VWZONk1FWnhxZjl2SDdmTHRIbERCdkEwUVJJWXluZ1BiZmVaVTFMdjUwZ1JiZzJRWDY3ZXFRSmJjYVdzRUgtektURTFJUXNlWHBndGt6YTh2Zw?oc=5",
+   "source": "Africa Business Communities",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "'On par with what the DoD pursued during the Cold War': Pentagon’s war stockpile plan hits a minerals wall",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPYk16QXpYdk5FdnpoNXhwQVdfX3NKY3UtTXlkVFFMT2pQNUV1NHliVzhDbGRrTFdwUmV3ZW5SZ2hWZUpVQWlwRmJGV2VuYkVOckIyUHBzY19OeF92MHNYMTE1cTFJcVppLXdGSkRNT3plUXlxZjdjRnVxVElLc0Vad2loR3NnZUhmeEJ2WmctbnBqb2FMUmJ3ZWl1R29aUQ?oc=5",
+   "source": "Fortune",
+   "theme": "Supply Chain Resilience"
+  }
+ ]
+}

@@ -1017,5 +1017,69 @@
    "2026-11-08#5"
   ],
   "last_seen": "2026-11-08"
+ },
+ "entso-e transparency platform": {
+  "name": "ENTSO-E Transparency Platform",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#1"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "nord pool day-ahead prices by bidding zone": {
+  "name": "Nord Pool day-ahead prices by bidding zone",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#1"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "re100 annual member disclosure data": {
+  "name": "RE100 annual member disclosure data",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#2"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "agência nacional de mineração (anm) anuário mineral brasileiro": {
+  "name": "Agência Nacional de Mineração (ANM) Anuário Mineral Brasileiro",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#3"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "federal reserve g.17 industrial production and capacity utilization": {
+  "name": "Federal Reserve G.17 Industrial Production and Capacity Utilization",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#4"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "census quarterly survey of plant capacity utilization": {
+  "name": "Census Quarterly Survey of Plant Capacity Utilization",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#4"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "lenovo product carbon footprint (pcf) datasheets": {
+  "name": "Lenovo Product Carbon Footprint (PCF) datasheets",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#5"
+  ],
+  "last_seen": "2026-11-09"
+ },
+ "epeat registry": {
+  "name": "EPEAT registry",
+  "first_seen": "2026-11-09",
+  "items": [
+   "2026-11-09#5"
+  ],
+  "last_seen": "2026-11-09"
  }
 }
