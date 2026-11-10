@@ -1,0 +1,371 @@
+{
+ "intro": "Today's issue covers a Ninth Circuit ruling that likely blocks California's Scope 3 and climate-risk reporting while letting Scope 1–2 reporting proceed. It also covers a 343% spike in Asia–US West Coast container spot rates tied to the Middle East conflict, PPL's 35 GW Pennsylvania data center pipeline, a revisit of GM's 2025 reshoring move (flagged as dated), and a looming upward correction to California's SB 54 plastic packaging baseline.",
+ "items": [
+  {
+   "candidate_id": 107,
+   "headline": "Ninth Circuit finds California's Scope 3 and climate-risk reporting rules likely unconstitutional; Scope 1–2 reporting proceeds",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.foley.com/insights/publications/2026/11/california-climate-disclosure-laws-ninth-circuit-ruling-sb-253-scope-1-2-disclosures-move-ahead-sb-253-scope-3-disclosures-and-sb-261-expected-to-be-enjoined/",
+   "summary": "The ruling came on November 9, 2026, in Chamber of Commerce v. Sanchez (No. 25-5327). The Ninth Circuit found SB 253's Scope 3 emissions requirement and SB 261's biennial climate-risk report likely unconstitutional under the First Amendment, and it reversed the lower court's denial of a preliminary injunction. Scope 1 and 2 reporting under SB 253 was not blocked, and the first filing deadline (2025 data) fell on November 10, 2026, one day after the ruling.",
+   "background": "SB 253 requires annual GHG reporting: Scope 1–2 from November 2026 and Scope 3 from 2027. SB 261 requires a climate-related financial risk report every two years. The Ninth Circuit had already paused SB 261 on November 18, 2025, so for that law the ruling changes little in practice. The facts here come from a Foley & Lardner summary; the court opinion and the WSJ framing were not reviewed.",
+   "problem": "Firms now face a split regime. Direct and purchased-energy emissions must be reported on schedule, while value-chain (Scope 3) reporting is expected to be enjoined. That leaves uncertain whether firms should keep investing in supplier emissions data collection. Still open: whether the district court will sever Scope 3 from the rest of SB 253 (the law has a severability clause), and whether either side seeks en banc rehearing (14-day window) or Supreme Court review.",
+   "where_why": "The friction sits at the buyer–supplier information link. Scope 3 requires buyers to collect emissions data they do not directly control, and the court treats compelled disclosure of this kind as speech. Legal uncertainty therefore lands on supplier data programs: buyers may pause or keep requesting supplier data depending on their expectations about appeals and on parallel regimes elsewhere.",
+   "stakeholders": [
+    {
+     "name": "Companies covered by SB 253/261",
+     "stake": "Avoid the cost of Scope 3 data collection and climate-risk reporting, while still meeting Scope 1–2 deadlines."
+    },
+    {
+     "name": "Suppliers of covered firms",
+     "stake": "May face fewer emissions data requests, or continued requests driven by other regimes."
+    },
+    {
+     "name": "State of California (CARB)",
+     "stake": "Wants to preserve as much of its climate disclosure program as possible through severability and appeals."
+    },
+    {
+     "name": "U.S. Chamber of Commerce and co-plaintiffs",
+     "stake": "Seek permanent invalidation of compelled climate speech."
+    },
+    {
+     "name": "Investors and ESG data providers",
+     "stake": "Lose a mandated source of standardized value-chain emissions data."
+    }
+   ],
+   "hints": [
+    "Event-study lens: sort firms by exposure to California revenue or operations and by Scope 3 intensity, then compare market reactions to the 2025 SB 261 stay and this ruling.",
+    "Puzzle: do firms keep collecting supplier emissions once the mandate weakens? This is a test of whether the data collection was compliance-driven or strategic.",
+    "The Scope 1–2 vs. Scope 3 split creates a within-firm contrast between disclosure categories that remain mandated and those that do not."
+   ],
+   "data_leads": "SEC EDGAR 10-K/8-K climate language and CDP supply chain responses (supplier data requests), combined with CRSP returns around the ruling dates; CARB SB 253 filing records once published.",
+   "keywords": [
+    "scope 3 disclosure",
+    "mandatory climate reporting",
+    "litigation risk",
+    "regulatory uncertainty",
+    "supplier emissions"
+   ],
+   "dataset_candidates": [
+    "CARB SB 253 emissions report filings"
+   ],
+   "datasets": [
+    "cdp",
+    "sec_edgar"
+   ],
+   "related": [
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 196,
+     "why": "Shows that customers' environmental disclosure is associated with supplier GHG reductions, the mechanism Scope 3 mandates rely on."
+    },
+    {
+     "title": "Are Firms Voluntarily Disclosing Emissions Greener?",
+     "journal": "Production and Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1177/10591478251318917",
+     "cites": 33,
+     "why": "Finds that voluntary disclosers have lower Scope 1 but higher upstream Scope 3 emissions, relevant if Scope 3 reporting reverts to voluntary."
+    }
+   ],
+   "url": "https://www.foley.com/insights/publications/2026/11/california-climate-disclosure-laws-ninth-circuit-ruling-sb-253-scope-1-2-disclosures-move-ahead-sb-253-scope-3-disclosures-and-sb-261-expected-to-be-enjoined/",
+   "follows": [],
+   "source": "WSJ",
+   "date": "Nov 09"
+  },
+  {
+   "candidate_id": 68,
+   "headline": "Xeneta: Asia–US West Coast container spot rates up 343% since late February; forecasts a 30% drop in 2027",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/asia-u-s-west-coast-ocean-container-spot-rates-up-343-since-start-of-iran-war-says-xeneta",
+   "summary": "In October 2026, Asia–US West Coast spot rates stood 343% above their February 28 level, leaving them only 14% below the pandemic record. Xeneta forecasts that full-year 2027 global spot rates will fall 30% versus Q3 2026, and long-term contract rates will fall 5%. It cites 6.8% fleet growth and the return of ships to Red Sea routings.",
+   "background": "Several drivers sit behind the spike:\n- The Middle East conflict and the Strait of Hormuz closure.\n- Singapore high-sulphur bunker prices, up 107% since February 27.\n- Contract fuel surcharges across four major Asia trades, up 42% to $820/FEU.\n\nShippers pulled demand forward: global volumes rose 4.7% in the first eight months of 2026, and Asia–US volumes rose 11% in August against 1.9% real US retail sales growth. On the capacity side, Red Sea weekly capacity was 467,297 TEU in October (about half the pre-crisis level), and shorter routings freed about 599,000 TEU in 2026. Fleet supply grows by about 2.9M TEU of newbuilds, minus about 500k TEU scrapped, against 2.5–4% demand growth.",
+   "problem": "Shippers must decide how much to lock into long-term contracts versus spot, and how much inventory to carry, after a year of front-loading. Xeneta expects inventory drawdowns to produce a weak start to 2027. Yet three consecutive years of shocks (Red Sea 2024, tariffs 2025, Hormuz 2026) each reversed forecasts of lower rates.",
+   "where_why": "The problem arises at the ocean transport stage. Inelastic short-run vessel capacity collides with rerouting and fuel-cost shocks, and shippers' precautionary front-loading amplifies the spike. The result is a bullwhip-like pattern of an import surge followed by destocking. Uncertainty about chokepoint reopening makes both the contract-mix and inventory decisions hard to make.",
+   "stakeholders": [
+    {
+     "name": "US importers/BCOs",
+     "stake": "Want to manage freight cost, the contract-vs-spot mix and excess inventory after front-loading."
+    },
+    {
+     "name": "Ocean carriers",
+     "stake": "Earn windfall spot margins now but face overcapacity as the fleet grows 6.8%."
+    },
+    {
+     "name": "Freight forwarders",
+     "stake": "Exposed to spot volatility between their buy and sell rates."
+    },
+    {
+     "name": "US retailers and consumers",
+     "stake": "Absorb freight and fuel surcharge pass-through."
+    }
+   ],
+   "hints": [
+    "Look at the spot–contract spread and fuel surcharge pass-through: when do contracted rates get renegotiated or rolled to spot?",
+    "Front-loading as precautionary inventory: compare import volume surges with retail sales to measure the size of the pull-forward and the later destocking.",
+    "Use Red Sea reopening as a capacity-release shock affecting different trade lanes at different times."
+   ],
+   "data_leads": "Xeneta/Drewry rate indices (commercial); Census USA Trade Online and bill-of-lading data (Panjiva/ImportGenius) for import timing; NOAA AIS for vessel routing; Compustat inventory for the destocking test.",
+   "keywords": [
+    "freight rates",
+    "chokepoint disruption",
+    "fuel surcharges",
+    "pre-buy behavior",
+    "long-term supply contracts"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "ocean_schedules",
+    "census_trade"
+   ],
+   "related": [
+    {
+     "title": "Carrier Portfolio Management for Shipping Seasonal Products",
+     "journal": "Operations Research",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/opre.2017.1616",
+     "cites": 22,
+     "why": "Models a shipper choosing among ocean carriers with different schedules and rates, a starting point for contract and spot portfolio choices under rate shocks."
+    },
+    {
+     "title": "Balancing Resilience and Efficiency: A Literature Review on Overcoming Supply Chain Disruptions",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241302735",
+     "cites": 91,
+     "why": "Reviews the resilience–efficiency trade-off in disruption management, framing the front-loading and inventory responses."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/asia-u-s-west-coast-ocean-container-spot-rates-up-343-since-start-of-iran-war-says-xeneta",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 09"
+  },
+  {
+   "candidate_id": 34,
+   "headline": "PPL's advanced-stage Pennsylvania data center pipeline reaches 35.3 GW; JV agrees terms for 2 GW supply to QTS",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/ppl-advanced-stage-data-center-pipeline-hits-35gw-in-pennsylvania/",
+   "summary": "PPL Electric Utilities' advanced-stage data center pipeline in Pennsylvania reached about 35.3 GW, its 11th straight quarterly increase and 3.5 GW above Q2. Of that, 11.4 GW is under signed electric service agreements and 8.5 GW is under construction. Invitium Energy, PPL's joint venture with Blackstone Infrastructure, agreed key commercial terms to supply about 2 GW to QTS's Salem Township, PA project for 20 years, with five-year renewal options.",
+   "background": "PPL's Q3 2026 results showed GAAP earnings of $367M ($0.49/share), up from $318M. The company raised its capital plan to about $25B and is proposing a 645 MW Kentucky gas plant. It sees $12–16B of possible extra generation investment through 2032, which it says could lift EPS growth to 9%+ for 2026–2030; Invitium alone sees $6–9B. Pennsylvania sits in PJM, where large-load growth is pressuring capacity planning.",
+   "problem": "Only about a third of the 'advanced' pipeline is under signed agreements, and about a quarter is under construction. Utilities and regulators must therefore size generation and network investment against demand that may not materialize. The utility-JV model, in which an affiliate builds dedicated generation for a single hyperscale customer, raises open questions about how costs and risks are allocated. The QTS terms are agreed but not yet a final signed contract.",
+   "where_why": "The problem sits at the large-load interconnection and resource-adequacy stage. The underlying friction is information asymmetry: developers may hold speculative or duplicate requests across utilities. A further friction is the mismatch between data center build times and generation lead times. Utility incentives to grow the rate base can also misalign with ratepayer exposure to stranded assets.",
+   "stakeholders": [
+    {
+     "name": "PPL and Invitium (with Blackstone)",
+     "stake": "Rate base and generation investment growth, plus long-term contracted revenue."
+    },
+    {
+     "name": "QTS and other data center developers",
+     "stake": "Secure firm power quickly at a predictable price."
+    },
+    {
+     "name": "Pennsylvania residential and commercial ratepayers",
+     "stake": "Risk of bearing grid and capacity costs if load does not materialize."
+    },
+    {
+     "name": "PJM and the Pennsylvania PUC",
+     "stake": "Reliability and fair cost allocation for large loads."
+    }
+   ],
+   "hints": [
+    "Pipeline-to-realization attrition: track how 'advanced' GW convert to signed agreements and construction over the 11 quarters, as a load forecasting problem.",
+    "Compare dedicated-generation JV contracts with standard tariff service through the lens of capacity investment under uncertainty and long-term contracts.",
+    "Compare large-load tariff terms (minimum bills, collateral) across PJM utilities."
+   ],
+   "data_leads": "PPL 8-K/10-Q pipeline disclosures (SEC EDGAR) quarter by quarter; PJM capacity auction results and load forecasts; Pennsylvania PUC large-load tariff dockets; EIA-860 for planned generation.",
+   "keywords": [
+    "data center electricity demand",
+    "load forecasting",
+    "capacity investment under uncertainty",
+    "large-load tariffs",
+    "long-term supply contracts"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "pjm_data",
+    "state_puc"
+   ],
+   "related": [],
+   "url": "https://www.datacenterdynamics.com/en/news/ppl-advanced-stage-data-center-pipeline-hits-35gw-in-pennsylvania/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 10"
+  },
+  {
+   "candidate_id": 97,
+   "headline": "Revisited: GM's $4B US plant investment shifts Chevrolet production from Mexico (announced June 2025; new review unconfirmed)",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.cnbc.com/2025/06/10/gm-to-invest-4-billion-in-us-manufacturing-plants-amid-tariffs.html",
+   "summary": "On June 10, 2025, GM said it would invest $4 billion in several US plants over two years, partly because of uncertainty over President Trump's tariffs. The plan moves or expands production of two Chevrolet models now built in Mexico, which reports identify as the Blazer and Equinox. Caution: the Mexico Business News article that triggered this item could not be found, and no newer GM announcement or new review of its Mexico operations was verified, so treat this as a 17-month-old decision rather than news.",
+   "background": "The announcement was reported by CNBC, Reuters/AP, Bloomberg and others. It is a concrete case of an automaker reallocating vehicle production across the US–Mexico footprint in response to tariff uncertainty rather than to realized cost changes.",
+   "problem": "Automakers must decide whether to commit sunk capacity in the US while tariff policy remains volatile, and what happens to Mexican plant utilization and supplier networks. Reshoring under policy uncertainty trades a hedge against tariffs for higher production costs and the risk that the policy reverses.",
+   "where_why": "The decision arises at the facility siting and capacity allocation stage of North American auto manufacturing. The driving friction is regulatory uncertainty about tariff levels on Mexican-built vehicles and parts. Long capacity lead times and integrated cross-border supplier networks make the switch costly and slow.",
+   "stakeholders": [
+    {
+     "name": "GM",
+     "stake": "Hedge tariff exposure while protecting margins on high-volume crossovers."
+    },
+    {
+     "name": "Mexican plants and workers",
+     "stake": "Possible loss of model volume and lower utilization."
+    },
+    {
+     "name": "US plants, workers and communities",
+     "stake": "Gain jobs and investment if the shift holds."
+    },
+    {
+     "name": "Cross-border auto parts suppliers",
+     "stake": "Must reconfigure logistics and possibly relocate."
+    }
+   ],
+   "hints": [
+    "Real-options lens: a flexible dual footprint (adding onshore capacity alongside offshore) versus a full relocation under policy uncertainty.",
+    "Check whether announced reshoring shows up in realized trade flows, such as Mexico-to-US vehicle imports by model, over the 17 months since."
+   ],
+   "data_leads": "BTS TransBorder and USITC DataWeb for Mexico–US vehicle and parts flows; GM 10-K/10-Q plant disclosures (SEC EDGAR); Reshoring Initiative announcement database.",
+   "keywords": [
+    "reshoring",
+    "facility siting",
+    "regulatory uncertainty",
+    "capacity investment under uncertainty",
+    "nearshoring logistics"
+   ],
+   "dataset_candidates": [
+    "Reshoring Initiative reshoring announcement database"
+   ],
+   "datasets": [
+    "bts_transborder",
+    "usitc_dataweb"
+   ],
+   "related": [
+    {
+     "title": "Flexibility Value of Reshoring Capacity Under Policy Uncertainty and Domestic Competition",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2023.0387",
+     "cites": 13,
+     "why": "Models the flexibility value of adding onshore capacity alongside offshore plants under policy uncertainty, close to GM's move."
+    },
+    {
+     "title": "Return to the United States: Impact of Reshoring Announcements and Reshoring Risks on Market Valuation",
+     "journal": "Management Science",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/mnsc.2022.00599",
+     "cites": 33,
+     "why": "Measures market reactions to reshoring announcements, a ready template for evaluating GM's announcement."
+    }
+   ],
+   "url": "https://www.cnbc.com/2025/06/10/gm-to-invest-4-billion-in-us-manufacturing-plants-amid-tariffs.html",
+   "follows": [],
+   "source": "Mexico Business News",
+   "date": "Nov 09"
+  },
+  {
+   "candidate_id": 9,
+   "headline": "CalRecycle expects to raise SB 54 plastic packaging baseline after only about half of producers reported",
+   "theme": "Circular Economy",
+   "original_url": "https://www.packagingdive.com/news/sb-54-plastic-tonnage-baseline-expected-to-rise-calrecycle-says/874077/",
+   "summary": "At the November 6, 2026 SB 54 advisory board meeting, CalRecycle said its newly updated plastic packaging baseline will be revised upward. The update had cut estimated tonnage from 2.9M to 1.03M tons and raised the component count from 171.4B to 222B. It rests on data from 2,127 producers, roughly half the total; Circular Action Alliance says more than 4,000 producers are now registered. A corrected baseline is due in November 2027, and missing producers must submit data by July 2027.",
+   "background": "SB 54 is California's packaging law that makes producers responsible for their plastic packaging. Producers must collectively cut plastic 25% from a baseline by 2032. The current baseline uses 2023 data reported in 2026 and was not adjusted for non-reporters. CalRecycle's Karen Kayfetz said some reporting producers clearly undercounted components, and CAA says counting components is especially confusing.",
+   "problem": "Targets are percentages, so the baseline determines how many tons producers must cut. The baseline itself depends on self-reported data that are incomplete and partly undercounted. Revising it upward raises the required absolute reduction. CalRecycle is taking a 'compliance assistance' approach rather than an enforcement approach, and the size of the correction is unknown.",
+   "where_why": "The problem arises at the data-reporting and target-setting stage of the EPR system. The frictions are information asymmetry, since producers know their packaging volumes while the regulator does not, and misaligned incentives, since a lower reported baseline means smaller absolute cuts. Measurement ambiguity around 'components' adds to both.",
+   "stakeholders": [
+    {
+     "name": "CalRecycle",
+     "stake": "Credible baseline and enforceable 2032 targets."
+    },
+    {
+     "name": "Producers/brand owners",
+     "stake": "Size of the required absolute plastic reduction and the reporting burden."
+    },
+    {
+     "name": "Circular Action Alliance (PRO)",
+     "stake": "Run the program and coordinate producer reporting and compliance."
+    },
+    {
+     "name": "Environmental advocates",
+     "stake": "Prevent targets from being weakened by an understated baseline."
+    }
+   ],
+   "hints": [
+    "Strategic baseline reporting: compare the ratchet effect in emissions-baseline regimes with EPR target-setting when it rests on self-reports.",
+    "Use the July 2027 resubmission and November 2027 correction as a before/after comparison of reporting quality: who corrects, and by how much?",
+    "Unit-of-measure puzzle: tonnage fell while component counts rose. Which metric drives redesign incentives?"
+   ],
+   "data_leads": "CalRecycle SB 54 baseline reports and advisory board materials; CAA producer registration data; Oregon and Colorado EPR program reports for comparison; Mintel GNPD for packaging changes.",
+   "keywords": [
+    "extended producer responsibility",
+    "packaging regulation",
+    "state environmental policy",
+    "regulatory enforcement",
+    "regulatory thresholds"
+   ],
+   "dataset_candidates": [
+    "CalRecycle SB 54 source reduction baseline data"
+   ],
+   "datasets": [
+    "state_epr",
+    "mintel_gnpd"
+   ],
+   "related": [
+    {
+     "title": "Extended Producer Responsibility for Durable Products",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2019,
+     "url": "https://doi.org/10.1287/msom.2018.0742",
+     "cites": 97,
+     "why": "Analyzes how EPR implementation design shapes producer outcomes, a starting point for thinking about baseline-based targets."
+    },
+    {
+     "title": "Do E‐Waste Laws Create Behavioral Spillovers? Quasi‐Experimental Evidence from California",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13182",
+     "cites": 42,
+     "why": "A quasi-experimental study of a California waste law, offering an empirical template for evaluating SB 54."
+    }
+   ],
+   "url": "https://www.packagingdive.com/news/sb-54-plastic-tonnage-baseline-expected-to-rise-calrecycle-says/874077/",
+   "follows": [],
+   "source": "Packaging Dive",
+   "date": "Nov 09"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "Two of today's California stories turn on the same weak link: regulators setting obligations from self-reported, incomplete data that firms must collect, in one case from their suppliers and in the other from their own packaging portfolios. The Scope 3 injunction and the SB 54 baseline correction offer contrasting cases of what happens to firm data collection when the mandate weakens versus when it tightens. Meanwhile, PPL's pipeline attrition and Xeneta's front-loading both show stated demand diverging from realized demand, which creates a forecasting problem for capacity providers.",
+ "also": [
+  {
+   "title": "China extends suspension of new rare earth controls until January, easing global supply fears",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOQ1VQVnVOdEdhc080M1F1aFJLY2hDeDBxMEJlS05yT0VHa1hxYUJRNTRyTFFMRTlzeVBMc3pWQXIybnpqQy15bE16U2FRblJrTFhSaXZhdzVXUFVkX1VUV040X1JPVXdpOThtWHp0TTl5UEpjN1c0YzduQzd3MUZyTmR1SDJMbUY2NUlsRVVBQ3R4d2oyVmpGSmhIdnpLTUkySGpRQ05Vc0FOTXUzUk02T3lPOUlfSWo1SXBoTlY2cnVFR0E1a0p5bkhQRmhrWk3SAcsBQVVfeXFMUE16cGc1SXJ3aXlVZXFrNFBuWGx2ay1oYWdvcWprNFc5WVl1RnA2Y0p2cUFDeDR2RFJ0NzQwOVJudXBOTVBFS1dJRFZvMFlLMXlER3d4Mm5qNHdyMkcxZGI4ai1kMXRubWZOeDNHWmVCbElqc1JfRjNrUEYwaXNKMF92ZFlKQ3VGaFhnTV85S2tPZWRCSk9OT21aYnVwR2xWV1NMc2t0UkdCNVVlWEJzenVQczRHdXZianREcllIcllDek5Ic3VIaktJZWs?oc=5",
+   "source": "The News International",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Senate advances sweeping energy legislation in first major action since midterm elections",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRVBlZFFtT0MxamZVWldJWnlubUIwTVEzYVQ1VjVVZjk2LU9pUUdNdUZ2Nmc1djM1Ukx0Z3VIMlpQWWo3djlIaklLcUh6Q200VHhXT2VDRlVXQzZCa3hMNHFFVUhuWnJXTm83RHh4NUdvN085bEVMaVhPZFAydW5DNE5Mcjg2NWd2dHVqaVpGVE11NmJSdlRabE9sNXFBTEFKX2M1VjBYd1U?oc=5",
+   "source": "AP News",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "EU States Back One-Year Delay to Methane Reporting Rules, While Parliament Pushes for Three Years",
+   "url": "https://www.esgtoday.com/eu-states-back-one-year-delay-to-methane-reporting-rules-while-parliament-pushes-for-three-years/?utm_source=rss&utm_medium=rss&utm_campaign=eu-states-back-one-year-delay-to-methane-reporting-rules-while-parliament-pushes-for-three-years",
+   "source": "ESG Today",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Peru's Record-Length El Niño Drives Agricultural Supply Chain Breakdown",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOW4xUXVCbzAyXzY1ekNPczA4NDdHbDFVRXBuQmtMcm1mRVh1b2lUVGx0aUVCZGEtazc4TWhQZmxzY3U0UkJPTTMzaTMyWW9TTTlaZE1NaUV0TzhMTUhITDAwQnlfaklROVo1YjlPVHJKMHdPNlIxMXZDbzV4dkQ3dXZSUW1VbDM1Q2UyeTkyeEhhWTNBdzd0cnRDam10U1IwREE?oc=5",
+   "source": "PravdaReport",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "LFP still excluded from broadened South Korea black mass criteria",
+   "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQUUVNZDZ3WWtnd3NmdWxOMnhqUEw3dXhVcEhobVhZRW4zeG1KcThCdUtndjZFSG9tWFpfdG9lX0o5TXZCV0FqNC1xc2xPWVlrcXB4T0Frdm1uR3pRUXdiOG9namwtQkY2QXRCQWpYZjk2cW10T3lSdUUweklidU0wN0FyT2dONDhucWRZSlFpblFJSzdRdDJJWExoZXB6MUUycXRtRnllcUc3NzhqWjBFWUg5VlZ0aFUxcVNvaGpQaTkwemc5bVhoV1lsVGM4NHpoUDF1Z3FSVmJlRFpydF9zUlh3?oc=5",
+   "source": "Benchmark Mineral Intelligence",
+   "theme": "Critical Minerals & Batteries"
+  }
+ ]
+}

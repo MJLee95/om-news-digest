@@ -1081,5 +1081,29 @@
    "2026-11-09#5"
   ],
   "last_seen": "2026-11-09"
+ },
+ "carb sb 253 emissions report filings": {
+  "name": "CARB SB 253 emissions report filings",
+  "first_seen": "2026-11-10",
+  "items": [
+   "2026-11-10#1"
+  ],
+  "last_seen": "2026-11-10"
+ },
+ "reshoring initiative reshoring announcement database": {
+  "name": "Reshoring Initiative reshoring announcement database",
+  "first_seen": "2026-11-10",
+  "items": [
+   "2026-11-10#4"
+  ],
+  "last_seen": "2026-11-10"
+ },
+ "calrecycle sb 54 source reduction baseline data": {
+  "name": "CalRecycle SB 54 source reduction baseline data",
+  "first_seen": "2026-11-10",
+  "items": [
+   "2026-11-10#5"
+  ],
+  "last_seen": "2026-11-10"
  }
 }
