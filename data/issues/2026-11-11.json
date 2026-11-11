@@ -1,0 +1,370 @@
+{
+ "intro": "Today's issue covers five stories. China extends its pause on rare-earth and battery export controls by only two months. India suddenly bans exports of lithium-ion black mass. A new tally finds that utilities plan to serve less than a third of contracted data-center load with carbon-free power. An Australian apparel brand shifts US fulfillment to Texas after de minimis ended. Deere consolidates its plant network in Iowa, Louisiana and Illinois.",
+ "items": [
+  {
+   "candidate_id": 155,
+   "headline": "China extends suspension of rare earth, battery and graphite export controls by two months, to 10 January 2027",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://source.benchmarkminerals.com/article/china-extends-pause-on-rare-earth-and-battery-export-controls-until-2027",
+   "summary": "China's Ministry of Commerce (MOFCOM) published a notice on 9 November, a day before the existing suspension was due to expire. The notice extends the pause on the export controls China announced in October 2025, which cover rare earths, lithium-ion batteries and graphite anode materials. The extension is reported to run for two months, until 10 January 2027, and one newsletter says it takes effect on 11 November, Beijing time. MOFCOM gave no reason for the length of the extension, according to Benchmark.",
+   "background": "China introduced export controls on certain rare earths in April 2025. In October 2025 it sharply widened them, adding lithium battery technology and certain industrial diamonds. In November 2025, after a Xi–Trump summit in South Korea, those October measures were suspended for one year. Storm Media reports that the latest extension comes as the US and China try to lock in a longer-term trade agreement. Note that 'pause to 2027' does not mean a pause running through 2027. It is a short extension.",
+   "problem": "Downstream manufacturers face a policy that is neither in force nor removed, and that comes with a two-month horizon. Firms must decide how much to stockpile, whether to qualify non-Chinese suppliers, and whether to pay for diversification that may prove unnecessary if a longer deal is struck. It is unclear what happens after 10 January 2027 and whether the US made matching concessions.",
+   "where_why": "The friction sits at the upstream processing stage, where China dominates rare-earth, battery and graphite anode supply. It arises from policy uncertainty with very short, rolling deadlines tied to bilateral negotiations. Firms cannot cheaply hedge that uncertainty, because qualifying alternative suppliers takes much longer than two months.",
+   "stakeholders": [
+    {
+     "name": "MOFCOM / Chinese government",
+     "stake": "Keeps export controls as a bargaining lever in trade talks with the US while avoiding immediate disruption."
+    },
+    {
+     "name": "US and allied manufacturers (EVs, electronics, defense)",
+     "stake": "Need predictable access to rare earths, battery components and anode materials, or face costly stockpiling and requalification."
+    },
+    {
+     "name": "Non-Chinese miners and processors",
+     "stake": "Their diversification demand and offtake contracts depend on buyers believing the controls could return."
+    },
+    {
+     "name": "US government",
+     "stake": "Seeks a longer-term trade agreement while reducing dependence on Chinese critical minerals."
+    }
+   ],
+   "hints": [
+    "Consider a sequence of short rolling deadlines as a source of policy uncertainty. How does the length of the remaining horizon change inventory and dual-sourcing decisions in a newsvendor or real-options framing?",
+    "Compare trade flows and prices around the April 2025 imposition, the October 2025 expansion, the November 2025 suspension and this extension as successive event windows.",
+    "Puzzle: why would a two-month extension, instead of a year, be strategically useful to the party controlling supply?"
+   ],
+   "data_leads": "Possible sources: UN Comtrade and China customs monthly export data on rare earths, magnets and graphite; USGS Mineral Commodity Summaries; MOFCOM notices; inventory and supplier-risk mentions in 10-K filings and earnings calls.",
+   "keywords": [
+    "export controls",
+    "supplier concentration",
+    "strategic stockpiling",
+    "regulatory uncertainty",
+    "supplier diversification"
+   ],
+   "dataset_candidates": [
+    "China General Administration of Customs monthly export statistics"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "usgs_minerals"
+   ],
+   "related": [
+    {
+     "title": "Balancing Resilience and Efficiency: A Literature Review on Overcoming Supply Chain Disruptions",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241302735",
+     "cites": 92,
+     "why": "This review of the trade-off between resilience and efficiency frames the cost of hedging against an export control that keeps being postponed."
+    },
+    {
+     "title": "Offshoring technology innovation: A case study of rare‐earth technology",
+     "journal": "Journal of Operations Management",
+     "year": 2007,
+     "url": "https://doi.org/10.1016/j.jom.2007.02.013",
+     "cites": 90,
+     "why": "A case study of how offshoring rare-earth technology eroded US innovation capacity, which is the root of today's dependence."
+    }
+   ],
+   "url": "https://source.benchmarkminerals.com/article/china-extends-pause-on-rare-earth-and-battery-export-controls-until-2027",
+   "follows": [],
+   "source": "Benchmark Mineral Intelligence",
+   "date": "Nov 10"
+  },
+  {
+   "candidate_id": 158,
+   "headline": "India prohibits exports of lithium-ion battery black mass with immediate effect",
+   "theme": "Circular Economy",
+   "original_url": "https://www.freepressjournal.in/business/govt-bans-lithium-ion-battery-black-mass-exports-to-boost-domestic-critical-mineral-recycling",
+   "summary": "In a notification dated 10 November, India's Directorate General of Foreign Trade (DGFT) moved unsorted battery waste and scrap under ITC code 85491400 from 'Free' to 'Prohibited' for export, with immediate effect. The category covers waste that contains no lead, cadmium or mercury, identified as lithium-ion battery black mass. Coverage reports say the aim is to stop material leaving India before its minerals can be extracted domestically.",
+   "background": "Black mass is a powder recovered from used lithium-ion batteries. It contains lithium, cobalt, nickel and manganese. In September, the central government launched a ₹1,500 crore incentive scheme to encourage critical-mineral recycling. The original Indian Express headline says the ban came 'days after' a new critical-minerals processing scheme. That scheme could not be verified; it may be a different, more recent Cabinet approval.",
+   "problem": "The ban forces domestic processing of black mass. Whether Indian recyclers have the hydrometallurgical capacity and economics to absorb volumes that used to be exported is unknown. Collectors and pre-processors lose an export outlet overnight, which could depress domestic black-mass prices, build up stockpiles, or push material into informal channels.",
+   "where_why": "The pinch point is between pre-processing (shredding batteries into black mass) and refining (metal extraction). The friction is a capacity mismatch: refining capacity lags collection. The ban is industrial policy meant to capture value-added domestically, layered on a subsidy scheme. Because it took effect immediately, firms had no time to adjust.",
+   "stakeholders": [
+    {
+     "name": "DGFT / Government of India",
+     "stake": "Wants to retain critical minerals and build a domestic recycling and refining industry."
+    },
+    {
+     "name": "Battery collectors and pre-processors",
+     "stake": "Lose export buyers and may face lower prices or stranded inventory."
+    },
+    {
+     "name": "Domestic hydrometallurgical recyclers",
+     "stake": "Gain cheaper captive feedstock but must scale capacity quickly."
+    },
+    {
+     "name": "Foreign refiners that bought Indian black mass",
+     "stake": "Lose a feedstock source."
+    }
+   ],
+   "hints": [
+    "Treat the immediate switch from 'Free' to 'Prohibited' as a sharp event. Look for trade diversion, or changes in neighboring HS codes, in partner-country import data.",
+    "Use a lens of waste-chain policy, where an export ban interacts with domestic treatment capacity and the incentive to dump or misclassify material.",
+    "Compare this ban with a subsidy-only approach such as the September scheme: which lever moves recycler investment more?"
+   ],
+   "data_leads": "Possible sources: India's Ministry of Commerce export data (TradeStat) and UN Comtrade for HS 854914 exports before and after the ban; DGFT notifications; disclosures from listed Indian recyclers.",
+   "keywords": [
+    "battery recycling",
+    "secondary materials",
+    "export controls",
+    "industrial policy",
+    "trade diversion"
+   ],
+   "dataset_candidates": [
+    "India Ministry of Commerce Export Import Data Bank (TradeStat)"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Treat, Dump, or Export? How Domestic and International Waste Management Policies Shape Waste Chain Outcomes",
+     "journal": "Management Science",
+     "year": 2023,
+     "url": "https://doi.org/10.1287/mnsc.2021.02061",
+     "cites": 14,
+     "why": "Models how domestic and international waste policies shape choices to treat, dump or export waste, which maps directly onto an export ban on black mass."
+    },
+    {
+     "title": "LOOKING FORWARD, PUSHING BACK AND PEERING SIDEWAYS: ANALYZING THE SUSTAINABILITY OF INDUSTRIAL SYMBIOSIS",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2009,
+     "url": "https://doi.org/10.1111/j.1745-493x.2009.03174.x",
+     "cites": 162,
+     "why": "Compares industrial symbiosis with conventional supply chains for reprocessing byproducts, a useful lens on building domestic secondary-material loops."
+    }
+   ],
+   "url": "https://www.freepressjournal.in/business/govt-bans-lithium-ion-battery-black-mass-exports-to-boost-domestic-critical-mineral-recycling",
+   "follows": [],
+   "source": "The Indian Express",
+   "date": "Nov 11"
+  },
+  {
+   "candidate_id": 36,
+   "headline": "Utilities plan to serve less than a third of contracted data-center load with carbon-free power, Latitude analysis finds",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.latitudemedia.com/news/data-centers-face-a-carbon-free-power-gap-that-utilities-havent-filled/",
+   "summary": "Latitude Intelligence, Latitude Media's new research arm, tracks signed data-center load at every utility it covers. Its analysis, by head of research Nick Zenkin and published 10 November 2026, finds that utilities plan to power less than a third of contracted data-center load with carbon-free sources. In Georgia, only 12.8 GW of Georgia Power's reported 80.1 GW large-load pipeline is under signed contract, but that 12.8 GW still needs supply.",
+   "background": "Hyperscalers have carbon-free or clean-energy goals. In vertically integrated territories, however, the generation mix is set by utility resource plans; the article also discusses those plans through 2035, but that finding could not be fully read. Politics is shifting too. Local data-center restrictions passed in 44 of 45 midterm referendums (per ABC News), and Democrats won a majority on Georgia's Public Service Commission for the first time in 30 years. Latitude is reporting on its own research, and its method and coverage have not been checked independently.",
+   "problem": "Corporate clean-energy commitments and utility build plans for new data-center load diverge. The gap must be closed by additional procurement, accepted as fossil-backed supply, or covered by accounting instruments. Who pays, and who builds, is contested before regulators.",
+   "where_why": "The gap arises in utility integrated resource planning and large-load contracting, especially in vertically integrated states. Utilities plan for reliability and least cost for all ratepayers, while data-center customers carry voluntary decarbonization targets. Their incentives are misaligned, and the pipeline is uncertain: large-load requests far exceed signed contracts.",
+   "stakeholders": [
+    {
+     "name": "Vertically integrated utilities (e.g., Georgia Power)",
+     "stake": "Must plan firm capacity for large loads while protecting reliability and recovering costs."
+    },
+    {
+     "name": "Data-center developers and hyperscalers",
+     "stake": "Need fast power while meeting clean-energy commitments and avoiding greenwashing charges."
+    },
+    {
+     "name": "State public service commissions",
+     "stake": "Approve resource plans and tariffs; face newly shifted political pressure."
+    },
+    {
+     "name": "Local residents and ratepayers",
+     "stake": "Bear cost, siting and emissions effects; increasingly vote for restrictions."
+    }
+   ],
+   "hints": [
+    "Use the gap between the 80.1 GW pipeline and 12.8 GW contracted as a load-forecasting and capacity-under-uncertainty problem. How should a utility plan against speculative requests?",
+    "Compare vertically integrated and restructured markets: does market structure predict how much data-center load is matched with carbon-free supply?",
+    "The Georgia PSC change of control is a potential political shock to watch in subsequent resource-plan dockets."
+   ],
+   "data_leads": "Possible sources: state PUC integrated resource plan and large-load tariff dockets (e.g., Georgia PSC); EIA-860 planned generator additions by utility; corporate clean-energy and CDP disclosures from hyperscalers.",
+   "keywords": [
+    "data center electricity demand",
+    "large-load tariffs",
+    "load forecasting",
+    "power purchase agreements",
+    "capacity investment under uncertainty"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "state_puc",
+    "eia860"
+   ],
+   "related": [
+    {
+     "title": "Meeting Corporate Renewable Power Targets",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2022.4354",
+     "cites": 34,
+     "why": "Studies how firms should procure to meet corporate renewable power targets, which is the gap left when utility plans fall short."
+    }
+   ],
+   "url": "https://www.latitudemedia.com/news/data-centers-face-a-carbon-free-power-gap-that-utilities-havent-filled/",
+   "follows": [],
+   "source": "Latitude Media",
+   "date": "Nov 10"
+  },
+  {
+   "candidate_id": 2,
+   "headline": "Australian menswear brand OTAA shifts most US fulfillment to a Texas 3PL after the end of de minimis",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.supplychaindive.com/news/apparel-shipper-expands-us-fulfillment-operations-to-skirt-de-minimis-end/874073/",
+   "summary": "Melbourne-based OTAA, which sells ties and cufflinks, has fulfilled most US orders from Cart.com's facility in Longview, Texas, since February. The site holds about 1,750 styles, roughly a fifth of its catalog, and OTAA plans to add about 1,000 more by year-end. According to Cart.com's 4 November release, a Texas order costs roughly half as much to fulfill and deliver as one shipped from Melbourne.",
+   "background": "The de minimis exemption let imports under $800 enter the US duty- and tax-free. That enabled foreign brands to ship parcels direct to consumers. Supply Chain Dive says President Trump eliminated it 'last year.' The US is OTAA's largest market, at about half its business. Other retailers have reported cost hits, including Lululemon, which expected a $240M profit impact, as well as DavidsTea and Aritzia.",
+   "problem": "Without de minimis, direct cross-border parcel shipping loses its duty advantage. Brands must decide whether to forward-position inventory in the US, and which SKUs to stock there. That means trading inventory holding and obsolescence risk against duty and shipping savings. OTAA stocks only a fifth of its catalog in Texas, so SKU selection is central.",
+   "where_why": "The decision sits in network design and inventory positioning for cross-border e-commerce. The policy change moved the cost from per-parcel to bulk entry, so consolidated imports into a domestic 3PL became cheaper. The cost savings are the firms' own claim, and no volumes were disclosed.",
+   "stakeholders": [
+    {
+     "name": "Small foreign DTC brands (e.g., OTAA)",
+     "stake": "Want to keep US margins and delivery speed without overstocking a remote warehouse."
+    },
+    {
+     "name": "US third-party fulfillment providers (e.g., Cart.com)",
+     "stake": "Gain new demand from foreign brands relocating inventory."
+    },
+    {
+     "name": "US Customs and Border Protection",
+     "stake": "Collects duties on consolidated entries instead of untaxed parcels."
+    },
+    {
+     "name": "US consumers",
+     "stake": "Face possible price, assortment and delivery-time changes."
+    }
+   ],
+   "hints": [
+    "Frame the choice as partial forward-positioning: which SKUs to stock domestically versus ship from origin, much like a mixed make-to-stock and make-to-order assortment problem.",
+    "Look for aggregate evidence: did de minimis parcel volumes fall while bulk apparel entries and 3PL demand rose?",
+    "Compare large retailers that absorbed the hit (Lululemon) with small brands that restructured their networks."
+   ],
+   "data_leads": "Possible sources: CBP trade statistics on de minimis shipment counts; Census USA Trade Online and USITC DataWeb apparel imports by country; earnings-call transcripts mentioning de minimis.",
+   "keywords": [
+    "de minimis",
+    "cross-border e-commerce",
+    "inventory management",
+    "facility siting",
+    "cost pass-through"
+   ],
+   "dataset_candidates": [
+    "CBP Trade Statistics (de minimis shipment volumes)"
+   ],
+   "datasets": [
+    "census_trade",
+    "call_transcripts"
+   ],
+   "related": [
+    {
+     "title": "Shock and Awe: A Theoretical Framework and Data Sources for Studying the Impact of 2025 Tariffs on Global Supply Chains",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12350",
+     "cites": 28,
+     "why": "Gives a framework and data sources for studying how the 2025 US trade shocks reshape global supply chains, including network responses like this one."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/apparel-shipper-expands-us-fulfillment-operations-to-skirt-de-minimis-end/874073/",
+   "follows": [],
+   "source": "Supply Chain Dive",
+   "date": "Nov 10"
+  },
+  {
+   "candidate_id": 5,
+   "headline": "Deere to close Ottumwa and Clarion, Iowa plants by 2028 and shift production among US sites and to Brazil",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.supplychaindive.com/news/deere-to-end-production-at-2-iowa-plants-to-align-with-demand/874059/",
+   "summary": "Deere announced on 4 November that it will close its Ottumwa, Iowa plant (round balers, windrowers) by 29 October 2028 and move that work to Ankeny, Iowa. It will also end production at Clarion, Iowa (Hagie STS sprayers) by 30 October 2028, moving it to Thibodaux, Louisiana. Thibodaux's sugar cane harvester production, about 35 machines a year for the US, will move to Catalão, Brazil, in fiscal 2029. Small planter production will move from Moline, Illinois, to Paton, Iowa, in fiscal 2027.",
+   "background": "Deere says the moves align capacity with demand. It is also reviewing sourcing in its Construction and Forestry Division 'to improve competitiveness and manage costs.' Nine months earlier, Deere announced a $125M distribution center near Hebron, Indiana, and a campus in Kernersville, North Carolina, as part of a $20B, 10-year US manufacturing pledge. Dairy Business notes that the closures came less than a week after Deere announced plans to recall and hire hundreds of Midwest workers. Job numbers, transfer offers and the union response are not yet known.",
+   "problem": "Deere is consolidating a multi-plant network in response to weak demand. At the same time it is offshoring one low-volume product line to be near South American demand, while publicly pledging US manufacturing investment. The trade-offs involve fixed-cost savings versus flexibility, community and labor impacts, and the optics of closures next to a reshoring pledge.",
+   "where_why": "The decision sits in long-horizon plant-network and capacity planning. The friction is low capacity utilization under cyclical farm-equipment demand, plus a market-proximity logic: sugar cane harvesters are moving to Brazil. Long lead times (closures in 2028–2029) show how slowly manufacturing networks can be reconfigured.",
+   "stakeholders": [
+    {
+     "name": "Deere",
+     "stake": "Wants to cut fixed costs and raise utilization while keeping its US investment pledge credible."
+    },
+    {
+     "name": "Workers and local communities in Ottumwa and Clarion",
+     "stake": "Face job losses or relocation; numbers are still undisclosed."
+    },
+    {
+     "name": "Receiving sites (Ankeny, Paton, Thibodaux, Catalão)",
+     "stake": "Gain volume and must absorb transferred product lines."
+    },
+    {
+     "name": "Farm-equipment customers and dealers",
+     "stake": "Product availability and lead times during the transitions."
+    }
+   ],
+   "hints": [
+    "Use a lens of product-to-plant allocation and network consolidation under demand uncertainty, viewing downscale operating flexibility as a real option.",
+    "Puzzle: closures and hiring recalls announced within a week. What does that say about cyclical versus structural capacity adjustment?",
+    "Compare the market-proximity offshoring of a ~35-unit/year product with the broader reshoring narrative."
+   ],
+   "data_leads": "Possible sources: Deere 10-K/8-K filings on SEC EDGAR and Compustat for utilization and capex trends; Iowa WARN notices for job impacts; USDA NASS data on farm income and planted acreage as demand drivers.",
+   "keywords": [
+    "plant closure",
+    "network consolidation",
+    "capacity utilization",
+    "reshoring",
+    "labor disruption"
+   ],
+   "dataset_candidates": [
+    "Iowa Workforce Development WARN notices"
+   ],
+   "datasets": [
+    "sec_edgar",
+    "compustat"
+   ],
+   "related": [
+    {
+     "title": "People, performance and transition: A case study of psychological contract and stakeholder orientation in the Toyota Australia plant closure",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1218",
+     "cites": 39,
+     "why": "A case study of how Toyota managed its Australian plant closure with its workforce and stakeholders, relevant to the human side of Deere's Iowa closures."
+    },
+    {
+     "title": "Survive the economic downturn: Operating flexibility, productivity, and stock crash",
+     "journal": "Journal of Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1002/joom.1344",
+     "cites": 15,
+     "why": "Develops a firm-level measure of downscale operating flexibility and links it to resilience in downturns, a lens on Deere's demand-driven consolidation."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/deere-to-end-production-at-2-iowa-plants-to-align-with-demand/874059/",
+   "follows": [],
+   "source": "Supply Chain Dive",
+   "date": "Nov 10"
+  }
+ ],
+ "papers": [],
+ "thread_to_pull": "Two of today's stories are trade-policy moves on battery materials that point in opposite directions. China keeps a threat to restrict exports alive through short rolling deadlines, while India permanently bans black-mass exports to keep the material at home. Together they suggest a comparison of how temporary and permanent export restrictions on primary and secondary battery materials shift where processing capacity gets built. The OTAA and Deere stories add a related question: how quickly networks are actually reconfigured once a policy or demand shift looks durable, rather than temporary.",
+ "also": [
+  {
+   "title": "France threatens sanctions against EPR organisations over low packaging fees",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQRm51VnZDeGJLdDduQWtSQnl3bm5rSzVZSkVmQUo0QlU0MXdnaVY0cTNONjZaYV9tT1JXdmdIRTJDWGM0NW9fMDRLaVcySk9acHFFWGpkN1dQdER5bG54Y2lMZ0paRVo5eWd5MmY4anQxNHVVRTdTc0lLd1VacG5UeHFxZm1lbnZNanFpbVZqLTdPN29IUjV3NWJRRU1Venp4NFdfYVlHUHFHaFdMTG9DUmpRU21BaGE5UGdKSDZ2cFg?oc=5",
+   "source": "Plastics News",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "Mercedes-Benz Adjusts 2039 Carbon Neutral Goal, Sets 2049 Net Zero Target",
+   "url": "https://www.esgtoday.com/mercedes-benz-adjusts-2039-carbon-neutral-goal-sets-2049-net-zero-target/?utm_source=rss&utm_medium=rss&utm_campaign=mercedes-benz-adjusts-2039-carbon-neutral-goal-sets-2049-net-zero-target",
+   "source": "ESG Today",
+   "theme": "ESG & Disclosure"
+  },
+  {
+   "title": "Port of Long Beach, coalition aims for electricity to power 35% of shipping by 2035",
+   "url": "https://www.freightwaves.com/news/port-of-long-beach-coalition-aims-for-electricity-to-power-35-of-shipping-by-2035",
+   "source": "FreightWaves",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "IFC targets $400M fund to cut fashion supply chain emissions, with Zara owner backing",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOb3hRR3QzRFpCcHJwRlNNc05uUFZDT3J2b3dBRzBZc0Y3UXFJRjZ5dXJRNzNabDhzTTFZQ1phUlZIN25SM1d3enlldG1pcWlXcVdzb3B2enVJNjMzQTNnb0FjWTZTRnJYLWtCSXBPdEdXbmtzVzJ0cmtyQXZWQUhJemwyT0VJOXQ4d1ZtWVhlYnNIWk9UaGlrazU5QXdadkJiWW5zb2FjRHd0c3JBNklsTzE2b0lKaDIz?oc=5",
+   "source": "Dealroom",
+   "theme": "Sustainable Operations"
+  },
+  {
+   "title": "Rising energy costs from AI data centers land hardest on lower income, rural households, study finds",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQbFpWWEtoQmNobk9HdUszekNjeXNhZWpubFVjdmh1VGZIRFdxdkJGNE5FdWdBUUVmdVZiN2liN2lweXFoSzFpWFpMNE9KUXUzQzhvd0Vpd2JuWGxJaHd4aWpOdWpLS2VkMGFaeDNBdmR5WW5hcjlUT19IUUg1aUh5TzlyWDFRQTBnUEpJWlhDdEgyeWw4bEQ4dVJPWnpwa2pCRmRJ?oc=5",
+   "source": "CBS News",
+   "theme": "Energy & AI Data Centers"
+  }
+ ]
+}

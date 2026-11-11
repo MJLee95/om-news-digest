@@ -1105,5 +1105,37 @@
    "2026-11-10#5"
   ],
   "last_seen": "2026-11-10"
+ },
+ "china general administration of customs monthly export statistics": {
+  "name": "China General Administration of Customs monthly export statistics",
+  "first_seen": "2026-11-11",
+  "items": [
+   "2026-11-11#1"
+  ],
+  "last_seen": "2026-11-11"
+ },
+ "india ministry of commerce export import data bank (tradestat)": {
+  "name": "India Ministry of Commerce Export Import Data Bank (TradeStat)",
+  "first_seen": "2026-11-11",
+  "items": [
+   "2026-11-11#2"
+  ],
+  "last_seen": "2026-11-11"
+ },
+ "cbp trade statistics (de minimis shipment volumes)": {
+  "name": "CBP Trade Statistics (de minimis shipment volumes)",
+  "first_seen": "2026-11-11",
+  "items": [
+   "2026-11-11#4"
+  ],
+  "last_seen": "2026-11-11"
+ },
+ "iowa workforce development warn notices": {
+  "name": "Iowa Workforce Development WARN notices",
+  "first_seen": "2026-11-11",
+  "items": [
+   "2026-11-11#5"
+  ],
+  "last_seen": "2026-11-11"
  }
 }
