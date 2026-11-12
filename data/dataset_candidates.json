@@ -1137,5 +1137,29 @@
    "2026-11-11#5"
   ],
   "last_seen": "2026-11-11"
+ },
+ "napcor pet recycling report": {
+  "name": "NAPCOR PET Recycling Report",
+  "first_seen": "2026-11-12",
+  "items": [
+   "2026-11-12#3"
+  ],
+  "last_seen": "2026-11-12"
+ },
+ "uk companies house company filings": {
+  "name": "UK Companies House company filings",
+  "first_seen": "2026-11-12",
+  "items": [
+   "2026-11-12#4"
+  ],
+  "last_seen": "2026-11-12"
+ },
+ "uk insolvency service company insolvency statistics": {
+  "name": "UK Insolvency Service company insolvency statistics",
+  "first_seen": "2026-11-12",
+  "items": [
+   "2026-11-12#4"
+  ],
+  "last_seen": "2026-11-12"
  }
 }
