@@ -486,9 +486,10 @@
   "name": "Trase supply chain data",
   "first_seen": "2026-10-26",
   "items": [
-   "2026-10-26#5"
+   "2026-10-26#5",
+   "2026-11-13#4"
   ],
-  "last_seen": "2026-10-26"
+  "last_seen": "2026-11-13"
  },
  "ghg protocol scope 2 public consultation responses": {
   "name": "GHG Protocol Scope 2 public consultation responses",
@@ -1161,5 +1162,37 @@
    "2026-11-12#4"
   ],
   "last_seen": "2026-11-12"
+ },
+ "monitoring analytics pjm state of the market reports": {
+  "name": "Monitoring Analytics PJM State of the Market reports",
+  "first_seen": "2026-11-13",
+  "items": [
+   "2026-11-13#1"
+  ],
+  "last_seen": "2026-11-13"
+ },
+ "eu transaction log (eutl) / eu ets installation data": {
+  "name": "EU Transaction Log (EUTL) / EU ETS installation data",
+  "first_seen": "2026-11-13",
+  "items": [
+   "2026-11-13#2"
+  ],
+  "last_seen": "2026-11-13"
+ },
+ "audit analytics": {
+  "name": "Audit Analytics",
+  "first_seen": "2026-11-13",
+  "items": [
+   "2026-11-13#3"
+  ],
+  "last_seen": "2026-11-13"
+ },
+ "global forest watch tree cover loss": {
+  "name": "Global Forest Watch tree cover loss",
+  "first_seen": "2026-11-13",
+  "items": [
+   "2026-11-13#4"
+  ],
+  "last_seen": "2026-11-13"
  }
 }
