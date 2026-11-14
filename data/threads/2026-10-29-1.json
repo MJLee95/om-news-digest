@@ -1,0 +1,93 @@
+{
+ "id": "2026-10-29#1",
+ "created": "2026-11-14",
+ "updates": [
+  {
+   "date": "2026-11-14",
+   "items": [
+    "2026-10-29#1",
+    "2026-11-14#1"
+   ],
+   "note": "New thread. It opened with FreightWaves' Oct. 26 count of 35,688 containers awaiting rail. Supply Chain Dive's Nov. 12 coverage of Seroka placing about 75% of LA's waiting boxes on BNSF adds that nine days is a threshold many boxes have crossed; the average dwell is about 5.5 days."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "LA–Long Beach on-dock rail backlog, fall 2026",
+  "summary": "Record import volumes at the San Pedro Bay ports have outrun rail capacity, leaving tens of thousands of containers waiting for on-dock rail. Many have waited nine days or more, and most of LA's backlog sits with BNSF. As of mid-November 2026 the backlog looks flat or slightly better, not clearly recovering.",
+  "origin": "Rail backlogs at these ports have happened before. In the 2021–22 pandemic surge, LA had more than 29,000 rail containers on the ground, half waiting nine days or more, and sought White House help. In September 2024, LA's average rail dwell topped 9 days with about 20,000 boxes waiting; by about November 2024, containers waiting nine days or more fell from over 9,000 to about 2,300. The current episode built gradually. PMSA's two-port average rail dwell rose from 4.41 days in March 2026 to 6.75 in August and 7.19 in September. In September, LA handled about 1.04M TEU and Long Beach 997,177 TEU, both monthly records. On Oct. 26, 35,688 containers awaited on-dock rail (LA 19,626, Long Beach 16,062), and 10,562 of them had waited nine days or more.",
+  "causes": "(1) Record volume. LA moved nearly 5M TEU from June to October, its best five months on record, and topped 1M TEU in both September and October. Seroka attributes this to consumer spending, inventory restocking, trade-policy changes and disruptions on other shipping routes. (2) Intermodal railcar shortages in Southern California, flagged by C.H. Robinson, worsened by repositioning of empty containers. (3) Railroad constraints, reported by a single freight-forwarder blog and so lower reliability: strict railcar rationing by both railroads, limits on truckers bringing inland-bound boxes to rail yards, and flood damage to BNSF's network in New Mexico. (4) Uneven railroad performance. Union Pacific says its buffer resources keep it fluid, while BNSF holds most of LA's waiting boxes.",
+  "actors": [
+   {
+    "name": "Port of Los Angeles (Gene Seroka)",
+    "role": "Publicizes backlog figures and publicly attributes about 75% of the waiting boxes to BNSF",
+    "stake": "Gateway reputation and market share. Seroka says the number of boxes waiting nine days or more 'should be zero.' He also backs the UP–NS merger for wider inland reach."
+   },
+   {
+    "name": "BNSF Railway",
+    "role": "Responsible for most of LA's waiting rail containers, with a large share reportedly at Fenix Terminal. Seroka says it added railcars, locomotives and crews over the past two weeks.",
+    "stake": "Intermodal service reputation and volume. No BNSF statement was found."
+   },
+   {
+    "name": "Union Pacific",
+    "role": "Says it is pulling steadily from the docks and using its ICTF yard near the ports",
+    "stake": "Market share relative to BNSF. It also has the proposed merger with Norfolk Southern."
+   },
+   {
+    "name": "Port of Long Beach",
+    "role": "Has a smaller backlog: 16,062 waiting on Oct. 26, with 15.1% at nine days or more",
+    "stake": "Average rail dwell reportedly under 5 days, though some terminals are near 50% on-dock rail utilization"
+   },
+   {
+    "name": "Retailers and importers (incl. National Retail Federation)",
+    "role": "Facing holiday delivery risk; some are shipping earlier, switching to Seattle–Tacoma or Vancouver, or trucking and transloading near the port",
+    "stake": "Holiday inventory availability and inventory carrying costs"
+   },
+   {
+    "name": "ILWU Local 26 / Pacific Maritime Association",
+    "role": "About 250 watchmen at six terminals could strike from Nov. 1. Their contract expired in July 2025 and federal mediators were involved.",
+    "stake": "Contract terms. Whether a strike occurred is unconfirmed."
+   }
+  ],
+  "status": "Two measures are in play and are often conflated. The first is the count of containers waiting nine days or more: about 6,700 at LA in late October and over 8,000 around Nov. 12. The second is LA's average rail dwell, which Seroka put 'north of five and a half days.' On Nov. 12, Seroka cited about 9,500 boxes waiting at LA, about 75% of them BNSF's. That figure is hard to reconcile with the Oct. 26 count of 19,626 because dates and definitions differ. Per The Dwell, LA's share waiting nine days or more was 39.8% in mid-November, against 41.4% on Oct. 26. Still unknown: BNSF's own account and recovery timeline, PMSA's October dwell data, and the outcome of the Local 26 talks. All figures should be verified with the ports, the railroads and PMSA.",
+  "watch": [
+   "PMSA dwell reports for October and November 2026: whether average rail dwell falls back toward the 4-day norm",
+   "Port of LA November cargo figures and Seroka's next monthly briefing",
+   "Any BNSF or Union Pacific service notices or recovery timelines for Southern California intermodal",
+   "Outcome of ILWU Local 26 watchmen contract talks with the Pacific Maritime Association (possible strike from Nov. 1)"
+  ],
+  "research": [
+   {
+    "question": "How do intermodal dwell shocks at a primary gateway change shippers' choices of port and mode (rail vs. transload and truck, or Pacific Northwest and Canadian gateways), and how persistent is the shift after congestion clears?",
+    "shock": "The rise in rail dwell from March to September 2026 and the backlog peak in late October 2026; comparable episodes in 2021–22 and fall 2024",
+    "data": "PMSA monthly dwell reports, The Dwell daily port rail counts, port TEU statistics for LA, Long Beach, Seattle–Tacoma and Vancouver, and US import bill-of-lading data"
+   },
+   {
+    "question": "Do railcar rationing and buffer capacity policies explain service differences between competing railroads, here BNSF vs. UP at the same port, under a common demand surge?",
+    "shock": "Record volume of nearly 5M TEU at LA from June to October 2026, combined with railroad-specific network disruptions such as the reported New Mexico flooding on BNSF",
+    "data": "Terminal- and railroad-level dwell counts from port daily reports, railroad performance and service metrics, terminal-level backlog figures (e.g., Fenix)"
+   },
+   {
+    "question": "How much do port rail delays propagate into retailer inventory positions and holiday stockouts, and do firms pre-ship or hold buffer stock in response?",
+    "shock": "The approximate Nov. 1 shipping cutoff for Midwest-bound holiday cargo amid nine-day-plus dwells",
+    "data": "Container-level dwell distributions, retailer inventory filings (10-Q), NRF import forecasts"
+   }
+  ]
+ },
+ "updated": "2026-11-14",
+ "items": [
+  "2026-10-29#1",
+  "2026-11-14#1"
+ ],
+ "sources": [
+  "https://www.freightwaves.com/news/backlog-grows-as-35000-containers-await-rail-service-at-la-long-beach",
+  "https://www.supplychaindive.com/news/port-of-los-angeles-grapples-with-elevated-rail-dwell-times/874553/",
+  "https://www.ajot.com/insights/full/ai-port-of-las-seroka-says-inconsistent-trade-policy-hurts-farm-exports",
+  "https://freightwaves.com/news/record-october-as-los-angeles-tops-1-million-teus-for-second-straight-month",
+  "https://tbgfs.com/rail-congestion-and-potential-strike-at-la-lb-threatens-holiday-deliveries-ahead-of-black-friday/",
+  "https://www.indexbox.io/blog/port-of-los-angeles-rail-dwell-times-exceed-nine-days-amid-record-volumes/",
+  "https://www.freightwaves.com/news/port-of-la-whittles-dwell-time-despite-record-container-volumes",
+  "https://mykn.kuehne-nagel.com/news/article/volume-surge-in-la-lb-ports-increase-rail-dwe-23-Oct-2024",
+  "https://ajot.com/news/top-us-port-enlists-white-house-help-to-clear-rail-cargo-logjam"
+ ]
+}

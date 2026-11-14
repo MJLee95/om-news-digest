@@ -1,0 +1,391 @@
+{
+ "intro": "Today's issue covers a rail bottleneck at the Port of Los Angeles, a model local law for data center siting, BNEF's global data center power forecast, EU plans for single-point EPR reporting, and Meta's purchase of emissions certificates from electric trucking. Two of the five stories are about digital infrastructure meeting physical limits: grids, local land use and freight corridors.",
+ "items": [
+  {
+   "candidate_id": 0,
+   "headline": "Port of Los Angeles rail backlog: thousands of containers wait nine days or longer as BNSF lags record inbound volume",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.supplychaindive.com/news/port-of-los-angeles-grapples-with-elevated-rail-dwell-times/874553/",
+   "summary": "At a Nov. 12 briefing, Port of LA Executive Director Gene Seroka said rail-bound containers are sitting at the port nine days or longer, and that \"that number should be zero.\" About 9,500 containers are waiting for rail, and 75% of them are BNSF's responsibility; a large share of BNSF's boxes appears to be at the Fenix Terminal. The backlog follows record volume: close to 5 million TEUs from June to October and just over 1 million TEUs in October. Separately, Seroka told AJOT that over 8,000 rail containers had dwelled nine-plus days, while the average dwell was \"north of five and a half days.\" So nine days is a threshold many boxes have crossed, not a confirmed average.",
+   "background": "Rail dwell measures how long a container waits at the terminal before it leaves by rail. The Pacific Merchant Shipping Association put it at 7.19 days in September. Seroka said rail cargo is up about 25% over the period and loadings are up 17% year over year, but \"we're not keeping up in totality with the inbound.\" In the last two weeks, more westbound rail cars, engines and crews have been added. A freight broker says some shippers switch to trucks or transload near the port when dwell rises. BNSF has not responded, and there is no timeline for clearing the backlog.",
+   "problem": "Inbound ocean volume has outrun rail evacuation capacity at the port. Dwell is building up at specific terminals and with one dominant railroad. Shippers must decide whether to wait for rail or pay more to use trucks or transload, and the railroad must decide how much equipment and crew to reposition to the West Coast.",
+   "where_why": "The friction is at the ship-to-rail interface on the terminal. It comes from a capacity mismatch between a volume surge and railcar, locomotive and crew supply that takes weeks to reposition. Responsibility is concentrated in one carrier (BNSF holds 75% of waiting boxes), and backlogs cluster at particular terminals. Ports, terminals and railroads also have split incentives, because none fully bears the cost of the delay to cargo owners.",
+   "stakeholders": [
+    {
+     "name": "Port of Los Angeles",
+     "stake": "Wants dwell near zero to protect its record volumes and its competitive position against other gateways."
+    },
+    {
+     "name": "BNSF Railway",
+     "stake": "Must decide how to allocate cars, engines and crews; it carries most of the backlog and the reputational risk."
+    },
+    {
+     "name": "Fenix and other marine terminals",
+     "stake": "Lose yard space and productivity as rail boxes accumulate."
+    },
+    {
+     "name": "Beneficial cargo owners and shippers",
+     "stake": "Face inventory delays and extra cost if they shift to truck or transload."
+    },
+    {
+     "name": "Drayage and transload providers",
+     "stake": "Gain business when rail dwell pushes cargo onto trucks."
+    }
+   ],
+   "hints": [
+    "A queueing or fluid model of the terminal, with the volume surge as the arrival process and rail repositioning as delayed service capacity.",
+    "Look at mode shift: does truck or transload volume near the port respond with a lag to published dwell thresholds?",
+    "Compare dwell under BNSF and Union Pacific at the same port, and compare terminals, to see how much congestion is carrier-specific rather than port-wide."
+   ],
+   "data_leads": "Port of LA monthly TEU statistics and PMSA rail dwell reports; NOAA AIS vessel arrivals; DAT/SONAR drayage rates (commercial), with BTS freight indicators as a public alternative.",
+   "keywords": [
+    "intermodal rail",
+    "dwell time",
+    "port congestion",
+    "mode shift",
+    "capacity utilization"
+   ],
+   "dataset_candidates": [
+    "Pacific Merchant Shipping Association rail dwell statistics",
+    "Port of Los Angeles Port Optimizer / monthly container statistics"
+   ],
+   "datasets": [
+    "noaa_ais",
+    "freight_rates"
+   ],
+   "related": [
+    {
+     "title": "Introducing synchromodality: One missing link between transportation and supply chain management",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/jscm.12269",
+     "cites": 58,
+     "why": "It develops the synchromodality construct, the flexible real-time switching between transport modes that shippers do when rail dwell rises."
+    },
+    {
+     "title": "Estimating the Operational Impact of Container Inspections at International Ports",
+     "journal": "Management Science",
+     "year": 2010,
+     "url": "https://doi.org/10.1287/mnsc.1100.1252",
+     "cites": 66,
+     "why": "It simulates how terminal-level processing policies create container congestion at large ports, a method that could be adapted to rail-dwell backlogs."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/port-of-los-angeles-grapples-with-elevated-rail-dwell-times/874553/",
+   "follows": [
+    {
+     "id": "2026-10-29#1",
+     "label": "Oct 29 · About 35,700 import containers wait for on-dock rail at LA–Long Beach amid recor"
+    }
+   ],
+   "source": "Supply Chain Dive",
+   "date": "Nov 13"
+  },
+  {
+   "candidate_id": 8,
+   "headline": "Climate Mayors release model local law on data center siting, NDAs and community benefits as moratoriums spread",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.esgdive.com/news/data-center-backlash-model-law-aims-to-give-cities-more-control/874608/",
+   "summary": "Climate Mayors released a model local law that gives cities a menu of options for data center siting and permitting, operating standards, transparency and community benefits. Options include banning nondisclosure agreements and requiring community benefit agreements. Partners are the Model Climate Laws Initiative, Columbia's Sabin Center for Climate Change Law and Climate XChange. According to the Sabin Center, a companion model state law, the CLEAN GRID Act, was released alongside it.",
+   "background": "Data centers are \"moving faster and at a larger scale than most local codes were built to handle,\" said Climate Mayors executive director Kate Wright. She described an information gap between utilities, tech firms, developers, local governments and residents. More than 500 local governments in 46 states have placed moratoriums on data center development, according to Interconnected Capital's tracker. Voters in dozens of localities across 10 states rejected data centers in last week's midterms. The siting guidance steers projects toward underused land, brownfields and industrial areas, and away from land meant for green space, housing and transit-oriented development.",
+   "problem": "Local governments must decide whether and how to admit large-load projects with little information, often under NDAs, while developers want speed and confidentiality. The model law tries to change that bargaining relationship. No city has been reported as adopting it yet, and the full list of provisions was not verified.",
+   "where_why": "The conflict arises at the local permitting and land-use stage. Its sources are information asymmetry (secret deals and NDAs), externalities borne by residents (power, water, land), and a mismatch between how fast projects move and how slowly local codes are updated. Developers can also play jurisdictions against one another.",
+   "stakeholders": [
+    {
+     "name": "City and county governments",
+     "stake": "Want tax base and jobs without losing public trust or land reserved for housing and green space."
+    },
+    {
+     "name": "Data center developers and hyperscalers",
+     "stake": "Want fast, confidential siting; disclosure rules and CBAs raise their costs and reduce flexibility."
+    },
+    {
+     "name": "Utilities",
+     "stake": "Must plan for large new loads and are part of the information gap."
+    },
+    {
+     "name": "Local residents and voters",
+     "stake": "Bear local impacts and have used ballots and moratoriums to block projects."
+    },
+    {
+     "name": "Climate Mayors and legal partners",
+     "stake": "Want the template adopted widely to standardize local governance."
+    }
+   ],
+   "hints": [
+    "Staggered adoption of the model law or the moratoriums across localities is a natural setting for difference-in-differences studies of where developers relocate.",
+    "Treat NDA bans as a voluntary-to-mandatory disclosure shock: does transparency change which projects are proposed or how they are designed?",
+    "A mechanism-design or bargaining lens: how do CBA requirements shift surplus between developers and communities when developers can move to other jurisdictions?"
+   ],
+   "data_leads": "Interconnected Capital's moratorium tracker, local ballot results, state PUC large-load dockets, and ERCOT large-load interconnection reports to see where projects go.",
+   "keywords": [
+    "siting moratorium",
+    "facility siting",
+    "voluntary disclosure",
+    "data center electricity demand"
+   ],
+   "dataset_candidates": [
+    "Interconnected Capital data center moratorium tracker"
+   ],
+   "datasets": [
+    "state_puc",
+    "ercot_reports"
+   ],
+   "related": [
+    {
+     "title": "Exploring retailers’ sensitivity to local sustainability policies",
+     "journal": "Journal of Operations Management",
+     "year": 2007,
+     "url": "https://doi.org/10.1016/j.jom.2007.01.020",
+     "cites": 171,
+     "why": "It studies how retailers' logistics adapt to local sustainability regulations, a parallel to how data center operators may respond to municipal siting rules."
+    }
+   ],
+   "url": "https://www.esgdive.com/news/data-center-backlash-model-law-aims-to-give-cities-more-control/874608/",
+   "follows": [],
+   "source": "ESG Dive",
+   "date": "Nov 13"
+  },
+  {
+   "candidate_id": 112,
+   "headline": "BNEF projects global data center electricity demand of 2,354 TWh by 2035, about 7% of world power use",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://about.bnef.com/insights/data-centers/data-center-power-demand-is-set-to-surge-raising-new-climate-challenges-bloombergnef/",
+   "summary": "A BloombergNEF report commissioned by Bloomberg Philanthropies, released Nov. 11, projects that global data center electricity demand will nearly quadruple to 2,354 TWh by 2035, about 7% of global electricity use. BNEF has tracked 181 GW of gas-fired generation proposed alongside data centers, more than 90% of it in the US. This global figure is separate from BNEF's earlier US-only forecast of 106 GW by 2035, and the base year for \"quadruple\" was not confirmed.",
+   "background": "Developers' push for \"speed to power\" is leading some to build gas plants on site rather than wait for the grid. The supply mix varies by country. In Brazil, almost all the added power is expected to come from renewables, though transmission is a constraint. In India, demand rises from 11 TWh (2025) to 91 TWh (2035), and much of the added supply would come from existing coal plants (per Geographical). In Malaysia, demand rises from 7 TWh to 45 TWh. BNEF's Mark Daly said the climate outcome depends on how fast grids connect these facilities and whether cleaner generation is added.",
+   "problem": "The same demand growth can be met with very different emissions outcomes depending on the generation mix. Delays in connecting to the grid push developers toward on-site gas, so the decision is a trade-off between speed and carbon intensity under uncertain demand.",
+   "where_why": "The pressure point is the grid interconnection and generation-capacity stage. Interconnection queues and transmission limits are slow, while developers value time-to-power highly. This makes behind-the-meter fossil generation attractive. Forecast uncertainty also makes utility capacity investment risky.",
+   "stakeholders": [
+    {
+     "name": "Data center developers",
+     "stake": "Want power quickly; on-site gas trades emissions and fuel risk for speed."
+    },
+    {
+     "name": "Utilities and grid operators",
+     "stake": "Must invest in capacity and transmission against uncertain, lumpy demand."
+    },
+    {
+     "name": "Governments in the US, India, Brazil and Malaysia",
+     "stake": "Weigh investment and growth against grid reliability and climate targets."
+    },
+    {
+     "name": "Gas turbine and generation suppliers",
+     "stake": "Gain from the 181 GW gas pipeline."
+    }
+   ],
+   "hints": [
+    "Capacity investment under demand uncertainty with an outside option: the developer's choice between the grid queue and on-site gas.",
+    "Compare countries with different marginal supply (Brazilian renewables vs Indian coal) to see how the same load growth turns into different emissions.",
+    "Check the forecasts against each other: global TWh projections and US GW projections are often conflated."
+   ],
+   "data_leads": "EIA-860 planned generators (proposed gas co-located with data centers), LBNL interconnection queue data, EIA-930 hourly load; BNEF report tables.",
+   "keywords": [
+    "data center electricity demand",
+    "load forecasting",
+    "gas turbines",
+    "capacity investment under uncertainty",
+    "interconnection queues"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "eia860",
+    "lbnl_queues"
+   ],
+   "related": [
+    {
+     "title": "Capacity Investment with Demand Learning",
+     "journal": "Operations Research",
+     "year": 2016,
+     "url": "https://doi.org/10.1287/opre.2016.1561",
+     "cites": 36,
+     "why": "It models capacity investment when demand is learned over time, which fits utilities and developers sizing generation against uncertain data center load."
+    }
+   ],
+   "url": "https://about.bnef.com/insights/data-centers/data-center-power-demand-is-set-to-surge-raising-new-climate-challenges-bloombergnef/",
+   "follows": [],
+   "source": "Environmental Protection Online",
+   "date": "Nov 13"
+  },
+  {
+   "candidate_id": 100,
+   "headline": "EU's Roswall says Circular Economy Act will offer single-point EPR registration and reporting",
+   "theme": "Circular Economy",
+   "original_url": "https://agenceurope.eu/en/bulletin/article/13981/14/european-commission-seeks-to-ease-movement-of-recycled-materials-within-eu",
+   "summary": "Speaking at the Circular Valley Forum in Wuppertal on Nov. 13, EU Environment Commissioner Jessika Roswall said the Circular Economy Act, now expected in 2027, will simplify and harmonize extended producer responsibility. Companies would register and report only once, through a single representative and a single point of entry. She also announced simpler, harmonized end-of-waste rules, measures to raise demand for recycled materials, stronger e-waste collection to recover critical raw materials, and Transregional Circularity Hubs.",
+   "background": "Under EPR, producers pay for collecting and recycling their products. In the EU these schemes are run nationally, so firms selling across member states face multiple registrations and reporting regimes. End-of-waste rules determine when waste becomes a tradable material, and differences between countries restrict cross-border movement of recyclates. Note: this coverage relies on an Agence Europe summary. The ENDS Europe original was not accessed.",
+   "problem": "Fragmented national EPR and end-of-waste regimes raise compliance costs and make it harder to move secondary materials across borders. It is unclear how far a single entry point would harmonize the obligations themselves, as opposed to the paperwork. Commentary suggests national packaging fees may still apply.",
+   "where_why": "The friction lies in regulatory coordination across 27 national compliance systems. Duplicated administrative costs fall hardest on cross-border and smaller sellers, and inconsistent waste classification blocks the single market for recycled materials. The legal form, mechanics and timing of the single point are not confirmed.",
+   "stakeholders": [
+    {
+     "name": "Producers and online sellers in multiple member states",
+     "stake": "Lower administrative costs if reporting is truly unified; fees may persist."
+    },
+    {
+     "name": "National producer responsibility organizations",
+     "stake": "Could lose control over data flows and registration."
+    },
+    {
+     "name": "Recyclers",
+     "stake": "Benefit from harmonized end-of-waste rules and stronger demand for recycled materials."
+    },
+    {
+     "name": "European Commission",
+     "stake": "Wants single-market integration and recovery of critical raw materials."
+    }
+   ],
+   "hints": [
+    "Separate administrative cost from fee level: a model of EPR compliance where harmonization changes the fixed costs of entering markets but not per-unit fees.",
+    "Compare with existing EU harmonization episodes, and with US state EPR programs that have divergent rules.",
+    "Does harmonizing end-of-waste criteria shift intra-EU trade flows in specific waste or scrap codes?"
+   ],
+   "data_leads": "Eurostat waste and intra-EU waste trade statistics, UN Comtrade scrap and secondary material HS codes; US state EPR program reports for comparison.",
+   "keywords": [
+    "extended producer responsibility",
+    "end-of-waste criteria",
+    "secondary materials",
+    "packaging regulation"
+   ],
+   "dataset_candidates": [
+    "Eurostat waste statistics (env_wasgen, env_wastrdmp)"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "state_epr"
+   ],
+   "related": [
+    {
+     "title": "Do E‐Waste Laws Create Behavioral Spillovers? Quasi‐Experimental Evidence from California",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13182",
+     "cites": 42,
+     "why": "It gives quasi-experimental evidence on how an e-waste law changed behavior, a template for evaluating EPR policy shocks."
+    },
+    {
+     "title": "Treat, Dump, or Export? How Domestic and International Waste Management Policies Shape Waste Chain Outcomes",
+     "journal": "Management Science",
+     "year": 2023,
+     "url": "https://doi.org/10.1287/mnsc.2021.02061",
+     "cites": 14,
+     "why": "It models how domestic and international waste policies shape where waste ends up, relevant to EU end-of-waste and cross-border recyclate rules."
+    }
+   ],
+   "url": "https://agenceurope.eu/en/bulletin/article/13981/14/european-commission-seeks-to-ease-movement-of-recycled-materials-within-eu",
+   "follows": [],
+   "source": "ENDS Europe",
+   "date": "Nov 13"
+  },
+  {
+   "candidate_id": 180,
+   "headline": "Meta buys emissions certificates from 25 electric trucks on the I-10 corridor to address data center construction freight",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://www.dcvelocity.com/supply-chain/other-services/green-logistics/meta-buys-zero-emission-trucking-capacity-to-offset-data-center-construction",
+   "summary": "Meta signed a multi-year deal with electric truckload carrier Nevoya supporting 25 Class 8 battery-electric trucks on I-10 between San Bernardino, California, and Phoenix, Arizona. Despite the headline framing, Meta is not buying trucking capacity. It buys environmental attribute certificates representing the emissions benefits of Nevoya's freight service, which is not tied to moving Meta's goods. Per TheTrucker.com, the trucks are expected to start in 2027 and cover about 4 million freight miles a year.",
+   "background": "This is Meta's second deal with Nevoya. In Texas, Meta was one of several buyers in a Center for Green Market Activation group supporting Nevoya's 63-truck Houston–Dallas deployment. Electrive reports charging will be 100% matched with renewable energy certificates. Meta's Devon Lake said freight \"is part of the emissions footprint of building and operating our data centers.\" I-10 is a key route for data center construction materials. No financial terms, contract length or emissions-reduction figure were disclosed.",
+   "problem": "The certificates let a buyer claim scope 3 reductions from freight it does not use. This helps finance new electric trucks, but it raises questions about additionality, double counting and whether such claims reflect the buyer's real supply chain emissions.",
+   "where_why": "The issue sits in scope 3 accounting and in the capital financing of zero-emission fleets. Carriers face high upfront costs for battery-electric trucks, and buyers cannot easily decarbonize freight run by third parties. Book-and-claim instruments separate the environmental attribute from the physical service, which creates verification and information-asymmetry issues.",
+   "stakeholders": [
+    {
+     "name": "Meta",
+     "stake": "Wants credible scope 3 reductions tied to its data center buildout."
+    },
+    {
+     "name": "Nevoya",
+     "stake": "Gets multi-year revenue that helps finance its electric truck fleet."
+    },
+    {
+     "name": "Shippers whose freight actually moves on the trucks",
+     "stake": "Could face double-counting disputes over who claims the emissions benefit."
+    },
+    {
+     "name": "Standard setters and auditors",
+     "stake": "Must decide whether book-and-claim freight certificates count toward scope 3."
+    }
+   ],
+   "hints": [
+    "The market-based vs location-based emissions accounting debate in electricity applies here; compare RECs with freight certificates.",
+    "Model the certificate contract as demand-side financing of fleet turnover: when does it change the carrier's investment decision?",
+    "Look for other hyperscaler purchases of low-carbon cement, steel and freight as a pattern in how embodied-carbon procurement is organized."
+   ],
+   "data_leads": "CDP supply chain responses and Meta's sustainability reports and SEC filings for scope 3 accounting; Center for Green Market Activation buyer group disclosures.",
+   "keywords": [
+    "market-based emissions accounting",
+    "scope 3 disclosure",
+    "fleet turnover",
+    "embodied carbon"
+   ],
+   "dataset_candidates": [
+    "Center for Green Market Activation buyer alliance disclosures"
+   ],
+   "datasets": [
+    "cdp",
+    "sec_edgar"
+   ],
+   "related": [
+    {
+     "title": "Allocating Emissions Among Co-Products: Implications for Procurement and Climate Policy",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2016,
+     "url": "https://doi.org/10.1287/msom.2015.0572",
+     "cites": 135,
+     "why": "It shows how emissions accounting allocation rules shape procurement incentives, relevant to how freight certificates assign emissions benefits to buyers."
+    }
+   ],
+   "url": "https://www.dcvelocity.com/supply-chain/other-services/green-logistics/meta-buys-zero-emission-trucking-capacity-to-offset-data-center-construction",
+   "follows": [],
+   "source": "DC Velocity",
+   "date": "Nov 13"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 14,
+   "takeaway": "Using a longer panel of CDP disclosures on emissions reduction projects, the paper finds that payback periods, often only 2-3 years, are slowly but significantly lengthening, and it explores what drives variation across projects.",
+   "connection": "If cheap decarbonization projects are running out, that may explain why firms like Meta turn to instruments such as freight certificates to address harder scope 3 emissions.",
+   "title": "EXPRESS: An Exploratory Analysis of Variation in Payback Periods of Emissions Reduction Projects Using CDP Disclosures",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261510190"
+  },
+  {
+   "candidate_id": 17,
+   "takeaway": "In a 2010-2020 panel of US buyers and their global suppliers, firm performance has a U-shaped relationship with suppliers' political instability exposure: it is highest at very low or very high levels of exposure.",
+   "connection": "It offers a supplier-network exposure measure that could be adapted to other supply chain risks, such as reliance on congested gateways like the Port of LA.",
+   "title": "EXPRESS: Benefits of Extreme Political Stability and Instability of Supplier Countries for Firms: The U-Shaped Relationship",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261510189"
+  }
+ ],
+ "thread_to_pull": "Data center growth hits three different physical bottlenecks in today's issue: the grid (BNEF's 181 GW of on-site gas built for speed to power), local land-use politics (the Climate Mayors law and 500+ moratoriums), and freight corridors for construction materials (Meta's I-10 certificates). Each response trades speed against transparency or emissions. A shared lens could be how developers substitute across these constraints, for example moving sites when local rules tighten or building their own generation when interconnection is slow.",
+ "also": [
+  {
+   "title": "White House to extend Jones Act waiver as deadline nears, sources say",
+   "url": "https://www.freightwaves.com/news/white-house-to-extend-jones-act-waiver-as-deadline-nears-sources-say",
+   "source": "FreightWaves",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "AI cargo thefts top $150 million from June 2025 to June 2026",
+   "url": "https://www.freightwaves.com/news/ai-cargo-thefts-top-150-million-from-june-2025-to-june-2026",
+   "source": "FreightWaves",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "Indonesia prepares palm oil traceability system ahead of EUDR implementation",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNT1lNdnZieUROU1VmU0YwRFFxMWhEd1paRjZoWDVzMjJ3dEhTR2hfU0VleTZma2xpSEhudDFTdkFhWENZTEJScWVWbFhacmdpWXIxV29OY0ZUS3dRbjhSZ19UUGdsbWhtYWlQWTNTV1JKVnRkX3FuMm82RUNxSF9Na0ZTSVJKUDhIN29rY29mWjJFSlYwUExycFZtRG9fUjNtRXBJQVZ0bFpqX3gtamthdEJ3?oc=5",
+   "source": "UkrAgroConsult",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Three data center developments in Australia change course after community backlash",
+   "url": "https://www.datacenterdynamics.com/en/news/three-data-center-developments-in-australia-change-course-after-community-backlash/",
+   "source": "DatacenterDynamics",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "The Iran war will cause global fossil fuel emissions to fall",
+   "url": "https://www.canarymedia.com/articles/emissions-reduction/turns-out-the-worlds-fossil-fuel-emissions-will-actually-drop-this-year",
+   "source": "Canary Media",
+   "theme": "Climate Risk & Adaptation"
+  }
+ ]
+}

@@ -1194,5 +1194,45 @@
    "2026-11-13#4"
   ],
   "last_seen": "2026-11-13"
+ },
+ "pacific merchant shipping association rail dwell statistics": {
+  "name": "Pacific Merchant Shipping Association rail dwell statistics",
+  "first_seen": "2026-11-14",
+  "items": [
+   "2026-11-14#1"
+  ],
+  "last_seen": "2026-11-14"
+ },
+ "port of los angeles port optimizer / monthly container statistics": {
+  "name": "Port of Los Angeles Port Optimizer / monthly container statistics",
+  "first_seen": "2026-11-14",
+  "items": [
+   "2026-11-14#1"
+  ],
+  "last_seen": "2026-11-14"
+ },
+ "interconnected capital data center moratorium tracker": {
+  "name": "Interconnected Capital data center moratorium tracker",
+  "first_seen": "2026-11-14",
+  "items": [
+   "2026-11-14#2"
+  ],
+  "last_seen": "2026-11-14"
+ },
+ "eurostat waste statistics (env_wasgen, env_wastrdmp)": {
+  "name": "Eurostat waste statistics (env_wasgen, env_wastrdmp)",
+  "first_seen": "2026-11-14",
+  "items": [
+   "2026-11-14#4"
+  ],
+  "last_seen": "2026-11-14"
+ },
+ "center for green market activation buyer alliance disclosures": {
+  "name": "Center for Green Market Activation buyer alliance disclosures",
+  "first_seen": "2026-11-14",
+  "items": [
+   "2026-11-14#5"
+  ],
+  "last_seen": "2026-11-14"
  }
 }
