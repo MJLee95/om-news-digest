@@ -1234,5 +1234,53 @@
    "2026-11-14#5"
   ],
   "last_seen": "2026-11-14"
+ },
+ "cso ireland data centres metered electricity consumption": {
+  "name": "CSO Ireland Data Centres Metered Electricity Consumption",
+  "first_seen": "2026-11-15",
+  "items": [
+   "2026-11-15#1"
+  ],
+  "last_seen": "2026-11-15"
+ },
+ "eirgrid generation capacity statement": {
+  "name": "EirGrid Generation Capacity Statement",
+  "first_seen": "2026-11-15",
+  "items": [
+   "2026-11-15#1"
+  ],
+  "last_seen": "2026-11-15"
+ },
+ "pjm elcc class ratings": {
+  "name": "PJM ELCC class ratings",
+  "first_seen": "2026-11-15",
+  "items": [
+   "2026-11-15#2"
+  ],
+  "last_seen": "2026-11-15"
+ },
+ "statistics canada motor vehicle manufacturing data": {
+  "name": "Statistics Canada motor vehicle manufacturing data",
+  "first_seen": "2026-11-15",
+  "items": [
+   "2026-11-15#3"
+  ],
+  "last_seen": "2026-11-15"
+ },
+ "eurostat waste batteries and accumulators statistics": {
+  "name": "Eurostat waste batteries and accumulators statistics",
+  "first_seen": "2026-11-15",
+  "items": [
+   "2026-11-15#4"
+  ],
+  "last_seen": "2026-11-15"
+ },
+ "china general administration of customs (gacc) import statistics by port": {
+  "name": "China General Administration of Customs (GACC) import statistics by port",
+  "first_seen": "2026-11-15",
+  "items": [
+   "2026-11-15#5"
+  ],
+  "last_seen": "2026-11-15"
  }
 }

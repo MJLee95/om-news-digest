@@ -1,0 +1,96 @@
+{
+ "id": "2026-11-12#1",
+ "created": "2026-11-15",
+ "updates": [
+  {
+   "date": "2026-11-15",
+   "items": [
+    "2026-11-12#1",
+    "2026-11-15#2"
+   ],
+   "note": "This is a new thread. It opened with the November 2026 election, which gave Democrats a 3–2 majority on Georgia's PSC starting January 2027 and set up a challenge to Georgia Power's roughly 10 GW data-center buildout. Reporting the same week on a disputed 20% battery capacity credit in the utility's 2–6 GW procurement for 2032–33 shows where that challenge may land first."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "Georgia Power's data-center gas buildout meets a Democratic PSC",
+  "summary": "Georgia Power is building about 10 GW of mostly data-center-driven capacity, approved in December 2025, and is procuring another 2–6 GW for 2032–2033. The November 2026 election gives Democrats a 3–2 majority on the Public Service Commission from January 2027, and the new commissioners say they will challenge the gas expansion and the bill increases tied to it.",
+  "origin": "In January 2025 the PSC adopted rules requiring large new customers such as data centers to pay the costs of serving them. On July 1, 2025 it voted 5–0 to freeze base rates through at least 2028. Storm costs, mostly from Hurricane Helene, were excluded, and critics called it a freeze 'in name only.' In July 2025 the PSC approved the 2025 integrated resource plan, which allowed 6,000–8,500 MW of new supply 'based on proven need'; the exact vote date is unconfirmed. In November 2025 Democrat Peter Hubbard won a seat, and Democrat Alicia Johnson also joined the commission. On December 19, 2025, before the two Democrats were seated, the all-Republican PSC voted 5–0 to approve a negotiated deal. It covers about 9,885 MW at about $16.3B: 3.6 GW of new gas, 3 GW of batteries, 350 MW of solar paired with storage and about 2.8 GW of purchased power. About 80% is for data centers, and the deal skipped competitive bidding. PSC staff had reportedly first recommended approving only about a third of that right away; staff's final position is unclear. In February 2026 the PSC voted 3–2 to reject environmental groups' request for reconsideration, with Hubbard and Alicia Johnson dissenting. In April 2026 Georgia Power requested another 2–6 GW of dispatchable capacity for 2032–2033.",
+  "causes": "Georgia Power forecasts a surge in data-center load and expects regional demand to roughly triple by the mid-2030s. Independent estimates are far lower: researchers cited by Bisnow expect only 2.4–6.7 GW of data-center growth. The PSC has approved six rate increases in recent years, voters are angry about bills, and another increase looms when the freeze ends in 2028. The core dispute is about who bears the risk if data-center demand fails to materialize. Hubbard put it this way: 'the roommate moves out, but the mortgage doesn't go away.' A separate fight over capacity accreditation (ELCC) shapes whether gas or batteries win new procurements.",
+  "actors": [
+   {
+    "name": "Georgia Power (Southern Company subsidiary; CEO Kim Greene)",
+    "role": "Plans and builds the data-center-driven capacity and runs the 2032–33 procurement",
+    "stake": "Recovery of a roughly $16B buildout plus further gas investment; the utility says large-customer revenue will lower home bills, by about $8.50 a month in 2029–2031"
+   },
+   {
+    "name": "Democratic PSC commissioners (Peter Hubbard, Alicia Johnson, incoming Shelia Edwards)",
+    "role": "New 3–2 majority from January 2027",
+    "stake": "Slowing bill increases; they may reopen the costs and climate impacts of the December 2025 plan and scrutinize the April 2026 request. Hubbard favors a solar, battery and efficiency mix"
+   },
+   {
+    "name": "Republican PSC commissioners (Chair Jason Shaw, Tim Echols and others)",
+    "role": "Approved the December 2025 buildout and rejected reconsideration",
+    "stake": "Defending the approval as growth-friendly and as including safeguards for existing customers"
+   },
+   {
+    "name": "Southern Environmental Law Center and environmental groups",
+    "role": "Intervenors challenging the buildout and the battery capacity credit",
+    "stake": "Customer protections against stranded costs (SELC estimates $50–60B over the plants' lifetimes) and fair treatment of storage in procurement"
+   },
+   {
+    "name": "Data-center developers",
+    "role": "Source of about 80% of the new demand",
+    "stake": "Timely power supply and how costs are allocated under the large-load rules"
+   },
+   {
+    "name": "PSC Public Interest Advocacy Staff",
+    "role": "Negotiated the rate freeze; first recommended a smaller capacity approval",
+    "stake": "Balancing reliability against ratepayer risk"
+   }
+  ],
+  "status": "The December 2025 approval of about 10 GW remains in force, though Canary reports Georgia Power has made 'little progress' carrying it out. The 2032–33 procurement for 2–6 GW is under way. SELC attorney Bob Sherrier says it credits batteries with only 20% ELCC, against about 80% for gas, while the utility's earlier figures imply about 75% for batteries. Earlier plans rated batteries at 95% for the first 3,000 MW, then 75%, then 50%. This account has not been checked against the procurement documents. Democrats take control in January 2027. Reports put the length of prior Republican control at 30–31 years, back to roughly 1995. Whether and how the new majority will reopen the December 2025 order or change the procurement is still open. A base-rate case is expected around 2028, when the freeze ends.",
+  "watch": [
+   "January 2027: Shelia Edwards is seated and the Democratic majority takes control. Watch for any motion to open proceedings on the December 2025 plan's costs and climate impacts",
+   "2027: possible PSC action on the ELCC values used in the 2032–33 procurement",
+   "Mid-2027 (per Inside Climate News): selected 2032–33 projects go to the PSC for approval",
+   "2028: the base-rate freeze ends and a rate case is likely"
+  ],
+  "research": [
+   {
+    "question": "How does capacity accreditation (ELCC) for storage change the technology mix and cost of utility capacity procurements? An analytical model of how accreditation rules bias choices between gas and batteries under uncertain load could be calibrated to Georgia's 20% versus about 75% battery ratings.",
+    "shock": "The 2032–33 procurement's 20% battery ELCC (2026) versus the utility's earlier accreditation values",
+    "data": "Georgia Power IRP and procurement documents and PSC dockets; EIA-860 generator data; ELCC values from other utilities and RTOs for cross-sectional comparison"
+   },
+   {
+    "question": "Does a change in a regulator's partisan control change utility capacity-planning and investment decisions, such as the pace of gas buildout, reliance on competitive bidding and cost-allocation terms for large loads?",
+    "shock": "The November 3, 2026 election flipping the Georgia PSC to a Democratic majority, effective January 2027; possibly compared with the 2025 special election",
+    "data": "PSC dockets and orders; EIA-860 planned additions and EIA-861; FERC Form 1; elected PSCs in other states as controls"
+   },
+   {
+    "question": "How should a utility size and time capacity under highly uncertain data-center demand, and how do contract terms (large-load tariffs, minimum bills) shift stranded-asset risk between new and existing customers?",
+    "shock": "The December 19, 2025 approval of about 9.9 GW sized to the utility's forecast, against independent estimates of 2.4–6.7 GW",
+    "data": "Utility load forecasts in IRP filings; data-center interconnection queues; EIA-861 sales; PSC large-load rules (January 2025)"
+   }
+  ]
+ },
+ "updated": "2026-11-15",
+ "items": [
+  "2026-11-12#1",
+  "2026-11-15#2"
+ ],
+ "sources": [
+  "https://www.canarymedia.com/articles/politics/new-dem-regulators-georgia-power",
+  "https://insideclimatenews.org/news/14112026/georgia-power-grid-expansion-gas/",
+  "https://www.georgiapower.com/rate-changes.html",
+  "https://psc.ga.gov/newsroom/media-advisories/page2",
+  "https://georgiarecorder.com/2025/07/01/regulators-approve-temporary-georgia-power-rate-freeze/",
+  "https://capitol-beat.org/2025/07/psc-approves-georgia-power-rate-freeze/",
+  "https://www.georgiapower.com/about/company/filings/rate-request.html",
+  "https://www.fox5atlanta.com/news/psc-approves-georgia-power-expansion-amid-protest",
+  "https://finance.yahoo.com/news/georgia-regulators-approve-10-gw-152652789.html",
+  "https://www.bisnow.com/atlanta/news/data-center/georgia-power-gets-ok-to-expand-grid-despite-opposition-132473",
+  "https://www.selc.org/press-release/psc-unanimously-votes-to-approve-georgia-powers-data-center-plan-without-sufficient-customer-protections/",
+  "https://www.atlantanewsfirst.com/2025/12/19/public-service-commission-approves-controversial-georgia-power-energy-expansion-plan/"
+ ]
+}
