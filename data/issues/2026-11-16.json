@@ -1,0 +1,377 @@
+{
+ "intro": "Today's issue covers two fights over who gets grid access and who pays for it: Korea's new scoring thresholds for data-center power and an Oklahoma court challenge over Google's utility contracts. It also covers a Korean cell maker moving US output toward grid storage, an El Niño shock to Ecuador's cocoa crop, and a city-level pay-as-you-throw food-waste result.",
+ "items": [
+  {
+   "candidate_id": 60,
+   "headline": "Korea formalizes grid impact assessments: Seoul-area data centers need 75 points, sites under 10 MW stay exempt",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.techtimes.com/articles/330783/20261116/korea-data-center-power-rules-raise-seoul-area-bar-75-points-sites-under-10-mw-skip-grid-review.htm",
+   "summary": "Korea's Ministry of Climate, Energy and Environment said on Nov. 15 that its grid impact assessment rules for facilities with contracted capacity of 10 MW or more take effect on Nov. 16, 2026. Seoul metropolitan-area data centers must now score 75 points, up from 70 in the pilot, on a 100-point scale (55 technical, 45 non-technical). Applicants already waiting for review must also clear 75. A new power-use density item deducts 5 points for sites in districts above a reference value.",
+   "background": "The assessment was introduced in April 2024 but ran on a trial basis without formal public notice. Pilot data show 28 capital-area applications totaling 1.9 GW, against 64 non-capital applications totaling 7 GW. Power-use density is electricity sales divided by the area of an administrative district. Assessment results cannot be transferred, and notices are valid for one year, with one extension of up to a year.",
+   "problem": "The regulator wants to steer high, constant data-center loads away from congested Seoul-area grids. Clear cutoffs invite strategic responses, though. An industry representative says developers increasingly build edge data centers drawing under 10 MW to avoid review altogether. Approval odds are also contested. CBRE Korea counted 522 technical reviews for Seoul-area data centers as of March and only 10 final approvals (1.9%), with pending cases caveated. The ministry says 33% of the 27 assessments passed through August 2025 were in the capital region.",
+   "where_why": "The friction sits at the grid-connection approval stage, where scarce transmission capacity near Seoul is rationed through a scoring rule rather than a price. Thresholds (the 10 MW exemption, the 75-point bar, the 5-point density deduction) create discontinuities that developers can game by downsizing, splitting projects or relocating. The year-end manual on item criteria is still pending, so developers face regulatory uncertainty about how often the deduction will apply.",
+   "stakeholders": [
+    {
+     "name": "Ministry of Climate, Energy and Environment",
+     "stake": "Wants to protect grid reliability in the capital region without driving fragmented, unreviewed small sites"
+    },
+    {
+     "name": "Seoul-area data center developers",
+     "stake": "Face a higher bar mid-queue and must choose between downsizing below 10 MW, relocating, or risking rejection"
+    },
+    {
+     "name": "Non-capital regions",
+     "stake": "Could gain investment if projects are pushed out of Seoul; already host 7 GW of pilot applications"
+    },
+    {
+     "name": "Cloud and AI tenants",
+     "stake": "Need low-latency capacity near users and may get smaller or more distant facilities"
+    }
+   ],
+   "hints": [
+    "Bunching at a threshold: if many projects sit just under 10 MW, the size distribution reveals how costly the review is perceived to be",
+    "Facility location models with a regulatory scoring constraint: how does a density penalty shift the optimal siting trade-off between latency and approval probability?",
+    "The two approval-rate figures (1.9% vs. 33% capital-region share) use different denominators; reconciling them is itself a lesson in measuring regulatory stringency"
+   ],
+   "data_leads": "Ministry pilot application data (count and GW by region); KEPCO regional electricity sales to compute district power-use density; CBRE Korea data center market reports for project sizes and approvals.",
+   "keywords": [
+    "regulatory thresholds",
+    "facility siting",
+    "data center electricity demand",
+    "interconnection policy",
+    "regulatory uncertainty"
+   ],
+   "dataset_candidates": [
+    "KEPCO Statistics of Electric Power in Korea (sales by region)",
+    "CBRE Korea data center market reports"
+   ],
+   "datasets": [],
+   "related": [
+    {
+     "title": "The Effect of Discretion on Procurement Performance",
+     "journal": "Management Science",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/mnsc.2016.2628",
+     "cites": 201,
+     "why": "Uses a regression discontinuity at a procurement value threshold to measure how rule cutoffs change outcomes, a template for studying behavior around Korea's 10 MW and 75-point thresholds."
+    }
+   ],
+   "url": "https://www.techtimes.com/articles/330783/20261116/korea-data-center-power-rules-raise-seoul-area-bar-75-points-sites-under-10-mw-skip-grid-review.htm",
+   "follows": [],
+   "source": "Tech Times",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 75,
+   "headline": "Oklahoma lawmakers ask state Supreme Court to overturn OG&E power agreements for Google data centers",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://energynewsbeat.co/ai/who-pays-to-wire-googles-oklahoma-data-centers-that-fight-is-now-in-court/",
+   "summary": "Three Republican state representatives (Tom Gann, Rick West and Kevin West) asked the Oklahoma Supreme Court to overturn the Corporation Commission's approval of power agreements between Oklahoma Gas & Electric and Alliance Site & Grid, a Google subsidiary. The agreements cover three planned data centers in Muskogee and Stillwater (case PUD2026-000031). The petitioners allege that ratepayers had no real chance to intervene, that the terms are confidential, and that the deal violates House Bill 2992, which requires separate tariffs for large data-center loads. The commission says Google pays 100% of dedicated transmission and distribution costs.",
+   "background": "OG&E applied on May 1, after an April 30 announcement with Google. A judge recommended approval after a Sept. 8–9 hearing on a stipulation signed by OG&E, the Public Utility Division, the attorney general and Google. The reported 3–0 final vote on Nov. 3 is second-hand. The contracts provide about 360 MW of accredited summer capacity and 120 MW of winter capacity, with costs recovered through OG&E's fuel adjustment clause. This is Gann's 17th Supreme Court petition against commission decisions since 2024.",
+   "problem": "The dispute is over how to split grid and capacity costs between a hyperscaler and other customers. Dedicated wires are assigned to Google, but capacity costs flow through the fuel adjustment clause. Minimum-bill revenue projections are confidential, and the settlement promises other customers no specific savings. Gann claims ratepayer consequences across OG&E, ONG and PSO exceed $17 billion, a figure that has not been verified.",
+   "where_why": "The conflict arises in utility ratemaking for large loads, where costs are lumpy, long-lived and partly shared. Confidential contract terms create information asymmetry between the utility, the hyperscaler and residential ratepayers. A statutory requirement for separate large-load tariffs (HB 2992) raises the question of whether bespoke bilateral contracts satisfy it. Procedural rules such as the June 1 intervention deadline shape who gets to contest the allocation.",
+   "stakeholders": [
+    {
+     "name": "Google / Alliance Site & Grid",
+     "stake": "Wants fast, certain power for three sites; agreed to pay dedicated T&D costs and a minimum bill"
+    },
+    {
+     "name": "Oklahoma Gas & Electric",
+     "stake": "Gains load growth and cost recovery; faces legal risk to approved contracts"
+    },
+    {
+     "name": "Residential and small ratepayers",
+     "stake": "Could bear shared capacity or fuel-clause costs without seeing the confidential terms"
+    },
+    {
+     "name": "Oklahoma Corporation Commission and attorney general",
+     "stake": "Defend the stipulated process and their cost-allocation design"
+    },
+    {
+     "name": "Petitioning legislators",
+     "stake": "Seek enforcement of HB 2992 and broader intervention rights for ratepayers"
+    }
+   ],
+   "hints": [
+    "Cooperative game theory and cost allocation: which share of shared capacity costs would a Shapley or core-based rule assign to a 360 MW summer load?",
+    "Compare bespoke hyperscaler contracts with generic large-load tariffs across states as competing designs for the same risk-sharing problem",
+    "Litigation as a source of contract uncertainty: does legal challenge change the timing or siting of data-center investments?"
+   ],
+   "data_leads": "Oklahoma Corporation Commission docket PUD2026-000031 and other state PUC large-load tariff filings; EIA-861 for OG&E customer classes and revenues; EIA-930 for regional load.",
+   "keywords": [
+    "large-load tariffs",
+    "cost pass-through",
+    "litigation risk",
+    "interconnection policy",
+    "data center electricity demand"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "state_puc",
+    "eia861"
+   ],
+   "related": [
+    {
+     "title": "That's Not Fair: Tariff Structures for Electricity Markets with Rooftop Solar",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/msom.2020.0930",
+     "cites": 45,
+     "why": "Analyzes fairness of electricity tariff structures when some customers' behavior shifts grid costs onto others, closely paralleling the data-center cost-allocation fight."
+    },
+    {
+     "title": "Resource Pooling and Cost Allocation Among Independent Service Providers",
+     "journal": "Operations Research",
+     "year": 2015,
+     "url": "https://doi.org/10.1287/opre.2015.1360",
+     "cites": 79,
+     "why": "Studies how to allocate costs of pooled capacity among independent parties, a modeling lens for splitting shared grid capacity costs."
+    }
+   ],
+   "url": "https://energynewsbeat.co/ai/who-pays-to-wire-googles-oklahoma-data-centers-that-fight-is-now-in-court/",
+   "follows": [],
+   "source": "Energy News Beat",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 113,
+   "headline": "Samsung SDI signs 16 GWh LFP storage battery deal with BlackRock-owned Jupiter Power, made in Indiana",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://www.thelec.net/news/articleView.html?idxno=15639",
+   "summary": "On Nov. 16, Samsung SDI said its US subsidiary will supply 16 GWh of prismatic LFP cells for energy storage systems to Austin-based Jupiter Power over three years starting in 2029. The cells will come from the StarPlus Energy plant in Indiana, Samsung SDI's joint venture with Stellantis. Cumulative contracted volume between the two companies rises to about 27 GWh, in a deal estimated at several trillion won (exact value undisclosed).",
+   "background": "Samsung SDI recently began mass production of LFP batteries for ESS at the StarPlus Energy plant, which was built as an EV battery JV with Stellantis. Jupiter Power is a US storage developer owned by BlackRock. Samsung SDI has also signed LFP material supply agreements with Korean suppliers POSCO Future M and L&F.",
+   "problem": "Korean cell makers that built US capacity for EVs are redeploying it toward grid storage and LFP chemistry, where they compete with established LFP producers. Signing long-dated contracts (deliveries 2029–2031) locks in volume. It also exposes both sides to price, technology and policy changes over a long horizon.",
+   "where_why": "The shift happens at the capacity-allocation and contracting stage of the battery supply chain. A JV plant designed for one customer and product (EV cells) is being repurposed for another market (stationary storage). Multi-year offtake with a single developer reduces demand uncertainty for the plant but concentrates customer risk. Pairing it with Korean material suppliers points to a deliberate upstream sourcing structure.",
+   "stakeholders": [
+    {
+     "name": "Samsung SDI",
+     "stake": "Wants to fill US capacity and build an ESS business with LFP; bears execution and price risk"
+    },
+    {
+     "name": "Jupiter Power / BlackRock",
+     "stake": "Secures US-made cell supply for its storage pipeline through 2031"
+    },
+    {
+     "name": "Stellantis (StarPlus Energy JV partner)",
+     "stake": "Shares a plant whose output is partly shifting from EV to ESS products"
+    },
+    {
+     "name": "POSCO Future M and L&F",
+     "stake": "Gain LFP material volume tied to Samsung SDI's US production"
+    }
+   ],
+   "hints": [
+    "Capacity flexibility and product-mix models: what is the option value of a plant that can switch between EV and ESS cells?",
+    "Long-term contract design under technology and price uncertainty: how are volume and price risk likely split in multi-year cell offtake deals?",
+    "Compare Korean cell makers' ESS pivots with their EV demand outlook as a natural lens on demand-shock-driven capacity reallocation"
+   ],
+   "data_leads": "ERCOT and LBNL interconnection queue data for Jupiter Power's storage pipeline; SEC filings and press disclosures for cell offtake contracts; BNEF or Benchmark battery supply data (commercial), with USGS mineral summaries as a public complement.",
+   "keywords": [
+    "battery storage",
+    "battery chemistry shift",
+    "long-term supply contracts",
+    "capacity utilization",
+    "supplier concentration"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "ercot_reports",
+    "lbnl_queues"
+   ],
+   "related": [
+    {
+     "title": "The Unintended Carbon Impacts of Large-Scale Electricity Storage",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2024.1411",
+     "cites": 1,
+     "why": "Shows how large-scale storage arbitrage indirectly changes market-level carbon emissions, relevant to the downstream impact of the storage capacity this deal supplies."
+    }
+   ],
+   "url": "https://www.thelec.net/news/articleView.html?idxno=15639",
+   "follows": [],
+   "source": "THE ELEC, Korea Electronics Industry Media",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 147,
+   "headline": "El Niño rains hit Ecuador's cocoa crop; exporters forecast a decline of more than 10% in 2027",
+   "theme": "Climate Risk & Adaptation",
+   "original_url": "https://www.bloomberg.com/news/articles/2026-11-16/el-nino-ravages-ecuador-cocoa-crop-threatening-global-supply",
+   "summary": "Bloomberg reports that El Niño has triggered floods, destroyed rural roads, damaged bean quality and fueled tree disease in Ecuador, the world's third-largest cocoa grower. Coastal rainfall in October was more than 10,000% above historical norms, according to Vaisala Xweather. Exporters' association Anecacao said on Nov. 9 that 2027 production could fall more than 10%, with the biggest impact expected between January and April.",
+   "background": "In the last major El Niño (2015/16), Ecuador's production fell 11.1%. Cocoa traded at 5,260 USD/T on Nov. 13, 2026, up 1.08% on the day. Between the evening of Nov. 13 and the morning of Nov. 14, heavy rain caused 10 floods and a sinkhole, and two people were missing.",
+   "problem": "A concentrated weather shock hits a producing region that buyers rely on. Damage shows up in three ways: lost volume, lower bean quality from tree disease and wet conditions, and logistics disruption from destroyed rural roads. The >10% figure is a forecast, and Anecacao has previously said it lacks an official estimate of El Niño-attributable losses. Buyers must therefore decide on hedging, inventory and alternative sourcing under real uncertainty about the size of the shock.",
+   "where_why": "The disruption originates at the farm and first-mile logistics stage, where smallholder production and rural road access are exposed to flooding. It spreads through exporters to grinders and chocolate makers. Climate shocks are spatially correlated within a growing region, which limits diversification within a single origin. Poor damage measurement adds an information problem for buyers and markets.",
+   "stakeholders": [
+    {
+     "name": "Ecuadorian cocoa farmers",
+     "stake": "Lose output and income from flooding, disease and lost road access"
+    },
+    {
+     "name": "Exporters (Anecacao members)",
+     "stake": "Face lower volumes and quality, and must manage contract commitments"
+    },
+    {
+     "name": "Chocolate makers and grinders",
+     "stake": "Face supply gaps, quality variation and input price risk"
+    },
+    {
+     "name": "Commodity traders",
+     "stake": "Must price an uncertain supply loss into an already tight market"
+    }
+   ],
+   "hints": [
+    "Compare with the 2015/16 El Niño (11.1% decline) as a prior shock to benchmark price and trade-flow responses",
+    "Disaggregate volume, quality and logistics channels: they imply different mitigations (sourcing, sorting, inventory)",
+    "Event-driven commodity price forecasting: do weather and news signals anticipate price moves before measured crop losses?"
+   ],
+   "data_leads": "UN Comtrade cocoa bean exports (HS 1801) by origin; ICCO quarterly cocoa statistics; ICE cocoa futures prices; Vaisala/NOAA rainfall data for coastal Ecuador.",
+   "keywords": [
+    "climate adaptation",
+    "supplier region risk",
+    "cost pass-through",
+    "supplier diversification",
+    "smallholder inclusion"
+   ],
+   "dataset_candidates": [
+    "ICCO Quarterly Bulletin of Cocoa Statistics",
+    "ICE cocoa futures price history"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Balancing Resilience and Efficiency: A Literature Review on Overcoming Supply Chain Disruptions",
+     "journal": "Production and Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1177/10591478241302735",
+     "cites": 95,
+     "why": "Reviews the resilience-versus-efficiency trade-off in supply chain disruption management, framing buyer responses to a regional climate shock."
+    },
+    {
+     "title": "IMPACT OF DISASTERS ON FIRMS IN DIFFERENT SECTORS: IMPLICATIONS FOR SUPPLY CHAINS",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2010,
+     "url": "https://doi.org/10.1111/j.1745-493x.2010.03206.x",
+     "cites": 201,
+     "why": "Uses secondary data to measure disaster impacts on firms across sectors, an empirical template for tracing weather shocks through supply chains."
+    }
+   ],
+   "url": "https://www.bloomberg.com/news/articles/2026-11-16/el-nino-ravages-ecuador-cocoa-crop-threatening-global-supply",
+   "follows": [],
+   "source": "Bloomberg.com",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 143,
+   "headline": "Goyang reports 14% four-year drop in household food waste after rolling out RFID pay-as-you-throw bins",
+   "theme": "Circular Economy",
+   "original_url": "https://en.sedaily.com/society/2026/11/16/goyang-cuts-food-waste-14-percent-with-pay-as-you-throw-bins",
+   "summary": "Goyang, a Korean city, said food waste from households and small restaurants fell 14% from 88,499 tons in 2021 to 76,101 tons in 2025. The city credits RFID-based bins that weigh each household's discards and charge by weight. Through September 2026, discharge averaged about 6,300 tons a month, below 2025's monthly average of 6,340 tons.",
+   "background": "Goyang piloted 49 units at five apartment complexes in 2019 and expanded from 2021; 1,372 units now operate at 136 complexes. Of these, 817 came through city open calls and lease-cost support and 555 were installed directly by builders. A May 2025 ordinance requires bins in new apartment developments. The city also runs 19 unmanned recycling machines and 20 recycling shops, where about 20,000 residents earned points in 2025.",
+   "problem": "The figures come from the city, with no independent check. The bins' effect is not separated from population change or other factors, and coverage expanded gradually across complexes. Whether weight-based unit pricing actually reduces waste generation, or just shifts disposal elsewhere, remains open.",
+   "where_why": "The intervention acts at the household disposal stage. Metering removes the information and free-rider problem of shared flat-fee bins by tying each household's fee to its own discards. Staggered rollout across complexes, partly city-funded and partly builder-installed under an ordinance, creates variation in timing and selection.",
+   "stakeholders": [
+    {
+     "name": "Goyang city government",
+     "stake": "Wants lower collection and treatment costs and evidence its policy works"
+    },
+    {
+     "name": "Apartment households",
+     "stake": "Pay per kilogram and gain from cutting waste; may face monitoring and inconvenience"
+    },
+    {
+     "name": "Construction companies",
+     "stake": "Must now install bins in new developments, adding cost"
+    },
+    {
+     "name": "Food waste collectors and processors",
+     "stake": "Face lower and more traceable volumes"
+    }
+   ],
+   "hints": [
+    "Staggered adoption across 136 complexes suits a difference-in-differences design, but watch selection: who opted into open calls versus mandated installs",
+    "Look for leakage: does metered food waste fall while general waste or illegal dumping rises?",
+    "Unit-pricing elasticity: compare weight-based fees with bag-based volume pricing"
+   ],
+   "data_leads": "Complex-level RFID weigh data from Goyang or Korea Environment Corporation; Korea's national waste generation and treatment statistics for comparison cities; EPA MSW figures for a US benchmark.",
+   "keywords": [
+    "pay-as-you-throw",
+    "household food waste",
+    "unit pricing",
+    "smart metering"
+   ],
+   "dataset_candidates": [
+    "Korea Ministry of Environment national waste generation and treatment statistics",
+    "Korea Environment Corporation RFID food waste metering data"
+   ],
+   "datasets": [],
+   "related": [
+    {
+     "title": "Do E‐Waste Laws Create Behavioral Spillovers? Quasi‐Experimental Evidence from California",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13182",
+     "cites": 42,
+     "why": "Quasi-experimental study of how California's e-waste laws changed waste behavior, including spillovers, a close methodological template for evaluating Goyang's policy."
+    },
+    {
+     "title": "Grocery Store Density and Food Waste",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/msom.2019.0800",
+     "cites": 88,
+     "why": "Models how market conditions drive household food waste, offering mechanisms beyond pricing that could confound the Goyang result."
+    }
+   ],
+   "url": "https://en.sedaily.com/society/2026/11/16/goyang-cuts-food-waste-14-percent-with-pay-as-you-throw-bins",
+   "follows": [],
+   "source": "Seoul Economic Daily",
+   "date": "Nov 16"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 5,
+   "takeaway": "The paper asks how well a newsvendor can choose order quantities when historical data record only sales, which are capped by stock, rather than true demand. Using a distributionally robust worst-case regret framework, it characterizes how the degree of demand censoring limits what any learning algorithm can achieve.",
+   "connection": "Many of today's stories involve censored demand signals, such as data-center developers sizing projects below the 10 MW cutoff or cocoa sales capped by available supply, so observed quantities understate true demand.",
+   "title": "The Data-Driven Censored Newsvendor Problem",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.09021"
+  }
+ ],
+ "thread_to_pull": "Korea's 10 MW exemption and Oklahoma's fight over large-load tariffs are two answers to the same question: should grid access for big loads be rationed by rules and thresholds, or priced through bespoke contracts? Goyang's per-kilogram fee is a third mechanism, direct unit pricing. Comparing how each design shapes the size and location of loads, and who bears the residual cost, could link energy and waste-policy research.",
+ "also": [
+  {
+   "title": "Emissions driven to lowest levels in Port of Long Beach’s busiest year",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONjZTd2V3SHpiMjhZalVKMVFQSEt6NzB4ZWtqcjVJTmFYZEFwME14NlVvV3JHZlE4RHBRNHpKSUpMUEVnZEdiWVhlVExYRnUtRGtYM2lJX2tOUTRrVGVjUEdIT1dldTdIS1ZmazU1dWFEeTR0c2NrZklQbFU4Mk9HRVByeDRUVXRESFJadC1JaDNkMDF2VzNIRVBFT1RYWmM?oc=5",
+   "source": "Cyprus Shipping News",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "South Korea to Secure Tungsten, Rare Earths and 5 Other Critical Minerals Directly; KOMIR to Resume Overseas Investment After 5-Year Hiatus",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9ZS3lyRnYwVm5yc3hWOVdjcDRsMHJnTWlmYVVQb2RBNDNWaTUwMGIySXRGWmluOGNQcURjeXd1a1RmZUJQU09pcUtzcEJqM0ZoZ0MtZnBXOVNYUzZJWDBISFZqX293a1NNd3lZbnBHeDRUN3l6WkE?oc=5",
+   "source": "BigGo Finance",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "Egypt Tightens Gas Supply to Fertilizer Plants Amid Global Affordability Squeeze",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPczFqV0dzRDk5ZmVFamQ1YVEyTk50S1lVa3FBaUV4dDNTLVhxalVOS1B3Vk5nRjdnYmdWYm9IZ0tFVHQxd3YxOWFETmZEQWxZWEFYLXhaLTZsb3AyYXFuQ0phU3J0OVFfTHVoT1FqVFRSNlRIMTZueGF3SGRwMXUtazdNX3FLMjUyN25pNF9yZVZnUVhhRm94SDdiVlBOSkw3TzhRdFMxVGRpQnpKTXppLVlxdEh1WWlWbllsWTVveHJSbE9BWmVPMDhZMA?oc=5",
+   "source": "Global Agriculture",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Veolia opens battery black mass recycling plant in France",
+   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOelNzNGpmNUxhN29Sd0l5OUxlZTVVeW51QU5EYVNiYVd1S2Rvc0h1Vy1WR1RiTTdyM0dSLXF4b1JPVDd3X2RWOVMyblN5OVJoVEhfdTJLZ210WUV1YmZRWHZTQ05udnpKVjA4RDQ5VkJvV0Zzc1NsSkduNE1ReVJ3LUFYSzhmQTk5dGdVYkx4aERwTDBKMVBjN1lOMA?oc=5",
+   "source": "electrive.com",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "Box2Bit transfers 150MW grid connection to Blackstone and exits Épila",
+   "url": "https://www.datacenterdynamics.com/en/news/box2bit-sells-150-mw-to-blackstone-and-lets-epila-take-the-lead-in-aragon/",
+   "source": "DatacenterDynamics",
+   "theme": "Energy & AI Data Centers"
+  }
+ ]
+}

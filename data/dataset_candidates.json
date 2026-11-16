@@ -1282,5 +1282,53 @@
    "2026-11-15#5"
   ],
   "last_seen": "2026-11-15"
+ },
+ "kepco statistics of electric power in korea (sales by region)": {
+  "name": "KEPCO Statistics of Electric Power in Korea (sales by region)",
+  "first_seen": "2026-11-16",
+  "items": [
+   "2026-11-16#1"
+  ],
+  "last_seen": "2026-11-16"
+ },
+ "cbre korea data center market reports": {
+  "name": "CBRE Korea data center market reports",
+  "first_seen": "2026-11-16",
+  "items": [
+   "2026-11-16#1"
+  ],
+  "last_seen": "2026-11-16"
+ },
+ "icco quarterly bulletin of cocoa statistics": {
+  "name": "ICCO Quarterly Bulletin of Cocoa Statistics",
+  "first_seen": "2026-11-16",
+  "items": [
+   "2026-11-16#4"
+  ],
+  "last_seen": "2026-11-16"
+ },
+ "ice cocoa futures price history": {
+  "name": "ICE cocoa futures price history",
+  "first_seen": "2026-11-16",
+  "items": [
+   "2026-11-16#4"
+  ],
+  "last_seen": "2026-11-16"
+ },
+ "korea ministry of environment national waste generation and treatment statistics": {
+  "name": "Korea Ministry of Environment national waste generation and treatment statistics",
+  "first_seen": "2026-11-16",
+  "items": [
+   "2026-11-16#5"
+  ],
+  "last_seen": "2026-11-16"
+ },
+ "korea environment corporation rfid food waste metering data": {
+  "name": "Korea Environment Corporation RFID food waste metering data",
+  "first_seen": "2026-11-16",
+  "items": [
+   "2026-11-16#5"
+  ],
+  "last_seen": "2026-11-16"
  }
 }
