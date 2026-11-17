@@ -1,0 +1,399 @@
+{
+ "intro": "Today's issue opens with a facility-level estimate of US hyperscale data center electricity use and emissions, then turns to PJM's plan to speed up grid connections for data centers. It also covers record October container imports and rising port delays, a Commerce rule closing the remote-access loophole for advanced AI chips, and an IFC-led fund, anchored by Inditex, to decarbonize apparel suppliers.",
+ "items": [
+  {
+   "candidate_id": 124,
+   "headline": "Nature Sustainability study: 403 US hyperscale data centers used 68–99 TWh in a year, about 1.8% of US electricity, with 54% from fossil fuels",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.nature.com/articles/s41893-026-01985-7",
+   "summary": "A Harvard T.H. Chan School-led team (senior author Francesca Dominici) published in Nature Sustainability on 16 November 2026 a facility-by-facility estimate for 403 US hyperscale data centers identified from satellite imagery. Covering May 2024 to April 2025, it estimates 68–99 TWh of electricity use, about 1.8% of US consumption, and about 25.7 million metric tons of CO₂. That emissions figure is two to three times an earlier estimate for 2018. About 54% of the power came from fossil fuels (gas 38%, coal 15%), and Virginia, Oregon, Ohio and Iowa together accounted for more than half the electricity use studied.",
+   "background": "Estimates of data center energy use have mostly been top-down and aggregate, because operators rarely disclose consumption by site. This study builds a bottom-up inventory: it locates facilities by satellite, models each site's electricity use under different operating scenarios, and assigns emissions using the regional generation mix in EPA's eGRID. About a quarter of the electricity came from grid regions dirtier than average, and many facilities sit where coal is a large share of generation.",
+   "problem": "Where data centers locate determines their carbon footprint and the grid stress they cause, yet the public baseline is already out of date. The authors say current use is probably much higher because construction continued after April 2025. The study also cannot separate AI workloads from general-purpose computing. Its emissions are attributed through average regional grid mixes rather than measured at each facility, so marginal effects on the grid remain an open question.",
+   "where_why": "The problem sits at the siting and grid-connection stage. Operators choose locations for land, power availability, tax incentives and fiber access, while the carbon cost falls on regional grids whose generation mix they do not control. Two frictions compound this. Operators disclose little, which creates information asymmetry. And because emissions are accounted by grid average rather than at the margin, the true environmental cost of putting one more facility in a coal-heavy region is hard to see.",
+   "stakeholders": [
+    {
+     "name": "Hyperscalers (cloud and AI operators)",
+     "stake": "Want fast, cheap power and credible carbon claims, and face scrutiny over location-based emissions"
+    },
+    {
+     "name": "Grid operators and utilities in Virginia, Ohio, Oregon and Iowa",
+     "stake": "Must serve concentrated load growth, often with fossil generation"
+    },
+    {
+     "name": "Communities near facilities and fossil plants",
+     "stake": "Bear air-quality and health effects, which the authors plan to study next"
+    },
+    {
+     "name": "Regulators and EPA",
+     "stake": "Need facility-level data to design siting, tariff and disclosure policy"
+    }
+   ],
+   "hints": [
+    "Compare average-mix (eGRID) emission attribution with marginal-emission factors: how much does the ranking of good and bad sites change?",
+    "Treat siting as a facility-location problem with a carbon term, and ask what the observed spatial clustering implies about how operators trade off carbon against power price and access.",
+    "The 68–99 TWh range reflects uncertainty about utilization rates. Notice how much that range alone moves the national share estimate."
+   ],
+   "data_leads": "EPA eGRID and EIA-923 plant generation for regional fuel mixes; EIA-930 hourly balancing-authority data for marginal emissions; the preprint's facility inventory (arXiv 2606.05420).",
+   "keywords": [
+    "data center electricity demand",
+    "facility siting",
+    "market-based emissions accounting",
+    "emissions forecasting"
+   ],
+   "dataset_candidates": [
+    "Guidi et al. hyperscale data center facility inventory (arXiv 2606.05420 supplementary data)"
+   ],
+   "datasets": [
+    "epa_egrid",
+    "eia930"
+   ],
+   "related": [
+    {
+     "title": "The Unintended Carbon Impacts of Large-Scale Electricity Storage",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2024.1411",
+     "cites": 1,
+     "why": "Shows how an asset that emits nothing directly, grid storage, changes market-level emissions by shifting dispatch, the same average-versus-marginal question that applies to data center load."
+    },
+    {
+     "title": "How Sustainable Is Big Data?",
+     "journal": "Production and Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1111/poms.12837",
+     "cites": 158,
+     "why": "An early POM essay on the environmental costs of big data, useful framing for what this facility-level estimate now quantifies."
+    }
+   ],
+   "url": "https://www.nature.com/articles/s41893-026-01985-7",
+   "follows": [],
+   "source": "Nature",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 127,
+   "headline": "PJM asks FERC to merge generation, transmission and large-load studies and cut interconnection study time from two years to 12 months",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://energynow.com/2026/11/biggest-us-power-grid-proposes-plan-to-regulators-to-cut-wait-times-for-data-center-power/",
+   "summary": "On 16 November 2026, PJM Interconnection, the largest US grid operator covering 13 Mid-Atlantic and Midwest states, said it was proposing a plan to FERC. It would merge its separate study processes for new generation, transmission and large loads such as data centers, and cut the required study time from two years to 12 months. PJM is asking FERC for a 60-day comment period and a ruling within 120 days. The proposal may also require data center companies to pay a larger share of grid costs, though Reuters gives no figure.",
+   "background": "PJM says neither generation nor transmission is coming online fast enough to keep up with demand growth driven mainly by data centers. OilPrice, citing Reuters, puts the supply shortfall at about 6.8 GW, a figure not checked against PJM directly. An October 2026 PJM workshop page breaks the 12 months into a 4-month screening window, a 7-month system impact study and 1 month to finalize agreements. Cost allocation for data-center-driven upgrades in PJM is already disputed at FERC through earlier show-cause orders.",
+   "problem": "The trade-off is speed against complexity and against who pays. A single joint study could align new supply with new load. But the Data Center Coalition told PJM's board in October that a combined process could complicate interconnection and end up causing longer delays. Shifting upgrade costs onto large loads protects other ratepayers but raises the cost of building data centers. FERC's decision and its timing are both open.",
+   "where_why": "The friction is at the interconnection-queue stage, where sequential and separate studies create coordination failure. Generators wait for certainty about load, loads wait for supply, and transmission planning lags both. Cost allocation adds a misaligned incentive: when large loads do not bear the upgrade costs they cause, other customers subsidize them and loads have little reason to locate where the grid has spare capacity.",
+   "stakeholders": [
+    {
+     "name": "PJM Interconnection",
+     "stake": "Wants to close the supply gap and preserve reliability"
+    },
+    {
+     "name": "Data center developers (Data Center Coalition)",
+     "stake": "Want faster connections without large cost allocations; fear new delays from a merged process"
+    },
+    {
+     "name": "Generation and transmission developers",
+     "stake": "Face a new queue structure and changed study timelines"
+    },
+    {
+     "name": "Residential and commercial ratepayers",
+     "stake": "Could avoid paying for upgrades driven by data centers"
+    },
+    {
+     "name": "FERC",
+     "stake": "Must rule on queue design and cost allocation within the requested 120 days"
+    }
+   ],
+   "hints": [
+    "If FERC approves, compare queue durations and withdrawal rates in PJM before and after the change, using other ISOs as a comparison group.",
+    "Model the merged study as a joint batch-processing or matching system, and ask when batching reduces waiting and when it creates congestion.",
+    "Upgrade-cost allocation acts as a price signal on where loads locate. Notice whether large-load requests start shifting toward less constrained zones."
+   ],
+   "data_leads": "LBNL 'Queued Up' queue data and PJM Data Miner for queue timing and outcomes; FERC eLibrary for the filing, comments and order.",
+   "keywords": [
+    "interconnection queues",
+    "interconnection policy",
+    "large-load tariffs",
+    "cost pass-through",
+    "data center electricity demand"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "lbnl_queues",
+    "ferc_elibrary"
+   ],
+   "related": [
+    {
+     "title": "Modeling the Impact of Market Interventions on the Strategic Evolution of Electricity Markets",
+     "journal": "Operations Research",
+     "year": 2008,
+     "url": "https://doi.org/10.1287/opre.1080.0565",
+     "cites": 30,
+     "why": "Models how market interventions reshape generators' long-run investment portfolios, a lens for how faster interconnection could change new entry in PJM."
+    }
+   ],
+   "url": "https://energynow.com/2026/11/biggest-us-power-grid-proposes-plan-to-regulators-to-cut-wait-times-for-data-center-power/",
+   "follows": [],
+   "source": "Reuters",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 79,
+   "headline": "US container imports hit a record 2.67 million TEU in October 2026, up 16% year over year, as average port delays rise to 6.3 days",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/u-s-container-imports-hit-record-2-67-million-teus-in-october-as-port-delays-rise",
+   "summary": "Descartes data show US container imports of 2,674,808 TEU in October 2026, a monthly record that beats May 2022 by about 2%. That was up 5.0% from September and 16.0% from October 2025. Imports from China rose 22.9% year over year to 987,805 TEU, about half of the total gain, lifting China's share to 36.9%. The unweighted average transit delay across 10 gateways rose to 6.3 days, from 6.0 in September and 4.2 in June.",
+   "background": "Cumulative 2026 imports had trailed 2025 for eight months before turning ahead in September. They are now up 2.3% year to date. The October volume moved toward East and Gulf ports. Houston rose 26.7% (+42,665 TEU), Charleston 18.6%, Norfolk 17.7% and Savannah 12.6%, while Los Angeles fell 1.4%, Long Beach 2% and Oakland 10.9%. Gulf Coast imports reached 266,905 TEU, the highest since Descartes began tracking that measure in August 2023. The five leading West Coast ports' share fell from 47% to 44.9%.",
+   "problem": "It is unclear whether this is a genuine demand surge that is straining capacity, or a timing artifact. Descartes notes part of the jump is a rebound from a weak September: Houston, Savannah, Norfolk and Charleston combined were only 3.6% above August. A longer peak season and uneven vessel arrivals may also have added to the total. Whether the rising delays reflect real strain on inland logistics should become clearer with November's data.",
+   "where_why": "Congestion arises at the port gateway and the inland links behind it, where container arrivals are lumpy and capacity is fixed in the short run. Shippers' routing choices, including the shift to Gulf and East Coast ports, move load onto gateways with less spare capacity. Bunched vessel arrivals then turn a modest volume increase into a disproportionate rise in delay, a typical queueing nonlinearity.",
+   "stakeholders": [
+    {
+     "name": "Importers (retail, furniture, toys, plastics)",
+     "stake": "Need on-time arrival for the peak season and face longer lead times and higher inventory costs"
+    },
+    {
+     "name": "Gulf and East Coast ports (Houston, Savannah, Charleston, Norfolk)",
+     "stake": "Gain volume but risk congestion"
+    },
+    {
+     "name": "West Coast ports (LA, Long Beach, Oakland)",
+     "stake": "Losing share of imports"
+    },
+    {
+     "name": "Carriers and inland drayage and rail",
+     "stake": "Must absorb surges and uneven vessel arrivals"
+    }
+   ],
+   "hints": [
+    "Use queueing theory: relate gateway-level utilization to delay and test whether the delay–volume relationship is convex.",
+    "The East and Gulf versus West Coast reallocation is a port-choice problem. Ask what drives shippers' routing beyond freight rates.",
+    "Separate the timing rebound from the September dip from a real level shift; November data will act as a check."
+   ],
+   "data_leads": "Descartes Global Shipping Report monthly series; NOAA AIS vessel tracks for anchorage waiting time; Census USA Trade Online for port-level imports (public alternative to Panjiva).",
+   "keywords": [
+    "port congestion",
+    "dwell time",
+    "trade diversion",
+    "inventory management"
+   ],
+   "dataset_candidates": [
+    "Descartes Global Shipping Report"
+   ],
+   "datasets": [
+    "noaa_ais",
+    "census_trade"
+   ],
+   "related": [
+    {
+     "title": "Estimating the Operational Impact of Container Inspections at International Ports",
+     "journal": "Management Science",
+     "year": 2010,
+     "url": "https://doi.org/10.1287/mnsc.1100.1252",
+     "cites": 71,
+     "why": "Uses container-movement data to simulate how terminal-level frictions translate into congestion, a method that carries over to surge-driven delays."
+    },
+    {
+     "title": "Carrier Portfolio Management for Shipping Seasonal Products",
+     "journal": "Operations Research",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/opre.2017.1616",
+     "cites": 22,
+     "why": "Studies how a seasonal-goods shipper picks vessels and schedules, relevant to the peak-season timing that shapes these import spikes."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/u-s-container-imports-hit-record-2-67-million-teus-in-october-as-port-delays-rise",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 39,
+   "headline": "BIS interim final rule requires licenses for advanced AI chips to Malaysia, Singapore, Indonesia, Thailand and Brazil to stop remote access from China",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.datacenterdynamics.com/en/news/us-dept-of-commerce-issues-rule-to-restrict-remote-access-to-advanced-ai-chips/",
+   "summary": "On 16 November 2026, Commerce's Bureau of Industry and Security released an interim final rule, 'Addressing Remote Access to Advanced Semiconductors' (RIN 0694-AK50). It requires licenses to export, re-export or transfer in-country advanced chips to Indonesia, Malaysia, Singapore, Thailand and Brazil. Overseas data centers already supplying significant computing power to firms headquartered in China, Macau or other Country Group D:5 countries reportedly must obtain a license within 90 days to continue. The rule also formally repeals the Biden-era AI Diffusion Rule.",
+   "background": "BIS says the rule stops export restrictions from being circumvented through remote computing at data centers in third countries. It follows a scandal around Singapore-based data center company Megaspeed, which operates facilities in Malaysia and is suspected of selling Chinese firms remote access to Nvidia chips. NPR reports that Commerce and the Justice Department said a criminal investigation began in 2025; Megaspeed says it conducts lawful business. BIS says the Treasury Department and the National Security Council wrote the rule, which a CFR fellow called unprecedented. The rule also tightens checks on foundries and packagers that make chips for designers in the newly covered countries.",
+   "problem": "Export controls on physical chips can be evaded by selling compute as a service from third countries. Closing that loophole raises licensing costs and uncertainty for data center capacity across Southeast Asia and Brazil. Key details are unclear: sources disagree on the effective date (most likely effective on publication, with the 90-day window applying to existing arrangements; confirm in the Federal Register). How 'significant' compute will be measured is also not defined in the available reporting.",
+   "where_why": "The leakage occurs at the service layer of the AI compute supply chain. Chips are exported legally, then their capacity is rented remotely. Control over physical goods misses this, so regulators face an information asymmetry over who the end user is. Regulatory uncertainty now falls on siting and capacity decisions for data centers in the five newly covered countries.",
+   "stakeholders": [
+    {
+     "name": "Data center operators in Malaysia, Singapore, Indonesia, Thailand and Brazil",
+     "stake": "Face new license requirements and a 90-day deadline for existing arrangements"
+    },
+    {
+     "name": "US chip designers (e.g., Nvidia)",
+     "stake": "Face constraints on sales to the newly covered markets"
+    },
+    {
+     "name": "Chinese AI firms",
+     "stake": "Lose a remote-access route to advanced compute"
+    },
+    {
+     "name": "US government (BIS, Treasury, NSC)",
+     "stake": "Wants to close circumvention routes; will monitor countries that tolerate evasion"
+    },
+    {
+     "name": "Host-country governments",
+     "stake": "Data center investment at risk; had not commented when Bloomberg published"
+    }
+   ],
+   "hints": [
+    "Treat this as a policy shock to data center siting: compare announced capacity in the five covered countries against other Asian hubs before and after the rule.",
+    "The 90-day window for existing arrangements creates a clear cutoff. Notice any rush to restructure contracts or obtain licenses before it closes.",
+    "Remote access is a form of trade diversion in services. Compare it with the literature on transshipment and tariff circumvention for goods."
+   ],
+   "data_leads": "Federal Register text and BIS licensing records; UN Comtrade and USITC DataWeb for chip exports to Malaysia, Singapore and Thailand (HS 8542, 8471); SEC EDGAR 10-K risk factors of chip and cloud firms.",
+   "keywords": [
+    "export controls",
+    "tariff circumvention",
+    "regulatory uncertainty",
+    "facility siting",
+    "sourcing restrictions"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "federal_register",
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Global operations and supply‐chain management under the political economy",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1232",
+     "cites": 51,
+     "why": "Frames global operations decisions under political-economy pressures, the setting in which compute capacity is now being relocated."
+    },
+    {
+     "title": "Locking in overseas buyers amid geopolitical conflicts",
+     "journal": "Journal of Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1002/joom.1316",
+     "cites": 89,
+     "why": "Uses a geopolitical-conflict natural experiment to study cross-border buyer–supplier ties, a template for studying how data center operators respond to the license requirement."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/us-dept-of-commerce-issues-rule-to-restrict-remote-access-to-advanced-ai-chips/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 16"
+  },
+  {
+   "candidate_id": 20,
+   "headline": "IFC and SIMA launch D-TAFS blended-finance fund to decarbonize textile and apparel suppliers, with Inditex as a $50M anchor investor",
+   "theme": "Sustainable Operations",
+   "original_url": "https://www.esgtoday.com/zara-owner-inditex-backs-new-250-million-fashion-decarbonization-fund/",
+   "summary": "IFC and impact investment manager SIMA launched the Decarbonization of Textile, Apparel, and Footwear Suppliers (D-TAFS) fund, dated 10 November 2026 by Drapers and TheIndustry.fashion. Its initial target is $250M and it could grow to $400M, the figure some outlets headline. Inditex is an anchor investor at $50M ('committed' per ESG Today, 'up to' per TheIndustry.fashion), and IFC is in for up to $60M. FMO, Proparco, British International Investment and the GEF are also investors. Over a 10-year life, IFC targets about 60–80 borrowers, a 3 million tCO₂e cut and about 150,000 workers benefiting, mostly women.",
+   "background": "Most apparel emissions sit in suppliers' factories in South and Southeast Asia and other emerging markets. These suppliers often lack capital for efficiency, renewable energy, water and chemical-management upgrades. The fund finances suppliers in South and Southeast Asia, Africa, the Middle East and Latin America through two sub-funds: direct supplier loans (50–70%) and investments in energy providers serving those suppliers (30–50%). Each sub-fund has super senior, senior, junior and catalytic tranches.",
+   "problem": "Brands want Scope 3 cuts, but the suppliers who would have to invest bear the cost and the risk, and may not capture the benefits. This fund tests whether buyer and development-finance capital can close that gap. How much of the $250M has been raised beyond the listed commitments was not disclosed, and the emissions and worker figures are targets, not results.",
+   "where_why": "The friction sits at tier-1 and tier-2 suppliers. Incentives are split: the brand claims the emissions reduction while the supplier carries the debt. Suppliers in emerging markets also face credit constraints and uncertainty about whether buyers will keep ordering from them. The tranched blended structure is designed to absorb risk that commercial lenders will not take.",
+   "stakeholders": [
+    {
+     "name": "Inditex (Zara, Pull&Bear)",
+     "stake": "Wants Scope 3 abatement in its supply base and credibility for its claims"
+    },
+    {
+     "name": "Textile, apparel and footwear suppliers",
+     "stake": "Gain access to cheaper capital but take on debt for upgrades"
+    },
+    {
+     "name": "IFC, FMO, Proparco, BII and GEF",
+     "stake": "Seek development impact with blended risk; the GEF's catalytic capital is expected to mobilize more than $150M"
+    },
+    {
+     "name": "Factory workers (mostly women)",
+     "stake": "Potential improvements to pollution and working conditions"
+    }
+   ],
+   "hints": [
+    "Use a principal–agent or co-investment model: when should a buyer finance a supplier's abatement versus mandate it?",
+    "Ask whether supplier financing changes the relationship: are funded suppliers retained longer or given larger orders?",
+    "Notice the energy-provider sub-fund, which decarbonizes inputs rather than factories. Compare it with how far direct process upgrades can reach."
+   ],
+   "data_leads": "CDP supply chain responses for supplier emissions; IFC disclosure portal project documents; Open Supply Hub factory lists to link borrowers to brands.",
+   "keywords": [
+    "supplier emissions",
+    "scope 3 disclosure",
+    "sustainable finance taxonomy",
+    "multi-tier traceability"
+   ],
+   "dataset_candidates": [
+    "IFC Project Information and Data Portal",
+    "Open Supply Hub facility database"
+   ],
+   "datasets": [
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Eliciting Supplier Cooperation for Value Chain Decarbonization: A Field Experiment with Smallholder Farmers in India",
+     "journal": "Management Science",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/mnsc.2024.05744",
+     "cites": 4,
+     "why": "A field experiment on getting suppliers to cooperate in value-chain decarbonization, the core mechanism that D-TAFS financing is meant to unlock."
+    },
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 205,
+     "why": "Tests whether customers' environmental disclosure lowers suppliers' GHG emissions, a counterpoint to direct financing as a lever."
+    }
+   ],
+   "url": "https://www.esgtoday.com/zara-owner-inditex-backs-new-250-million-fashion-decarbonization-fund/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 17"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 3,
+   "takeaway": "The paper builds a transient fluid model of two ports linked by a circulating fleet. It shows that a disruption at one port creates inbound backlogs (ships unable to enter) and outbound backlogs (goods unable to be loaded) that propagate to the counterpart port and dissipate slowly.",
+   "connection": "It offers a model for asking whether October's record US imports and the rising 6.3-day average delays will echo back to Asian origin ports.",
+   "title": "Whiplash: Congestion Dissipation in a Disrupted Circulatory Shipping System",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.05427"
+  },
+  {
+   "candidate_id": 2,
+   "takeaway": "After mutual funds commit to responsible investing by signing the UN PRI, their managers make more corporate site visits focused on environmental and social issues. The visits generate negligible private investment value for the funds, but they improve the information environment for the visited stock.",
+   "connection": "It shows ESG commitments working through information-gathering channels, a contrast with Inditex putting capital directly into supplier decarbonization.",
+   "title": "Do Fund Managers’ Commitments to Responsible Investing Affect Private Information Acquisition, Information Environment, and Corporate Sustainability?",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.08443"
+  }
+ ],
+ "thread_to_pull": "Three stories today turn on where compute and power capacity can be located. The Nature Sustainability baseline shows data centers concentrated in coal-heavy grids, PJM is redesigning how fast and at what cost large loads can connect, and the BIS rule makes building capacity in Southeast Asia riskier. Together they hint at a multi-region siting problem in which carbon intensity, interconnection delay and export-control risk are traded off against each other, and in which policy changes in one place could push data center load toward others.",
+ "also": [
+  {
+   "title": "Tesco invites 400 key suppliers to join Scope 3 reporting programme",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPMzJ3aV9Wc29Iemk3c21DV044enhncm9zOVZSZnFNeGRpWGJ3UDM4THhrN1V4UVloeEhFOFltcFBTLUVRakdUVEVpd1NoWW1KQzlJa01zSHdqQ2JvUXRIUTJDSFJqMTMyd1JrQjh6UkJDY2NwS3JWM3M5Mkt0d1EzXzVzZjNKU0tsQ1VHX0ZEbmdkei1pNlF6bnBHV3ZMM0VqZlZUVTZteVc?oc=5",
+   "source": "BusinessGreen",
+   "theme": "ESG & Disclosure"
+  },
+  {
+   "title": "SEC moves to pare back executive compensation disclosures",
+   "url": "https://www.esgdive.com/news/sec-moves-to-pare-back-executive-compensation-disclosures/874781/",
+   "source": "ESG Dive",
+   "theme": "ESG & Disclosure"
+  },
+  {
+   "title": "Peru's Andean corn planting collapses 46% as drought raises fears of higher food prices in 2027",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNcjVTWndpZHlOR2xBTkllVTh5RDY0NlR1UU9fcVdCWHVCWnd1OFVCRllyejQybE1wdmtINXF5M2pzdVljZHNteElOTlYxVy05Qm16b09UUnY0RlllWUFmZUJheEtoLUEwSlVvaDRSYWJoZkI1YjJ2aWpvX1NJSVpKVHhRMA?oc=5",
+   "source": "Latin Times",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "Veolia opens 7,000-tonne battery recycling site in France",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOQVhHNFpiZTliUkpKRm13NUJnSTdKVERkeXl3elZoQWtMeFA4TWVuZWUwNE83bEw4X2hXVjExVFVGRWhzVmJZNmVtRDJ1a0EzdnlkYWVURXU3Z0ZXc1RVcHdEMUVkOTJVY0dNRTZsZjBGRVVnX2NFTjdyNHcxc185OHplV1hsRnZId19LcEs0Y09NLVpE?oc=5",
+   "source": "letsrecycle.com",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "African nations join forces to impose carbon charges on shipping",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPMDB5V2dVSmprbERLNXBkS2FWQVBKZ051VE81dlhHclc3Z09LUUVDVHd1WWp5VzhUTmpDbHk5a0hQa205TkM3U0JDUVlNMDhfblVfbzdjTmFrdnZVZWN5T1pndjhHcnZOS0d5TlJnTVk4VzJfbXpNOTh0N0EzQkJuTy05VW9wRkVTRWhiSFJNQmw?oc=5",
+   "source": "Splash247",
+   "theme": "Logistics Decarbonization"
+  }
+ ]
+}

@@ -1330,5 +1330,37 @@
    "2026-11-16#5"
   ],
   "last_seen": "2026-11-16"
+ },
+ "guidi et al. hyperscale data center facility inventory (arxiv 2606.05420 supplementary data)": {
+  "name": "Guidi et al. hyperscale data center facility inventory (arXiv 2606.05420 supplementary data)",
+  "first_seen": "2026-11-17",
+  "items": [
+   "2026-11-17#1"
+  ],
+  "last_seen": "2026-11-17"
+ },
+ "descartes global shipping report": {
+  "name": "Descartes Global Shipping Report",
+  "first_seen": "2026-11-17",
+  "items": [
+   "2026-11-17#3"
+  ],
+  "last_seen": "2026-11-17"
+ },
+ "ifc project information and data portal": {
+  "name": "IFC Project Information and Data Portal",
+  "first_seen": "2026-11-17",
+  "items": [
+   "2026-11-17#5"
+  ],
+  "last_seen": "2026-11-17"
+ },
+ "open supply hub facility database": {
+  "name": "Open Supply Hub facility database",
+  "first_seen": "2026-11-17",
+  "items": [
+   "2026-11-17#5"
+  ],
+  "last_seen": "2026-11-17"
  }
 }
