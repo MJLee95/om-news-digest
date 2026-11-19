@@ -1410,5 +1410,37 @@
    "2026-11-18#5"
   ],
   "last_seen": "2026-11-18"
+ },
+ "iea energy and ai report data tables": {
+  "name": "IEA Energy and AI report data tables",
+  "first_seen": "2026-11-19",
+  "items": [
+   "2026-11-19#1"
+  ],
+  "last_seen": "2026-11-19"
+ },
+ "pjm load forecast report": {
+  "name": "PJM Load Forecast Report",
+  "first_seen": "2026-11-19",
+  "items": [
+   "2026-11-19#2"
+  ],
+  "last_seen": "2026-11-19"
+ },
+ "port of los angeles and port of long beach monthly container (teu) statistics": {
+  "name": "Port of Los Angeles and Port of Long Beach monthly container (TEU) statistics",
+  "first_seen": "2026-11-19",
+  "items": [
+   "2026-11-19#3"
+  ],
+  "last_seen": "2026-11-19"
+ },
+ "washington department of ecology recycled content producer reports and penalty notices": {
+  "name": "Washington Department of Ecology recycled content producer reports and penalty notices",
+  "first_seen": "2026-11-19",
+  "items": [
+   "2026-11-19#4"
+  ],
+  "last_seen": "2026-11-19"
  }
 }

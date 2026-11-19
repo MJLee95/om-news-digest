@@ -1,0 +1,381 @@
+{
+ "intro": "Today's issue opens with a new IEA projection that data center electricity use could double by 2030, and a wave of US utility filings at FERC that would bind data centers to 10–20 year payment commitments for grid upgrades. Also: a security-guard strike threat that could stall more than half of LA-Long Beach cargo, three years of penalty data from Washington's recycled-content law, and Tesco's push to collect emissions data from 400 suppliers.",
+ "items": [
+  {
+   "candidate_id": 126,
+   "headline": "IEA: Global data center electricity use could double to about 1,000 TWh by 2030",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.cnbc.com/2026/11/19/data-center-electricity-demand-iea.html",
+   "summary": "The International Energy Agency projects that global data center electricity use could reach about 1,000 TWh a year by 2030 under its Stated Policies Scenario, roughly double today's level. Data center electricity use grew 17% in 2025, against 3% growth in total global electricity demand. In a separate April report, the IEA said the largest operators are expected to spend more than $700 billion in 2026, mostly on new infrastructure.",
+   "background": "The IEA's April 2025 Energy and AI report put data center use at about 415 TWh in 2024 (about 1.5% of global electricity). Its Base Case projected about 945 TWh in 2030 and about 1,200 TWh in 2035. The new ~1,000 TWh figure comes from a different scenario, so the two numbers are not directly comparable. The IEA also expects electricity's share of final energy use to rise from 23% to nearly 30% by 2035. It names large project pipelines in Texas, Virginia, Finland and the U.K.",
+   "problem": "Load is growing much faster than the physical system that serves it. The IEA says copper, cables and transformers are already tight. It also says millions of kilometers of new or upgraded power lines are needed by 2035, or new data centers could face connection delays. Planners must commit long-lived grid and generation capacity against demand forecasts whose uncertainty, by the IEA's own account, widens after 2030.",
+   "where_why": "The friction sits at the interconnection and equipment-supply stages. Data centers can be built in a few years, while transmission and transformer supply chains take much longer to expand. Demand forecasts also vary by scenario and depend on AI investment cycles. Together, this timing mismatch and forecast uncertainty push risk onto whoever commits capacity first.",
+   "stakeholders": [
+    {
+     "name": "Hyperscale data center operators",
+     "stake": "Fast, reliable power for more than $700B of planned 2026 investment; connection delays strand capital."
+    },
+    {
+     "name": "Grid operators and utilities",
+     "stake": "Must size transmission and generation for uncertain load without overbuilding."
+    },
+    {
+     "name": "Equipment suppliers (transformers, cables, copper)",
+     "stake": "Face demand surges but carry the risk of building capacity for a boom that may fade."
+    },
+    {
+     "name": "Other electricity consumers",
+     "stake": "May bear higher prices or reliability risk if grid costs are socialized."
+    }
+   ],
+   "hints": [
+    "Treat the gap between scenario forecasts (Base Case vs. Stated Policies) as an object of study: who invests on which forecast, and what happens when the forecasts are revised?",
+    "Capacity expansion with demand learning and long lead times: think of transformers as the bottleneck resource in a multi-stage capacity race.",
+    "Compare regions the IEA names (Texas, Virginia, Finland, U.K.) for differences in how quickly announced load turns into connected load."
+   ],
+   "data_leads": "LBNL Queued Up interconnection data, ERCOT large-load interconnection reports, EIA-930 hourly demand, and IEA Energy and AI scenario tables.",
+   "keywords": [
+    "data center electricity demand",
+    "load forecasting",
+    "capacity investment under uncertainty",
+    "interconnection queues"
+   ],
+   "dataset_candidates": [
+    "IEA Energy and AI report data tables"
+   ],
+   "datasets": [
+    "lbnl_queues",
+    "ercot_reports"
+   ],
+   "related": [
+    {
+     "title": "Capacity Investment with Demand Learning",
+     "journal": "Operations Research",
+     "year": 2016,
+     "url": "https://doi.org/10.1287/opre.2016.1561",
+     "cites": 38,
+     "why": "Models capacity investment when demand is learned over time, a natural lens for committing grid capacity to uncertain AI load."
+    },
+    {
+     "title": "Application-Driven Learning: A Closed-Loop Prediction and Optimization Approach Applied to Dynamic Reserves and Demand Forecasting",
+     "journal": "Operations Research",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/opre.2023.0565",
+     "cites": 61,
+     "why": "Links demand forecasting directly to reserve and dispatch costs, relevant when data center load forecasts drive grid planning."
+    }
+   ],
+   "url": "https://www.cnbc.com/2026/11/19/data-center-electricity-demand-iea.html",
+   "follows": [],
+   "source": "CNBC",
+   "date": "Nov 19"
+  },
+  {
+   "candidate_id": 33,
+   "headline": "Utilities ask FERC to require 10–20 year payment commitments from data centers before grid upgrades are built",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.latitudemedia.com/news/utilities-want-ferc-to-lock-data-centers-into-paying-for-grid-upgrades/",
+   "summary": "In Nov. 16 filings, transmission-owning utilities asked FERC to require data centers to sign long-term contracts before the grid upgrades they need get built. In PJM, data centers would commit to paying for at least 80% of the transmission service they request, for a minimum of 10 years, backed by collateral. California and New York would use 15-year terms, and MISO proposed a three-way utility–operator–data center agreement of up to 20 years.",
+   "background": "About a year ago, Energy Secretary Chris Wright told federal regulators to speed up grid connections for large loads. In June, FERC found existing rules fell short and ordered its six grid operators to propose fixes; five had filed by Nov. 16, with the Southwest Power Pool due Nov. 20. The operators' plans focus on speed. PJM would study new load and new generation together in a single 12-month process. New York and California would let data centers connect faster if they agree to cut use during grid congestion. PJM says data centers account for 30 of the 32 GW of peak demand growth it forecast for 2024–2030 (Docket ER27-531-000).",
+   "problem": "The core issue is who bears the risk that projected data center load never materializes or leaves early, stranding transmission paid for by other ratepayers. Longer minimum terms and collateral protect ratepayers but raise the cost of entry and may shift where data centers locate. The proposed federal floors also differ from state practice. In PJM, state tariffs that require a commitment average a 12-year minimum, while the joint filing proposes 10 years; in MISO, utility terms average 15 years. A related reliability issue: on July 22, about 3.9 GW of data centers dropped off the grid at once and switched to their own generators, prompting a separate PJM ride-through proposal.",
+   "where_why": "The problem arises at the contracting stage between the utility and the large-load customer, before transmission is built. The underlying frictions are information asymmetry (developers know better than the utility how likely their project is to proceed), speculative queue entries, and the long life of grid assets relative to data center planning horizons. Overlapping federal (FERC) and state tariff authority adds another layer.",
+   "stakeholders": [
+    {
+     "name": "Data center developers",
+     "stake": "Want fast connections without heavy collateral or long take-or-pay obligations."
+    },
+    {
+     "name": "Transmission-owning utilities",
+     "stake": "Want cost recovery and protection against stranded upgrades."
+    },
+    {
+     "name": "Grid operators (PJM, MISO, CAISO, NYISO, SPP)",
+     "stake": "Need to clear queues quickly while maintaining reliability."
+    },
+    {
+     "name": "Residential and commercial ratepayers",
+     "stake": "Risk paying for upgrades if data center load disappears."
+    },
+    {
+     "name": "FERC and state regulators",
+     "stake": "Must reconcile federal minimums with existing state large-load tariffs."
+    }
+   ],
+   "hints": [
+    "Contract theory lens: minimum terms, take-or-pay shares and collateral act as screening devices that separate serious from speculative load. What contract menu would induce truthful self-selection?",
+    "The proposed terms vary across regions (10, 15 and up to 20 years) and differ from existing state tariffs. That cross-sectional variation is a possible setting for studying how contract terms affect siting.",
+    "Compare the interruptible fast-track option (NY/CA) with the long-commitment approach: flexibility and financial commitment as substitute ways to manage grid risk."
+   ],
+   "data_leads": "FERC eLibrary (Docket ER27-531-000 and the other operators' compliance filings), state PUC large-load tariff dockets, and PJM load forecast reports.",
+   "keywords": [
+    "large-load tariffs",
+    "collateral requirements",
+    "long-term supply contracts",
+    "federal-state jurisdiction",
+    "interruptible load"
+   ],
+   "dataset_candidates": [
+    "PJM Load Forecast Report"
+   ],
+   "datasets": [
+    "ferc_elibrary",
+    "state_puc"
+   ],
+   "related": [
+    {
+     "title": "Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations",
+     "journal": "Production and Operations Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/poms.13553",
+     "cites": 28,
+     "why": "Studies how coexisting state and federal policy regimes interact within supply chains, mirroring the gap between FERC minimum terms and state large-load tariffs."
+    }
+   ],
+   "url": "https://www.latitudemedia.com/news/utilities-want-ferc-to-lock-data-centers-into-paying-for-grid-upgrades/",
+   "follows": [],
+   "source": "Latitude Media",
+   "date": "Nov 18"
+  },
+  {
+   "candidate_id": 62,
+   "headline": "Strike by 250 security workers could halt terminals handling over half of LA-Long Beach cargo, employers warn",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/la-long-beach-port-strike-risk-grows-as-employers-say-ilwu-talks-stalled",
+   "summary": "The Pacific Maritime Association (PMA) said talks with ILWU Local 26 ended Nov. 17 \"with little to no movement from the union.\" PMA says it will not extend the contract past its expiration at 12:01 a.m. Nov. 21. The union has held a strike vote. The roughly 250 watchmen work at six terminals that, per PMA, handle more than half of the two ports' combined cargo (about 85% at Long Beach and 33% at Los Angeles).",
+   "background": "The watchmen do security work such as ID checks and patrols, and make up about 2% of the ports' ILWU workforce. PMA expects thousands of longshore workers, clerks and foremen to honor a Local 26 picket line, which could effectively halt cargo at those terminals. Citing Martin Associates, PMA says the six terminals handled about 6.2 million containers in 2025. Talks have run for more than a year with federal mediation. PMA's offer includes a one-time $3,200 bonus and raises average full-time earnings from more than $170,000 to $198,000. All figures come from the employer side; the union did not respond to FreightWaves' request for comment.",
+   "problem": "A very small bargaining unit has outsized leverage, because picket-line solidarity can shut down most of the throughput at the busiest US container gateway. Shippers must decide, with little lead time and uncertain odds, whether to reroute cargo, pull shipments forward, or hold extra inventory. Talks were set to resume Nov. 20, and whether a strike actually occurred is unverified.",
+   "where_why": "The bottleneck is labor at terminal gates, a single point of failure for six terminals at once. Volume is concentrated in a few terminals, a small group's walkout can trigger a broader stoppage, and the timing is uncertain. Short contract-extension cycles and expiration deadlines turn these factors into a recurring disruption risk.",
+   "stakeholders": [
+    {
+     "name": "ILWU Local 26 watchmen",
+     "stake": "Better pay and terms; leverage depends on other ILWU workers honoring the picket line."
+    },
+    {
+     "name": "Pacific Maritime Association and terminal operators",
+     "stake": "Want to avoid shutdowns while containing labor costs."
+    },
+    {
+     "name": "Importers and retailers",
+     "stake": "Face delays and must weigh rerouting or buffer stock against carrying costs."
+    },
+    {
+     "name": "Competing ports and rail carriers",
+     "stake": "Could gain diverted volume but may be strained by sudden surges."
+    }
+   ],
+   "hints": [
+    "Small-unit, high-impact labor disruption: compare with past West Coast port labor events to see whether shippers respond to the threat itself or only to actual stoppages.",
+    "Look for pre-buy and diversion signals in vessel arrivals and import volumes around each contract-expiration deadline, including the earlier Nov. 6 extension.",
+    "Bargaining-power lens: the gap between workforce share (2%) and throughput share (>50%) is a puzzle worth modeling."
+   ],
+   "data_leads": "NOAA AIS vessel tracks for San Pedro Bay, Port of LA/Long Beach monthly TEU statistics, Census trade data by port of entry; Panjiva bill-of-lading data if available.",
+   "keywords": [
+    "labor disruption",
+    "port congestion",
+    "chokepoint disruption",
+    "pre-buy behavior",
+    "trade diversion"
+   ],
+   "dataset_candidates": [
+    "Port of Los Angeles and Port of Long Beach monthly container (TEU) statistics"
+   ],
+   "datasets": [
+    "noaa_ais",
+    "census_trade"
+   ],
+   "related": [
+    {
+     "title": "Patterns in firms’ inventories and flexibility levels after a low‐probability, high‐impact disruption event: Empirical evidence from the Great East Japan Earthquake",
+     "journal": "Production and Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/poms.13935",
+     "cites": 23,
+     "why": "Documents how firms adjust inventories and flexibility after a high-impact disruption, a template for studying shipper responses to port labor shocks."
+    },
+    {
+     "title": "A Contingent Resource‐Based Perspective of Supply Chain Resilience and Robustness",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2014,
+     "url": "https://doi.org/10.1111/jscm.12050",
+     "cites": 1706,
+     "why": "Distinguishes resilience from robustness and their antecedents, useful for framing how shippers prepare for a port stoppage."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/la-long-beach-port-strike-risk-grows-as-employers-say-ilwu-talks-stalled",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 18"
+  },
+  {
+   "candidate_id": 12,
+   "headline": "Washington fines 38 plastic producers $246,548 in third year of recycled-content enforcement",
+   "theme": "Circular Economy",
+   "original_url": "https://www.wastedive.com/news/washington-ecology-recycled-content-policy-penalties/875069/",
+   "summary": "Washington's Department of Ecology fined 38 plastic producers a combined $246,548 for missing the state's minimum post-consumer recycled (PCR) content requirements for 2025. Fines ranged from $131 to $43,381. Ocean Spray Cranberries received the largest, more than $43,000, after again using no recycled content in its covered containers. Total penalties have fallen from $416,554 (35 firms) in the first round to more than $277,000 (23 firms) and now about $247,000 (38 firms), even though household cleaning and personal care containers were added for 2025.",
+   "background": "Washington's PCR requirements phase in over 15 years, from 2021 through 2036. Companies have 30 days to pay or appeal, and penalties can be reduced if a company signs a compliance agreement with Ecology. In the first round, Clorox had the largest fine ($67,196) and Ocean Spray was fined $53,568. The Association of Plastic Recyclers (APR) calls the law, paired with the state's packaging EPR law, a \"one-two punch\" and wants the requirements expanded. Coverage reports roughly 70% compliance, but it is unclear whether that refers to the share of producers or the share of the more than 220 million pounds of plastic sold.",
+   "problem": "Penalties are small relative to the cost of changing packaging or securing recycled resin. Some firms, Ocean Spray most visibly, appear to treat fines as a cost of doing business rather than comply. APR reads falling total fines as evidence that recycled-content use is rising. But the number of fined firms increased, so whether the policy is effective and the penalties are a real deterrent remains contested.",
+   "where_why": "The problem sits at the packaging-procurement stage. Firms choose between virgin resin, scarcer and often costlier PCR resin, or paying a penalty. The underlying frictions are limited PCR supply, fine levels that may not deter, and a single state's mandate applied to national packaging lines. Rising targets over time keep changing that calculation.",
+   "stakeholders": [
+    {
+     "name": "Washington Department of Ecology",
+     "stake": "Wants compliance and credible enforcement, with fines plus compliance agreements as levers."
+    },
+    {
+     "name": "Consumer goods producers (e.g., Ocean Spray, Clorox)",
+     "stake": "Weigh fines against the cost and availability of PCR resin and packaging changes."
+    },
+    {
+     "name": "Plastic recyclers (APR)",
+     "stake": "Benefit from guaranteed demand for recycled resin; want stricter and broader mandates."
+    },
+    {
+     "name": "Other states drafting PCR/EPR laws",
+     "stake": "Look to Washington's enforcement record as a design template."
+    }
+   ],
+   "hints": [
+    "Comply-or-pay lens: model the producer's choice as a penalty-versus-procurement-cost trade-off and ask what fine level would flip it.",
+    "The new product category added for 2025 and the rising phase-in targets create within-state variation in obligations over time.",
+    "Puzzle: total fines fell while the number of fined firms rose. Separating the drop in fine size from the rise in firm count could reveal who adjusts and who doesn't."
+   ],
+   "data_leads": "Washington Ecology penalty lists and producer recycled-content reports, plus state EPR program reports; Mintel GNPD packaging launches if available through a university.",
+   "keywords": [
+    "recycled content",
+    "regulatory enforcement",
+    "packaging regulation",
+    "state environmental policy",
+    "extended producer responsibility"
+   ],
+   "dataset_candidates": [
+    "Washington Department of Ecology recycled content producer reports and penalty notices"
+   ],
+   "datasets": [
+    "state_epr"
+   ],
+   "related": [
+    {
+     "title": "Do E‐Waste Laws Create Behavioral Spillovers? Quasi‐Experimental Evidence from California",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13182",
+     "cites": 47,
+     "why": "Uses a quasi-experimental design to evaluate a state waste law (California e-waste), a methodological template for studying Washington's PCR mandate."
+    }
+   ],
+   "url": "https://www.wastedive.com/news/washington-ecology-recycled-content-policy-penalties/875069/",
+   "follows": [],
+   "source": "Waste Dive",
+   "date": "Nov 18"
+  },
+  {
+   "candidate_id": 21,
+   "headline": "Tesco asks 400 key suppliers to report emissions data through OpenClimat platform",
+   "theme": "Sustainable Operations",
+   "original_url": "https://www.esgtoday.com/tesco-asks-400-key-suppliers-to-join-emissions-data-sharing-program/",
+   "summary": "Around Nov. 12, Tesco launched a Climate Supplier Programme with French data-sharing platform OpenClimat. The program invites about 400 key UK and Ireland suppliers, which make up more than 80% of its UK and Ireland grocery supply chain by value, to report emissions data. Suppliers first submit data through a questionnaire and receive tailored guidance, in support of Tesco's 2050 net zero target across its full value chain.",
+   "background": "OpenClimat connects more than 15 retailers, including Carrefour, Metro and E.Leclerc, with more than 300 manufacturers such as General Mills, McCain and JDE Peet's. Tesco is its first UK retailer. For grocers, most value-chain emissions are Scope 3 and sit with suppliers, so the retailer's own data depends on what suppliers report.",
+   "problem": "Getting accurate, comparable supplier emissions data is costly. Suppliers serving many retailers face duplicate requests, while retailers need primary data rather than estimates to track progress. It is unclear whether participation is mandatory: coverage says Tesco \"invites\" suppliers, while one outlet says it is \"pressuring\" them. No costs, financial terms or signed-up suppliers have been disclosed.",
+   "where_why": "The friction is at the buyer–supplier information interface. There is information asymmetry about supplier emissions, reporting costs fall on suppliers while benefits go to retailers, and coordination fails when each retailer asks for the same data in a different format. A shared platform used by several retailers can reduce duplication, but data quality and verification remain open questions.",
+   "stakeholders": [
+    {
+     "name": "Tesco",
+     "stake": "Needs credible Scope 3 data to manage and report progress toward 2050 net zero."
+    },
+    {
+     "name": "Key grocery suppliers",
+     "stake": "Bear reporting costs and possible pressure to cut emissions; may benefit from a single shared reporting channel."
+    },
+    {
+     "name": "OpenClimat",
+     "stake": "Gains network effects by adding its first UK retailer."
+    },
+    {
+     "name": "Competing retailers on the platform",
+     "stake": "Can draw on shared supplier data and standardized reporting."
+    }
+   ],
+   "hints": [
+    "Network-effects lens: a supplier's cost of reporting falls when more of its retail customers use the same platform. Does platform overlap predict which suppliers join?",
+    "Look at mandatory versus voluntary framing and supplier power: who complies when a dominant buyer \"invites\"?",
+    "Compare the quality of primary supplier data with spend-based estimates and ask how much it changes a retailer's measured Scope 3 footprint."
+   ],
+   "data_leads": "CDP supply chain responses, the SBTi target dashboard for supplier targets, and Tesco's annual sustainability disclosures.",
+   "keywords": [
+    "supplier emissions",
+    "scope 3 disclosure",
+    "voluntary disclosure",
+    "supplier engagement"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "cdp",
+    "sbti"
+   ],
+   "related": [
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 208,
+     "why": "Tests whether customers' environmental disclosure signals lead suppliers to cut GHG emissions, which is exactly the mechanism Tesco's program relies on."
+    },
+    {
+     "title": "Engaging Supply Chains in Climate Change",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2012,
+     "url": "https://doi.org/10.1287/msom.1120.0420",
+     "cites": 289,
+     "why": "A foundational M&SOM piece on engaging supply chains in climate change, background for retailer-led supplier carbon programs."
+    }
+   ],
+   "url": "https://www.esgtoday.com/tesco-asks-400-key-suppliers-to-join-emissions-data-sharing-program/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 18"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 2,
+   "takeaway": "In experiments, investors respond several times more strongly to a firm's negative environmental and social externalities than to comparable positive ones. Negative externalities also make investors modestly more pessimistic about future returns. This asymmetry in preferences and beliefs helps explain the different market treatment of \"sin\" and \"angel\" stocks.",
+   "connection": "Suggests that disclosure programs like Tesco's supplier data push or Washington's public penalty lists may matter more for revealing harms (such as Ocean Spray's zero recycled content) than for showcasing improvements.",
+   "title": "The Asymmetry in Responsible Investing Preferences and Beliefs",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.06826"
+  }
+ ],
+ "thread_to_pull": "The IEA projection and the FERC filings are two sides of the same forecasting problem. The IEA's widening scenario range is exactly the uncertainty utilities want to shift onto data centers through 10–20 year commitments and collateral. Asking how contract terms should depend on forecast dispersion, and whether interruptible fast-track options (NY/CA) can substitute for financial commitments, links capacity planning under uncertainty with contract design.",
+ "also": [
+  {
+   "title": "Most of BESS supply industry is not ready for EU’s 2027 Battery Regulations, report says",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbEwyZzFuUkpDWEtzbmc3VE13QXVXNU1MTmZUenZnY1dQWE1FSVI2VUhKdFpobFRJYUhsSTJsYnQwRjN3ZFh6eVMxeXZ5ZGk0VzVYb1ROOE9qYXlKNHBVWFRnMUd3eWRGeGR6UGZZMmRFV0FsYXV3NkYtZkpUNmNwV0pELWh0NWNNWFEyT0RjRlhieXVQaHJ2STJWbFJJODhGb1E1MVFuUHNJdmc?oc=5",
+   "source": "Energy-Storage.News",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Extreme weather damage to tanker ports could double by 2050: IEA",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQQmY0TW9fWGJ4SnljU3pTc2pfeDlSUjI4dGp0SGZIS0g5a0I0UWphX2tja2pwWmVzYnpsQTdYSkVVWHZqRXFHUjNsVHZUdFpOU1hHdzNOb1JqTVJfZDROalRGS2NfSzJ2V1pnTzJPd25DMUFxdVhJUU4yUnNVdnRYcTdxcHJLSjlwLXlMZlZsbw?oc=5",
+   "source": "Splash247",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "TNFD Urges ISSB to Issue Mandatory Nature-Related Reporting Standard",
+   "url": "https://www.esgtoday.com/tnfd-urges-issb-to-issue-mandatory-nature-related-reporting-standard/?utm_source=rss&utm_medium=rss&utm_campaign=tnfd-urges-issb-to-issue-mandatory-nature-related-reporting-standard",
+   "source": "ESG Today",
+   "theme": "ESG & Disclosure"
+  },
+  {
+   "title": "Trump Orders to Keep Florida Coal Plant Running Cost Ratepayers Millions",
+   "url": "https://insideclimatenews.org/news/19112026/florida-stanton-coal-plant-trump-emergency-orders/",
+   "source": "Inside Climate News",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "PepsiCo improves deforestation-free sourcing for key commodities",
+   "url": "https://www.supplychaindive.com/news/pepsico-improves-deforestation-free-sourcing-for-key-commodities/874963/",
+   "source": "Supply Chain Dive",
+   "theme": "Food & Agriculture"
+  }
+ ]
+}
