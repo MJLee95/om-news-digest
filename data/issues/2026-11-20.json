@@ -1,0 +1,406 @@
+{
+ "intro": "Today's issue covers five policy and capacity shocks. The Senate has passed permitting reform aimed at energy and data-center infrastructure, and local opposition stopped twice as many data-center projects this Q3 as last. Meta is rethinking its 2030 net-zero date after AI-driven emissions growth, the EU has reached a deal on SFDR 2.0 fund categories, and new US chip export controls are disrupting supply chains well beyond AI chips.",
+ "items": [
+  {
+   "candidate_id": 33,
+   "headline": "Senate passes bipartisan permitting reform bill 62–33; House passage still uncertain",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.latitudemedia.com/news/senate-clears-permitting-reform-after-a-bitter-split-among-greens/",
+   "summary": "On Nov. 19 the Senate passed a bipartisan permitting reform bill 62–33. The bill aims to speed federal permitting for transmission lines, wind and solar farms, gas pipelines, hard-rock mining, oil drilling and data centers, and it also reforms transmission law. Most outlets call it the Bipartisan American Affordability and Jobs Act; Latitude Media uses a slightly different name. Nearly all Republicans voted yes; 15 Democrats and independents also voted yes, while more Democrats voted against than for.",
+   "background": "Two Democrats and two Republicans wrote the bill, including Sen. Shelley Moore Capito; negotiators announced a breakthrough in September. In recent weeks senators amended it to address objections from Native American tribes. CNBC reports it weakens some environmental laws to speed approvals. Federal permitting and transmission buildout are widely seen as binding constraints on connecting new generation and large loads such as data centers.",
+   "problem": "The bill trades faster approvals for weaker environmental review, and it has split the climate coalition. Industry groups from API to SEIA back it, as do the AFL-CIO, Citizens' Climate Lobby and Evergreen Action. The Sierra Club, NRDC, Al Gore and Bill McKibben oppose it, and critics call it a 'giant giveaway to Big Tech and polluters.' Whether it becomes law is unclear. Roll Call expects House passage after Thanksgiving and President Trump supports the deal, but Minority Leader Jeffries says it 'falls short' and he won't 'rubber-stamp' it. Democrats take control of both chambers in January.",
+   "where_why": "The friction sits at the project-approval stage, upstream of interconnection and construction. Long, litigable federal reviews add time and uncertainty to the lead time of capital-intensive, long-lived assets. Because the same rule change speeds up fossil, renewable and transmission projects alike, environmental groups disagree on whether the net effect is positive. Legislative timing is itself a source of regulatory uncertainty for developers deciding whether to wait or proceed.",
+   "stakeholders": [
+    {
+     "name": "Energy and infrastructure developers (oil & gas, solar, wind, transmission)",
+     "stake": "Shorter permitting timelines and less litigation risk on large projects"
+    },
+    {
+     "name": "Data-center developers and hyperscalers",
+     "stake": "Faster access to generation and transmission to serve new load"
+    },
+    {
+     "name": "Environmental groups (Sierra Club, NRDC vs. Evergreen Action, Citizens' Climate Lobby)",
+     "stake": "Weighing faster clean-energy buildout against weakened environmental review and more fossil projects"
+    },
+    {
+     "name": "Native American tribes",
+     "stake": "Consultation rights and protection of lands affected by faster approvals"
+    },
+    {
+     "name": "House Democratic leadership",
+     "stake": "Leverage to amend the bill before Democrats take majorities in January"
+    }
+   ],
+   "hints": [
+    "Treat each legislative milestone (Senate vote, House vote, any signing) as an event, and look at how stock prices of transmission developers, pipeline firms and data-center REITs react to each one.",
+    "Real-options models of the wait-or-invest decision under regulatory uncertainty: how does a credible cut in permitting lead time change the value of waiting?",
+    "Puzzle: a reform that speeds up both clean and fossil projects. Which project types are most permit-constrained, and which are mainly queue-constrained?"
+   ],
+   "data_leads": "Federal Register environmental-review records and NEPA timelines, LBNL Queued Up interconnection data for project durations, EIA-860 planned generator additions, and Senate roll-call votes.",
+   "keywords": [
+    "regulatory uncertainty",
+    "interconnection queues",
+    "capacity investment under uncertainty",
+    "permitting reform",
+    "corporate lobbying"
+   ],
+   "dataset_candidates": [
+    "CEQ NEPA EIS timeline data"
+   ],
+   "datasets": [
+    "lbnl_queues",
+    "federal_register"
+   ],
+   "related": [
+    {
+     "title": "A model for wind farm management with option interactions",
+     "journal": "Production and Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/poms.13721",
+     "cites": 10,
+     "why": "Models a renewable site's joint decisions on capacity expansion and exit under deteriorating prospects; a starting point for thinking about how faster permitting changes the option value in energy project investment."
+    }
+   ],
+   "url": "https://www.latitudemedia.com/news/senate-clears-permitting-reform-after-a-bitter-split-among-greens/",
+   "follows": [
+    {
+     "id": "2026-11-08#2",
+     "label": "Nov 8 · Senate's final permitting bill requires a one-year state review before FERC tran"
+    },
+    {
+     "id": "2026-11-03#2",
+     "label": "Nov 3 · Senate bill could charge data center operators about $55 billion in transmission"
+    }
+   ],
+   "source": "Latitude Media",
+   "date": "Nov 20"
+  },
+  {
+   "candidate_id": 9,
+   "headline": "Community opposition stopped 16 US data-center projects (~$64B) in Q3 2026, up from 7 a year earlier",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.esgdive.com/news/data-center-cancellations-in-q3-double-relae/875201/",
+   "summary": "Relae (formerly Carbon Direct) reports that community opposition stopped 16 US data-center projects in Q3 2026, up from 7 in Q3 2025. Those projects represent about $64B in announced or estimated investment. Of the 16, there were 7 formal denials, 4 zoning bans and 5 developer withdrawals, so 69% were stopped directly by local governments. Relae's tracker counts 70 projects worth about $271B blocked, withdrawn or stalled since 2024.",
+   "background": "Lack of transparency was a leading or secondary concern for 34 of the 44 stopped projects Relae analyzed. In this election, 46 of 47 local ballot measures on data centers passed, and they would limit or ban development. ESG Dive cites an NBC exit poll: 76% of voters opposed new data centers in their communities, and 56% said data centers were a crucial or major factor in their congressional vote. Relae says the opposition is not yet 'a broad referendum on AI' but could become one.",
+   "problem": "Developers commit to land, power and equipment for data centers years ahead, but local approval is turning into a binding and increasingly unpredictable constraint. Each blocked project strands planning effort and forces capacity to be relocated. Counts also differ by tracker: Relae counts only community-driven stops, while PANews, citing another tracker, reports at least 17 Q3 cancellations and 69 since 2024. That makes it hard to measure the true reversal rate.",
+   "where_why": "The problem arises at the siting and local-approval stage, after announcement but before construction. Several frictions drive it: information asymmetry between developers and communities (transparency is the top complaint), local costs from power, water and land use set against diffuse national benefits, and fragmented zoning authority. The result is a patchwork of local moratoria rather than a single rule.",
+   "stakeholders": [
+    {
+     "name": "Data-center developers and hyperscalers",
+     "stake": "Sunk siting costs and delays to AI capacity; need predictable approvals"
+    },
+    {
+     "name": "Local governments and zoning boards",
+     "stake": "Balancing tax base and jobs against resident opposition and infrastructure strain"
+    },
+    {
+     "name": "Residents and community groups",
+     "stake": "Concerns over transparency, utility bills, water and land use"
+    },
+    {
+     "name": "Utilities and grid operators",
+     "stake": "Load forecasts and grid investments that depend on which projects actually get built"
+    }
+   ],
+   "hints": [
+    "Capacity investment with an approval stage that may fail: model siting as a portfolio of real options with a site-specific denial probability.",
+    "Do projects that disclose more (named tenant, power source, water use) get stopped less often? A transparency lens fits Relae's finding on community concerns.",
+    "Use ballot-measure passage or zoning bans in neighboring jurisdictions as a source of spatial variation in siting risk, and see whether projects shift elsewhere."
+   ],
+   "data_leads": "Relae's project-level tracker (blocked, withdrawn or stalled projects), local ballot-measure results, state PUC large-load dockets, and ERCOT large-load interconnection reports to see where demand shifts.",
+   "keywords": [
+    "facility siting",
+    "siting moratorium",
+    "capacity investment under uncertainty",
+    "data center electricity demand",
+    "load forecasting"
+   ],
+   "dataset_candidates": [
+    "Relae community signals data center cancellation tracker"
+   ],
+   "datasets": [
+    "state_puc",
+    "ercot_reports"
+   ],
+   "related": [
+    {
+     "title": "Strategic Technology Choice and Capacity Investment Under Demand Uncertainty",
+     "journal": "Management Science",
+     "year": 2007,
+     "url": "https://doi.org/10.1287/mnsc.1060.0611",
+     "cites": 301,
+     "why": "A classic model of technology choice and capacity investment under demand uncertainty; a base to extend with a project-failure or approval-risk stage like the one local opposition creates."
+    },
+    {
+     "title": "Financing Capacity Investment Under Demand Uncertainty: An Optimal Contracting Approach",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/msom.2017.0671",
+     "cites": 47,
+     "why": "Studies how financing frictions shape capacity choice under uncertainty, which is relevant when a project's approval risk feeds into its financing terms."
+    }
+   ],
+   "url": "https://www.esgdive.com/news/data-center-cancellations-in-q3-double-relae/875201/",
+   "follows": [],
+   "source": "ESG Dive",
+   "date": "Nov 19"
+  },
+  {
+   "candidate_id": 41,
+   "headline": "Meta re-evaluating its 2030 net-zero timeline after its net carbon footprint jumped 45% in 2025",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.datacenterdynamics.com/en/news/meta-to-reevaluate-net-zero-timeline-on-the-back-of-record-emissions/",
+   "summary": "In its 2026 sustainability report, Meta says it is 're-evaluating our timelines, sequencing, and interim milestones,' including the 2030 timeframe for net zero and its near-term intensity targets. Its net carbon footprint rose 45% in 2025 to 11.9M tCO2e (one source says 11.8M), and location-based emissions were 21.7M tCO2e. Electricity use rose about 35%, though Meta still matched 100% of annual power use with clean energy.",
+   "background": "Meta's current targets are net zero across the value chain by 2030, Scope 3 emissions no higher than 2021 levels by 2030, and a 42% cut in Scope 1 and 2 emissions. Peers' emissions also rose, by less: Google +18%, Amazon +16%, Microsoft +25%. One unconfirmed report says the increase came mainly from purchased goods and capital goods, which are Scope 3 categories tied to building data centers. Meta's VP of data centers and its head of net zero say the long-term goal of a pathway to net zero is unchanged. No new date has been set.",
+   "problem": "AI capacity expansion is colliding with value-chain climate targets set before the AI boom. Meta can keep its 2030 target and miss it, move the target, or slow or re-source its buildout. Its 100% clean-energy matching sits alongside large location-based emissions and growing embodied emissions in hardware and construction. That gap raises questions about how to read these commitments and which accounting basis matters.",
+   "where_why": "The pressure comes from capacity expansion, both upstream (embodied carbon in servers, chips and buildings, which falls in Scope 3) and in operations (electricity). Market-based accounting can offset electricity emissions on paper, but it cannot offset embodied capital-goods emissions. Targets were set under demand assumptions that AI growth has overturned, and firms face misaligned incentives between racing for compute and keeping their climate pledges credible.",
+   "stakeholders": [
+    {
+     "name": "Meta",
+     "stake": "Sustaining AI capacity growth while limiting reputational damage from backtracking on climate targets"
+    },
+    {
+     "name": "Hyperscaler peers (Google, Amazon, Microsoft)",
+     "stake": "Face the same trade-off; Meta's move could normalize revising targets"
+    },
+    {
+     "name": "Hardware and construction suppliers",
+     "stake": "Pressure to cut the embodied emissions that now dominate buyers' Scope 3"
+    },
+    {
+     "name": "Investors and ESG raters",
+     "stake": "Need to judge whether corporate climate targets are credible"
+    }
+   ],
+   "hints": [
+    "Compare location-based, market-based and embodied (capital-goods) emissions across hyperscalers. Which accounting choice drives the gap between pledges and outcomes?",
+    "Target backtracking as an event: compare how markets and ESG ratings react to a missed target versus a formally revised one.",
+    "Scope 3 capital-goods emissions scale with capex, not operations. Link emissions growth to reported capex to separate growth effects from intensity effects."
+   ],
+   "data_leads": "CDP climate responses and SBTi target dashboard for target revisions, company sustainability reports, Compustat capex, and 10-K climate disclosures on SEC EDGAR.",
+   "keywords": [
+    "scope 3 disclosure",
+    "market-based emissions accounting",
+    "embodied carbon",
+    "data center electricity demand",
+    "target backtracking"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "cdp",
+    "sbti"
+   ],
+   "related": [
+    {
+     "title": "An Analysis of Carbon Reduction Pledges of the U.S. Oil and Gas Companies",
+     "journal": "Management Science",
+     "year": 2022,
+     "url": "https://doi.org/10.1287/mnsc.2023.4765",
+     "cites": 43,
+     "why": "Analyzes US oil and gas firms' carbon reduction pledges; a direct comparison point for studying how credible pledges are and whether firms deliver on them."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/meta-to-reevaluate-net-zero-timeline-on-the-back-of-record-emissions/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 20"
+  },
+  {
+   "candidate_id": 18,
+   "headline": "EU reaches provisional SFDR 2.0 deal with three fund categories; Transition funds may hold expanding fossil-fuel firms under conditions",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/sfdr-2-0-eu-strikes-deal-on-new-sustainable-investment-product-categories/",
+   "summary": "On Nov. 19 the European Parliament and EU member states reached a provisional agreement to overhaul the Sustainable Finance Disclosure Regulation. The deal creates three product categories: Sustainable, Transition and ESG Basics. Under the compromise, companies expanding fossil-fuel activities can be included in Transition products if they have a time-bound, Paris-aligned emissions-reduction plan, put 20% of capex into EU Taxonomy-aligned activities, and raise that share over time.",
+   "background": "The Commission's original proposal excluded fossil-fuel expanders from the Transition category and required at least 70% of a portfolio to follow an ESG strategy matching its category. ESG Today does not say whether the 70% threshold survived. Sustainable and Transition products must disclose Principal Adverse Impacts (PAIs), and Transition products must include fossil-fuel use and GHG emissions among them. EU public-sector general-purpose bonds can count toward Transition under certain conditions, and alternative investment funds sold only to professional investors can opt out.",
+   "problem": "The category rules decide which firms are eligible for labeled sustainable capital. Critics such as ShareAction warn the Transition category could become 'a safe haven for fossil fuel companies.' The capex-based test pushes firms to show Taxonomy-aligned capex shares. The key open question is whether these labels change real investment or mainly lead to relabeling and box-ticking.",
+   "where_why": "The friction sits at the interface between asset managers and portfolio companies. Fund labels depend on company-level evidence (transition plans, capex alignment), so a regulatory threshold becomes an incentive for firms that want to stay eligible. Investors cannot directly verify transition credibility, so the rule relies on measurable capex shares, which can be gamed. The timing is uncertain: the rules apply two years after publication in the Official Journal, and formal endorsement is still pending.",
+   "stakeholders": [
+    {
+     "name": "EU asset managers",
+     "stake": "Must relabel and possibly rebalance funds to fit the new categories"
+    },
+    {
+     "name": "Fossil-fuel and heavy-industry firms",
+     "stake": "Access to Transition-labeled capital if they meet the 20% Taxonomy capex threshold"
+    },
+    {
+     "name": "NGOs (e.g., ShareAction)",
+     "stake": "Want to prevent greenwashing through the Transition label"
+    },
+    {
+     "name": "Retail investors",
+     "stake": "Clearer product labels and safeguards against misleading funds"
+    }
+   ],
+   "hints": [
+    "Regulatory thresholds create bunching: watch for portfolio firms clustering just above 20% Taxonomy-aligned capex.",
+    "Compare how funds reclassified under the old SFDR Articles 8/9 versus the new categories. Does stricter labeling move capital, or only change names?",
+    "Fund labels as a channel of pressure from investors onto firms' operations: does eligibility change actual capex allocation?"
+   ],
+   "data_leads": "Fund-level SFDR classifications (Morningstar is commercial; ESMA and fund prospectuses are public alternatives), company Taxonomy capex disclosures under CSRD, and LSEG ESG scores for portfolio firms.",
+   "keywords": [
+    "sustainable finance taxonomy",
+    "greenwashing",
+    "regulatory thresholds",
+    "fund labeling",
+    "mandatory climate reporting"
+   ],
+   "dataset_candidates": [
+    "Morningstar Direct SFDR fund classification data",
+    "EU Taxonomy alignment disclosures under CSRD"
+   ],
+   "datasets": [
+    "lseg_esg"
+   ],
+   "related": [
+    {
+     "title": "Market Reaction to Mandatory Nonfinancial Disclosure",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2018.3099",
+     "cites": 815,
+     "why": "Event study of the equity-market reaction to the EU's mandatory nonfinancial disclosure directive; a template for measuring how SFDR 2.0 milestones are priced."
+    },
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 66,
+     "why": "Shows that banks' green disclosures do not match their lending to brown borrowers, which bears directly on whether Transition labels change capital allocation."
+    }
+   ],
+   "url": "https://www.esgtoday.com/sfdr-2-0-eu-strikes-deal-on-new-sustainable-investment-product-categories/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 20"
+  },
+  {
+   "candidate_id": 71,
+   "headline": "New US export controls on AI computing hit chip supply chains beyond AI and China; TSMC reportedly suspends some shipments",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://asia.nikkei.com/business/tech/semiconductors/chip-supply-chain-warns-of-broader-disruption-from-new-us-export-controls",
+   "summary": "Industry executives told Nikkei Asia that the US controls that took effect Nov. 19 are hitting the chip supply chain far harder than expected. The impact reaches chips for everyday mobile and consumer products and chip developers outside China. Secondhand reports of FT reporting say TSMC and Samsung halted some shipments to Chinese customers, including ordinary smartphone chips.",
+   "background": "The Commerce Department's Bureau of Industry and Security (BIS) issued a 117-page interim final rule on Nov. 16, effective Nov. 19. It requires licenses to export AI chips that could provide computing power to China or other restricted countries, including through remote or cloud access. It covers data centers or networks above 12 million TPP (total processing performance), adds licensing requirements for advanced chips going to Malaysia, Singapore, Indonesia, Thailand and Brazil, and gives existing data-center operators 90 days to obtain licenses. Free Malaysia Today reports Chinese designers will generally be limited to 28nm and 40nm processes without US licenses.",
+   "problem": "A rule aimed at advanced AI compute is spilling over into mainstream chips and non-Chinese customers. Foundries and designers face license uncertainty and compliance burdens, and some halt shipments rather than risk violations. TrendForce says the scale of the impact is unclear, and the full list of affected firms and figures is not public.",
+   "where_why": "The disruption arises at the foundry-to-customer link and at cross-border data-center operations. The rule controls end use and computing access, not just the products themselves, so suppliers cannot easily verify downstream use and over-comply. Licensing for Southeast Asian hubs and Brazil reaches into the regions firms used to diversify away from China. Short compliance windows create a coordination problem across a highly concentrated foundry tier.",
+   "stakeholders": [
+    {
+     "name": "Foundries (TSMC, Samsung)",
+     "stake": "Lost orders and compliance risk; must decide whether to suspend shipments or seek licenses"
+    },
+    {
+     "name": "Chinese chip designers",
+     "stake": "Effectively limited to 28/40nm processes without US licenses"
+    },
+    {
+     "name": "Data-center operators in Southeast Asia and Brazil",
+     "stake": "Must obtain licenses within 90 days or lose access to advanced chips"
+    },
+    {
+     "name": "US BIS",
+     "stake": "Restricting AI compute access while limiting collateral damage to allies and US firms"
+    }
+   ],
+   "hints": [
+    "A sudden, dated policy shock: compare shipment and trade flows for affected products and countries (Malaysia, Singapore, Thailand) with unaffected ones.",
+    "Over-compliance under uncertainty about end use: a lens on why suppliers cut more than the rule requires.",
+    "Ask whether the 'China+1' diversification into Southeast Asia now looks less resilient once controls follow the hubs themselves."
+   ],
+   "data_leads": "The BIS rule text in the Federal Register, UN Comtrade and Census trade data on semiconductors (HS 8542) by partner, Panjiva bill-of-lading data (commercial), and FactSet Revere foundry–customer links.",
+   "keywords": [
+    "export controls",
+    "supplier concentration",
+    "supplier diversification",
+    "trade diversion",
+    "sourcing restrictions"
+   ],
+   "dataset_candidates": [
+    "BIS Entity List and export license data"
+   ],
+   "datasets": [
+    "federal_register",
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12336",
+     "cites": 65,
+     "why": "Examines empirically whether firms diversify or concentrate sourcing when policy uncertainty rises, the core response question this rule raises."
+    },
+    {
+     "title": "Just‐in‐time for supply chains in turbulent times",
+     "journal": "Production and Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1111/poms.13979",
+     "cites": 213,
+     "why": "Weighs just-in-time against just-in-case inventory under disruption, relevant to how chip buyers buffer against license-driven supply cuts."
+    }
+   ],
+   "url": "https://asia.nikkei.com/business/tech/semiconductors/chip-supply-chain-warns-of-broader-disruption-from-new-us-export-controls",
+   "follows": [
+    {
+     "id": "2026-11-17#4",
+     "label": "Nov 17 · BIS interim final rule requires licenses for advanced AI chips to Malaysia, Sing"
+    }
+   ],
+   "source": "Nikkei Asia",
+   "date": "Nov 20"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 25,
+   "takeaway": "The paper argues that supply-chain (upstream Scope 3) emissions get less attention than Scope 1 and 2. It proposes an integrated framework for measuring, reporting and reducing them.",
+   "connection": "Meta's reported surge in purchased-goods and capital-goods emissions (unconfirmed) is the kind of upstream Scope 3 problem this framework targets.",
+   "title": "EXPRESS: A Framework Addressing Supply Chain Carbon Emissions: Measurement, Reporting, and Reduction",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261511699"
+  },
+  {
+   "candidate_id": 15,
+   "takeaway": "Sustainability-linked loans are supposed to reward firms with cheaper credit for meeting sustainability targets. Evidence shows little rate reduction, mixed outcomes and participation concentrated among low-risk firms, and the paper models why these loans underperform and how to design them better.",
+   "connection": "Like SFDR 2.0's Transition label, it asks whether sustainable-finance instruments with weak thresholds actually change firms' behavior.",
+   "title": "On the (In)Efficiency of Sustainability-Linked Loans",
+   "journal": "M&SOM",
+   "url": "https://doi.org/10.1287/msom.2026.0230"
+  }
+ ],
+ "thread_to_pull": "Three of today's stories concern who controls the inputs to AI capacity: federal permits (permitting reform), local consent (data-center cancellations) and chip access (export controls). Meta's emissions show that the expansion that does get built shows up in Scope 3. Comparing which of these constraints actually binds for a given hyperscaler project, and how firms substitute across sites and countries when one tightens, could be a rich empirical setting.</br>",
+ "also": [
+  {
+   "title": "Sila, Panasonic sign projected $1B silicon-carbon anode supply contract",
+   "url": "https://www.manufacturingdive.com/news/sila-panasonic-energy-titan-silicon-si-c-battery-cells-supply-contract/875092/",
+   "source": "Manufacturing Dive",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Fuel constraints could challenge grid this winter, despite resource improvements: NERC",
+   "url": "https://www.utilitydive.com/news/el-nino-challenge-grid-operators-winter-nerc/875156/",
+   "source": "Utility Dive",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "CATL CEO challenges Europe’s push for local battery recycling",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZzY5djBGd1J1RDNBTHctSzZUX2hRUktZZUdVODl4OGhSazdpbHNkdTU3LUxyLVU0WGlGYzRHUHFTRHdsUFQyQnJkbWk0clBlQVZiWll2c2d0c0F3ejNoNndwWTFSaXZRRGZTSnBoTFJPQ21aeTNjblg5X3lyYldmVUk0cFlvMnhSNU5Edy1UWkt0dw?oc=5",
+   "source": "Automotive News",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "FAO Food Outlook: Global food commodity supplies remain generally ample, but risks are mounting",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOd1dVcy1PQUwtZ3JVdlVzdXpyU0I5a2sxZXVBWVRhdE5YaFRrZ2NYdG9wang2ekxBRFA4dDVFcjd4VEdWbXFZNGE5WUx5NU84RlRFMTc5Mkx3NW9QbUZKTjlMaldyS3RsMXlTZkFCRW1yLTZHdEFITlpvUmVXd1gtcjFQM09RWGVZbU9HeXJRcGZvOFl2N240eUFqT1dkNmVkdlRIU0p2X2hBZ3BhdVhMaDFxc2dwZGxXbGhLWVE2N0lEOTZHSkpSdlI5cTc0NWs?oc=5",
+   "source": "Food and Agriculture Organization",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "PJM urged to delay base capacity auction until data centers cut from forecast",
+   "url": "https://www.utilitydive.com/news/ratepayer-advocates-pjm-market-monitor-capacity-auction/875165/",
+   "source": "Utility Dive",
+   "theme": "Energy & AI Data Centers"
+  }
+ ]
+}

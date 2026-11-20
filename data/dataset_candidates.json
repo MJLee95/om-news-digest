@@ -1442,5 +1442,45 @@
    "2026-11-19#4"
   ],
   "last_seen": "2026-11-19"
+ },
+ "ceq nepa eis timeline data": {
+  "name": "CEQ NEPA EIS timeline data",
+  "first_seen": "2026-11-20",
+  "items": [
+   "2026-11-20#1"
+  ],
+  "last_seen": "2026-11-20"
+ },
+ "relae community signals data center cancellation tracker": {
+  "name": "Relae community signals data center cancellation tracker",
+  "first_seen": "2026-11-20",
+  "items": [
+   "2026-11-20#2"
+  ],
+  "last_seen": "2026-11-20"
+ },
+ "morningstar direct sfdr fund classification data": {
+  "name": "Morningstar Direct SFDR fund classification data",
+  "first_seen": "2026-11-20",
+  "items": [
+   "2026-11-20#4"
+  ],
+  "last_seen": "2026-11-20"
+ },
+ "eu taxonomy alignment disclosures under csrd": {
+  "name": "EU Taxonomy alignment disclosures under CSRD",
+  "first_seen": "2026-11-20",
+  "items": [
+   "2026-11-20#4"
+  ],
+  "last_seen": "2026-11-20"
+ },
+ "bis entity list and export license data": {
+  "name": "BIS Entity List and export license data",
+  "first_seen": "2026-11-20",
+  "items": [
+   "2026-11-20#5"
+  ],
+  "last_seen": "2026-11-20"
  }
 }
