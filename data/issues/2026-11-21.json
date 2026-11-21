@@ -1,0 +1,392 @@
+{
+ "intro": "Today's issue covers a Spanish rule that makes data centres source mostly renewable power and a large grid plan approved alongside it. It also covers the first US deep-sea mining exploration leases, shipping's entry into a linked UK-EU carbon market, Meta's demand-side bet on low-carbon materials, and a bird-flu shutdown that hit during an egg glut.",
+ "items": [
+  {
+   "candidate_id": 104,
+   "headline": "Spain adopts Royal Decree requiring data centres to source 80% of electricity from new renewables, alongside €17.14bn grid plan",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.pv-magazine.com/2026/11/21/spain-approves-new-data-center-rules-requiring-80-renewable-electricity/",
+   "summary": "Spain's Council of Ministers adopted a Royal Decree on data centres, most likely on 20 Nov 2026 (pv magazine published on 21 Nov). Data centres must show at least 80% of their electricity comes from on-site renewables or long-term PPAs with new renewable plants. The decree also sets energy and water efficiency standards, flexible grid-use requirements and provisional caps on water and electricity use. A €17.14 billion transmission plan was approved at the same time to support 47.4 GW of new electricity demand through 2030.",
+   "background": "Spain's 2024 AI Strategy expected under 4 GW of data centre demand by 2030. The new grid plan's 47.4 GW of new demand far exceeds that figure. The government proposed the 80% rule in August 2026, with consultation until 4 September. The draft reportedly applied to sites of 1 MW or more and would last until Spain's grid reaches 90% renewables; it is not confirmed that either provision survived into the final decree. The temporary water and power caps apply while EU-wide criteria are finalised, and Euronews reports the decree also includes 'digital sovereignty' obligations.",
+   "problem": "The rule turns a voluntary corporate practice, renewable procurement, into a licence-style condition, and the design details are contested or unclear. pv magazine describes annual matching, while Euronews describes hourly matching with additionality (the August draft said hourly). The two standards imply very different costs, storage needs and contract structures. The effective date, transition periods and penalties are not yet known. Check the final text in the BOE (Spain's official gazette) before relying on either reading.",
+   "where_why": "The friction sits at the link between large new loads and the power system. Data centres want fast grid connections. Additionality and possible hourly matching tie each new load to new generation, which raises demand for PPAs, on-site generation and storage. Meanwhile transmission build-out lags demand forecasts. Regulatory uncertainty during the transition to EU-wide rules adds to the cost of siting decisions.",
+   "stakeholders": [
+    {
+     "name": "Data centre operators and hyperscalers",
+     "stake": "Higher procurement and storage costs, and possibly a reason to site in other EU countries, weighed against clearer grid-access rules."
+    },
+    {
+     "name": "Renewable developers in Spain",
+     "stake": "New demand for long-term PPAs with new-build plants."
+    },
+    {
+     "name": "Red Eléctrica and the Spanish government",
+     "stake": "Must deliver the €17.14bn transmission plan and manage 47.4 GW of projected new demand without hurting reliability."
+    },
+    {
+     "name": "Other electricity consumers",
+     "stake": "Exposure to grid investment costs and competition for clean supply."
+    },
+    {
+     "name": "EU policymakers",
+     "stake": "Spain's interim rules may shape, or conflict with, forthcoming EU-wide data centre criteria."
+    }
+   ],
+   "hints": [
+    "Compare annual and hourly matching in a portfolio model combining PPAs, solar and batteries: how much extra capacity and storage does hourly matching require?",
+    "Spain as a policy shock: compare data centre project announcements and PPA signings before and after August 2026 with those in neighbouring EU countries.",
+    "Puzzle: the grid plan's demand forecast is more than ten times the 2024 strategy's estimate. What does this imply about load-forecast error and stranded transmission risk?"
+   ],
+   "data_leads": "The Royal Decree text in the BOE; REE ESIOS hourly generation and demand data; PPA deal trackers; and the transmission plan documents to map planned grid investment against proposed data centre sites.",
+   "keywords": [
+    "data center electricity demand",
+    "power purchase agreements",
+    "facility siting",
+    "load forecasting",
+    "regulatory uncertainty"
+   ],
+   "dataset_candidates": [
+    "Red Eléctrica ESIOS hourly electricity data",
+    "BOE (Boletín Oficial del Estado) Royal Decree text"
+   ],
+   "datasets": [],
+   "related": [
+    {
+     "title": "Meeting Corporate Renewable Power Targets",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2022.4354",
+     "cites": 35,
+     "why": "Models how firms should procure renewable power to meet corporate targets, the problem the Spanish decree now makes mandatory."
+    },
+    {
+     "title": "The Unintended Carbon Impacts of Large-Scale Electricity Storage",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2024.1411",
+     "cites": 2,
+     "why": "Shows that storage arbitrage can raise market-level emissions, which bears on decrees that push data centres toward storage-backed renewable matching."
+    }
+   ],
+   "url": "https://www.pv-magazine.com/2026/11/21/spain-approves-new-data-center-rules-requiring-80-renewable-electricity/",
+   "follows": [],
+   "source": "pv magazine Global",
+   "date": "Nov 21"
+  },
+  {
+   "candidate_id": 52,
+   "headline": "US Interior Department provisionally sells first deep-sea mining exploration leases, 31.5 million acres off American Samoa, at minimum bids",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://insideclimatenews.org/news/20112026/trump-deep-sea-mining-federal-waters/",
+   "summary": "On 19 Nov 2026 the Interior Department's Marine Minerals Administration auctioned 2 lease areas covering about 31.5 million acres of federal waters off American Samoa. High bids totalled $6 million, exactly the $3 million minimum per area. New York-based Wetstone U.S. Ventures made the provisional winning bids. Only Wetstone and Norway's Adepth Minerals attended the auction, and the leases allow mapping and preliminary work only, not mining.",
+   "background": "The target is polymetallic nodules containing cobalt, copper, manganese and nickel. No commercial deep-sea mining has started anywhere in the world. A Trump executive order last year directed leasing, and Impossible Metals reportedly asked for this auction in April. American Samoa banned deep-sea mining in 2024, but only out to 3 nautical miles from shore. The lease areas are at least 50 miles offshore and near Rose Atoll Marine National Monument.",
+   "problem": "The government is trading speculative domestic supply of critical minerals against environmental and legal risk. gCaptain reports the sale went ahead despite a federal court ruling against a key part of Interior's environmental review, and it is unclear whether that ruling could undo the leases. Commercial demand appears thin: only two bidders came, and both bid the minimum. Environmental groups and Pacific activists have vowed to stop the deal.",
+   "where_why": "The problem sits at the very first stage of the mineral supply chain, resource access, where uncertainty compounds. Geology, extraction technology, the legal pathway to a mining permit, and future metal prices are all uncertain. Exploration rights are an option on possible future production, while the environmental costs fall on communities and ecosystems outside the lease transaction. Disputes over federal and territorial jurisdiction add further risk.",
+   "stakeholders": [
+    {
+     "name": "Wetstone U.S. Ventures and Adepth Minerals",
+     "stake": "Cheap option-like exploration rights, exposed to court rulings and the need for future federal approvals."
+    },
+    {
+     "name": "Interior Department / Marine Minerals Administration",
+     "stake": "Advancing a policy of domestic critical-mineral supply; nearly 100 million acres may be auctioned by year's end (secondhand report)."
+    },
+    {
+     "name": "American Samoa communities and groups such as Finafinau",
+     "stake": "Environmental and cultural harm to waters beyond the reach of the territory's 3-nautical-mile ban."
+    },
+    {
+     "name": "Battery and electronics manufacturers",
+     "stake": "Possible diversification of cobalt and nickel supply, but only on long, uncertain timelines."
+    },
+    {
+     "name": "Environmental NGOs (e.g., Greenpeace USA)",
+     "stake": "Want to block a precedent for seabed mining."
+    }
+   ],
+   "hints": [
+    "Real-options lens: why bid the minimum for exploration rights when the main uncertainties are legal and technological rather than geological?",
+    "Auction design with thin participation: what do two bidders paying reserve prices reveal about valuations, and how should reserve prices be set?",
+    "Compare land-based supply concentration for cobalt and nickel against hypothetical seabed supply when assessing raw material security."
+   ],
+   "data_leads": "Federal Register and Interior lease-sale notices, court dockets in the environmental-review litigation, USGS Mineral Commodity Summaries for cobalt, nickel and manganese supply concentration, and UN Comtrade for import dependence.",
+   "keywords": [
+    "raw material security",
+    "litigation risk",
+    "procurement auctions",
+    "federal-state jurisdiction",
+    "biodiversity risk"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "usgs_minerals",
+    "federal_register"
+   ],
+   "related": [
+    {
+     "title": "Blockchain for Supply Chain Traceability: Business Requirements and Critical Success Factors",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13147",
+     "cites": 1118,
+     "why": "Uses cobalt mining as a motivating case for supply chain traceability, relevant if seabed-sourced minerals need to be distinguished from land-mined ones."
+    }
+   ],
+   "url": "https://insideclimatenews.org/news/20112026/trump-deep-sea-mining-federal-waters/",
+   "follows": [],
+   "source": "Inside Climate News",
+   "date": "Nov 20"
+  },
+  {
+   "candidate_id": 186,
+   "headline": "UK and EU agree to link carbon markets from 2028; UK ETS to cover 50% of international shipping emissions",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://www.lloydslist.com/LL1159252/UK-EU-carbon-market-link-brings-international-shipping-into-UK-ETS",
+   "summary": "At the 2026 UK-EU summit, the two sides agreed to link the UK and EU Emissions Trading Schemes, so that from 1 Jan 2028 allowances from either scheme count in both. From 2028 the UK ETS will also cover 50% of emissions from international voyages by ships of 5,000 GT and above. It has covered 100% of domestic and in-port shipping emissions since 1 July 2026. The UK government calls the result the world's largest linked carbon market.",
+   "background": "The 2028 international shipping expansion was first announced in November 2025. The deal also exempts each side from the other's carbon border tax (CBAM), lets the UK set its own cap in line with its carbon budgets, and opens a path to cross-border CO2 storage. The Carbon Capture and Storage Association values that storage opportunity at over £4bn a year in exports and £7bn in private investment. Separately, the UK plans 2030 maritime fuel rules that broadly mirror the EU's FuelEU Maritime.",
+   "problem": "Linking unifies the carbon price, but fuel regulation may stay split. Lloyd's List notes that shipowners may face two similar but overlapping fuel-standard systems rather than one shared regime, which raises compliance complexity. The UK Chamber of Shipping wants ETS revenue to fund shipping decarbonisation and has asked for a full economic impact assessment. The legal steps needed before 2028 are not confirmed.",
+   "where_why": "Carbon costs enter at the voyage level, so they can affect routing, port-call choices, speed, fuel choice and fleet renewal. Covering only 50% of international voyage emissions creates incentives to restructure port calls and divert traffic, a form of carbon leakage. Overlapping fuel rules are a coordination failure between two regulators with nearly identical goals.",
+   "stakeholders": [
+    {
+     "name": "Shipowners and operators (5,000 GT+)",
+     "stake": "New allowance costs and dual compliance under UK and EU fuel rules from 2030."
+    },
+    {
+     "name": "UK ports",
+     "stake": "Risk of traffic diversion, against possible gains from CO2 storage and green-fuel hubs."
+    },
+    {
+     "name": "UK Chamber of Shipping",
+     "stake": "Wants ETS revenue recycled into maritime decarbonisation."
+    },
+    {
+     "name": "UK and EU governments",
+     "stake": "Market liquidity and mutual CBAM exemptions, while keeping sovereign control over caps."
+    },
+    {
+     "name": "Carbon capture industry",
+     "stake": "Access to cross-border CO2 storage markets."
+    }
+   ],
+   "hints": [
+    "Natural experiment: the 1 July 2026 domestic and in-port coverage and the 2028 international expansion are staggered shocks for studying port-call and routing responses with AIS data.",
+    "Model evasive port calls under partial (50%) voyage coverage: when does adding a non-covered transshipment hub pay off?",
+    "Compare compliance costs under two near-identical fuel standards with those under a single harmonised one."
+   ],
+   "data_leads": "EU MRV (THETIS) ship-level CO2 emissions data, AIS vessel tracks for UK and EU port calls, UK and EU ETS allowance prices and registry data, and the UK government's ETS shipping guidance.",
+   "keywords": [
+    "maritime policy",
+    "cap and trade",
+    "carbon leakage",
+    "emissions standards"
+   ],
+   "dataset_candidates": [
+    "EU MRV THETIS shipping CO2 emissions database",
+    "UK ETS registry and allowance auction data"
+   ],
+   "datasets": [],
+   "related": [
+    {
+     "title": "Mitigating the financial risk behind emission cap compliance: A case in maritime transportation",
+     "journal": "Production and Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1111/poms.13837",
+     "cites": 21,
+     "why": "Studies the financial risk of emission-cap compliance for ocean carriers under IMO 2020, a close analogue to ETS cost exposure for shipping."
+    },
+    {
+     "title": "Vessel sharing and its impact on maritime operations and carbon emissions",
+     "journal": "Production and Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/poms.13730",
+     "cites": 41,
+     "why": "Quantifies how vessel-sharing coordination changes shipping emissions, an operational lever carriers could use under carbon pricing."
+    }
+   ],
+   "url": "https://www.lloydslist.com/LL1159252/UK-EU-carbon-market-link-brings-international-shipping-into-UK-ETS",
+   "follows": [],
+   "source": "Lloyd's List",
+   "date": "Nov 20"
+  },
+  {
+   "candidate_id": 8,
+   "headline": "Meta signs multiyear certificate-based offtake deals for low-carbon cement, steel and recycled plastic for its data centre supply chain",
+   "theme": "Sustainable Operations",
+   "original_url": "https://www.esgdive.com/news/meta-strikes-deals-to-boost-low-carbon-materials-production/875324/",
+   "summary": "On 12 Nov 2026 Meta announced multiyear agreements to cut emissions in its data centre supply chain. Most deals use environmental attribute certificates (EACs) for low-carbon materials that suppliers sell to other customers. They cover Sublime Systems cement (at least 180,000 tons), Fortera cement (about 200,000 tons, Missouri plant), Stegra green steel (Sweden) and MacroCycle recycled PET (a planned 5,000 tons/year Southeastern US plant). An EAC deal with Nevoya covers an electric freight corridor between California and Arizona.",
+   "background": "Embodied carbon in construction materials is a major Scope 3 source for data centre builders. Meta has made earlier deals with CarbonBuilt (2024), CarbiCrete and Electra. Several supplier plants are still in development: Sublime's first commercial plant, Fortera's plant and Stegra's mill, which has no completion date. Where possible, Meta also gets priority access to materials for future data centres. Note that the headline's 'concrete' is actually cement.",
+   "problem": "Book-and-claim certificates let Meta claim reductions without physically taking the material. That makes it possible to finance first-of-a-kind plants through demand commitments, but it raises questions about additionality, double counting and whether the claims are credible. No prices, dollar values or expected emissions reductions were disclosed. Because the plants are not yet built, Meta is also exposed to delivery risk.",
+   "where_why": "The friction is upstream, in financing new low-carbon materials capacity. Green premiums and technology risk deter lenders, so a large buyer's long-term demand acts as a financing signal. Because the certificates are decoupled from physical flows, they solve a logistics mismatch, but they create an information asymmetry about real impact and add complexity to market-based emissions accounting.",
+   "stakeholders": [
+    {
+     "name": "Meta",
+     "stake": "Scope 3 reductions and priority access to supply, against reputational risk if claims are seen as greenwashing."
+    },
+    {
+     "name": "Startup suppliers (Sublime, Fortera, Stegra, MacroCycle)",
+     "stake": "Bankable demand to finance plant construction."
+    },
+    {
+     "name": "Other buyers of the physical materials",
+     "stake": "Receive the low-carbon product without the environmental claim attached."
+    },
+    {
+     "name": "Standard setters (GHG Protocol and similar)",
+     "stake": "Deciding whether and how EAC-based claims count toward Scope 3."
+    }
+   ],
+   "hints": [
+    "Contract-theory lens: compare offtake commitments with certificate purchases as tools for financing capacity under technology risk.",
+    "Look at which buyer coalitions (hyperscalers and others) cluster around the same suppliers, and whether that creates demand concentration risk for suppliers.",
+    "Puzzle: when do book-and-claim certificates deliver additional emissions cuts rather than just reallocating claims?"
+   ],
+   "data_leads": "CDP supply chain responses and Meta's sustainability reports for Scope 3 trends, EPA GHGRP for cement plant emissions, and supplier announcements and permitting records to track plant construction milestones.",
+   "keywords": [
+    "embodied carbon",
+    "market-based emissions accounting",
+    "long-term supply contracts",
+    "demand signaling",
+    "steel decarbonization"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "cdp",
+    "epa_ghgrp"
+   ],
+   "related": [
+    {
+     "title": "Organizing Buyer‐Side Scope 3 Governance: Sensemaking in Supply Network Decarbonization",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2026,
+     "url": "https://doi.org/10.1111/jscm.70032",
+     "cites": 1,
+     "why": "Examines how buying firms organise Scope 3 governance across supplier networks they do not control, the core challenge behind Meta's deals."
+    },
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 208,
+     "why": "Tests whether customers' environmental disclosure signals lead to supplier emissions reductions, relevant to judging whether buyer commitments change supplier behaviour."
+    }
+   ],
+   "url": "https://www.esgdive.com/news/meta-strikes-deals-to-boost-low-carbon-materials-production/875324/",
+   "follows": [],
+   "source": "ESG Dive",
+   "date": "Nov 20"
+  },
+  {
+   "candidate_id": 2,
+   "headline": "Cal-Maine culls 1.76 million birds and halts a Florida egg plant after bird flu, amid an industry egg glut",
+   "theme": "Food & Agriculture",
+   "original_url": "https://www.supplychaindive.com/news/cal-maine-halts-egg-production-at-florida-plant-after-bird-flu-outbreak/875316/",
+   "summary": "On 18 Nov 2026 Cal-Maine Foods said one of its Florida facilities tested positive for highly pathogenic avian influenza. It halted production there under USDA protocols, and about 1.76 million birds (1.4 million laying hens and 360,000 pullets, or 2.7% of its flock) are being culled. The company will shift production and distribution to other sites to keep supplying customers.",
+   "background": "Average US retail egg prices fell from a record $6.23 a dozen in March 2025 to $2.32 in October 2026. USDA has detected bird flu in 33 commercial flocks since August. CEO Sherman Miller said supply 'remains greater than even that healthy demand can absorb.' Supply Chain Dive reported a 100% drop in consolidated gross profit for the quarter ended 29 Aug, a figure worth checking against the earnings release. Cal-Maine is also diversifying into prepared foods through its purchases of Van's and Crepini.",
+   "problem": "A disease-driven loss of capacity is hitting during an oversupply. That makes it unclear whether outbreaks will tighten the market or simply absorb excess supply, and how producers should weigh flock size against biosecurity risk. No restart timeline or financial impact was disclosed.",
+   "where_why": "The disruption happens at the production stage. Large, concentrated layer complexes create common-mode biosecurity risk, because a single detection removes millions of birds and replacing a flock takes months (pullets must mature). Production is effectively a random-yield process, and price swings from glut to shortage follow from slow capacity adjustment.",
+   "stakeholders": [
+    {
+     "name": "Cal-Maine Foods",
+     "stake": "Lost output and culling costs, cushioned by a multi-site network and low prices."
+    },
+    {
+     "name": "Retail and foodservice customers",
+     "stake": "Continuity of supply and price stability."
+    },
+    {
+     "name": "USDA",
+     "stake": "Containing the outbreak and managing indemnity costs."
+    },
+    {
+     "name": "Consumers",
+     "stake": "Egg prices, which swung from $6.23 to $2.32 within about 19 months."
+    }
+   ],
+   "hints": [
+    "Random-yield and capacity-planning lens: how should flock concentration across sites trade off scale economies against outbreak risk?",
+    "Use event studies of HPAI detections to test whether price responses depend on where the market sits in the glut-to-shortage cycle.",
+    "Compare how multi-site integrated producers and single-site producers recover after outbreaks."
+   ],
+   "data_leads": "USDA APHIS confirmed HPAI detections in commercial flocks, USDA AMS egg market price reports, USDA NASS layer inventory statistics, and Cal-Maine's 8-K and 10-K filings on SEC EDGAR.",
+   "keywords": [
+    "biosecurity risk",
+    "random yield",
+    "common-mode failure",
+    "perishable inventory"
+   ],
+   "dataset_candidates": [
+    "USDA APHIS HPAI confirmed detections in commercial and backyard flocks"
+   ],
+   "datasets": [
+    "usda_ams",
+    "usda_nass"
+   ],
+   "related": [
+    {
+     "title": "Role of Risk Aversion in Price Postponement Under Supply Random Yield",
+     "journal": "Management Science",
+     "year": 2020,
+     "url": "https://doi.org/10.1287/mnsc.2020.3755",
+     "cites": 80,
+     "why": "Models how a risk-averse firm sets production and prices under random supply yield, a good fit for disease-driven losses of laying capacity."
+    }
+   ],
+   "url": "https://www.supplychaindive.com/news/cal-maine-halts-egg-production-at-florida-plant-after-bird-flu-outbreak/875316/",
+   "follows": [],
+   "source": "Supply Chain Dive",
+   "date": "Nov 20"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 10,
+   "takeaway": "The paper combines courier-hour operational data from a Chinese food delivery platform with high-frequency weather data from July and August 2015 to study how extreme heat affects gig couriers. It uses a Heckman selection model to account for which couriers choose to work in dangerous heat.",
+   "connection": "It is a template for measuring climate-hazard effects on operations at granular level, an approach that carries over to climate adaptation and labour-disruption questions in logistics.",
+   "title": "The Impact of Heat Hazard on Gig Economy Workers: Evidence from An On-demand Food Delivery Platform",
+   "journal": "M&SOM",
+   "url": "https://doi.org/10.1287/msom.2025.0410"
+  },
+  {
+   "candidate_id": 7,
+   "takeaway": "The paper finds that AI adoption spreads along supply chains: principal customers' adoption of AI significantly predicts that their dependent suppliers adopt it later, and the authors argue the effect is causal.",
+   "connection": "It shows how buyer-to-supplier spillovers can be identified empirically, a lens you could apply to whether Meta-style buyer commitments spread decarbonisation practices upstream.",
+   "title": "Artificial Intelligence Along the Supply Chain",
+   "journal": "M&SOM",
+   "url": "https://doi.org/10.1287/msom.2024.1549"
+  }
+ ],
+ "thread_to_pull": "Spain's data centre decree and Meta's materials deals both target the carbon footprint of AI infrastructure, one on operating electricity and one on embodied materials. Both rest on the same contested question: annual versus hourly matching for electricity, and book-and-claim certificates for materials, are both disputes over how closely an environmental claim must track physical flows. A common framework for 'claim granularity' in electricity and materials, perhaps informed by R2 and R28, could compare the cost and credibility of each approach.",
+ "also": [
+  {
+   "title": "Meta Funds Seven Gas Plants to Power Biggest Data Center",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQUzcyeGI1Vjd2aExhV1VVZ01SaFl0QnpmcndvNGpZUkhkVkZVeVRHTGlvR2VEV0VLb2piemNQbHZ4c2ZDbV94Y0hoYlIyQlpUVkRHZjlHNWJ6eTY3OVQ2NUw3bFJwNzdiN3JCSU1XVU5oWG1GMnJBNGJ1NzluUFVjZ3RCTWhiTGtIS2NhZVUyc1c?oc=5",
+   "source": "EnergyNow.com",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "ISSB urged to make its nature-related disclosure a standard",
+   "url": "https://www.esgdive.com/news/issb-urged-to-make-its-nature-related-disclosure-a-standard/875352/",
+   "source": "ESG Dive",
+   "theme": "ESG & Disclosure"
+  },
+  {
+   "title": "Tesla proposes $3.1 billion Texas polysilicon refinery",
+   "url": "https://www.manufacturingdive.com/news/LiMiK-Capital-328-million-manufacturing-plant-south-carolina/875286/",
+   "source": "Manufacturing Dive",
+   "theme": "Trade & Industrial Policy"
+  },
+  {
+   "title": "Trade groups ask to block SB 54 as part of existing California lawsuit",
+   "url": "https://www.packagingdive.com/news/california-trade-groups-sb-54-epr-sb-343-lawsuit/875354/",
+   "source": "Packaging Dive",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "New data centers could draw 4B gallons of water a year out of Nevada, the driest US state: study",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNd2dhcWRPV2ZPTk9VS2dIQzlxNGQwcm92M3FLUWd3U3dpbnhjX3UwNTBqcC1MQ2dDLVRQQ2tJNlJPaFpHeVhBMklwTDRfcXQ4akhSMmthYzhIalIyNXdaMXhMLW1ndURycXAyalJxaFRKNHp5UmxDcm91QVJnOVo0aUlWdHlFbGhFQkdtREJOSFRxX3g5Nkk3NWlnQjNHMHVvRXRLYzR2TC05X2pTTWtJeDVXRFJBVktl?oc=5",
+   "source": "Facilities Dive",
+   "theme": "Climate Risk & Adaptation"
+  }
+ ]
+}

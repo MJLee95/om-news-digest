@@ -1482,5 +1482,45 @@
    "2026-11-20#5"
   ],
   "last_seen": "2026-11-20"
+ },
+ "red eléctrica esios hourly electricity data": {
+  "name": "Red Eléctrica ESIOS hourly electricity data",
+  "first_seen": "2026-11-21",
+  "items": [
+   "2026-11-21#1"
+  ],
+  "last_seen": "2026-11-21"
+ },
+ "boe (boletín oficial del estado) royal decree text": {
+  "name": "BOE (Boletín Oficial del Estado) Royal Decree text",
+  "first_seen": "2026-11-21",
+  "items": [
+   "2026-11-21#1"
+  ],
+  "last_seen": "2026-11-21"
+ },
+ "eu mrv thetis shipping co2 emissions database": {
+  "name": "EU MRV THETIS shipping CO2 emissions database",
+  "first_seen": "2026-11-21",
+  "items": [
+   "2026-11-21#3"
+  ],
+  "last_seen": "2026-11-21"
+ },
+ "uk ets registry and allowance auction data": {
+  "name": "UK ETS registry and allowance auction data",
+  "first_seen": "2026-11-21",
+  "items": [
+   "2026-11-21#3"
+  ],
+  "last_seen": "2026-11-21"
+ },
+ "usda aphis hpai confirmed detections in commercial and backyard flocks": {
+  "name": "USDA APHIS HPAI confirmed detections in commercial and backyard flocks",
+  "first_seen": "2026-11-21",
+  "items": [
+   "2026-11-21#5"
+  ],
+  "last_seen": "2026-11-21"
  }
 }
