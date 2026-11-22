@@ -1,0 +1,198 @@
+{
+ "overview": "Data-center power dominated the week. Regulators on three continents moved from debating AI load growth to rationing and pricing it: Korea's scoring rule, PJM's merged queue, utilities' FERC commitment filings, Spain's 80% renewables decree, and Oklahoma's court challenge. At the same time, evidence piled up that the demand those rules are built around is uncertain (Orennia's 191 GW at risk, community blocks, Meta's emissions jump). Outside energy, US remote-access chip controls spilled into mainstream chips, buyers tightened Scope 3 pressure on suppliers through money, exit threats and reporting platforms, and several dated EU and US policy shocks (plastic waste export ban, EUDR enforcement, UK-EU ETS link) created clean natural experiments.",
+ "patterns": [
+  {
+   "title": "Large-load contracts as screening devices for data-center risk",
+   "explanation": "Almost every day brought a new instrument for deciding who bears the risk that data-center load is speculative or leaves early. The instruments included minimum terms and collateral (FERC filings), merged queue studies with cost shifts (PJM), separate tariffs and confidential minimum bills (Oklahoma), and coincident-peak charges that large users can avoid. Scoring thresholds (Korea) and procurement conditions (Spain) did the same job by other means. Because these designs vary across jurisdictions and are being adopted at different times, they offer a rare cross-sectional and staggered setting for studying how contract terms affect queue attrition, siting and cross-subsidies.",
+   "item_ids": [
+    "2026-11-16#1",
+    "2026-11-16#2",
+    "2026-11-17#2",
+    "2026-11-18#5",
+    "2026-11-19#2",
+    "2026-11-21#1",
+    "2026-11-22#2"
+   ]
+  },
+  {
+   "title": "Long-lead capacity commitment under jump-type demand risk",
+   "explanation": "Forecasts for AI load diverge sharply: the IEA projects a doubling by 2030, while Orennia models 191 GW at political risk. Community opposition doubled project stops, and permitting reform remains in legislative limbo. Generation, transmission, transformers and even low-carbon materials plants must be committed before demand resolves. This is a textbook setting for capacity investment with demand learning and regime switches. It is also an empirical test of whose forecasts are biased: regulated utilities report no slowdown while merchant analysts model large downside.",
+   "item_ids": [
+    "2026-11-18#1",
+    "2026-11-19#1",
+    "2026-11-20#2",
+    "2026-11-20#1",
+    "2026-11-17#1",
+    "2026-11-21#4"
+   ]
+  },
+  {
+   "title": "Buyer-driven Scope 3 governance diversifies its levers",
+   "explanation": "Within one week, large buyers used four distinct tools on suppliers:\n- Inditex co-funded a blended-finance fund for suppliers.\n- Nestlé threatened to exit dairy suppliers that miss its standards.\n- Tesco pushed 400 suppliers onto a shared emissions-reporting platform.\n- Meta bought book-and-claim certificates to finance new low-carbon materials plants.\n\nMeta also signalled it may revise its 2030 net-zero target as AI capex outruns its pledges. Comparing these levers (supplier development, supplier selection, information, and demand commitment) is a core open question for sustainable-operations research.",
+   "item_ids": [
+    "2026-11-17#5",
+    "2026-11-18#3",
+    "2026-11-19#5",
+    "2026-11-21#4",
+    "2026-11-20#3"
+   ]
+  },
+  {
+   "title": "Partial-coverage rules invite diversion and gaming",
+   "explanation": "Many of this week's rules cover only part of the activity they target, which creates predictable leakage channels:\n- the 10 MW exemption in Korea, an invitation to bunch just below it;\n- 50% coverage of international voyages in the UK ETS, an incentive to restructure port calls;\n- the EU plastic waste ban, which still allows exports to OECD countries and could reroute trade through them;\n- uneven national enforcement of the EUDR, a route for importers through weakly policed member states;\n- Washington recycled-content fines small enough to treat as a cost of business;\n- the 20% capex threshold in SFDR 2.0, an invitation to cluster just above it.\n\nEach comes with a dated effective date, an advantage for difference-in-differences or bunching designs. The shared threat is that the diversion itself is hard to observe.",
+   "item_ids": [
+    "2026-11-16#1",
+    "2026-11-21#3",
+    "2026-11-22#3",
+    "2026-11-22#5",
+    "2026-11-19#4",
+    "2026-11-20#4",
+    "2026-11-17#4"
+   ]
+  }
+ ],
+ "developing": [
+  {
+   "title": "FERC and PJM rewrite large-load interconnection and cost allocation",
+   "update": "PJM wants a ruling on its merged 12-month study process within 120 days. Transmission owners separately asked FERC for 10–20 year take-or-pay commitments backed by collateral. Watch comments from the Data Center Coalition and states, and whether FERC reconciles federal minimum terms with existing state tariffs.",
+   "item_ids": [
+    "2026-11-17#2",
+    "2026-11-19#2",
+    "2026-11-18#5",
+    "2026-11-16#2"
+   ]
+  },
+  {
+   "title": "US remote-access chip controls and spillover to mainstream chips",
+   "update": "The BIS rule covering Malaysia, Singapore, Indonesia, Thailand and Brazil took effect around Nov. 19. Reports followed that TSMC and Samsung paused some ordinary smartphone-chip shipments to Chinese customers. Watch the Federal Register text for how 'significant compute' is defined, early license decisions, and contract restructuring within the 90-day window.",
+   "item_ids": [
+    "2026-11-17#4",
+    "2026-11-20#5"
+   ]
+  },
+  {
+   "title": "US container gateways: record imports, LA/LB labor risk, Suez return",
+   "update": "October imports hit a record 2.67M TEU, and average port delays rose to 6.3 days. A strike by 250 LA/LB watchmen was averted by a tentative deal that still needs ratification. Gemini's first Suez sailing departs Dec. 4, which could release vessel capacity and cause bunching at European ports.",
+   "item_ids": [
+    "2026-11-17#3",
+    "2026-11-19#3",
+    "2026-11-22#1",
+    "2026-11-18#2"
+   ]
+  },
+  {
+   "title": "Federal permitting reform",
+   "update": "The Senate passed the bill 62–33. House passage after Thanksgiving is uncertain: Jeffries says he won't rubber-stamp it, and Democrats take both chambers in January. Each vote is a datable event for real-options and event-study work on transmission, pipeline and data-center developers.",
+   "item_ids": [
+    "2026-11-20#1"
+   ]
+  }
+ ],
+ "ideas": [
+  {
+   "title": "Do long-term large-load commitments screen out speculative data-center demand?",
+   "question": "Do minimum-term, take-or-pay and collateral requirements in large-load tariffs reduce speculative interconnection requests and later withdrawals? Do they shift requested data-center load toward jurisdictions with weaker commitments, and what happens to the residential rate path in adopting utilities?",
+   "why_now": "Terms are being set right now with real cross-sectional variation: a 10-year PJM floor proposed against a 12-year state average, 15-year terms in CA/NY, up to 20 years in MISO, plus Oklahoma's HB 2992 and AEP Ohio's tariff. They are layered on top of a political demand shock (the midterms) and rising community denials. That separates screening effects from general demand softening better than any earlier period.",
+   "data": "FERC eLibrary (ER27-531-000 and the compliance filings of other grid operators); state PUC large-load tariff dockets (Oklahoma PUD2026-000031, AEP Ohio, Alabama PSC, Dominion); ERCOT large-load interconnection reports; LBNL Queued Up; PJM load forecasts; Relae's blocked-project tracker; EIA-861 residential revenue by utility.",
+   "identification": "Staggered difference-in-differences at the utility-territory level. Outcomes are new large-load request volume (MW), withdrawal rates and time to energization, comparing utilities before and after adopting a commitment tariff. Adjacent non-adopting territories in the same grid operator serve as controls, with term length as a continuous treatment. The main threat is reverse causality: utilities adopt strict terms precisely where speculative requests have surged, and adoption coincides with state political shocks such as new governors and moratoria. Address it with event-time pre-trends, a 'leakage' outcome measured in neighbouring territories, and placebo tests on generator queues.",
+   "literature": "Capacity Investment with Demand Learning and Financing Capacity Investment Under Demand Uncertainty: An Optimal Contracting Approach supply the theory of committing capacity before demand resolves and of contract-based financing. Interplay between Competing and Coexisting Policy Regimens within Supply Chain Configurations speaks to overlapping federal and state regimes. That's Not Fair: Tariff Structures for Electricity Markets with Rooftop Solar frames the cross-subsidy question in tariff design.",
+   "item_ids": [
+    "2026-11-19#2",
+    "2026-11-17#2",
+    "2026-11-16#2",
+    "2026-11-18#1",
+    "2026-11-20#2",
+    "2026-11-22#2",
+    "2026-11-18#5"
+   ]
+  },
+  {
+   "title": "When export controls follow the 'China+1' hubs: over-compliance and capacity reallocation",
+   "question": "Did the November 2026 remote-access licensing rule reduce advanced-chip and server flows to the five covered countries relative to uncovered hubs? Did suppliers over-comply, cutting shipments of non-targeted mainstream chips beyond what the rule requires? And did announced data-center capacity relocate to uncovered hubs?",
+   "why_now": "The rule has a sharp effective date and a named set of treated countries, plus a 90-day cutoff for existing arrangements. Early reports of TSMC and Samsung halting ordinary smartphone-chip shipments make the over-compliance channel observable right away, rather than after years of adjustment.",
+   "data": "Taiwan Ministry of Finance and Korea customs monthly exports by HS code (8542, 8471) and partner; UN Comtrade and Census USA Trade Online; the BIS rule text and licensing records; DatacenterDynamics and Structure Research capacity announcements for Southeast Asia, Japan, India and the Gulf; FactSet Revere foundry–customer links; 10-K risk factors on SEC EDGAR.",
+   "identification": "A triple difference with three dimensions: covered versus uncovered destination countries, before versus after Nov. 19, and advanced (controlled) versus mainstream (non-targeted) product lines. A post-rule drop in mainstream lines to covered or Chinese destinations measures over-compliance. The main threat is confounding concurrent shocks: the threatened US tax on overseas AI data centers, front-loading ahead of an anticipated rule, and cyclical shifts in Chinese demand. Use pre-announcement windows and countries exposed to the tax threat but not to the rule.",
+   "literature": "Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty and Just-in-time for supply chains in turbulent times frame firms' sourcing and inventory responses. Global operations and supply-chain management under the political economy and Locking in overseas buyers amid geopolitical conflicts cover geopolitically driven buyer–supplier relationships.",
+   "item_ids": [
+    "2026-11-17#4",
+    "2026-11-20#5"
+   ]
+  },
+  {
+   "title": "Finance, threaten, or measure? Comparing buyer levers for supplier decarbonization",
+   "question": "Do suppliers subject to different buyer interventions reduce their reported emissions intensity, and does non-compliant supply shift to less demanding buyers? The interventions to compare are blended finance (Inditex/D-TAFS), exit threats (Nestlé dairy), and a shared reporting platform (Tesco/OpenClimat). The leakage question is whether non-compliant supply simply moves elsewhere.",
+   "why_now": "Three major buyers launched distinct levers in the same week, in different sectors, with identifiable supplier sets: Tesco's 400 key suppliers, IFC's 60–80 D-TAFS borrowers, and Nestlé's 200+ processors. Meanwhile Meta's possible target revision shows what happens when Scope 3 commitments meet capacity growth.",
+   "data": "CDP supply chain responses; the SBTi target dashboard; Open Supply Hub factory lists linking suppliers to brands; IFC disclosure portal project documents for D-TAFS borrowers; FactSet Revere buyer–supplier links; Nestlé, Tesco and dairy co-op sustainability reports.",
+   "identification": "Supplier-level difference-in-differences comparing suppliers of the intervening buyer with suppliers of peer buyers in the same sector and country. Outcomes are reported emissions intensity, SBTi target adoption and relationship persistence. The main threat is selection: buyers target suppliers already on a decarbonization path, and CDP reporting is itself endogenous to buyer pressure. Mitigate with pre-period matching on emissions trends, and with outcomes that don't depend on the supplier's own disclosure, such as SBTi status, or factory energy permits where available.",
+   "literature": "Eliciting Supplier Cooperation for Value Chain Decarbonization: A Field Experiment with Smallholder Farmers in India gives experimental evidence on the cooperation channel. Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective and Engaging Supply Chains in Climate Change cover disclosure-driven pressure. Sustainability in multi-tier supply chains: Understanding the double agency role of the first-tier supplier fits Nestlé's processor layer. Organizing Buyer‐Side Scope 3 Governance: Sensemaking in Supply Network Decarbonization frames the governance choice.",
+   "item_ids": [
+    "2026-11-17#5",
+    "2026-11-18#3",
+    "2026-11-19#5",
+    "2026-11-21#4",
+    "2026-11-20#3"
+   ]
+  }
+ ],
+ "watch": [
+  "Port data. ILWU Local 26 ratification vote at LA/LB, and Descartes' November import report (early December), which will show whether October's record was a rebound from a weak September or a level shift.",
+  "House action on the Senate-passed permitting reform bill after Thanksgiving, a datable event for transmission, pipeline and data-center stocks.",
+  "PJM and FERC. Opening of FERC's comment period on PJM's merged-study proposal and on the utilities' large-load commitment filings (ER27-531), plus calls to delay PJM's capacity auction until speculative data-center load is removed from the forecast.",
+  "Three dated deadlines. Gemini's first Suez sailing from Ningbo on Dec. 4; publication of Spain's data-center Royal Decree in the BOE, which settles annual versus hourly matching; and EUDR application around Dec. 30, with four member states still lacking enforcement authorities."
+ ],
+ "items": {
+  "2026-11-16#1": "Korea formalizes grid impact assessments: Seoul-area data centers need 75 points, sites under 10 MW stay exempt",
+  "2026-11-16#2": "Oklahoma lawmakers ask state Supreme Court to overturn OG&E power agreements for Google data centers",
+  "2026-11-16#3": "Samsung SDI signs 16 GWh LFP storage battery deal with BlackRock-owned Jupiter Power, made in Indiana",
+  "2026-11-16#4": "El Niño rains hit Ecuador's cocoa crop; exporters forecast a decline of more than 10% in 2027",
+  "2026-11-16#5": "Goyang reports 14% four-year drop in household food waste after rolling out RFID pay-as-you-throw bins",
+  "2026-11-17#1": "Nature Sustainability study: 403 US hyperscale data centers used 68–99 TWh in a year, about 1.8% of US electricity, with 54% from fossil fuels",
+  "2026-11-17#2": "PJM asks FERC to merge generation, transmission and large-load studies and cut interconnection study time from two years to 12 months",
+  "2026-11-17#3": "US container imports hit a record 2.67 million TEU in October 2026, up 16% year over year, as average port delays rise to 6.3 days",
+  "2026-11-17#4": "BIS interim final rule requires licenses for advanced AI chips to Malaysia, Singapore, Indonesia, Thailand and Brazil to stop remote access from China",
+  "2026-11-17#5": "IFC and SIMA launch D-TAFS blended-finance fund to decarbonize textile and apparel suppliers, with Inditex as a $50M anchor investor",
+  "2026-11-18#1": "Orennia: 191 GW of planned US data center capacity at risk after midterms, exposing utility and generator investments",
+  "2026-11-18#2": "Maersk and Hapag-Lloyd move three Gemini Asia–Europe services back to the Suez Canal from December",
+  "2026-11-18#3": "Nestlé tells dairy suppliers to meet decarbonisation standards or risk losing its business",
+  "2026-11-18#4": "POSCO signs three-year lithium supply deal with CATL for 2026–2028",
+  "2026-11-18#5": "US data centers cut transmission charges by avoiding a few peak hours, shifting costs onto other ratepayers",
+  "2026-11-19#1": "IEA: Global data center electricity use could double to about 1,000 TWh by 2030",
+  "2026-11-19#2": "Utilities ask FERC to require 10–20 year payment commitments from data centers before grid upgrades are built",
+  "2026-11-19#3": "Strike by 250 security workers could halt terminals handling over half of LA-Long Beach cargo, employers warn",
+  "2026-11-19#4": "Washington fines 38 plastic producers $246,548 in third year of recycled-content enforcement",
+  "2026-11-19#5": "Tesco asks 400 key suppliers to report emissions data through OpenClimat platform",
+  "2026-11-20#1": "Senate passes bipartisan permitting reform bill 62–33; House passage still uncertain",
+  "2026-11-20#2": "Community opposition stopped 16 US data-center projects (~$64B) in Q3 2026, up from 7 a year earlier",
+  "2026-11-20#3": "Meta re-evaluating its 2030 net-zero timeline after its net carbon footprint jumped 45% in 2025",
+  "2026-11-20#4": "EU reaches provisional SFDR 2.0 deal with three fund categories; Transition funds may hold expanding fossil-fuel firms under conditions",
+  "2026-11-20#5": "New US export controls on AI computing hit chip supply chains beyond AI and China; TSMC reportedly suspends some shipments",
+  "2026-11-21#1": "Spain adopts Royal Decree requiring data centres to source 80% of electricity from new renewables, alongside €17.14bn grid plan",
+  "2026-11-21#2": "US Interior Department provisionally sells first deep-sea mining exploration leases, 31.5 million acres off American Samoa, at minimum bids",
+  "2026-11-21#3": "UK and EU agree to link carbon markets from 2028; UK ETS to cover 50% of international shipping emissions",
+  "2026-11-21#4": "Meta signs multiyear certificate-based offtake deals for low-carbon cement, steel and recycled plastic for its data centre supply chain",
+  "2026-11-21#5": "Cal-Maine culls 1.76 million birds and halts a Florida egg plant after bird flu, amid an industry egg glut",
+  "2026-11-22#1": "Tentative deal for 250 ILWU Local 26 watchmen averts strike at Los Angeles–Long Beach port terminals",
+  "2026-11-22#2": "Alabama Power files $160 million 2027 rate cut, crediting data center revenue; watchdog points to tax cut and formula",
+  "2026-11-22#3": "EU ban on plastic waste exports to non-OECD countries takes effect Nov. 21, 2026",
+  "2026-11-22#4": "Ford reopens retooled Oakville, Ontario plant to build Super Duty pickups despite 25% US tariff",
+  "2026-11-22#5": "European Commission opens infringement cases against Bulgaria, Greece, Malta and Poland over EUDR enforcement authorities"
+ },
+ "dataset_candidates": [
+  {
+   "name": "Trase supply chain data",
+   "mentions": 3
+  },
+  {
+   "name": "CISA ICS security advisories",
+   "mentions": 2
+  },
+  {
+   "name": "Global Forest Watch tree cover loss data",
+   "mentions": 2
+  },
+  {
+   "name": "NESO Transmission Entry Capacity (TEC) Register",
+   "mentions": 2
+  }
+ ]
+}
