@@ -1,0 +1,81 @@
+{
+ "id": "2026-11-19#3",
+ "created": "2026-11-22",
+ "updates": [
+  {
+   "date": "2026-11-22",
+   "items": [
+    "2026-11-19#3",
+    "2026-11-22#1"
+   ],
+   "note": "This is a new thread. It opened with PMA's warning on Nov. 18–19 that talks had stalled ahead of a Nov. 21 deadline. It was quickly followed by news of a federally mediated tentative deal that averted the strike, with ratification still pending."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "ILWU Local 26 watchmen contract dispute at LA–Long Beach",
+  "summary": "About 250 ILWU Local 26 port watchmen (security guards) threatened to strike at six LA–Long Beach container terminals that, per the Pacific Maritime Association (PMA), handle more than half of the two ports' combined cargo. A federally mediated tentative agreement reached just before the 12:01 a.m. Nov. 21, 2026 deadline averted the strike. Terms are undisclosed and ratification is pending.",
+  "origin": "Bargaining ran for more than a year, under federal mediation for at least part of that time, so it likely began in 2025 or earlier. The exact start date is not confirmed. Local 26 members authorized a strike in late October 2026, and talks were then extended three times. On Nov. 17, 2026, PMA said talks had ended with 'little to no movement from the union' and that it would not extend past 12:01 a.m. Saturday, Nov. 21. A tentative deal was reached just before that deadline.",
+  "causes": "The specific issues in dispute (pay, staffing, technology, benefits) have not been made public. The union's leverage comes from concentration. The watchmen are only about 2% of the ILWU workforce at the two ports, but they work at six terminals that PMA says handle about 85% of Long Beach cargo and 33% of Los Angeles cargo. That makes a small unit a potential chokepoint. The timing also mattered: Sourcing Journal tied it to holiday restocking that was already delayed by rail congestion.",
+  "actors": [
+   {
+    "name": "ILWU Local 26",
+    "role": "Represents about 250 port watchmen; authorized a strike and bargained to the deadline",
+    "stake": "Contract terms for its members; leverage from the ability to halt key terminals"
+   },
+   {
+    "name": "Pacific Maritime Association (PMA)",
+    "role": "Bargains for West Coast terminal operators and shipping lines; refused further extensions to press for a settlement",
+    "stake": "Labor costs and uninterrupted terminal operations"
+   },
+   {
+    "name": "Federal mediators",
+    "role": "Mediated the talks that produced the tentative agreement (agency not confirmed in sources)",
+    "stake": "Avoiding a disruptive port stoppage"
+   },
+   {
+    "name": "Terminal operators at the six affected terminals",
+    "role": "Would have faced shutdown if the watchmen struck",
+    "stake": "Throughput and revenue, especially at Long Beach, where about 85% of cargo was exposed"
+   },
+   {
+    "name": "Shippers and retailers",
+    "role": "Importers moving holiday-season cargo through San Pedro Bay",
+    "stake": "Delays on top of existing rail congestion; contingency rerouting costs"
+   },
+   {
+    "name": "Ports of Los Angeles and Long Beach",
+    "role": "Gateways whose volumes were at risk",
+    "stake": "Reliability reputation and cargo share relative to other gateways"
+   }
+  ],
+  "status": "A strike was averted by a tentative agreement reached under federal mediation just before the 12:01 a.m. Nov. 21, 2026 deadline. Final terms are undisclosed. Members must still ratify, and the existing contract remains in force until the vote. Still open: the ratification date and outcome, the substance of the disputed issues, and the vote tallies.",
+  "watch": [
+   "Local 26 ratification vote: date and result not yet announced",
+   "Release of agreement terms by PMA or ILWU",
+   "Monthly container volume releases from the Ports of Los Angeles and Long Beach for November–December 2026, to check for any diversion or slowdown effects"
+  ],
+  "research": [
+   {
+    "question": "How do shippers respond to credible but averted port labor disruption threats? Do they shift bookings, front-load inventory or reroute away from the exposed gateway, and does that cargo return?",
+    "shock": "Late-October 2026 strike authorization and Nov. 17 impasse, then the tentative deal around Nov. 20–21, 2026",
+    "data": "Monthly TEU statistics from the Ports of LA and Long Beach versus other US gateways; bill-of-lading import data; vessel call and dwell-time data"
+   },
+   {
+    "question": "Chokepoint labor power: how does the concentration of a small bargaining unit across terminals with high cargo shares affect disruption risk and the value of terminal-level diversification?",
+    "shock": "Terminal-level exposure: about 85% of Long Beach and 33% of Los Angeles cargo moves through the six affected terminals",
+    "data": "Terminal-level throughput and berth schedules; a comparison with a prior small-unit stoppage at the same ports (the 2012 clerks' strike, which should be verified before use)"
+   }
+  ]
+ },
+ "updated": "2026-11-22",
+ "items": [
+  "2026-11-19#3",
+  "2026-11-22#1"
+ ],
+ "sources": [
+  "https://www.freightwaves.com/news/la-long-beach-port-strike-risk-grows-as-employers-say-ilwu-talks-stalled",
+  "https://www.freightwaves.com/news/tentative-union-deal-averts-strike-at-port-of-la-long-beach",
+  "https://wwd.com/sourcing-journal/logistics/los-angeles-long-beach-250-watchmen-la-lb-port-strike-threat-saturday-pma-ilwu-1239461164/"
+ ]
+}

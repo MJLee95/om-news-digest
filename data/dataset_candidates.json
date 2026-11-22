@@ -487,9 +487,10 @@
   "first_seen": "2026-10-26",
   "items": [
    "2026-10-26#5",
-   "2026-11-13#4"
+   "2026-11-13#4",
+   "2026-11-22#5"
   ],
-  "last_seen": "2026-11-13"
+  "last_seen": "2026-11-22"
  },
  "ghg protocol scope 2 public consultation responses": {
   "name": "GHG Protocol Scope 2 public consultation responses",
@@ -1522,5 +1523,37 @@
    "2026-11-21#5"
   ],
   "last_seen": "2026-11-21"
+ },
+ "port of los angeles and port of long beach monthly teu statistics": {
+  "name": "Port of Los Angeles and Port of Long Beach monthly TEU statistics",
+  "first_seen": "2026-11-22",
+  "items": [
+   "2026-11-22#1"
+  ],
+  "last_seen": "2026-11-22"
+ },
+ "eurostat comext monthly trade data (hs 3915)": {
+  "name": "Eurostat Comext monthly trade data (HS 3915)",
+  "first_seen": "2026-11-22",
+  "items": [
+   "2026-11-22#3"
+  ],
+  "last_seen": "2026-11-22"
+ },
+ "statistics canada canadian international merchandise trade database": {
+  "name": "Statistics Canada Canadian International Merchandise Trade Database",
+  "first_seen": "2026-11-22",
+  "items": [
+   "2026-11-22#4"
+  ],
+  "last_seen": "2026-11-22"
+ },
+ "european commission infringement decisions database": {
+  "name": "European Commission infringement decisions database",
+  "first_seen": "2026-11-22",
+  "items": [
+   "2026-11-22#5"
+  ],
+  "last_seen": "2026-11-22"
  }
 }
