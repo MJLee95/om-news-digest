@@ -1,0 +1,380 @@
+{
+ "intro": "Today's issue tracks policy shocks around who pays for, and who reports on, sustainability and energy: Alberta's cost-allocation and siting rules for large data centres, China's battery traceability regime, Australia's possible pullback on climate disclosure, BASF's exit from battery recycling, and an IMO carbon-pricing deal on a short deadline. Several items rest on partial sourcing, flagged where relevant.",
+ "items": [
+  {
+   "candidate_id": 15,
+   "headline": "Alberta's Bill 42 would make data centres of 10 MW or more pay for their own power infrastructure and would add province-wide siting limits",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/alberta-govt-proposes-new-rules-for-large-load-data-centers/",
+   "summary": "Alberta introduced Bill 42, the Energy, Environment and Utilities Statutes Amendment Act, 2026, around 18 November 2026. It would cover data centres of 10 MW or more. A new 'Data Centre Designation' would make developers pay for the power infrastructure serving them, including transmission lines inside their site, so the cost is not passed to ratepayers. The bill would also bar large data centres within 600 m of the nearest home, on irrigated land, and on about 14 million acres of Class 1 and 2 farmland, with the Alberta Utilities Commission (AUC) as the main regulator.",
+   "background": "Alberta already requires data centres to show they won't threaten grid reliability and to cut their power use first in emergencies. It also has a 'bring your own generation' approach, and a Data Centre Regulation enacted in June 2026. Public backlash grew after the AUC in August rejected a power plant needed for a $10B data centre in Olds, about 50 miles north of Calgary, because the plant was too close to communities. Bill 42 also creates a way to build lines that serve data centres off the main grid. It adds tools for high distribution costs and renames the Balancing Pool the Alberta Utilities Trust.",
+   "problem": "The province is trying to attract AI data centre investment while shielding ratepayers and rural communities from its costs. Shifting infrastructure costs onto developers and closing large areas of land raises the cost of projects and narrows where they can go. Heavy-industry zones (Industrial Heartland, Greenview Industrial Gateway) and brownfield sites may be exempt from the distance rules. The Alberta NDP wants a pause on all AI data centre projects and claims that 70% of them would still go ahead under the bill; that figure is unverified. The bill has not passed. DCD says rules are expected in 2027, but it is unclear whether that refers to Bill 42 or the earlier law.",
+   "where_why": "The friction sits at the interconnection and siting stage, where large, fast-arriving loads meet a regulated grid and local land use. Who pays for grid connections determines whether the costs of large loads spill over to other ratepayers. Siting externalities (noise, water, farmland loss, proximity to homes) were previously handled case by case, which created regulatory uncertainty. Making the AUC the single regulator, with uniform rules on setbacks, noise, lighting, heat recovery and water, is meant to replace case-by-case decisions with predictable thresholds.",
+   "stakeholders": [
+    {
+     "name": "Data centre developers and hyperscalers",
+     "stake": "Want clear, fast approvals; face higher project costs from self-funded wires and fewer eligible sites"
+    },
+    {
+     "name": "Alberta ratepayers",
+     "stake": "Want protection from grid costs caused by large loads and from rising distribution charges"
+    },
+    {
+     "name": "Rural municipalities and residents",
+     "stake": "Want setbacks and farmland protection; may lose tax revenue if projects relocate"
+    },
+    {
+     "name": "Alberta Utilities Commission",
+     "stake": "Gains authority as the single regulator but must apply consistent rules to a surge of applications"
+    },
+    {
+     "name": "Alberta government and NDP opposition",
+     "stake": "Government seeks investment with public consent; the NDP seeks a pause on AI data centres"
+    }
+   ],
+   "hints": [
+    "Cost allocation for large loads as a policy shock: compare how project size and location respond against peer provinces and US states with large-load tariffs.",
+    "A facility-location lens with exclusion zones (600 m setbacks, farmland classes) and exemptions for industrial parks: do the rules push projects toward brownfield clusters?",
+    "Notice the 'bring your own generation' plus off-grid lines design: a self-supply versus grid-connection choice under regulatory uncertainty."
+   ],
+   "data_leads": "AUC proceedings and decisions (e.g., the Olds power plant ruling), AESO large-load connection requests, and Alberta soil-class maps; for US comparisons, state PUC large-load tariff dockets and LBNL interconnection queue data.",
+   "keywords": [
+    "large-load tariffs",
+    "facility siting",
+    "cost pass-through",
+    "data center electricity demand",
+    "regulatory thresholds"
+   ],
+   "dataset_candidates": [
+    "AESO large load connection request list",
+    "Alberta Utilities Commission eFiling proceedings database"
+   ],
+   "datasets": [
+    "state_puc",
+    "lbnl_queues"
+   ],
+   "related": [],
+   "url": "https://www.datacenterdynamics.com/en/news/alberta-govt-proposes-new-rules-for-large-load-data-centers/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 23"
+  },
+  {
+   "candidate_id": 117,
+   "headline": "China's 2026 rules for recycling EV traction batteries require full lifecycle tracking and make battery and EV makers responsible for recycling",
+   "theme": "Circular Economy",
+   "original_url": "",
+   "summary": "China Daily reported new industry rules for EV battery recycling; the specific article and its date could not be confirmed. The verified framework is the Interim Measures for the Management of Recycling and Comprehensive Utilization of Waste NEV Traction Batteries. Six bodies (MIIT, NDRC, the environment, transport and commerce ministries, and SAMR) issued it on 16 January 2026, and it took effect on 1 April 2026. It sets up a national database that tracks each battery from production to final processing, requires batteries to be scrapped together with their vehicles, and makes battery and EV makers responsible for recycling. Bloomberg reports penalties of up to 50,000 yuan (about $7,174), detention, or loss of business licences.",
+   "background": "China is the largest EV battery market, and a wave of retired packs is coming. An industry association estimated 820,000 tons retired in 2025, rising above 4 million tons from 2028. Another forecast puts the figure at about 1 million tonnes by 2030; the two conflict, so neither should be treated as firm. Standards have grown from 22 national standards (late 2025) to nearly 30 (Feb 2026). The April rules repealed the earlier framework for reusing old batteries in other applications ('cascade utilization'), and on 30 July MIIT withdrew special recognition for companies in that category. CleanTechnica says reuse is still allowed if products meet standards, so calling this a 'ban' is a misreading.",
+   "problem": "Informal and unlicensed channels have competed with formal recyclers for retired packs. The new regime tries to send that feedstock into traceable, standards-compliant channels through lifecycle coding and producer responsibility. Open questions are whether the fines are large enough to deter leakage, how the rule tying battery scrapping to vehicle scrapping changes the timing and routing of returns, and whether pulling back from formal recognition of second-life reuse shifts packs from reuse toward material recovery.",
+   "where_why": "The problem arises in reverse logistics, from the point where a battery is replaced or a vehicle is scrapped to the dismantler and recycler. The underlying friction is information asymmetry: no one could see where individual packs went, so informal buyers paying higher prices could capture feedstock. Responsibility is also split between automakers, battery makers and recyclers. Producer responsibility and a national tracking database aim to close that information gap. Their effect depends on enforcement and on recyclers' capacity.",
+   "stakeholders": [
+    {
+     "name": "EV and battery manufacturers",
+     "stake": "Bear recycling responsibility and design-for-recycling obligations; costs rise but they may gain control over feedstock"
+    },
+    {
+     "name": "Licensed recyclers",
+     "stake": "Could gain feedstock if informal channels are squeezed; need capacity and standards compliance"
+    },
+    {
+     "name": "Second-life (cascade) reuse firms",
+     "stake": "Lost special recognition; must meet product standards to stay viable"
+    },
+    {
+     "name": "MIIT, SAMR and other regulators",
+     "stake": "Must run the national traceability database and enforce penalties"
+    }
+   ],
+   "hints": [
+    "Treat the traceability mandate as an information-design intervention in a closed-loop supply chain: what happens to formal collection rates when visibility rises?",
+    "Competition between formal and informal recycling channels, and how strong penalties must be relative to the price gap for feedstock.",
+    "Puzzle: tightening oversight of second-life reuse may change which use (reuse versus material recovery) a retired pack goes to."
+   ],
+   "data_leads": "MIIT announcements and lists of compliant battery recycling firms, SAMR national standards, UN Comtrade trade in black mass and battery scrap, and commercial battery supply data (Benchmark/BNEF) alongside USGS mineral summaries.",
+   "keywords": [
+    "battery recycling",
+    "extended producer responsibility",
+    "multi-tier traceability",
+    "second-life batteries",
+    "reverse logistics"
+   ],
+   "dataset_candidates": [
+    "MIIT list of enterprises meeting standard conditions for waste NEV battery comprehensive utilization"
+   ],
+   "datasets": [
+    "un_comtrade",
+    "battery_supply"
+   ],
+   "related": [
+    {
+     "title": "Closed‐loop supply chains with product remanufacturing: Challenges and opportunities",
+     "journal": "Journal of Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1002/joom.1298",
+     "cites": 18,
+     "why": "An overview of the pressure points in remanufacturing-focused closed-loop supply chains, directly relevant to how producer-responsibility rules change returns and recovery."
+    },
+    {
+     "title": "Toward “Omniscient” supply chains: Enabling and incentivizing sustainable operations",
+     "journal": "Production and Operations Management",
+     "year": 2026,
+     "url": "https://doi.org/10.1177/10591478261493185",
+     "cites": 0,
+     "why": "Examines how full value-chain visibility could enable and incentivize sustainable operations, which matches China's bet on lifecycle battery tracking."
+    }
+   ],
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBUeVY3ZVNySjNDWUxXNTQwUmFucF8tb3k1b0ZfMFJsWW1YR2N0bVR6QWdQQVo1eVJrQjBTQkc4X2tiN2RZakE1MlByYmxleldRbUd0NEZqLWFDYzMwSFJHam8zbHNONlJUbVlGZXdfM21JelBYUTYxOW1xaW1xZw?oc=5",
+   "follows": [],
+   "source": "China Daily",
+   "date": "Nov 23"
+  },
+  {
+   "candidate_id": 49,
+   "headline": "Australia's Productivity Commission recommends not extending mandatory climate reporting to mid-sized 'Group 3' companies",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.beefcentral.com/news/productivity-commission-calls-for-scaling-back-climate-reporting-burden-on-business/",
+   "summary": "Around 20 November 2026, Australia's Productivity Commission released an interim report from its inquiry into business reporting requirements. It recommends not going ahead with extending mandatory climate reporting to medium-sized 'Group 3' businesses, which is scheduled for financial years starting 1 July 2027. It also recommends simplifying Scope 3 reporting through estimates and industry averages, and aligning sustainability reporting with the national emissions reporting scheme (NGER). It proposes repealing payment-times reporting unless new evidence shows its benefits justify its costs, and easing some gender equality reporting for employers that already perform strongly.",
+   "background": "Australia's mandatory climate reporting began with businesses turning over more than $500M, for financial years beginning 1 January 2025, and is phased in by company size. Commissioner Barry Sterland said extending it to medium businesses would add 'a significant extra compliance burden' and that 'it's not clear the information will be worth the cost.' The Commission found that payment outcomes improved only modestly and that there isn't enough evidence the reporting caused the improvement. By contrast, gender equality reporting appears to be changing how businesses behave.",
+   "problem": "The core question is whether mandatory disclosure produces benefits worth its compliance costs, and where along the firm-size range the threshold should sit. Collecting Scope 3 data from suppliers pushes costs onto smaller firms in the supply chain. Replacing supplier data with industry averages lowers those costs but may weaken the link between disclosure and supplier emissions cuts. These are interim positions only: submissions close 18 December, a final report will follow, and no government response was seen.",
+   "where_why": "The problem arises at the size threshold where disclosure mandates hit firms with less reporting capacity, and in the supplier data requests behind Scope 3 reporting. Underneath is a cost-benefit tradeoff with uncertain benefits. It is complicated by duplicate reporting systems (NGER versus the new sustainability standards), which create redundant compliance work.",
+   "stakeholders": [
+    {
+     "name": "Medium-sized 'Group 3' businesses",
+     "stake": "Would avoid new compliance costs if the extension is dropped"
+    },
+    {
+     "name": "Small suppliers to large reporters",
+     "stake": "Face fewer requests for new emissions data if Scope 3 estimation is allowed"
+    },
+    {
+     "name": "Investors and lenders",
+     "stake": "May lose comparable climate data on mid-cap firms"
+    },
+    {
+     "name": "Australian government and regulators",
+     "stake": "Must decide whether to keep the phased schedule after the final report"
+    },
+    {
+     "name": "Productivity Commission",
+     "stake": "Testing an evidence standard for reporting regimes (benefits must justify costs)"
+    }
+   ],
+   "hints": [
+    "Size thresholds and staggered phase-in dates create discontinuities that suit regression discontinuity or difference-in-differences designs, if the Group 3 phase-in is cancelled or delayed.",
+    "Contrast the evidence on payment-times reporting (weak effect) with gender reporting (behaviour change): when does disclosure actually change operations?",
+    "How does Scope 3 measured by industry averages compare with supplier-specific data in creating incentives for suppliers to cut emissions?"
+   ],
+   "data_leads": "Clean Energy Regulator NGER published data, the Payment Times Reporting Register, company climate reports of Group 1 and 2 firms, and CDP supply chain responses.",
+   "keywords": [
+    "mandatory climate reporting",
+    "scope 3 disclosure",
+    "regulatory thresholds",
+    "supplier emissions",
+    "supplier engagement"
+   ],
+   "dataset_candidates": [
+    "Clean Energy Regulator NGER published emissions data",
+    "Australian Payment Times Reporting Register"
+   ],
+   "datasets": [
+    "cdp"
+   ],
+   "related": [
+    {
+     "title": "Market Reaction to Mandatory Nonfinancial Disclosure",
+     "journal": "Management Science",
+     "year": 2018,
+     "url": "https://doi.org/10.1287/mnsc.2018.3099",
+     "cites": 817,
+     "why": "An event study of how equity markets reacted to the EU's mandatory nonfinancial disclosure directive, a template for valuing changes to disclosure mandates such as Australia's."
+    },
+    {
+     "title": "Customer base environmental disclosure and supplier greenhouse gas emissions: A signaling theory perspective",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1272",
+     "cites": 209,
+     "why": "Shows whether customers' environmental disclosure is linked to their suppliers cutting greenhouse gas emissions, the mechanism at stake if Scope 3 shifts to industry averages."
+    }
+   ],
+   "url": "https://www.beefcentral.com/news/productivity-commission-calls-for-scaling-back-climate-reporting-burden-on-business/",
+   "follows": [],
+   "source": "Sheep Central",
+   "date": "Nov 23"
+  },
+  {
+   "candidate_id": 116,
+   "headline": "BASF agrees to sell its battery recycling business, including the Schwarzheide black mass plant, to cylib",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://www.finanznachrichten.de/nachrichten-2026-11/70203016-basf-to-sell-battery-recycling-business-to-cylib-as-it-sharpens-battery-materials-focus-020.htm",
+   "summary": "BASF agreed to sell its battery recycling business to the recycling specialist cylib, announced on a Monday, likely 23 November 2026. The sale covers recycling operations in Europe and North America, intellectual property, customer contracts and partner relationships, and a black mass plant and prototype recycling facility in Schwarzheide, Germany. The price was not disclosed and closing is expected between Q2 and Q3 2027. BASF says it will focus on cathode active materials and is looking at strategic options, including partnerships, for its idled battery materials plants in Battle Creek, Michigan, and Harjavalta, Finland.",
+   "background": "BASF said the Schwarzheide black mass plant started commercial operation in June 2025, so the exit comes less than 18 months later. Black mass is the shredded battery material that recyclers then process to recover metals. The idling of Battle Creek and Harjavalta shows that BASF's broader battery materials buildout in the West has slowed.",
+   "problem": "A large diversified chemical company is deciding that battery recycling is not where it will earn its return and is handing the assets to a specialist. Open questions are whether recycling is better done by integrated materials makers or by specialists, how a vertically integrated loop (recycled metals feeding cathode production) is affected when the two are split, and what happens to newly built capacity in regions where EV demand and feedstock are developing more slowly. Deal value, regulatory approvals and the effect on staff are not public.",
+   "where_why": "The decision sits at the link between collecting and processing end-of-life batteries and producing cathode active materials. The frictions are uncertain feedstock volumes and timing, large upfront capital, and the choice of where to draw firm boundaries: whether owning recycling generates enough synergy with cathode production to justify the capital. BASF says it is reallocating capital toward the stage it judges has the best potential for profitable growth.",
+   "stakeholders": [
+    {
+     "name": "BASF",
+     "stake": "Frees capital for cathode active materials; gives up captive recycled feedstock"
+    },
+    {
+     "name": "cylib",
+     "stake": "Gains scale, intellectual property, customers and an operating black mass plant; takes on feedstock risk"
+    },
+    {
+     "name": "Automakers and battery-cell customers",
+     "stake": "Rely on recycling capacity to meet recovery and recycled-content goals"
+    },
+    {
+     "name": "Communities around Battle Creek and Harjavalta",
+     "stake": "Idled plants face uncertain futures pending partnerships"
+    }
+   ],
+   "hints": [
+    "A firm-boundary (vertical integration versus specialization) lens on circular value chains: when should a materials producer own its recycling?",
+    "Capacity investment under uncertainty: the gap between plant start-up (June 2025) and exit offers a case for real-options thinking about recycling capacity built too early.",
+    "Compare with other Western battery-materials retreats and the idled sites to gauge how capacity in the West responds to slower EV demand."
+   ],
+   "data_leads": "BASF annual reports and segment disclosures, deal announcements in SEC EDGAR or national registries for comparable transactions, USGS Mineral Commodity Summaries for lithium, nickel and cobalt, and Benchmark/BNEF battery supply data where available.",
+   "keywords": [
+    "battery recycling",
+    "vertical integration",
+    "capacity investment under uncertainty",
+    "plant closure",
+    "secondary materials"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "usgs_minerals",
+    "battery_supply"
+   ],
+   "related": [],
+   "url": "https://www.finanznachrichten.de/nachrichten-2026-11/70203016-basf-to-sell-battery-recycling-business-to-cylib-as-it-sharpens-battery-materials-focus-020.htm",
+   "follows": [],
+   "source": "Bloomberg.com",
+   "date": "Nov 23"
+  },
+  {
+   "candidate_id": 119,
+   "headline": "IMO enters two weeks of critical talks on whether to adopt its Net-Zero Framework for shipping emissions",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://breakbulk.news/",
+   "summary": "According to a Breakbulk teaser (the full article is unverified), the International Maritime Organization (IMO) faces 'two weeks of critical negotiations' as governments disagree over shipping emissions rules, including whether to adopt the Net-Zero Framework (NZF). A related Breakbulk report from 20 November 2026 says Danish and Norwegian shipowners accept slower talks but want binding global rules. A consultancy says four rival proposals are before the IMO, ranging from protecting the NZF to reopening it.",
+   "background": "The NZF draft was approved in April 2025. It would be the first global carbon-pricing system: ships would pay $380 per tonne of CO2-equivalent above their limits, possibly raising up to $40bn from 2030. It supports IMO targets of a 20% cut by 2030 and net zero by 2050. In October 2025, IMO members voted to postpone adoption after the US threatened sanctions, visa restrictions and port fees on countries that backed it. The meeting's exact dates and name, which countries back which position, and what the 'deadline' formally means are unverified.",
+   "problem": "Carriers must commit to long-lived vessels and fuel pathways without knowing whether a global carbon price will exist, when it will start, or at what level. Further delay prolongs this uncertainty. Some shipowners prefer binding global rules to a patchwork of regional ones, while geopolitical pressure has already derailed the framework once.",
+   "where_why": "The problem arises in fleet investment and fuel-choice decisions, where ships last for decades. The friction is policy uncertainty combined with a coordination problem: carbon pricing only works if it applies globally, but adoption requires consensus that can be blocked or delayed by powerful states. Without global rules, firms face uneven regional regimes and risk being stuck with assets unsuited to later rules.",
+   "stakeholders": [
+    {
+     "name": "Shipowners (e.g., Danish and Norwegian associations)",
+     "stake": "Want binding, uniform global rules to plan fleet and fuel investments"
+    },
+    {
+     "name": "United States government",
+     "stake": "Opposed the NZF and threatened sanctions and port fees on supporters"
+    },
+    {
+     "name": "IMO member states backing the NZF",
+     "stake": "Seek to lock in carbon pricing and the 2030 and 2050 targets"
+    },
+    {
+     "name": "Alternative-fuel producers and shipyards",
+     "stake": "Demand for their products depends on whether a carbon price is adopted"
+    }
+   ],
+   "hints": [
+    "Real options and capacity investment under policy uncertainty: how do newbuild orders and fuel-choice decisions respond to adoption or delay?",
+    "The October 2025 postponement and the upcoming decision are event dates for studying how carriers, shipyards or fuel suppliers react.",
+    "Compare global carbon pricing with regional regimes (e.g., EU shipping rules): carbon leakage and route or port diversion are possible."
+   ],
+   "data_leads": "EU MRV (THETIS-MRV) ship-level emissions, IMO DCS fuel consumption data, NOAA AIS vessel tracks for speed and routing, and newbuild orderbook data; ocean rates and schedule reliability (Xeneta/Sea-Intelligence) for cost pass-through.",
+   "keywords": [
+    "maritime policy",
+    "regulatory uncertainty",
+    "cap and trade",
+    "carbon leakage",
+    "fleet turnover"
+   ],
+   "dataset_candidates": [
+    "EU THETIS-MRV ship emissions data",
+    "IMO Data Collection System (DCS) fuel consumption reports"
+   ],
+   "datasets": [
+    "noaa_ais",
+    "ocean_schedules"
+   ],
+   "related": [
+    {
+     "title": "Mitigating the financial risk behind emission cap compliance: A case in maritime transportation",
+     "journal": "Production and Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1111/poms.13837",
+     "cites": 21,
+     "why": "Models the financial risk carriers face in complying with emission caps, using IMO 2020 as the case, which maps directly onto investment choices under a possible IMO carbon price."
+    },
+    {
+     "title": "Vessel sharing and its impact on maritime operations and carbon emissions",
+     "journal": "Production and Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1111/poms.13730",
+     "cites": 42,
+     "why": "Quantifies how vessel sharing changes operational efficiency and carbon emissions, one operational lever carriers could use to cut costs under a carbon price."
+    }
+   ],
+   "url": "https://breakbulk.news/",
+   "follows": [],
+   "source": "Breakbulk.News",
+   "date": "Nov 23"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 14,
+   "takeaway": "The paper studies a capital-constrained supplier whose effort to improve component quality cannot be observed, and asks whether bank finance or buyer finance works better. It compares consignment (the OEM buys components directly and outsources assembly to a contract manufacturer) with turnkey sourcing (the contract manufacturer buys the components), and shows that the financing choice interacts with the outsourcing structure.",
+   "connection": "Capital-constrained specialist recyclers such as cylib, which takes over BASF's assets, face a similar question: who finances upstream capacity and quality.",
+   "title": "EXPRESS: Financing Selection Under Procurement Decentralization with a Quality-Uncertain Supplier",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261511680"
+  },
+  {
+   "candidate_id": 9,
+   "takeaway": "Using an agent-based model within a system dynamics framework, the paper examines how operational and organizational complexity, together with a too-big-to-fail status, can feed a confidence trap that leads highly regulated firms such as Boeing toward man-made disasters.",
+   "connection": "It is a useful lens for how regulators and large firms handle safety risk as oversight is reallocated, as in Alberta's consolidation of data-centre oversight in the AUC or the easing of reporting burdens in Australia.",
+   "title": "EXPRESS: Supercharging the Confidence Trap: Too-Big-to-Fail and Man-Made Disasters",
+   "journal": "Production and Operations Management",
+   "url": "https://doi.org/10.1177/10591478261510216"
+  }
+ ],
+ "thread_to_pull": "Three items concern who bears the cost of a sustainability or reliability goal: Alberta pushes grid costs onto data centre developers, China pushes recycling responsibility onto battery and EV makers, and Australia's Productivity Commission questions whether supplier-level Scope 3 data is worth its cost. Set beside the BASF exit and the stalled IMO deal, they suggest a question about how cost allocation and policy uncertainty together shape capacity investment in long-lived assets.",
+ "also": [
+  {
+   "title": "Corporate Japan races to revive rare-earth supply chain amid China curbs",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYkI5QjY3SHBtOHNiT0FaY21DSDRqa3BqWHU5c3REQTE5d2RHNjFVSGFfTm9LZV95Yld0M1lnckdjSE1vZ2FKYXNDM2FoZ0k1LUpGVUhwazdqSzB1bUxtam5jSWt2S0xSbDkyVlpmT2J5NjNsUFhMckdDTmJJUkNyZEM5M0xBZXQzUUNTdnVXOHlPUUx6QWFRN3VkVnhjUWtlVF9RSjBpNmdiSkZ4NGZGR0RSUTJWQQ?oc=5",
+   "source": "Nikkei Asia",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "A Midwest Manufacturer Ditched a Potent Greenhouse Gas. Will Others Follow?",
+   "url": "https://insideclimatenews.org/news/23112026/indiana-magnesium-recycler-stopped-releasing-super-pollutant/",
+   "source": "Inside Climate News",
+   "theme": "Sustainable Operations"
+  },
+  {
+   "title": "COP31 Talks Collapse as EU, UK Walk Over Failure to Address Fossil Fuels",
+   "url": "https://www.esgtoday.com/cop31-talks-collapse-as-eu-uk-walk-over-failure-to-address-fossil-fuels/?utm_source=rss&utm_medium=rss&utm_campaign=cop31-talks-collapse-as-eu-uk-walk-over-failure-to-address-fossil-fuels",
+   "source": "ESG Today",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Report: 3 Wisconsin data centers account for 70% of growth in peak electricity demand",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1hYkY3MUhLdng4cmJFZVpXb3FRbXYzRWY4WWU3YmVBSnlXeko0UnctbEtBVDVVYnhiX1lqUEVHR0luZnRXUVY1ekNCUGlhN2JUMVdtMVZLTjgybEduVTBlcHNOazZhUFBQV3RqLVFDSFB5d0lHNTJ4aWh4VTVsU3M?oc=5",
+   "source": "WPR",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Electric truck forecasts slashed by half due to lack of chargers, and despite plunging battery costs",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSU5nYzNJbGRJYkxfaGxqeWlpRHM3VlVyZ29WTV84ekNCa2NuZXBpNEctdWVBcU1ZUmp0dkkwbTVEVUNqNTVBVVhYNGRYM2pBSUJGMGZRcDQyLXBvVTVSdEF0VDV6TWVLZk1JcnVxTTVoRlpHMVYzcVU4SW5SMjlsTUV4Q3lrY2gzNVJuOHppMV91NGVFZUJUT0hYRG9GY1BBNy1OT1FLQV90MkkyLVNxaDlzblZxUXJKNkRBc24xYzNYV2tjdDZ3ZkVCS2E3OTA0ZUFvUElQd1MtWkdVMVI3OQ?oc=5",
+   "source": "The Driven",
+   "theme": "Logistics Decarbonization"
+  }
+ ]
+}

@@ -1555,5 +1555,61 @@
    "2026-11-22#5"
   ],
   "last_seen": "2026-11-22"
+ },
+ "aeso large load connection request list": {
+  "name": "AESO large load connection request list",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#1"
+  ],
+  "last_seen": "2026-11-23"
+ },
+ "alberta utilities commission efiling proceedings database": {
+  "name": "Alberta Utilities Commission eFiling proceedings database",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#1"
+  ],
+  "last_seen": "2026-11-23"
+ },
+ "miit list of enterprises meeting standard conditions for waste nev battery comprehensive utilization": {
+  "name": "MIIT list of enterprises meeting standard conditions for waste NEV battery comprehensive utilization",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#2"
+  ],
+  "last_seen": "2026-11-23"
+ },
+ "clean energy regulator nger published emissions data": {
+  "name": "Clean Energy Regulator NGER published emissions data",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#3"
+  ],
+  "last_seen": "2026-11-23"
+ },
+ "australian payment times reporting register": {
+  "name": "Australian Payment Times Reporting Register",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#3"
+  ],
+  "last_seen": "2026-11-23"
+ },
+ "eu thetis-mrv ship emissions data": {
+  "name": "EU THETIS-MRV ship emissions data",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#5"
+  ],
+  "last_seen": "2026-11-23"
+ },
+ "imo data collection system (dcs) fuel consumption reports": {
+  "name": "IMO Data Collection System (DCS) fuel consumption reports",
+  "first_seen": "2026-11-23",
+  "items": [
+   "2026-11-23#5"
+  ],
+  "last_seen": "2026-11-23"
  }
 }
