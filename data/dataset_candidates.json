@@ -1611,5 +1611,77 @@
    "2026-11-23#5"
   ],
   "last_seen": "2026-11-23"
+ },
+ "shanghai metals market refined cobalt price series": {
+  "name": "Shanghai Metals Market refined cobalt price series",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#1"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "china general administration of customs cobalt intermediate import data": {
+  "name": "China General Administration of Customs cobalt intermediate import data",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#1"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "dol form 5500 filings (efast2)": {
+  "name": "DOL Form 5500 filings (EFAST2)",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#2"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "iss voting analytics": {
+  "name": "ISS Voting Analytics",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#2"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "ohio secretary of state local ballot issue results": {
+  "name": "Ohio Secretary of State local ballot issue results",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#3"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "bls producer price index for semiconductors and related devices": {
+  "name": "BLS Producer Price Index for semiconductors and related devices",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#4"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "trendforce dram contract price reports": {
+  "name": "TrendForce DRAM contract price reports",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#4"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "drewry world container index": {
+  "name": "Drewry World Container Index",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#5"
+  ],
+  "last_seen": "2026-11-24"
+ },
+ "shanghai containerized freight index (scfi)": {
+  "name": "Shanghai Containerized Freight Index (SCFI)",
+  "first_seen": "2026-11-24",
+  "items": [
+   "2026-11-24#5"
+  ],
+  "last_seen": "2026-11-24"
  }
 }
