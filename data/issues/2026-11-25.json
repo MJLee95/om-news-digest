@@ -1,0 +1,381 @@
+{
+ "intro": "Today's issue looks at how utilities and cities are pricing or blocking AI data center load, from TVA's first deal under a new large-load tariff to Aurora's moratorium. It also covers two cases of targets colliding with operational limits, at CMA CGM and under California's packaging EPR law, and a shipper's challenge to the Union Pacific–Norfolk Southern merger.",
+ "items": [
+  {
+   "candidate_id": 12,
+   "headline": "TVA books $1.7B from an unnamed data center under its new large-load tariff, priced at about $1.5M per MW",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.utilitydive.com/news/tva-announces-17b-data-center-deal-under-new-large-load-tariff/875630/",
+   "summary": "In a Nov. 12 SEC filing, the Tennessee Valley Authority disclosed that it will receive $1.7 billion in total payments from an unnamed data center customer under its new tariff for loads above 5 MW. The charges are based on roughly $1.5 million per MW of requested capacity above 5 MW, under a 'cohort-based pricing methodology' that TVA says may be revised for future cohorts. Separately, TVA received the NRC's first SMR construction permit, for a BWRX-300 at Clinch River, but says it has not decided whether to build.",
+   "background": "The tariff took effect Oct. 1 and phases in through 2029, so existing customers can keep their current rate structure for a while. CEO Mike Skaggs said the rate change has supported investments such as extending the lives of TVA's nuclear units and expanding its nuclear fuel hub. In August the board approved 1.5 GW of new gas generation targeted for 2032. That project inherits $463M of long-lead equipment from the cancelled Middle Tennessee Energy Solution project, and TVA could spend up to $3.1B more on it. TVA plans $13B of capex over three years, on top of more than $23B invested since 2020, and its filing cites supply chain pressure from inflation, tariffs and trade restrictions.",
+   "problem": "Utilities have to commit to lumpy, long-lead generation before they know whether data center demand will actually show up. TVA is shifting some of that risk onto large customers through capacity-based charges set cohort by cohort. Several key terms remain undisclosed: the customer, the contract term, the payment timing and the contracted capacity. Back-of-envelope division of $1.7B by $1.5M/MW gives about 1.1 GW, but no source states that figure. The open question is whether per-MW capacity charges and cohort repricing allocate risk efficiently between the utility, data centers and existing ratepayers.",
+   "where_why": "The friction sits where retail tariff design meets generation capacity planning. Demand uncertainty and information asymmetry matter here, because data centers know their true load plans better than the utility does. So does the timing mismatch between quickly announced loads and generation that takes 5–7+ years to build. Cohort-based pricing lets TVA reprice later entrants, which creates incentives to request capacity early. As a federal utility, TVA sets its own rates rather than going through a state PUC.",
+   "stakeholders": [
+    {
+     "name": "TVA",
+     "stake": "Wants committed revenue to fund nuclear life extensions, the 1.5 GW gas build and a possible SMR without stranding assets."
+    },
+    {
+     "name": "Data center developers",
+     "stake": "Want firm power quickly, but pay about $1.5M/MW upfront for requested capacity and face repricing in later cohorts."
+    },
+    {
+     "name": "Existing residential and industrial customers",
+     "stake": "Benefit if large loads cover their own capacity costs; are exposed if those costs are socialized."
+    },
+    {
+     "name": "Equipment suppliers (turbines, reactor vendors such as the BWRX-300 maker)",
+     "stake": "Benefit from long-lead orders, which TVA says are pressured by tariffs and trade restrictions."
+    }
+   ],
+   "hints": [
+    "Look at capacity reservation contracts and take-or-pay structures: how does a per-MW charge on requested capacity, rather than used capacity, shape how much customers overstate their needs?",
+    "Cohort-based pricing resembles sequential mechanism design. Consider what repricing later cohorts does to entry timing and to queue-jumping incentives.",
+    "Notice that TVA is redeploying sunk long-lead equipment from a cancelled project. That makes it a real-options case of equipment as a flexible capacity hedge."
+   ],
+   "data_leads": "TVA 10-K/10-Q filings on SEC EDGAR, EIA-861 utility sales by customer class, EIA-860 planned generator additions, and the NRC licensing docket for the Clinch River SMR.",
+   "keywords": [
+    "large-load tariffs",
+    "data center electricity demand",
+    "capacity investment under uncertainty",
+    "long-term supply contracts",
+    "gas turbines"
+   ],
+   "dataset_candidates": [
+    "NRC Clinch River BWRX-300 construction permit docket"
+   ],
+   "datasets": [
+    "sec_edgar",
+    "eia860"
+   ],
+   "related": [
+    {
+     "title": "Lumpy Capacity Investment and Disinvestment Dynamics",
+     "journal": "Operations Research",
+     "year": 2010,
+     "url": "https://doi.org/10.1287/opre.1100.0823",
+     "cites": 70,
+     "why": "Models lumpy capacity investment and disinvestment dynamics, which is the core trade-off behind TVA's gas, nuclear and SMR commitments in response to chunky data center load."
+    },
+    {
+     "title": "Electricity Time‐of‐Use Tariff with Stochastic Demand",
+     "journal": "Production and Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1111/poms.12610",
+     "cites": 66,
+     "why": "Studies how an electricity company designs tariffs under stochastic demand, offering a modeling starting point for capacity-based large-load pricing."
+    }
+   ],
+   "url": "https://www.utilitydive.com/news/tva-announces-17b-data-center-deal-under-new-large-load-tariff/875630/",
+   "follows": [],
+   "source": "Utility Dive",
+   "date": "Nov 24"
+  },
+  {
+   "candidate_id": 37,
+   "headline": "Vantage abandons its 500 MW Trident site the night Aurora, Colorado, passes a data center moratorium",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://www.datacenterdynamics.com/en/news/vantage-drops-plans-for-trident-data-center-after-colorados-aurora-city-passes-moratorium/",
+   "summary": "On Nov. 23, 2026, Vantage Data Centers said it would no longer pursue its Trident site on East 48th Avenue in northeast Aurora. The facility was planned at about 860,000 sq ft and 500 MW total (334 MW IT), and DCD says it would have been Colorado's largest data center. That same night the city council unanimously passed a moratorium (resolution R2026-146) through September 2027. The moratorium grandfathers projects with already-accepted applications, including Trident.",
+   "background": "Trident had been approved under Airport District zoning, and nearby residents in Windler, Green Valley Ranch and The Reserve said they learned of it only after approval. They raised environmental and health concerns. Mayor Mike Coffman, who faces reelection next year, said in October that the project 'must be stopped.' Earlier moratorium attempts, including one in October, had failed, and Vantage had asked the council for a 90-day pause on new rules while it searched for another site. The moratorium bars new data centers west and south of the Powhaton Road / I-70 intersection, which covers most of the city. QTS is separately developing a 160 MW data center in Aurora.",
+   "problem": "Vantage walked away from a site it could legally have kept developing. That suggests local political and reputational pressure can shape siting decisions beyond what the formal rules require. Vantage projected 3,000+ construction jobs but only 30–50 permanent ones. That makes the local trade-off between tax base and jobs on one side and land, power, water and nuisance concerns on the other especially stark. It is unclear whether the project will relocate elsewhere in Aurora or Colorado, or leave the state.",
+   "where_why": "The conflict arises at the siting and permitting stage, where state-level growth incentives meet municipal land-use control. Two frictions drive it. One is information asymmetry: residents were not notified until after approval. The other is a mismatch of incentives: the benefits are diffuse, while the externalities fall on immediate neighbors. Electoral cycles add policy uncertainty that developers must price into site selection.",
+   "stakeholders": [
+    {
+     "name": "Vantage Data Centers",
+     "stake": "Needs a buildable, powered site quickly. Delay or relocation costs time and sunk development spending."
+    },
+    {
+     "name": "Aurora City Council and Mayor Coffman",
+     "stake": "Balance resident opposition and reelection against tax revenue and construction jobs."
+    },
+    {
+     "name": "Nearby residents",
+     "stake": "Want to avoid environmental, health and quality-of-life impacts and to be consulted before approvals."
+    },
+    {
+     "name": "Competing jurisdictions and developers such as QTS",
+     "stake": "May gain displaced projects or face spillover restrictions."
+    }
+   ],
+   "hints": [
+    "Consider a real-options lens: political uncertainty around elections may lead firms to delay or abandon investments even when they are grandfathered.",
+    "Compare projects shielded by grandfather clauses with those that were not. Abandonment despite legal protection is the puzzle worth explaining.",
+    "Spatial spillovers: do local moratoria displace capacity to neighboring jurisdictions or other states, and does that change which grid or utility serves the load?"
+   ],
+   "data_leads": "Municipal council resolutions and zoning dockets, GDELT news coverage of local data center opposition, and utility large-load interconnection filings in state PUC dockets.",
+   "keywords": [
+    "siting moratorium",
+    "facility siting",
+    "regulatory uncertainty",
+    "data center electricity demand"
+   ],
+   "dataset_candidates": [
+    "Aurora City Council legislative records (resolution R2026-146)"
+   ],
+   "datasets": [
+    "gdelt",
+    "state_puc"
+   ],
+   "related": [
+    {
+     "title": "Political Uncertainty and the Timing of Mass Layoffs",
+     "journal": "Production and Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1177/10591478251331149",
+     "cites": 3,
+     "why": "Uses a real-options framework to show firms time plant decisions around state election cycles, which bears directly on a mayor-driven moratorium ahead of reelection."
+    },
+    {
+     "title": "Diversify or Concentrate? Supply Chain Responses to Policy Uncertainty",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1111/jscm.12336",
+     "cites": 66,
+     "why": "Examines how firms adjust sourcing footprints under domestic policy uncertainty, a comparable logic for relocating data center capacity."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/vantage-drops-plans-for-trident-data-center-after-colorados-aurora-city-passes-moratorium/",
+   "follows": [],
+   "source": "DatacenterDynamics",
+   "date": "Nov 24"
+  },
+  {
+   "candidate_id": 200,
+   "headline": "CMA CGM's CEO says the carrier will not meet its 2050 net-zero goal 'in current circumstances'",
+   "theme": "Logistics Decarbonization",
+   "original_url": "https://www.boursorama.com/actualite-economique/actualites/cma-cgm-previent-que-ses-objectifs-de-decarbonation-sont-inatteignables-dans-les-circonstances-actuelles-322dba9c5374d0d9f2343a7afba99f97",
+   "summary": "On Nov. 24, 2026, CEO Rodolphe Saadé told the Assises économiques de la mer in Montpellier that CMA CGM, the world's third-largest shipping company, will not reach its self-set 2050 decarbonization targets 'in current circumstances.' He said net zero in merchant shipping requires more than $1 trillion of investment worldwide by 2050. He blamed conflicts for longer routes, blocked ships and higher operating costs.",
+   "background": "CMA CGM had presented itself as a champion of maritime decarbonization. It operates more than 700 container ships, over 400 of them owned, and says it is still 'investing massively' in dual-fuel vessels. In November 2025 Saadé told French lawmakers he was already wondering 'how' the group would reach net zero. That report cited interim targets of a 30% cut by 2030 and nearly 80% by 2040, both against 2008, though these should be checked against current company materials. The remarks came days before IMO talks on shipping emissions resumed in London. Saadé also raised concerns about the French flag and the tonnage-tax regime.",
+   "problem": "A leading carrier is publicly walking back the credibility of its long-term climate target without formally revising it, and without giving any new figures. This raises the question of whether voluntary targets are commitments or options that firms can drop when costs rise. Conflict-driven rerouting increases fuel burn per voyage. At the same time, a fleet transition built on dual-fuel ships depends on alternative fuels and regulation that do not yet exist at scale.",
+   "where_why": "The problem arises at the fleet investment and network routing level. Ships have multi-decade lives, so fleet turnover is slow. Chokepoint disruptions lengthen routes and raise emissions intensity. The investment gap is a coordination failure, because no single carrier can secure green fuel supply alone. Regulatory uncertainty ahead of the IMO decision and fiscal uncertainty such as the French tonnage tax weaken the incentive to commit.",
+   "stakeholders": [
+    {
+     "name": "CMA CGM",
+     "stake": "Wants to protect margins and flexibility amid rerouting costs while preserving its green reputation and dual-fuel investments."
+    },
+    {
+     "name": "IMO member states",
+     "stake": "Negotiating global shipping emissions rules; a major carrier's admission affects the political feasibility of ambitious targets."
+    },
+    {
+     "name": "Cargo owners with scope 3 goals",
+     "stake": "Rely on carrier decarbonization to meet their own supply chain emissions targets."
+    },
+    {
+     "name": "French government",
+     "stake": "Wants to retain the French flag and tax base, with tonnage-tax treatment debated in each budget."
+    }
+   ],
+   "hints": [
+    "Look into the literature on target backtracking and cheap talk: when do firms soften targets in words rather than formally, and how do investors and customers respond?",
+    "Compare carriers' emissions intensity before and during conflict-driven rerouting to separate operational shocks from strategic choices.",
+    "Consider fleet turnover models with fuel and regulatory uncertainty: dual-fuel ships as a real option on future fuel prices and IMO rules."
+   ],
+   "data_leads": "EU MRV ship-level CO2 reporting, the SBTi target dashboard and CDP responses for carriers' stated targets, and AIS vessel tracks for rerouting (NOAA MarineCadastre covers US waters only).",
+   "keywords": [
+    "target backtracking",
+    "maritime policy",
+    "fleet turnover",
+    "chokepoint disruption"
+   ],
+   "dataset_candidates": [
+    "EU THETIS-MRV ship CO2 emissions data"
+   ],
+   "datasets": [
+    "sbti",
+    "cdp"
+   ],
+   "related": [],
+   "url": "https://www.boursorama.com/actualite-economique/actualites/cma-cgm-previent-que-ses-objectifs-de-decarbonation-sont-inatteignables-dans-les-circonstances-actuelles-322dba9c5374d0d9f2343a7afba99f97",
+   "follows": [],
+   "source": "Le Monde.fr",
+   "date": "Nov 25"
+  },
+  {
+   "candidate_id": 10,
+   "headline": "California's packaging PRO says producers will miss SB 54's 2027 source-reduction target and seeks an exemption to 2030",
+   "theme": "Circular Economy",
+   "original_url": "https://www.packagingdive.com/news/unique-challenge-exemptions-circular-action-alliance-california-source-reduction/875520/",
+   "summary": "On Nov. 23, Circular Action Alliance (CAA), the producer responsibility organization under California's SB 54, presented 'unique challenge exemption' (UCE) applications in its latest draft program plan. CAA's modeling says the 10% source-reduction target for Jan. 1, 2027, which requires at least 2% from reuse or refill, will not be met on time. Under the UCE, that target would instead be met in 2030, based on 2029 producer supply.",
+   "background": "SB 54 sets aggregate source-reduction thresholds across producers. They are 10% by 2027 (2% from reuse/refill), 20% by 2030 (4%) and 25% by 2032 (10% from reuse/refill/elimination). Up to 8 percentage points of the 25% can come from 'alternative compliance' via post-consumer recycled content. The law allows exemptions of up to five years for challenges specific to a covered material or circumstance. The final regulations came late, and the program plan is still not approved. Both milestones arrived after the 2026 measurement period had already begun.",
+   "problem": "Compliance is measured on 2026 data, before an approved plan with incentive fees (bonus/malus) exists to change producer behavior. CAA calls this a structural problem also seen in other states. It argues the targets ignore how long packaging redesigns and recycled-content substitutions take at scale. Regulators must decide whether an exemption is a reasonable adjustment for implementation lag or an erosion of the program's ambition.",
+   "where_why": "The friction lies in the policy implementation sequence: the target and measurement period are set before the regulations and incentive instruments are in place. It is compounded by real lead times in packaging redesign, material qualification and reuse infrastructure. Aggregate, collectively measured targets also create a free-riding problem among producers within the PRO.",
+   "stakeholders": [
+    {
+     "name": "Circular Action Alliance",
+     "stake": "Wants a feasible compliance path and approval of its program plan without being held to targets it says were set too early."
+    },
+    {
+     "name": "CalRecycle",
+     "stake": "Must decide on the plan and the UCE approach, balancing credibility of the law against feasibility."
+    },
+    {
+     "name": "Packaging producers and brands",
+     "stake": "Face redesign costs and eco-modulated fees; an exemption delays the operational changes they must make."
+    },
+    {
+     "name": "Reuse/refill and recycled-resin suppliers",
+     "stake": "Their demand growth depends on whether the 2027 targets bind."
+    }
+   ],
+   "hints": [
+    "Consider target design under implementation lag: how should a regulator set milestone timing when firms' adjustment speed is uncertain?",
+    "Collective targets met by a PRO look like a team production problem. Consider how bonus/malus fee design allocates effort across heterogeneous producers.",
+    "Compare with other state EPR programs (CAA calls this a structural problem elsewhere) as a natural comparison of rollout sequencing."
+   ],
+   "data_leads": "CalRecycle SB 54 rulemaking and CAA program plan documents, state EPR/PRO reports from other states, and Mintel GNPD for packaging format changes over time.",
+   "keywords": [
+    "extended producer responsibility",
+    "packaging regulation",
+    "regulatory thresholds",
+    "state environmental policy",
+    "recycled content"
+   ],
+   "dataset_candidates": [
+    "CalRecycle SB 54 program plan and rulemaking docket"
+   ],
+   "datasets": [
+    "state_epr",
+    "mintel_gnpd"
+   ],
+   "related": [
+    {
+     "title": "Do E‐Waste Laws Create Behavioral Spillovers? Quasi‐Experimental Evidence from California",
+     "journal": "Production and Operations Management",
+     "year": 2020,
+     "url": "https://doi.org/10.1111/poms.13182",
+     "cites": 49,
+     "why": "Provides quasi-experimental evidence on how a California waste law (e-waste) changed operations and behavior, a template for evaluating SB 54's effects."
+    },
+    {
+     "title": "Treat, Dump, or Export? How Domestic and International Waste Management Policies Shape Waste Chain Outcomes",
+     "journal": "Management Science",
+     "year": 2023,
+     "url": "https://doi.org/10.1287/mnsc.2021.02061",
+     "cites": 16,
+     "why": "Models how domestic and international waste policies shape firm disposal choices under imperfect monitoring, relevant to the design of EPR enforcement."
+    }
+   ],
+   "url": "https://www.packagingdive.com/news/unique-challenge-exemptions-circular-action-alliance-california-source-reduction/875520/",
+   "follows": [
+    {
+     "id": "2026-11-10#5",
+     "label": "Nov 10 · CalRecycle expects to raise SB 54 plastic packaging baseline after only about ha"
+    }
+   ],
+   "source": "Packaging Dive",
+   "date": "Nov 24"
+  },
+  {
+   "candidate_id": 66,
+   "headline": "J.B. Hunt asks the STB to reject the UP–Norfolk Southern merger, disputing its projected 1.2 million truck-to-rail conversions",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/j-b-hunt-urges-stb-to-reject-union-pacific-norfolk-southern-merger",
+   "summary": "In Nov. 18 comments to the Surface Transportation Board, J.B. Hunt said the proposed Union Pacific–Norfolk Southern merger would likely do 'more harm than benefit' to intermodal customers. It disputed the railroads' forecast of about 1.2 million loads a year shifting from highway to rail within three years, and their claim of $3.5 billion a year in shipper savings. J.B. Hunt moved about 2.25 million intermodal loads in the past 12 months and is the largest intermodal customer of both BNSF and Norfolk Southern.",
+   "background": "J.B. Hunt's own best growth year, 2013, added 181,000 loads. A 2016 discount strategy added 144,000 loads against a 200,000 target. The company estimates that 9.8–11.2 million loads a year could already shift to intermodal on existing Class I routes without any merger. It argues that haul length and interchanges are poor proxies for reliability. It also says the forecast does not reflect how shippers actually choose between truck and rail.",
+   "problem": "The merger's public-interest case rests on mode-shift and savings projections that the largest intermodal shipper calls unrealistic. Absorbing 1.2 million additional loads would require more than 60,000 extra 53-ft containers plus chassis and terminal capacity, and the application does not say who supplies or pays for them. J.B. Hunt also fears the combined railroad would favor single-line traffic over interline traffic, such as the BNSF–NS service into Harrisburg, Pennsylvania. It wants enforceable protections if the deal is approved.",
+   "where_why": "The dispute sits at the rail network consolidation and regulatory review stage. The key frictions are information asymmetry over demand forecasts, the incentive of a merged carrier to foreclose interline partners, and an unresolved coordination problem over who funds equipment and terminal capacity. Whether savings reach shippers depends on cost pass-through when competition is reduced.",
+   "stakeholders": [
+    {
+     "name": "Union Pacific and Norfolk Southern",
+     "stake": "Seek approval for a transcontinental network, justified by projected conversions and savings."
+    },
+    {
+     "name": "J.B. Hunt",
+     "stake": "Depends on BNSF and NS interline service. It risks foreclosure and service degradation and wants enforceable protections."
+    },
+    {
+     "name": "BNSF",
+     "stake": "Its interline traffic with NS, including Harrisburg, could be disadvantaged by a merged competitor."
+    },
+    {
+     "name": "Shippers",
+     "stake": "Could benefit from single-line service but face rate increases and reliability risk."
+    },
+    {
+     "name": "Surface Transportation Board",
+     "stake": "Must weigh the merger's claimed public benefits against competitive harm and design any conditions."
+    }
+   ],
+   "hints": [
+    "Mode choice models: does reliability variance, rather than haul length, drive truck-versus-intermodal choice? Compare this with how the railroads specified their forecast.",
+    "Treat vertical foreclosure in interline networks as a lens. Past Class I mergers offer before-and-after comparisons of interline service.",
+    "Notice the gap between projected 1.2M loads and J.B. Hunt's historical maximum of 181,000. Forecast optimism in merger filings is a measurable puzzle."
+   ],
+   "data_leads": "STB merger docket filings and weekly rail service performance data, J.B. Hunt and railroad 10-Ks on SEC EDGAR, and truckload rate data (DAT/SONAR, commercial; BTS Freight Analysis Framework as a public alternative).",
+   "keywords": [
+    "rail merger",
+    "intermodal rail",
+    "mode shift",
+    "network consolidation",
+    "cost pass-through"
+   ],
+   "dataset_candidates": [
+    "STB Rail Service Data (EP 724 weekly performance reports)",
+    "BTS Freight Analysis Framework (FAF5)"
+   ],
+   "datasets": [
+    "sec_edgar",
+    "freight_rates"
+   ],
+   "related": [
+    {
+     "title": "Introducing synchromodality: One missing link between transportation and supply chain management",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/jscm.12269",
+     "cites": 69,
+     "why": "Develops the synchromodality construct of flexible, information-driven mode switching, relevant to how shippers actually choose between truck and rail."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/j-b-hunt-urges-stb-to-reject-union-pacific-norfolk-southern-merger",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 24"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 7,
+   "takeaway": "The paper asks how stockouts of existing products affect the success of new product launches. Using instrumental variables and transaction data, it finds that incumbent stockouts at launch raise new-product sales for at least six months, and that the effect works through a trial-and-adoption mechanism.",
+   "connection": "The same trial-then-adopt logic could inform J.B. Hunt's critique of the merger's conversion forecasts: disruptions to an incumbent option, such as truckload capacity crunches, may be what actually push shippers to try and stick with intermodal.",
+   "title": "Stockouts and the Success of New Products",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2023.02602"
+  }
+ ],
+ "thread_to_pull": "TVA and Aurora show two opposite tools for rationing scarce grid and local capacity among data centers: pricing it through per-MW cohort charges, or prohibiting it through a moratorium. Comparing where displaced projects like Vantage's end up could reveal whether price-based utility regimes attract load away from jurisdictions that restrict it. Separately, CMA CGM and Circular Action Alliance both describe targets set ahead of operational reality, which makes target backtracking a cross-sector pattern worth measuring.",
+ "also": [
+  {
+   "title": "Heath Ceramics may leave Sausalito as king tides push factory to the brink",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQSUM3eFdfZHBRQ1duNmNOSVJWdk5waDFaNkxuNlAxbjBBeVBvUHI2OHlZR2x2dnFXRGlaREx6akE0bEtneTZ4dXVFRDBaNE15dlRRRXFnSW9PUEsxZTFkdWZmbjVsWnhuaUctMTRzcEhKWEhFczdMZE4tUHhsRkJ3WEc2eHFaU3dfOUljOW9ObmxFeXZPSWxVb1VEQWl1SlY1Q1NjbTV1NlowSzRhd2ZB?oc=5",
+   "source": "San Francisco Chronicle",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "US and Qatar sign critical minerals deal to secure AI and semiconductor supply chains",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQb0NJSVlqd3JRQVFPdUl0dkZNc0QtZG5SbTg3b1hsZ0E4TE03ejBTY0F2Z3pKbG9wNG1UMUR4MS1MQXA2T3B5NnhpWHFhbV9OLV9nMkpORDlTTi1hbDhHcVZBanZOcGRVb0xzSHZtWTZ0UDBacUN6ajJ0YkQ1bk5PbDVzQzRsOHdlZDI4azB6UTViYnhkTmU4OUREY0xSejBqdU9qRGZrWkhFU09GMG40bXlRZzZNMnlC?oc=5",
+   "source": "Fast Company Middle East",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Five EU farming associations demand EUDR changes over feed shortage risks",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZ2hKSUNNWFlVaVJPZGdfcDd6ZjZTZW95YWdzZDlEV2NSdl9Cb3ptNFBrMXdmTFJRdGd0aE9sXzFodTNENHo4WTNDanR1a1ZRTjR3UVl6b0RTVkZIVlA2QnRlUmNQejFKNnRveDZYWnRmMzVPM3JEcjVkNjdvWmdiVVViYWZoTUZXbjk5YjFUWFN0YWdRakhYRllWd3BzRmlqQ3F5ei1iYXZlV2d0NTZJR2RlZTBpMHdyck4yU0VINE03Y011c093YTRsTQ?oc=5",
+   "source": "Dairynews.today",
+   "theme": "Food & Agriculture"
+  },
+  {
+   "title": "LEGO Plans New €1 Billion 100% Renewables-Powered Factory in Portugal",
+   "url": "https://www.esgtoday.com/lego-plans-new-e1-billion-100-renewables-powered-factory-in-portugal/?utm_source=rss&utm_medium=rss&utm_campaign=lego-plans-new-e1-billion-100-renewables-powered-factory-in-portugal",
+   "source": "ESG Today",
+   "theme": "Sustainable Operations"
+  },
+  {
+   "title": "Circular Economy Act: Presentation postponed once again",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOd2FyaTVsejEwaEJwdkxTN183TVZkLXNEZXQwTzhKT2UtdkQ1VjV5dmFUTl9TXzVTZEduaHlZdFdvWUJ1a3FXLUhBSVhWczJJeTZCMl9rdlR4U1pUbjhxVFR2djZVSmdrNXQ4dDM5VGJPTUo2dmJjSzQ3dkZoYjVTYkg2YkRSeVRqU0lDRXVlSQ?oc=5",
+   "source": "Table.Briefings",
+   "theme": "Trade & Industrial Policy"
+  }
+ ]
+}

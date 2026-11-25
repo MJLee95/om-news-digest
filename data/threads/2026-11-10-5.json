@@ -1,0 +1,90 @@
+{
+ "id": "2026-11-10#5",
+ "created": "2026-11-25",
+ "updates": [
+  {
+   "date": "2026-11-25",
+   "items": [
+    "2026-11-10#5",
+    "2026-11-25#4"
+   ],
+   "note": "New thread. It opened with CalRecycle's Nov. 6, 2026 statement that the producer-reported baseline (based on about half of producers) will be revised upward by November 2027. CAA's Nov. 23 request for unique challenge exemptions, pushing the 10% 2027 target to 2030, followed."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "California SB 54 Packaging EPR: Baseline Revisions and Delayed 2027 Target",
+  "summary": "Putting California's SB 54 packaging extended producer responsibility law into practice is running into two problems. CalRecycle's provisional 2023 plastic baseline rests on data from only about half of producers and is expected to rise. Circular Action Alliance, the producer responsibility organization, says the first 10% source-reduction target (Jan. 1, 2027) will be missed and is seeking exemptions that would push it to 2030.",
+  "origin": "SB 54 (Chapter 75, Statutes of 2022) took effect in 2022. It covers single-use packaging and plastic food serviceware and shifts end-of-life costs to producers. It requires a 25% cut in single-use plastic packaging and food serviceware by 2032. As reported by Packaging Dive, the interim targets are 10% by Jan. 1, 2027 (at least 2% via reuse/refill) and 20% by 2030; the statutory interim figures still need checking against PRC §42057. The law also creates a $500M-per-year, 10-year Plastic Pollution Mitigation Fund and restricts expanded polystyrene foodservice ware unless set recycling rates are met. Key steps so far: (1) On Dec. 31, 2024, CalRecycle's first Source Reduction Baseline Report estimated 2023 volumes from models: 2.9M tons and 171.4B components. (2) Revised proposed regulations were published in the Regulatory Notice Register in 2025 (Vol. 34-Z). (3) OAL approved the permanent rules, which took effect May 1, 2026. (4) Producers had to register by June 1, 2026, and file baseline reports on 2023 data by July 1, 2026. (5) CAA submitted its program plan by June 15, 2026, and a revised plan on Oct. 13, 2026. (6) In early November 2026, CalRecycle updated the baseline with producer-reported data: 1.03M tons and 222B components, from 2,127 producers.",
+  "causes": "First, the baseline is incomplete. Only about half of producers reported, while CAA says more than 4,000 are now registered. CalRecycle says it will not leave the baseline at a number that does not represent all participant producers. Second, the regulatory timeline was compressed. CAA argues the final rules came too late and its plan is still unapproved, and both happened after the 2026 measurement period had begun, so it could not organize compliance for the 2027 target. Third, the statute provides a relief valve: exemptions of up to five years for material-specific or related unique challenges. Finally, if the baseline is corrected upward, more absolute tonnage must be cut to reach each percentage target.",
+  "actors": [
+   {
+    "name": "CalRecycle",
+    "role": "State agency administering SB 54; sets the baseline, reviews CAA's program plan, rules on exemptions",
+    "stake": "Wants an accurate, complete baseline and credible enforcement; its reputation depends on the program launching on schedule"
+   },
+   {
+    "name": "Circular Action Alliance (CAA)",
+    "role": "Producer responsibility organization running the program; submitted the revised plan and the unique challenge exemption applications",
+    "stake": "Needs plan approval and a feasible compliance pathway for producers; avoids penalties for missing the 2027 target"
+   },
+   {
+    "name": "Packaging producers (4,000+ registered)",
+    "role": "Brands and packaging makers who must report data, fund the program, and cut plastic",
+    "stake": "Compliance costs, redesign and reuse investments, and the timeline; non-reporters must submit data by July 2027"
+   },
+   {
+    "name": "SB 54 Advisory Board",
+    "role": "Public forum where CalRecycle reports progress (e.g., the Nov. 6, 2026 meeting)",
+    "stake": "Oversight and transparency of implementation"
+   },
+   {
+    "name": "Environmental advocates",
+    "role": "Supporters of strict plastic reduction (their responses have not yet been reported)",
+    "stake": "Likely to resist delays to the source-reduction targets"
+   }
+  ],
+  "status": "The regulations have been in effect since May 1, 2026. CAA's revised program plan (submitted Oct. 13, 2026) awaits CalRecycle approval. The baseline of 1.03M tons and 222B components is provisional and expected to rise. On Nov. 23, 2026, CAA's draft program plan included unique challenge exemption applications. These would meet the 10% 2027 target in 2030, based on 2029 producer supply. CAA says it is too early to know whether the 2030 or 2032 targets will need exemptions. CalRecycle has not publicly decided on the exemptions or the plan. It is unclear how a later baseline correction will interact with measuring the 2027 target.",
+  "watch": [
+   "CalRecycle decision on CAA's revised program plan and its unique challenge exemption requests (date not confirmed)",
+   "Jan. 1, 2027: statutory 10% source-reduction target (at least 2% via reuse/refill)",
+   "July 2027: deadline for non-reporting producers to submit 2023 baseline data",
+   "November 2027: corrected (expected higher) source-reduction baseline from CalRecycle"
+  ],
+  "research": [
+   {
+    "question": "How does the timing of regulatory finalization affect firms' ability to meet early EPR source-reduction targets? Do exemption mechanisms delay investment in reuse/refill capacity?",
+    "shock": "May 1, 2026 rules taking effect; Nov. 23, 2026 CAA exemption request; Jan. 1, 2027 target date",
+    "data": "CAA draft and revised program plans and exemption modeling; CalRecycle approval documents; producer packaging redesign disclosures"
+   },
+   {
+    "question": "How do incomplete self-reported producer data bias regulatory baselines, and how should targets be set when baselines are revised (e.g., the shift from modeled 2.9M tons to reported 1.03M tons, with components rising from 171.4B to 222B)?",
+    "shock": "Dec. 31, 2024 modeled baseline vs. Nov. 2026 producer-reported baseline vs. Nov. 2027 corrected baseline",
+    "data": "CalRecycle Source Reduction Baseline Reports; producer registration counts (2,127 reporting vs. 4,000+ registered)"
+   },
+   {
+    "question": "Does the split between a falling weight baseline and a rising component-count baseline point to lightweighting, with implications for which reduction metric firms optimize under EPR?",
+    "shock": "Producer-reported baseline publication, Nov. 2026",
+    "data": "CalRecycle tonnage and component baselines by material category; producer-level reports if released"
+   }
+  ]
+ },
+ "updated": "2026-11-25",
+ "items": [
+  "2026-11-10#5",
+  "2026-11-25#4"
+ ],
+ "sources": [
+  "https://www.packagingdive.com/news/sb-54-plastic-tonnage-baseline-expected-to-rise-calrecycle-says/874077/",
+  "https://www.packagingdive.com/news/unique-challenge-exemptions-circular-action-alliance-california-source-reduction/875520/",
+  "https://www.packagingdive.com/news/california-updated-source-reduction-plastic-baseline/873631/",
+  "https://www.recyclingtoday.com/news/calrecycle-updates-sb-54-source-reduction-baseline-epr/",
+  "https://content.govdelivery.com/accounts/CALRECYCLE/bulletins/4157d91",
+  "https://calrecycle.ca.gov/packaging/packaging-epr/sourcereduction/",
+  "https://opc.ca.gov/wp-content/uploads/2026/08/Item-6a-SB-54-Informational-Item-508.pdf",
+  "https://www.yahoo.com/news/science/articles/calrecycle-lowers-plastic-tonnage-baseline-162800456.html",
+  "https://calrecycle.ca.gov/laws/rulemaking/sb54regulations/",
+  "https://www.mayerbrown.com/en/insights/publications/2026/06/californias-sb-54-epr-regulations-take-effect-key-deadlines-and-compliance-obligations-for-producers",
+  "https://circularactionalliance.org/ca/california-program-plan-submitted"
+ ]
+}
