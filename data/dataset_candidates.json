@@ -488,9 +488,10 @@
   "items": [
    "2026-10-26#5",
    "2026-11-13#4",
-   "2026-11-22#5"
+   "2026-11-22#5",
+   "2026-11-26#4"
   ],
-  "last_seen": "2026-11-22"
+  "last_seen": "2026-11-26"
  },
  "ghg protocol scope 2 public consultation responses": {
   "name": "GHG Protocol Scope 2 public consultation responses",
@@ -1731,5 +1732,45 @@
    "2026-11-25#5"
   ],
   "last_seen": "2026-11-25"
+ },
+ "ustr section 301 public comment docket (regulations.gov)": {
+  "name": "USTR Section 301 public comment docket (regulations.gov)",
+  "first_seen": "2026-11-26",
+  "items": [
+   "2026-11-26#1"
+  ],
+  "last_seen": "2026-11-26"
+ },
+ "eia commercial buildings energy consumption survey (cbecs) 2018 microdata": {
+  "name": "EIA Commercial Buildings Energy Consumption Survey (CBECS) 2018 microdata",
+  "first_seen": "2026-11-26",
+  "items": [
+   "2026-11-26#2"
+  ],
+  "last_seen": "2026-11-26"
+ },
+ "federation of thai industries monthly automotive production statistics": {
+  "name": "Federation of Thai Industries monthly automotive production statistics",
+  "first_seen": "2026-11-26",
+  "items": [
+   "2026-11-26#3"
+  ],
+  "last_seen": "2026-11-26"
+ },
+ "toyota/honda monthly overseas production reports": {
+  "name": "Toyota/Honda monthly overseas production reports",
+  "first_seen": "2026-11-26",
+  "items": [
+   "2026-11-26#3"
+  ],
+  "last_seen": "2026-11-26"
+ },
+ "eu transparency register / lobbyfacts meeting data": {
+  "name": "EU Transparency Register / LobbyFacts meeting data",
+  "first_seen": "2026-11-26",
+  "items": [
+   "2026-11-26#4"
+  ],
+  "last_seen": "2026-11-26"
  }
 }
