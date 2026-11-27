@@ -1,0 +1,398 @@
+{
+ "intro": "Today's issue covers a US export rule that has reportedly frozen Nvidia server flows to four Southeast Asian hubs, and DHL's numbers on an ocean market where congestion idles 3.6m TEUs. It also covers a Texas reversal on 1,800+ stalled large-load projects, Michelin's claim of fully deforestation-free rubber sourcing, and the EU's second round of Taxonomy simplification. Several facts in the Nvidia, Texas and Michelin items come from secondary sources and should be treated as provisional.",
+ "items": [
+  {
+   "candidate_id": 17,
+   "headline": "Nvidia reportedly pauses server shipments to Malaysia, Singapore, Thailand and Indonesia after new US export-licence rule",
+   "theme": "Trade & Industrial Policy",
+   "original_url": "https://www.datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report/",
+   "summary": "On Nov 26, 2026 the Financial Times reported, citing unnamed sources, that Nvidia told its manufacturing partners to stop shipping servers with its chips to Malaysia, Singapore, Thailand and Indonesia. Reuters then carried the story. The National, citing the FT, says server makers including Dell and Supermicro have told customers in the four countries that Nvidia will not approve their orders. The move follows a US Commerce Department rule that took effect Nov 19 and requires export licences for certain advanced processors shipped to these four countries and Brazil.",
+   "background": "Southeast Asia has become a major hub for AI compute and for booking chip revenue. Nvidia booked $104bn of revenue through its Singapore subsidiary in 2025, up 72% year on year, though some Taiwan and China revenue is also booked there. The new rule aims to close routes Chinese firms are believed to use to obtain advanced AI chips. Recipients that are US-headquartered, or whose ultimate parent is, can receive shipments under an exemption but must file reports. Before the rule, lenders had already held back about $500m in credit for a project in which Singapore cloud provider Aolani would supply computing power to ByteDance (Asia News Network).",
+   "problem": "The rule turns a set of fast-growing compute markets into licence-gated destinations almost overnight. Legitimate regional buyers now face blocked orders with no reported timeline. It is unclear whether US-parented customers covered by the exemption are also caught by Nvidia's blanket pause. Nvidia has not publicly confirmed the report, and no source names the affected buyers or values the orders. The trade-off sits between closing diversion channels and imposing delays and lost business on compliant data-center builders.",
+   "where_why": "The friction arises at the export/allocation stage between the chip designer, its OEM/ODM server partners and end customers in transshipment-prone hubs. Two forces drive it. First, information asymmetry: the upstream firm cannot verify who the ultimate user is, so it substitutes a blunt destination-level stop for screening each customer. Second, regulatory uncertainty over licence processing. Ownership-based exemptions create a two-tier market in which a firm's parent nationality, not its use case, determines access.",
+   "stakeholders": [
+    {
+     "name": "Nvidia",
+     "stake": "Protect compliance standing with US regulators while limiting lost revenue from a region that books a large share of its sales"
+    },
+    {
+     "name": "Server makers (Dell, Supermicro and others)",
+     "stake": "Stalled orders and inventory, plus customer relationships in four markets, with no timeline for resolution"
+    },
+    {
+     "name": "Southeast Asian cloud and data-center operators",
+     "stake": "Delayed capacity buildouts and financing; non-US-parented firms may lose ground to US-parented rivals"
+    },
+    {
+     "name": "US Commerce Department",
+     "stake": "Close suspected diversion routes to China without pushing demand to non-US suppliers"
+    },
+    {
+     "name": "Chinese AI firms",
+     "stake": "Loss of indirect access to advanced compute through regional intermediaries"
+    }
+   ],
+   "hints": [
+    "Ownership-based exemptions split otherwise similar buyers into treated and exempt groups; that split suggests a comparison worth exploiting.",
+    "Look at the screening-versus-blanket-ban trade-off through the lens of the supplier's limited ability to verify end use: when is a destination-level halt the rational response to an enforcement threat?",
+    "Watch for trade diversion: do server and GPU flows reappear in untreated neighbours (e.g., Vietnam, India, the Gulf) after Nov 19?"
+   ],
+   "data_leads": "Federal Register text of the Commerce rule; UN Comtrade and Census USA Trade Online HS 8471/8473 flows to the four countries and to untreated neighbours; SEC EDGAR 10-Q/8-K filings from Nvidia, Dell and Supermicro for regional revenue and backlog commentary; Panjiva bill-of-lading data if available.",
+   "keywords": [
+    "export controls",
+    "trade diversion",
+    "sourcing restrictions",
+    "regulatory uncertainty",
+    "supplier region risk"
+   ],
+   "dataset_candidates": [
+    "BIS Entity List and export licensing statistics"
+   ],
+   "datasets": [
+    "federal_register",
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Global operations and supply‐chain management under the political economy",
+     "journal": "Journal of Operations Management",
+     "year": 2022,
+     "url": "https://doi.org/10.1002/joom.1232",
+     "cites": 51,
+     "why": "Frames global operations decisions as shaped by political economy and interstate relations, a natural starting point for export controls that reshape where AI hardware can flow."
+    },
+    {
+     "title": "Just‐in‐time for supply chains in turbulent times",
+     "journal": "Production and Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1111/poms.13979",
+     "cites": 219,
+     "why": "Debates just-in-time versus just-in-case buffers under disruption, relevant to how data-center buyers might hedge against sudden licence-gated supply stops."
+    }
+   ],
+   "url": "https://www.datacenterdynamics.com/en/news/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-in-wake-of-new-dept-of-commerce-export-rule-report/",
+   "follows": [
+    {
+     "id": "2026-11-17#4",
+     "label": "Nov 17 · BIS interim final rule requires licenses for advanced AI chips to Malaysia, Sing"
+    },
+    {
+     "id": "2026-11-20#5",
+     "label": "Nov 20 · New US export controls on AI computing hit chip supply chains beyond AI and Chin"
+    }
+   ],
+   "source": "DatacenterDynamics",
+   "date": "Nov 26"
+  },
+  {
+   "candidate_id": 29,
+   "headline": "DHL: ocean container rates up 138% year on year as port congestion idles 3.6m TEUs",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://www.freightwaves.com/news/ocean-rates-still-double-last-year-as-congestion-idles-3-6-million-teus",
+   "summary": "DHL Global Forwarding's November ocean update (reported by FreightWaves, Nov 26, 2026) puts container rates 138% above last year and 15% above August, roughly flat month on month as peak season fades. More than 10% of the fleet, 3.6m TEUs, is stuck at congested ports, mostly in Asia after July–August typhoons hit Chinese ports, cutting usable capacity by about 15%. Fewer than one in three ships arrived on time at key Asian ports, and clearing the backlog is expected to take until early summer 2027.",
+   "background": "Global demand is up 5% year to date; Asian exports are up 8%, and Far East–Europe westbound demand is up 9% while the backhaul is flat. More than 60% of Asia–Europe services are back on the Suez/Red Sea route after three years of diversions, led by Gemini (Maersk, Hapag-Lloyd) and MSC. Some carriers have rerouted mid-voyage without notice, and vessel bunching on Asia–Mediterranean routes is expected to spread to Asia–North Europe in December. Very low sulphur fuel oil is 69% above February's level and diesel is up as much as 75% since December 2025, driven by Middle East and Strait of Hormuz disruption. The fleet is forecast to grow 4% in 2026, 9% in 2027 and 15% in 2028, against a decade average of about 6%.",
+   "problem": "Shippers head into contract season with rates DHL says will stay 'well above' the 2025 baseline. Effective capacity is set by congestion rather than by fleet size. A large orderbook will not lower rates quickly because terminals, yards and inland transport are the binding constraints. Shippers must decide how much to lock in under contract versus spot, which carriers and routings to trust, and how much buffer inventory to hold. Unannounced reroutes and war-risk exposure add insurance and lead-time risk.",
+   "where_why": "The bottleneck is at port/terminal and hinterland stages, not vessel supply. Weather shocks to Chinese ports, Suez return-driven bunching, fuel-price shocks and possible European labour action interact. The result is a coordination failure: vessel capacity cannot be absorbed by fixed terminal and yard capacity, so congestion compounds. Schedule unreliability, in turn, inflates safety stock and contract risk premia.",
+   "stakeholders": [
+    {
+     "name": "Shippers (importers and exporters)",
+     "stake": "Higher freight and inventory costs, unreliable lead times, and difficult 2027 contract choices"
+    },
+    {
+     "name": "Ocean carriers (Gemini, MSC and others)",
+     "stake": "Elevated rates now, but large newbuild deliveries in 2027–28 threaten utilization once congestion clears"
+    },
+    {
+     "name": "Port and terminal operators",
+     "stake": "Pressure to clear backlogs with fixed yard and labour capacity; exposure to labour action"
+    },
+    {
+     "name": "Freight forwarders (e.g., DHL)",
+     "stake": "Advisory and procurement role; margin on volatile spot markets"
+    },
+    {
+     "name": "Marine insurers",
+     "stake": "Repricing war-risk and Red Sea transit coverage as routings shift without notice"
+    }
+   ],
+   "hints": [
+    "Effective capacity is fleet minus ships idled in queues: a queueing or congestion-externality model of port throughput could explain why a fleet glut need not mean lower rates.",
+    "Compare reliability and rates on Asia–Mediterranean (bunching already) versus Asia–North Europe (bunching expected in December) as a staggered exposure to the Suez return.",
+    "Puzzle: why would shippers favour resilience over price in tenders when the orderbook implies a future capacity glut? Think about contract-versus-spot portfolio choice under regime uncertainty."
+   ],
+   "data_leads": "Sea-Intelligence/Xeneta schedule reliability and rate indices (public alternatives: Drewry WCI, Shanghai SCFI); AIS vessel positions (NOAA MarineCadastre for US waters; commercial global AIS) to measure port waiting; NOAA/CMA typhoon tracks for weather shocks.",
+   "keywords": [
+    "port congestion",
+    "freight rates",
+    "chokepoint disruption",
+    "war-risk insurance",
+    "long-term supply contracts"
+   ],
+   "dataset_candidates": [
+    "Drewry World Container Index",
+    "Shanghai Containerized Freight Index (SCFI)"
+   ],
+   "datasets": [
+    "ocean_schedules",
+    "noaa_ais"
+   ],
+   "related": [
+    {
+     "title": "Carrier Portfolio Management for Shipping Seasonal Products",
+     "journal": "Operations Research",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/opre.2017.1616",
+     "cites": 22,
+     "why": "Models a shipper choosing a portfolio of ocean carriers with different schedules and rates, directly relevant to carrier selection when reliability collapses and rates spike."
+    },
+    {
+     "title": "The signaling effect of supplier's customer network instability on service price: Insights from the container shipping charter market",
+     "journal": "Journal of Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1002/joom.1254",
+     "cites": 32,
+     "why": "Uses container-ship charter market data to show how supplier network instability signals reliability and moves prices, an empirical template for pricing under unreliable service."
+    }
+   ],
+   "url": "https://www.freightwaves.com/news/ocean-rates-still-double-last-year-as-congestion-idles-3-6-million-teus",
+   "follows": [],
+   "source": "FreightWaves",
+   "date": "Nov 26"
+  },
+  {
+   "candidate_id": 79,
+   "headline": "Texas resumes approvals for 1,800+ stalled large-load projects, mostly data centers, before governor transition",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://mezha.net/eng/news/mezha-91eff40d473f20c883f961a6_texas_lifts_freeze",
+   "summary": "Under a new directive from outgoing Governor Greg Abbott's office, Texas has started approving data center projects again. More than 1,800 projects had been on hold since August, according to reporting by Tom's Hardware (Nov 27, 2026) citing the FT. Developers are reportedly rushing to secure approvals before Governor-elect Gina Hinojosa takes office in January; she has pledged to limit new data center construction.",
+   "background": "In August, Abbott ordered the Public Utility Commission of Texas and ERCOT to halt approvals until they had audited applicants. More than 1,800 projects were waiting to connect to the grid, and about 90% of them were data centers (TechSpot). In October the state suspended 17 more data center permits and shut down an automated portal that was still approving them. Abbott's office says ERCOT has now finished gathering information on data centers' local community impacts. Those findings do not appear to have been published. Note that the Mezha source appears to rewrite Tom's Hardware, which relies on the FT.",
+   "problem": "Grid access for large loads swings with political control: a freeze, then a reversal, then a likely tightening under the next governor. This creates a narrow approval window. It can pull forward speculative applications and lock in grid commitments before the impact findings are public. The trade-off is between economic development and speed on one side, and grid reliability, local impacts and orderly queue management on the other.",
+   "where_why": "The problem sits at the large-load interconnection and permitting stage, run by ERCOT and the PUCT. Policy uncertainty rewards racing: when developers expect stricter rules after January, they rush to file and secure approvals now. A queue-management problem becomes a timing game. ERCOT holds information about community impacts that developers and the public do not, which adds an information asymmetry to the process.",
+   "stakeholders": [
+    {
+     "name": "Data center developers and hyperscalers",
+     "stake": "Secure interconnection approvals before a less favourable regime arrives"
+    },
+    {
+     "name": "ERCOT and PUCT",
+     "stake": "Maintain grid reliability and process a surge of applications with unpublished audit findings"
+    },
+    {
+     "name": "Governor-elect Hinojosa's incoming administration",
+     "stake": "Ability to limit construction may be constrained by approvals granted before January"
+    },
+    {
+     "name": "Local communities and ratepayers",
+     "stake": "Exposure to grid strain, cost allocation and local impacts from projects approved quickly"
+    }
+   ],
+   "hints": [
+    "The freeze (Aug), partial tightening (Oct), reversal (Nov) and a pending regime change (Jan) form a sequence of policy dates for studying application timing and pre-buy-style behaviour in interconnection queues.",
+    "Consider real-options models of capacity investment under regulatory uncertainty: when does an expected future restriction accelerate rather than deter entry?",
+    "Compare Texas large-load queue dynamics with PJM or other states with no freeze, to separate the policy effect from the national AI demand trend."
+   ],
+   "data_leads": "ERCOT large-load interconnection status reports; PUCT dockets on large-load rules; LBNL Queued Up for comparison regions; EIA-930 for ERCOT load trends.",
+   "keywords": [
+    "interconnection queues",
+    "siting moratorium",
+    "regulatory uncertainty",
+    "data center electricity demand",
+    "pre-buy behavior"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "ercot_reports",
+    "state_puc"
+   ],
+   "related": [],
+   "url": "https://mezha.net/eng/news/mezha-91eff40d473f20c883f961a6_texas_lifts_freeze",
+   "follows": [
+    {
+     "id": "2026-11-07#1",
+     "label": "Nov 7 · Texas audit of data-center grid queue creates a 75 MW cutoff; reported ERCOT pro"
+    }
+   ],
+   "source": "Mezha.net",
+   "date": "Nov 27"
+  },
+  {
+   "candidate_id": 107,
+   "headline": "Michelin claims 100% deforestation-free natural rubber sourcing worldwide, extending EUDR standard beyond Europe",
+   "theme": "Sustainable Operations",
+   "original_url": "https://www.tyrepress.com/2026/11/michelin-achieves-100-deforestation-free-natural-rubber-sourcing-worldwide/",
+   "summary": "Around Nov 25–26, 2026, Michelin announced that it now sources only deforestation-free natural rubber worldwide. It says this meets the requirements of the forthcoming EU Deforestation Regulation (EUDR) and that it applies the standard beyond Europe. Tyrepress reports nearly 2.5m rubber-tree plots mapped after about ten years of traceability work.",
+   "background": "Michelin made a zero-deforestation commitment for natural rubber in 2015 and says it was the first tyre maker to do so. Tyre manufacturing uses about 75% of the world's natural rubber, so the sector dominates demand. A secondary aggregator reports about 1.5m growers in Michelin's traceability system and about 750,000 tonnes of rubber used per year; these figures are unverified against Michelin's release. The EUDR's start date remains in flux, with reports of an agreement to delay it.",
+   "problem": "The claim is self-reported with no independent audit or NGO verification found. Michelin's own page also says it has sourced only deforestation-free rubber since 2015, while the announcement presents this as a new milestone. That inconsistency raises the question of what changed in practice. More broadly, the tension is between costly plot-level traceability across a fragmented smallholder base and the credibility of a single global compliance claim. Firms also face a choice between segregating EU-bound supply and applying one standard everywhere.",
+   "where_why": "The challenge sits at the upstream sourcing tier. Natural rubber passes from very many smallholders through dealers and processors before reaching the tyre maker, so plot-level origin is hard to observe. The friction is information asymmetry across tiers, made worse by regulatory uncertainty over the EUDR timeline. That uncertainty shapes whether firms invest early and apply the rules globally, or wait.",
+   "stakeholders": [
+    {
+     "name": "Michelin",
+     "stake": "Regulatory readiness and reputational advantage; cost of the traceability system"
+    },
+    {
+     "name": "Smallholder rubber growers",
+     "stake": "Market access depends on getting their plots mapped; risk of exclusion if they cannot document origin"
+    },
+    {
+     "name": "Rubber processors and dealers (intermediate tiers)",
+     "stake": "Must segregate or trace volumes and bear compliance costs passed down by buyers"
+    },
+    {
+     "name": "EU regulators",
+     "stake": "Credible EUDR implementation amid delays"
+    },
+    {
+     "name": "NGOs and competing tyre makers",
+     "stake": "Verifying claims; competitors face pressure to match a global standard"
+    }
+   ],
+   "hints": [
+    "Why would a firm apply a regulation globally rather than only to EU-bound volumes? Think about economies of scale in a single standard versus the cost of segregating supply.",
+    "Multi-tier agency: who actually verifies plot origin when processors sit between smallholders and the brand, and what does that imply for claim credibility?",
+    "Satellite tree-cover-loss data near mapped sourcing regions offers an outside check on self-reported deforestation-free claims."
+   ],
+   "data_leads": "Global Forest Watch tree-cover-loss data over rubber-producing regions; ZSL SPOTT natural rubber company assessments; CDP Forests responses from tyre makers; UN Comtrade HS 4001 natural rubber flows to the EU versus other destinations.",
+   "keywords": [
+    "deforestation",
+    "multi-tier traceability",
+    "smallholder inclusion",
+    "mandatory due diligence",
+    "greenwashing"
+   ],
+   "dataset_candidates": [
+    "Global Forest Watch tree cover loss data",
+    "ZSL SPOTT natural rubber assessments"
+   ],
+   "datasets": [
+    "cdp",
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Sustainability in multi‐tier supply chains: Understanding the double agency role of the first‐tier supplier",
+     "journal": "Journal of Operations Management",
+     "year": 2015,
+     "url": "https://doi.org/10.1016/j.jom.2015.11.001",
+     "cites": 724,
+     "why": "Analyses when first-tier suppliers act as agents enforcing a lead firm's sustainability requirements further upstream, central to how rubber traceability reaches smallholders."
+    },
+    {
+     "title": "Toward “Omniscient” supply chains: Enabling and incentivizing sustainable operations",
+     "journal": "Production and Operations Management",
+     "year": 2026,
+     "url": "https://doi.org/10.1177/10591478261493185",
+     "cites": 0,
+     "why": "Discusses enabling and incentivizing full value-chain sustainability due diligence and the limits of market and regulatory enforcement, directly relevant to deforestation-free sourcing claims."
+    }
+   ],
+   "url": "https://www.tyrepress.com/2026/11/michelin-achieves-100-deforestation-free-natural-rubber-sourcing-worldwide/",
+   "follows": [],
+   "source": "European Rubber Journal",
+   "date": "Nov 27"
+  },
+  {
+   "candidate_id": 0,
+   "headline": "European Commission adopts two delegated acts simplifying EU Taxonomy technical criteria",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.esgtoday.com/eu-commission-simplifies-eu-taxonomy-criteria-to-classify-sustainable-activities/",
+   "summary": "The European Commission adopted two delegated acts revising the Climate and Environmental Delegated Acts of the EU Taxonomy, according to ESG Today (Nov 27, 2026). The acts remove duplicate requirements, align the criteria with updated EU law and new technology, and clarify how companies show 'Do No Significant Harm' compliance. They cover forestry, manufacturing, energy, transport, construction and real estate. Parliament and Council have four months to review, and the changes are expected to apply from Jan 1, 2028.",
+   "background": "The Taxonomy regulation entered into force in 2020. €1.2 trillion of capital investment has gone into taxonomy-aligned activities since 2021. This follows the 2025 Omnibus I simplification, which cut reporting datapoints and dropped alignment assessments for non-material activities. Specific changes in the new acts include the following. Building renovations can qualify with a two-class improvement in their energy performance certificate (EPC). Renovations of individual homes are exempt from circular-economy and some pollution-prevention requirements. Physical climate risk assessments get more flexibility, with mobile assets exempt. Companies can use existing environmental permits to demonstrate compliance on water and biodiversity.",
+   "problem": "Simplification lowers compliance cost and may raise reported alignment. But looser or permit-based evidence could make taxonomy-aligned capex less comparable across years and firms, and blur the line between real green investment and relabelling. The key tension is between usability and the integrity of the 'sustainable' label that investors and lenders rely on.",
+   "where_why": "The friction sits at the classification and disclosure stage, where firms map operational capex to technical screening criteria. Complex DNSH and climate-risk requirements imposed high verification costs, especially for small projects like home renovations. Relaxing them changes what qualifies without any change in the underlying activity, which creates a measurement break in reported green capex.",
+   "stakeholders": [
+    {
+     "name": "EU-reporting companies (real estate, manufacturing, energy, transport)",
+     "stake": "Lower compliance costs and potentially higher reported alignment"
+    },
+    {
+     "name": "Investors, banks and fund managers",
+     "stake": "Rely on comparable taxonomy KPIs for green products and lending; risk of diluted signals"
+    },
+    {
+     "name": "European Parliament and Council",
+     "stake": "Four-month window to object or accept"
+    },
+    {
+     "name": "Building owners and renovators",
+     "stake": "An easier route to qualifying financing via the two-class EPC rule"
+    }
+   ],
+   "hints": [
+    "Changing the criteria while holding activity fixed creates a reclassification shock: compare reported taxonomy-aligned capex for activity types touched versus untouched by the revisions.",
+    "The two-class EPC threshold is a discrete cutoff that may induce bunching in renovation depth; think about regulatory-threshold designs.",
+    "Relate to the disclosure-versus-real-activity gap: does easier qualification change actual investment or just the label?"
+   ],
+   "data_leads": "Taxonomy KPI disclosures (turnover/capex/opex alignment) in EU firms' annual sustainability reports; EU Building Stock Observatory EPC data; LSEG or MSCI taxonomy-alignment fields where available.",
+   "keywords": [
+    "sustainable finance taxonomy",
+    "regulatory thresholds",
+    "capital expenditure",
+    "mandatory climate reporting",
+    "greenwashing"
+   ],
+   "dataset_candidates": [
+    "EU Building Stock Observatory (EPC statistics)"
+   ],
+   "datasets": [
+    "lseg_esg"
+   ],
+   "related": [
+    {
+     "title": "“Glossy Green” Banks: The Disconnect Between Environmental Disclosures and Lending Activities",
+     "journal": "Management Science",
+     "year": 2026,
+     "url": "https://doi.org/10.1287/mnsc.2024.07420",
+     "cites": 45,
+     "why": "Shows that banks' green disclosures diverge from their actual lending, a useful benchmark for asking whether simplified taxonomy criteria change real green investment or only labels."
+    }
+   ],
+   "url": "https://www.esgtoday.com/eu-commission-simplifies-eu-taxonomy-criteria-to-classify-sustainable-activities/",
+   "follows": [],
+   "source": "ESG Today",
+   "date": "Nov 27"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 8,
+   "takeaway": "Conventional wisdom holds that extending trade credit raises a supplier's risk. Using a game-theoretic model and empirical evidence, this paper shows the opposite can hold for dual-channel suppliers that sell directly to end customers and also to a competing peer: high trade credit can lower their risk compared with cash on delivery.",
+   "connection": "Server makers selling Nvidia-based systems and shippers renegotiating ocean contracts both face sudden demand and payment shocks, so the paper's link between channel structure, credit terms and risk is a useful lens on who absorbs disruption costs.",
+   "title": "Reducing Risk Through Trade Credit: Theory and Evidence from Dual-Channel Suppliers",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2025.03142"
+  }
+ ],
+ "thread_to_pull": "Three of today's items are timing games under regulatory uncertainty. Texas developers race to secure grid approvals before January, Michelin moves ahead of a delayed EUDR, and Southeast Asian buyers face a licence regime with no stated duration. Comparing when firms pre-empt versus wait for rules, and whether early movers gain lasting advantage or simply lock in stranded commitments, could link interconnection queue data, trade flows and sourcing disclosures in a single framework.",
+ "also": [
+  {
+   "title": "Global brands move Bangladesh orders worth millions to India amid unrest",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPVkZ1NUpJN1g2djR4WDczNUluajlxTnRmOUVJeGlxVWdwSHZRT1M5Unl1ZkJaWGd0OGp6LWRHZUFzUXZWNk00akVKcDNYYTRVQUI4MTkzZ3NGSVFkWEdiUkFnQWZ1cnprdWF6RmFtcER4R1F5eUM3c3JUM3RHSERiRHNJYW5LRTk2ZGNoZUFnRFRIVVpZUFFoaU9RLXZTYVBsTjA3STFCVTh4UFNiMjU2a3U1UklqYVc1RFk0cWJvWkVoTkxfZDd2N211Q241TTRsQmtDZERtSdIB3AFBVV95cUxObGFtYVUtdmlGcS0tZks5V05OX3pTOXBNSHlkU05mZUUwdHRwdEhFUnBZeEdwM3MzTDdFMUl6aWp6STRpQ0lzY1RyRTJLR3FwOUJnNWhRVVEwQUNzSWhmak9aVVZBd1RKLUIwOWFNSjJ6NXgtSURDeEpuemlJYWdVNDF0bklvVXBIVTV0ekZWZkJoYzRKM0RYQ0dXeVM1T3VCa0hiSHdENzVnZERPZGMyQXJsRGFGN0x6TWxjVzZxU3hyY1p3d24yUEVUSWtFOU9FT3pQMFBybjNGaWFw?oc=5",
+   "source": "Business Standard",
+   "theme": "Supply Chain Resilience"
+  },
+  {
+   "title": "Japan's JERA aims to build Anthropic, Meta data centers near power plants",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPN0FKWlltSXhpMTdpTnRja2JXb3VyWlBnVG9ITFA3YnRiN0lYMzYwNE1vMmF0WEZzLTJyM09jMnVoZks4alExa09oUTA5ZnZLYzl4UllpZjBiWHFuazQ4WkFhUGw1SC1nRGNRQUpoZ25sUFMzQ25EckVCSWZCdWJMVmhfR0s0dlBxSUZwYjdyVUUzN1ppbzBDLWw2eEszQUE0NWNKZ0hicF9oVzlmaXFVXzNtR1FVdlBmalNIOU4xZDRLUXp5bFQ0MnZYdWFwR3lRWWF1LUhDTQ?oc=5",
+   "source": "Nikkei Asia",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Pioneer Dome lithium DSO project paused on back of low spodumene prices",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQ2tyblN3dTEwelZVbzlBOWhiaGtsMWdNS0lGSUdDakVHMFM5emlKdVYzX0NwODdEOEVpOHRHUVVySXg5cWpXaDZBc25Zc0NJbmMwMjNuMTY0ODhIZUpHVWdSTnpWMHNWaWViUS1wZXQyQ01qd3VHQ2tPVi11THpPZ1dTN1ZicVJ0a1g4UFNrUTVaa1p4UjUxWjJ3TlJLUDdjRFpEbFRUdTJ5YUFVdEVEc1prazJKM1E?oc=5",
+   "source": "Benchmark Mineral Intelligence",
+   "theme": "Critical Minerals & Batteries"
+  },
+  {
+   "title": "Southern California Endures Historic Coastal Flooding and Devastating Waves Over Thanksgiving",
+   "url": "https://insideclimatenews.org/news/26112026/california-endures-historic-coastal-flooding-waves-thanksgiving/",
+   "source": "Inside Climate News",
+   "theme": "Climate Risk & Adaptation"
+  },
+  {
+   "title": "Caribbean faces US$3.6 billion in additional shipping costs under proposed emissions rules",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQZ2RGdUstcEluV2kySVZHVlNEaXZFcTdRakxkRFpXTFBVUldMUGZHbm5LUmdUZmxkNm5NUWo5Sm0ya0pVYWNZWWNVY3pZd1AxQk9PUWxLYV9oTmdyb3lJLXctZW5EOUwyQmZ3YUhkYXFUZFoxRGVEVkJPbUVtamNDR2dEZ0VOS2FrYXdwWURsYzlyRElUMEpFakU5TW1BcWRvbDBndFpjaUY4b1VZenFlaHRib09MMjlBSFVXZFpiRl81MS13YlIzazV2MWpYN2s?oc=5",
+   "source": "Caribbean National Weekly",
+   "theme": "Logistics Decarbonization"
+  }
+ ]
+}

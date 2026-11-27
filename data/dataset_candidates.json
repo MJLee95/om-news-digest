@@ -109,9 +109,10 @@
   "first_seen": "2026-10-16",
   "items": [
    "2026-10-16#5",
-   "2026-10-20#5"
+   "2026-10-20#5",
+   "2026-11-27#4"
   ],
-  "last_seen": "2026-10-20"
+  "last_seen": "2026-11-27"
  },
  "pjm generator outage and emergency procedures postings": {
   "name": "PJM Generator Outage and Emergency Procedures postings",
@@ -1673,17 +1674,19 @@
   "name": "Drewry World Container Index",
   "first_seen": "2026-11-24",
   "items": [
-   "2026-11-24#5"
+   "2026-11-24#5",
+   "2026-11-27#2"
   ],
-  "last_seen": "2026-11-24"
+  "last_seen": "2026-11-27"
  },
  "shanghai containerized freight index (scfi)": {
   "name": "Shanghai Containerized Freight Index (SCFI)",
   "first_seen": "2026-11-24",
   "items": [
-   "2026-11-24#5"
+   "2026-11-24#5",
+   "2026-11-27#2"
   ],
-  "last_seen": "2026-11-24"
+  "last_seen": "2026-11-27"
  },
  "nrc clinch river bwrx-300 construction permit docket": {
   "name": "NRC Clinch River BWRX-300 construction permit docket",
@@ -1772,5 +1775,29 @@
    "2026-11-26#4"
   ],
   "last_seen": "2026-11-26"
+ },
+ "bis entity list and export licensing statistics": {
+  "name": "BIS Entity List and export licensing statistics",
+  "first_seen": "2026-11-27",
+  "items": [
+   "2026-11-27#1"
+  ],
+  "last_seen": "2026-11-27"
+ },
+ "zsl spott natural rubber assessments": {
+  "name": "ZSL SPOTT natural rubber assessments",
+  "first_seen": "2026-11-27",
+  "items": [
+   "2026-11-27#4"
+  ],
+  "last_seen": "2026-11-27"
+ },
+ "eu building stock observatory (epc statistics)": {
+  "name": "EU Building Stock Observatory (EPC statistics)",
+  "first_seen": "2026-11-27",
+  "items": [
+   "2026-11-27#5"
+  ],
+  "last_seen": "2026-11-27"
  }
 }

@@ -9,88 +9,167 @@
     "2026-11-20#5"
    ],
    "note": "New thread. DCD reported BIS's 16 Nov 2026 remote-access interim final rule, and Nikkei reported on 20 Nov that the controls effective 19 Nov are disrupting chip supply chains beyond AI and China. Nikkei, citing FT reports secondhand, also said TSMC and Samsung reportedly suspended some shipments."
+  },
+  {
+   "date": "2026-11-27",
+   "items": [
+    "2026-11-27#1"
+   ],
+   "note": "New reporting (FT via Reuters and The National, 26 Nov) says Nvidia paused server shipments to Malaysia, Singapore, Thailand and Indonesia, and that Dell and Supermicro told customers their orders would not be approved. This is the first concrete firm-level supply response, and it was accompanied by reported credit holdbacks for regional projects and reported Entity List additions. The comment deadline is now confirmed as 19 Jan 2027 from the Federal Register."
   }
  ],
- "history": [],
+ "history": [
+  {
+   "date": "2026-11-20",
+   "brief": {
+    "title": "US remote-access AI chip rule and supply-chain fallout",
+    "summary": "BIS's 19 Nov 2026 interim final rule extends US advanced-chip controls to overseas data centers that rent significant compute to China-linked firms. It also adds license requirements for Indonesia, Malaysia, Singapore, Thailand and Brazil, and tightens rules for foundries and packagers. Early industry reports say the disruption reaches well beyond AI chips and China, though this is not yet verified.",
+    "origin": "The US first imposed sweeping controls on advanced computing chips to China in Oct 2022 and tightened them further in later rounds. In Jan 2025 the Biden administration issued two rules. The AI Diffusion Rule set up tiered worldwide licensing, partly to stop China renting compute abroad. A Foundry Due Diligence rule created a presumption that certain custom chips are advanced data-center chips. In May 2025 the Trump administration said it would not enforce the Diffusion Rule and promised a 'stronger but simpler' replacement. From mid-2025 the Justice Department brought criminal cases alleging GPUs were routed to China via Singapore, Malaysia and Thailand. On 16 Nov 2026 (a Sunday) BIS released the interim final rule 'Addressing Remote Access to Advanced Semiconductors' (RIN 0694-AK50). It was issued without prior notice and comment under ECRA §1762(a) and was credited as written by and at the direction of Treasury and the National Security Council. It was published in the Federal Register (2026-23529) and took effect on 19 Nov 2026, reportedly days before a Trump–Xi meeting.",
+    "causes": "Earlier controls covered physical shipments of chips. Chinese firms could still rent advanced compute in third-country data centers, including facilities built largely for them, and chips were allegedly smuggled through Southeast Asia. BIS says the aim is to undermine China-linked entities' ability to access significant volumes of advanced chips remotely, for both training and running AI models. The rule also delivers the long-promised replacement for the rescinded Diffusion Rule, and its timing appears tied to US–China negotiations.",
+    "actors": [
+     {
+      "name": "Commerce Dept / BIS",
+      "role": "Issued and enforces the rule; decides licenses case by case; credited Treasury and the NSC with authorship",
+      "stake": "Credibility of enforcement and workload from licensing; drafting appeared rushed"
+     },
+     {
+      "name": "Treasury and National Security Council",
+      "role": "Credited with writing and directing the rule",
+      "stake": "Close the remote-access loophole ahead of talks with China"
+     },
+     {
+      "name": "Chinese AI/tech firms (China, Macau and other D:5-headquartered)",
+      "role": "Targets of the rule; renters of overseas compute and customers of foundries",
+      "stake": "Continued access to offshore GPU capacity and custom chip manufacturing"
+     },
+     {
+      "name": "Malaysia, Singapore, Thailand, Indonesia, Brazil",
+      "role": "Newly subject to license requirements",
+      "stake": "Status as data-center hubs; license outcomes depend on their own anti-diversion controls and cooperation with BIS"
+     },
+     {
+      "name": "Data-center operators, cloud providers, chip/server exporters (e.g., Nvidia)",
+      "role": "Must do customer-of-customer due diligence and obtain licenses within 90 days for existing China-linked deployments",
+      "stake": "Revenue from China-linked tenants; possible penalty exposure for past deals under BIS's 'never been limited' reading"
+     },
+     {
+      "name": "Foundries and packagers (TSMC, Samsung, OSATs)",
+      "role": "Face stricter tests to show custom chips from non-approved designers are not advanced data-center chips",
+      "stake": "Shipments to Chinese customers; per secondhand FT reports, some halted, including ordinary smartphone chips"
+     }
+    ],
+    "status": "The rule has been in force since 19 Nov 2026, and it formally repeals the AI Diffusion Rule. Key features:\n- **Data-center control:** a license is needed to ship advanced chips to any data center supplying more than 12 million TPP (roughly 200 top-end GPUs, per Gibson Dunn) to China/D:5-headquartered firms. Linked sites are counted together, and access provided through a middleman is covered.\n- **Due diligence:** exporters are presumed to 'know' the risk if a data center withholds its know-your-customer information.\n- **Exception:** commercial recommender systems are exempt; generative systems are not.\n- **Five-country requirement:** licenses are now needed for Indonesia, Malaysia, Singapore, Thailand and Brazil, with a reporting carve-out for US-headquartered customers.\n- **Transition:** a 30-day savings clause covers shipments already en route.\n\nIndustry executives told Nikkei the impact is far wider than expected, reaching consumer and mobile chips and chip designers outside China. The reported TSMC and Samsung shipment halts are unverified. Open questions include how the threshold and linked-site counting work, how far the 'to or for' language reaches, liability for past deals, and how BIS will treat existing deployments made in good faith. The reactions of China and the five countries have not been verified.",
+    "watch": [
+     "~17 Feb 2027: 90-day deadline for existing data centers serving China-linked firms to obtain licenses (calculated from 19 Nov)",
+     "18–19 Jan 2027: public comment deadline on the interim final rule (the two sources differ on the exact date)",
+     "Outcome of the Trump–Xi meeting and any adjustment to the chip controls",
+     "Confirmation and scale of TSMC/Samsung shipment suspensions; first BIS licensing decisions for the five countries"
+    ],
+    "research": [
+     {
+      "question": "How did a sudden extraterritorial export-control shock propagate through semiconductor supply chains? Did foundries over-comply by halting non-AI shipments, and how did order books, lead times and inventories shift for Chinese fabless designers and for chip designers outside China?",
+      "shock": "Rule took effect 19 Nov 2026 without notice and comment",
+      "data": "Foundry and OSAT monthly revenue (TSMC monthly sales), customs trade data by HS code (e.g., 8542) for Taiwan/Korea to China, firm earnings calls, supplier–customer links (FactSet Revere/Bloomberg SPLC)"
+     },
+     {
+      "question": "Do compute-access restrictions shift where data centers are sited and how capacity is used? Look for capacity relocation away from the five newly licensed countries, changes in planned data-center capacity and power demand, and substitution toward compute inside China.",
+      "shock": "Five-country license requirement (19 Nov 2026) and 90-day licensing deadline (~Feb 2027)",
+      "data": "Data-center pipeline trackers (DCD, Structure Research), grid interconnection and power-demand filings in Malaysia/Johor, Singapore, Thailand, Indonesia and Brazil; cloud region announcements"
+     },
+     {
+      "question": "How do downstream compliance burdens (customer-of-customer KYC, threshold counting across linked sites) affect cloud providers' contracting, pricing and allocation of GPU capacity across tenants?",
+      "shock": "New §744.24 data-center control and the knowledge presumption when KYC is withheld",
+      "data": "Public comments filed in the docket, GPU rental price indices, firm 10-K risk-factor disclosures, BIS license statistics"
+     }
+    ]
+   }
+  }
+ ],
  "brief": {
   "title": "US remote-access AI chip rule and supply-chain fallout",
-  "summary": "BIS's 19 Nov 2026 interim final rule extends US advanced-chip controls to overseas data centers that rent significant compute to China-linked firms. It also adds license requirements for Indonesia, Malaysia, Singapore, Thailand and Brazil, and tightens rules for foundries and packagers. Early industry reports say the disruption reaches well beyond AI chips and China, though this is not yet verified.",
-  "origin": "The US first imposed sweeping controls on advanced computing chips to China in Oct 2022 and tightened them further in later rounds. In Jan 2025 the Biden administration issued two rules. The AI Diffusion Rule set up tiered worldwide licensing, partly to stop China renting compute abroad. A Foundry Due Diligence rule created a presumption that certain custom chips are advanced data-center chips. In May 2025 the Trump administration said it would not enforce the Diffusion Rule and promised a 'stronger but simpler' replacement. From mid-2025 the Justice Department brought criminal cases alleging GPUs were routed to China via Singapore, Malaysia and Thailand. On 16 Nov 2026 (a Sunday) BIS released the interim final rule 'Addressing Remote Access to Advanced Semiconductors' (RIN 0694-AK50). It was issued without prior notice and comment under ECRA §1762(a) and was credited as written by and at the direction of Treasury and the National Security Council. It was published in the Federal Register (2026-23529) and took effect on 19 Nov 2026, reportedly days before a Trump–Xi meeting.",
-  "causes": "Earlier controls covered physical shipments of chips. Chinese firms could still rent advanced compute in third-country data centers, including facilities built largely for them, and chips were allegedly smuggled through Southeast Asia. BIS says the aim is to undermine China-linked entities' ability to access significant volumes of advanced chips remotely, for both training and running AI models. The rule also delivers the long-promised replacement for the rescinded Diffusion Rule, and its timing appears tied to US–China negotiations.",
+  "summary": "BIS's interim final rule, in force since 19 Nov 2026, extends US advanced-chip controls to overseas data centers that rent significant compute to China-linked firms. It also adds license requirements for Indonesia, Malaysia, Singapore, Thailand and Brazil. Nvidia has reportedly paused server shipments to the four Southeast Asian countries, and broader foundry disruption is reported but unverified.",
+  "origin": "Key steps before the rule:\n- **Oct 2022:** the US first imposed controls on advanced computing chips to China.\n- **Oct/Nov 2023:** licenses became required for Country Groups D:1, D:4 and D:5. BIS now says sales 'on behalf of' Chinese firms, including a Chinese firm using more than 50% of a data center's compute, have been covered since then.\n- **15 Jan 2025:** the Biden AI Diffusion Rule (90 FR 4544) set up tiered worldwide licensing.\n- **May 2025:** BIS said it would withdraw the Diffusion Rule. The new rule says it 'has never been enforced.'\n- **2024–June 2025:** per a Commerce–Justice statement reported only secondhand, Commerce investigated Singapore-based Megaspeed, and Justice took over the criminal case after a June 2025 on-site check.\n- **14 Jul 2026:** a rule gave the UAE 'Enhanced Favorable Treatment'; the new rule refers back to it.\n- **16 Nov 2026:** BIS released the interim final rule 'Addressing Remote Access to Advanced Semiconductors' (RIN 0694-AK50). It was directed by Treasury and the National Security Council.\n- **19 Nov 2026:** the rule was published (91 FR 74970, FR Doc 2026-23529) and took effect, without prior notice and comment.",
+  "causes": "Earlier controls governed where chips were shipped. Chinese firms could still rent advanced compute in third-country data centers, the so-called 'remote access gap.' Malaysia, Singapore, Thailand and Indonesia had become popular with Chinese AI developers working around US limits, and chips were allegedly diverted through the region (e.g., the Megaspeed case, still alleged only). The official rationale is military and intelligence risk from advanced AI models: weapons development, cyber-espionage and disinformation. The rule also delivers the promised replacement for the Diffusion Rule. DLA Piper links it to growing congressional scrutiny.",
   "actors": [
    {
-    "name": "Commerce Dept / BIS",
-    "role": "Issued and enforces the rule; decides licenses case by case; credited Treasury and the NSC with authorship",
-    "stake": "Credibility of enforcement and workload from licensing; drafting appeared rushed"
+    "name": "Commerce Dept / BIS (directed by Treasury and the NSC)",
+    "role": "Issued and enforces the rule; reviews licenses case by case; can add countries and threaten lax hosts with Entity List listings or lower export-control status",
+    "stake": "Closing the remote-access gap while keeping exports to US firms flowing via the reporting exemption; licensing workload"
    },
    {
-    "name": "Treasury and National Security Council",
-    "role": "Credited with writing and directing the rule",
-    "stake": "Close the remote-access loophole ahead of talks with China"
+    "name": "Nvidia",
+    "role": "Reportedly told manufacturing partners to stop shipping servers with its chips to Malaysia, Singapore, Thailand and Indonesia (FT, not confirmed by Nvidia)",
+    "stake": "Compliance versus regional sales; it booked $104bn through its Singapore subsidiary in 2025 (+72%), part of which is Taiwan/China sales booked there"
    },
    {
-    "name": "Chinese AI/tech firms (China, Macau and other D:5-headquartered)",
-    "role": "Targets of the rule; renters of overseas compute and customers of foundries",
-    "stake": "Continued access to offshore GPU capacity and custom chip manufacturing"
+    "name": "Server makers (Dell, Supermicro)",
+    "role": "Told customers in the four countries that Nvidia will not approve their orders",
+    "stake": "Order backlogs and customer relationships in Southeast Asian data-center markets"
    },
    {
-    "name": "Malaysia, Singapore, Thailand, Indonesia, Brazil",
-    "role": "Newly subject to license requirements",
-    "stake": "Status as data-center hubs; license outcomes depend on their own anti-diversion controls and cooperation with BIS"
+    "name": "Regional data-center and cloud operators (e.g., Aolani, AirTrunk, NEXTDC, Firmus)",
+    "role": "Must run customer-of-customer due diligence and obtain licenses by 17 Feb 2027 for existing China-linked deployments",
+    "stake": "Financing and tenants; lenders reportedly held back ~$500m of credit for an Aolani project supplying compute to ByteDance"
    },
    {
-    "name": "Data-center operators, cloud providers, chip/server exporters (e.g., Nvidia)",
-    "role": "Must do customer-of-customer due diligence and obtain licenses within 90 days for existing China-linked deployments",
-    "stake": "Revenue from China-linked tenants; possible penalty exposure for past deals under BIS's 'never been limited' reading"
+    "name": "Host governments (Malaysia, Singapore, Thailand, Indonesia, Brazil)",
+    "role": "Newly subject to license requirements; reportedly Malaysia told operators to comply and Singapore pledged action against circumvention (secondary sources)",
+    "stake": "Status as data-center hubs; risk of further US penalties"
+   },
+   {
+    "name": "Chinese / D:5-headquartered AI firms",
+    "role": "Targets of the rule; renters of offshore compute and foundry customers",
+    "stake": "Access to offshore GPU capacity and custom chip manufacturing; no Chinese government response found"
    },
    {
     "name": "Foundries and packagers (TSMC, Samsung, OSATs)",
-    "role": "Face stricter tests to show custom chips from non-approved designers are not advanced data-center chips",
-    "stake": "Shipments to Chinese customers; per secondhand FT reports, some halted, including ordinary smartphone chips"
+    "role": "Have fewer ways to show that custom logic chips they make for customers are not controlled",
+    "stake": "Shipments to Chinese customers; reported halts including smartphone chips remain unverified"
    }
   ],
-  "status": "The rule has been in force since 19 Nov 2026, and it formally repeals the AI Diffusion Rule. Key features:\n- **Data-center control:** a license is needed to ship advanced chips to any data center supplying more than 12 million TPP (roughly 200 top-end GPUs, per Gibson Dunn) to China/D:5-headquartered firms. Linked sites are counted together, and access provided through a middleman is covered.\n- **Due diligence:** exporters are presumed to 'know' the risk if a data center withholds its know-your-customer information.\n- **Exception:** commercial recommender systems are exempt; generative systems are not.\n- **Five-country requirement:** licenses are now needed for Indonesia, Malaysia, Singapore, Thailand and Brazil, with a reporting carve-out for US-headquartered customers.\n- **Transition:** a 30-day savings clause covers shipments already en route.\n\nIndustry executives told Nikkei the impact is far wider than expected, reaching consumer and mobile chips and chip designers outside China. The reported TSMC and Samsung shipment halts are unverified. Open questions include how the threshold and linked-site counting work, how far the 'to or for' language reaches, liability for past deals, and how BIS will treat existing deployments made in good faith. The reactions of China and the five countries have not been verified.",
+  "status": "The rule has been in force since 19 Nov 2026 and formally repeals the Diffusion Rule.\n- **Data-center control (§744.24):** a license is needed when chips go to any data center giving China/Macau/D:5-headquartered firms access to more than 12M aggregate TPP (roughly 200 top-end GPUs, per Gibson Dunn). Linked sites count together, including digitally linked ones, and access through a middleman is covered.\n- **Exemption:** recommender systems are exempt.\n- **Five-country requirement:** licenses are now needed for Indonesia, Malaysia, Singapore, Thailand and Brazil, with a reporting exemption for US-headquartered customers (§743.10).\n- **Nvidia pause:** reported by the FT on 26 Nov and carried by Reuters. It covers the four Southeast Asian countries but not Brazil. Its duration is unknown, and one report mentions a process to eventually release shipments.\n- **Entity List:** Commerce reportedly added seven firms in Malaysia, Singapore and Thailand, including Megaspeed, on 23 Nov. The Federal Register notice has not been found.\n\nStill open:\n- license timelines and outcomes;\n- scope of the 'to or for' and linked-site provisions;\n- liability for past deals;\n- whether the foundry halts (TSMC/Samsung) are real and how large they are;\n- possible changes after comments, since this is an interim rule.",
   "watch": [
-   "~17 Feb 2027: 90-day deadline for existing data centers serving China-linked firms to obtain licenses (calculated from 19 Nov)",
-   "18–19 Jan 2027: public comment deadline on the interim final rule (the two sources differ on the exact date)",
-   "Outcome of the Trump–Xi meeting and any adjustment to the chip controls",
-   "Confirmation and scale of TSMC/Samsung shipment suspensions; first BIS licensing decisions for the five countries"
+   "19 Jan 2027: public comment deadline (docket BIS-2026-0628)",
+   "17 Feb 2027: 90-day deadline for existing data centers serving China/D:5 firms to obtain licenses",
+   "Duration of Nvidia's Southeast Asia shipment pause and the first BIS license decisions for the five countries",
+   "Official Entity List notice and developments in the Megaspeed criminal case; confirmation of TSMC/Samsung halts"
   ],
   "research": [
    {
-    "question": "How did a sudden extraterritorial export-control shock propagate through semiconductor supply chains? Did foundries over-comply by halting non-AI shipments, and how did order books, lead times and inventories shift for Chinese fabless designers and for chip designers outside China?",
-    "shock": "Rule took effect 19 Nov 2026 without notice and comment",
-    "data": "Foundry and OSAT monthly revenue (TSMC monthly sales), customs trade data by HS code (e.g., 8542) for Taiwan/Korea to China, firm earnings calls, supplier–customer links (FactSet Revere/Bloomberg SPLC)"
+    "question": "How does a sudden extraterritorial export-control shock propagate along the server supply chain (chipmaker → ODM/OEM → data-center operator)? Measure the effect on order cancellations, inventory build-ups, lead times and rerouting of server shipments for Nvidia, Dell, Supermicro and their partners.",
+    "shock": "Rule effective 19 Nov 2026; reported Nvidia shipment pause 26 Nov 2026 (four countries, not Brazil, which offers a comparison group)",
+    "data": "Customs trade data by HS code (8471/8473/8542) from the US, Taiwan and Mexico to Malaysia, Singapore, Thailand, Indonesia and Brazil; Taiwan ODM monthly revenues; earnings calls; supplier–customer links (FactSet Revere/Bloomberg SPLC)"
    },
    {
-    "question": "Do compute-access restrictions shift where data centers are sited and how capacity is used? Look for capacity relocation away from the five newly licensed countries, changes in planned data-center capacity and power demand, and substitution toward compute inside China.",
-    "shock": "Five-country license requirement (19 Nov 2026) and 90-day licensing deadline (~Feb 2027)",
-    "data": "Data-center pipeline trackers (DCD, Structure Research), grid interconnection and power-demand filings in Malaysia/Johor, Singapore, Thailand, Indonesia and Brazil; cloud region announcements"
+    "question": "Do compute-access restrictions shift data-center siting, financing and capacity use? Look for project delays and cancellations, credit withdrawals, and relocation of capacity across countries.",
+    "shock": "Five-country license requirement (19 Nov 2026) and the 17 Feb 2027 licensing deadline",
+    "data": "Data-center pipeline trackers (DCD, Structure Research), project finance deal data, grid interconnection and power-demand filings in Johor, Singapore, Thailand and Indonesia, cloud region announcements"
    },
    {
-    "question": "How do downstream compliance burdens (customer-of-customer KYC, threshold counting across linked sites) affect cloud providers' contracting, pricing and allocation of GPU capacity across tenants?",
-    "shock": "New §744.24 data-center control and the knowledge presumption when KYC is withheld",
-    "data": "Public comments filed in the docket, GPU rental price indices, firm 10-K risk-factor disclosures, BIS license statistics"
+    "question": "Did foundries over-comply by halting non-AI shipments, and how did Chinese and non-Chinese fabless designers adjust their sourcing?",
+    "shock": "Tightened foundry/packager provisions effective 19 Nov 2026",
+    "data": "TSMC monthly sales, Taiwan/Korea exports to China (HS 8542), fabless firms' disclosures and 10-K risk factors, public comments in the docket"
    }
   ]
  },
- "updated": "2026-11-20",
+ "updated": "2026-11-27",
  "items": [
   "2026-11-17#4",
-  "2026-11-20#5"
+  "2026-11-20#5",
+  "2026-11-27#1"
  ],
  "sources": [
+  "https://www.govinfo.gov/content/pkg/FR-2026-11-19/html/2026-23529.htm",
+  "https://media.bis.gov/media/documents/rin-0694-ak50.pdf",
   "https://www.gibsondunn.com/bis-expands-advanced-computing-controls-to-address-data-center-remote-access-and-third-country-diversion/",
-  "https://www.mofo.com/resources/insights/261119-bis-issues-interim-final-rule",
-  "https://www.lexology.com/library/detail.aspx?g=52782821-5b5f-4a8e-a931-4b10947464b8",
-  "https://www.lexology.com/library/detail.aspx?g=9ff25db4-e2f2-452a-b00d-037ebe4a4548",
-  "https://www.lexology.com/library/detail.aspx?g=8f5401a7-fcc8-48c9-8d4b-6ce3ac6e9664",
-  "https://www.lexology.com/library/detail.aspx?g=89fb9b06-c367-4fc3-9cf0-76b06b3f9928",
-  "https://natlawreview.com/article/bis-targets-remote-access-advanced-computing-new-controls-semiconductor-companies",
-  "https://complexdiscovery.com/commerce-makes-overseas-data-centers-answer-for-who-rents-their-advanced-chips/",
-  "https://www.legal500.com/intelligence/united-states/international-law/bis-targets-data-center-remote-access-and-imposes-steeper-requirements-on-foundries-and-osats",
-  "https://www.federalregister.gov/public-inspection/2026-23529/addressing-remote-access-to-advanced-semiconductors",
-  "https://www.federalregister.gov/documents/2022/10/13/2022-21658/implementation-of-additional-export-controls-certain-advanced-computing-and-semiconductor",
-  "https://www.gibsondunn.com/bis-initiates-rescission-of-ai-diffusion-framework-issues-strong-ai-and-advanced-ic-guidance-and-warnings-more-to-come/"
+  "https://www.morganlewis.com/pubs/2026/11/commerce-targets-remote-access-to-advanced-semiconductors-in-new-interim-final-rule",
+  "https://www.stblaw.com/bis-issues-rule-restrictingremote-access-to-advanced-ai-chips/",
+  "https://www.nixonpeabody.com/insights/alerts/2026/11/16/bis-targets-remote-access-to-advanced-chips-through-overseas-data-centers",
+  "https://www.dlapiper.com/en/insights/publications/2026/11/bis-addresses-remote-access-gap",
+  "https://www.gtlaw.com/en/insights/2026/11/bis-interim-final-rule-targets-remote-access-to-advanced-semiconductors-rescinds-ai-diffusion-rule",
+  "https://www.usnews.com/news/top-news/articles/2026-11-26/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports",
+  "https://www.thenationalnews.com/future/technology/2026/11/26/nvidia-halts-chip-shipments-to-south-east-asia-amid-us-crackdown/",
+  "https://asianews.network/nvidia-halts-server-shipments-to-thailand-and-three-other-markets/",
+  "https://www.benzinga.com/markets/tech/26/11/63661506/nvidia-pauses-server-shipments-to-4-southeast-asian-nations-as-us-tightens-china-ai-chip-controls-report"
  ]
 }

@@ -1,0 +1,88 @@
+{
+ "id": "2026-11-07#1",
+ "created": "2026-11-27",
+ "updates": [
+  {
+   "date": "2026-11-27",
+   "items": [
+    "2026-11-07#1",
+    "2026-11-27#3"
+   ],
+   "note": "New thread. It was opened by an unverified report (Nov. 7) of an ERCOT probe into developers downsizing projects below the 75 MW threshold, and by a Nov. 27 report that Texas resumed approvals ahead of the Hinojosa transition. The research notes clarify that only the TCEQ permit freeze lifted and that the ERCOT connection pause remains in place."
+  }
+ ],
+ "history": [],
+ "brief": {
+  "title": "Texas data-center grid audit, permit freeze and political transition",
+  "summary": "Texas paused ERCOT grid connections for data centers of 75 MW or more in August 2026 while it audits the large-load queue, and it froze TCEQ environmental permits from Sept. 21. The TCEQ freeze lifted in mid-November. The ERCOT connection hold appears to remain in place pending a Dec. 10 report, and Governor-elect Hinojosa has pledged a new freeze when she takes office Jan. 19, 2027.",
+  "origin": "In June 2025 Gov. Abbott signed SB 6, which set new interconnection rules for loads of 75 MW or more; this is the source of the 75 MW threshold. ERCOT was flooded with requests and created 'Batch Zero', a group study that allocates capacity among large loads. By mid-2026 ERCOT reported about 474.7 GW of large-load requests, roughly 90% of them data centers. On Aug. 3, 2026 Abbott ordered the PUC (Chair Thomas Gleeson) and ERCOT (CEO Pablo Vegas) to verify and audit every data center in the queue and to deny connection to projects that fail. ERCOT paused Batch Zero the same day. In mid-August ERCOT said the audit covers about 250–300 projects and stopped approving new connections of 75 MW or more. Projects of 25–75 MW were reportedly not paused, and 17 loads (about 6.6 GW) that had cleared every other step were left stranded. On Sept. 14, ERCOT notice M-B091426-01 asked data centers of 25 MW or more for community-impact information, due Oct. 12. On Sept. 21 Abbott directed TCEQ to halt data-center permits until the audits finished. On Nov. 3, Democrat Gina Hinojosa won the governorship according to unofficial results.",
+  "causes": "The queue is far larger than what will be built. Requests total about 474 GW, more than five times ERCOT's record peak demand, while BNEF expects only about 17 GW of installed Texas data-center capacity by 2030. Developers file speculative and duplicate requests. Public backlash over grid reliability, water use and local impacts adds pressure; Lubbock, for example, has proposed a 90-day moratorium. Abbott cited data centers that did not answer a PUC survey on water and power use. The election of a governor who pledges tighter limits adds political urgency.",
+  "actors": [
+   {
+    "name": "Gov. Greg Abbott (leaves office Jan. 19, 2027)",
+    "role": "Ordered the queue audit and the TCEQ permit freeze; proposed bills for 2027",
+    "stake": "Show that queued projects are real and communities are protected, framed as a pause rather than a ban"
+   },
+   {
+    "name": "ERCOT",
+    "role": "Runs the large-load queue and Batch Zero; conducting the audit, with a report due Dec. 10",
+    "stake": "Clear a speculative queue and protect grid reliability"
+   },
+   {
+    "name": "PUC of Texas",
+    "role": "Implements the SB 6 large-load rules (effective Oct. 8, per a secondary source); handling a standard interconnection agreement (Project 59999) and docket 59220",
+    "stake": "Write the rules governing large-load access"
+   },
+   {
+    "name": "TCEQ",
+    "role": "Environmental permitting; paused Sept. 21, resumed normal review in mid-November",
+    "stake": "Comply with directives while working through a permit backlog"
+   },
+   {
+    "name": "Governor-elect Gina Hinojosa",
+    "role": "Takes office Jan. 19, 2027; pledges to freeze approvals until the Legislature passes protections and to end HB 2712 tax breaks",
+    "stake": "Rein in data-center growth and its local impacts"
+   },
+   {
+    "name": "Data-center developers (e.g., SpaceX, Crusoe)",
+    "role": "Racing to secure permits before the transition; some are building off-grid power",
+    "stake": "Avoid delay costs (BNEF warns of up to $15B) and lock in approvals"
+   },
+   {
+    "name": "Texas Legislature (convenes Jan. 12, 2027)",
+    "role": "Pre-filed bills including SB 293, SB 338 and HB 730/732 on tax exemptions, water reporting and abatement caps",
+    "stake": "Set long-run rules for siting, incentives and disclosure"
+   }
+  ],
+  "status": "TCEQ resumed normal permit review around Nov. 13–16 after the governor's office said ERCOT had finished collecting community-impact data; for example, an air permit was issued for SpaceX's Starbase computing project. ERCOT's hold on connections of 75 MW or more still appeared to be in place in late November. The '1,800+ projects resumed' headline conflates ERCOT's whole queue with the TCEQ permit restart. A reported ERCOT probe into developers downsizing projects to stay under 75 MW could not be verified; it is plausible given the threshold design, but unconfirmed. Several facts rest on a tracker site rather than primary documents.",
+  "watch": [
+   "Dec. 10, 2026: ERCOT audit/community-impact report",
+   "Dec. 14, 2026: comments due on the PUC standard large-load interconnection agreement (Project 59999); Dec. 17: PUC expected to discuss the audit",
+   "Jan. 12, 2027: Legislature convenes (SB 293, SB 338, HB 730/732)",
+   "Jan. 19, 2027: Hinojosa inauguration and possible new approval freeze"
+  ],
+  "research": [
+   {
+    "question": "Do regulatory size thresholds cause bunching in requested capacity? Do developers resize or split data-center projects to fall just under 75 MW (or 25 MW) after the audit and connection pause?",
+    "shock": "SB 6 threshold (June 2025); Aug. 3/14, 2026 pause applying only to loads of 75 MW or more",
+    "data": "ERCOT large-load interconnection queue and status reports; PUC docket 59220; ERCOT notice M-B091426-01 responses; bunching estimation around 75 MW"
+   },
+   {
+    "question": "How does a verification audit filter speculative interconnection requests? What share of queued capacity withdraws or is dropped, and which project characteristics predict attrition?",
+    "shock": "Aug. 3, 2026 audit order; Oct. 12 deadline for the community-impact data request",
+    "data": "ERCOT queue snapshots before and after the audit; Dec. 10 ERCOT report; BNEF capacity estimates"
+   },
+   {
+    "question": "Does anticipated policy tightening (an announced freeze by an incoming governor) accelerate permitting and construction timing or shift developers to off-grid power?",
+    "shock": "Nov. 3, 2026 election; Nov. 13–16 TCEQ resumption; Jan. 19, 2027 inauguration",
+    "data": "TCEQ air and stormwater permit records, including those issued through the automated portal; permit timestamps; announcements of behind-the-meter generation"
+   }
+  ]
+ },
+ "updated": "2026-11-27",
+ "items": [
+  "2026-11-07#1",
+  "2026-11-27#3"
+ ],
+ "sources": []
+}

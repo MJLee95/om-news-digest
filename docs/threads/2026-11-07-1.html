@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Texas data-center grid audit, permit freeze and political transition · Daily Clippings</title>
+<script>
+try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script><style>:root{--bg:#f4f3ef;--card:#ffffff;--ink:#1d1d1b;--ink2:#3a3935;--ink3:#2f2e2b;--muted:#6b6a65;--faint:#8f8d86;--line:#dcdad3;--box:#1d1d1b;--boxink:#f4f3ef;--gold:#d9c48f;--accent:#1f6f5c;--t0:#1f6f5c;--t1:#8a5a00;--t2:#2b5ea7;--t3:#7a3e8f;--t4:#a8402f;--t5:#4b6b1f;--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161615;--card:#20201e;--ink:#ecebe6;--ink2:#c9c7c0;--ink3:#d6d4cd;--muted:#9c9a93;--faint:#7d7b75;--line:#34332f;--box:#2b2a27;--boxink:#ecebe6;--gold:#d9c48f;--accent:#6fc2a8;--t0:#6fc2a8;--t1:#e0a845;--t2:#86aee8;--t3:#c493d6;--t4:#e8907c;--t5:#a3c873;--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}}
+:root[data-theme="dark"]{--bg:#161615;--card:#20201e;--ink:#ecebe6;--ink2:#c9c7c0;--ink3:#d6d4cd;--muted:#9c9a93;--faint:#7d7b75;--line:#34332f;--box:#2b2a27;--boxink:#ecebe6;--gold:#d9c48f;--accent:#6fc2a8;--t0:#6fc2a8;--t1:#e0a845;--t2:#86aee8;--t3:#c493d6;--t4:#e8907c;--t5:#a3c873;--toggle-bg:var(--card);--toggle-ink:var(--ink);--toggle-line:var(--line)}
+
+.theme-toggle{position:fixed;top:12px;right:12px;z-index:50;display:flex;align-items:center;gap:6px;
+  border:1px solid var(--toggle-line);background:var(--toggle-bg);color:var(--toggle-ink);border-radius:999px;
+  padding:7px 13px;font:600 13px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;cursor:pointer;
+  box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.theme-toggle:hover{border-color:var(--toggle-ink)}
+.theme-toggle .ic{font-size:14px}
+
+html,body{background:var(--bg)}
+body{margin:0;color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px 64px}
+.back{font:13px Helvetica,Arial,sans-serif;color:var(--accent);text-decoration:none}
+.kicker{font:600 12px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+h1{font-size:30px;line-height:1.2;margin:4px 0 10px}
+.meta{font:13px Helvetica,Arial,sans-serif;color:var(--muted);margin-bottom:18px}
+.lede{font-size:18px;color:var(--ink2);margin:0 0 8px}
+h2{font:600 13px/1.4 Helvetica,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:32px 0 8px;padding-top:14px;border-top:1px solid var(--line)}
+p{margin:0 0 10px;color:var(--ink2)}
+a{color:var(--accent)}
+table{width:100%;border-collapse:collapse;font:14px/1.5 Helvetica,Arial,sans-serif;color:var(--ink3)}
+td{padding:9px 8px 9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{width:34%}
+.role{color:var(--muted);font-size:13px}
+ul{padding-left:20px;margin:0} li{margin:8px 0;color:var(--ink2)}
+.log,.tl{list-style:none;padding:0;font:14px/1.55 Helvetica,Arial,sans-serif}
+.log li,.tl li{padding:6px 0 6px 12px;border-left:3px solid var(--line)}
+.d{display:block;font-size:12px;font-weight:600;color:var(--muted)}
+.src{color:var(--muted);font-size:12px}
+.angle{background:var(--card);border-radius:10px;padding:14px 16px;margin:10px 0;font:14px/1.5 Helvetica,Arial,sans-serif;border-left:4px solid var(--gold)}
+.angle .q{font-weight:600;color:var(--ink);margin-bottom:6px}
+.kv{color:var(--ink3);margin:3px 0} .kv span{display:inline-block;min-width:110px;color:var(--muted)}
+.sources{font:12px/1.5 Helvetica,Arial,sans-serif;word-break:break-all}
+details{font:14px/1.5 Helvetica,Arial,sans-serif;margin:6px 0} summary{cursor:pointer;color:var(--ink2)}
+.note{font:12px/1.5 Helvetica,Arial,sans-serif;color:var(--faint);margin-top:28px}
+</style><script>(function(){
+  if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  try {
+    // same opt-out as GoatCounter's own script: Settings → "disable for this browser" opens #toggle-goatcounter
+    if (location.hash === '#toggle-goatcounter') {
+      var off = localStorage.getItem('skipgc') === 't';
+      off ? localStorage.removeItem('skipgc') : localStorage.setItem('skipgc', 't');
+      alert(off ? 'GoatCounter: counting this browser again.' : 'GoatCounter: visits from this browser will no longer be counted.');
+      history.replaceState(null, '', location.pathname);
+      return;
+    }
+    if (localStorage.getItem('skipgc') === 't') return;
+  } catch (e) {}
+  var q = new URLSearchParams({p: location.pathname, t: document.title, r: document.referrer, s: screen.width, rnd: Math.random()});
+  new Image().src = 'https://mjlee95-clippings.goatcounter.com/count?' + q;
+})();</script></head>
+<body><button class="theme-toggle" id="themeToggle" type="button"></button><div class="wrap">
+<a class="back" href="../index.html#tab=threads">&larr; Story threads</a>
+<div class="kicker">Story brief · 2 articles · Nov 7, 2026 → Nov 27, 2026</div>
+<h1>Texas data-center grid audit, permit freeze and political transition</h1>
+<div class="meta">Last updated Nov 27, 2026 · first opened Nov 27, 2026</div>
+<p class="lede">Texas paused ERCOT grid connections for data centers of 75 MW or more in August 2026 while it audits the large-load queue, and it froze TCEQ environmental permits from Sept. 21. The TCEQ freeze lifted in mid-November. The ERCOT connection hold appears to remain in place pending a Dec. 10 report, and Governor-elect Hinojosa has pledged a new freeze when she takes office Jan. 19, 2027.</p>
+
+<h2>Background</h2><p>In June 2025 Gov. Abbott signed SB 6, which set new interconnection rules for loads of 75 MW or more; this is the source of the 75 MW threshold. ERCOT was flooded with requests and created &#x27;Batch Zero&#x27;, a group study that allocates capacity among large loads. By mid-2026 ERCOT reported about 474.7 GW of large-load requests, roughly 90% of them data centers. On Aug. 3, 2026 Abbott ordered the PUC (Chair Thomas Gleeson) and ERCOT (CEO Pablo Vegas) to verify and audit every data center in the queue and to deny connection to projects that fail. ERCOT paused Batch Zero the same day. In mid-August ERCOT said the audit covers about 250–300 projects and stopped approving new connections of 75 MW or more. Projects of 25–75 MW were reportedly not paused, and 17 loads (about 6.6 GW) that had cleared every other step were left stranded. On Sept. 14, ERCOT notice M-B091426-01 asked data centers of 25 MW or more for community-impact information, due Oct. 12. On Sept. 21 Abbott directed TCEQ to halt data-center permits until the audits finished. On Nov. 3, Democrat Gina Hinojosa won the governorship according to unofficial results.</p>
+<h2>Why it is happening</h2><p>The queue is far larger than what will be built. Requests total about 474 GW, more than five times ERCOT&#x27;s record peak demand, while BNEF expects only about 17 GW of installed Texas data-center capacity by 2030. Developers file speculative and duplicate requests. Public backlash over grid reliability, water use and local impacts adds pressure; Lubbock, for example, has proposed a 90-day moratorium. Abbott cited data centers that did not answer a PUC survey on water and power use. The election of a governor who pledges tighter limits adds political urgency.</p>
+<h2>Who is involved</h2><table><tr><td><b>Gov. Greg Abbott (leaves office Jan. 19, 2027)</b><div class='role'>Ordered the queue audit and the TCEQ permit freeze; proposed bills for 2027</div></td><td>Show that queued projects are real and communities are protected, framed as a pause rather than a ban</td></tr><tr><td><b>ERCOT</b><div class='role'>Runs the large-load queue and Batch Zero; conducting the audit, with a report due Dec. 10</div></td><td>Clear a speculative queue and protect grid reliability</td></tr><tr><td><b>PUC of Texas</b><div class='role'>Implements the SB 6 large-load rules (effective Oct. 8, per a secondary source); handling a standard interconnection agreement (Project 59999) and docket 59220</div></td><td>Write the rules governing large-load access</td></tr><tr><td><b>TCEQ</b><div class='role'>Environmental permitting; paused Sept. 21, resumed normal review in mid-November</div></td><td>Comply with directives while working through a permit backlog</td></tr><tr><td><b>Governor-elect Gina Hinojosa</b><div class='role'>Takes office Jan. 19, 2027; pledges to freeze approvals until the Legislature passes protections and to end HB 2712 tax breaks</div></td><td>Rein in data-center growth and its local impacts</td></tr><tr><td><b>Data-center developers (e.g., SpaceX, Crusoe)</b><div class='role'>Racing to secure permits before the transition; some are building off-grid power</div></td><td>Avoid delay costs (BNEF warns of up to $15B) and lock in approvals</td></tr><tr><td><b>Texas Legislature (convenes Jan. 12, 2027)</b><div class='role'>Pre-filed bills including SB 293, SB 338 and HB 730/732 on tax exemptions, water reporting and abatement caps</div></td><td>Set long-run rules for siting, incentives and disclosure</td></tr></table>
+<h2>Where things stand</h2><p>TCEQ resumed normal permit review around Nov. 13–16 after the governor&#x27;s office said ERCOT had finished collecting community-impact data; for example, an air permit was issued for SpaceX&#x27;s Starbase computing project. ERCOT&#x27;s hold on connections of 75 MW or more still appeared to be in place in late November. The &#x27;1,800+ projects resumed&#x27; headline conflates ERCOT&#x27;s whole queue with the TCEQ permit restart. A reported ERCOT probe into developers downsizing projects to stay under 75 MW could not be verified; it is plausible given the threshold design, but unconfirmed. Several facts rest on a tracker site rather than primary documents.</p>
+<h2>What to watch</h2><ul><li>Dec. 10, 2026: ERCOT audit/community-impact report</li><li>Dec. 14, 2026: comments due on the PUC standard large-load interconnection agreement (Project 59999); Dec. 17: PUC expected to discuss the audit</li><li>Jan. 12, 2027: Legislature convenes (SB 293, SB 338, HB 730/732)</li><li>Jan. 19, 2027: Hinojosa inauguration and possible new approval freeze</li></ul>
+<h2>Research angles</h2><div class='angle'><div class='q'>Do regulatory size thresholds cause bunching in requested capacity? Do developers resize or split data-center projects to fall just under 75 MW (or 25 MW) after the audit and connection pause?</div><div class='kv'><span>Shock / timing</span>SB 6 threshold (June 2025); Aug. 3/14, 2026 pause applying only to loads of 75 MW or more</div><div class='kv'><span>Data</span>ERCOT large-load interconnection queue and status reports; PUC docket 59220; ERCOT notice M-B091426-01 responses; bunching estimation around 75 MW</div></div><div class='angle'><div class='q'>How does a verification audit filter speculative interconnection requests? What share of queued capacity withdraws or is dropped, and which project characteristics predict attrition?</div><div class='kv'><span>Shock / timing</span>Aug. 3, 2026 audit order; Oct. 12 deadline for the community-impact data request</div><div class='kv'><span>Data</span>ERCOT queue snapshots before and after the audit; Dec. 10 ERCOT report; BNEF capacity estimates</div></div><div class='angle'><div class='q'>Does anticipated policy tightening (an announced freeze by an incoming governor) accelerate permitting and construction timing or shift developers to off-grid power?</div><div class='kv'><span>Shock / timing</span>Nov. 3, 2026 election; Nov. 13–16 TCEQ resumption; Jan. 19, 2027 inauguration</div><div class='kv'><span>Data</span>TCEQ air and stormwater permit records, including those issued through the automated portal; permit timestamps; announcements of behind-the-meter generation</div></div>
+<h2>Update log</h2><ul class="log"><li><span class='d'>Nov 27, 2026</span>New thread. It was opened by an unverified report (Nov. 7) of an ERCOT probe into developers downsizing projects below the 75 MW threshold, and by a Nov. 27 report that Texas resumed approvals ahead of the Hinojosa transition. The research notes clarify that only the TCEQ permit freeze lifted and that the ERCOT connection pause remains in place.<br><a href='../issues/2026-11-07.html#item-1'>Texas audit of data-center grid queue creates a 75 MW cutoff; reported ERCOT probe asks whether developers are shrinking projects to stay under it</a><br><a href='../issues/2026-11-27.html#item-3'>Texas resumes approvals for 1,800+ stalled large-load projects, mostly data centers, before governor transition</a></li></ul>
+<h2>Articles in this thread</h2><ul class="tl"><li><span class='d'>Nov 7, 2026</span><a href='../issues/2026-11-07.html#item-1'>Texas audit of data-center grid queue creates a 75 MW cutoff; reported ERCOT probe asks whether developers are shrinking projects to stay under it</a> <span class='src'>· San Antonio Express-News</span></li><li><span class='d'>Nov 27, 2026</span><a href='../issues/2026-11-27.html#item-3'>Texas resumes approvals for 1,800+ stalled large-load projects, mostly data centers, before governor transition</a> <span class='src'>· Mezha.net</span></li></ul>
+
+
+<p class="note">Written by Claude from the linked articles and web sources, and rewritten when new articles join the thread. Check the sources before citing.</p>
+</div><script>
+(() => {
+  const btn = document.getElementById('themeToggle');
+  const ORDER = ['system', 'light', 'dark'];
+  const LABEL = {system: ['◐', 'System'], light: ['☀︎', 'Light'], dark: ['☾', 'Dark']};
+  let mode = 'system';
+  try { mode = localStorage.getItem('theme') || 'system'; } catch (e) {}
+  if (!ORDER.includes(mode)) mode = 'system';
+  const apply = () => {
+    if (mode === 'system') delete document.documentElement.dataset.theme;
+    else document.documentElement.dataset.theme = mode;
+    const [ic, label] = LABEL[mode];
+    btn.innerHTML = `<span class="ic">${ic}</span>${label}`;
+    btn.title = `Theme: ${label} (click to change)`;
+    btn.setAttribute('aria-label', `Color theme: ${label}. Click to change.`);
+  };
+  btn.onclick = () => {
+    mode = ORDER[(ORDER.indexOf(mode) + 1) % ORDER.length];
+    try { mode === 'system' ? localStorage.removeItem('theme') : localStorage.setItem('theme', mode); } catch (e) {}
+    apply();
+  };
+  apply();
+})();
+</script></body></html>
