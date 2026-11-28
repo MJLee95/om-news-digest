@@ -1799,5 +1799,37 @@
    "2026-11-27#5"
   ],
   "last_seen": "2026-11-27"
+ },
+ "epa avert marginal emissions model": {
+  "name": "EPA AVERT marginal emissions model",
+  "first_seen": "2026-11-28",
+  "items": [
+   "2026-11-28#2"
+  ],
+  "last_seen": "2026-11-28"
+ },
+ "epa cobra health impacts screening tool": {
+  "name": "EPA COBRA health impacts screening tool",
+  "first_seen": "2026-11-28",
+  "items": [
+   "2026-11-28#2"
+  ],
+  "last_seen": "2026-11-28"
+ },
+ "primark sustainability and ethics progress report (annual)": {
+  "name": "Primark Sustainability and Ethics Progress Report (annual)",
+  "first_seen": "2026-11-28",
+  "items": [
+   "2026-11-28#4"
+  ],
+  "last_seen": "2026-11-28"
+ },
+ "rosstat consumer price statistics (weekly food prices)": {
+  "name": "Rosstat consumer price statistics (weekly food prices)",
+  "first_seen": "2026-11-28",
+  "items": [
+   "2026-11-28#5"
+  ],
+  "last_seen": "2026-11-28"
  }
 }

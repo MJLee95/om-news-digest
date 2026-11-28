@@ -1,0 +1,399 @@
+{
+ "intro": "Today's issue covers a new EU–CPTPP early-warning network for supply chain disruptions, an MIT estimate of the health cost of data center electricity demand, and the economics of idled lithium refining capacity outside China. It also looks at how better supplier data and lower order volumes shape Primark's reported Scope 3 cut, and at Russia's six-month buckwheat export ban.",
+ "items": [
+  {
+   "candidate_id": 35,
+   "headline": "EU and CPTPP members set up a joint Supply Chain Early Warning Network",
+   "theme": "Supply Chain Resilience",
+   "original_url": "https://policy.trade.ec.europa.eu/news/eu-launches-supply-chain-early-warning-network-trans-pacific-bloc-2026-11-26_en",
+   "summary": "On 26 November 2026, at the second EU-CPTPP Trade and Investment Dialogue in Hanoi, the EU and CPTPP members set up a Supply Chain Early Warning Network. Officials will use it to exchange information on potential and ongoing disruptions, assess risks and coordinate responses. The network holds its first meeting in early 2027, and officials were also tasked with drafting a reference paper on supply chain and logistics services.",
+   "background": "Since the pandemic and the shipping crises, governments have built disruption-monitoring tools, mostly inside one jurisdiction or through bilateral deals. This network links two trade blocs. The EU sits on one side, and CPTPP is an 11-plus-member Trans-Pacific agreement whose members span Asia-Pacific and the Americas. Commissioner Maroš Šefčovič called it 'a concrete step towards stronger resilience and closer partnership.'",
+   "problem": "An early-warning system is only as good as the information members are willing to share and act on. No source says how the network will be governed, how often it meets, which CPTPP members will take an active part, or what data will be exchanged. One secondary source says working protocols will be set before the first meeting, but this is unconfirmed. Members may hold back sensitive information, such as stock levels or supplier dependencies, and coordinated responses can clash with national interests during a shortage.",
+   "where_why": "The friction sits at the government-to-government information layer, upstream of firms' own risk management. Countries have private information about their own exposures and policy intentions, such as export restrictions. Sharing early creates a collective benefit but can expose a strategic weakness. This is an information-sharing and coordination problem with misaligned incentives, made harder because the network appears voluntary and has no enforcement.",
+   "stakeholders": [
+    {
+     "name": "European Commission (DG Trade and Economic Security)",
+     "stake": "Wants earlier visibility of disruptions in Asia-Pacific supply chains and a showcase for its economic-security agenda"
+    },
+    {
+     "name": "CPTPP member governments",
+     "stake": "Gain access to EU information and coordination but may be reluctant to reveal vulnerabilities or limit their own crisis measures"
+    },
+    {
+     "name": "Importing and manufacturing firms in both blocs",
+     "stake": "Could benefit from earlier warnings, but only if signals are timely and reach the people making operational decisions"
+    },
+    {
+     "name": "Logistics service providers",
+     "stake": "Affected by the planned reference paper on supply chain and logistics services"
+    }
+   ],
+   "hints": [
+    "Information-sharing games between rivals (cheap talk, co-opetition) suggest when voluntary disclosure of vulnerabilities is credible.",
+    "Compare the network's design with existing intra-bloc tools, such as the EU's own crisis instruments, once it publishes protocols. What does a cross-bloc layer add?",
+    "Puzzle: does a government warning change firm behaviour (inventory, supplier switching) or just duplicate signals firms already get from private monitoring services?"
+   ],
+   "data_leads": "UN Comtrade bilateral flows between EU and CPTPP members to measure exposure; GDELT news events to date disruptions and test detection lead times once the network is running.",
+   "keywords": [
+    "supplier diversification",
+    "chokepoint disruption",
+    "early warning systems",
+    "industrial policy"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "un_comtrade",
+    "gdelt"
+   ],
+   "related": [
+    {
+     "title": "Heeding supply chain disruption warnings: When and how do cross‐functional teams ensure firm robustness?",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2021,
+     "url": "https://doi.org/10.1111/jscm.12262",
+     "cites": 42,
+     "why": "Studies when firms actually heed supply chain disruption warnings and act on them, which is the downstream link this government network depends on."
+    },
+    {
+     "title": "Co‐opetition and Investment for Supply‐Chain Resilience",
+     "journal": "Production and Operations Management",
+     "year": 2009,
+     "url": "https://doi.org/10.1111/j.1937-5956.2009.01031.x",
+     "cites": 318,
+     "why": "Models interdependent losses and joint mitigation investment between supply chain parties, a useful frame for why bloc partners might under-share or under-invest."
+    }
+   ],
+   "url": "https://policy.trade.ec.europa.eu/news/eu-launches-supply-chain-early-warning-network-trans-pacific-bloc-2026-11-26_en",
+   "follows": [],
+   "source": "INSIGHT EU MONITORING",
+   "date": "Nov 27"
+  },
+  {
+   "candidate_id": 71,
+   "headline": "MIT-led study estimates data center electricity demand linked to about 650 US premature deaths in 2023",
+   "theme": "Energy & AI Data Centers",
+   "original_url": "https://computing.mit.edu/news/study-reveals-data-centers-long-distance-damage-to-air-quality/",
+   "summary": "A study by researchers at MIT, UC Irvine and Yale was published November 19 in Environmental Research Letters, with senior author Noelle Selin. It estimates that power-plant emissions driven by data center electricity demand caused about 650 premature deaths in the US in 2023: 513 from PM2.5 and 137 from smog. That is about 5.3% of total US electricity-related mortality. These are modeled estimates, not counted deaths, and the per-capita burden falls heavily on some Midwestern states even though data center load is concentrated in Virginia and Texas.",
+   "background": "Data center emissions are usually discussed as carbon footprints, using average or market-based accounting. This study takes a marginal approach instead. It identifies the power plants across the country whose output, and therefore emissions, rises in response to data center demand. It then models how that pollution moves and converts exposure into mortality using epidemiological dose-response evidence.",
+   "problem": "Health damages are spread across places far from where data centers sit and where tax and jobs benefits accrue. Siting decisions, local permitting and corporate clean-energy claims do not price these damages. Renewable purchases that net out carbon on paper may not change which fossil plants actually ramp up to serve the load.",
+   "where_why": "The problem arises at the dispatch level of interconnected grids. Load added in one region is served at the margin by plants elsewhere, often coal- or gas-fired, upwind of other populations. The friction is an unpriced, spatially displaced externality, which creates a mismatch between the jurisdictions that approve data centers and those that bear the pollution.",
+   "stakeholders": [
+    {
+     "name": "Data center operators and hyperscalers",
+     "stake": "Want fast, cheap power and siting approvals; face reputational and possible regulatory exposure if health costs become part of permitting"
+    },
+    {
+     "name": "Residents of downwind regions",
+     "stake": "Bear health damages without the local economic benefits"
+    },
+    {
+     "name": "Host states and utilities",
+     "stake": "Gain investment and load growth; may face pressure to account for interstate pollution"
+    },
+    {
+     "name": "Fossil generators on the margin",
+     "stake": "Gain higher output from new load"
+    }
+   ],
+   "hints": [
+    "Marginal vs. average emissions factors: how much do siting and load-flexibility rankings change when you use health-weighted marginal damages instead of carbon?",
+    "Think of a siting or load-shifting optimization with spatially heterogeneous marginal damages; temporal flexibility of AI training loads could be a lever.",
+    "Puzzle: why would states with little data center load show elevated per-capita impacts? Look at grid topology and the fuel mix of marginal plants."
+   ],
+   "data_leads": "EPA eGRID and EIA-923 plant-level generation and emissions to identify marginal plants; EIA-930 hourly balancing-authority data to link load growth to dispatch.",
+   "keywords": [
+    "data center electricity demand",
+    "facility siting",
+    "marginal emissions",
+    "air pollution externalities"
+   ],
+   "dataset_candidates": [
+    "EPA AVERT marginal emissions model",
+    "EPA COBRA health impacts screening tool"
+   ],
+   "datasets": [
+    "epa_egrid",
+    "eia923"
+   ],
+   "related": [
+    {
+     "title": "The Unintended Carbon Impacts of Large-Scale Electricity Storage",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1287/msom.2024.1411",
+     "cites": 2,
+     "why": "Shows how a flexible grid resource (storage) changes market-level emissions indirectly through dispatch, the same marginal-plant logic behind the data center health estimate."
+    },
+    {
+     "title": "How Sustainable Is Big Data?",
+     "journal": "Production and Operations Management",
+     "year": 2018,
+     "url": "https://doi.org/10.1111/poms.12837",
+     "cites": 164,
+     "why": "An early OM essay on the unintended environmental consequences of large-scale data use, which frames the data center externality question."
+    }
+   ],
+   "url": "https://computing.mit.edu/news/study-reveals-data-centers-long-distance-damage-to-air-quality/",
+   "follows": [],
+   "source": "The News-Item",
+   "date": "Nov 28"
+  },
+  {
+   "candidate_id": 100,
+   "headline": "Albemarle's idled Kemerton lithium refinery shows the 'post-construction' problem facing Western mineral processing",
+   "theme": "Critical Minerals & Batteries",
+   "original_url": "https://news.metal.com/newscontent/Z2O6ZAA7JWBKFXKIURY3EIMIAPFPKNKUZG4U5HA-albemarle-idles-lithium-plant-highlighting-critical-minerals-refinery-challenges",
+   "summary": "On Feb. 11, 2026, Albemarle placed Train 1, the last operating train at its Kemerton lithium hydroxide plant in Western Australia, into care and maintenance effective immediately. Train 2 had already been idled and expansion plans for Trains 3 and 4 cancelled in July 2024. Proactive Investors reported about 250 job losses, while Albemarle said the move would add to adjusted EBITDA from Q2 2026 with no impact on projected 2026 volumes. A new Shanghai Metals Market analysis uses the case to argue that newly built refineries face a 'post-construction' test of operating costs, raw material competition and customer certification.",
+   "background": "Western governments are subsidizing critical-mineral refining to reduce dependence on China, but building a plant is only the first hurdle. Kemerton converts spodumene ore from Greenbushes, a mine owned by Talison Lithium, in which Albemarle holds a 49% stake. CEO Kent Masters said recent lithium price improvements 'alone are not enough to offset the challenges facing Western hard-rock lithium conversion operations.'",
+   "problem": "Built capacity sits idle because operating it loses money relative to alternatives. Albemarle can still supply volumes from elsewhere, so idling raises profit while lowering non-Chinese conversion capacity. Albemarle says idling 'preserves optionality,' but restart timing is unknown. This exposes a gap between the firm's real-option logic and policy goals for supply security.",
+   "where_why": "The friction is at the midstream conversion stage, between ore and battery-grade chemicals. Western converters face higher operating costs, compete for feedstock with established processors, and must pass lengthy customer qualification before their output sells. Under volatile prices these frictions make the option to idle valuable. The private incentive to keep capacity running is therefore weaker than the public value of diversified capacity.",
+   "stakeholders": [
+    {
+     "name": "Albemarle",
+     "stake": "Protects margins and keeps a restart option while cutting losses at Kemerton"
+    },
+    {
+     "name": "Kemerton workers and Western Australian communities",
+     "stake": "About 250 jobs lost, per Proactive Investors"
+    },
+    {
+     "name": "Governments funding non-China refining",
+     "stake": "Risk that subsidized or strategic capacity goes idle during price downturns"
+    },
+    {
+     "name": "Battery and cathode makers",
+     "stake": "Fewer qualified non-Chinese hydroxide suppliers for sourcing and compliance needs"
+    }
+   ],
+   "hints": [
+    "Real-options models of mothballing and restart (operate, idle, abandon) under commodity price uncertainty fit Kemerton's train-by-train sequence.",
+    "Compare the firm-optimal idling threshold with a social planner who values supply security. What policy instrument (price floors, offtake guarantees, capacity payments) closes the gap?",
+    "Customer certification lead times act as a switching cost that can make restart slower than the physical plant suggests."
+   ],
+   "data_leads": "Albemarle 10-K/8-K filings and earnings calls (SEC EDGAR) for capacity and cost disclosures; USGS Mineral Commodity Summaries for lithium production and prices; UN Comtrade for spodumene and hydroxide flows.",
+   "keywords": [
+    "plant closure",
+    "capacity investment under uncertainty",
+    "capacity utilization",
+    "raw material security",
+    "price floors"
+   ],
+   "dataset_candidates": [],
+   "datasets": [
+    "sec_edgar",
+    "usgs_minerals"
+   ],
+   "related": [
+    {
+     "title": "Managing Shutdown Decisions in Merchant Commodity and Energy Production: A Social Commerce Perspective",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/msom.2019.0850",
+     "cites": 15,
+     "why": "Studies shutdown decisions in merchant commodity production, the core operational choice behind idling Kemerton."
+    },
+    {
+     "title": "Capacity Management in Agricultural Commodity Processing and Application in the Palm Industry",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2017,
+     "url": "https://doi.org/10.1287/msom.2017.0624",
+     "cites": 76,
+     "why": "Models a processor's capacity investment when input and output commodity prices are uncertain, which maps onto converter economics under lithium price swings."
+    }
+   ],
+   "url": "https://news.metal.com/newscontent/Z2O6ZAA7JWBKFXKIURY3EIMIAPFPKNKUZG4U5HA-albemarle-idles-lithium-plant-highlighting-critical-minerals-refinery-challenges",
+   "follows": [],
+   "source": "Shanghai Metals Market",
+   "date": "Nov 27"
+  },
+  {
+   "candidate_id": 50,
+   "headline": "Primark reports a 21% Scope 3 cut, crediting lower supplier emissions, more primary factory data and lower order volumes",
+   "theme": "ESG & Disclosure",
+   "original_url": "https://www.edie.net/primark-cuts-scope-3-emissions-by-21-as-supplier-data-improves-accuracy-of-carbon-reporting/",
+   "summary": "Primark's fifth annual Sustainability and Ethics Progress Report shows Scope 3 emissions down 21% year on year in 2025/26 and 24% below its 2018/19 baseline. Scope 3 makes up 99% of its footprint. Total emissions fell to 4.77 MtCO2e, 26% below baseline, while market-based Scope 1 and 2 fell 2% year on year and 72% against baseline. Primark attributes the Scope 3 drop to lower supplier emissions, greater use of preferred sources, more primary data from supplier factories and lower order volumes.",
+   "background": "Apparel Scope 3 inventories have traditionally relied on spend-based or industry-average emission factors. As retailers collect factory-level primary data, reported numbers can shift because of method changes alone. Primark has targets to halve value-chain emissions by 2030 and to make all clothes from recycled or more sustainably sourced materials by 2030.",
+   "problem": "The headline reduction mixes three different things: real supplier decarbonization, better measurement and lower activity (fewer orders). The split between them was not disclosed in the sources reviewed. Investors and regulators trying to assess progress toward a 2030 target cannot easily tell operational improvement from accounting improvement.",
+   "where_why": "The issue sits in the buyer-supplier data link and in Scope 3 accounting rules. Buyers depend on supplier-reported data they cannot fully verify, and switching from secondary to primary data can move baselines. Absolute targets also reward volume declines. This is information asymmetry plus methodological discretion, with weak standardization of how restatements and activity effects are reported.",
+   "stakeholders": [
+    {
+     "name": "Primark (and parent ABF)",
+     "stake": "Wants to show credible progress toward its 2030 value-chain target"
+    },
+    {
+     "name": "Supplier factories",
+     "stake": "Bear the cost of providing primary data and decarbonizing; may gain preferred-supplier status"
+    },
+    {
+     "name": "Investors and ESG raters",
+     "stake": "Need comparable figures that separate real cuts from method and volume effects"
+    },
+    {
+     "name": "Regulators and standard setters",
+     "stake": "Shape rules on Scope 3 disclosure, restatement and assurance"
+    }
+   ],
+   "hints": [
+    "Decompose reported Scope 3 changes into activity, emissions-intensity and methodology components (index decomposition) across retailers that switched to primary data.",
+    "Natural experiment: compare firms whose Scope 3 inventories moved from spend-based to supplier-specific data with those that did not. Do reported trajectories bend at the switch?",
+    "Absolute vs. intensity targets create different incentives when demand falls. Who 'wins' on paper in a downturn?"
+   ],
+   "data_leads": "CDP supply chain and climate responses (Scope 3 method fields and restatements); retailer sustainability reports; SBTi target dashboard for target type and base years.",
+   "keywords": [
+    "scope 3 disclosure",
+    "supplier emissions",
+    "supplier engagement",
+    "target backtracking",
+    "sustainability assurance"
+   ],
+   "dataset_candidates": [
+    "Primark Sustainability and Ethics Progress Report (annual)"
+   ],
+   "datasets": [
+    "cdp",
+    "sbti"
+   ],
+   "related": [
+    {
+     "title": "Are Firms Voluntarily Disclosing Emissions Greener?",
+     "journal": "Production and Operations Management",
+     "year": 2025,
+     "url": "https://doi.org/10.1177/10591478251318917",
+     "cites": 44,
+     "why": "Compares disclosed and Trucost-estimated Scope 1 and upstream Scope 3 emissions, relevant to how measurement choices shape reported supply chain emissions."
+    },
+    {
+     "title": "Organizing Buyer‐Side Scope 3 Governance: Sensemaking in Supply Network Decarbonization",
+     "journal": "Journal of Supply Chain Management",
+     "year": 2026,
+     "url": "https://doi.org/10.1111/jscm.70032",
+     "cites": 1,
+     "why": "Examines how buyers organize Scope 3 governance across supplier networks they don't control, the setting behind Primark's push for factory-level data."
+    }
+   ],
+   "url": "https://www.edie.net/primark-cuts-scope-3-emissions-by-21-as-supplier-data-improves-accuracy-of-carbon-reporting/",
+   "follows": [],
+   "source": "edie",
+   "date": "Nov 27"
+  },
+  {
+   "candidate_id": 155,
+   "headline": "Russia bans buckwheat exports for six months after drought-hit harvest and rising prices",
+   "theme": "Food & Agriculture",
+   "original_url": "https://www.themoscowtimes.com/2026/11/27/russia-bans-buckwheat-exports-until-mid-2027-a812390",
+   "summary": "Russia announced on Nov. 27, 2026 a six-month ban on buckwheat exports that expires May 28, 2027, to protect domestic supply amid accelerating inflation. Exports to Eurasian Economic Union members, Abkhazia and South Ossetia, and humanitarian aid are exempt. The 2025 harvest fell by more than a fifth, from 1.2 Mt to 926,000 t, inventories are down almost a third year on year after drought in Altai, and retail groats prices are up almost 18% since January.",
+   "background": "Buckwheat is a politically sensitive staple in Russia, and the government has used this tool before, with a temporary export ban in summer 2021. Exports are small in value: $65 million in the first 10 months of 2026, per Interfax. That makes the ban mainly a domestic price and supply measure rather than a big trade shock.",
+   "problem": "Export bans trade off domestic price stability against producer revenue and trading partners' supply security. They may lower prices only briefly while discouraging planting and storage investment in the next season. Exempting EAEU members also opens a possible re-export route that could weaken the ban.",
+   "where_why": "The friction starts with a weather-driven supply shortfall in a concentrated growing region (Altai), which pushes up domestic prices. Policymakers then intervene at the border. Concentrated production, low inventories and inflation politics drive the decision. The EAEU exemption creates a leakage channel through partner countries.",
+   "stakeholders": [
+    {
+     "name": "Russian government",
+     "stake": "Wants to cap staple food inflation and secure domestic supply"
+    },
+    {
+     "name": "Russian buckwheat farmers and processors",
+     "stake": "Lose export revenue and face lower domestic prices, which may weaken planting incentives"
+    },
+    {
+     "name": "Foreign buyers outside the EAEU",
+     "stake": "Lose a supply source for six months and must find substitutes"
+    },
+    {
+     "name": "Russian consumers",
+     "stake": "May get price relief, if the ban affects retail prices"
+    }
+   ],
+   "hints": [
+    "Event study on domestic retail and farm-gate prices around the 2021 and 2026 bans; the earlier precedent gives a second shock to compare.",
+    "Watch for trade diversion: do exports to EAEU partners (e.g., Kazakhstan) jump during the ban, suggesting re-export?",
+    "Supply response models: does a ban after a bad harvest dampen the next season's planted area?"
+   ],
+   "data_leads": "UN Comtrade monthly bilateral buckwheat flows (HS 1008.10) from Russia and EAEU partners; Rosstat retail price series for buckwheat groats.",
+   "keywords": [
+    "export controls",
+    "trade diversion",
+    "strategic stockpiling",
+    "food export restrictions"
+   ],
+   "dataset_candidates": [
+    "Rosstat consumer price statistics (weekly food prices)"
+   ],
+   "datasets": [
+    "un_comtrade"
+   ],
+   "related": [
+    {
+     "title": "Global agricultural supply chains under tariff‐rate quotas",
+     "journal": "Production and Operations Management",
+     "year": 2023,
+     "url": "https://doi.org/10.1111/poms.14054",
+     "cites": 24,
+     "why": "Analyzes how an agricultural trade instrument (tariff-rate quotas) shapes market access and fill rates, a useful OM framing for border measures on food."
+    },
+    {
+     "title": "Frontiers in Operations: News Event-Driven Forecasting of Commodity Prices",
+     "journal": "Manufacturing & Service Operations Management",
+     "year": 2024,
+     "url": "https://doi.org/10.1287/msom.2022.0641",
+     "cites": 18,
+     "why": "Uses news events to forecast commodity prices, relevant for studying how policy announcements like export bans move prices."
+    }
+   ],
+   "url": "https://www.themoscowtimes.com/2026/11/27/russia-bans-buckwheat-exports-until-mid-2027-a812390",
+   "follows": [],
+   "source": "Bloomberg.com",
+   "date": "Nov 27"
+  }
+ ],
+ "papers": [
+  {
+   "candidate_id": 15,
+   "takeaway": "In capacity-constrained systems serving jobs with different reward rates and durations, the paper asks when to keep serving an active job for its remaining value and when to preempt it for a new arrival. It shows that this choice is subtle when the newcomer has a lower immediate reward rate.",
+   "connection": "The preemption trade-off applies to scheduling flexible AI inference and training loads on constrained compute and power, which ties into today's data center item.",
+   "title": "Online Job Selection: Reward Rate vs. Remaining Value",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2024.09109"
+  },
+  {
+   "candidate_id": 8,
+   "takeaway": "The paper proposes giving priority to orders from customers closer to the vendor, instead of first-come-first-served, in on-demand food and grocery delivery. This substantially cuts average delay without hiring extra couriers, but it raises coverage and fairness concerns for distant customers.",
+   "connection": "Its efficiency-versus-fairness framing echoes today's data center health item, where the costs fall on populations far from the benefits.",
+   "title": "Proximity-Based Delivery Policies: Efficiency, Coverage, and Fairness",
+   "journal": "Management Science",
+   "url": "https://doi.org/10.1287/mnsc.2025.02206"
+  }
+ ],
+ "thread_to_pull": "Two items share a gap between what is reported and what physically changes. Primark's Scope 3 drop mixes real cuts with better data and lower volumes, and data center carbon claims based on average or market-based accounting can miss which marginal plants actually ramp up and whom they pollute. Separately, the Kemerton idling and Russia's buckwheat ban both show actors acting rationally on private incentives (margin protection, domestic price control) in ways that reduce supply security elsewhere. Look at what a cross-bloc mechanism like the EU-CPTPP network could realistically detect or coordinate in such cases.",
+ "also": [
+  {
+   "title": "EEA sets out charging and grid needs as Europe’s electric truck sales accelerate",
+   "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNU3dZSE1VX3otZ0MtRV9HVXpXLVZRaXZFUzlRQk04ZkFqb3FFM2R3NkROYzctajlMeEpqYVBfUjJMWGNBNkZ5UWVfa2xCcU1BSko0WDJyVGVqX255TVVzUzh0a3lrXzFxakduUkw3OXNKSDBqZWVESnNlRmt1UHN1eHIxM2twLV9jcWkwQ091Rjd1blV1eUd0T1NoMEZ5aF80MldVWDhtSkVVS2JpMzdqcF8zb3ZQaUNhYjcxYlhaNzFrU202dFZ4V2NHU1oxUzRPS3RWRWVfZmpfRHlIcXhv?oc=5",
+   "source": "INSIGHT EU MONITORING",
+   "theme": "Logistics Decarbonization"
+  },
+  {
+   "title": "EUDR rules introduce new customs requirements for international exporters starting December 30",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOaUt3azliejdhQ0xNZkJjd2hibU16S09xN3hoTXR0SnZWNUE4elhEc1BrVG1vSnlLWEhWV0JFaEdHbWNEQ0ZQLWoyQTRSOUpqUjlRczdiMFp5YjVpSjA2UXU5VXRkMGljVmdxbDhoVS1haV9GQWhObF9qSmpvdmt2Z1VhbmdVTG1sWkNralJNTFk0eDhLZDFPU25QTzhpT1NiTGs5aWE1T254OFo4SnhrRElEa0o5OUxUSm1URnoyT2VaNk04MENDRGNFSlpsUjQ?oc=5",
+   "source": "Canadian Biomass Magazine",
+   "theme": "Sustainable Operations"
+  },
+  {
+   "title": "Devon battery recycler signs deal to supply South Korea with UK-recovered metals",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQUVVYMnBqV29DdXZta29ubGhaWll3aDFnUS1nbkxQc0ZNeER5Y0cwWUhzWTc1VEhtdGdfSGY0bjNRQlFmZWJuamRiaUF2aHFfS285ZzJKY19nRXZrdUJwNmJqUU5nWVNtbnVuWFV4dDhxZGZiNnFfYTBObU9TbzlTSFV4RDdreFlqd1pKMTFiNjluSVR0aUc0QzVjT1p1SzFNS0JfakFoSXdGOUVXVEtvbnl3d1VKSWVzYkFOM1dJb3lXdjZkSzN1bHJDVjdVWmc?oc=5",
+   "source": "TheBusinessDesk.com",
+   "theme": "Circular Economy"
+  },
+  {
+   "title": "Tokyo Electric Power to Spend ¥10.2 Trillion Expanding AI Power Grid, Courting Global Cloud Giants",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1HX19JM1ZGNC1EOVYyTTlwbkVuQm1TSWhLWnNEZlc3T293czY1XzA0NWNsVUwxeE9hM0szX2luRW81YUhHN05yYnNGSnpVMHpVSHNydVhORE16ZEg2Tk1ia0l5NlZJVFRtZFR5NlhYWk5uTEt0VXc?oc=5",
+   "source": "BigGo Finance",
+   "theme": "Energy & AI Data Centers"
+  },
+  {
+   "title": "Mineral smuggling from Congo to Rwanda at ‘unprecedented levels’, UN says",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTjlmcVpnVnNKNi00MUkwYklDd2JycFdYS0RtOHpUY0ZCampRcXA3RnJLbFhabTVfSWI4WHh2cHNObUZtdUNRNWNHeklaYlFUVG50X0l3YlFILXFSUHBRaFlNRWpMeHBRYzhfTk5XNlVMZDR1T3lfdWdWRWpHZ3hiaG16eE9ZaWk5S09pM1hIdzNGMTc0V3R5ekF6Wkl5Q1JaM3VfVzMyd0k2THJnb3d0NXNXYzBsV09I?oc=5",
+   "source": "Mining.com",
+   "theme": "Critical Minerals & Batteries"
+  }
+ ]
+}
